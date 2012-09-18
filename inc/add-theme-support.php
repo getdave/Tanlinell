@@ -15,10 +15,20 @@ add_theme_support( 'automatic-feed-links' );
 
 
 /**
- * Enable support for Post Thumbnails
+ * Post Thumbnails
+ * enable support for Post Thumbnails
  */
 add_theme_support( 'post-thumbnails' );
 
+
+
+/**
+ * Post Formats
+ * add theme support for post formats
+ */
+add_theme_support( 'post-formats', array( 
+	'aside', 
+));
 
 
 ?>
