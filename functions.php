@@ -47,24 +47,26 @@ function tanlinell_setup() {
 	 * If you're building a theme based on Tanlinell, use a find and replace
 	 * to change 'tanlinell' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'tanlinell', get_template_directory() . '/languages' );
+	//load_theme_textdomain( 'tanlinell', get_template_directory() . '/languages' );
+
+
 
 	/**
-	 * Add default posts and comments RSS feed links to head
-	 */
-	add_theme_support( 'automatic-feed-links' );
+	 * Add Theme Support
+	 * Enables support for various theme items that require explicit enabling
+	 */	
+	require( get_template_directory() . '/inc/add-theme-support.php' );
+
+
 
 	/**
-	 * Enable support for Post Thumbnails
-	 */
-	add_theme_support( 'post-thumbnails' );
-
-	/**
+	 * Register Nav Menus
 	 * This theme uses wp_nav_menu() in one location.
-	 */
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'tanlinell' ),
-	) );
+	 */	
+	require( get_template_directory() . '/inc/register-nav-menus.php' );
+	
+
+
 
 	/**
 	 * Add support for the Aside Post Formats
