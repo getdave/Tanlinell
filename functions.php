@@ -36,18 +36,38 @@ function tanlinell_setup() {
 	 */
 	require( get_template_directory() . '/inc/tweaks.php' );
 
+
 	/**
 	 * Custom Theme Options
 	 */
 	//require( get_template_directory() . '/inc/theme-options/theme-options.php' );
 
+
 	/**
+	 * Translation
+	 * 
 	 * Make theme availa`ble for translation
 	 * Translations can be filed in the /languages/ directory
 	 * If you're building a theme based on Tanlinell, use a find and replace
 	 * to change 'tanlinell' to the name of your theme in all the template files
 	 */
 	//load_theme_textdomain( 'tanlinell', get_template_directory() . '/languages' );
+
+
+
+	/**
+	 * Custom Shortcodes
+	 * add your own custom shortcodes into this file
+	 */	
+	//require( get_template_directory() . '/inc/custom-shortcodes.php' );
+	
+
+
+	/**
+	 * Custom Widgets
+	 * add your own custom Widgets into this file
+	 */	
+	//require( get_template_directory() . '/inc/custom-widgets.php' );
 
 
 
@@ -87,8 +107,3 @@ add_action( 'after_setup_theme', 'tanlinell_setup' );
 
 
 
-
-/**
- * Implement the Custom Header feature
- */
-//require( get_template_directory() . '/inc/custom-header.php' );
