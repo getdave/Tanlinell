@@ -42,7 +42,7 @@ function tanlinell_setup() {
 	//require( get_template_directory() . '/inc/theme-options/theme-options.php' );
 
 	/**
-	 * Make theme available for translation
+	 * Make theme availa`ble for translation
 	 * Translations can be filed in the /languages/ directory
 	 * If you're building a theme based on Tanlinell, use a find and replace
 	 * to change 'tanlinell' to the name of your theme in all the template files
