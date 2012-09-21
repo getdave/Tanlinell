@@ -34,7 +34,7 @@ function tanlinell_setup() {
 	/**
 	 * Custom functions that act independently of the theme templates
 	 */
-	//require( get_template_directory() . '/inc/tweaks.php' );
+	require( get_template_directory() . '/inc/tweaks.php' );
 
 	/**
 	 * Custom Theme Options
@@ -75,7 +75,11 @@ function tanlinell_setup() {
 
 
 	
-	
+	/**
+	 * Enqueue Scripts & CSS Styles
+	 * adds javascripts and stylesheets the right way via WP enqueue
+	 */
+	require( get_template_directory() . '/inc/enqueue-scripts-styles.php' );
 
 }
 endif; // tanlinell_setup
@@ -83,23 +87,6 @@ add_action( 'after_setup_theme', 'tanlinell_setup' );
 
 
 
-/**
- * Enqueue scripts and styles
- */
-function tanlinell_scripts() {
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
-	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'tanlinell_scripts' );
 
 /**
  * Implement the Custom Header feature

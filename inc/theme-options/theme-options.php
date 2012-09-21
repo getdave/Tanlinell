@@ -19,9 +19,9 @@
  */
 function tanlinell_theme_options_init() {
 	register_setting(
-		'tanlinell_options', // Options group, see settings_fields() call in tanlinell_theme_options_render_page()
-		'tanlinell_theme_options', // Database option, see tanlinell_get_theme_options()
-		'tanlinell_theme_options_validate' // The sanitization callback, see tanlinell_theme_options_validate()
+		'tanlinell_options', 				// Options group, see settings_fields() call in tanlinell_theme_options_render_page()
+		'tanlinell_theme_options', 			// Database option, see tanlinell_get_theme_options()
+		'tanlinell_theme_options_validate' 	// The sanitization callback, see tanlinell_theme_options_validate()
 	);
 
 	// Register our settings field group

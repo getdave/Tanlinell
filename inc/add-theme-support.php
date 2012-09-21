@@ -26,9 +26,14 @@ add_theme_support( 'post-thumbnails' );
  * Post Formats
  * add theme support for post formats
  */
-add_theme_support( 'post-formats', array( 
-	'aside', 
-));
 
+add_theme_support( 'post-formats', array( 
+	//'aside', 
+	//'link', 
+	'gallery', 
+	//'status', 
+	//'quote', 
+	//'image' 
+));
 
 ?>
