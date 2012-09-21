@@ -20,7 +20,12 @@ get_header(); ?>
 
 					<?php get_template_part( 'content', 'page' ); ?>
 
-					<?php comments_template( '', true ); ?>
+
+
+					<?php
+						// REMOVED: If comments are required for Page templates then uncomment
+						/* comments_template( '', true );  */
+					?>
 
 				<?php endwhile; // end of the loop. ?>
 
