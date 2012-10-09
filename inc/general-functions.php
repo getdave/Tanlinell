@@ -39,15 +39,14 @@ function tanlinell_get_post_thumb( $post_id ){
  * 
  */
 
-function tanlinell_get_root_parent( $page_id ) {
-	
-    $parent = get_post_ancestors($page_id);
-    if ( $parent ) {
-        return $parent[count($parent) - 1];
-    } else {
-        return $page_id;
-    }
-} 
+  function tanlinell_get_root_parent( $page_id ) {
+		global $wpdb;
+		$parent = $wpdb->get_var( "SELECT post_parent FROM $wpdb->posts WHERE post_type='page' AND ID = '$page_id'" );
+		if ($parent == 0) 
+			return $page_id;
+		else 
+			return get_root_parent( $parent );
+  }
 
 
 /**
@@ -82,12 +81,12 @@ function tanlinell_truncate_posts( $amount, $quote_after=false ) {
  * 
  */
 
-function get_top_parent_category( $cat_ID ){
+function tanlinell_get_top_parent_category( $cat_ID ){
 	$cat = get_category( $cat_ID );
 	$new_cat_id = $cat->category_parent;
 	
 	if($new_cat_id != "0") {
-		return ( get_top_parent_category( $new_cat_id ) );
+		return ( tanlinell_get_top_parent_category( $new_cat_id ) );
 	}
 	return $cat_ID;
 }
