@@ -100,7 +100,25 @@ function tanlinell_setup() {
 	 * adds javascripts and stylesheets the right way via WP enqueue
 	 */
 	require( get_template_directory() . '/inc/enqueue-scripts-styles.php' );
-
+	
+	
+	/**
+	 * 	Register 'Custom Posts Types' for the theme
+	 */
+	require( get_template_directory() . '/inc/register-custom-posts.php' );
+	
+	
+	/**
+	 * General functions of the theme
+	 */
+	require( get_template_directory() . '/inc/general-functions.php' );
+	
+	
+	/**
+	 * 	Customize the User roles
+	 */
+	require( get_template_directory() . '/inc/client-access-permissions.php' );
+	
 }
 endif; // tanlinell_setup
 add_action( 'after_setup_theme', 'tanlinell_setup' );
