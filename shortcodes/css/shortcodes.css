@@ -54,8 +54,7 @@
     position: relative;
 }
 
-.box3-tabs, .tanlinell-tabs-control, .tanlinell-single-tabs-control {
-    background: url("/clients/IMEX/wp-content/themes/imex/images/box3-tabs.png") repeat-x scroll center top transparent;
+.tanlinell-tabs-control, .tanlinell-single-tabs-control {
     font-size: 18px;
     height: 55px;
     width: 666px;
@@ -85,7 +84,7 @@
     background: none repeat scroll 0 0 #FFFFFF;
     box-shadow: 2px 0 10px #BFBFBF;
     color: #000000;
-    font: 18px/45px Rockwell,"Courier New",Courier,monospace;
+    font: 18px/45px Rockwell,Courier,monospace;
     z-index: 10;
 }
 
@@ -122,7 +121,7 @@
     background: none repeat scroll 0 0 #FFFFFF;
     box-shadow: 2px 0 10px #BFBFBF;
     color: #000000;
-    font: 18px/45px Rockwell,"Courier New",Courier,monospace;
+    font: 18px/45px Rockwell,Courier,monospace;
     z-index: 10;
 }
 
