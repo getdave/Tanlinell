@@ -1,0 +1,131 @@
+/*------------------------------------------------*/
+/*-------------------[SHORTCODES]-----------------*/
+/*------------------------------------------------*/
+
+.tanlinell-learn-more, .tanlinell-tabs-container, .tabs-left, .tanlinell-simple-slider, .author-shortcodes, .tanlinell-tooltip-box {
+    color: #201F1F !important;
+    text-shadow: none !important;
+}
+
+.tanlinell-tabs-container, .tabs-left, .tanlinell-simple-slider, .tanlinell-image-slider, .tanlinell-testimonial-box, .author-shortcodes, .tanlinell-protected {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tanlinell-tabs-container {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #E7E7E7;
+    position: relative;
+}
+
+.tanlinell-tabs-container {
+    margin: 50px 0 30px;
+    overflow: hidden;
+}
+
+
+.tanlinell-tabs-container .tanlinell-tabs-control:before {
+    background: none repeat scroll 0 0 #E7E7E7;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.tanlinell-tabs-container .tanlinell-tabs-control {
+    padding: 0;
+}
+
+.tanlinell-tabs-container .tanlinell-tabs-control, .tanlinell-tabs-container ul.tanlinell_shortcodes_mobile_nav {
+    margin: 0 !important;
+    overflow: hidden;
+    position: relative;
+}
+
+.tanlinell-learn-more h3.heading-more, .tanlinell-tabs-container .tanlinell-tabs-control, .tanlinell-tabs-container ul.tanlinell_shortcodes_mobile_nav, .tanlinell_shortcodes_controller_nav, .tanlinell-testimonial-author-info, .tanlinell-protected-title, .pricing-heading, .pricing-content-bottom {
+}
+
+.tabs-nav {
+    bottom: -1px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.tanlinell-tabs-control, .tanlinell-single-tabs-control {
+    font-size: 18px;
+    height: 55px;
+    width: 666px;
+}
+
+.tanlinell-tabs-container .tanlinell-tabs-control li:first-child {
+}
+
+.tanlinell-tabs-container .tanlinell-tabs-control li {
+    float: left !important;
+}
+
+.tanlinell-tabs-container .tanlinell-tabs-control li {
+	list-style:none;
+}
+
+.tabs-nav li.tabs-selected {
+}
+
+.tabs-nav li {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.tabs-selected {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 2px 0 10px #BFBFBF;
+    color: #000000;
+    font: 18px/45px Rockwell,Courier,monospace;
+    z-index: 10;
+}
+
+
+.entry-content .tanlinell-tabs-container .tanlinell-tabs-control li a, .entry-content .tanlinell-tabs-container .tanlinell-single-tabs-control li a {
+    color: #BDC0C1;
+    display: block;
+    float: left;
+    height: 55px;
+    line-height: 45px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 222px;
+    z-index: 1;
+}
+
+.tanlinell-tabs-container .tanlinell-tabs-control li a, .tabs-left .tanlinell-tabs-control li a {
+    text-decoration: none !important;
+}
+
+.tanlinell-tabs-container .tanlinell-tabs-control li a {
+}
+
+.featured_tabs ul li a, .featured_single_tabs ul li a {
+    color: #000000 !important;
+}
+
+.tanlinell-learn-more a, .tanlinell-tabs-container a, .tabs-left a, .tanlinell-simple-slider a, .author-shortcodes a, .tanlinell-tooltip-box a {
+    text-shadow: none !important;
+}
+
+.entry-content .tanlinell-tabs-container .tanlinell-tabs-control li a:hover, .entry-content .tanlinell-tabs-container .tanlinell-tabs-control li.active a {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 2px 0 10px #BFBFBF;
+    color: #000000;
+    font: 18px/45px Rockwell,Courier,monospace;
+    z-index: 10;
+}
+
+.tanlinell-tabs-container .tanlinell-tabs-control li a:hover {
+    color: #4C4C4C !important;
+    text-decoration: none;
+}
