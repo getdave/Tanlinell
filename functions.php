@@ -119,6 +119,11 @@ function tanlinell_setup() {
 	 */
 	require( get_template_directory() . '/inc/client-access-permissions.php' );
 	
+	/**
+	 * 	Add shortcodes to editor
+	 */
+	require( get_template_directory() . '/inc/shortcode.php' );
+	
 }
 endif; // tanlinell_setup
 add_action( 'after_setup_theme', 'tanlinell_setup' );
