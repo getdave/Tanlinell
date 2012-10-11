@@ -122,7 +122,7 @@ function tanlinell_setup() {
 	/**
 	 * 	Add shortcodes to editor
 	 */
-	require( get_template_directory() . '/inc/shortcode.php' );
+	require( get_template_directory() . '/shortcodes/shortcode.php' );
 	
 }
 endif; // tanlinell_setup
