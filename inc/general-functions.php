@@ -90,3 +90,27 @@ function tanlinell_get_top_parent_category( $cat_ID ){
 	}
 	return $cat_ID;
 }
+
+/**
+ * Function to get page children
+ *
+ * @param $page_id ( int ) # page id of the page
+ * @return $childrens ( HTML ) # unordered list of childrens
+ */
+
+function tanlinell_get_page_children( $page_id ){
+
+	$children = "";
+
+	$args = array(
+			'child_of' => $page_id,
+			'title_li' => '',
+			'echo' => 0,
+	);
+
+	$children_list = wp_list_pages( $args );
+	$children .= $children_list;
+
+	return $children;
+
+}
