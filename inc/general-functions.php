@@ -45,7 +45,7 @@ function tanlinell_get_post_thumb( $post_id ){
 		if ($parent == 0) 
 			return $page_id;
 		else 
-			return get_root_parent( $parent );
+			return tanlinell_get_root_parent( $parent );
   }
 
 
