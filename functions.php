@@ -109,20 +109,13 @@ function tanlinell_setup() {
 	
 	
 	/**
-	 * General functions of the theme
+	 * Helper functions 
 	 */
-	require( get_template_directory() . '/inc/general-functions.php' );
+	require( get_template_directory() . '/inc/helper-functions.php' );
+	
+
 	
 	
-	/**
-	 * 	Customize the User roles
-	 */
-	require( get_template_directory() . '/inc/client-access-permissions.php' );
-	
-	/**
-	 * 	Add shortcodes to editor
-	 */
-	require( get_template_directory() . '/shortcodes/shortcode.php' );
 	
 }
 endif; // tanlinell_setup
