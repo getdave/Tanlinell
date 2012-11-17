@@ -24,11 +24,7 @@ function tanlinell_scripts() {
 	// Modernizr - custom build with only "essential" features. You should update this to your own requirements
 	wp_register_script('modernizr-custom', get_template_directory_uri() . '/js/vendor/modernizr.custom.43984.js', array(''), '1.0' , false );	// added to <head> not footer
 	wp_enqueue_script('modernizr-custom');
-	
-	// Accessible Tabbed Content
-	wp_enqueue_script( 'tabs', get_template_directory_uri() . '/shortcodes/js/jQuery.tabs.js', array( 'jquery' ), '1.0', true );
-	wp_enqueue_script('tabs');
-	
+		
 	// Plugins - all calls to init common plugins
 	wp_register_script('plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '1.0' , true );
 	wp_enqueue_script('plugins');
