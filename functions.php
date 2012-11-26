@@ -6,13 +6,21 @@
  * @since Tanlinell 1.0
  */
 
+
+
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
  * @since Tanlinell 1.0
  */
-if ( ! isset( $content_width ) )
+if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
+}
+
+
+
+
 
 if ( ! function_exists( 'tanlinell_setup' ) ):
 /**
@@ -59,16 +67,8 @@ function tanlinell_setup() {
 	 * Custom Shortcodes
 	 * add your own custom shortcodes into this file
 	 */	
-	//require( get_template_directory() . '/inc/custom-shortcodes.php' );
+	require( get_template_directory() . '/inc/custom-shortcodes.php' );
 	
-
-
-	/**
-	 * Custom Widgets
-	 * add your own custom Widgets into this file
-	 */	
-	//require( get_template_directory() . '/inc/custom-widgets.php' );
-
 
 
 	/**
@@ -86,6 +86,12 @@ function tanlinell_setup() {
 	require( get_template_directory() . '/inc/register-nav-menus.php' );
 
 
+	/**
+	 * Custom Widgets
+	 * add your own custom Widgets into this file
+	 */	
+	//require( get_template_directory() . '/inc/custom-widgets.php' );
+	
 
 	/**
 	 * Register Widgets
@@ -93,6 +99,11 @@ function tanlinell_setup() {
 	 */	
 	require( get_template_directory() . '/inc/register-widget-areas.php' );
 
+
+	/**
+	 * 	Register 'Custom Posts Types' for the theme
+	 */
+	require( get_template_directory() . '/inc/register-custom-posts.php' );
 
 	
 	/**
@@ -103,26 +114,13 @@ function tanlinell_setup() {
 	
 	
 	/**
-	 * 	Register 'Custom Posts Types' for the theme
+	 * Helper functions 
 	 */
-	require( get_template_directory() . '/inc/register-custom-posts.php' );
+	require( get_template_directory() . '/inc/helper-functions.php' );
+	
+
 	
 	
-	/**
-	 * General functions of the theme
-	 */
-	require( get_template_directory() . '/inc/general-functions.php' );
-	
-	
-	/**
-	 * 	Customize the User roles
-	 */
-	require( get_template_directory() . '/inc/client-access-permissions.php' );
-	
-	/**
-	 * 	Add shortcodes to editor
-	 */
-	require( get_template_directory() . '/shortcodes/shortcode.php' );
 	
 }
 endif; // tanlinell_setup

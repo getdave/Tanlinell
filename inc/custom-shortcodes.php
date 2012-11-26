@@ -11,16 +11,15 @@
  */
 
 
-
-// EXAMPLE
-function tanlinell_example_shortcode( $atts ) {
-	extract( shortcode_atts( array(
-		'foo' => 'something',
-		'bar' => 'something else',
-	), $atts ) );
-
-	return "foo = {$foo}";
+/**
+ * Email Encode/Obfuscate 
+ * accepts a given email address and obfuscates via antispambot function
+ * usage:  [email]your@email.com[/email]
+ */
+function email_encode_function( $atts, $content ){
+	return '<a href="mailto:'.antispambot($content).'">'.antispambot($content).'</a>';
 }
-add_shortcode( 'exampletag', 'tanlinell_example_shortcode' );
+
+add_shortcode( 'email', 'email_encode_function' );
 
 ?>
