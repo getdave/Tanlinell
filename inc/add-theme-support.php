@@ -54,7 +54,23 @@ add_theme_support( 'post-formats', array(
 
 /* Add theme support for core framework features. */
 add_theme_support( 'hybrid-core-menus', array( 'primary', 'subsidiary' ) );
-//add_theme_support( 'hybrid-core-sidebars', array( 'primary' ) );
+
+
+/**
+ * Add Core Sidebars
+ * 
+ * other widget areas are available - http://themehybrid.com/docs/tutorials/hybrid-core-sidebars
+ * additional widget areas are defined in register-widget-areas.php
+ */
+add_theme_support( 'hybrid-core-sidebars', 
+	array( 
+		'primary', 
+		'secondary',
+	)
+);
+
+
+
 add_theme_support( 'hybrid-core-widgets' );
 add_theme_support( 'hybrid-core-shortcodes' );
 add_theme_support( 'hybrid-core-theme-settings', array( 'about', 'footer' ) );
