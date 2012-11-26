@@ -1,0 +1,3 @@
+[submodule "hybrid-core"]
+	path = hybrid-core
+	url = https://github.com/justintadlock/hybrid-core.git
