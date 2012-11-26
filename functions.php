@@ -8,22 +8,16 @@
 
 
 
+/* Load the Hybrid Core framework class file. */
+require_once( trailingslashit( get_template_directory() ) . 'hybrid-core/hybrid.php' );
+
+/* Call the Hybrid Core class - provides access to new power */
+new Hybrid();
+
 
 /**
- * Set the content width based on the theme's design and stylesheet.
- *
- * @since Tanlinell 1.0
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
-
-
-
-
-
-if ( ! function_exists( 'tanlinell_setup' ) ):
-/**
+ * Theme Setup
+ * 
  * Sets up theme defaults and registers support for various WordPress features.
  *
  * Note that this function is hooked into the after_setup_theme hook, which runs
@@ -32,7 +26,15 @@ if ( ! function_exists( 'tanlinell_setup' ) ):
  *
  * @since Tanlinell 1.0
  */
+
+if ( ! function_exists( 'tanlinell_setup' ) ):
+
 function tanlinell_setup() {
+
+	/* Set the content width based on the theme's design and stylesheet. */
+	if ( ! isset( $content_width ) ) {
+		$content_width = 640; /* pixels */
+	}
 
 	/**
 	 * Custom template tags for this theme.
