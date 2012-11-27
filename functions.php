@@ -96,10 +96,13 @@ function tanlinell_setup() {
 	
 
 	/**
-	 * Register Widgets
-	 * sets up and registers required Widgets
+	 * Register Widgetized Areas
+	 * sets up and registers required Widgetized areas
 	 */	
 	require( get_template_directory() . '/inc/register-widget-areas.php' );
+
+
+	
 
 
 	/**
