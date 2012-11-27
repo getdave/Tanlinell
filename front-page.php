@@ -17,6 +17,36 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'content', 'page' ); ?>
+					
+					<?php if ( is_active_sidebar( 'homepage-feature-one' ) ) : ?>
+
+						<div id="homepage-feature-one" class="homepage-feature">
+
+							<?php dynamic_sidebar( 'homepage-feature-one' ); ?>
+
+						</div><!-- #primary -->
+
+					<?php endif; ?>
+					
+					<?php if ( is_active_sidebar( 'homepage-feature-two' ) ) : ?>
+
+						<div id="homepage-feature-two" class="homepage-feature">
+
+							<?php dynamic_sidebar( 'homepage-feature-two' ); ?>
+
+						</div><!-- #primary -->
+
+					<?php endif; ?>
+					
+					<?php if ( is_active_sidebar( 'homepage-feature-three' ) ) : ?>
+
+						<div id="homepage-feature-three" class="homepage-feature">
+
+							<?php dynamic_sidebar( 'homepage-feature-three' ); ?>
+
+						</div><!-- #primary -->
+
+					<?php endif; ?>
 
 				<?php endwhile; // end of the loop. ?>
 
