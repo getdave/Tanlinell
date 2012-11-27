@@ -173,3 +173,29 @@ function tanlinell_category_transient_flusher() {
 }
 add_action( 'edit_category', 'tanlinell_category_transient_flusher' );
 add_action( 'save_post', 'tanlinell_category_transient_flusher' );
+
+
+
+
+/**
+ * Hybrid Enhance Breadcrumb Args
+ *
+ * Default sitewide settings for the breadcrumb trails
+ * http://themehybrid.com/docs/tutorials/breadcrumb-trail
+ */
+
+function my_breadcrumb_trail_args( $args ) {
+
+	$args = array(
+		'separator' => '/',
+		'before' => __( '', 'breadcrumb-trail' ),
+		'after' => false,
+		'front_page' => true,
+		'show_home' => __( 'Home', 'breadcrumb-trail' ),
+		'echo' => true
+	);
+
+	return $args;
+}
+
+add_filter( 'breadcrumb_trail_args', 'my_breadcrumb_trail_args' );
