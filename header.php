@@ -63,13 +63,12 @@
 			<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
+		
+		<p class="vh"><?php _e( 'Menu', 'tanlinell' ); ?></p>
+		<div class="vh skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tanlinell' ); ?>"><?php _e( 'Skip to content', 'tanlinell' ); ?></a></div>
 
-		<nav role="navigation" class="site-navigation primary-navigation">
-			<p class="assistive-text"><?php _e( 'Menu', 'tanlinell' ); ?></p>
-			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tanlinell' ); ?>"><?php _e( 'Skip to content', 'tanlinell' ); ?></a></div>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- .site-navigation .main-navigation -->
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => 'nav', 'container_class' => 'menu', 'menu_class' => 'nav-primary', 'menu_id' => 'nav-primary', 'fallback_cb' => '' ) ); ?>
+	
 	</header><!-- #masthead .site-header -->
 
 	<div id="main" class="site-main">
