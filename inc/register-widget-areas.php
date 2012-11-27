@@ -13,6 +13,39 @@
 
 function tanlinell_widgets_init() {
 
+	// HOMEPAGE WIDGETS (x3)
+	register_sidebar( array(
+		'name' => __( 'Homepage Feature One', 'tanlinell' ),
+		'id' => 'homepage-area-one',
+		'description' => __( '1st feature block used on the website homepage.', 'tanlinell' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Homepage Feature Two', 'tanlinell' ),
+		'id' => 'homepage-area-two',
+		'description' => __( '2nd feature block used on the website homepage.', 'tanlinell' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Homepage Feature Three', 'tanlinell' ),
+		'id' => 'homepage-area-three',
+		'description' => __( '3rd feature block used on the website homepage.', 'tanlinell' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
+	) );
+
+
+
 	// FOOTER WIDGETS (x3)
 	register_sidebar( array(
 		'name' => __( 'Footer Area One', 'tanlinell' ),
@@ -43,34 +76,10 @@ function tanlinell_widgets_init() {
 		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	) );
-
-
-
-	
-	// HOMEPAGE WIDGETS (x3)
-	/* register_sidebar( array(
-		'name' => __( 'Homepage Area One', 'tanlinell' ),
-		'id' => 'homepage-area-one',
-		'description' => __( 'An optional widget area for your site homepage', 'tanlinell' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Homepage Area Two', 'tanlinell' ),
-		'id' => 'homepage-area-two',
-		'description' => __( 'An optional widget area for your site homepage', 'tanlinell' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	) ); */
 	
 }
 
-add_action( 'widgets_init', 'tanlinell_widgets_init' );
+add_action( 'widgets_init', 'tanlinell_widgets_init',11); // we set 11 as the priority because we want this to execute after the Hybrid core widgets
 
 
 ?>
