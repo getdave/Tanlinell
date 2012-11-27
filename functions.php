@@ -52,6 +52,11 @@ function tanlinell_setup() {
 	 */
 	//require( get_template_directory() . '/inc/theme-options/theme-options.php' );
 
+	if ( !function_exists( 'optionsframework_init' ) ) {
+		define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/options-framework/' );
+		require_once get_template_directory() . '/inc/options-framework/options-framework.php';
+	}
+
 
 	/**
 	 * Translation
