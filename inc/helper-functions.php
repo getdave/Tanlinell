@@ -1,8 +1,8 @@
 <?php
 /**
- * Custom Shortcodes
+ * Helper Functions
  *
- * General functions used in the theme
+ * General utilizy functions used throughout the theme
  * 
  * @package Tanlinell
  * @since Tanlinell 1.0

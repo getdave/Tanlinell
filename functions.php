@@ -64,6 +64,14 @@ function tanlinell_setup() {
 	//load_theme_textdomain( 'tanlinell', get_template_directory() . '/languages' );
 
 
+	
+
+	/**
+	 * Admin Customisations
+	 * functions and tweaks to customise the WP Admin
+	 */	
+	require( get_template_directory() . '/inc/admin-customisations.php' );
+
 
 	/**
 	 * Custom Shortcodes
@@ -102,7 +110,7 @@ function tanlinell_setup() {
 	require( get_template_directory() . '/inc/register-widget-areas.php' );
 
 
-	
+
 
 
 	/**
