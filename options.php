@@ -44,7 +44,7 @@ function optionsframework_options() {
 		'name' => __('Social Settings', 'options_framework_theme'),
 		'type' => 'heading');
 
-	// Twitter Username
+	// Twitter Page
 	$options[] = array(
 		'name' => __('Twitter Profile', 'options_framework_theme'),
 		'desc' => __('Enter your Twitter profile url. Used throughout the website.', 'options_framework_theme'),
@@ -53,11 +53,20 @@ function optionsframework_options() {
 		'class' => 'mini',
 		'type' => 'text');
 
-	// Facebook Username
+	// Facebook Page
 	$options[] = array(
 		'name' => __('Facebook Page', 'options_framework_theme'),
 		'desc' => __('Enter your Facebook page url. Used throughout the website.', 'options_framework_theme'),
 		'id' => 'facebook_page_url',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	// YouTube Page
+	$options[] = array(
+		'name' => __('YouTube Page', 'options_framework_theme'),
+		'desc' => __('Enter your YouTube page url. Used throughout the website.', 'options_framework_theme'),
+		'id' => 'youtube_page_url',
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');
