@@ -43,10 +43,21 @@ add_theme_support( 'post-formats', array(
 ));
 
 
+/**
+ * Shortcodes in Widgets
+ * no so much a "add support" but still allows shortcodes
+ * to be used inside of Widgets. Very handy...
+ */
+
+add_filter('widget_text', 'do_shortcode');
+
+
+
+
 
 
 /**
- * HYBRID CORE FEATURS
+ * HYBRID CORE FEATURES
  *
  * Initalizes support for Hybrid Core features. These are listed at:
  * http://themehybrid.com/hybrid-core
@@ -73,7 +84,7 @@ add_theme_support( 'hybrid-core-sidebars',
 
 add_theme_support( 'hybrid-core-widgets' );
 add_theme_support( 'hybrid-core-shortcodes' );
-add_theme_support( 'hybrid-core-theme-settings', array( 'about', 'footer' ) );
+//add_theme_support( 'hybrid-core-theme-settings', array( 'about', 'footer' ) );
 add_theme_support( 'hybrid-core-drop-downs' );
 add_theme_support( 'hybrid-core-template-hierarchy' );
 
