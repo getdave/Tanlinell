@@ -9,11 +9,13 @@
 
 /**
  * Homepage slider - post_type: "slider"
+ *
+ * Custom post for feature slider commonly implemented on the Homepage of the website.
  */
 
-add_action( 'init', 'register_cpt_slide' );
+add_action( 'init', 'tanlinell_register_cpt_homepage_slider' );
 
-function register_cpt_slide() {
+function tanlinell_register_cpt_homepage_slider() {
 
 	$labels = array(
 			'name' => _x( 'Slides', 'slide' ),
@@ -39,14 +41,20 @@ function register_cpt_slide() {
 			'show_in_menu' => true,
 			'show_in_nav_menus' => true,
 			'publicly_queryable' => true,
-			'exclude_from_search' => false,
+			'exclude_from_search' => true,
 			'has_archive' => true,
 			'query_var' => true,
 			'can_export' => true,
 			'rewrite' => true,
-			'capability_type' => 'post'
+			'capability_type' => 'post',
+			'menu_icon' => get_bloginfo('template_directory') . '/images/cpt-icons/application-image.png',  // Icon Path
 	);
 
 	register_post_type( 'slide', $args );
 	flush_rewrite_rules();
 }
+
+
+
+
+
