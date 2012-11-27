@@ -13,10 +13,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php do_action( 'tanlinell_credits' ); ?>
-			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'tanlinell' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'tanlinell' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'tanlinell' ), 'tanlinell', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+			<?php do_action( 'tanlinell_credits' ); ?>		
 		</div><!-- .site-info -->
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->

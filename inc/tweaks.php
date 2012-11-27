@@ -34,6 +34,8 @@ function tanlinell_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'tanlinell_body_classes' );
 
+
+
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  *
@@ -50,3 +52,5 @@ function tanlinell_enhanced_image_navigation( $url, $id ) {
 	return $url;
 }
 add_filter( 'attachment_link', 'tanlinell_enhanced_image_navigation', 10, 2 );
+
+
