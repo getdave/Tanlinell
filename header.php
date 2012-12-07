@@ -72,3 +72,5 @@
 	</header><!-- #masthead .site-header -->
 
 	<div id="main" class="site-main">
+		<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail(); ?>
+	

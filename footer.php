@@ -13,7 +13,10 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php do_action( 'tanlinell_credits' ); ?>		
+			<?php 
+				$atts = array();
+				echo tanlinell_developer_credit($atts);
+			?>		
 		</div><!-- .site-info -->
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
