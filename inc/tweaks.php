@@ -55,20 +55,32 @@ add_filter( 'attachment_link', 'tanlinell_enhanced_image_navigation', 10, 2 );
 
 
 
+
 /**
- * Custom Post Type Icons CSS
+ * Filter Quote Post Types
  * 
- * Fixes broken CSS overflow on CPT menu icons
+ * Ensure "Quote" post types are always wrapped in blockquotes whether or
+ * not the user has included in the admin
  *
- * @return void
+ * @return the_content() wrapped in a <blockquote>
+ * @author Justin Tadlock
  **/
 
-function cpt_icons() {
-    ?>
-    <style type="text/css" media="screen">
-        #adminmenu .wp-menu-image {
-        	overflow: hidden;
-        }
-    </style>
-<?php } 
-add_action( 'admin_head', 'cpt_icons' );
+function tanlinell_quote_post_type_blockquote( $content ) {
+
+	/* Check if we're displaying a 'quote' post. */
+	if ( has_post_format( 'quote' ) ) {
+
+		/* Match any <blockquote> elements. */
+		preg_match( '/<blockquote.*?>/', $content, $matches );
+
+		/* If no <blockquote> elements were found, wrap the entire content in one. */
+		if ( empty( $matches ) )
+			$content = "<blockquote>{$content}</blockquote>";
+	}
+
+	return $content;
+}
+add_filter( 'the_content', 'tanlinell_quote_post_type_blockquote' );
+
+

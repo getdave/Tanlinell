@@ -88,3 +88,25 @@ function tanlinell_unregister_default_wp_widgets() {
 }
 
 add_action('widgets_init', 'tanlinell_unregister_default_wp_widgets', 1);
+
+
+
+
+
+/**
+ * Custom Post Type Icons CSS
+ * 
+ * Fixes broken CSS overflow on CPT menu icons
+ *
+ * @return void
+ **/
+
+function cpt_icons() {
+    ?>
+    <style type="text/css" media="screen">
+        #adminmenu .wp-menu-image {
+        	overflow: hidden;
+        }
+    </style>
+<?php } 
+add_action( 'admin_head', 'cpt_icons' );
