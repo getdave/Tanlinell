@@ -54,3 +54,21 @@ function tanlinell_enhanced_image_navigation( $url, $id ) {
 add_filter( 'attachment_link', 'tanlinell_enhanced_image_navigation', 10, 2 );
 
 
+
+/**
+ * Custom Post Type Icons CSS
+ * 
+ * Fixes broken CSS overflow on CPT menu icons
+ *
+ * @return void
+ **/
+
+function cpt_icons() {
+    ?>
+    <style type="text/css" media="screen">
+        #adminmenu .wp-menu-image {
+        	overflow: hidden;
+        }
+    </style>
+<?php } 
+add_action( 'admin_head', 'cpt_icons' );
