@@ -12,46 +12,45 @@
 
 get_header(); ?>
 
-		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
-				<?php while ( have_posts() ) : the_post(); ?>
+<div class="main" role="main">
+<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
-					
-					<?php if ( is_active_sidebar( 'homepage-feature-one' ) ) : ?>
+	<?php get_template_part( 'content', 'page' ); ?>
+	
+	<?php if ( is_active_sidebar( 'homepage-feature-one' ) ) : ?>
 
-						<div id="homepage-feature-one" class="homepage-feature">
+		<div id="homepage-feature-one" class="homepage-feature">
 
-							<?php dynamic_sidebar( 'homepage-feature-one' ); ?>
+			<?php dynamic_sidebar( 'homepage-feature-one' ); ?>
 
-						</div><!-- #primary -->
+		</div><!-- #primary -->
 
-					<?php endif; ?>
-					
-					<?php if ( is_active_sidebar( 'homepage-feature-two' ) ) : ?>
+	<?php endif; ?>
+	
+	<?php if ( is_active_sidebar( 'homepage-feature-two' ) ) : ?>
 
-						<div id="homepage-feature-two" class="homepage-feature">
+		<div id="homepage-feature-two" class="homepage-feature">
 
-							<?php dynamic_sidebar( 'homepage-feature-two' ); ?>
+			<?php dynamic_sidebar( 'homepage-feature-two' ); ?>
 
-						</div><!-- #primary -->
+		</div><!-- #primary -->
 
-					<?php endif; ?>
-					
-					<?php if ( is_active_sidebar( 'homepage-feature-three' ) ) : ?>
+	<?php endif; ?>
+	
+	<?php if ( is_active_sidebar( 'homepage-feature-three' ) ) : ?>
 
-						<div id="homepage-feature-three" class="homepage-feature">
+		<div id="homepage-feature-three" class="homepage-feature">
 
-							<?php dynamic_sidebar( 'homepage-feature-three' ); ?>
+			<?php dynamic_sidebar( 'homepage-feature-three' ); ?>
 
-						</div><!-- #primary -->
+		</div><!-- #primary -->
 
-					<?php endif; ?>
+	<?php endif; ?>
 
-				<?php endwhile; // end of the loop. ?>
+<?php endwhile; // end of the loop. ?>
 
-			</div><!-- #content .site-content -->
-		</div><!-- #primary .content-area -->
+</div><!-- .main -->
 
-<?php get_sidebar(); ?>
+
+
 <?php get_footer(); ?>

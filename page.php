@@ -13,25 +13,26 @@
 
 get_header(); ?>
 
-		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
-				
-				
-				<?php while ( have_posts() ) : the_post(); ?>
+<div class="main" role="main">
+		
+		
+<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
-
+	<?php get_template_part( 'content', 'page' ); ?>
 
 
-					<?php
-						// REMOVED: If comments are required for Page templates then uncomment
-						/* comments_template( '', true );  */
-					?>
 
-				<?php endwhile; // end of the loop. ?>
+	<?php
+		// REMOVED: If comments are required for Page templates then uncomment
+		/* comments_template( '', true );  */
+	?>
 
-			</div><!-- #content .site-content -->
-		</div><!-- #primary .content-area -->
+<?php endwhile; // end of the loop. ?>
 
+	
+</div><!-- .main -->
+
+<div class="sub">
 <?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>
