@@ -1,20 +1,41 @@
-jQuery( document ).ready( function( $ ) {
-	
-	/**
-	 * 	Tabbed content shortcode
-	 */
-	
-	$(".tanlinell-tabs-control li a").each(function(i){
-		var idx = i + 1; 							 
-		$(this).attr("href","#tab"+idx)	;							 
-	});
+/**
+ * MAIN JS
+ *
+ * This file is reserved for custom JavaScript.
+ * Use some decent JS code patterns when writing this stuff
+ *
+ * http://addyosmani.com/resources/essentialjsdesignpatterns/book/
+ * 
+ */
 
-	//box-content
-	$(".box-tabbed-content div").each(function(i){
-		var idx = i + 1; 							 
-		$(this).attr("id","tab"+idx)	;							 
-	});
 
-	 $('.featured_tabs').tabs();
-	
-});
+/* 
+var myRevealingModule = function () {
+
+    var privateVar = "",
+        publicVar  = "";
+
+    function privateFunction() {
+        
+    }
+    
+    function publicFunction() {
+       
+    }
+
+    // Reveal public pointers to  
+    // private functions and properties
+
+    return {
+        privateMethod: privateFunction,
+        publicMethod: publicFunction
+    };
+}(); */
+
+
+
+// Capture jQuery in noConflict mode and retranslate to $ alias
+(function($) {
+
+
+}(jQuery));
