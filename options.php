@@ -71,6 +71,24 @@ function optionsframework_options() {
 		'class' => 'mini',
 		'type' => 'text');
 
+	// Vimeo Page
+	$options[] = array(
+		'name' => __('Vimeo Page', 'options_framework_theme'),
+		'desc' => __('Enter your Vimeo page url. Used throughout the website.', 'options_framework_theme'),
+		'id' => 'vimeo_page_url',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	// LinkedIn Page
+	$options[] = array(
+		'name' => __('LinkedIn Page', 'options_framework_theme'),
+		'desc' => __('Enter your LinkedIn page url. Used throughout the website.', 'options_framework_theme'),
+		'id' => 'linkedin_page_url',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
 
 
 
