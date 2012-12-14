@@ -12,6 +12,7 @@
 	</div><!-- #main .site-main -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<?php get_template_part( 'menu', 'subsidiary' ); ?>	
 		<div class="site-info">
 			<?php 
 				$atts = array();
