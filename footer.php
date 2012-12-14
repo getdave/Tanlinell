@@ -10,7 +10,7 @@
 ?>
 
 	</div><!-- #main .site-main -->
-
+	<?php include( trailingslashit( get_template_directory() ) . '/inc/templates/social-links.php' );?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<?php get_template_part( 'menu', 'subsidiary' ); ?>	
 		<div class="site-info">
