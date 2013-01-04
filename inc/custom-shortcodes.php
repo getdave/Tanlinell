@@ -39,7 +39,7 @@ function tanlinell_developer_credit($atts){
 	$defaults = array(
 		'the_credit'	=> 'Designed & Developed',
 		'designer_name'	=> 'Burfield',
-		'designer_url'	=> 'http://burfieldccreative.co.uk',
+		'designer_url'	=> 'http://burfieldcreative.co.uk',
 		'title'			=> 'Digital Agency Bristol',
 		'hidden_text'	=> 'a Digital Agency in Bristol',
 	);
