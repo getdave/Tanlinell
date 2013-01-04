@@ -6,3 +6,8 @@ The word "Tanlinell" means "Underscore" in Welsh, but whilst the theme is based 
 
 
 Tanlinell is brought to you by myself and the team at [Burfield Creative](http://burfieldcreative.co.uk).
+
+
+## Tips & Tricks
+
+* For nice Custom Post Type icons check out [randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/](http://randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/)
