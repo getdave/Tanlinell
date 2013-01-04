@@ -43,16 +43,6 @@ add_theme_support( 'post-formats', array(
 ));
 
 
-/**
- * Shortcodes in Widgets
- * no so much a "add support" but still allows shortcodes
- * to be used inside of Widgets. Very handy...
- */
-
-add_filter('widget_text', 'do_shortcode');
-
-
-
 
 
 
