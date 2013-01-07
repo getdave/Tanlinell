@@ -50,6 +50,20 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+
+<!-- CSS FRAMEWORK -->
+<!-- Normalize - included separately -->
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.css">
+<!--[if (gt IE 8) | (IEMobile)]><!-->
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/master.css">
+<!--<![endif]-->
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/master-ie.css">
+<![endif]-->
+
+
+
 <?php wp_head(); ?>
 </head>
 
