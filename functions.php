@@ -14,6 +14,10 @@ require_once( trailingslashit( get_template_directory() ) . 'hybrid-core/hybrid.
 /* Call the Hybrid Core class - provides access to new power */
 new Hybrid();
 
+// Load the TGM Plugin Class - requires or recommends Plugins to install
+require_once( trailingslashit( get_template_directory() ) . 'inc/tgm-plugin-activation/class-tgm-plugin-activation.php' );
+
+
 
 /**
  * Theme Setup
@@ -30,6 +34,14 @@ new Hybrid();
 if ( ! function_exists( 'tanlinell_setup' ) ):
 
 function tanlinell_setup() {
+
+
+	/**
+	 * Required Plugins scripts
+	 */
+	require( get_template_directory() . '/inc/tgm-plugin-activation/required-plugins.php' );
+
+
 
 	/* Set the content width based on the theme's design and stylesheet. */
 	if ( ! isset( $content_width ) ) {
