@@ -37,7 +37,7 @@ function tanlinell_setup() {
 
 
 	/**
-	 * Required Plugins scripts
+	 * TGM Required Plugins Script
 	 */
 	require( get_template_directory() . '/inc/tgm-plugin-activation/required-plugins.php' );
 
