@@ -90,6 +90,17 @@ function tanlinell_unregister_default_wp_widgets() {
 add_action('widgets_init', 'tanlinell_unregister_default_wp_widgets', 1);
 
 
+/**
+ * Unhide Kitchen Sink
+ * 
+ * Shows the "kitchen" sink view of the editor by default
+ */
+
+function tanlinell_unhide_kitchensink( $args ) {
+	$args['wordpress_adv_hidden'] = false;
+	return $args;
+}
+add_filter( 'tiny_mce_before_init', 'unhide_kitchensink' );
 
 
 
