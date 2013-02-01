@@ -22,14 +22,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 
-<?php 
-	/**
-	 * Hide the site from Search Engines unless
-	 * we're on the Production server
-	 */
-	if ( constant('WP_ENV') !== "production" ) { ?>
-	<meta name="robots" content="noindex, follow">
-<?php } ?>
 
 <?php 
 	// Is this a responsive site? Uncomment if so...
