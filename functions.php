@@ -147,6 +147,15 @@ function tanlinell_setup() {
 	 * Helper functions 
 	 */
 	require( get_template_directory() . '/inc/helper-functions.php' );
+
+
+	/**
+	 * Burfield Customisations
+	 * custom tweaks for sites designed and created by Burfield
+	 * you might want to comment this out...
+	 */
+	require( get_template_directory() . '/inc/burfield-customisations.php' );
+	
 	
 
 	
