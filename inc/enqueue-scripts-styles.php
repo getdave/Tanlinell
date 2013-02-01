@@ -22,7 +22,7 @@ function tanlinell_scripts() {
 	 */	
 	
 	// Modernizr - custom build with only "essential" features. You should update this to your own requirements
-	wp_register_script('modernizr-custom', get_template_directory_uri() . '/js/modernizr.custom.js', array(''), '1.0' , false );	// added to <head> not footer
+	wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr.custom.js', '', '1.0' , false );
 	wp_enqueue_script('modernizr-custom');
 
 	// Fitvids - a good choice to ensure ratio of embedded videos
