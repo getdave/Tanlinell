@@ -6,3 +6,17 @@ The word "Tanlinell" means "Underscore" in Welsh, but whilst the theme is based 
 
 
 Tanlinell is brought to you by myself and the team at [Burfield Creative](http://burfieldcreative.co.uk).
+
+
+## Usage
+
+To use this project simply clone the repo using:
+
+git clone --recursive git://github.com/foo/bar.git
+
+Note the use of the --recursive flag. This tells git to fetch the files for the submodules contained within the repo (eg: Hybrid Core).
+
+
+## Tips & Tricks
+
+* For nice Custom Post Type icons check out [randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/](http://randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/)

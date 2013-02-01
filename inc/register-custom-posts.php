@@ -8,26 +8,28 @@
  */
 
 /**
- * Homepage slider - post_type: "slider"
+ * Homepage Slides 
+ *
+ * Custom post for feature slider commonly implemented on the Homepage of the website.
  */
 
-add_action( 'init', 'register_cpt_slide' );
+add_action( 'init', 'tanlinell_register_cpt_homepage_slider' );
 
-function register_cpt_slide() {
+function tanlinell_register_cpt_homepage_slider() {
 
 	$labels = array(
-			'name' => _x( 'Slides', 'slide' ),
-			'singular_name' => _x( 'Slide', 'slide' ),
-			'add_new' => _x( 'Add New', 'slide' ),
-			'add_new_item' => _x( 'Add New Slide', 'slide' ),
-			'edit_item' => _x( 'Edit Slide', 'slide' ),
-			'new_item' => _x( 'New Slide', 'slide' ),
-			'view_item' => _x( 'View Slide', 'slide' ),
-			'search_items' => _x( 'Search Slides', 'slide' ),
-			'not_found' => _x( 'No slides found', 'slide' ),
-			'not_found_in_trash' => _x( 'No slides found in Trash', 'slide' ),
-			'parent_item_colon' => _x( 'Parent Slide:', 'slide' ),
-			'menu_name' => _x( 'Homepage Slider', 'slide' ),
+			'name' => _x( 'Homepage Slides', 'homepage_slides' ),
+			'singular_name' => _x( 'Homepage Slide', 'homepage_slides' ),
+			'add_new' => _x( 'Add New', 'homepage_slides' ),
+			'add_new_item' => _x( 'Add New Slide', 'homepage_slides' ),
+			'edit_item' => _x( 'Edit Slide', 'homepage_slides' ),
+			'new_item' => _x( 'New Slide', 'homepage_slides' ),
+			'view_item' => _x( 'View Slide', 'homepage_slides' ),
+			'search_items' => _x( 'Search Homepage Slides', 'homepage_slides' ),
+			'not_found' => _x( 'No Homepage Slides found', 'homepage_slides' ),
+			'not_found_in_trash' => _x( 'No Homepage Slides found in Trash', 'homepage_slides' ),
+			'parent_item_colon' => _x( 'Parent Slide:', 'homepage_slides' ),
+			'menu_name' => _x( 'Homepage Slides', 'homepage_slides' ),
 	);
 
 	$args = array(
@@ -37,16 +39,38 @@ function register_cpt_slide() {
 			'public' => true,
 			'show_ui' => true,
 			'show_in_menu' => true,
-			'show_in_nav_menus' => true,
+			'show_in_nav_menus' => false,
 			'publicly_queryable' => true,
-			'exclude_from_search' => false,
-			'has_archive' => true,
+			'exclude_from_search' => true,
+			'has_archive' => false,
 			'query_var' => true,
 			'can_export' => true,
 			'rewrite' => true,
-			'capability_type' => 'post'
+			'capability_type' => 'post',
+			'menu_icon' => get_template_directory_uri() . '/images/cpt-icons/application-image.png',  // Icon Path
 	);
 
-	register_post_type( 'slide', $args );
+	register_post_type( 'homepage_slides', $args );
 	flush_rewrite_rules();
 }
+
+
+/**
+ * Homepage Slide Featured Image Customisation
+ *
+ * Customises the wording and positioning of the Featured Image box for the module
+ */
+
+function tanlinell_homepage_slides_photo_box() {
+	// Get rid of standard "Featured Image"
+	remove_meta_box( 'postimagediv', 'homepage_slides', 'side' );
+
+	// Because we register it with the same ID (param 1) it retains all standard "Featured Image" functionality - winning!
+	add_meta_box('postimagediv', 'Slide Image', 'post_thumbnail_meta_box', 'homepage_slides', 'normal', 'high');		
+}
+add_action('do_meta_boxes', 'tanlinell_homepage_slides_photo_box');
+
+
+
+
+

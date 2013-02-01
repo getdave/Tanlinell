@@ -10,13 +10,14 @@
 ?>
 
 	</div><!-- #main .site-main -->
-
+	<?php include( trailingslashit( get_template_directory() ) . '/inc/templates/social-links.php' );?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<?php get_template_part( 'menu', 'subsidiary' ); ?>	
 		<div class="site-info">
-			<?php do_action( 'tanlinell_credits' ); ?>
-			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'tanlinell' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'tanlinell' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'tanlinell' ), 'tanlinell', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
+			<?php 
+				$atts = array();
+				echo tanlinell_developer_credit($atts);
+			?>		
 		</div><!-- .site-info -->
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->

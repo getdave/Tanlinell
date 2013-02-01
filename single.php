@@ -8,27 +8,28 @@
 
 get_header(); ?>
 
-		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
+<div class="main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php tanlinell_content_nav( 'nav-above' ); ?>
+		<?php tanlinell_content_nav( 'nav-above' ); ?>
 
-				<?php get_template_part( 'content', 'single' ); ?>
+		<?php get_template_part( 'content', 'single' ); ?>
 
-				<?php tanlinell_content_nav( 'nav-below' ); ?>
+		<?php tanlinell_content_nav( 'nav-below' ); ?>
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template
-					if ( comments_open() || '0' != get_comments_number() )
-						comments_template( '', true );
-				?>
+		<?php
+			// If comments are open or we have at least one comment, load up the comment template
+			if ( comments_open() || '0' != get_comments_number() )
+				comments_template( '', true );
+		?>
 
-			<?php endwhile; // end of the loop. ?>
+	<?php endwhile; // end of the loop. ?>
 
-			</div><!-- #content .site-content -->
-		</div><!-- #primary .content-area -->
+</div><!-- .main -->
 
+<div class="sub">
 <?php get_sidebar(); ?>
+</div>
+
 <?php get_footer(); ?>

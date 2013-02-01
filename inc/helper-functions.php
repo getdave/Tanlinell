@@ -1,8 +1,8 @@
 <?php
 /**
- * Custom Shortcodes
+ * Helper Functions
  *
- * General functions used in the theme
+ * General utilizy functions used throughout the theme
  * 
  * @package Tanlinell
  * @since Tanlinell 1.0
@@ -45,7 +45,7 @@ function tanlinell_get_post_thumb( $post_id ){
 		if ($parent == 0) 
 			return $page_id;
 		else 
-			return get_root_parent( $parent );
+			return tanlinell_get_root_parent( $parent );
   }
 
 
@@ -90,3 +90,35 @@ function tanlinell_get_top_parent_category( $cat_ID ){
 	}
 	return $cat_ID;
 }
+
+/**
+ * Function to get page children
+ *
+ * @param $page_id ( int ) # page id of the page
+ * @return $childrens ( HTML ) # unordered list of childrens
+ */
+
+function tanlinell_get_page_children( $page_id ){
+
+	$children = "";
+
+	$args = array(
+			'child_of' => $page_id,
+			'title_li' => '',
+			'echo' => 0,
+	);
+
+	$children_list = wp_list_pages( $args );
+	$children .= $children_list;
+
+	return $children;
+
+}
+
+
+
+
+
+
+
+

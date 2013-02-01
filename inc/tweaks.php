@@ -34,6 +34,8 @@ function tanlinell_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'tanlinell_body_classes' );
 
+
+
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  *
@@ -50,3 +52,35 @@ function tanlinell_enhanced_image_navigation( $url, $id ) {
 	return $url;
 }
 add_filter( 'attachment_link', 'tanlinell_enhanced_image_navigation', 10, 2 );
+
+
+
+
+/**
+ * Filter Quote Post Types
+ * 
+ * Ensure "Quote" post types are always wrapped in blockquotes whether or
+ * not the user has included in the admin
+ *
+ * @return the_content() wrapped in a <blockquote>
+ * @author Justin Tadlock
+ **/
+
+function tanlinell_quote_post_type_blockquote( $content ) {
+
+	/* Check if we're displaying a 'quote' post. */
+	if ( has_post_format( 'quote' ) ) {
+
+		/* Match any <blockquote> elements. */
+		preg_match( '/<blockquote.*?>/', $content, $matches );
+
+		/* If no <blockquote> elements were found, wrap the entire content in one. */
+		if ( empty( $matches ) )
+			$content = "<blockquote>{$content}</blockquote>";
+	}
+
+	return $content;
+}
+add_filter( 'the_content', 'tanlinell_quote_post_type_blockquote' );
+
+

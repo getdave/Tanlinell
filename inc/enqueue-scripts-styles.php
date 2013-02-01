@@ -22,20 +22,24 @@ function tanlinell_scripts() {
 	 */	
 	
 	// Modernizr - custom build with only "essential" features. You should update this to your own requirements
-	wp_register_script('modernizr-custom', get_template_directory_uri() . '/js/vendor/modernizr.custom.43984.js', array(''), '1.0' , false );	// added to <head> not footer
+	wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr.custom.js', '', '1.0' , false );
 	wp_enqueue_script('modernizr-custom');
+
+	// Fitvids - a good choice to ensure ratio of embedded videos
+	//wp_register_script('fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '1.0' , true );
+	//wp_enqueue_script('fitvids');
 	
-	// Accessible Tabbed Content
-	wp_enqueue_script( 'tabs', get_template_directory_uri() . '/shortcodes/js/jQuery.tabs.js', array( 'jquery' ), '1.0', true );
-	wp_enqueue_script('tabs');
-	
+	// Flexslider - a good choice for a responsive slider
+	wp_register_script('flexslider', get_template_directory_uri() . '/js/flexslider/jquery.flexslider.js', array('jquery'), '1.0' , true );
+	wp_enqueue_script('flexslider');
+		
 	// Plugins - all calls to init common plugins
 	wp_register_script('plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '1.0' , true );
 	wp_enqueue_script('plugins');
 
 	// Main.js - custom javascript for the site
-	//wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0' , true );
-	//wp_enqueue_script('main'); 
+	wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0' , true );
+	wp_enqueue_script('main'); 
 
 
 
@@ -45,10 +49,6 @@ function tanlinell_scripts() {
 	 */
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
-	}
-
-	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 }
 

@@ -12,17 +12,45 @@
 
 get_header(); ?>
 
-		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
-				<h1>HOMEPAGE!!!!</h1>
-				<?php while ( have_posts() ) : the_post(); ?>
+<div class="main" role="main">
+<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+	<?php get_template_part( 'content', 'page' ); ?>
+	
+	<?php if ( is_active_sidebar( 'homepage-feature-one' ) ) : ?>
 
-				<?php endwhile; // end of the loop. ?>
+		<div id="homepage-feature-one" class="homepage-feature">
 
-			</div><!-- #content .site-content -->
-		</div><!-- #primary .content-area -->
+			<?php dynamic_sidebar( 'homepage-feature-one' ); ?>
 
-<?php get_sidebar(); ?>
+		</div><!-- #primary -->
+
+	<?php endif; ?>
+	
+	<?php if ( is_active_sidebar( 'homepage-feature-two' ) ) : ?>
+
+		<div id="homepage-feature-two" class="homepage-feature">
+
+			<?php dynamic_sidebar( 'homepage-feature-two' ); ?>
+
+		</div><!-- #primary -->
+
+	<?php endif; ?>
+	
+	<?php if ( is_active_sidebar( 'homepage-feature-three' ) ) : ?>
+
+		<div id="homepage-feature-three" class="homepage-feature">
+
+			<?php dynamic_sidebar( 'homepage-feature-three' ); ?>
+
+		</div><!-- #primary -->
+
+	<?php endif; ?>
+
+<?php endwhile; // end of the loop. ?>
+
+</div><!-- .main -->
+
+
+
 <?php get_footer(); ?>

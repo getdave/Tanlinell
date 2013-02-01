@@ -6,16 +6,22 @@
  * @since Tanlinell 1.0
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- *
- * @since Tanlinell 1.0
- */
-if ( ! isset( $content_width ) )
-	$content_width = 640; /* pixels */
 
-if ( ! function_exists( 'tanlinell_setup' ) ):
+
+/* Load the Hybrid Core framework class file. */
+require_once( trailingslashit( get_template_directory() ) . 'hybrid-core/hybrid.php' );
+
+/* Call the Hybrid Core class - provides access to new power */
+new Hybrid();
+
+// Load the TGM Plugin Class - requires or recommends Plugins to install
+require_once( trailingslashit( get_template_directory() ) . 'inc/tgm-plugin-activation/class-tgm-plugin-activation.php' );
+
+
+
 /**
+ * Theme Setup
+ * 
  * Sets up theme defaults and registers support for various WordPress features.
  *
  * Note that this function is hooked into the after_setup_theme hook, which runs
@@ -24,7 +30,23 @@ if ( ! function_exists( 'tanlinell_setup' ) ):
  *
  * @since Tanlinell 1.0
  */
+
+if ( ! function_exists( 'tanlinell_setup' ) ):
+
 function tanlinell_setup() {
+
+
+	/**
+	 * TGM Required Plugins Script
+	 */
+	require( get_template_directory() . '/inc/tgm-plugin-activation/required-plugins.php' );
+
+
+
+	/* Set the content width based on the theme's design and stylesheet. */
+	if ( ! isset( $content_width ) ) {
+		$content_width = 640; /* pixels */
+	}
 
 	/**
 	 * Custom template tags for this theme.
@@ -42,6 +64,11 @@ function tanlinell_setup() {
 	 */
 	//require( get_template_directory() . '/inc/theme-options/theme-options.php' );
 
+	if ( !function_exists( 'optionsframework_init' ) ) {
+		define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/options-framework/' );
+		require_once get_template_directory() . '/inc/options-framework/options-framework.php';
+	}
+
 
 	/**
 	 * Translation
@@ -54,21 +81,21 @@ function tanlinell_setup() {
 	//load_theme_textdomain( 'tanlinell', get_template_directory() . '/languages' );
 
 
+	
+
+	/**
+	 * Admin Customisations
+	 * functions and tweaks to customise the WP Admin
+	 */	
+	require( get_template_directory() . '/inc/admin-customisations.php' );
+
 
 	/**
 	 * Custom Shortcodes
 	 * add your own custom shortcodes into this file
 	 */	
-	//require( get_template_directory() . '/inc/custom-shortcodes.php' );
+	require( get_template_directory() . '/inc/custom-shortcodes.php' );
 	
-
-
-	/**
-	 * Custom Widgets
-	 * add your own custom Widgets into this file
-	 */	
-	//require( get_template_directory() . '/inc/custom-widgets.php' );
-
 
 
 	/**
@@ -86,13 +113,27 @@ function tanlinell_setup() {
 	require( get_template_directory() . '/inc/register-nav-menus.php' );
 
 
+	/**
+	 * Custom Widgets
+	 * add your own custom Widgets into this file
+	 */	
+	//require( get_template_directory() . '/inc/custom-widgets.php' );
+	
 
 	/**
-	 * Register Widgets
-	 * sets up and registers required Widgets
+	 * Register Widgetized Areas
+	 * sets up and registers required Widgetized areas
 	 */	
 	require( get_template_directory() . '/inc/register-widget-areas.php' );
 
+
+
+
+
+	/**
+	 * 	Register 'Custom Posts Types' for the theme
+	 */
+	require( get_template_directory() . '/inc/register-custom-posts.php' );
 
 	
 	/**
@@ -103,26 +144,22 @@ function tanlinell_setup() {
 	
 	
 	/**
-	 * 	Register 'Custom Posts Types' for the theme
+	 * Helper functions 
 	 */
-	require( get_template_directory() . '/inc/register-custom-posts.php' );
-	
-	
+	require( get_template_directory() . '/inc/helper-functions.php' );
+
+
 	/**
-	 * General functions of the theme
+	 * Burfield Customisations
+	 * custom tweaks for sites designed and created by Burfield
+	 * you might want to comment this out...
 	 */
-	require( get_template_directory() . '/inc/general-functions.php' );
+	require( get_template_directory() . '/inc/burfield-customisations.php' );
 	
 	
-	/**
-	 * 	Customize the User roles
-	 */
-	require( get_template_directory() . '/inc/client-access-permissions.php' );
+
 	
-	/**
-	 * 	Add shortcodes to editor
-	 */
-	require( get_template_directory() . '/shortcodes/shortcode.php' );
+	
 	
 }
 endif; // tanlinell_setup
