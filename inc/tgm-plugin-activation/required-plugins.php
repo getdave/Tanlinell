@@ -94,8 +94,8 @@ function my_theme_register_required_plugins() {
 		),
 
 		array(
-			'name' 		=> 'Force Strong Passwords',
-			'slug' 		=> 'force-strong-passwords',
+			'name' 		=> 'Better WP Security',
+			'slug' 		=> 'better-wp-security',
 			'required' 	=> false,
 		),
 
