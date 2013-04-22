@@ -52,7 +52,7 @@ function tanlinell_developer_credit($atts){
 	$clean_title 			= esc_attr($title);
 	$clean_the_credit		= esc_html($the_credit);
 
-	return "{$clean_the_credit} by <a target='_blank' href='{$clean_designer_url}' title='{$clean_title}'>{$designer_name} <span class='vh'>- {$hidden_text}</span></a>";
+	return "{$clean_the_credit} by <a class='site-credit' target='_blank' href='{$clean_designer_url}' title='{$clean_title}'>{$designer_name} <span class='vh'>- {$hidden_text}</span></a>";
 }
 
 add_shortcode( 'developer_credit', 'tanlinell_developer_credit' );
