@@ -227,6 +227,19 @@ function tanlinell_fix_svg() {
 
 
 
+/**
+ * Check for existence of child pages
+ * @param  int $post_id ID of the post in question
+ * @return bool          return true/false
+ */
+function tanlinell_has_children( $post_id ) {
+    $children = get_pages('child_of=' . $post_id);
+    if( count( $children ) != 0 ) { 
+        return true;
+    } else { 
+        return false;
+    }
+}
 
 
 
