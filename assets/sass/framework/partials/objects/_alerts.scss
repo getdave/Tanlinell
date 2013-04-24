@@ -1,0 +1,98 @@
+/* #ALERTS */
+
+/* Standard alert styles with variations 
+
+    <div class="alert">
+        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+    </div>
+*/
+
+.alert {
+    padding: rsize(8px) 35px rsize(8px) 14px;
+    margin-bottom: $baseLineHeight;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    background-color: $warningBackground;
+    border: 1px solid $warningBorder;
+    @include border-radius(4px);
+    color: $warningText;
+}
+
+.alert-heading {
+    color: inherit;
+}
+
+.alert :last-child {
+    margin-bottom: 0;
+}
+
+// Adjust close link position
+.alert .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    line-height: $baseLineHeight;
+}
+
+/* ##Alert Success */
+
+/* 
+    <div class="alert alert-success">
+        <strong>Success</strong> Looking good!
+    </div>
+*/
+
+.alert-success {
+    background-color: $successBackground;
+    border-color: $successBorder;  
+    color: $successText;
+}
+
+/* ##Alert Danger/Error */
+
+/* 
+    <div class="alert alert-danger">
+        <strong>Danger!</strong> Best check yo self, you're not looking too good.
+    </div>
+*/
+.alert-danger,
+.alert-error {
+    background-color: $errorBackground;
+    border-color: $errorBorder;
+    color: $errorText;
+}
+
+/* ##Alert Info */
+
+/* 
+    <div class="alert alert-info">
+        <strong>Notice</strong> Everything isn't what it seems...
+    </div>
+*/
+.alert-info {
+    background-color: $infoBackground;
+    border-color: $infoBorder;
+    color: $infoText;
+}
+
+
+/* ##Alert Blocks */
+
+/* 
+    <div class="alert alert-block">
+        <h4>Warning!</h4>
+        Best check yo self, you're not...
+    </div>
+*/
+
+
+.alert-block {
+    padding-top: rsize(14px);
+    padding-bottom: rsize(14px);
+}
+.alert-block > p,
+.alert-block > ul {
+    margin-bottom: 0;
+}
+.alert-block p + p {
+    margin-top: rsize(5px);
+}

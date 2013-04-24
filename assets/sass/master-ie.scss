@@ -1,0 +1,11 @@
+// IE MASTER
+// We define a master-ie.scss file which is included for old-IE only via conditional comments
+// This file has no differences at all from the standard master.scss file other than the following
+// variable which is used to trigger specific behaviour for old IE
+
+
+$bIE: true;
+
+
+
+@import "master.scss";

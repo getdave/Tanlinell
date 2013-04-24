@@ -1,0 +1,17 @@
+/* #Site Credit */
+
+/* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
+
+/*
+	<p>Developed by <a href="#" class="ir site-credit">Burfield Creative</a></p> 
+*/
+
+.site-credit {
+	@extend .ir;
+	@include inline-block;
+	vertical-align: middle;
+	background-position: 50% 50%;
+	background-image: image-url($site-credit);
+	width: image-width($site-credit);
+	height: image-height($site-credit);
+}

@@ -1,0 +1,2399 @@
+/**
+ * WEB STARTER CSS FRAMEWORK
+ * Version: 2.5
+ * URL: https://github.com/getdave/Web-Starter-Toolkit
+ * Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+ * Author: David Smith (@get_dave)
+ */
+/**
+ * This project aims to be a starter kit for building websites using SASS and Compass. 
+ * 
+ * The framework comes as a stand-alone packaged collection of SASS files. The _framework.scss file
+ * should be @import'd into your projects' master SASS/SCSS file and extended as required.
+ * 
+ * You should NEVER modify the files of the framework. If you find something you cannot work around it is
+ * a bug and should be raised as an issue on Github at: 
+ * 
+ * https://github.com/getdave/Web-Starter-Toolkit/issues
+ * 
+ * This framework borrows heavily and draws inspiration from the great work of the following projects/authors:
+
+ * OOCSS 					- https://github.com/stubbornella/oocss
+ * Inuit.css 				- https://raw.github.com/csswizardry/inuit.css/
+ * SMACSS guidelines 		- http://smacss.com/
+ * Twitter Bootstrap		- http://twitter.github.com/bootstrap/
+ * ZURB Foundation		- http://foundation.zurb.com/
+ *
+ */
+/* ==========================================================================
+   LIBRARIES & FRAMEWORKS
+   ========================================================================== */
+@-ms-viewport {
+  width: device-width;
+}
+
+/* ==========================================================================
+   BASE
+   Base for framework. Mostly global, tag-based selector rules.
+   ========================================================================== */
+/* #Typography */
+/* 
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque suscipit voluptas illo maiores optio cupiditate nam repellat ad voluptatum vitae ipsum quia quae fugiat laborum architecto dignissimos sit! Facere nobis!</p>
+*/
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.666em;
+  color: #333333;
+}
+
+p {
+  margin: 0 0 1.666em;
+  line-height: 1.666em;
+}
+
+a {
+  color: #0088cc;
+}
+
+a:hover,
+a:focus {
+  color: #005580;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover, a:active {
+  outline: none;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0 0 1.666em 25px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li {
+  line-height: 1.666em;
+}
+
+blockquote, blockquote p {
+  line-height: 1.5;
+  color: #777;
+}
+
+blockquote {
+  margin: 0 0 ms(1);
+  padding: 9px 20px 0 19px;
+  border-left: 1px solid #dddddd;
+}
+
+blockquote cite {
+  display: block;
+  font-size: ms(0)-1;
+  color: #555;
+}
+
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+
+blockquote cite a, blockquote cite a:visited {
+  color: #555;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+#googlemap img, object, embed {
+  max-width: none;
+}
+
+#map_canvas embed {
+  max-width: none;
+}
+
+#map_canvas img {
+  max-width: none;
+}
+
+#map_canvas object {
+  max-width: none;
+}
+
+/* #Headings */
+/* Based on the ancient Typographic scale */
+/* http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4.
+
+/* ###Standard Headings */
+/* Note that all heading sizes are aliased via the `.hN` classes. So if you would like your `<h6>` to look like an `<h1>` then simply add the class `<h3 class="h1" />` */
+/* 
+	<h1>Heading 1</h1> 
+*/
+h1, .h1, .giga, .mega, .kilo {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.01811;
+  color: #222222;
+  margin: 0 0 0.5em 0;
+  text-rendering: optimizelegibility;
+}
+
+/* 
+	<h2>Heading 2</h2> 
+*/
+h2, .h2 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.05513;
+  color: #222222;
+  margin: 0 0 0.35em 0;
+}
+
+/* 
+	<h3>Heading 3</h3> 
+*/
+h3, .h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.04125;
+  color: #333333;
+  margin: 0 0 0.5em 0;
+}
+
+/* 
+	<h4>Heading 4</h4> 
+*/
+h4, .h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.0829;
+  color: #333333;
+  margin: 0 0 0.5em 0;
+}
+
+/* 
+	<h5>Heading 5</h5> 
+*/
+h5, .h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.04125;
+  margin: 0 0 0.5em 0;
+}
+
+/* 
+	<h6>Heading 6</h6> 
+*/
+h6, .h6 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.071;
+  margin: 0 0 0.5em 0;
+}
+
+/* ###Misc Headings */
+/* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
+/* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
+/* #Forms */
+label {
+  font-weight: bold;
+  font-size: 100%;
+}
+
+fieldset {
+  border: 1px solid #999999;
+  font-size: 12px;
+  line-height: 1.3em;
+  margin: 0 0 1.5em;
+  padding: 0 1.4em 1.4em 1.4em;
+}
+
+legend {
+  background: #f9f9f9;
+  border: 1px solid #999999;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: block;
+  left: 0;
+  margin: 0;
+  padding: 0.3em 1.2em;
+  position: relative;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+  top: 0;
+}
+
+fieldset {
+  padding-top: 1.4em;
+}
+
+legend {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.input-tiny {
+  width: 50px;
+}
+
+.input-small {
+  width: 100px;
+}
+
+.input-medium {
+  width: 150px;
+}
+
+.input-large {
+  width: 200px;
+}
+
+.input-xlarge {
+  width: 250px;
+}
+
+.input-xxlarge {
+  width: 300px;
+}
+
+.input-xxxlarge {
+  width: 350px;
+}
+
+.input-full {
+  width: 100%;
+}
+
+.input_full_wrap {
+  display: block;
+  padding-right: 8px;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+button:invalid,
+select:invalid {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+input:invalid,
+textarea:invalid {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus,
+button:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline: thin dotted #333333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+input[type="file"]:focus, input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: 0;
+  overflow: visible;
+  margin: 0;
+  *padding-top: 2px;
+  *padding-bottom: 0;
+  vertical-align: top;
+  width: auto;
+}
+button:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:active {
+  outline: 0;
+}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button {
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid;
+  border-color: #555555;
+  color: black;
+  outline: 0;
+  margin: 0;
+  padding: 3px 4px;
+  text-align: left;
+  font-size: 16px;
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
+  height: 2em;
+  vertical-align: top;
+  *padding-top: 2px;
+  *padding-bottom: 1px;
+  *height: auto;
+}
+textarea[disabled],
+select[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eeeeee;
+}
+textarea:focus,
+select:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  color: #888888;
+  cursor: default;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #88888;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888888;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #888888;
+}
+
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+select {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+select[size="0"],
+select[size="1"] {
+  height: 1.8em;
+  *height: auto;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select[size],
+  select[multiple],
+  select[multiple][size] {
+    background-image: none;
+    padding-right: 3px;
+  }
+
+  select,
+  select[size="0"],
+  select[size="1"] {
+    background-image: url('/images/select_arrow.png?1361267456');
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+  }
+
+  ::-webkit-validation-bubble-message {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
+    border: 1px solid;
+    border-color: #747474 #5e5e5e #4f4f4f;
+    color: white;
+    font: 0.94118 "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    overflow: hidden;
+    padding: 15px 15px 17px;
+    text-shadow: black 0 0 1px;
+    height: 16px;
+  }
+
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #666666;
+    border: 0;
+  }
+}
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+optgroup {
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
+}
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* ##Form Instances */
+/* ##Prepend/Append */
+/* 
+	<div class="input-append">
+		<input type="text">
+		<button class="btn" type="button">Go!</button>
+	</div>
+*/
+.input-append,
+.input-prepend {
+  white-space: nowrap;
+}
+
+/* ##Search Form */
+/* 
+	<form class="form-search input-append">
+		<input type="text" class="input-medium search-query">
+		<button type="submit" class="btn">Search</button>
+	</form>
+*/
+.form-search .search-query {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* #Grid */
+/* Custom grid system for rapid prototyping and quick layout solutions.
+
+##Example 1 - fractions
+	<div class="size1of2 firstcol">
+		I'm the first of two grid items. I need an extra class to remove my gutter!
+	</div>
+	<div class="size1of2">
+		I'm the second of the two grid items. No need for a second class for me!
+	</div>
+
+
+##Example 2 - columns
+	<div class="sixcolumns firstcol">
+		I'm the first of two grid items. I need an extra class to remove my gutter!
+	</div>
+	<div class="sixcolumns">
+		I'm the second of the two grid items. No need for a second class for me!
+	</div>
+*/
+.grid-wrap, .large-gutter, .half-gutter, .no-gutter {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -3em;
+  clear: both;
+  zoom: 1;
+}
+.grid-wrap:before, .large-gutter:before, .half-gutter:before, .no-gutter:before {
+  content: "";
+  display: table;
+}
+.grid-wrap:after, .large-gutter:after, .half-gutter:after, .no-gutter:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.large-gutter {
+  margin-left: -6em;
+}
+
+.half-gutter {
+  margin-left: -1.5em;
+}
+
+.no-gutter {
+  margin-left: 0;
+}
+
+.grid-divide {
+  margin-bottom: 1.666em;
+}
+
+.g1-12, .gonecolumns, .g1-6, .gtwocolumns, .g1-4, .gthreecolumns, .g1-3, .gfourcolumns, .gfivecolumns, .g1-2, .gsixcolumns, .gsevencolumns, .g2-3, .geightcolumns, .g3-4, .gninecolumns, .gtencolumns, .gelevencolumns, .g1-1, .gtwelvecolumns,
+.gc {
+  width: 100%;
+  padding-left: 3em;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(boxsizing.htc);
+}
+.large-gutter .g1-12, .large-gutter .gonecolumns, .large-gutter .g1-6, .large-gutter .gtwocolumns, .large-gutter .g1-4, .large-gutter .gthreecolumns, .large-gutter .g1-3, .large-gutter .gfourcolumns, .large-gutter .gfivecolumns, .large-gutter .g1-2, .large-gutter .gsixcolumns, .large-gutter .gsevencolumns, .large-gutter .g2-3, .large-gutter .geightcolumns, .large-gutter .g3-4, .large-gutter .gninecolumns, .large-gutter .gtencolumns, .large-gutter .gelevencolumns, .large-gutter .g1-1, .large-gutter .gtwelvecolumns, .large-gutter
+.gc {
+  padding-left: 6em;
+}
+.half-gutter .g1-12, .half-gutter .gonecolumns, .half-gutter .g1-6, .half-gutter .gtwocolumns, .half-gutter .g1-4, .half-gutter .gthreecolumns, .half-gutter .g1-3, .half-gutter .gfourcolumns, .half-gutter .gfivecolumns, .half-gutter .g1-2, .half-gutter .gsixcolumns, .half-gutter .gsevencolumns, .half-gutter .g2-3, .half-gutter .geightcolumns, .half-gutter .g3-4, .half-gutter .gninecolumns, .half-gutter .gtencolumns, .half-gutter .gelevencolumns, .half-gutter .g1-1, .half-gutter .gtwelvecolumns, .half-gutter
+.gc {
+  padding-left: 1.5em;
+}
+.no-gutter .g1-12, .no-gutter .gonecolumns, .no-gutter .g1-6, .no-gutter .gtwocolumns, .no-gutter .g1-4, .no-gutter .gthreecolumns, .no-gutter .g1-3, .no-gutter .gfourcolumns, .no-gutter .gfivecolumns, .no-gutter .g1-2, .no-gutter .gsixcolumns, .no-gutter .gsevencolumns, .no-gutter .g2-3, .no-gutter .geightcolumns, .no-gutter .g3-4, .no-gutter .gninecolumns, .no-gutter .gtencolumns, .no-gutter .gelevencolumns, .no-gutter .g1-1, .no-gutter .gtwelvecolumns, .no-gutter
+.gc {
+  padding-left: 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .h1-12, .honecolumns {
+    width: 8.33333%;
+  }
+
+  .h1-6, .htwocolumns {
+    width: 16.66667%;
+  }
+
+  .h1-4, .hthreecolumns {
+    width: 25%;
+  }
+
+  .h1-3, .hfourcolumns {
+    width: 33.33333%;
+  }
+
+  .hfivecolumns {
+    width: 41.66667%;
+  }
+
+  .h1-2, .hsixcolumns {
+    width: 50%;
+  }
+
+  .hsevencolumns {
+    width: 58.33333%;
+  }
+
+  .h2-3, .heightcolumns {
+    width: 66.66667%;
+  }
+
+  .h3-4, .hninecolumns {
+    width: 75%;
+  }
+
+  .htencolumns {
+    width: 83.33333%;
+  }
+
+  .helevencolumns {
+    width: 91.66667%;
+  }
+
+  .h1-1, .htwelvecolumns {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .l1-12, .lonecolumns {
+    width: 8.33333%;
+  }
+
+  .l1-6, .ltwocolumns {
+    width: 16.66667%;
+  }
+
+  .l1-4, .lthreecolumns {
+    width: 25%;
+  }
+
+  .l1-3, .lfourcolumns {
+    width: 33.33333%;
+  }
+
+  .lfivecolumns {
+    width: 41.66667%;
+  }
+
+  .l1-2, .lsixcolumns {
+    width: 50%;
+  }
+
+  .lsevencolumns {
+    width: 58.33333%;
+  }
+
+  .l2-3, .leightcolumns {
+    width: 66.66667%;
+  }
+
+  .l3-4, .lninecolumns {
+    width: 75%;
+  }
+
+  .ltencolumns {
+    width: 83.33333%;
+  }
+
+  .lelevencolumns {
+    width: 91.66667%;
+  }
+
+  .l1-1, .ltwelvecolumns {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .d1-12, .donecolumns {
+    width: 8.33333%;
+  }
+
+  .d1-6, .dtwocolumns {
+    width: 16.66667%;
+  }
+
+  .d1-4, .dthreecolumns {
+    width: 25%;
+  }
+
+  .d1-3, .dfourcolumns {
+    width: 33.33333%;
+  }
+
+  .dfivecolumns {
+    width: 41.66667%;
+  }
+
+  .d1-2, .dsixcolumns {
+    width: 50%;
+  }
+
+  .dsevencolumns {
+    width: 58.33333%;
+  }
+
+  .d2-3, .deightcolumns {
+    width: 66.66667%;
+  }
+
+  .d3-4, .dninecolumns {
+    width: 75%;
+  }
+
+  .dtencolumns {
+    width: 83.33333%;
+  }
+
+  .delevencolumns {
+    width: 91.66667%;
+  }
+
+  .d1-1, .dtwelvecolumns {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1382px) {
+  .w1-12, .wonecolumns {
+    width: 8.33333%;
+  }
+
+  .w1-6, .wtwocolumns {
+    width: 16.66667%;
+  }
+
+  .w1-4, .wthreecolumns {
+    width: 25%;
+  }
+
+  .w1-3, .wfourcolumns {
+    width: 33.33333%;
+  }
+
+  .wfivecolumns {
+    width: 41.66667%;
+  }
+
+  .w1-2, .wsixcolumns {
+    width: 50%;
+  }
+
+  .wsevencolumns {
+    width: 58.33333%;
+  }
+
+  .w2-3, .weightcolumns {
+    width: 66.66667%;
+  }
+
+  .w3-4, .wninecolumns {
+    width: 75%;
+  }
+
+  .wtencolumns {
+    width: 83.33333%;
+  }
+
+  .welevencolumns {
+    width: 91.66667%;
+  }
+
+  .w1-1, .wtwelvecolumns {
+    width: 100%;
+  }
+}
+/* ##Column Extensions */
+/* ###Full Width */
+/* 
+	<div class="full-col">
+		I'm a full width column. You probably won't need to use me that often...
+	</div>
+*/
+.full-col {
+  width: auto;
+  float: none;
+}
+
+/* ###Centered */
+/* 
+	<div class="size1of3 centered-col">
+		I'm a centered column. Useful on the odd occassion you need to center a grid unit
+	</div>
+*/
+.centered-col {
+  margin: 0 auto;
+  float: none;
+}
+
+/* ==========================================================================
+   OBJECTS
+   Common patterns to be reused and extended in site-specific styles.
+   ========================================================================== */
+/* #Media Block */
+/* The media object is an image to the left, with descriptive content to the right. The content area on the right can contain any other objects. */
+/* ##Base 
+/* 
+	<div class="m-block">
+		<img class="m-img" src="http://www.placehold.it/138x151" />
+
+		<div class="m-content">
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</div>
+	</div>
+*/
+.m-block,
+.m-block .m-content {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+}
+
+.m-block .m-img {
+  float: left;
+  margin-right: 20px;
+}
+.m-block .m-img img {
+  display: block;
+}
+
+/* ##Reversed */
+/* Image on right with content on the left */
+/* 
+	<div class="m-block">
+		<img class="m-img-alt" src="http://www.placehold.it/138x151" />
+
+		<div class="m-content">
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</div>
+	</div>
+*/
+.m-block .m-img-alt {
+  float: right;
+  margin-left: 20px;
+}
+
+/* #Containers */
+/* Standard structures for dividing pages into "sections" */
+/* ##Standard Container */
+/*
+	<div class="container">
+		<p>I'm a section on the layout/page which should be centered in the window</p>
+	</div>  
+*/
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  zoom: 1;
+}
+.container:before {
+  content: "";
+  display: table;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ## Extended Container */
+/* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
+/*
+	<div class="container-extend" style="background: #f7f7f7f;">
+		<div class="container">
+			<p>A section of content where you need the background to extend to the full width of the browser whilst the content remains centered</p>
+		</div> 
+	</div>
+*/
+.container-extend {
+  width: auto;
+  zoom: 1;
+}
+.container-extend:before {
+  content: "";
+  display: table;
+}
+.container-extend:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col {
+  padding: 30;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 30em) {
+  .col {
+    padding: 15;
+  }
+}
+/* #Island and Islet */
+/* Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object. `@extend` me in your site styles */
+/* ##Island */
+/*
+    <div class="island">
+        I am boxed off.
+    </div>
+*/
+.island, .headed-island,
+.islet {
+  display: block;
+  margin-bottom: 1.666em;
+}
+
+.island, .headed-island {
+  padding: 15px 30px;
+}
+
+.island > :last-child, .headed-island > :last-child,
+.islet > :last-child {
+  margin-bottom: 0;
+}
+
+/* ##Island */
+/* Just like `.island`, only less padding/smaller. */
+/*
+    <div class="islet">
+        I am boxed off too only with less padding
+    </div>
+*/
+.islet {
+  padding: 15px;
+}
+
+/* ##Headed Island */
+/* Just like `.island`, only with a definite boxed heading */
+/*
+    <div class="headed-island">
+        <h3 class="island-heading">I am the Island Heading</h3>
+        <div class="island-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+        </div>
+    </div>
+*/
+.headed-island {
+  padding: 0;
+}
+.headed-island .island-heading {
+  padding: 15px 30px;
+  margin: 0;
+  border-top: 0;
+  border-bottom: 1px solid #cccccc;
+}
+.headed-island .island-content {
+  padding: 15px 30px;
+}
+.headed-island .island-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* #Split */
+/* 
+Simple split item for creating two elements floated away from one another.
+
+Borrowed from inuit.css
+
+https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_split.scss
+*/
+/* ##Simple Split 
+
+    <dl class="split">       
+        <dt class="split-title">Burger and fries</dt>
+        <dd>&pound;5.99</dd>       
+        <dt class="split-title">Fillet steak</dt>
+        <dd>&pound;19.99</dd>       
+        <dt class="split-title">Ice cream</dt>
+        <dd>&pound;2.99</dd>       
+    </dl>   
+*/
+/* ##Split Results List
+
+    <ol class="split results">
+        <li class="first"><b class="split-title">1st place</b> Bob</li>       
+        <li class="second"><b class="split-title">2nd place</b> Lilly</li>       
+        <li class="third"><b class="split-title">3rd place</b> Ted</li>       
+    </ol>​ 
+*/
+.split {
+  text-align: right;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.split .split-title {
+  text-align: left;
+  float: left;
+  clear: left;
+}
+
+/* #Hero Unit */
+/* 
+Creates an image-based feature "hero" areas with absolutely positioned content blocks
+
+Provides utility classes to allow for common positioning of content within Hero Unit
+*/
+/* ##Base */
+/* 
+By default the content is positioned top left of the Hero Unit. Images are set using `<img />` tags.
+
+Width of the content should be defined using standard grid classes (eg: `.size2of3`) 
+*/
+/*
+	<div class="hero-unit">
+        <p class="hero-content size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+*/
+.hero-unit {
+  position: relative;
+  margin-bottom: 30px;
+  background-color: #eeeeee;
+}
+
+.hero-content, .hero-content-tr, .hero-content-br, .hero-content-bl,
+.hero-content-tl {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  padding: 30px;
+  margin: 0;
+  background-color: #999;
+  font-size: 1.125em;
+  color: inherit;
+}
+
+/* ##Positioning Variations */
+/* ###Top Right */
+/*
+	<div class="hero-unit">
+        <p class="hero-content-tr size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+ */
+.hero-content-tr {
+  left: auto;
+  right: 0;
+}
+
+/* ###Bottom Right */
+/*
+	<div class="hero-unit">
+        <p class="hero-content-br size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+ */
+.hero-content-br {
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 10%;
+}
+
+/* ###Bottom Left */
+/*
+	<div class="hero-unit">
+        <p class="hero-content-bl size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+ */
+.hero-content-bl {
+  top: auto;
+  bottom: 10%;
+}
+
+/* #Block Lists */
+/* 
+Vertically stacked blocky lists of content. Ideal for sub navigation or similar.
+Borrowed from inuit.css
+*/
+/*
+    <ul class="block-list">
+        <li>Foo</li>
+        <li>Bar</li>
+        <li>Baz</li>
+        <li><a href="#" class="block-list-link">Foo Bar Baz</a></li>
+    </ul>
+*/
+.block-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.block-list li {
+  clear: both;
+}
+
+.block-list-link, .block-list a {
+  display: block;
+  padding: 15px;
+}
+
+/* #Nav */
+/* Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction. When used on an `ol` or `ul`, this class throws the list into horizontal mode. */
+/* ##Base */
+/*
+    <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+ */
+.nav {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.nav > li,
+.nav > li > a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* ##Stacked */
+/* `.nav-stacked` extends `.nav` and throws the list into vertical mode. */
+/*
+    <ul class="nav nav-stacked">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+*/
+.nav-stacked > li {
+  display: list-item;
+}
+
+.nav-stacked > li > a {
+  display: block;
+}
+
+/* ##Banner */
+/* `.nav-banner` extends `.nav` and centres the list. */
+/*
+    <ul class="nav nav-banner">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+  */
+.nav-banner {
+  text-align: center;
+}
+
+/* #Buttons */
+/* Adding the class `.btn` to an anchor `<button>` or `<input>` provides extra visual weight and identifies the primary action in a set of buttons.
+
+    <button class="btn primary">Primary</button>
+*/
+.btn {
+  color: #FFF;
+  display: inline-block;
+  text-align: center;
+  padding: 0.625em 15px;
+  text-decoration: none;
+  font-size: 100%;
+  border: 0;
+  background-color: #ccc;
+}
+
+/* ## Button Sizes */
+/* Various sizes for buttons */
+/* 
+	<a href="#" class="btn btn-huge">Button Huge</a>
+*/
+.btn-huge {
+  padding-right: 40px;
+  padding-left: 40px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* 
+	<a href="#" class="btn btn-large">Button Large</a>
+*/
+.btn-large {
+  font-size: 123.0769230769231%;
+  line-height: 1.75;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* 
+	<a href="#" class="btn btn-small">Button Small</a>
+*/
+.btn-small {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 0.3125em;
+  padding-bottom: 0.3125em;
+  font-size: 84.61538461538462%;
+}
+
+/* ## Button States */
+/* 
+	<a href="#" class="btn btn-disabled">Button Disabled</a>
+*/
+.btn[disabled],
+.btn-disabled {
+  background-image: none !important;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+  opacity: 0.65;
+  cursor: default !important;
+}
+.btn[disabled]:active,
+.btn-disabled:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* ## Button Full */
+/* 
+	<a href="#" class="btn btn-full">Full Width Button</a>
+*/
+.btn-full {
+  display: block;
+}
+
+/* ## Button Groups */
+/* 
+	<div class="btn-group">
+	  <button class="btn">1</button>
+	  <button class="btn">2</button>
+	  <button class="btn">3</button>
+	</div>
+*/
+.btn-group {
+  display: inline-block;
+  *zoom: 1;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 1px 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.btn-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.btn-group .btn {
+  float: left;
+  margin-left: -1px;
+  position: relative;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.btn-group .btn:active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-group .btn:first-child {
+  margin-left: 0;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -ms-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.btn-group .btn:last-child {
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  -ms-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* #DROPDOWNS */
+/* Create dropdown menus with caret arrow
+
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+		<li><a tabindex="-1" href="#">Action</a></li>
+		<li><a tabindex="-1" href="#">Another action</a></li>
+		<li><a tabindex="-1" href="#">Something else here</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="#">Separated link</a></li>
+	</ul>
+*/
+.dropdown .caret,
+.dropdown-toggle .caret {
+  display: inline-block;
+  color: white !important;
+  width: 0;
+  height: 0;
+  text-indent: -99999px;
+  *text-indent: 0;
+  vertical-align: top;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid white;
+  background: 0;
+  margin-left: 7px;
+  margin-top: 0.4375em;
+  content: "\2193";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+  opacity: 0.75;
+}
+
+.dropdown:hover .caret,
+.dropdown:focus .caret
+.dropdown-toggle:hover .caret,
+.dropdown-toggle:focus .caret {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+/* #ALERTS */
+/* Standard alert styles with variations 
+
+    <div class="alert">
+        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+    </div>
+*/
+.alert {
+  padding: 0.5em 35px 0.5em 14px;
+  margin-bottom: 1.666em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  color: #c09853;
+}
+
+.alert-heading {
+  color: inherit;
+}
+
+.alert :last-child {
+  margin-bottom: 0;
+}
+
+.alert .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  line-height: 1.666em;
+}
+
+/* ##Alert Success */
+/* 
+    <div class="alert alert-success">
+        <strong>Success</strong> Looking good!
+    </div>
+*/
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+
+/* ##Alert Danger/Error */
+/* 
+    <div class="alert alert-danger">
+        <strong>Danger!</strong> Best check yo self, you're not looking too good.
+    </div>
+*/
+.alert-danger,
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+}
+
+/* ##Alert Info */
+/* 
+    <div class="alert alert-info">
+        <strong>Notice</strong> Everything isn't what it seems...
+    </div>
+*/
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #3a87ad;
+}
+
+/* ##Alert Blocks */
+/* 
+    <div class="alert alert-block">
+        <h4>Warning!</h4>
+        Best check yo self, you're not...
+    </div>
+*/
+.alert-block {
+  padding-top: 0.875em;
+  padding-bottom: 0.875em;
+}
+
+.alert-block > p,
+.alert-block > ul {
+  margin-bottom: 0;
+}
+
+.alert-block p + p {
+  margin-top: 0.3125em;
+}
+
+/* #Pagination */
+/* Standard controls for navigation between "paged" content. */
+/* ##Base 
+	<div class="pagination">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+		  		<a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+*/
+.pagination {
+  margin-bottom: 1.5em;
+}
+
+.pagination ul,
+.pagination ol,
+.pagination .pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+.pagination li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-right: 0.3125em;
+  margin-bottom: 0.625em;
+}
+
+.pagination a {
+  display: block;
+  padding: 7px 12px 8px 12px;
+  text-decoration: none;
+  border: 1px solid #cccccc;
+  line-height: 1;
+}
+.pagination a:hover, .pagination a:focus {
+  background-color: #f9f9f9;
+}
+
+.pagination .disabled a {
+  color: #ccc;
+}
+
+.pagination .current a {
+  background-color: #f1f1f1;
+  border-color: #a8a8a8;
+  color: #666;
+}
+
+.pagination .range a,
+.pagination .range a:hover,
+.pagination .range a:focus {
+  background-color: transparent;
+  border-color: #ccc;
+  color: #666;
+}
+
+.pagination .prev a,
+.pagination .next a {
+  border: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* ## Centered */
+/* 
+	<div class="pagination pagination-centered">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			  <a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+*/
+.pagination-centered {
+  text-align: center;
+}
+
+/* ##Right */
+/* 
+	<div class="pagination pagination-right">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			  <a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+*/
+.pagination-right {
+  text-align: right;
+}
+
+/* #PAGER */
+/* Standard prev/next controls for navigation between "paged" content. /*
+
+/* ##Base 
+	<ul class="pager">
+		<li class="previous">
+			<a href="#">&larr; Older</a>
+		</li>
+		<li class="next">
+			<a href="#">Newer &rarr;</a>
+		</li>
+	</ul>
+*/
+.pager {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pager li,
+.pager-item {
+  display: inline;
+}
+
+.pager-item a,
+.pager a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding: 7px 12px 8px 12px;
+  text-decoration: none;
+  border: 1px solid #cccccc;
+  line-height: 1;
+  float: left;
+}
+
+.next a {
+  float: right;
+}
+
+/* #Breadcrumbs */
+/* Standard Breadcrumb navigation for assisting users with establishing their position within the website hierarchy
+
+	<ul class="breadcrumbs">
+	    <li>
+	        <a href="#">Home</a>
+	    </li>
+	    <li>
+	        <a href="#">Crumb</a>
+	    </li>
+	    <li>
+	        <a href="#">Crumb</a>
+	    </li>
+	    <li class="current">
+	        <a href="#">Current Crumb</a>
+	    </li>
+	</ul>
+*/
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+.breadcrumbs li {
+  float: left;
+  margin-bottom: 0;
+}
+.breadcrumbs a,
+.breadcrumbs .trail-end {
+  position: relative;
+  padding: 0.7em 1em;
+  text-decoration: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+}
+.breadcrumbs .current a {
+  color: #999;
+}
+.breadcrumbs .current a:before, .breadcrumbs .current a:after {
+  display: none;
+}
+
+.breadcrumbs li:first-child a,
+.breadcrumbs .first a {
+  padding-left: 1em;
+}
+
+/* #COMPLEX LINK */
+/* Add hover behaviour to only selected items within links. Useful if you have are using icon fonts. */
+/*
+	<a href="http://www.google.com" class="complex-link">
+		<span>You should try and </span>
+		<span class="link-target">Login</span>
+	</a>
+*/
+.complex-link,
+.complex-link:hover,
+.complex-link:focus {
+  text-decoration: none;
+}
+.complex-link .link-target,
+.complex-link:hover .link-target,
+.complex-link:focus .link-target {
+  text-decoration: underline;
+}
+
+/* #Images */
+/* Common styling patterns for images to be applied to `<img` elements. */
+/* Please note that `.img-rounded` and `.img-circle` do not work in IE7-8. */
+/* ##Rounded */
+/*
+    <img src="http://www.placehold.it/200x200" class="img-rounded" />
+*/
+.img-rounded {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* ##Poloroid */
+/*
+    <img src="http://www.placehold.it/200x200" class="img-polaroid" />
+*/
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ##Circle */
+/*
+    <img src="http://www.placehold.it/200x200" class="img-circle" />
+*/
+.img-circle {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  -ms-border-radius: 500px;
+  -o-border-radius: 500px;
+  border-radius: 500px;
+}
+
+/* #Flexslider */
+/* Utilise the power of WooThemes' Flexslider plugin to power slideshows */
+/* ##Base */
+/*
+	<div class="flexslider">
+	    <ul class="slides">
+	        <li class="slide">
+	        	<p>Slide 1 content</p>
+	        </li>
+	        <li class="slide" style="display: none;">
+	        	<p>Slide 2 content</p>
+	        </li>
+	    </ul>
+	</div>
+ */
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+html[xmlns] .slides {
+  display: block;
+}
+
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.js .slides > li:first-child {
+  display: block;
+}
+
+/* #Gray Box */
+/* Simple background box styles. Can be applied safetly to any element. Useful for prototyping */
+/* ##Gray Box */
+/*
+    <div class="island graybox">
+        I am a prototype box
+    </div>
+*/
+.graybox {
+  background-color: rgba(0, 0, 0, 0.15);
+  background-color: #e9e9e9\9;
+  color: #000;
+}
+.graybox a {
+  color: #000;
+}
+
+/* ==========================================================================
+   COMMON
+   Common components/requirements for standard websites
+   ========================================================================== */
+.nav-primary,
+.nav-primary ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: visible;
+  clear: both;
+  zoom: 1;
+}
+.nav-primary:before,
+.nav-primary ul:before {
+  content: "";
+  display: table;
+}
+.nav-primary:after,
+.nav-primary ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.nav-primary > li {
+  position: relative;
+}
+.nav-primary a {
+  display: block;
+  padding: 0.625em 1.25em;
+  color: #333333;
+  text-align: left;
+  text-decoration: none;
+}
+.nav-primary a:hover, .nav-primary a:focus {
+  color: white;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.sub-menu {
+  position: absolute;
+  top: auto;
+  left: -999em;
+  z-index: 1000;
+  text-align: left;
+  direction: ltr;
+  background-color: #999999;
+}
+.sub-menu li {
+  vertical-align: bottom;
+  /* This fixes the IE5 Win gap (no harm done to modern browsers) */
+  white-space: nowrap;
+  width: 100%;
+  /* inherit the width of the parent <ul> */
+  clear: both;
+  display: list-item;
+}
+.sub-menu li a {
+  white-space: nowrap;
+  /* forces drop down to stretch to accommodate length of text (and not wrap) */
+  padding: 0.46154em 20px;
+  text-align: left;
+}
+
+/* #Site Logo 
+
+	<a href="/" class="site-logo" title="Return to website homepage">
+		<img src="http://www.placehold.it/200x100" alt="My Logo">
+	</a>    
+*/
+.site-logo {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  border: 0;
+  padding: 0;
+  margin: 30px 0;
+  vertical-align: bottom;
+}
+.site-logo a {
+  text-indent: -999em;
+  text-align: left;
+  direction: ltr;
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url('/images/logo.gif?1339662808');
+  width: 200px;
+  height: 60px;
+}
+.site-logo a:hover, .site-logo a:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+.lt-ie9 .site-logo img {
+  max-width: none;
+}
+
+/* #Site Credit */
+/* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
+/*
+	<p>Developed by <a href="#" class="ir site-credit">Burfield Creative</a></p> 
+*/
+.site-credit {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  background-position: 50% 50%;
+  background-image: url('/images/site-credit.png?1361267456');
+  width: 117px;
+  height: 18px;
+}
+
+/* ==========================================================================
+   HELPERS
+   Global overides. Utility classes intended to overide all other styles.
+   ========================================================================== */
+/* #Helpers */
+/* Set of simple classes to implement common CSS patterns */
+/* ##Clearfix & Clearing */
+/* ###Clearing */
+/* 
+	<p class="clear">I will clear both sides</p>
+*/
+.clear {
+  clear: both;
+}
+
+/* 	
+	<p class="clear-l">I will clear to the left</p> 
+*/
+.clear-l {
+  clear: left;
+}
+
+/* 	
+	<p class="clear-r">I will clear to the right</p> 
+*/
+.clear-r {
+  clear: right;
+}
+
+/* ###Clearfix */
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations nicolasgallagher.com/micro-clearfix-hack/ */
+/* 	
+	<div class="wrapper clearfix">
+		<div class="floated-left">
+			<p>I'm floated but my parent has a clearfix so I am contained</p>
+		</div>
+
+		<div class="floated-right">
+			<p>I'm floated but my parent has a clearfix so I am contained</p>
+		</div>
+	</div>
+*/
+.clearfix, .island, .headed-island,
+.islet, .nav,
+.cf {
+  zoom: 1;
+}
+.clearfix:before, .island:before, .headed-island:before,
+.islet:before, .nav:before, .clearfix:after, .island:after, .headed-island:after,
+.islet:after, .nav:after,
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.clearfix:after, .island:after, .headed-island:after,
+.islet:after, .nav:after,
+.cf:after {
+  clear: both;
+}
+
+/* ##Floats and Alignment */
+/* ###Floats */
+/* 	
+	<p class="fr">I will float to the right.</p> 
+*/
+.fr {
+  float: right;
+}
+
+/* 	
+	<p class="fl">I will float to the left.</p> 
+*/
+.fl {
+  float: left;
+}
+
+/* ###Text Alignment */
+/* 	
+	<p class="text-right">My text is aligned right.</p> 
+*/
+.text-right {
+  text-align: right;
+}
+
+/* 	
+	<p class="text-left">My text is aligned left.</p> 
+*/
+.text-left {
+  text-align: left;
+}
+
+/* 	
+	<p class="text-center">My text is aligned centrally.</p> 
+*/
+.text-center {
+  text-align: center;
+}
+
+/* ##Imagery */
+/* ###Image Positioning */
+/* 	
+	<img src="http://www.placehold.it/200x200" class="img-left" />
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p> 
+*/
+.img-left,
+.img-l,
+.alignleft {
+  float: left;
+  margin: 0 20px 1.5em 0;
+}
+
+/* 	
+	<img src="http://www.placehold.it/200x200" class="img-right" />
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p> 
+*/
+.img-right,
+.img-r,
+.alignright {
+  float: right;
+  margin: 0 0 1.5em 20px;
+}
+
+/* 	
+	<img src="http://www.placehold.it/200x200" class="img-center" />
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.</p> 
+*/
+.img-center,
+.aligncenter {
+  float: none;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ###Image Replacement */
+/* This is a safe way to replace HTML content with an image. Advice is not to set width and height via the `style` attribute. Rather achieve this via an additional CSS rule where possible. */
+/* 	
+	<span class="img-replace" style="background-image: url(http://www.placehold.it/300x100); width: 300px; height: 100px;">
+		I should be replaced with an image
+	</span>
+*/
+.img-replace,
+.ir,
+.site-credit {
+  display: inline-block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+/* ##Hidden Content */
+/* ###Hide: Screenreaders & Browsers */
+/* css-discuss.incutio.com/wiki/Screenreader_Visibility */
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* ###Hide: Visually For Browsers */
+/* Hide only visually, but have it available for screenreaders: by Jon Neal. */
+/* www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
+.vh,
+.v-hidden,
+.screen-reader-text,
+.assistive-text {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.vh.focusable:active,
+.vh.focusable:focus
+.v-hidden.focusable:active,
+.v-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  overflow: visible;
+  position: static;
+  width: auto;
+  margin: 0;
+}
+
+/* ###Hide: Visually From All + Maintain Layout */
+/* Hide visually and from screenreaders, but maintain layout  */
+/* 	
+	<p>Lorem ipsum dolor sit amet, <strong class="invisible">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+*/
+.invisible {
+  visibility: hidden;
+}
+
+/* ##Resetting */
+/* ###Lists */
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* #Spacing */
+/* Should be used to modify the default spacing between objects (not between nodes of the same object). Please use judiciously. You want to be using defaults most of the time, these are exceptions! */
+/* ##Usage */
+/* p,m = padding,margin */
+/* a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical */
+/* s,m,l,n = small(5px),medium(10px),large(20px),none(0px) */
+/*
+    <p class="alert pvl mbl pls">Hey there! I'm a modified object with a large bottom margin and a large amount of vertical padding. Don't let me catch you doing this too often all you'll be in trouble!</p>
+*/
+.ptn, .pvn, .pan {
+  padding-top: 0px !important;
+}
+
+.pts, .pvs, .pas {
+  padding-top: 5px !important;
+}
+
+.ptm, .pvm, .pam {
+  padding-top: 10px !important;
+}
+
+.ptl, .pvl, .pal {
+  padding-top: 20px !important;
+}
+
+.prn, .phn, .pan {
+  padding-right: 0px !important;
+}
+
+.prs, .phs, .pas {
+  padding-right: 5px !important;
+}
+
+.prm, .phm, .pam {
+  padding-right: 10px !important;
+}
+
+.prl, .phl, .pal {
+  padding-right: 20px !important;
+}
+
+.pbn, .pvn, .pan {
+  padding-bottom: 0px !important;
+}
+
+.pbs, .pvs, .pas {
+  padding-bottom: 5px !important;
+}
+
+.pbm, .pvm, .pam {
+  padding-bottom: 10px !important;
+}
+
+.pbl, .pvl, .pal {
+  padding-bottom: 20px !important;
+}
+
+.pln, .phn, .pan {
+  padding-left: 0px !important;
+}
+
+.pls, .phs, .pas {
+  padding-left: 5px !important;
+}
+
+.plm, .phm, .pam {
+  padding-left: 10px !important;
+}
+
+.pll, .phl, .pal {
+  padding-left: 20px !important;
+}
+
+.mtn, .mvn, .man {
+  margin-top: 0px !important;
+}
+
+.mts, .mvs, .mas {
+  margin-top: 5px !important;
+}
+
+.mtm, .mvm, .mam {
+  margin-top: 10px !important;
+}
+
+.mtl, .mvl, .mal {
+  margin-top: 20px !important;
+}
+
+.mrn, .mhn, .man {
+  margin-right: 0px !important;
+}
+
+.mrs, .mhs, .mas {
+  margin-right: 5px !important;
+}
+
+.mrm, .mhm, .mam {
+  margin-right: 10px !important;
+}
+
+.mrl, .mhl, .mal {
+  margin-right: 20px !important;
+}
+
+.mbn, .mvn, .man {
+  margin-bottom: 0px !important;
+}
+
+.mbs, .mvs, .mas {
+  margin-bottom: 5px !important;
+}
+
+.mbm, .mvm, .mam {
+  margin-bottom: 10px !important;
+}
+
+.mbl, .mvl, .mal {
+  margin-bottom: 20px !important;
+}
+
+.mln, .mhn, .man {
+  margin-left: 0px !important;
+}
+
+.mls, .mhs, .mas {
+  margin-left: 5px !important;
+}
+
+.mlm, .mhm, .mam {
+  margin-left: 10px !important;
+}
+
+.mll, .mhl, .mal {
+  margin-left: 20px !important;
+}
+
+/* ============================================================ */
+/* ============================================================ */
