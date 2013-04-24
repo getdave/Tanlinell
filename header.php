@@ -28,27 +28,18 @@
 	//echo '<meta name="viewport" content="width=device-width" />'; 
 ?>
 
-<title><?php
-	/*
-	 * Print the <title> tag based on what is being viewed.
-	 */
-	global $page, $paged;
+<title>
+<?php
+/*
+ * Simplified <title> tag. Suggest utilizing http://wordpress.org/extend/plugins/wordpress-seo/ to set good 
+ * SEO title tags and for general optimisation
+ */
+global $page, $paged;
 
-	wp_title( '|', true, 'right' );
+wp_title( '|', true, 'right' );
 
-	// Add the blog name.
-	bloginfo( 'name' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
-
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'tanlinell' ), max( $paged, $page ) );
-
-	?></title>
+?>
+</title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
