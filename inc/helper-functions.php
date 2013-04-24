@@ -201,6 +201,30 @@ function tanlinell_responsive_image($image, $sizes = false, $alt = "", $quality 
 
 
 
+/*
+ * Enables SVG uploading in the WP upload option
+ */
+function tanlinell_mime_types( $mimes = array() ){
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'tanlinell_mime_types' );
+
+
+/*
+ * Fixes display of svg images when selected as featured image
+ */
+function tanlinell_fix_svg() {
+    echo '<style type="text/css">
+          .attachment-post-thumbnail, .thumbnail img { 
+               width: 100% !important; 
+               height: auto !important; 
+          }
+          </style>';
+ }
+ add_action('admin_head', 'tanlinell_fix_svg');
+
+
 
 
 
