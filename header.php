@@ -55,13 +55,13 @@
 
 <!-- CSS FRAMEWORK -->
 <!-- Normalize - included separately -->
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/normalize.css">
 <!--[if (gt IE 8) | (IEMobile)]><!-->
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/master.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/master.css">
 <!--<![endif]-->
 
 <!--[if (lt IE 9) & (!IEMobile)]>
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/master-ie.css">
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/master-ie.css">
 <![endif]-->
 
 
