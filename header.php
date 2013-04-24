@@ -75,7 +75,7 @@
 	<header class="banner container-extend" role="banner">
 		<div class="banner-inner container">
 			<a class="site-logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img src="<?php echo get_template_directory_uri() ?>/images/logo.svg" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+				<img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 			</a>
 
 			

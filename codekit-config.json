@@ -11,17 +11,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/assets\/sass\/framework\/partials\/objects\/_dropdowns.scss" : {
+    "\/hybrid-core\/js\/drop-downs.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/sass\/framework\/partials\/objects\/_dropdowns.scss",
+      "inputAbbreviatedPath" : "\/hybrid-core\/js\/drop-downs.js",
       "outputStyle" : 1,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_dropdowns.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/hybrid-core\/js\/drop-downs-ck.js",
+      "fileType" : 64
     },
     "\/assets\/sass\/master.scss" : {
       "ignoreWasSetByUser" : 1,
@@ -35,16 +34,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/hybrid-core\/js\/drop-downs.js" : {
+    "\/assets\/sass\/framework\/partials\/objects\/_dropdowns.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/js\/drop-downs.js",
+      "inputAbbreviatedPath" : "\/assets\/sass\/framework\/partials\/objects\/_dropdowns.scss",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/hybrid-core\/js\/drop-downs-ck.js",
-      "fileType" : 64
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/_dropdowns.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/searchform.php" : {
       "ignoreWasSetByUser" : 0,
@@ -100,6 +100,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/hybrid-core\/extensions\/post-stylesheets.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/extensions\/post-stylesheets.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/assets\/sass\/framework\/partials\/base\/_grid.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -112,6 +121,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/hybrid-core\/classes\/widget-nav-menu.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/classes\/widget-nav-menu.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/assets\/sass\/framework\/partials\/objects\/_complex-link.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -123,24 +141,6 @@
       "outputAbbreviatedPath" : "\/assets\/css\/_complex-link.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/hybrid-core\/classes\/widget-nav-menu.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/classes\/widget-nav-menu.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/hybrid-core\/extensions\/post-stylesheets.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/extensions\/post-stylesheets.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/inc\/options-framework\/images\/colorpicker\/colorpicker_rgb_b.png" : {
       "ignoreWasSetByUser" : 0,
@@ -162,6 +162,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/hybrid-core\/functions\/settings.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/functions\/settings.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/inc\/options-framework\/images\/colorpicker\/colorpicker_hsb_s.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -173,23 +182,16 @@
       "initialSize" : 1171,
       "fileType" : 8192
     },
-    "\/hybrid-core\/functions\/settings.php" : {
+    "\/assets\/js\/jquery.narrow-nav-menu.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/functions\/settings.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/hybrid-core\/functions\/utility.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/functions\/utility.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/assets\/js\/jquery.narrow-nav-menu.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/jquery.narrow-nav-menu-ck.js",
+      "fileType" : 64
     },
     "\/hybrid-core\/extensions\/random-custom-background.php" : {
       "ignoreWasSetByUser" : 0,
@@ -209,16 +211,14 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/assets\/js\/jquery.narrow-nav-menu.js" : {
+    "\/hybrid-core\/functions\/utility.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/jquery.narrow-nav-menu.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/jquery.narrow-nav-menu-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/hybrid-core\/functions\/utility.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/hybrid-core\/css\/drop-downs.css" : {
       "ignoreWasSetByUser" : 0,
@@ -438,12 +438,12 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/inc\/theme-options\/theme-options.php" : {
+    "\/page.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/inc\/theme-options\/theme-options.php",
+      "inputAbbreviatedPath" : "\/page.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -502,15 +502,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/page.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/page.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/style.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -519,6 +510,15 @@
       "inputAbbreviatedPath" : "\/style.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/inc\/theme-options\/theme-options.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/inc\/theme-options\/theme-options.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/assets\/sass\/framework\/partials\/objects\/_nav.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -532,17 +532,35 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/assets\/sass\/framework\/partials\/common\/_site-credit.scss" : {
+    "\/image.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/image.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/assets\/sass\/site\/pages\/_home.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/sass\/framework\/partials\/common\/_site-credit.scss",
+      "inputAbbreviatedPath" : "\/assets\/sass\/site\/pages\/_home.scss",
       "outputStyle" : 1,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_site-credit.css",
+      "outputAbbreviatedPath" : "\/assets\/css\/_home.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/inc\/options-framework\/options-sanitize.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/inc\/options-framework\/options-sanitize.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/config.rb" : {
       "ignoreWasSetByUser" : 0,
@@ -562,24 +580,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/image.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/image.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/inc\/options-framework\/options-sanitize.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/inc\/options-framework\/options-sanitize.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/hybrid-core\/extensions\/cleaner-caption.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -588,6 +588,18 @@
       "inputAbbreviatedPath" : "\/hybrid-core\/extensions\/cleaner-caption.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/assets\/sass\/framework\/partials\/common\/_site-credit.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/sass\/framework\/partials\/common\/_site-credit.scss",
+      "outputStyle" : 1,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/_site-credit.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/assets\/sass\/framework\/partials\/objects\/_images.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -598,18 +610,6 @@
       "outputStyle" : 1,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/assets\/css\/_images.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/assets\/sass\/site\/pages\/_home.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/sass\/site\/pages\/_home.scss",
-      "outputStyle" : 1,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_home.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -640,14 +640,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/hybrid-core\/css\/24px.css" : {
+    "\/assets\/sass\/framework\/partials\/objects\/_buttons.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/css\/24px.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/assets\/sass\/framework\/partials\/objects\/_buttons.scss",
+      "outputStyle" : 1,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/_buttons.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/inc\/options-framework\/images\/colorpicker\/colorpicker_submit.png" : {
       "ignoreWasSetByUser" : 0,
@@ -660,17 +663,14 @@
       "initialSize" : 984,
       "fileType" : 8192
     },
-    "\/assets\/sass\/framework\/partials\/objects\/_buttons.scss" : {
+    "\/hybrid-core\/css\/24px.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/sass\/framework\/partials\/objects\/_buttons.scss",
-      "outputStyle" : 1,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_buttons.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/hybrid-core\/css\/24px.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/hybrid-core\/admin\/meta-box-theme-footer.php" : {
       "ignoreWasSetByUser" : 0,
@@ -770,17 +770,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/hybrid-core\/js\/drop-downs.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/js\/drop-downs.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/hybrid-core\/js\/drop-downs.min-ck.js",
-      "fileType" : 64
-    },
     "\/assets\/sass\/framework\/partials\/objects\/_alerts.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -792,6 +781,17 @@
       "outputAbbreviatedPath" : "\/assets\/css\/_alerts.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/hybrid-core\/js\/drop-downs.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/js\/drop-downs.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/hybrid-core\/js\/drop-downs.min-ck.js",
+      "fileType" : 64
     },
     "\/hybrid-core\/functions\/i18n.php" : {
       "ignoreWasSetByUser" : 0,
@@ -931,6 +931,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/hybrid-core\/css\/admin.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/css\/admin.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/hybrid-core\/extensions\/post-format-tools.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -948,15 +957,6 @@
       "inputAbbreviatedPath" : "\/inc\/tgm-plugin-activation\/example.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/hybrid-core\/css\/admin.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/css\/admin.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/inc\/tgm-plugin-activation\/required-plugins.php" : {
       "ignoreWasSetByUser" : 0,
@@ -1145,24 +1145,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/hybrid-core\/css\/21px.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/css\/21px.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/hybrid-core\/extensions\/loop-pagination.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/extensions\/loop-pagination.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/sass\/framework\/_variables.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1174,6 +1156,24 @@
       "outputAbbreviatedPath" : "\/assets\/css\/_variables.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/hybrid-core\/extensions\/loop-pagination.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/extensions\/loop-pagination.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/hybrid-core\/css\/21px.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/css\/21px.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/hybrid-core\/classes\/widget-authors.php" : {
       "ignoreWasSetByUser" : 0,
@@ -1205,44 +1205,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/hybrid-core\/js\/nav-bar.min.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/js\/nav-bar.min.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/hybrid-core\/js\/nav-bar.min-ck.js",
-      "fileType" : 64
-    },
-    "\/hybrid-core\/css\/plugins.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/css\/plugins.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/options.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/options.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/hybrid-core\/functions\/customize.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/functions\/customize.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/sass\/framework\/partials\/objects\/_split.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1254,6 +1216,44 @@
       "outputAbbreviatedPath" : "\/assets\/css\/_split.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/hybrid-core\/css\/plugins.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/css\/plugins.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/hybrid-core\/js\/nav-bar.min.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/js\/nav-bar.min.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/hybrid-core\/js\/nav-bar.min-ck.js",
+      "fileType" : 64
+    },
+    "\/hybrid-core\/functions\/customize.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/functions\/customize.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/options.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/options.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/inc\/tgm-plugin-activation\/class-tgm-plugin-activation.php" : {
       "ignoreWasSetByUser" : 0,
@@ -1359,6 +1359,18 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/assets\/sass\/framework\/partials\/objects\/_animate.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/sass\/framework\/partials\/objects\/_animate.scss",
+      "outputStyle" : 1,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/assets\/css\/_animate.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/hybrid-core\/functions\/context.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1377,18 +1389,6 @@
       "outputStyle" : 1,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/assets\/css\/__EXAMPLE_PAGE.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/assets\/sass\/framework\/partials\/objects\/_animate.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/sass\/framework\/partials\/objects\/_animate.scss",
-      "outputStyle" : 1,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/assets\/css\/_animate.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -1508,15 +1508,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/hybrid-core\/css\/24px.min.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/css\/24px.min.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/comments.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1525,6 +1516,15 @@
       "inputAbbreviatedPath" : "\/comments.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/hybrid-core\/css\/24px.min.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/css\/24px.min.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/hybrid-core\/css\/25px.min.css" : {
       "ignoreWasSetByUser" : 0,
@@ -1758,6 +1758,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/hybrid-core\/functions\/comments.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/hybrid-core\/functions\/comments.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/assets\/sass\/framework\/partials\/common\/_site-logo.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1769,15 +1778,6 @@
       "outputAbbreviatedPath" : "\/assets\/css\/_site-logo.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/hybrid-core\/functions\/comments.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/hybrid-core\/functions\/comments.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/assets\/sass\/framework\/partials\/objects\/_flexslider.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -1863,17 +1863,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/inc\/options-framework\/images\/colorpicker\/colorpicker_rgb_g.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/inc\/options-framework\/images\/colorpicker\/colorpicker_rgb_g.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/inc\/options-framework\/images\/colorpicker\/colorpicker_rgb_g.png",
-      "initialSize" : 1069,
-      "fileType" : 8192
-    },
     "\/assets\/sass\/framework\/partials\/base\/_spacing.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1885,6 +1874,17 @@
       "outputAbbreviatedPath" : "\/assets\/css\/_spacing.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/inc\/options-framework\/images\/colorpicker\/colorpicker_rgb_g.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/inc\/options-framework\/images\/colorpicker\/colorpicker_rgb_g.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/inc\/options-framework\/images\/colorpicker\/colorpicker_rgb_g.png",
+      "initialSize" : 1069,
+      "fileType" : 8192
     },
     "\/inc\/options-framework\/images\/colorpicker\/colorpicker_overlay.png" : {
       "ignoreWasSetByUser" : 0,
@@ -2181,7 +2181,7 @@
   "projectAttributes" : {
     "bourbonEnabled" : 0,
     "displayValue" : "Tanlinell",
-    "displayValueWasSetByUser" : 0,
+    "displayValueWasSetByUser" : 1,
     "compassEnabled" : 1
   }
 }
