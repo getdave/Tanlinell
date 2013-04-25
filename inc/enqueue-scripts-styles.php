@@ -52,7 +52,7 @@ function tanlinell_scripts() {
 	/**
 	 * MISC CONDITIONAL STYLES
 	 */
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	if ( tanlinell_is_blog_page() && is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
