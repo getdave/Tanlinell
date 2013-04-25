@@ -121,3 +121,26 @@ function cpt_icons() {
     </style>
 <?php } 
 add_action( 'admin_head', 'cpt_icons' );
+
+
+
+/**
+ * Customize Contact Methods
+ * @since 1.0.0
+ *
+ * @author Bill Erickson
+ * @link http://sillybean.net/2010/01/creating-a-user-directory-part-1-changing-user-contact-fields/
+ *
+ * @param array $contactmethods
+ * @return array
+ */
+
+function mb_contactmethods( $contactmethods ) {
+    unset( $contactmethods['aim'] );
+    unset( $contactmethods['yim'] );
+    unset( $contactmethods['jabber'] );
+
+    return $contactmethods;
+}
+
+add_filter( 'user_contactmethods' , 'mb_contactmethods');
