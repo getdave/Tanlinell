@@ -22,7 +22,7 @@ function tanlinell_scripts() {
 	 */	
 	
 	// Modernizr - custom build with only "essential" features. You should update this to your own requirements
-	wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr.custom.js', '', '1.0' , false );
+	wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/modernizr.custom.js', '', '1.0' , false );
 	wp_enqueue_script('modernizr-custom');
 
 	// Fitvids - a good choice to ensure ratio of embedded videos
@@ -30,15 +30,15 @@ function tanlinell_scripts() {
 	//wp_enqueue_script('fitvids');
 	
 	// Flexslider - a good choice for a responsive slider
-	wp_register_script('flexslider', get_template_directory_uri() . '/js/flexslider/jquery.flexslider.js', array('jquery'), '1.0' , true );
+	wp_register_script('flexslider', get_template_directory_uri() . '/assets/js/jquery.flexslider.js', array('jquery'), '1.0' , true );
 	wp_enqueue_script('flexslider');
 		
 	// Plugins - all calls to init common plugins
-	wp_register_script('plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), '1.0' , true );
+	wp_register_script('plugins', get_template_directory_uri() . '/assets/js/plugins.js', array('jquery'), '1.0' , true );
 	wp_enqueue_script('plugins');
 
 	// Main.js - custom javascript for the site
-	wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0' , true );
+	wp_register_script('main', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '1.0' , true );
 	wp_enqueue_script('main'); 
 
 	// jQuery - load jQuery in the footer instead of header
