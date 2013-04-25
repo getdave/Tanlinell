@@ -7,6 +7,9 @@
  * @since Tanlinell 1.0
  */
 
+
+
+
 /**
  * Homepage Slides 
  *
@@ -47,11 +50,10 @@ function tanlinell_register_cpt_homepage_slider() {
 			'can_export' => true,
 			'rewrite' => true,
 			'capability_type' => 'post',
-			'menu_icon' => get_template_directory_uri() . '/images/cpt-icons/application-image.png',  // Icon Path
+			'menu_icon' => get_template_directory_uri() . '/assets/images/cpt-icons/application-image.png',  // Icon Path
 	);
 
 	register_post_type( 'homepage_slides', $args );
-	flush_rewrite_rules();
 }
 
 
