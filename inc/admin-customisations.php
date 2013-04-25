@@ -135,7 +135,7 @@ add_action( 'admin_head', 'cpt_icons' );
  * @return array
  */
 
-function mb_contactmethods( $contactmethods ) {
+function tanlinell_remove_contactmethods( $contactmethods ) {
     unset( $contactmethods['aim'] );
     unset( $contactmethods['yim'] );
     unset( $contactmethods['jabber'] );
@@ -143,4 +143,4 @@ function mb_contactmethods( $contactmethods ) {
     return $contactmethods;
 }
 
-add_filter( 'user_contactmethods' , 'mb_contactmethods');
+add_filter( 'user_contactmethods' , 'tanlinell_remove_contactmethods');
