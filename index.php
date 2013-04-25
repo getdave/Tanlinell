@@ -33,7 +33,7 @@ get_header(); ?>
 
 	<?php endwhile; ?>
 
-	<?php tanlinell_content_nav( 'nav-below' ); ?>
+	<?php get_template_part('pagination'); ?>
 
 <?php elseif ( current_user_can( 'edit_posts' ) ) : ?>
 
