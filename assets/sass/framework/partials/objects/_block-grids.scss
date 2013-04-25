@@ -1,0 +1,164 @@
+/* #Block Grids */
+
+/* Borrowed from Zurb Foundation, these are 2-up, 3-up, 4-up and 5-up ULs, suited
+for repeating blocks of content. Add 'mobile' to
+them to switch them just like the layout grid
+(one item per line) on phones
+
+For IE7/8 compatibility block-grid items need to be
+the same height. You can optionally uncomment the
+lines below to support arbitrary height, but know
+that IE7/8 do not support :nth-child.
+*/
+
+/* ##Standard Example - Grid "Two Up" */
+/*
+    <ul class="block-grid two-up">
+        <li>Two-up element</li>
+        <li>Two-up element</li>
+        <li>Two-up element</li>
+        <li>Two-up element</li>
+        <li>Two-up element</li>
+    </ul>
+*/
+
+  .block-grid { display: block; overflow: hidden; padding: 0;
+
+    &>li { 
+        display: block; 
+        height: auto; 
+        float: left; 
+        @include box-sizing(border-box);
+    }
+    &.one-up { margin: 0; 
+      &>li { width: 100%; padding: 0 0 15px; }
+    }
+
+    &.two-up { margin: 0 -15px; 
+      &>li { width: 50%; padding: 0 15px 15px; 
+        &:nth-child(2n+1) { clear: both; }
+      }
+    }
+
+    &.three-up { margin: 0 -12px; 
+      &>li { width: 33.33%; padding: 0 12px 12px; 
+        &:nth-child(3n+1) { clear: both; }
+      }
+    }
+
+    &.four-up { margin: 0 -10px; 
+      &>li { width: 25%; padding: 0 10px 10px; 
+        &:nth-child(4n+1) { clear: both; }
+      }
+    }
+
+    &.five-up { margin: 0 -8px; 
+      &>li { width: 20%; padding: 0 8px 8px; 
+        &:nth-child(5n+1) { clear: both; }
+      }
+    }
+    &.six-up { margin: 0 -15px;
+      &>li { width: 16.6%; padding: 0 8px 8px;
+        &:nth-child(6n+1) { clear: both; }
+      }
+    }
+    &.seven-up { margin: 0 -15px;
+      &>li { width: 14.28%; padding: 0 8px 8px;
+        &:nth-child(7n+1) { clear: both; }
+      }
+    }
+    &.eight-up { margin: 0 -15px;
+      &>li { width: 12.5%; padding: 0 8px 8px;
+        &:nth-child(8n+1) { clear: both; }
+      }
+    }
+    &.nine-up { margin: 0 -15px;
+      &>li { width: 11.11%; padding: 0 8px 8px;
+        &:nth-child(9n+1) { clear: both; }
+      }
+    }
+    &.ten-up { margin: 0 -15px;
+      &>li { width: 10%; padding: 0 8px 8px;
+        &:nth-child(10n+1) { clear: both; }
+      }
+    }
+    &.eleven-up { margin: 0 -15px;
+      &>li { width: 9.09%; padding: 0 8px 8px;
+        &:nth-child(11n+1) { clear: both; }
+      }
+    }
+    &.twelve-up { margin: 0 -15px;
+      &>li { width: 8.33%; padding: 0 8px 8px;
+        &:nth-child(12n+1) { clear: both; }
+      }
+    }
+  }
+
+
+/* ##Mobile Block Grids Example - Grid "Two Up" */
+/*
+    <ul class="block-grid three-up mobile">
+        <li>Three-up element</li>
+        <li>Three-up element</li>
+        <li>Three-up element</li>
+        <li>Three-up element</li>
+        <li>Three-up element</li>
+        <li>Three-up element</li>
+    </ul>
+*/
+
+
+@media only screen and (max-width: $break-small - 1) {
+    .block-grid.mobile {
+      &>li { float: none; width: 100%; margin-left: 0; }
+    }
+
+    .block-grid {
+      &>li { clear: none !important; }
+      &.mobile-one-up>li { width: 100%; }
+
+      &.mobile-two-up>li { width: 50%; 
+        &:nth-child(2n+1) { clear: both; }
+      }
+
+      &.mobile-three-up>li { width: 33.33%; 
+        &:nth-child(3n+1) { clear: both; }
+      }
+
+      &.mobile-four-up>li { width: 25%;
+        &:nth-child(4n+1) { clear: both; }
+      }
+
+      &.mobile-five-up>li { width: 20%;
+        &:nth-child(5n+1) { clear: both; }
+      }
+
+      &.mobile-six-up>li { width: 16.6%;
+        &:nth-child(6n+1) { clear: both; }
+      }
+
+      &.mobile-seven-up>li { width: 14.28%;
+        &:nth-child(7n+1) { clear: both; }
+      }
+
+      &.mobile-eight-up>li { width: 12.5%;
+        &:nth-child(8n+1) { clear: both; }
+      }
+
+      &.mobile-nine-up>li { width: 11.11%;
+        &:nth-child(9n+1) { clear: both; }
+      }
+
+      &.mobile-ten-up>li { width: 10%;
+        &:nth-child(10n+1) { clear: both; }
+      }
+
+      &.mobile-eleven-up>li { width: 9.09%;
+        &:nth-child(11n+1) { clear: both; }
+      }
+
+      &.mobile-twelve-up>li { width: 8.33%;
+        &:nth-child(12n+1) { clear: both; }
+      }
+    }
+  }

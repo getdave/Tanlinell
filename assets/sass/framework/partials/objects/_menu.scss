@@ -1,0 +1,145 @@
+
+
+// Menu
+
+// Description:			Default navigation styles for Global nav
+//						elements
+// Acknowledgements		Twitter Bootstrap 2
+
+
+
+
+// ==========================================================================
+// NAV PRIMARY
+// ==========================================================================
+
+.nav-primary,
+.nav-primary ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: visible;
+	clear: both;
+	@include clearfix;
+}
+
+.nav-primary {
+
+	> li {
+		position: relative;	
+	
+		@include respond-to($mobileBreak) {
+			float: left;			
+		}
+	}
+
+	a {
+		display: block;		
+		padding: rsize(10px) rsize(20px);
+		color: $navbarLinkColor;	
+		text-align: left;	
+		text-decoration: none;
+
+		@include respond-to($mobileBreak) {
+			text-align: center;	
+		}
+
+		&:hover,
+		&:focus {
+			color: $navbarLinkColorHover;
+		}
+	}	
+}
+
+// Show submenu on :hover/:focus
+.nav-primary li {
+	@include respond-to($mobileBreak) {		
+		&:hover .sub-menu,
+		&:focus .sub-menu {
+			left: 0;
+		}
+	}
+}
+
+
+// STATE: FIXED POSITION
+// ==========================================================================
+
+.navbar-fixed {
+	@extend .navbar;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: $zindexFixedNavbar;
+}
+
+
+// SUBMENUS
+// ==========================================================================
+
+.sub-menu {
+	position: absolute;
+	top: auto;
+	left: -999em;
+	z-index: $zindexDropdown;
+	text-align: left;
+	direction:ltr;
+	background-color: $navbarBackground;
+
+	li {
+		vertical-align: bottom; /* This fixes the IE5 Win gap (no harm done to modern browsers) */
+		white-space: nowrap;
+		width: 100%;	/* inherit the width of the parent <ul> */
+		clear: both;
+		display: list-item;
+
+
+		a {
+			white-space: nowrap; /* forces drop down to stretch to accommodate length of text (and not wrap) */
+			padding: 0.4615384615384615em 20px;
+			text-align: left;
+		}
+	}
+}
+
+
+
+// ==========================================================================
+// MENU TOGGLE
+// ==========================================================================
+
+
+%menu-primary {
+	.js & {
+		display: none;
+
+		@include respond-to($mobileBreak) {
+			display: block;	
+		}
+	}
+
+	&:target {
+		display: block;
+	}
+
+	.expanded & {
+		display: block;
+	}
+}
+
+%menu-toggle {
+	float: right;
+	display: none;
+	border: 0;
+	background-color: transparent;
+
+	.js & {
+		display: block;
+
+		@include respond-to($mobileBreak) {
+			display: none;	
+		}
+
+	}
+}

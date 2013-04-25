@@ -1,0 +1,39 @@
+/* #DROPDOWNS */
+
+/* Create dropdown menus with caret arrow
+
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+		<li><a tabindex="-1" href="#">Action</a></li>
+		<li><a tabindex="-1" href="#">Another action</a></li>
+		<li><a tabindex="-1" href="#">Something else here</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="#">Separated link</a></li>
+	</ul>
+*/
+
+
+.dropdown .caret,
+.dropdown-toggle .caret {
+	display: inline-block;
+	color: #fff !important;
+	width: 0;
+	height: 0;
+	text-indent: -99999px;
+	*text-indent: 0;
+	vertical-align: top;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #fff;
+	background: 0;
+	margin-left: 7px;
+	margin-top: rsize(7px);
+	content: "\2193";
+	@include opacity(0.75);	
+}
+
+.dropdown:hover .caret,
+.dropdown:focus .caret
+.dropdown-toggle:hover .caret,
+.dropdown-toggle:focus .caret {
+	@include opacity(1);
+}

@@ -1,0 +1,67 @@
+// ==========================================================================
+// FRAMEWORK & CONFIG
+// ==========================================================================
+
+// Configure your project and the "Web Starter" framework
+@import "site/_config.scss";
+
+// Import the "Web Starter" framework
+@import "framework/_framework.scss";
+
+
+
+
+// ==========================================================================
+// WIREFRAME/PROTOTYPING
+// Temp styles used for quick prototypes or wireframes. 
+// ==========================================================================
+
+// Wireframe
+//@import "site/_wireframe.scss";
+
+
+
+// ==========================================================================
+// SITE
+// ==========================================================================
+
+// MODULES
+// ==========================================================================
+
+// Example: Sprite Module
+//@import "site/modules/_EXAMPLE_MODULE.scss";
+
+
+// SITE LAYOUT
+// ==========================================================================
+
+// Page level layout styles (banner, navigation, content, contentinfo)
+@import "site/_page.scss";
+
+
+// PAGES
+// Individual stylesheets for unique pages on the site/application
+// ==========================================================================
+
+// Home 
+//@import "site/pages/_home.scss";
+
+// Blog
+//@import "site/pages/_blog.scss";
+
+// Contact
+//@import "site/pages/_contact.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
