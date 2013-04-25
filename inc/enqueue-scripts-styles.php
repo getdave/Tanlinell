@@ -41,7 +41,12 @@ function tanlinell_scripts() {
 	wp_register_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '1.0' , true );
 	wp_enqueue_script('main'); 
 
-
+	// jQuery - load jQuery in the footer instead of header
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', '/wp-includes/js/jquery/jquery.js', false, false, true);
+        wp_enqueue_script('jquery');
+    }
 
 
 	/**
