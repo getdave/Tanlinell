@@ -1,0 +1,56 @@
+/* #Containers */
+
+/* Standard structures for dividing pages into "sections" */
+
+/* ##Standard Container */
+/*
+	<div class="container">
+		<p>I'm a section on the layout/page which should be centered in the window</p>
+	</div>  
+*/
+
+
+.container {
+	width: $containerWidth;
+	margin: 0 auto;	
+	display: block;
+	@include clearfix;
+}
+
+
+
+
+/* ## Extended Container */
+/* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
+/*
+	<div class="container-extend" style="background: #f7f7f7f;">
+		<div class="container">
+			<p>A section of content where you need the background to extend to the full width of the browser whilst the content remains centered</p>
+		</div> 
+	</div>
+*/
+
+.container-extend {
+	width: auto;
+	@include clearfix;
+}
+
+
+// Page Column config
+// ==========================================================================
+
+.col {
+	padding: $spacingUnit;
+	@include box-sizing(border-box);
+}
+
+@media only screen and (max-width: 30em) {
+	.col {
+		padding: $halfSpacingUnit;
+	}
+}
+
+
+
+
+

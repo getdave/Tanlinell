@@ -1,0 +1,160 @@
+/**
+ * WEB STARTER CSS FRAMEWORK
+ * Version: 2.6
+ * URL: https://github.com/getdave/Web-Starter-Toolkit
+ * Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+ * Author: David Smith (@get_dave)
+ */
+
+/**
+ * This project aims to be a starter kit for building websites using SASS and Compass. 
+ * 
+ * The framework comes as a stand-alone packaged collection of SASS files. The _framework.scss file
+ * should be @import'd into your projects' master SASS/SCSS file and extended as required.
+ * 
+ * You should NEVER modify the files of the framework. If you find something you cannot work around it is
+ * a bug and should be raised as an issue on Github at: 
+ * 
+ * https://github.com/getdave/Web-Starter-Toolkit/issues
+ * 
+ * This framework borrows heavily and draws inspiration from the great work of the following projects/authors:
+
+ * OOCSS 					- https://github.com/stubbornella/oocss
+ * Inuit.css 				- https://raw.github.com/csswizardry/inuit.css/
+ * SMACSS guidelines 		- http://smacss.com/
+ * Twitter Bootstrap		- http://twitter.github.com/bootstrap/
+ * ZURB Foundation		- http://foundation.zurb.com/
+ *
+ */
+
+
+
+/* ==========================================================================
+   LIBRARIES & FRAMEWORKS
+   ========================================================================== */
+
+	// Compass
+	@import "compass";
+
+	// Variables and Mixins
+	@import "_variables";
+	@import "partials/base/_mixins";
+
+	// Cater for IE10 Windows 8 "Snap Mode"
+	// http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+	@-ms-viewport{
+	    width: device-width;
+	}
+
+
+/* ==========================================================================
+   BASE
+   Base for framework. Mostly global, tag-based selector rules.
+   ========================================================================== */
+
+
+	// Block level (h1, p) and text-level (em, strong) type...etc
+	@import "partials/base/_typo.scss";
+
+	// Headings
+	@import "partials/base/_headings.scss";
+
+	// Forms
+	@import "partials/base/_forms.scss";
+
+	// Grid System
+	@import "partials/base/_grid.scss";
+
+
+
+/* ==========================================================================
+   OBJECTS
+   Common patterns to be reused and extended in site-specific styles.
+   ========================================================================== */
+
+
+	// Media Block
+	@import "partials/objects/_media.scss";
+
+	// Containers - used to define "sections" on a layout/page
+	@import "partials/objects/_containers.scss";
+
+	// Island/Islet - simple boxed off content
+	@import "partials/objects/_island.scss";
+
+	// Split (Listings)
+	@import "partials/objects/_split.scss";
+
+	// Hero Unit
+	@import "partials/objects/_hero-unit.scss";
+
+	// Block Grids
+	//@import "partials/objects/_block-grids.scss";
+
+	// Block Lists
+	@import "partials/objects/_block-list.scss";
+
+	// "Nav" object - floated lists of content
+	@import "partials/objects/_nav.scss";
+
+	// Buttons 
+	@import "partials/objects/_buttons.scss";
+
+	// Dropdowns 
+	@import "partials/objects/_dropdowns.scss";
+
+	// Alerts 
+	@import "partials/objects/_alerts.scss";
+
+	// Pagination 
+	@import "partials/objects/_pagination.scss";
+
+	// Paging (controls for Next/Previous)
+	@import "partials/objects/_pager.scss";
+
+	// Breadcrumb navigation
+	@import "partials/objects/_breadcrumbs.scss";
+
+	// Complex (split) Link
+	@import "partials/objects/_complex-link.scss";
+
+	// Images
+	@import "partials/objects/_images.scss";
+
+	// Flexslider (slideshow styles)
+	@import "partials/objects/_flexslider.scss";
+
+	// Graybox
+	@import "partials/objects/_graybox.scss";
+
+
+
+
+/* ==========================================================================
+   COMMON
+   Common components/requirements for standard websites
+   ========================================================================== */
+
+	// Menu
+	@import "partials/objects/_menu.scss";
+
+	// Site logo
+	@import "partials/common/_site-logo.scss";
+
+	// Site Credit
+	@import "partials/common/site-credit.scss";
+
+
+
+
+/* ==========================================================================
+   HELPERS
+   Global overides. Utility classes intended to overide all other styles.
+   ========================================================================== */
+
+	// Helper classes
+	@import "partials/base/_helpers.scss";
+
+	// Spacing classes
+	@import "partials/base/_spacing.scss";
+

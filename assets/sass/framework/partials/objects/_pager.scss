@@ -1,0 +1,42 @@
+/* #PAGER */
+
+/* Standard prev/next controls for navigation between "paged" content. /*
+
+/* ##Base 
+	<ul class="pager">
+		<li class="previous">
+			<a href="#">&larr; Older</a>
+		</li>
+		<li class="next">
+			<a href="#">Newer &rarr;</a>
+		</li>
+	</ul>
+*/
+
+.pager {
+	margin: 0;
+	padding:0;
+	list-style: none;
+}
+
+.pager li,
+.pager-item {
+	display: inline;
+}
+
+.pager-item a,
+.pager a {
+	@include inline-block;
+		padding: 7px 12px 8px 12px;
+		text-decoration: none;
+		border: 1px solid #ccc;
+		line-height: 1;
+		float: left;
+}
+
+.next a {
+	float: right;
+}
+
+
+

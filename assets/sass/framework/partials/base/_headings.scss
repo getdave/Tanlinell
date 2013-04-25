@@ -1,0 +1,87 @@
+/* #Headings */
+/* Based on the ancient Typographic scale */
+/* http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4.
+
+/* ###Standard Headings */
+/* Note that all heading sizes are aliased via the `.hN` classes. So if you would like your `<h6>` to look like an `<h1>` then simply add the class `<h3 class="h1" />` */
+
+/* 
+	<h1>Heading 1</h1> 
+*/
+h1,.h1 {
+	@include fsize($headingLevel1);
+	color: $grayDarker;
+	margin: 0 0 .5em 0;
+  	text-rendering: optimizelegibility; 
+}
+
+/* 
+	<h2>Heading 2</h2> 
+*/
+h2,.h2 {
+	@include fsize($headingLevel2);
+	color: $grayDarker;
+	margin: 0 0 .35em 0;
+}
+
+/* 
+	<h3>Heading 3</h3> 
+*/
+h3,.h3 {
+	@include fsize($headingLevel3);
+	color:$grayDark;
+	margin: 0 0 .5em 0;
+}
+
+/* 
+	<h4>Heading 4</h4> 
+*/
+h4,.h4 {
+	@include fsize($headingLevel4);
+	color:$grayDark;
+	margin: 0 0 .5em 0;
+}
+
+/* 
+	<h5>Heading 5</h5> 
+*/
+h5,.h5 {
+	@include fsize($headingLevel5);
+	margin: 0 0 .5em 0;
+}
+
+/* 
+	<h6>Heading 6</h6> 
+*/
+h6,.h6 {
+	@include fsize($headingLevel6);
+	margin: 0 0 .5em 0;
+}
+
+
+/* ###Misc Headings */
+
+/* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
+/* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
+
+.giga {
+    @extend .h1;
+
+    @include respond-to($mobileBreak) {
+        font-size: rsize($giga);
+    }   
+}
+
+.mega {
+    @extend .h1;
+    @include respond-to($mobileBreak) {
+        font-size: rsize($mega);
+    }
+}
+
+.kilo {
+    @extend .h1;
+    @include respond-to($mobileBreak) {
+        font-size: rsize($kilo);
+    }   
+}

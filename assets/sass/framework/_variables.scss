@@ -1,0 +1,197 @@
+// FRAMEWORK VARIABLES
+
+// The following variables are utilities to provide defaults for the framework.
+// Do not alter these values. Instead override as required in your Projects'
+// _config file.
+
+// ==========================================================================
+// IE HACK
+// ==========================================================================
+
+// This is a flag which is set to "true" by master-ie.scss
+// This allows us to target specifically IE within Sass files!
+$bIE: false !default;
+
+
+// ==========================================================================
+// COLORS
+// ==========================================================================
+
+// Grays
+$black:                 		#000;
+$grayDarker:            		#222;
+$grayDark:              		#333;
+$gray:                  		#555;
+$grayLight:             		#999;
+$grayLighter:           		#eee;
+$whiteDark:						#f9f9f9;
+$white:                 		#fff;
+
+// Accent colors
+$blue:                  		#049cdb;
+$blueDark:              		#0064cd;
+$green:                 		#46a546;
+$red:                   		#9d261d;
+$yellow:                		#ffc40d;
+$orange:                		#f89406;
+$pink:                  		#c3325f;
+$purple:                		#7a43b6;
+
+
+
+// ==========================================================================
+// TYPOGRAPHY
+// ==========================================================================
+
+// Font Stacks
+// https://github.com/tokokoo/pondasee
+// http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
+// https://github.com/lloydk/font-stack
+// ==========================================================================
+ 
+// Serif font-stacks
+$georgia			: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif !default;
+$georgia-heading	: Georgia, Times, "Times New Roman", serif !default;
+$garamond			: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif !default;
+$lucida-bright		: "Lucida Bright", Georgia, serif !default;
+$palatino			: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif !default;
+$big-caslon			: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif !default;
+$didot				: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif !default;
+$baskerville		: Baskerville, "Baskerville old face", "Hoefler Text", Garamond, "Times New Roman", serif !default;
+$hoefler-text		: "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif !default;
+$bodoni-mt			: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif !default;
+$goudy-old-style	: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif !default;
+$constantia			: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif !default;
+$cambria			: Cambria, Georgia, serif !default;
+$book-antiqua		: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif !default;
+$times				: Times, "Times New Roman", Georgia, serif !default;
+
+// Sans-Serif font-stacks
+$arial				: Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+$optima				: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif !default;
+$futura				: Futura, "Trebuchet MS", Arial, sans-serif !default;
+$gill-sans			: "Gill Sans", "Gill Sans MT", Calibri, sans-serif !default;
+$trebuchet			: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif !default;
+$helvetica			: "Helvetica Neue", Arial, Helvetica, sans-serif !default;
+$verdana			: Verdana, Geneva, sans-serif !default;
+$lucida-grande		: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif !default;
+$geneva				: Geneva, Tahoma, Verdana, sans-serif !default;
+$segoe				: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+$candara			: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif !default;
+$calibri			: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif !default;
+$franklin-gothic	: "Franklin Gothic Medium", Arial, sans-serif !default;
+$tahoma				: Tahoma, Geneva, Verdana, sans-serif !default;
+
+// Monospace font-stacks
+$monospace			: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !default;
+$monospace-simple	: "andale mono", "lucida console", monospace !default;
+$consolas			: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !default;
+
+// Cursive font-stacks
+$cursive			: "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive !default;
+
+
+
+
+// Heading Levels
+// These are set as defaults and overidden in the site config
+// ==========================================================================
+
+$headingLevel1:		36px !default;
+$headingLevel2:		30px !default;
+$headingLevel3:		24px !default;
+$headingLevel4:		20px !default;
+$headingLevel5:		16px !default;
+$headingLevel6:		14px !default;
+
+$giga:				96px !default;
+$mega:				72px !default;
+$kilo:				48px !default;
+
+
+// ==========================================================================
+// GRID
+// ==========================================================================
+
+// We loop thorugh this string to produce our written grid classes
+$cols_as_string: 				one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty;
+
+// Column Configuration
+$cols: 							12 !default;	// number of columns required
+$gutter: 						3 !default;		// gutter between each column
+
+// Do we want to use the packaged grid breakpoints
+// If not we need to create our own by including
+// the @include grid-set() at our required breakpoints
+$bStdGridBreakpoints: 			true !default;
+
+// ==========================================================================
+// ELEMENTS & COMPONENTS
+// ==========================================================================
+// 
+
+// MASTER Z-INDEX
+// ==========================================================================
+
+// Used for a bird's eye view of components dependent on the z-axis
+$zindexDropdown:        		1000;
+$zindexPopover:         		1010;
+$zindexTooltip:         		1020;
+$zindexFixedNavbar:     		1030;
+$zindexModalBackdrop:   		1040;
+$zindexModal:           		1050;
+
+
+// FORMS
+// ==========================================================================
+
+// Input placeholder text color
+$placeholderText:       		$grayLight;
+
+// Input border radius
+$inputBorderRadius:				3px;
+
+$inputBackground:				$white;
+$inputBorder:					$grayLight;
+
+$formActionsBackground:			#f5f5f5;
+
+// Form states and alerts
+$warningText:            		 #c09853;
+$warningBackground:       		#fcf8e3;
+$warningBorder:           		darken(adjust-hue($warningBackground, -10), 3%);
+
+$errorText:               		#b94a48;
+$errorBackground:         		#f2dede;
+$errorBorder:             		darken(adjust-hue($errorBackground, -10), 3%);
+
+$successText:             		#468847;
+$successBackground:       		#dff0d8;
+$successBorder:           		darken(adjust-hue($successBackground, -10), 5%);
+
+$infoText:                		#3a87ad;
+$infoBackground:          		#d9edf7;
+$infoBorder:              		darken(adjust-hue($infoBackground, -10), 7%);
+
+
+// NAVBAR
+// ==========================================================================
+
+$navbarBackground: 				$grayLight;
+$navbarLinkColor: 				$grayDark;
+$navbarLinkColorHover: 			$white;
+
+
+// BUTTONS
+// ==========================================================================
+
+$button_background              : $linkColor !default;
+$button_background_shader       : linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.25)) !default; // standard bg shader 
+$button_background_shader_h     : linear-gradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0.30)) !default; // :hover bg shader 
+$button_background_shader_i     : linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0)) !default; // inverted bg shader 
+$button_background_shader-f     : url(../images/site/button-shader.png) left center repeat-x !default; // fallback bg shader 
+
+
+
+
+

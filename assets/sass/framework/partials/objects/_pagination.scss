@@ -1,0 +1,142 @@
+/* #Pagination */
+
+/* Standard controls for navigation between "paged" content. */
+
+/* ##Base 
+	<div class="pagination">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+		  		<a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+*/
+
+.pagination {
+	margin-bottom: 1.5em;
+}
+
+.pagination {
+
+	ul,
+	ol,
+	.pagination-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		overflow: hidden;
+		@include inline-block;
+	}
+}
+
+.pagination li {
+	@include inline-block;
+	margin-right: rsize(5px);
+	margin-bottom: rsize(10px);
+}
+
+.pagination a {
+	display: block;
+	padding: 7px 12px 8px 12px;
+	text-decoration: none;
+	border: 1px solid #ccc;
+	line-height: 1;
+
+	&:hover,
+	&:focus {
+		background-color: $whiteDark;
+	}
+}
+
+
+// DISABLED
+// ==========================================================================
+
+.pagination .disabled a {
+	color: #ccc;
+}
+
+// CURRENT
+// ==========================================================================
+
+.pagination .current a {
+	background-color: #f1f1f1;
+	border-color: #a8a8a8;
+	color: #666;
+}
+
+// RANGE
+// ==========================================================================
+
+.pagination .range a,
+.pagination .range a:hover,
+.pagination .range a:focus {
+	background-color: transparent;
+	border-color: #ccc;
+	color: #666;
+}
+
+// PREV NEXT
+// ==========================================================================
+
+.pagination .prev a,
+.pagination .next a {
+	border: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+
+/* ## Centered */
+/* 
+	<div class="pagination pagination-centered">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			  <a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+*/
+
+.pagination-centered {
+	text-align: center;
+}
+
+
+/* ##Right */
+
+/* 
+	<div class="pagination pagination-right">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			  <a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+*/
+
+.pagination-right {
+	text-align: right;
+}
+
+
+
+
+
+
