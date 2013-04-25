@@ -12,13 +12,15 @@
 	</div><!-- #main .site-main -->
 	<?php include( trailingslashit( get_template_directory() ) . '/inc/templates/social-links.php' );?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<?php get_template_part( 'menu', 'subsidiary' ); ?>	
-		<div class="site-info">
-			<?php 
-				$atts = array();
-				echo tanlinell_developer_credit($atts);
-			?>		
-		</div><!-- .site-info -->
+		<div class="container">
+			<?php get_template_part( 'menu', 'subsidiary' ); ?>	
+			<div class="site-info">
+				<?php 
+					$atts = array();
+					echo tanlinell_developer_credit($atts);
+				?>		
+			</div><!-- .site-info -->
+		</div>
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
 

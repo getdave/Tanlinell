@@ -571,7 +571,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1361267456');
+    background-image: url('../images/select_arrow.png?1366877515');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2246,9 +2246,9 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/logo.gif?1339662808');
+  background-image: url('../images/site-logo.png?1366879020');
   width: 200px;
-  height: 60px;
+  height: 80px;
 }
 /* line 27, ../sass/framework/partials/common/_site-logo.scss */
 .site-logo a:hover, .site-logo a:focus {
@@ -2279,9 +2279,14 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
-  background-image: url('../images/site-credit.png?1361267456');
-  width: 117px;
-  height: 18px;
+  background-image: url('../images/$site-credit');
+  width: 62px;
+  height: 20px;
+}
+
+/* line 19, ../sass/framework/partials/common/_site-credit.scss */
+.site-credit--dark {
+  background-image: url('../images/site-credit--dark.png?1366879192');
 }
 
 /* ==========================================================================

@@ -42,6 +42,7 @@ function tanlinell_developer_credit($atts){
 		'designer_url'	=> 'http://burfieldcreative.co.uk',
 		'title'			=> 'Digital Agency Bristol',
 		'hidden_text'	=> 'a Digital Agency in Bristol',
+		'logo_style'	=> 'dark'
 	);
 
 	// Merge defaults with atts passed by user and extract to vars
@@ -51,8 +52,9 @@ function tanlinell_developer_credit($atts){
 	$clean_designer_url 	= esc_url($designer_url);
 	$clean_title 			= esc_attr($title);
 	$clean_the_credit		= esc_html($the_credit);
+	$logo_style				= ($logo_style === "dark") ? 'site-credit site-credit--dark' : 'site-credit';
 
-	return "{$clean_the_credit} by <a class='site-credit' target='_blank' href='{$clean_designer_url}' title='{$clean_title}'>{$designer_name} <span class='vh'>- {$hidden_text}</span></a>";
+	return "{$clean_the_credit} by <a class='{$logo_style}' target='_blank' href='{$clean_designer_url}' title='{$clean_title}'>{$designer_name} <span class='vh'>- {$hidden_text}</span></a>";
 }
 
 add_shortcode( 'developer_credit', 'tanlinell_developer_credit' );

@@ -11,7 +11,11 @@
 	@include inline-block;
 	vertical-align: middle;
 	background-position: 50% 50%;
-	background-image: image-url($site-credit);
+	background-image: image-url('$site-credit');
 	width: image-width($site-credit);
 	height: image-height($site-credit);
+}
+
+.site-credit--dark {
+	background-image: image-url('site-credit--dark.png');
 }
