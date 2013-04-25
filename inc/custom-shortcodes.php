@@ -17,13 +17,11 @@
  * accepts a given email address and obfuscates via antispambot function
  * usage:  [email]your@email.com[/email]
  */
-function email_encode_function( $atts, $content ){
+function tanlinell_encoded_email( $atts, $content ){
 	return '<a href="mailto:'.antispambot($content).'">'.antispambot($content).'</a>';
 }
 
-add_shortcode( 'email', 'email_encode_function' );
-
-
+add_shortcode( 'email', 'tanlinell_encoded_email' );
 
 
 
