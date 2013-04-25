@@ -10,7 +10,7 @@
 ?>
 
 	</div><!-- #main .site-main -->
-	<?php include( trailingslashit( get_template_directory() ) . '/inc/templates/social-links.php' );?>
+	<?php //get_template_part( 'templates/partials/vcard' ); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			<?php get_template_part( 'menu', 'subsidiary' ); ?>	
