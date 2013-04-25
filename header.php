@@ -71,7 +71,6 @@ wp_title( '|', true, 'right' );
 
 			
 			<div class="vh skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tanlinell' ); ?>"><?php _e( 'Skip to content', 'tanlinell' ); ?></a></div>
-			<a class="menu-toggle" href="#menu-primary">Menu</a>
 			<?php get_template_part( 'menu', 'primary' ); ?>
 		</div>	
 	</header><!-- #masthead .site-header -->
