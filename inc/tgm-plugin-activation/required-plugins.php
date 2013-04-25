@@ -58,12 +58,6 @@ function my_theme_register_required_plugins() {
 		),
 
 		array(
-			'name' 		=> 'Contact Form 7',
-			'slug' 		=> 'contact-form-7',
-			'required' 	=> false,
-		),
-
-		array(
 			'name' 		=> 'Advanced Custom Fields',
 			'slug' 		=> 'advanced-custom-fields',
 			'required' 	=> false,
@@ -84,7 +78,7 @@ function my_theme_register_required_plugins() {
 		array(
 			'name' 		=> 'User Role Editor',
 			'slug' 		=> 'user-role-editor',
-			'required' 	=> false,
+			'required' 	=> true,
 		),
 
 		array(
