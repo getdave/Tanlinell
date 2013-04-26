@@ -5,11 +5,14 @@ module.exports = function(grunt) {
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     grunt.initConfig({
-
+        livereload: {
+          port: 35739 // Default livereload listening port.
+        },
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
             compass: {
-                files: ['assets/scss/**/*.{scss,sass}'],
+                //files: ['assets/sass/**/*.{scss,sass}'],
+                files: ['master.scss'],
                 tasks: ['compass']
             },
             js: {
