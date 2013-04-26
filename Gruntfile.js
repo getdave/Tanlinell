@@ -112,7 +112,7 @@ module.exports = function(grunt) {
 
     // register task
     grunt.registerTask('default', [
-        'livereload-start',
+        'livereload-start', // must be the first task else we'll get an error
         'watch'
     ]);
 
