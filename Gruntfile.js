@@ -6,13 +6,13 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         livereload: {
-          port: 35739 // Default livereload listening port.
+          port: 35729 // Default livereload listening port.
         },
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
             compass: {
-                //files: ['assets/sass/**/*.{scss,sass}'],
-                files: ['master.scss'],
+                files: ['assets/sass/**/*.{scss,sass}'],
+                //files: ['master.scss'],
                 tasks: ['compass']
             },
             js: {
@@ -115,7 +115,7 @@ module.exports = function(grunt) {
 
     // register task
     grunt.registerTask('default', [
-        'livereload-start', // must be the first task else we'll get an error
+        //'livereload-start', // must be the first task else we'll get an error
         'watch'
     ]);
 
