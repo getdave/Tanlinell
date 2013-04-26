@@ -1,4 +1,12 @@
 'use strict';
+
+var path = require('path');
+
+var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
+
+var folderMount = function folderMount(connect, point) {
+  return connect.static(path.resolve(point));
+};
 module.exports = function(grunt) {
 
     // load all grunt tasks
@@ -6,8 +14,19 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         livereload: {
-          port: 35729 // Default livereload listening port.
+          port: 35719 // Default livereload listening port.
         },
+        connect: {
+          livereload: {
+            options: {
+              port: 9001,
+              middleware: function(connect, options) {
+                return [lrSnippet, folderMount(connect, options.base)];
+              }
+            }
+          }
+        },
+
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
             compass: {
@@ -110,12 +129,13 @@ module.exports = function(grunt) {
     });
 
     // rename tasks
-    grunt.renameTask('regarde', 'watch');
+    //grunt.renameTask('regarde', 'watch');
     grunt.renameTask('rsync', 'deploy');
 
     // register task
     grunt.registerTask('default', [
-        //'livereload-start', // must be the first task else we'll get an error
+        'livereload-start', // must be the first task else we'll get an error
+        'connect', 
         'watch'
     ]);
 
