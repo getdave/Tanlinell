@@ -9,13 +9,14 @@ var folderMount = function folderMount(connect, point) {
 };
 module.exports = function(grunt) {
 
-    // load all grunt tasks
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+        // load all grunt tasks
+        require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-    grunt.initConfig({
-        livereload: {
-      port: 35729 // Default livereload listening port.
-    },
+        grunt.initConfig({
+            livereload: {
+          port: 35729 // Default livereload listening port.
+        },
+        
         connect: {
           livereload: {
             options: {
