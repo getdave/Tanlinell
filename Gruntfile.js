@@ -14,12 +14,13 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         livereload: {
-          port: 35719 // Default livereload listening port.
-        },
+      port: 35729 // Default livereload listening port.
+    },
         connect: {
           livereload: {
             options: {
               port: 9001,
+              base: 'assets',
               middleware: function(connect, options) {
                 return [lrSnippet, folderMount(connect, options.base)];
               }
@@ -39,7 +40,7 @@ module.exports = function(grunt) {
                 tasks: ['jshint', 'uglify']
             },
             livereload: {
-                files: ['*.css', 'assets/js/*.js', '*.html', '*.php', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}'],
+                files: ['assets/css/*.css', 'assets/js/*.js', '*.html', '*.php', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}'],
                 tasks: ['livereload']
             }
         },
@@ -129,7 +130,7 @@ module.exports = function(grunt) {
     });
 
     // rename tasks
-    //grunt.renameTask('regarde', 'watch');
+    grunt.renameTask('regarde', 'watch');
     grunt.renameTask('rsync', 'deploy');
 
     // register task
