@@ -14,25 +14,15 @@
 
 
 	/**
-	 * FIT VIDS
+	 * %%MY_PLUGIN%%
 	 *
-	 * Initialise FitVidsJS on all elemetns with the .fitvids-wrap
-	 */
-	
-	$(document).ready(function(){
-		//$(".fitvids-wrap").fitVids();
-	});
-
-
-
-	/**
-	 * FLEXSLIDER
-	 *
-	 * All simple calls to init Flexslider
+	 * %%PLUGIN_DESCRIPTION%%
 	 * 
 	 */
 
 	$(document).ready(function(){
-		//$("").flexslider();
+		//$("")
 	});
+
+
 }(jQuery));
