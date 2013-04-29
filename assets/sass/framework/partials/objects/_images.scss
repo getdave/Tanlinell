@@ -14,7 +14,7 @@
 */
 
 .img-rounded {
-    @extend %img-base;
+    @extend %img-base !optional;
     @include border-radius(6px);
 }
 
@@ -24,7 +24,7 @@
 */
 
 .img-polaroid {
-    @extend %img-base;
+    @extend %img-base !optional;
     padding: 4px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -38,6 +38,6 @@
     <img src="http://www.placehold.it/200x200" class="img-circle" />
 */
 .img-circle {
-    @extend %img-base;
+    @extend %img-base !optional;
     @include border-radius(500px);
 }
