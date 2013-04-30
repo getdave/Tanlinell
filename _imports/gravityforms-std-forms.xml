@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.6.11">
+	<form labelPlacement="top_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[Primary Contact Form]]></title>
+		<confirmation type="message">
+			<message><![CDATA[Thanks for contacting us! We will get in touch with you shortly.]]></message>
+		</confirmation>
+		<button type="text">
+			<text><![CDATA[Send]]></text>
+		</button>
+		<fields>
+			<field id="9" type="name" size="medium">
+				<label><![CDATA[Name]]></label>
+				<inputs>
+					<input id="9.3">
+						<label><![CDATA[First]]></label>
+					</input>
+					<input id="9.6">
+						<label><![CDATA[Last]]></label>
+					</input>
+				</inputs>
+			</field>
+			<field id="2" isRequired="1" size="medium" type="email">
+				<label><![CDATA[Email]]></label>
+			</field>
+			<field id="3" size="medium" type="phone" phoneFormat="international">
+				<label><![CDATA[Phone]]></label>
+			</field>
+			<field id="5" size="medium" type="textarea">
+				<label><![CDATA[Message]]></label>
+			</field>
+			<field id="8" size="medium" type="captcha" displayOnly="1">
+				<label><![CDATA[Captcha]]></label>
+			</field>
+		</fields>
+		<descriptionPlacement><![CDATA[below]]></descriptionPlacement>
+		<notification>
+			<to><![CDATA[{admin_email}]]></to>
+			<subject><![CDATA[New submission from {form_title}]]></subject>
+			<message><![CDATA[{all_fields}]]></message>
+			<from><![CDATA[{admin_email}]]></from>
+		</notification>
+		<autoResponder>
+			<from><![CDATA[{admin_email}]]></from>
+		</autoResponder>
+	</form>
+	<form labelPlacement="left_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[Newsletter Signup]]></title>
+		<description><![CDATA[Like this article? Sign up now to receive the latest news before anyone else!]]></description>
+		<confirmation type="message">
+			<message><![CDATA[Subscription successful]]></message>
+		</confirmation>
+		<button type="text">
+			<text><![CDATA[Submit]]></text>
+		</button>
+		<fields>
+			<field id="1" isRequired="1" size="medium" type="email">
+				<label><![CDATA[Your Email]]></label>
+			</field>
+		</fields>
+		<descriptionPlacement><![CDATA[below]]></descriptionPlacement>
+		<notification>
+			<to><![CDATA[{admin_email}]]></to>
+			<subject><![CDATA[New submission from {form_title}]]></subject>
+			<message><![CDATA[{all_fields}]]></message>
+		</notification>
+	</form>
+</forms>
