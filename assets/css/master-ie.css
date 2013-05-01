@@ -2251,6 +2251,75 @@ html[xmlns] .slides {
   color: #999999;
 }
 
+/* #Inline List */
+/* Creates list for when you just need a horizontal list of links /*
+
+/* ##Base 
+	<ul class="inline-list">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+/* line 15, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list {
+  margin: 0 0 1.666em -1.666em;
+  zoom: 1;
+}
+/* line 86, ../sass/framework/partials/base/_mixins.scss */
+.inline-list:before {
+  content: "";
+  display: table;
+}
+/* line 91, ../sass/framework/partials/base/_mixins.scss */
+.inline-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 21, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list__item,
+.inline-list > li {
+  float: left;
+  list-style: none;
+  margin-left: 1.666em;
+  display: block;
+}
+
+/* ##Divided 
+	<ul class="inline-list inline-list--divided">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+/* line 38, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list--divided {
+  margin-left: -0.833em;
+}
+/* line 42, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list--divided .inline-list__item,
+.inline-list--divided > li {
+  margin-left: 0.833em;
+}
+/* line 44, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list--divided .inline-list__item:after,
+.inline-list--divided > li:after {
+  content: "|";
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-left: 0.833em;
+}
+
 /* #Gray Box */
 /* Simple background box styles. Can be applied safetly to any element. Useful for prototyping */
 /* ##Gray Box */
