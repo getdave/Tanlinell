@@ -12,45 +12,46 @@
 
 get_header(); ?>
 
-<div class="main" role="main">
-<?php while ( have_posts() ) : the_post(); ?>
 
-	<?php get_template_part( 'content', 'page' ); ?>
-	
-	<?php if ( is_active_sidebar( 'homepage-feature-one' ) ) : ?>
+<div class="column-container">
+	<div class="main" role="main">
+	<?php while ( have_posts() ) : the_post(); ?>
 
-		<div id="homepage-feature-one" class="homepage-feature">
+		<?php get_template_part( 'content', 'page' ); ?>
+		
+		<?php if ( is_active_sidebar( 'homepage-feature-one' ) ) : ?>
 
-			<?php dynamic_sidebar( 'homepage-feature-one' ); ?>
+			<div id="homepage-feature-one" class="homepage-feature">
 
-		</div><!-- #primary -->
+				<?php dynamic_sidebar( 'homepage-feature-one' ); ?>
 
-	<?php endif; ?>
-	
-	<?php if ( is_active_sidebar( 'homepage-feature-two' ) ) : ?>
+			</div><!-- #primary -->
 
-		<div id="homepage-feature-two" class="homepage-feature">
+		<?php endif; ?>
+		
+		<?php if ( is_active_sidebar( 'homepage-feature-two' ) ) : ?>
 
-			<?php dynamic_sidebar( 'homepage-feature-two' ); ?>
+			<div id="homepage-feature-two" class="homepage-feature">
 
-		</div><!-- #primary -->
+				<?php dynamic_sidebar( 'homepage-feature-two' ); ?>
 
-	<?php endif; ?>
-	
-	<?php if ( is_active_sidebar( 'homepage-feature-three' ) ) : ?>
+			</div><!-- #primary -->
 
-		<div id="homepage-feature-three" class="homepage-feature">
+		<?php endif; ?>
+		
+		<?php if ( is_active_sidebar( 'homepage-feature-three' ) ) : ?>
 
-			<?php dynamic_sidebar( 'homepage-feature-three' ); ?>
+			<div id="homepage-feature-three" class="homepage-feature">
 
-		</div><!-- #primary -->
+				<?php dynamic_sidebar( 'homepage-feature-three' ); ?>
 
-	<?php endif; ?>
+			</div><!-- #primary -->
 
-<?php endwhile; // end of the loop. ?>
+		<?php endif; ?>
 
-</div><!-- .main -->
+	<?php endwhile; // end of the loop. ?>
 
-
+	</div><!-- .main -->
+</div>
 
 <?php get_footer(); ?>

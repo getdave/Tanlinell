@@ -88,8 +88,8 @@
 	// Hero Unit
 	@import "partials/objects/_hero-unit.scss";
 
-	// Block Grids
-	//@import "partials/objects/_block-grids.scss";
+	// Item List
+	@import "partials/objects/_item-list.scss";
 
 	// Block Lists
 	@import "partials/objects/_block-list.scss";
@@ -143,6 +143,9 @@
 
 	// Site Credit
 	@import "partials/common/site-credit.scss";
+
+	// Columns
+	@import "partials/common/_columns.scss";
 
 
 

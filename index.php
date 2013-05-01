@@ -14,34 +14,37 @@
 
 get_header(); ?>
 
-<div class="main" role="main">
 
-<?php if ( have_posts() ) : ?>
-	<ul class="article-list item-list">
-	<?php /* Start the Loop */ ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-		<li class="article-list_item list-item">
-		<?php
-			/* Include the Post-Format-specific template for the content.
-			 * If you want to overload this in a child theme then include a file
-			 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-			 */
-			get_template_part( 'content', get_post_format() );
-		?>
-		</li>
-	<?php endwhile; ?>
-	</ul>
-	<?php get_template_part('pagination'); ?>
+<div class="column-container">
+	<div class="main" role="main">
 
-<?php elseif ( current_user_can( 'edit_posts' ) ) : ?>
+	<?php if ( have_posts() ) : ?>
+		<ul class="article-list item-list">
+		<?php /* Start the Loop */ ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<li class="article-list_item list-item">
+			<?php
+				/* Include the Post-Format-specific template for the content.
+				 * If you want to overload this in a child theme then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'content', get_post_format() );
+			?>
+			</li>
+		<?php endwhile; ?>
+		</ul>
+		<?php get_template_part('pagination'); ?>
 
-	<?php get_template_part( 'no-results', 'index' ); ?>
+	<?php elseif ( current_user_can( 'edit_posts' ) ) : ?>
 
-<?php endif; ?>
+		<?php get_template_part( 'no-results', 'index' ); ?>
 
-</div><!-- .main -->
+	<?php endif; ?>
 
-<div class="sub">
-<?php get_sidebar(); ?>
+	</div><!-- .main -->
+
+	<div class="sub">
+	<?php get_sidebar(); ?>
+	</div>
 </div>
 <?php get_footer(); ?>

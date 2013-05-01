@@ -36,20 +36,6 @@
 }
 
 
-// Page Column config
-// ==========================================================================
-
-.col {
-	padding: $spacingUnit;
-	@include box-sizing(border-box);
-}
-
-@media only screen and (max-width: 30em) {
-	.col {
-		padding: $halfSpacingUnit;
-	}
-}
-
 
 
 
