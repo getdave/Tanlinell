@@ -17,12 +17,10 @@ get_header(); ?>
 <div class="main" role="main">
 
 <?php if ( have_posts() ) : ?>
-
-	<?php tanlinell_content_nav( 'nav-above' ); ?>
-
+	<ul class="article-list item-list">
 	<?php /* Start the Loop */ ?>
 	<?php while ( have_posts() ) : the_post(); ?>
-
+		<li class="article-list_item list-item">
 		<?php
 			/* Include the Post-Format-specific template for the content.
 			 * If you want to overload this in a child theme then include a file
@@ -30,9 +28,9 @@ get_header(); ?>
 			 */
 			get_template_part( 'content', get_post_format() );
 		?>
-
+		</li>
 	<?php endwhile; ?>
-
+	</ul>
 	<?php get_template_part('pagination'); ?>
 
 <?php elseif ( current_user_can( 'edit_posts' ) ) : ?>

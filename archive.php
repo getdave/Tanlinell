@@ -66,10 +66,12 @@ get_header(); ?>
 		?>
 	</header><!-- .page-header -->
 
-	<?php tanlinell_content_nav( 'nav-above' ); ?>
-
+	
+	
+	<ul class="article-list item-list">
 	<?php /* Start the Loop */ ?>
 	<?php while ( have_posts() ) : the_post(); ?>
+		<li class="article-list_item list-item">
 
 		<?php
 			/* Include the Post-Format-specific template for the content.
@@ -78,9 +80,9 @@ get_header(); ?>
 			 */
 			get_template_part( 'content', get_post_format() );
 		?>
-
+		</li>
 	<?php endwhile; ?>
-
+	</ul>
 	<?php tanlinell_content_nav( 'nav-below' ); ?>
 
 <?php else : ?>
