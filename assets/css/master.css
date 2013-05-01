@@ -1514,12 +1514,19 @@ Borrowed from inuit.css
   background-color: #ccc;
 }
 
+/* line 20, ../sass/framework/partials/objects/_buttons.scss */
+input.btn {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 2.5em;
+}
+
 /* ## Button Sizes */
 /* Various sizes for buttons */
 /* 
 	<a href="#" class="btn btn-huge">Button Huge</a>
 */
-/* line 25, ../sass/framework/partials/objects/_buttons.scss */
+/* line 31, ../sass/framework/partials/objects/_buttons.scss */
 .btn-huge {
   padding-right: 40px;
   padding-left: 40px;
@@ -1530,7 +1537,7 @@ Borrowed from inuit.css
 /* 
 	<a href="#" class="btn btn-large">Button Large</a>
 */
-/* line 35, ../sass/framework/partials/objects/_buttons.scss */
+/* line 41, ../sass/framework/partials/objects/_buttons.scss */
 .btn-large {
   font-size: 123.0769230769231%;
   line-height: 1.75;
@@ -1541,7 +1548,7 @@ Borrowed from inuit.css
 /* 
 	<a href="#" class="btn btn-small">Button Small</a>
 */
-/* line 45, ../sass/framework/partials/objects/_buttons.scss */
+/* line 51, ../sass/framework/partials/objects/_buttons.scss */
 .btn-small {
   padding-right: 10px;
   padding-left: 10px;
@@ -1554,7 +1561,7 @@ Borrowed from inuit.css
 /* 
 	<a href="#" class="btn btn-disabled">Button Disabled</a>
 */
-/* line 59, ../sass/framework/partials/objects/_buttons.scss */
+/* line 65, ../sass/framework/partials/objects/_buttons.scss */
 .btn[disabled],
 .btn-disabled {
   background-image: none !important;
@@ -1562,7 +1569,7 @@ Borrowed from inuit.css
   opacity: 0.65;
   cursor: default !important;
 }
-/* line 64, ../sass/framework/partials/objects/_buttons.scss */
+/* line 70, ../sass/framework/partials/objects/_buttons.scss */
 .btn[disabled]:active,
 .btn-disabled:active {
   -webkit-box-shadow: none;
@@ -1574,7 +1581,7 @@ Borrowed from inuit.css
 /* 
 	<a href="#" class="btn btn-full">Full Width Button</a>
 */
-/* line 75, ../sass/framework/partials/objects/_buttons.scss */
+/* line 81, ../sass/framework/partials/objects/_buttons.scss */
 .btn-full {
   display: block;
 }
@@ -1587,7 +1594,7 @@ Borrowed from inuit.css
 	  <button class="btn">3</button>
 	</div>
 */
-/* line 90, ../sass/framework/partials/objects/_buttons.scss */
+/* line 96, ../sass/framework/partials/objects/_buttons.scss */
 .btn-group {
   display: inline-block;
   *zoom: 1;
@@ -1607,7 +1614,7 @@ Borrowed from inuit.css
   clear: both;
 }
 
-/* line 97, ../sass/framework/partials/objects/_buttons.scss */
+/* line 103, ../sass/framework/partials/objects/_buttons.scss */
 .btn-group .btn {
   float: left;
   margin-left: -1px;
@@ -1621,14 +1628,14 @@ Borrowed from inuit.css
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
-/* line 104, ../sass/framework/partials/objects/_buttons.scss */
+/* line 110, ../sass/framework/partials/objects/_buttons.scss */
 .btn-group .btn:active {
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 109, ../sass/framework/partials/objects/_buttons.scss */
+/* line 115, ../sass/framework/partials/objects/_buttons.scss */
 .btn-group .btn:first-child {
   margin-left: 0;
   -webkit-border-radius: 4px 0 0 4px;
@@ -1638,7 +1645,7 @@ Borrowed from inuit.css
   border-radius: 4px 0 0 4px;
 }
 
-/* line 114, ../sass/framework/partials/objects/_buttons.scss */
+/* line 120, ../sass/framework/partials/objects/_buttons.scss */
 .btn-group .btn:last-child {
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
@@ -2180,6 +2187,27 @@ html[xmlns] .slides {
 /* line 43, ../sass/framework/partials/objects/_flexslider.scss */
 .js .slides > li:first-child {
   display: block;
+}
+
+/* #Title Block */
+/* Addresses common markup/presentation scenario of title with meta information
+*/
+/* ##Example */
+/*
+    <header class="title-block">
+		<h1 class="title-block__heading">Article Heading</h1>
+		<small class="title-block__meta">March 19th, 2013 by David Smith</small>
+    </header>
+*/
+/* line 15, ../sass/framework/partials/objects/_title-block.scss */
+.title-block__heading {
+  margin-bottom: 0;
+}
+
+/* line 19, ../sass/framework/partials/objects/_title-block.scss */
+.title-block__meta {
+  margin-bottom: 0.833em;
+  color: #999999;
 }
 
 /* #Gray Box */

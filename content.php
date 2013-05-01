@@ -6,7 +6,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php get_template_part( 'templates/partials/pagetitle' ); ?>
+	<?php get_template_part( 'templates/partials/pagetitle', 'post' ); ?>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
