@@ -571,7 +571,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1367412798');
+    background-image: url('../images/select_arrow.png?1367415577');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1935,29 +1935,41 @@ input.btn {
 
 /* ##Base 
 	<ul class="pager">
-		<li class="previous">
-			<a href="#">&larr; Older</a>
+		<li class="pager__item pager__item--prev">
+			<a href="#" class="pager__link">&larr; Older</a>
 		</li>
-		<li class="next">
-			<a href="#">Newer &rarr;</a>
+		<li class="pager__item pager__item--next">
+			<a href="#" class="pager__link">Newer &rarr;</a>
 		</li>
 	</ul>
 */
 /* line 16, ../sass/framework/partials/objects/_pager.scss */
 .pager {
-  margin: 0;
+  margin: 0 0 1.666em 0;
   padding: 0;
   list-style: none;
+  zoom: 1;
+}
+/* line 86, ../sass/framework/partials/base/_mixins.scss */
+.pager:before {
+  content: "";
+  display: table;
+}
+/* line 91, ../sass/framework/partials/base/_mixins.scss */
+.pager:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* line 23, ../sass/framework/partials/objects/_pager.scss */
+/* line 24, ../sass/framework/partials/objects/_pager.scss */
 .pager li,
-.pager-item {
+.pager__item {
   display: inline;
 }
 
-/* line 28, ../sass/framework/partials/objects/_pager.scss */
-.pager-item a,
+/* line 29, ../sass/framework/partials/objects/_pager.scss */
+.pager__link,
 .pager a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1965,15 +1977,14 @@ input.btn {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  padding: 7px 12px 8px 12px;
+  line-height: 1;
+  padding: 0.5em 0.75em;
   text-decoration: none;
   border: 1px solid #ccc;
-  line-height: 1;
-  float: left;
 }
 
-/* line 37, ../sass/framework/partials/objects/_pager.scss */
-.next a {
+/* line 38, ../sass/framework/partials/objects/_pager.scss */
+.pager__item--next {
   float: right;
 }
 
@@ -2339,7 +2350,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1367412798');
+  background-image: url('../images/site-logo.png?1367415577');
   width: 200px;
   height: 80px;
 }
@@ -2372,14 +2383,14 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
-  background-image: url('../images/site-credit.png?1367412798');
+  background-image: url('../images/site-credit.png?1367415577');
   width: 62px;
   height: 20px;
 }
 
 /* line 19, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1367412798');
+  background-image: url('../images/site-credit--dark.png?1367415577');
 }
 
 /* ==========================================================================
