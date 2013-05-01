@@ -83,7 +83,7 @@ get_header(); ?>
 		</li>
 	<?php endwhile; ?>
 	</ul>
-	<?php tanlinell_content_nav( 'nav-below' ); ?>
+	<?php get_template_part('pagination'); ?>
 
 <?php else : ?>
 
