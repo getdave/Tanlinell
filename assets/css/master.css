@@ -112,7 +112,7 @@ blockquote, blockquote p {
 
 /* line 88, ../sass/framework/partials/base/_typo.scss */
 blockquote {
-  margin: 0 0 ms(1);
+  margin: 0 0 1.666em;
   padding: 9px 20px 0 19px;
   border-left: 1px solid #ddd;
 }
@@ -571,7 +571,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1367411619');
+    background-image: url('../images/select_arrow.png?1367412798');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2292,7 +2292,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1367411619');
+  background-image: url('../images/site-logo.png?1367412798');
   width: 200px;
   height: 80px;
 }
@@ -2325,14 +2325,14 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
-  background-image: url('../images/site-credit.png?1367411619');
+  background-image: url('../images/site-credit.png?1367412798');
   width: 62px;
   height: 20px;
 }
 
 /* line 19, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1367411619');
+  background-image: url('../images/site-credit--dark.png?1367412798');
 }
 
 /* ==========================================================================
