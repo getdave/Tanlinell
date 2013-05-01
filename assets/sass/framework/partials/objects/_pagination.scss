@@ -25,7 +25,8 @@
 
 	ul,
 	ol,
-	.pagination-list {
+	.pagination__list, .pagination-list //aliased
+	{
 		margin: 0;
 		padding: 0;
 		list-style: none;
@@ -34,19 +35,25 @@
 	}
 }
 
+.pagination__item,
 .pagination li {
 	@include inline-block;
 	margin-right: rsize(5px);
 	margin-bottom: rsize(10px);
 }
 
-.pagination a {
+.pagination__link,
+.pagination a,
+.pagination span {
 	display: block;
-	padding: 7px 12px 8px 12px;
+	padding: rsize(8px) rsize(12px);
 	text-decoration: none;
 	border: 1px solid #ccc;
 	line-height: 1;
+}
 
+.pagination__link,
+.pagination a {
 	&:hover,
 	&:focus {
 		background-color: $whiteDark;
@@ -57,17 +64,23 @@
 // DISABLED
 // ==========================================================================
 
-.pagination .disabled a {
-	color: #ccc;
+.pagination__item--disabled,
+.pagination .disabled {
+	a {
+		color: #ccc;
+	}
 }
 
 // CURRENT
 // ==========================================================================
 
-.pagination .current a {
-	background-color: #f1f1f1;
-	border-color: #a8a8a8;
-	color: #666;
+.pagination__item--current,
+.pagination .current {
+	a {
+		background-color: #f1f1f1;
+		border-color: #a8a8a8;
+		color: #666;
+	}
 }
 
 // RANGE
@@ -84,18 +97,22 @@
 // PREV NEXT
 // ==========================================================================
 
-.pagination .prev a,
-.pagination .next a {
-	border: 0;
-	padding-left: 10px;
-	padding-right: 10px;
+.pagination__prev,
+.pagination .prev, 
+.pagination__next,
+.pagination .next {
+	a {
+		border: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
 
 
 /* ## Centered */
 /* 
-	<div class="pagination pagination-centered">
+	<div class="pagination pagination--centered">
 		<ul>
 			<li><a href="#">Prev</a></li>
 			<li class="active">
@@ -109,7 +126,7 @@
 	</div>
 */
 
-.pagination-centered {
+.pagination--centered {
 	text-align: center;
 }
 
@@ -117,7 +134,7 @@
 /* ##Right */
 
 /* 
-	<div class="pagination pagination-right">
+	<div class="pagination pagination--right">
 		<ul>
 			<li><a href="#">Prev</a></li>
 			<li class="active">
@@ -131,7 +148,7 @@
 	</div>
 */
 
-.pagination-right {
+.pagination--right {
 	text-align: right;
 }
 

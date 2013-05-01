@@ -1840,10 +1840,10 @@ input.btn {
   margin-bottom: 1.5em;
 }
 
-/* line 28, ../sass/framework/partials/objects/_pagination.scss */
+/* line 29, ../sass/framework/partials/objects/_pagination.scss */
 .pagination ul,
 .pagination ol,
-.pagination .pagination-list {
+.pagination .pagination__list, .pagination .pagination-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1856,7 +1856,8 @@ input.btn {
   *display: inline;
 }
 
-/* line 37, ../sass/framework/partials/objects/_pagination.scss */
+/* line 39, ../sass/framework/partials/objects/_pagination.scss */
+.pagination__item,
 .pagination li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1868,32 +1869,39 @@ input.btn {
   margin-bottom: 0.625em;
 }
 
-/* line 43, ../sass/framework/partials/objects/_pagination.scss */
-.pagination a {
+/* line 47, ../sass/framework/partials/objects/_pagination.scss */
+.pagination__link,
+.pagination a,
+.pagination span {
   display: block;
-  padding: 7px 12px 8px 12px;
+  padding: 0.5em 0.75em;
   text-decoration: none;
   border: 1px solid #ccc;
   line-height: 1;
 }
-/* line 51, ../sass/framework/partials/objects/_pagination.scss */
-.pagination a:hover, .pagination a:focus {
+
+/* line 58, ../sass/framework/partials/objects/_pagination.scss */
+.pagination__link:hover, .pagination__link:focus,
+.pagination a:hover,
+.pagination a:focus {
   background-color: #f9f9f9;
 }
 
-/* line 60, ../sass/framework/partials/objects/_pagination.scss */
+/* line 69, ../sass/framework/partials/objects/_pagination.scss */
+.pagination__item--disabled a,
 .pagination .disabled a {
   color: #ccc;
 }
 
-/* line 67, ../sass/framework/partials/objects/_pagination.scss */
+/* line 79, ../sass/framework/partials/objects/_pagination.scss */
+.pagination__item--current a,
 .pagination .current a {
   background-color: #f1f1f1;
   border-color: #a8a8a8;
   color: #666;
 }
 
-/* line 78, ../sass/framework/partials/objects/_pagination.scss */
+/* line 91, ../sass/framework/partials/objects/_pagination.scss */
 .pagination .range a,
 .pagination .range a:hover,
 .pagination .range a:focus {
@@ -1902,8 +1910,10 @@ input.btn {
   color: #666;
 }
 
-/* line 88, ../sass/framework/partials/objects/_pagination.scss */
+/* line 104, ../sass/framework/partials/objects/_pagination.scss */
+.pagination__prev a,
 .pagination .prev a,
+.pagination__next a,
 .pagination .next a {
   border: 0;
   padding-left: 10px;
@@ -1912,7 +1922,7 @@ input.btn {
 
 /* ## Centered */
 /* 
-	<div class="pagination pagination-centered">
+	<div class="pagination pagination--centered">
 		<ul>
 			<li><a href="#">Prev</a></li>
 			<li class="active">
@@ -1925,14 +1935,14 @@ input.btn {
 		</ul>
 	</div>
 */
-/* line 112, ../sass/framework/partials/objects/_pagination.scss */
-.pagination-centered {
+/* line 129, ../sass/framework/partials/objects/_pagination.scss */
+.pagination--centered {
   text-align: center;
 }
 
 /* ##Right */
 /* 
-	<div class="pagination pagination-right">
+	<div class="pagination pagination--right">
 		<ul>
 			<li><a href="#">Prev</a></li>
 			<li class="active">
@@ -1945,8 +1955,8 @@ input.btn {
 		</ul>
 	</div>
 */
-/* line 134, ../sass/framework/partials/objects/_pagination.scss */
-.pagination-right {
+/* line 151, ../sass/framework/partials/objects/_pagination.scss */
+.pagination--right {
   text-align: right;
 }
 
