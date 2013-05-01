@@ -58,6 +58,12 @@ function my_theme_register_required_plugins() {
 		),
 
 		array(
+			'name' 		=> 'Widget Logic',
+			'slug' 		=> 'widget-logic',
+			'required' 	=> false,
+		),
+
+		array(
 			'name' 		=> 'Advanced Custom Fields',
 			'slug' 		=> 'advanced-custom-fields',
 			'required' 	=> false,
