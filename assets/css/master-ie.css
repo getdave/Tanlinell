@@ -723,11 +723,16 @@ optgroup::-moz-focus-inner {
 }
 
 /* line 52, ../sass/framework/partials/base/_grid.scss */
+.grid-ib {
+  letter-spacing: -0.25em;
+}
+
+/* line 56, ../sass/framework/partials/base/_grid.scss */
 .grid-divide {
   margin-bottom: 1.666em;
 }
 
-/* line 67, ../sass/framework/partials/base/_grid.scss */
+/* line 71, ../sass/framework/partials/base/_grid.scss */
 .g1-12, .gonecolumns, .g1-6, .gtwocolumns, .g1-4, .gthreecolumns, .g1-3, .gfourcolumns, .gfivecolumns, .g1-2, .gsixcolumns, .gsevencolumns, .g2-3, .geightcolumns, .g3-4, .gninecolumns, .gtencolumns, .gelevencolumns, .g1-1, .gtwelvecolumns,
 .gc,
 .main,
@@ -740,26 +745,40 @@ optgroup::-moz-focus-inner {
   box-sizing: border-box;
   *behavior: url(boxsizing.htc);
 }
-/* line 74, ../sass/framework/partials/base/_grid.scss */
+/* line 78, ../sass/framework/partials/base/_grid.scss */
 .large-gutter .g1-12, .large-gutter .gonecolumns, .large-gutter .g1-6, .large-gutter .gtwocolumns, .large-gutter .g1-4, .large-gutter .gthreecolumns, .large-gutter .g1-3, .large-gutter .gfourcolumns, .large-gutter .gfivecolumns, .large-gutter .g1-2, .large-gutter .gsixcolumns, .large-gutter .gsevencolumns, .large-gutter .g2-3, .large-gutter .geightcolumns, .large-gutter .g3-4, .large-gutter .gninecolumns, .large-gutter .gtencolumns, .large-gutter .gelevencolumns, .large-gutter .g1-1, .large-gutter .gtwelvecolumns, .large-gutter
 .gc, .large-gutter
 .main,
 .large-gutter .sub {
   padding-left: 6em;
 }
-/* line 78, ../sass/framework/partials/base/_grid.scss */
+/* line 82, ../sass/framework/partials/base/_grid.scss */
 .half-gutter .g1-12, .half-gutter .gonecolumns, .half-gutter .g1-6, .half-gutter .gtwocolumns, .half-gutter .g1-4, .half-gutter .gthreecolumns, .half-gutter .g1-3, .half-gutter .gfourcolumns, .half-gutter .gfivecolumns, .half-gutter .g1-2, .half-gutter .gsixcolumns, .half-gutter .gsevencolumns, .half-gutter .g2-3, .half-gutter .geightcolumns, .half-gutter .g3-4, .half-gutter .gninecolumns, .half-gutter .gtencolumns, .half-gutter .gelevencolumns, .half-gutter .g1-1, .half-gutter .gtwelvecolumns, .half-gutter
 .gc, .half-gutter
 .main,
 .half-gutter .sub {
   padding-left: 1.5em;
 }
-/* line 82, ../sass/framework/partials/base/_grid.scss */
+/* line 86, ../sass/framework/partials/base/_grid.scss */
 .no-gutter .g1-12, .no-gutter .gonecolumns, .no-gutter .g1-6, .no-gutter .gtwocolumns, .no-gutter .g1-4, .no-gutter .gthreecolumns, .no-gutter .g1-3, .no-gutter .gfourcolumns, .no-gutter .gfivecolumns, .no-gutter .g1-2, .no-gutter .gsixcolumns, .no-gutter .gsevencolumns, .no-gutter .g2-3, .no-gutter .geightcolumns, .no-gutter .g3-4, .no-gutter .gninecolumns, .no-gutter .gtencolumns, .no-gutter .gelevencolumns, .no-gutter .g1-1, .no-gutter .gtwelvecolumns, .no-gutter
 .gc, .no-gutter
 .main,
 .no-gutter .sub {
   padding-left: 0;
+}
+/* line 90, ../sass/framework/partials/base/_grid.scss */
+.grid-ib .g1-12, .grid-ib .gonecolumns, .grid-ib .g1-6, .grid-ib .gtwocolumns, .grid-ib .g1-4, .grid-ib .gthreecolumns, .grid-ib .g1-3, .grid-ib .gfourcolumns, .grid-ib .gfivecolumns, .grid-ib .g1-2, .grid-ib .gsixcolumns, .grid-ib .gsevencolumns, .grid-ib .g2-3, .grid-ib .geightcolumns, .grid-ib .g3-4, .grid-ib .gninecolumns, .grid-ib .gtencolumns, .grid-ib .gelevencolumns, .grid-ib .g1-1, .grid-ib .gtwelvecolumns, .grid-ib
+.gc, .grid-ib
+.main,
+.grid-ib .sub {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  float: none;
+  letter-spacing: normal;
 }
 
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
@@ -1002,7 +1021,7 @@ optgroup::-moz-focus-inner {
   width: 100%;
 }
 
-/* line 117, ../sass/framework/partials/base/_grid.scss */
+/* line 127, ../sass/framework/partials/base/_grid.scss */
 .no-js .g1-12, .no-js .gonecolumns, .no-js .g1-6, .no-js .gtwocolumns, .no-js .g1-4, .no-js .gthreecolumns, .no-js .g1-3, .no-js .gfourcolumns, .no-js .gfivecolumns, .no-js .g1-2, .no-js .gsixcolumns, .no-js .gsevencolumns, .no-js .g2-3, .no-js .geightcolumns, .no-js .g3-4, .no-js .gninecolumns, .no-js .gtencolumns, .no-js .gelevencolumns, .no-js .g1-1, .no-js .gtwelvecolumns,
 .no-js .gc,
 .no-js .main,
@@ -1018,7 +1037,7 @@ optgroup::-moz-focus-inner {
 		I'm a full width column. You probably won't need to use me that often...
 	</div>
 */
-/* line 146, ../sass/framework/partials/base/_grid.scss */
+/* line 156, ../sass/framework/partials/base/_grid.scss */
 .full-col {
   width: auto;
   float: none;
@@ -1030,7 +1049,7 @@ optgroup::-moz-focus-inner {
 		I'm a centered column. Useful on the odd occassion you need to center a grid unit
 	</div>
 */
-/* line 159, ../sass/framework/partials/base/_grid.scss */
+/* line 169, ../sass/framework/partials/base/_grid.scss */
 .centered-col {
   margin: 0 auto;
   float: none;
