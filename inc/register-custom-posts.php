@@ -73,6 +73,6 @@ function tanlinell_homepage_slides_photo_box() {
 add_action('do_meta_boxes', 'tanlinell_homepage_slides_photo_box');
 
 
-
+require( get_template_directory() . '/metaboxes/simple-spec.php');
 
 

@@ -127,9 +127,14 @@ function tanlinell_setup() {
 	require( get_template_directory() . '/inc/register-widget-areas.php' );
 
 
-
-
-
+	/**
+	 * WPAlchemy
+	 * call initial setup and make class available
+	 * NOTE: before register-custom-posts
+	 */	
+	require( get_template_directory() . '/metaboxes/setup.php');
+	
+	
 	/**
 	 * 	Register 'Custom Posts Types' for the theme
 	 */
@@ -157,13 +162,11 @@ function tanlinell_setup() {
 	require( get_template_directory() . '/inc/burfield-customisations.php' );
 	
 	
-
-	
-	
-	
 }
 endif; // tanlinell_setup
 add_action( 'after_setup_theme', 'tanlinell_setup' );
+
+
 
 
 
