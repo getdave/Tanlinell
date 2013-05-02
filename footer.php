@@ -10,7 +10,7 @@
 ?>
 
 	</div><!-- #main .site-main -->
-	<?php //get_template_part( 'templates/partials/vcard' ); ?>
+	<?php get_template_part( 'templates/partials/vcard' ); ?>
 	<?php //get_template_part( 'templates/partials/latest-posts' ); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">

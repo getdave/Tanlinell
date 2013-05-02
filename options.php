@@ -128,9 +128,17 @@ function optionsframework_options() {
 		'type' => 'text');
 
 	$options[] = array(
-		'name' => __('Street Address', 'options_framework_theme'),
+		'name' => __('Street Address 1', 'options_framework_theme'),
 		'desc' => __('1st line of address', 'options_framework_theme'),
-		'id' => 'contact_address_street_address',
+		'id' => 'contact_address_street_address_1',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Street Address 2', 'options_framework_theme'),
+		'desc' => __('2nd line of address', 'options_framework_theme'),
+		'id' => 'contact_address_street_address_2',
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');

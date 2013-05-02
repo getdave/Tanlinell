@@ -2,7 +2,14 @@
 	<div itemprop="name"><?php echo bloginfo( 'name' ); ?></div>
 	<div class="vh" itemprop="description"><?php echo bloginfo( 'description' ); ?></div>
 	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" data-lat="<?php echo of_get_option( 'contact_address_latitude' );?>" data-lng="<?php echo of_get_option( 'contact_address_longitude' );?>">
-		<span itemprop="streetAddress"><?php echo of_get_option( 'contact_address_street_address' ); ?></span>
+		<span class="address__row" itemprop="streetAddress">
+			<span class="address__subrow">
+				<?php echo of_get_option( 'contact_address_street_address_1' ); ?>
+			</span>
+			<span class="address__subrow">
+				<?php echo of_get_option( 'contact_address_street_address_2' ); ?>
+			</span>
+		</span>
 		<span itemprop="addressLocality"><?php echo of_get_option( 'contact_address_locality' ); ?></span>
 		<span itemprop="addressRegion"><?php echo of_get_option( 'contact_address_region' ); ?></span>
 		<span itemprop="postalCode"><?php echo of_get_option( 'contact_address_post_code' ); ?></span>
