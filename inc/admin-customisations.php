@@ -154,3 +154,5 @@ function tanlinell_remove_contactmethods( $contactmethods ) {
 }
 
 add_filter( 'user_contactmethods' , 'tanlinell_remove_contactmethods');
+
+

@@ -142,6 +142,15 @@ function tanlinell_setup() {
 
 	
 	/**
+	 * 	Register 'Custom Posts Types' for the theme
+	 * NOTE: after register-custom-posts
+	 * so we can get a list of all registered post types
+	 */
+	require( get_template_directory() . '/inc/global-custom-meta.php' );
+	
+	
+	
+	/**
 	 * Enqueue Scripts & CSS Styles
 	 * adds javascripts and stylesheets the right way via WP enqueue
 	 */
