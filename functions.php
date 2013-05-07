@@ -132,7 +132,7 @@ function tanlinell_setup() {
 	 * call initial setup and make class available
 	 * NOTE: before register-custom-posts
 	 */	
-	require( get_template_directory() . '/metaboxes/setup.php');
+	require( get_template_directory() . '/libs/wpalchemy/setup.php');
 	
 	
 	/**
