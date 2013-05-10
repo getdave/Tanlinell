@@ -1,16 +1,16 @@
 <?php
 	//setup the custom meta object
-	global $custom_metabox;
+	global $global_metabox;
 	
 	// get the meta data for the current post
-	$custom_metabox->the_meta();
+	$global_metabox->the_meta();
 	
 	//link meta data
-	$custom_metabox->the_field('page_title');
-	$page_title = $custom_metabox->get_the_value();
+	$global_metabox->the_field('page_title');
+	$page_title = $global_metabox->get_the_value();
 	
-	$custom_metabox->the_field('page_subtitle');
-	$page_subtitle = $custom_metabox->get_the_value();
+	$global_metabox->the_field('page_subtitle');
+	$page_subtitle = $global_metabox->get_the_value();
 ?>
 <header class="title-block entry-header">
 	<h1 class="title-block__heading entry-title">
