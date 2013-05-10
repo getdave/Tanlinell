@@ -1246,13 +1246,22 @@ https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_
   text-align: right;
   list-style: none;
   margin-left: 0;
-  padding-left: 0;
 }
-/* line 40, ../sass/framework/partials/objects/_split.scss */
-.split .split-title {
+/* line 39, ../sass/framework/partials/objects/_split.scss */
+.split .split__title {
   text-align: left;
   float: left;
   clear: left;
+  padding-right: 1.666em;
+}
+/* line 45, ../sass/framework/partials/objects/_split.scss */
+.split .split__content {
+  overflow: hidden;
+}
+
+/* line 49, ../sass/framework/partials/objects/_split.scss */
+.split--alt {
+  text-align: left;
 }
 
 /* #Hero Unit */

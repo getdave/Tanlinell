@@ -33,13 +33,19 @@ https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_
 
 .split {
     text-align: right;
-    list-style:none;
-    margin-left:0;
-    padding-left: 0;
+    list-style: none;
+    margin-left: 0;
 
-    .split-title {
-        text-align: left;
-        float: left;
-        clear: left;
-    }
+    .split__title {
+	    text-align: left;
+	    float: left;
+	    clear: left;
+	    padding-right: $baseLineHeight;
+	}
+	.split__content {
+	    overflow: hidden;
+	}
+}
+.split--alt {
+    text-align: left;
 }
