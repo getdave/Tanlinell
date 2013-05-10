@@ -17,3 +17,10 @@
  */
 require( get_template_directory() . '/modules/homepage-slider/register-cpt.php' );
 
+
+/**
+ * Our Team
+ *
+ * Custom post for our team, navigation item.
+ */
+require( get_template_directory() . '/modules/our-team/register-cpt.php' );

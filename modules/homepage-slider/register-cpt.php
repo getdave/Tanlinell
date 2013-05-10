@@ -44,6 +44,7 @@ function tanlinell_register_cpt_homepage_slider() {
 
 	register_post_type( 'homepage_slides', $args );
 	
+	flush_rewrite_rules();
 }
 
 
