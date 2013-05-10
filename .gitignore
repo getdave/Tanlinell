@@ -1,2 +1,6 @@
 node_modules/*
 codekit-config.json
+
+error_log
+cache/
+.sass-cache/
