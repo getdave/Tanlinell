@@ -25,6 +25,9 @@
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
 
+<!-- default location for tanlinell NOTE: above wp_footer -->
+<!-- W3TC-include-js-head -->
+
 <?php wp_footer(); ?>
 
 </body>
