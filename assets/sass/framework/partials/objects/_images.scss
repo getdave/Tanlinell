@@ -41,3 +41,13 @@
     @extend %img-base !optional;
     @include border-radius(500px);
 }
+
+
+/* ##Image Thumb */
+/*
+    <img src="http://www.placehold.it/200x200" class="img-thumb" />
+*/
+
+.img-thumb {
+    margin-bottom: $baseLineHeight/2;
+}
