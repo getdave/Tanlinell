@@ -17,11 +17,11 @@
 		<input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
 		
 		<?php $mb->the_field('twitter'); ?>
-		<span>Twitter Profile</span>
+		<span>Twitter Profile (include http://www)</span>
 		<input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
 		
 		<?php $mb->the_field('linkedin'); ?>
-		<span>Linkedin Profile</span>
+		<span>Linkedin Profile (include http://www)</span>
 		<input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/>
 		
 	</p>
