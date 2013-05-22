@@ -36,7 +36,7 @@ get_header();
             <ul class="grid-wrap">
 				
 				<?php while ( have_posts() ) : the_post(); ?>
-					<li class="gc d1-3">
+					<li class="gc d1-2">
 						<?php
 							//setup the custom meta object
 							global $our_team_metabox;
@@ -61,24 +61,36 @@ get_header();
 							$linkedin = $our_team_metabox->get_the_value();
 							
 							$featured_image       =  tanlinell_get_post_thumb( $post->ID );
-							$post_thumbnail_sized =  trailingslashit(get_stylesheet_directory_uri()) . 'timthumb.php?src='.$featured_image[0] . '&q=80&w120&zc=1';
-												
-							$departments_roles = wp_get_post_terms($post->ID, 'departments_roles', array("fields" => "names"));
-						
+							$post_thumbnail_sized =  trailingslashit(get_stylesheet_directory_uri()) . 'timthumb.php?src='.$featured_image[0] . '&q=80&w120&h=120&zc=1';
+							
+							//get the alt text
+							$featured_image_alt = trim(strip_tags( get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ));
+							if(empty($featured_image_alt))
+								$featured_image_alt = 'Image for '.ucwords($job_title).', '.ucwords($name); //defaults if none found
+							
+											
+							$departments_roles = wp_get_post_terms($post->ID, 'departments_roles', array("fields" => "slugs"));
+							
 						?>
 					
 						<div class="grid-wrap gc">
 							<div class="img-polaroid gc mbl d1-4">
 								<a href="<?php echo get_permalink() ?>">
-									<img src="<?php echo $post_thumbnail_sized; ?>" alt="" style="">
+									<img src="<?php echo $post_thumbnail_sized; ?>" alt="<?php echo $featured_image_alt; ?>" style="">
 								</a>
 							</div>
 							<div class="gc d3-4">
 								
 								<h3><a href="<?php echo get_permalink() ?>"><?php echo ucwords($name); ?></a></h3>
 								<h4><?php echo ucwords($job_title); ?></h4>
-								<h4><?php echo implode(', ',$departments_roles);?></h4>
-								
+								<h5>
+								<?php
+								foreach($departments_roles AS $slug) :
+								$term = get_term_by('slug', $slug, 'departments_roles')
+								?>
+								<a href="<?php echo get_term_link($term->slug,'departments_roles');?>"><?php echo $term->name; ?></a>								
+								<?php endforeach; ?>
+								</h5>
 						   </div>
 						</div>
 					</li>

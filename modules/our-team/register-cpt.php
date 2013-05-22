@@ -115,7 +115,7 @@ function build_taxonomies() {
 		    'hierarchical' => true,  
 		    'label' => 'Departments/Roles',  
 		    'query_var' => true,  
-		    'rewrite' => true,
+		    'rewrite' => array('slug'=>'departments','with_front'=>true),
 		    'show_in_nav_menus' => false,
 		)  
 	);
@@ -174,6 +174,8 @@ add_filter( 'init', 'tanlinell_our_team_create_page' );
 function tanlinell_our_team_set_template( $template ) {
 	if( is_singular('our-team') ) {
 		$template = get_stylesheet_directory() . '/modules/our-team/team-members-single-template.php';
+	} elseif ( has_term('','departments_roles') ) {
+		$template = get_stylesheet_directory() . '/modules/our-team/departments.php';
 	} elseif ( is_page('meet-the-team') ) {
 		$template = get_stylesheet_directory() . '/modules/our-team/team-members-template.php';
 	}
