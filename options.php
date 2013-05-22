@@ -108,7 +108,7 @@ function optionsframework_options() {
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');
-
+		
 	// Contact Fax
 	$options[] = array(
 		'name' => __('Contact Fax', 'options_framework_theme'),
@@ -117,7 +117,16 @@ function optionsframework_options() {
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');
-
+	
+	// Allow Contact Numbers to display in vcard
+	$options[] = array(
+		'name' => __('Display Contact Numbers', 'options_framework_theme'),
+		'desc' => __('Display the contact numbers in the vcard? This includes \'Contact Telephone\' &amp; \'Contact Fax\'', 'options_framework_theme'),
+		'id' => 'display_numbers',
+		'std' => '',
+		'type' => 'checkbox');
+		
+	
 	// Contact Email
 	$options[] = array(
 		'name' => __('Contact Email', 'options_framework_theme'),
@@ -171,6 +180,22 @@ function optionsframework_options() {
 		'name' => __('Country', 'options_framework_theme'),
 		'desc' => __('Enter your Country (eg: England)', 'options_framework_theme'),
 		'id' => 'contact_address_country',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+	
+	$options[] = array(
+		'name' => __('Address Latitude', 'options_framework_theme'),
+		'desc' => __('Enter the Latitude', 'options_framework_theme'),
+		'id' => 'contact_address_latitude',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Address Longitude', 'options_framework_theme'),
+		'desc' => __('Enter the Longitude', 'options_framework_theme'),
+		'id' => 'contact_address_longitude',
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');
