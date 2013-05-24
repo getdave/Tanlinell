@@ -105,6 +105,23 @@ function my_theme_register_required_plugins() {
 			'required' 	=> false,
 		),
 
+		array(
+			'name' 		=> 'WP Smush.it',
+			'slug' 		=> 'wp-smushit',
+			'required' 	=> true,
+		),
+
+		array(
+			'name' 		=> 'WPThumb',
+			'slug' 		=> 'wp-thumb',
+			'required' 	=> true,
+		),
+
+
+		
+
+		
+
 		
 
 
