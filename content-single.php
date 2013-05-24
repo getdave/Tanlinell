@@ -9,6 +9,14 @@
 	<?php get_template_part( 'templates/partials/pagetitle', 'post' ); ?>
 
 	<div class="entry-content">
+		<?php
+			$featured_image       =  tanlinell_get_post_thumb( $post->ID );
+			$post_thumbnail_sized =  trailingslashit(get_stylesheet_directory_uri()) . 'timthumb.php?src='.$featured_image[0] . '&q=80&h=140&zc=1';
+		?>
+		<?php if($featured_image) : ?>
+		<img src="<?php echo $post_thumbnail_sized; ?>" class="img-thumb" />
+		<?php endif; ?>
+	
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tanlinell' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->

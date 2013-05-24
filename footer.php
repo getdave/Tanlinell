@@ -10,7 +10,7 @@
 ?>
 
 	</div><!-- #main .site-main -->
-	<?php //get_template_part( 'templates/partials/vcard' ); ?>
+	<?php get_template_part( 'templates/partials/vcard' ); ?>
 	<?php //get_template_part( 'templates/partials/latest-posts' ); ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
@@ -24,6 +24,9 @@
 		</div>
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
+
+<!-- default location for tanlinell NOTE: above wp_footer -->
+<!-- W3TC-include-js-head -->
 
 <?php wp_footer(); ?>
 

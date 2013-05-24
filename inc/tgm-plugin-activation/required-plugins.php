@@ -46,10 +46,28 @@ function my_theme_register_required_plugins() {
 		),
 
 		array(
-			'name' 		=> 'WordPress SEO by Yoast',
-			'slug' 		=> 'wordpress-seo',
-			'required' 	=> false,
-		),
+            'name'      => 'WordPress SEO by Yoast',
+            'slug'      => 'wordpress-seo',
+            'required'  => true,
+        ),
+
+        array(
+            'name'      => 'Google Analytics for WordPress',
+            'slug'      => 'google-analytics-for-wordpress',
+            'required'  => true,
+        ),
+
+        array(
+            'name'      => 'Google XML Sitemaps',
+            'slug'      => 'google-sitemap-generator',
+            'required'  => true,
+        ),
+
+        array(
+            'name'      => 'Advanced Sitemap Generator',
+            'slug'      => 'advanced-sitemap-generator',
+            'required'  => true,
+        ),
 
 		array(
 			'name' 		=> 'WP Example Content',

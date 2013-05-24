@@ -11,15 +11,25 @@
 
 
 /**
- * Remove Default WP Menu Items
- */
+ * Remove The Theme Editor
+ */ 
+function remove_editor() {
+  $page = remove_submenu_page( 'themes.php', 'theme-editor.php' );
+}
+add_action( 'admin_init', 'remove_editor' );
 
+
+
+
+/**
+ * Remove Default WP Menu Items
+ */ 
 function remove_menu_items() {
 	global $menu;
 
 	// List those items you'd like to remove here
 	$restricted = array(
-		__('Links'), 
+		__('Links'),
 		//__('Comments')
 	);
 	end ($menu);
@@ -144,3 +154,5 @@ function tanlinell_remove_contactmethods( $contactmethods ) {
 }
 
 add_filter( 'user_contactmethods' , 'tanlinell_remove_contactmethods');
+
+

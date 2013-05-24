@@ -20,3 +20,16 @@ Note the use of the --recursive flag. This tells git to fetch the files for the 
 ## Tips & Tricks
 
 * For nice Custom Post Type icons check out [randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/](http://randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/)
+
+## Installing grunt.js
+
+First install grunt globally as admin.
+* Open Terminal
+* run: ```sudo npm install -g grunt```
+* navigate to project directory in terminal e.g. ```cd Sites/Tanlinell/wp-content/themes/tanlinell```
+* install dependencies ```npm install```
+* run ```grunt```
+your good to go!
+
+Further reading and details about starting new projects can be found at:
+http://gruntjs.com/getting-started
