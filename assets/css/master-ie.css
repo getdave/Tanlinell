@@ -114,7 +114,7 @@ blockquote, blockquote p {
 blockquote {
   margin: 0 0 1.666em;
   padding: 9px 20px 0 19px;
-  border-left: 1px solid #dddddd;
+  border-left: 1px solid #ddd;
 }
 
 /* line 89, ../sass/framework/partials/base/_typo.scss */
@@ -177,7 +177,7 @@ h1, .h1, .giga, .mega, .kilo {
   font-size: 2.25rem;
   line-height: 1.01811;
   color: #222222;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 .5em 0;
   text-rendering: optimizelegibility;
 }
 
@@ -190,7 +190,7 @@ h2, .h2 {
   font-size: 1.875rem;
   line-height: 1.05513;
   color: #222222;
-  margin: 0 0 0.35em 0;
+  margin: 0 0 .35em 0;
 }
 
 /* 
@@ -202,7 +202,7 @@ h3, .h3 {
   font-size: 1.5rem;
   line-height: 1.04125;
   color: #333333;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 .5em 0;
 }
 
 /* 
@@ -214,7 +214,7 @@ h4, .h4 {
   font-size: 1.25rem;
   line-height: 1.0829;
   color: #333333;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 .5em 0;
 }
 
 /* 
@@ -225,7 +225,7 @@ h5, .h5 {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.04125;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 .5em 0;
 }
 
 /* 
@@ -236,7 +236,7 @@ h6, .h6 {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.071;
-  margin: 0 0 0.5em 0;
+  margin: 0 0 .5em 0;
 }
 
 /* ###Misc Headings */
@@ -379,7 +379,7 @@ button:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus,
 input[type="button"]:focus {
-  outline: thin dotted #333333;
+  outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
   -webkit-box-shadow: none;
@@ -1223,7 +1223,7 @@ optgroup::-moz-focus-inner {
   padding: 15px 30px;
   margin: 0;
   border-top: 0;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #ccc;
 }
 /* line 70, ../sass/framework/partials/objects/_island.scss */
 .headed-island .island-content {
@@ -1266,20 +1266,21 @@ https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_
   text-align: right;
   list-style: none;
   margin-left: 0;
+  padding-left: 0;
 }
-/* line 39, ../sass/framework/partials/objects/_split.scss */
+/* line 40, ../sass/framework/partials/objects/_split.scss */
 .split .split__title {
   text-align: left;
   float: left;
   clear: left;
   padding-right: 1.666em;
 }
-/* line 45, ../sass/framework/partials/objects/_split.scss */
+/* line 46, ../sass/framework/partials/objects/_split.scss */
 .split .split__content {
   overflow: hidden;
 }
 
-/* line 49, ../sass/framework/partials/objects/_split.scss */
+/* line 50, ../sass/framework/partials/objects/_split.scss */
 .split--alt {
   text-align: left;
 }
@@ -1636,7 +1637,7 @@ input.btn {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 38, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .btn-group:after {
   content: "";
   display: table;
@@ -1698,7 +1699,7 @@ input.btn {
 .dropdown .caret,
 .dropdown-toggle .caret {
   display: inline-block;
-  color: white !important;
+  color: #fff !important;
   width: 0;
   height: 0;
   text-indent: -99999px;
@@ -1706,7 +1707,7 @@ input.btn {
   vertical-align: top;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 4px solid white;
+  border-top: 4px solid #fff;
   background: 0;
   margin-left: 7px;
   margin-top: 0.4375em;
@@ -1885,7 +1886,7 @@ input.btn {
   display: block;
   padding: 0.5em 0.75em;
   text-decoration: none;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   line-height: 1;
 }
 
@@ -2019,7 +2020,7 @@ input.btn {
   line-height: 1;
   padding: 0.5em 0.75em;
   text-decoration: none;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
 }
 
 /* line 38, ../sass/framework/partials/objects/_pager.scss */
@@ -2131,7 +2132,7 @@ input.btn {
 .img-polaroid {
   padding: 4px;
   background-color: #fff;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -2349,7 +2350,7 @@ html[xmlns] .slides {
 /* line 12, ../sass/framework/partials/objects/_graybox.scss */
 .graybox {
   background-color: rgba(0, 0, 0, 0.15);
-  background-color: #e9e9e9\9;
+  background-color: #e9e9e9 \9;
   color: #000;
 }
 /* line 17, ../sass/framework/partials/objects/_graybox.scss */
@@ -2442,7 +2443,7 @@ html[xmlns] .slides {
 .sub-menu li a {
   white-space: nowrap;
   /* forces drop down to stretch to accommodate length of text (and not wrap) */
-  padding: 0.46154em 20px;
+  padding: 0.4615384615384615em 20px;
   text-align: left;
 }
 
@@ -2474,9 +2475,9 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1367227794');
-  width: 200px;
-  height: 80px;
+  background-image: url('../images/site-logo.png?1369410288');
+  width: 297px;
+  height: 88px;
 }
 /* line 27, ../sass/framework/partials/common/_site-logo.scss */
 .site-logo a:hover, .site-logo a:focus {
@@ -2507,14 +2508,24 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
-  background-image: url('../images/site-credit.png?1367227794');
+  background-size: contain;
+  width: 66px;
+  height: 30px;
+}
+/* line 18, ../sass/framework/partials/common/_site-credit.scss */
+.no-svg .site-credit {
+  background-image: url('../images/site-credit.png?1369410288');
   width: 62px;
   height: 20px;
 }
 
-/* line 19, ../sass/framework/partials/common/_site-credit.scss */
+/* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1367227794');
+  background-image: url('../images/site-credit--dark.svg?1369410288');
+}
+/* line 28, ../sass/framework/partials/common/_site-credit.scss */
+.no-svg .site-credit--dark {
+  background-image: url('../images/site-credit--dark.png?1369410288');
 }
 
 /* ==========================================================================

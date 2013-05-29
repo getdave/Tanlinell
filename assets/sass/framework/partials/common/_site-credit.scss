@@ -7,15 +7,25 @@
 */
 
 .site-credit {
-	@extend .ir;
-	@include inline-block;
-	vertical-align: middle;
-	background-position: 50% 50%;
-	background-image: image-url($site-credit);
-	width: image-width($site-credit);
-	height: image-height($site-credit);
+    @extend .ir;
+    @include inline-block;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-size: contain;
+    width: 66px;
+    height: 30px;
+
+    .no-svg & {
+        background-image: image-url('site-credit.png');
+        width: 62px;
+        height: 20px;
+    }
 }
 
 .site-credit--dark {
-	background-image: image-url('site-credit--dark.png');
+    background-image: image-url('site-credit--dark.svg');
+
+    .no-svg & {
+        background-image: image-url('site-credit--dark.png');
+    }
 }
