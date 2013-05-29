@@ -58,12 +58,22 @@ get_header(); ?>
 		
 			<div class="grid-wrap gc">
 				<div class="img-polaroid gc mbl d1-3">
-					<img src="<?php echo $post_thumbnail_sized; ?>" alt="" style="">
+					<a href="<?php echo get_permalink() ?>">
+						<img src="<?php echo $post_thumbnail_sized; ?>" alt="" style="">
+					</a>
 				</div>
 				<div class="gc d2-3">
 					
-					<h3><?php echo ucwords($name); ?></h3>
-					<h4><?php echo $job_title; ?> - <?php echo implode(', ',$departments_roles);?></h4>
+					<h3><a href="<?php echo get_permalink() ?>"><?php echo ucwords($name); ?></a></h3>
+					<h4><?php echo ucwords($job_title); ?></h4>
+					<h5>
+					<?php
+					foreach($departments_roles AS $slug) :
+						$term = get_term_by('slug', $slug, 'departments_roles')
+					?>
+						<a href="<?php echo get_term_link($term->slug,'departments_roles');?>"><?php echo $term->name; ?></a>								
+					<?php endforeach; ?>
+					</h5>
 					<div class="grid-wrap">
 						<h5 class="gc d1-3"><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></h5>
 						<h5 class="gc d1-3"><a href="<?php echo $twitter; ?>" target="_blank"><?php echo $twitter; ?></a></h5>

@@ -172,12 +172,15 @@ add_filter( 'init', 'tanlinell_our_team_create_page' );
  * Assign templates for our cpt
  */
 function tanlinell_our_team_set_template( $template ) {
+	
+	global $post;
+	
 	if( is_singular('our-team') ) {
-		$template = get_stylesheet_directory() . '/modules/our-team/team-members-single-template.php';
+		$template = get_stylesheet_directory() . '/modules/our-team/ot_single.php';
 	} elseif ( has_term('','departments_roles') ) {
-		$template = get_stylesheet_directory() . '/modules/our-team/departments.php';
+		$template = get_stylesheet_directory() . '/modules/our-team/ot_category.php';
 	} elseif ( is_page('meet-the-team') ) {
-		$template = get_stylesheet_directory() . '/modules/our-team/team-members-template.php';
+		$template = get_stylesheet_directory() . '/modules/our-team/ot_list.php';
 	}
 
 	return $template;		

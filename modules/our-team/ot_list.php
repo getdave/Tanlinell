@@ -22,7 +22,7 @@ get_header();
 		</section>
 		
 	    <section>
-			<h2>Team Members</h2>
+			
 			<?php 
 			query_posts(array(
 							'post_type' => 'our-team',
