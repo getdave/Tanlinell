@@ -16,7 +16,7 @@ module.exports = function(grunt) {
             livereload: {
           port: 35729 // Default livereload listening port.
         },
-        
+
         connect: {
           livereload: {
             options: {
@@ -65,8 +65,15 @@ module.exports = function(grunt) {
             all: [
                 'Gruntfile.js',
                 'assets/js/source/**/*.js'
-            ]
-        },
+            ],
+			"globals": {
+				"Backbone": true,
+				"_": true,
+				"jQuery": true,
+				"Modernizr": true,
+				"WebFontConfig": true
+			}
+		},
 
         // uglify to concat, minify, and make source maps
         uglify: {
@@ -137,7 +144,7 @@ module.exports = function(grunt) {
     // register task
     grunt.registerTask('default', [
         'livereload-start', // must be the first task else we'll get an error
-        'connect', 
+        'connect',
         'watch'
     ]);
 
