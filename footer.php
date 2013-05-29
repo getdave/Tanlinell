@@ -11,7 +11,19 @@
 
 	</div><!-- #main .site-main -->
 	<?php get_template_part( 'templates/partials/vcard' ); ?>
-	<?php //get_template_part( 'templates/partials/latest-posts' ); ?>
+	
+	<aside class="sub-footer">
+		
+		<?php //get_template_part( 'templates/partials/latest-posts' ); ?>
+
+		<div class="site-social-links container-band">
+			<div class="container">
+				<h5 class="site-social-links__heading">Follow Us</h5>
+				<?php get_template_part( 'templates/partials/social-links' ); ?>
+			</div>
+		</div>
+	</aside>
+	
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			<?php get_template_part( 'menu', 'subsidiary' ); ?>	
