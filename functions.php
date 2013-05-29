@@ -34,7 +34,12 @@ require_once( trailingslashit( get_template_directory() ) . 'inc/tgm-plugin-acti
 if ( ! function_exists( 'tanlinell_setup' ) ):
 
 function tanlinell_setup() {
-
+	
+	/**
+	 * Modify the head
+	 */
+	require( get_template_directory() . '/inc/modify-wp-header.php' );
+	
 
 	/**
 	 * TGM Required Plugins Script
