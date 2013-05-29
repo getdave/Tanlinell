@@ -11,6 +11,14 @@
 
 
 /**
+ * Remove The Ability to Edit Plugins via Edit screen
+ */
+define( 'DISALLOW_FILE_EDIT', true );
+
+
+
+
+/**
  * Remove The Theme Editor
  */ 
 function remove_editor() {
