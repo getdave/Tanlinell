@@ -2475,9 +2475,9 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1369410288');
-  width: 297px;
-  height: 88px;
+  background-image: url('../images/site-logo.png?1369839119');
+  width: 200px;
+  height: 80px;
 }
 /* line 27, ../sass/framework/partials/common/_site-logo.scss */
 .site-logo a:hover, .site-logo a:focus {
@@ -2554,13 +2554,18 @@ html[xmlns] .slides {
   float: left;
 }
 
-/* line 48, ../sass/framework/partials/common/_columns.scss */
+/* line 47, ../sass/framework/partials/common/_columns.scss */
+.layout-1c .column-container {
+  margin-left: 0;
+}
+/* line 52, ../sass/framework/partials/common/_columns.scss */
 .layout-1c .main,
 .layout-1c .sub {
   float: none;
   width: auto;
   clear: both;
   overflow: visible;
+  padding-left: 0;
 }
 
 /* ==========================================================================
