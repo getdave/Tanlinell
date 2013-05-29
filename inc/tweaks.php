@@ -84,3 +84,13 @@ function tanlinell_quote_post_type_blockquote( $content ) {
 add_filter( 'the_content', 'tanlinell_quote_post_type_blockquote' );
 
 
+
+
+/**
+ * Move GFORM Scripts into Footer
+ */
+
+function tanlinell_gform_init_scripts_footer() {
+    return true;
+}
+add_filter("gform_init_scripts_footer", "tanlinell_gform_init_scripts_footer");
