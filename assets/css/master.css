@@ -2148,6 +2148,28 @@ input.btn {
   margin-bottom: 0.833em;
 }
 
+/* ##Ratios */
+/*
+    <div class="img-ratio img-ratio--4-3">
+        <img src="http://www.placehold.it/200x200" />
+    </div>
+*/
+/* line 62, ../sass/framework/partials/objects/_images.scss */
+.img-ratio {
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 67, ../sass/framework/partials/objects/_images.scss */
+.img-ratio--4-3 {
+  padding-bottom: 75%;
+}
+
+/* line 71, ../sass/framework/partials/objects/_images.scss */
+.img-ratio--16-8 {
+  padding-bottom: 56.25%;
+}
+
 /* #Flexslider */
 /* Utilise the power of WooThemes' Flexslider plugin to power slideshows */
 /* ##Base */
