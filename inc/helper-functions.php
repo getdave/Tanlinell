@@ -18,11 +18,11 @@
  * @return	$post_thumb	( obj )		# Thumbnail src object
  */
 
-function tanlinell_get_post_thumb( $post_id ){
+function tanlinell_get_post_thumb( $post_id, $size='full' ){
 	
 	$post_thumbnail_id = get_post_thumbnail_id( $post_id );
 	if( $post_thumbnail_id ){
-		$post_thumb = wp_get_attachment_image_src( $post_thumbnail_id, 'full' );
+		$post_thumb = wp_get_attachment_image_src( $post_thumbnail_id, $size );
 	} else {
 		$post_thumb = "";
 	}
