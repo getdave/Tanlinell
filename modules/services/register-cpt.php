@@ -65,7 +65,7 @@ function tanlinell_services_photo_box() {
 	remove_meta_box( 'postimagediv', 'services', 'side' );
 
 	// Because we register it with the same ID (param 1) it retains all standard "Featured Image" functionality - winning!
-	add_meta_box('postimagediv', 'Team Image', 'post_thumbnail_meta_box', 'services', 'side');		
+	add_meta_box('postimagediv', 'Services Thumbnail', 'post_thumbnail_meta_box', 'services', 'side');		
 }
 add_action('do_meta_boxes', 'tanlinell_services_photo_box');
 
