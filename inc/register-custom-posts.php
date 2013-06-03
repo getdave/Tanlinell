@@ -24,3 +24,11 @@ require( get_template_directory() . '/modules/homepage-slider/register-cpt.php' 
  * Custom post for our team, navigation item.
  */
 require( get_template_directory() . '/modules/our-team/register-cpt.php' );
+
+
+/**
+ * Services 
+ *
+ * Custom post for Services Pages
+ */
+require( get_template_directory() . '/modules/services/register-cpt.php' );
