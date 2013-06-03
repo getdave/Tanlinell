@@ -2724,7 +2724,7 @@ html[xmlns] .slides {
 .img-l,
 .alignleft {
   float: left;
-  margin: 0 20px 1.5em 0;
+  margin: 0 0.833em 1.666em 0;
 }
 
 /* 	
@@ -2739,7 +2739,7 @@ html[xmlns] .slides {
 .img-r,
 .alignright {
   float: right;
-  margin: 0 0 1.5em 20px;
+  margin: 0 0 1.666em 0.833em;
 }
 
 /* 	
