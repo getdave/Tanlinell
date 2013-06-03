@@ -2534,7 +2534,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1369839119');
+  background-image: url('../images/site-logo.png?1370253482');
   width: 200px;
   height: 80px;
 }
@@ -2580,7 +2580,7 @@ html[xmlns] .slides {
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1369410288');
+  background-image: url('../images/site-credit--dark.svg?1370253482');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
