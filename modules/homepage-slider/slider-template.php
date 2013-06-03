@@ -26,9 +26,15 @@
 					//link meta data
 					$custom_metabox->the_field('text');
 					$link_text = $custom_metabox->get_the_value();
+										
+					$custom_metabox->the_field('page');
+					$link = get_permalink($custom_metabox->get_the_value());
 					
-					$custom_metabox->the_field('url');
-					$link_url = $custom_metabox->get_the_value();
+					if(!$link)
+					{
+						$custom_metabox->the_field('url');
+						$link = $custom_metabox->get_the_value();
+					}
 					
 					$featured_image       =  tanlinell_get_post_thumb( $post->ID );
 					$post_thumbnail_sized =  trailingslashit(get_stylesheet_directory_uri()) . 'timthumb.php?src='.$featured_image[0] . '&q=80&w=1400&zc=1';
@@ -38,7 +44,7 @@
 					<div class="slide-content">
 						<div class="slide-content-inner">
 							
-							<a href="<?php echo $link_url ?>"><?php echo $link_text ?></a>
+							<a href="<?php echo $link ?>"><?php echo $link_text ?></a>
 							
 							<?php the_title('<h3>', '</h3>'); ?>
 							<?php the_content();?>
