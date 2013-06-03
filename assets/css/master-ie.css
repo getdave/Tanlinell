@@ -780,6 +780,13 @@ optgroup::-moz-focus-inner {
   float: none;
   letter-spacing: normal;
 }
+/* line 96, ../sass/framework/partials/base/_grid.scss */
+.grid-divide > .g1-12, .grid-divide > .gonecolumns, .grid-divide > .g1-6, .grid-divide > .gtwocolumns, .grid-divide > .g1-4, .grid-divide > .gthreecolumns, .grid-divide > .g1-3, .grid-divide > .gfourcolumns, .grid-divide > .gfivecolumns, .grid-divide > .g1-2, .grid-divide > .gsixcolumns, .grid-divide > .gsevencolumns, .grid-divide > .g2-3, .grid-divide > .geightcolumns, .grid-divide > .g3-4, .grid-divide > .gninecolumns, .grid-divide > .gtencolumns, .grid-divide > .gelevencolumns, .grid-divide > .g1-1, .grid-divide > .gtwelvecolumns, .grid-divide >
+.gc, .grid-divide >
+.main,
+.grid-divide > .sub {
+  margin-bottom: 1.666em;
+}
 
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
 .h1-12, .honecolumns {
@@ -1021,7 +1028,7 @@ optgroup::-moz-focus-inner {
   width: 100%;
 }
 
-/* line 127, ../sass/framework/partials/base/_grid.scss */
+/* line 131, ../sass/framework/partials/base/_grid.scss */
 .no-js .g1-12, .no-js .gonecolumns, .no-js .g1-6, .no-js .gtwocolumns, .no-js .g1-4, .no-js .gthreecolumns, .no-js .g1-3, .no-js .gfourcolumns, .no-js .gfivecolumns, .no-js .g1-2, .no-js .gsixcolumns, .no-js .gsevencolumns, .no-js .g2-3, .no-js .geightcolumns, .no-js .g3-4, .no-js .gninecolumns, .no-js .gtencolumns, .no-js .gelevencolumns, .no-js .g1-1, .no-js .gtwelvecolumns,
 .no-js .gc,
 .no-js .main,
@@ -1037,7 +1044,7 @@ optgroup::-moz-focus-inner {
 		I'm a full width column. You probably won't need to use me that often...
 	</div>
 */
-/* line 156, ../sass/framework/partials/base/_grid.scss */
+/* line 160, ../sass/framework/partials/base/_grid.scss */
 .full-col {
   width: auto;
   float: none;
@@ -1049,7 +1056,7 @@ optgroup::-moz-focus-inner {
 		I'm a centered column. Useful on the odd occassion you need to center a grid unit
 	</div>
 */
-/* line 169, ../sass/framework/partials/base/_grid.scss */
+/* line 173, ../sass/framework/partials/base/_grid.scss */
 .centered-col {
   margin: 0 auto;
   float: none;

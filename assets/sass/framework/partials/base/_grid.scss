@@ -69,28 +69,32 @@ $allGridClasses: #{grid-selectors()};
 // Add styles to all the grid classes
 #{$allGridClasses},
 .gc {
-	width: 100%;
-	padding-left: $gutter_width;
-	float: left;
-	@include box-sizing(border-box);
-	*behavior: url(boxsizing.htc);
+    width: 100%;
+    padding-left: $gutter_width;
+    float: left;
+    @include box-sizing(border-box);
+    *behavior: url(boxsizing.htc);
 
-	.large-gutter & {
-		padding-left: $large_gutter_width;
-	}
+    .large-gutter & {
+        padding-left: $large_gutter_width;
+    }
 
-	.half-gutter & {
-		padding-left: $half_gutter_width;
-	}
+    .half-gutter & {
+        padding-left: $half_gutter_width;
+    }
 
-	.no-gutter & {
-		padding-left: 0;
-	}
+    .no-gutter & {
+        padding-left: 0;
+    }
 
-	.grid-ib & {
+    .grid-ib & {
         @include inline-block;
         float: none;
         letter-spacing: normal;
+    }
+
+    .grid-divide > & {
+        margin-bottom: $baseLineHeight;
     }
 }
 
