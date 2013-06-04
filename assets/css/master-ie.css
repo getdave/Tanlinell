@@ -1041,7 +1041,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1370354000');
+    background-image: url('../images/select_arrow.png?1370354834');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1198,7 +1198,7 @@ optgroup::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(boxsizing.htc);
+  *behavior: url(/boxsizing.htc);
 }
 /* line 78, ../sass/framework/partials/base/_grid.scss */
 .large-gutter .g1-12, .large-gutter .gonecolumns, .large-gutter .g1-6, .large-gutter .gtwocolumns, .large-gutter .g1-4, .large-gutter .gthreecolumns, .large-gutter .g1-3, .large-gutter .gfourcolumns, .large-gutter .gfivecolumns, .large-gutter .g1-2, .large-gutter .gsixcolumns, .large-gutter .gsevencolumns, .large-gutter .g2-3, .large-gutter .geightcolumns, .large-gutter .g3-4, .large-gutter .gninecolumns, .large-gutter .gtencolumns, .large-gutter .gelevencolumns, .large-gutter .g1-1, .large-gutter .gtwelvecolumns, .large-gutter
@@ -2991,7 +2991,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1370354000');
+  background-image: url('../images/site-logo.png?1370354834');
   width: 200px;
   height: 80px;
 }
@@ -3030,18 +3030,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1370354000');
+  background-image: url('../images/site-credit.png?1370354834');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1370354000');
+  background-image: url('../images/site-credit--dark.svg?1370354834');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1370354000');
+  background-image: url('../images/site-credit--dark.png?1370354834');
 }
 
 /* ==========================================================================
