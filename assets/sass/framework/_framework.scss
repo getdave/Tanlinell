@@ -23,7 +23,7 @@
  * Inuit.css 				- https://raw.github.com/csswizardry/inuit.css/
  * SMACSS guidelines 		- http://smacss.com/
  * Twitter Bootstrap		- http://twitter.github.com/bootstrap/
- * ZURB Foundation		- http://foundation.zurb.com/
+ * ZURB Foundation			- http://foundation.zurb.com/
  *
  */
 
@@ -93,6 +93,9 @@
 
 	// Block Lists
 	@import "partials/objects/_block-list.scss";
+
+	// Controls - common control styles interactive navigation elements
+	@import "partials/objects/_controls.scss";
 
 	// "Nav" object - floated lists of content
 	@import "partials/objects/_nav.scss";

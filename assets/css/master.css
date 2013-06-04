@@ -22,7 +22,7 @@
  * Inuit.css 				- https://raw.github.com/csswizardry/inuit.css/
  * SMACSS guidelines 		- http://smacss.com/
  * Twitter Bootstrap		- http://twitter.github.com/bootstrap/
- * ZURB Foundation		- http://foundation.zurb.com/
+ * ZURB Foundation			- http://foundation.zurb.com/
  *
  */
 /* ==========================================================================
@@ -1471,6 +1471,8 @@ Borrowed from inuit.css
   padding: 15px;
 }
 
+/* ============================================================ */
+/* ============================================================ */
 /* #Nav */
 /* Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction. When used on an `ol` or `ul`, this class throws the list into horizontal mode. */
 /* ##Base */
