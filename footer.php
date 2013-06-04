@@ -10,15 +10,18 @@
 ?>
 
 	</div><!-- #main .site-main -->
-	<?php get_template_part( 'templates/partials/vcard' ); ?>
 	
-	<aside class="sub-footer">
-		
-		<?php //get_template_part( 'templates/partials/latest-posts' ); ?>
-
-		<div class="site-social-links container-band">
-			<div class="container">
-				<h5 class="site-social-links__heading">Follow Us</h5>
+	<aside class="sub-footer container">
+		<div class="grid-wrap">
+			<div class="gc d1-3">
+				<?php get_template_part( 'templates/partials/vcard' ); ?>
+			</div>	
+			
+			<div class="gc d1-3">
+				<?php get_template_part( 'templates/partials/latest-posts' ); ?>
+			</div>
+				
+			<div class="gc d1-3">
 				<?php get_template_part( 'templates/partials/social-links' ); ?>
 			</div>
 		</div>
