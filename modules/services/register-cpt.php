@@ -47,8 +47,6 @@ function tanlinell_register_cpt_services() {
 	);
 
 	register_post_type( $slug, $args );
-	
-	flush_rewrite_rules();
 }
 
 
