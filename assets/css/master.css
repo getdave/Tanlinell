@@ -1047,7 +1047,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1370354834');
+    background-image: url('../images/select_arrow.png?1370355393');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2976,52 +2976,80 @@ html[xmlns] .slides {
   text-align: left;
 }
 
-/* #Site Logo 
+/* #Social Icons
 
-	<a href="/" class="site-logo" title="Return to website homepage">
-		<img src="http://www.placehold.it/200x100" alt="My Logo">
-	</a>    
+	<i class="icon"   
 */
-/* line 8, ../sass/framework/partials/common/_site-logo.scss */
-.site-logo {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  border: 0;
-  padding: 0;
-  margin: 30px 0;
-  vertical-align: bottom;
-}
-/* line 14, ../sass/framework/partials/common/_site-logo.scss */
-.site-logo a {
-  text-indent: -999em;
-  text-align: left;
-  direction: ltr;
-  display: block;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-image: url('../images/site-logo.png?1370354834');
-  width: 200px;
-  height: 80px;
-}
-/* line 27, ../sass/framework/partials/common/_site-logo.scss */
-.site-logo a:hover, .site-logo a:focus {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-  -webkit-transition: opacity 0.5s ease-out;
-  -moz-transition: opacity 0.5s ease-out;
-  -o-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
-}
-/* line 39, ../sass/framework/partials/common/_site-logo.scss */
-.lt-ie9 .site-logo img {
-  max-width: none;
+@font-face {
+  font-family: 'social-icons';
+  src: url("fonts/social-icons/font/social-icons.eot?92693809");
+  src: url("fonts/social-icons/font/social-icons.eot?92693809#iefix") format("embedded-opentype"), url("fonts/social-icons/font/social-icons.woff?92693809") format("woff"), url("fonts/social-icons/font/social-icons.ttf?92693809") format("truetype"), url("fonts/social-icons/font/social-icons.svg?92693809#social-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
+/* line 19, ../sass/framework/partials/common/_site-logo.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "social-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 50, ../sass/framework/partials/common/_site-logo.scss */
+.icon-linkedin:before {
+  content: '\4c';
+}
+
+/* 'L' */
+/* line 51, ../sass/framework/partials/common/_site-logo.scss */
+.icon-twitter:before {
+  content: '\54';
+}
+
+/* 'T' */
+/* line 52, ../sass/framework/partials/common/_site-logo.scss */
+.icon-youtube:before {
+  content: '\e803';
+}
+
+/* '' */
+/* line 53, ../sass/framework/partials/common/_site-logo.scss */
+.icon-vimeo:before {
+  content: '\e802';
+}
+
+/* '' */
+/* line 54, ../sass/framework/partials/common/_site-logo.scss */
+.icon-facebook:before {
+  content: '\66';
+}
+
+/* 'f' */
+/* line 55, ../sass/framework/partials/common/_site-logo.scss */
+.icon-googleplus-rect:before {
+  content: '\e801';
+}
+
+/* '' */
 /* #Site Credit */
 /* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
 /*
@@ -3043,18 +3071,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1370354834');
+  background-image: url('../images/site-credit.png?1370355393');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1370354834');
+  background-image: url('../images/site-credit--dark.svg?1370355393');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1370354834');
+  background-image: url('../images/site-credit--dark.png?1370355393');
 }
 
 /* ==========================================================================
@@ -3097,6 +3125,7 @@ html[xmlns] .slides {
   padding-left: 0;
 }
 
+/* #Social Icons */
 /* ==========================================================================
    HELPERS
    Global overides. Utility classes intended to overide all other styles.

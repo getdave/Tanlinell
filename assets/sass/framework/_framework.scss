@@ -155,9 +155,14 @@
 
 	// Site Credit
 	@import "partials/common/site-credit.scss";
-
+	
 	// Columns
 	@import "partials/common/_columns.scss";
+
+	// Social Icons (conditional)
+		
+		@import "partials/common/social-icons.scss";
+	
 
 
 
