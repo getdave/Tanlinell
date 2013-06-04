@@ -7,13 +7,13 @@
 	
 	//link meta data
 	$global_metabox->the_field('page_title');
-	$page_title = $global_metabox->get_the_value();
+	$page_title = esc_html( $global_metabox->get_the_value() );
 	
 	$global_metabox->the_field('page_subtitle');
-	$page_subtitle = $global_metabox->get_the_value();
+	$page_subtitle = esc_html( $global_metabox->get_the_value() );
 ?>
 <header class="title-block entry-header">
-	<h1 class="title-block__heading entry-title">
+	<h1 class="<?php echo ( $page_subtitle ) ? 'title-block__heading ' : ''; ?> entry-title">
 		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'tanlinell' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 		<?php if ( $page_title ) : ?>
 			<?php echo $page_title; ?>
@@ -23,6 +23,6 @@
 		</a>
 	</h1>
 	<?php if ( $page_subtitle ) : ?>
-	<p class="page-subtitle"><?php echo $page_subtitle ?></p>
+	<p class="entry-subtitle title-block__meta"><?php echo $page_subtitle ?></p>
 	<?php endif; ?>	
 </header>
