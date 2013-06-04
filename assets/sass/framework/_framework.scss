@@ -29,9 +29,10 @@
 
 
 
-/* ==========================================================================
-   LIBRARIES & FRAMEWORKS
-   ========================================================================== */
+
+// ==========================================================================
+// LIBRARIES & FRAMEWORKS
+// ==========================================================================
 
 	// Compass
 	@import "compass";
@@ -52,6 +53,8 @@
    Base for framework. Mostly global, tag-based selector rules.
    ========================================================================== */
 
+	// Normalize
+	@import "partials/base/_normalize.scss";
 
 	// Block level (h1, p) and text-level (em, strong) type...etc
 	@import "partials/base/_typo.scss";
