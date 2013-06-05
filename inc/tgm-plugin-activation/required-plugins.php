@@ -141,6 +141,14 @@ function my_theme_register_required_plugins() {
 			'required' 	=> false,
 		),
 
+		array(
+			'name' 		=> 'Add Descendants As Submenu Items',
+			'slug' 		=> 'add-descendants-as-submenu-items',
+			'required' 	=> false,
+		),
+
+		
+
 
 
 
