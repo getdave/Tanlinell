@@ -12,28 +12,40 @@
 */
 
 
-.dropdown .caret,
-.dropdown-toggle .caret {
-	display: inline-block;
-	color: #fff !important;
-	width: 0;
-	height: 0;
-	text-indent: -99999px;
-	*text-indent: 0;
-	vertical-align: top;
-	border-left: 4px solid transparent;
-	border-right: 4px solid transparent;
-	border-top: 4px solid #fff;
-	background: 0;
-	margin-left: 7px;
-	margin-top: rsize(7px);
-	content: "\2193";
-	@include opacity(0.75);	
+
+.dropdown-menu {
+	@include list-reset;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: $zindexDropdown;
+	display: none;
+	float: left;
+	min-width: 160px;
+	text-align: left;
+	direction:ltr;
+	background-color: $navbarBackground;
 }
 
-.dropdown:hover .caret,
-.dropdown:focus .caret
-.dropdown-toggle:hover .caret,
-.dropdown-toggle:focus .caret {
-	@include opacity(1);
+.dropdown-menu__item {
+	position: relative; // positioning context for secondary level if required
+	vertical-align: bottom; /* This fixes the IE5 Win gap (no harm done to modern browsers) */
+	white-space: nowrap;
+	width: 100%;	/* inherit the width of the parent <ul> */
+	clear: both;
+	display: list-item;
 }
+
+.dropdown-menu__link {
+	display: block;
+	white-space: nowrap; /* forces drop down to stretch to accommodate length of text (and not wrap) */
+	padding: rsize(6px) rsize(20px);
+	text-align: left;
+}
+
+.dropdown-menu--is-open {
+	display: block;
+}
+
+
+

@@ -1942,8 +1942,7 @@ Borrowed from inuit.css
     </ul>
  */
 /* line 14, ../sass/framework/partials/objects/_nav.scss */
-.nav-primary,
-.nav-primary ul {
+.nav-primary {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -2128,33 +2127,46 @@ input.btn {
 	</ul>
 */
 /* line 16, ../sass/framework/partials/objects/_dropdowns.scss */
-.dropdown .caret,
-.dropdown-toggle .caret {
-  display: inline-block;
-  color: #fff !important;
-  width: 0;
-  height: 0;
-  text-indent: -99999px;
-  *text-indent: 0;
-  vertical-align: top;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 4px solid #fff;
-  background: 0;
-  margin-left: 7px;
-  margin-top: 0.4375em;
-  content: "\2193";
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
-  opacity: 0.75;
+.dropdown-menu, .nav-primary .sub-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  text-align: left;
+  direction: ltr;
+  background-color: #eeeeee;
 }
 
-/* line 37, ../sass/framework/partials/objects/_dropdowns.scss */
-.dropdown:hover .caret,
-.dropdown:focus .caret
-.dropdown-toggle:hover .caret,
-.dropdown-toggle:focus .caret {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+/* line 30, ../sass/framework/partials/objects/_dropdowns.scss */
+.dropdown-menu__item, .nav-primary .sub-menu li {
+  position: relative;
+  vertical-align: bottom;
+  /* This fixes the IE5 Win gap (no harm done to modern browsers) */
+  white-space: nowrap;
+  width: 100%;
+  /* inherit the width of the parent <ul> */
+  clear: both;
+  display: list-item;
+}
+
+/* line 39, ../sass/framework/partials/objects/_dropdowns.scss */
+.dropdown-menu__link, .nav-primary .sub-menu a {
+  display: block;
+  white-space: nowrap;
+  /* forces drop down to stretch to accommodate length of text (and not wrap) */
+  padding: 0.375em 1.25em;
+  text-align: left;
+}
+
+/* line 46, ../sass/framework/partials/objects/_dropdowns.scss */
+.dropdown-menu--is-open {
+  display: block;
 }
 
 /* #ALERTS */
@@ -2846,71 +2858,74 @@ html[xmlns] .slides {
    COMMON
    Common components/requirements for standard websites
    ========================================================================== */
-/* line 24, ../sass/framework/partials/objects/_menu.scss */
+/* line 19, ../sass/framework/partials/objects/_menu.scss */
+.nav-primary {
+  background-color: #eeeeee;
+}
+
+/* line 25, ../sass/framework/partials/objects/_menu.scss */
 .nav-primary > li {
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  /* line 24, ../sass/framework/partials/objects/_menu.scss */
+  /* line 25, ../sass/framework/partials/objects/_menu.scss */
   .nav-primary > li {
     float: left;
   }
 }
 
-/* line 32, ../sass/framework/partials/objects/_menu.scss */
+/* line 33, ../sass/framework/partials/objects/_menu.scss */
 .nav-primary a {
   display: block;
   padding: 0.625em 1.25em;
-  text-align: left;
   text-decoration: none;
 }
+
+/* line 39, ../sass/framework/partials/objects/_menu.scss */
+.nav-primary > li > a {
+  text-align: left;
+}
 @media only screen and (min-width: 768px) {
-  /* line 32, ../sass/framework/partials/objects/_menu.scss */
-  .nav-primary a {
+  /* line 39, ../sass/framework/partials/objects/_menu.scss */
+  .nav-primary > li > a {
     text-align: center;
   }
 }
 
-/* line 48, ../sass/framework/partials/objects/_menu.scss */
-.js .nav-primary,
-.js .nav-primary ul,
-.nav-primary .js ul {
+/* line 51, ../sass/framework/partials/objects/_menu.scss */
+.js .nav-primary {
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 48, ../sass/framework/partials/objects/_menu.scss */
-  .js .nav-primary,
-  .js .nav-primary ul,
-  .nav-primary .js ul {
+  /* line 51, ../sass/framework/partials/objects/_menu.scss */
+  .js .nav-primary {
     display: block;
   }
 }
-/* line 56, ../sass/framework/partials/objects/_menu.scss */
-.is-expanded .nav-primary,
-.is-expanded .nav-primary ul,
-.nav-primary .is-expanded ul {
+/* line 59, ../sass/framework/partials/objects/_menu.scss */
+.is-expanded .nav-primary {
   display: block;
 }
 
-/* line 61, ../sass/framework/partials/objects/_menu.scss */
+/* line 64, ../sass/framework/partials/objects/_menu.scss */
 .nav-menu-toggle {
   float: right;
   display: none;
   border: 0;
   background-color: transparent;
 }
-/* line 67, ../sass/framework/partials/objects/_menu.scss */
+/* line 70, ../sass/framework/partials/objects/_menu.scss */
 .js .nav-menu-toggle {
   display: block;
 }
 @media only screen and (min-width: 768px) {
-  /* line 67, ../sass/framework/partials/objects/_menu.scss */
+  /* line 70, ../sass/framework/partials/objects/_menu.scss */
   .js .nav-menu-toggle {
     display: none;
   }
 }
 
-/* line 81, ../sass/framework/partials/objects/_menu.scss */
+/* line 84, ../sass/framework/partials/objects/_menu.scss */
 .nav-menu-toggle span {
   display: block;
   height: 3px;
@@ -2919,51 +2934,23 @@ html[xmlns] .slides {
   background-color: #cccccc;
 }
 
-@media only screen and (min-width: 768px) {
-  /* line 120, ../sass/framework/partials/objects/_menu.scss */
-  .nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
-    left: 0;
-  }
-}
-
-/* line 130, ../sass/framework/partials/objects/_menu.scss */
-.sub-menu {
-  position: absolute;
-  top: auto;
-  left: -999em;
-  z-index: 1000;
-  text-align: left;
-  direction: ltr;
-  background-color: #999999;
-}
-/* line 139, ../sass/framework/partials/objects/_menu.scss */
-.sub-menu li {
-  vertical-align: bottom;
-  /* This fixes the IE5 Win gap (no harm done to modern browsers) */
-  white-space: nowrap;
-  width: 100%;
-  /* inherit the width of the parent <ul> */
-  clear: both;
-  display: list-item;
-}
-/* line 147, ../sass/framework/partials/objects/_menu.scss */
-.sub-menu li a {
-  white-space: nowrap;
-  /* forces drop down to stretch to accommodate length of text (and not wrap) */
-  padding: 0.4615384615384615em 20px;
-  text-align: left;
-}
-
-/* line 160, ../sass/framework/partials/objects/_menu.scss */
+/* line 127, ../sass/framework/partials/objects/_menu.scss */
 .nav-menu-narrow {
   position: relative;
 }
 
-/* line 164, ../sass/framework/partials/objects/_menu.scss */
+/* line 131, ../sass/framework/partials/objects/_menu.scss */
 .nav-menu-toggle {
   position: absolute;
   right: 0;
   top: -2.8125em;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 162, ../sass/framework/partials/objects/_menu.scss */
+  .nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
+    display: block;
+  }
 }
 
 /* #Social Icons
@@ -3165,16 +3152,13 @@ html[xmlns] .slides {
 /* line 50, ../sass/framework/partials/base/_helpers.scss */
 .clearfix, .island, .headed-island,
 .islet, .nav-primary,
-.nav-primary ul,
 .cf {
   zoom: 1;
 }
 /* line 54, ../sass/framework/partials/base/_helpers.scss */
 .clearfix:before, .island:before, .headed-island:before,
-.islet:before, .nav-primary:before,
-.nav-primary ul:before, .clearfix:after, .island:after, .headed-island:after,
+.islet:before, .nav-primary:before, .clearfix:after, .island:after, .headed-island:after,
 .islet:after, .nav-primary:after,
-.nav-primary ul:after,
 .cf:before,
 .cf:after {
   content: "";
@@ -3183,7 +3167,6 @@ html[xmlns] .slides {
 /* line 59, ../sass/framework/partials/base/_helpers.scss */
 .clearfix:after, .island:after, .headed-island:after,
 .islet:after, .nav-primary:after,
-.nav-primary ul:after,
 .cf:after {
   clear: both;
 }
