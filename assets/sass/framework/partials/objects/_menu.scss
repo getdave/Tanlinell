@@ -1,10 +1,9 @@
 
 
-// Menu
+// RESPONSIVE MENU
 
-// Description:			Default navigation styles for Global nav
-//						elements
-// Acknowledgements		Twitter Bootstrap 2
+// Description:	Silent selectors to create a mobile first responsive menu. 
+// 				Typically extended onto the primary navigation
 
 
 
@@ -16,13 +15,18 @@
 // ==========================================================================
 
 // Navigation <ul> itself
-%responsive-nav {
+%responsive-menu {
 	@extend %nav;
+	position: relative;
 	background-color: $navbarBackground;
+
+	@if ($isFixed == false) { // ie: if we're in "Responsive" mode
+		@extend %responsive-menu__toggle-target;
+	}
 }
 
 // Top Level Nav Items
-%responsive-nav__item {
+%responsive-menu__item {
 	position: relative;	
 
 	@include respond-to($mobileBreak) {
@@ -30,13 +34,15 @@
 	}
 }
 
-%responsive-nav__link {
+// General link styles for nav bar
+%responsive-menu__link {
 	display: block;		
 	padding: rsize(10px) rsize(20px);
 	text-decoration: none;
 }
 
-%responsive-nav__link--top {
+// Styles specifically for top level of nav bar
+%responsive-menu__link--top {
 	text-align: left;
 	@include respond-to($mobileBreak) {
 		text-align: center;	
@@ -44,10 +50,11 @@
 }
 
 
-// TOGGLE
+// TOGGLE ("RESPONSIVE" MODE)
 // ==========================================================================
 
-%responsive-nav__toggle-target {
+// Menu to be toggled by the Trigger element (below)
+%responsive-menu__toggle-target {
 	.js & {
 		display: none;
 
@@ -56,16 +63,19 @@
 		}
 	}
 
+	// Script adds "expanded" class to open menu
 	.is-expanded & {
 		display: block;
 	}
 }
 
-%responsive-nav__toggle-trigger {
+// Element which is used to trigger the toggle of the menu
+%responsive-menu__toggle-trigger {
 	float: right;
 	display: none;
 	border: 0;
 	background-color: transparent;
+
 
 	.js & {
 		display: block;
@@ -76,12 +86,18 @@
 	}
 
 	span {
-		@extend %responsive-nav__icon-bar;
+		@extend %responsive-menu__icon-bar;
+	}
+
+
+	// In "Fixed" mode we want to def hide the toggle button
+	@if ($isFixed == true) { 
+		display: none !important; 
 	}
 }
 
-
-%responsive-nav__icon-bar {
+// Toggle Trigger Icon Bars
+%responsive-menu__icon-bar {
 	display: block;
 	height: 3px;
 	width: 20px;
@@ -92,78 +108,6 @@
 
 
 
-// ==========================================================================
-// NAV PRIMARY
-// ==========================================================================
-
-.nav-primary {
-	@extend %responsive-nav;
-
-	@if ($isFixed == false) { // ie: if we're in "Responsive" mode
-		@extend %responsive-nav__toggle-target;
-	}
-}
-
-.nav-primary {
-
-	> li {
-		@extend %responsive-nav__item;	
-
-		> a {
-			@extend %responsive-nav__link--top;
-		}	
-	}
-
-	a {
-		@extend %responsive-nav__link;		
-	}	
-}
-
-
-
-// RESPONSIVE
-// ==========================================================================
-
-.nav-menu-narrow {
-	position: relative;
-}
-
-.nav-menu-toggle {
-	@extend %responsive-nav__toggle-trigger;
-	position: absolute;
-	right: 0;
-	top: rsize(-45px);
-}
-
-
-// SUBMENUS
-// ==========================================================================
-
-
-
-
-.nav-primary .sub-menu {
-	@extend .dropdown-menu;
-
-	li {
-		@extend .dropdown-menu__item;
-	}
-
-	a {
-		@extend .dropdown-menu__link;
-	}
-}
-
-
-// Show submenu on :hover/:focus
-.nav-primary li {
-	@include respond-to($mobileBreak) {		
-		&:hover .sub-menu,
-		&:focus .sub-menu {
-			display: block;
-		}
-	}
-}
 
 
 

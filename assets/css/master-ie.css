@@ -1142,7 +1142,7 @@ optgroup::-moz-focus-inner {
 	</div>
 */
 /* line 28, ../sass/framework/partials/base/_grid.scss */
-.grid-wrap, .large-gutter, .half-gutter, .no-gutter, .column-container {
+.grid-wrap, .large-gutter, .half-gutter, .gallery-row, .no-gutter, .column-container {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1151,12 +1151,12 @@ optgroup::-moz-focus-inner {
   zoom: 1;
 }
 /* line 86, ../sass/framework/partials/base/_mixins.scss */
-.grid-wrap:before, .large-gutter:before, .half-gutter:before, .no-gutter:before, .column-container:before {
+.grid-wrap:before, .large-gutter:before, .half-gutter:before, .gallery-row:before, .no-gutter:before, .column-container:before {
   content: "";
   display: table;
 }
 /* line 91, ../sass/framework/partials/base/_mixins.scss */
-.grid-wrap:after, .large-gutter:after, .half-gutter:after, .no-gutter:after, .column-container:after {
+.grid-wrap:after, .large-gutter:after, .half-gutter:after, .gallery-row:after, .no-gutter:after, .column-container:after {
   content: "";
   display: table;
   clear: both;
@@ -1168,7 +1168,7 @@ optgroup::-moz-focus-inner {
 }
 
 /* line 42, ../sass/framework/partials/base/_grid.scss */
-.half-gutter {
+.half-gutter, .gallery-row {
   margin-left: -1.5em;
 }
 
@@ -1191,7 +1191,12 @@ optgroup::-moz-focus-inner {
 .g1-12, .gonecolumns, .g1-6, .gtwocolumns, .g1-4, .gthreecolumns, .g1-3, .gfourcolumns, .gfivecolumns, .g1-2, .gsixcolumns, .gsevencolumns, .g2-3, .geightcolumns, .g3-4, .gninecolumns, .gtencolumns, .gelevencolumns, .g1-1, .gtwelvecolumns,
 .gc,
 .main,
-.sub {
+.sub,
+.gallery-row .col-2,
+.gallery-row .col-3,
+.gallery-row .col-4,
+.gallery-row .col-6,
+.gallery-row .col-5 {
   width: 100%;
   padding-left: 3em;
   float: left;
@@ -1204,28 +1209,40 @@ optgroup::-moz-focus-inner {
 .large-gutter .g1-12, .large-gutter .gonecolumns, .large-gutter .g1-6, .large-gutter .gtwocolumns, .large-gutter .g1-4, .large-gutter .gthreecolumns, .large-gutter .g1-3, .large-gutter .gfourcolumns, .large-gutter .gfivecolumns, .large-gutter .g1-2, .large-gutter .gsixcolumns, .large-gutter .gsevencolumns, .large-gutter .g2-3, .large-gutter .geightcolumns, .large-gutter .g3-4, .large-gutter .gninecolumns, .large-gutter .gtencolumns, .large-gutter .gelevencolumns, .large-gutter .g1-1, .large-gutter .gtwelvecolumns, .large-gutter
 .gc, .large-gutter
 .main,
-.large-gutter .sub {
+.large-gutter .sub, .large-gutter .gallery-row .col-2, .gallery-row .large-gutter .col-2, .large-gutter .gallery-row .col-3, .gallery-row .large-gutter .col-3, .large-gutter .gallery-row .col-4, .gallery-row .large-gutter .col-4, .large-gutter .gallery-row .col-6, .gallery-row .large-gutter .col-6,
+.large-gutter .gallery-row .col-5,
+.gallery-row .large-gutter .col-5 {
   padding-left: 6em;
 }
 /* line 82, ../sass/framework/partials/base/_grid.scss */
-.half-gutter .g1-12, .half-gutter .gonecolumns, .half-gutter .g1-6, .half-gutter .gtwocolumns, .half-gutter .g1-4, .half-gutter .gthreecolumns, .half-gutter .g1-3, .half-gutter .gfourcolumns, .half-gutter .gfivecolumns, .half-gutter .g1-2, .half-gutter .gsixcolumns, .half-gutter .gsevencolumns, .half-gutter .g2-3, .half-gutter .geightcolumns, .half-gutter .g3-4, .half-gutter .gninecolumns, .half-gutter .gtencolumns, .half-gutter .gelevencolumns, .half-gutter .g1-1, .half-gutter .gtwelvecolumns, .half-gutter
+.half-gutter .g1-12, .gallery-row .g1-12, .half-gutter .gonecolumns, .gallery-row .gonecolumns, .half-gutter .g1-6, .gallery-row .g1-6, .half-gutter .gtwocolumns, .gallery-row .gtwocolumns, .half-gutter .g1-4, .gallery-row .g1-4, .half-gutter .gthreecolumns, .gallery-row .gthreecolumns, .half-gutter .g1-3, .gallery-row .g1-3, .half-gutter .gfourcolumns, .gallery-row .gfourcolumns, .half-gutter .gfivecolumns, .gallery-row .gfivecolumns, .half-gutter .g1-2, .gallery-row .g1-2, .half-gutter .gsixcolumns, .gallery-row .gsixcolumns, .half-gutter .gsevencolumns, .gallery-row .gsevencolumns, .half-gutter .g2-3, .gallery-row .g2-3, .half-gutter .geightcolumns, .gallery-row .geightcolumns, .half-gutter .g3-4, .gallery-row .g3-4, .half-gutter .gninecolumns, .gallery-row .gninecolumns, .half-gutter .gtencolumns, .gallery-row .gtencolumns, .half-gutter .gelevencolumns, .gallery-row .gelevencolumns, .half-gutter .g1-1, .gallery-row .g1-1, .half-gutter .gtwelvecolumns, .gallery-row .gtwelvecolumns, .half-gutter
+.gc, .gallery-row
 .gc, .half-gutter
+.main, .gallery-row
 .main,
-.half-gutter .sub {
+.half-gutter .sub,
+.gallery-row .sub, .half-gutter .gallery-row .col-2, .gallery-row .half-gutter .col-2, .gallery-row .col-2, .half-gutter .gallery-row .col-3, .gallery-row .half-gutter .col-3, .gallery-row .col-3, .half-gutter .gallery-row .col-4, .gallery-row .half-gutter .col-4, .gallery-row .col-4, .half-gutter .gallery-row .col-6, .gallery-row .half-gutter .col-6, .gallery-row .col-6,
+.half-gutter .gallery-row .col-5,
+.gallery-row .half-gutter .col-5,
+.gallery-row .col-5 {
   padding-left: 1.5em;
 }
 /* line 86, ../sass/framework/partials/base/_grid.scss */
 .no-gutter .g1-12, .no-gutter .gonecolumns, .no-gutter .g1-6, .no-gutter .gtwocolumns, .no-gutter .g1-4, .no-gutter .gthreecolumns, .no-gutter .g1-3, .no-gutter .gfourcolumns, .no-gutter .gfivecolumns, .no-gutter .g1-2, .no-gutter .gsixcolumns, .no-gutter .gsevencolumns, .no-gutter .g2-3, .no-gutter .geightcolumns, .no-gutter .g3-4, .no-gutter .gninecolumns, .no-gutter .gtencolumns, .no-gutter .gelevencolumns, .no-gutter .g1-1, .no-gutter .gtwelvecolumns, .no-gutter
 .gc, .no-gutter
 .main,
-.no-gutter .sub {
+.no-gutter .sub, .no-gutter .gallery-row .col-2, .gallery-row .no-gutter .col-2, .no-gutter .gallery-row .col-3, .gallery-row .no-gutter .col-3, .no-gutter .gallery-row .col-4, .gallery-row .no-gutter .col-4, .no-gutter .gallery-row .col-6, .gallery-row .no-gutter .col-6,
+.no-gutter .gallery-row .col-5,
+.gallery-row .no-gutter .col-5 {
   padding-left: 0;
 }
 /* line 90, ../sass/framework/partials/base/_grid.scss */
 .grid-ib .g1-12, .grid-ib .gonecolumns, .grid-ib .g1-6, .grid-ib .gtwocolumns, .grid-ib .g1-4, .grid-ib .gthreecolumns, .grid-ib .g1-3, .grid-ib .gfourcolumns, .grid-ib .gfivecolumns, .grid-ib .g1-2, .grid-ib .gsixcolumns, .grid-ib .gsevencolumns, .grid-ib .g2-3, .grid-ib .geightcolumns, .grid-ib .g3-4, .grid-ib .gninecolumns, .grid-ib .gtencolumns, .grid-ib .gelevencolumns, .grid-ib .g1-1, .grid-ib .gtwelvecolumns, .grid-ib
 .gc, .grid-ib
 .main,
-.grid-ib .sub {
+.grid-ib .sub, .grid-ib .gallery-row .col-2, .gallery-row .grid-ib .col-2, .grid-ib .gallery-row .col-3, .gallery-row .grid-ib .col-3, .grid-ib .gallery-row .col-4, .gallery-row .grid-ib .col-4, .grid-ib .gallery-row .col-6, .gallery-row .grid-ib .col-6,
+.grid-ib .gallery-row .col-5,
+.gallery-row .grid-ib .col-5 {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -1239,7 +1256,8 @@ optgroup::-moz-focus-inner {
 .grid-divide > .g1-12, .grid-divide > .gonecolumns, .grid-divide > .g1-6, .grid-divide > .gtwocolumns, .grid-divide > .g1-4, .grid-divide > .gthreecolumns, .grid-divide > .g1-3, .grid-divide > .gfourcolumns, .grid-divide > .gfivecolumns, .grid-divide > .g1-2, .grid-divide > .gsixcolumns, .grid-divide > .gsevencolumns, .grid-divide > .g2-3, .grid-divide > .geightcolumns, .grid-divide > .g3-4, .grid-divide > .gninecolumns, .grid-divide > .gtencolumns, .grid-divide > .gelevencolumns, .grid-divide > .g1-1, .grid-divide > .gtwelvecolumns, .grid-divide >
 .gc, .grid-divide >
 .main,
-.grid-divide > .sub {
+.grid-divide > .sub, .gallery-row .grid-divide > .col-2, .gallery-row .grid-divide > .col-3, .gallery-row .grid-divide > .col-4, .gallery-row .grid-divide > .col-6,
+.gallery-row .grid-divide > .col-5 {
   margin-bottom: 1.666em;
 }
 
@@ -1319,7 +1337,8 @@ optgroup::-moz-focus-inner {
 }
 
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
-.l1-3, .lfourcolumns {
+.l1-3, .gallery-row .col-3, .gallery-row .col-6,
+.gallery-row .col-5, .lfourcolumns {
   width: 33.33333%;
 }
 
@@ -1329,7 +1348,7 @@ optgroup::-moz-focus-inner {
 }
 
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
-.l1-2, .lsixcolumns {
+.l1-2, .gallery-row .col-2, .gallery-row .col-4, .lsixcolumns {
   width: 50%;
 }
 
@@ -1369,13 +1388,14 @@ optgroup::-moz-focus-inner {
 }
 
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
-.d1-6, .dtwocolumns {
+.d1-6, .gallery-row .col-6,
+.gallery-row .col-5, .dtwocolumns {
   width: 16.66667%;
 }
 
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
 .d1-4, .layout-2c-r .sub,
-.sub, .dthreecolumns {
+.sub, .gallery-row .col-4, .dthreecolumns {
   width: 25%;
 }
 
@@ -1489,7 +1509,17 @@ optgroup::-moz-focus-inner {
 .no-js .g1-12, .no-js .gonecolumns, .no-js .g1-6, .no-js .gtwocolumns, .no-js .g1-4, .no-js .gthreecolumns, .no-js .g1-3, .no-js .gfourcolumns, .no-js .gfivecolumns, .no-js .g1-2, .no-js .gsixcolumns, .no-js .gsevencolumns, .no-js .g2-3, .no-js .geightcolumns, .no-js .g3-4, .no-js .gninecolumns, .no-js .gtencolumns, .no-js .gelevencolumns, .no-js .g1-1, .no-js .gtwelvecolumns,
 .no-js .gc,
 .no-js .main,
-.no-js .sub {
+.no-js .sub,
+.no-js .gallery-row .col-2,
+.gallery-row .no-js .col-2,
+.no-js .gallery-row .col-3,
+.gallery-row .no-js .col-3,
+.no-js .gallery-row .col-4,
+.gallery-row .no-js .col-4,
+.no-js .gallery-row .col-6,
+.gallery-row .no-js .col-6,
+.no-js .gallery-row .col-5,
+.gallery-row .no-js .col-5 {
   float: none;
   width: 100%;
 }
@@ -1843,6 +1873,63 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 .hero-content-bl {
   top: auto;
   bottom: 10%;
+}
+
+/* line 18, ../sass/framework/partials/objects/_menu.scss */
+.nav-primary {
+  position: relative;
+  background-color: #eeeeee;
+}
+
+/* line 29, ../sass/framework/partials/objects/_menu.scss */
+.nav-primary > li {
+  position: relative;
+  float: left;
+}
+
+/* line 38, ../sass/framework/partials/objects/_menu.scss */
+.nav-primary a {
+  display: block;
+  padding: 0.625em 1.25em;
+  text-decoration: none;
+}
+
+/* line 45, ../sass/framework/partials/objects/_menu.scss */
+.nav-primary > li > a {
+  text-align: left;
+  text-align: center;
+}
+
+/* line 58, ../sass/framework/partials/objects/_menu.scss */
+.js .nav-primary {
+  display: none;
+  display: block;
+}
+/* line 67, ../sass/framework/partials/objects/_menu.scss */
+.is-expanded .nav-primary {
+  display: block;
+}
+
+/* line 73, ../sass/framework/partials/objects/_menu.scss */
+.nav-menu-toggle {
+  float: right;
+  display: none;
+  border: 0;
+  background-color: transparent;
+}
+/* line 80, ../sass/framework/partials/objects/_menu.scss */
+.js .nav-menu-toggle {
+  display: block;
+  display: none;
+}
+
+/* line 100, ../sass/framework/partials/objects/_menu.scss */
+.nav-menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 20px;
+  margin-bottom: 3px;
+  background-color: #cccccc;
 }
 
 /* #Item List */
@@ -2572,7 +2659,7 @@ input.btn {
     <img src="http://www.placehold.it/200x200" class="img-polaroid" />
 */
 /* line 26, ../sass/framework/partials/objects/_images.scss */
-.img-polaroid {
+.img-polaroid, .gallery-item a {
   padding: 4px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -2857,153 +2944,69 @@ html[xmlns] .slides {
    COMMON
    Common components/requirements for standard websites
    ========================================================================== */
-/* line 19, ../sass/framework/partials/objects/_menu.scss */
-.nav-primary {
-  background-color: #eeeeee;
-}
-
-/* line 25, ../sass/framework/partials/objects/_menu.scss */
-.nav-primary > li {
-  position: relative;
-  float: left;
-}
-
-/* line 33, ../sass/framework/partials/objects/_menu.scss */
-.nav-primary a {
-  display: block;
-  padding: 0.625em 1.25em;
-  text-decoration: none;
-}
-
-/* line 39, ../sass/framework/partials/objects/_menu.scss */
-.nav-primary > li > a {
-  text-align: left;
-  text-align: center;
-}
-
-/* line 51, ../sass/framework/partials/objects/_menu.scss */
-.js .nav-primary {
-  display: none;
-  display: block;
-}
-/* line 59, ../sass/framework/partials/objects/_menu.scss */
-.is-expanded .nav-primary {
-  display: block;
-}
-
-/* line 64, ../sass/framework/partials/objects/_menu.scss */
-.nav-menu-toggle {
-  float: right;
-  display: none;
-  border: 0;
-  background-color: transparent;
-}
-/* line 70, ../sass/framework/partials/objects/_menu.scss */
-.js .nav-menu-toggle {
-  display: block;
-  display: none;
-}
-
-/* line 84, ../sass/framework/partials/objects/_menu.scss */
-.nav-menu-toggle span {
-  display: block;
-  height: 3px;
-  width: 20px;
-  margin-bottom: 3px;
-  background-color: #cccccc;
-}
-
-/* line 127, ../sass/framework/partials/objects/_menu.scss */
-.nav-menu-narrow {
+/* line 5, ../sass/framework/partials/common/_primary-nav.scss */
+.menu-primary {
   position: relative;
 }
 
-/* line 131, ../sass/framework/partials/objects/_menu.scss */
-.nav-menu-toggle {
-  position: absolute;
-  right: 0;
-  top: -2.8125em;
-}
-
-/* line 162, ../sass/framework/partials/objects/_menu.scss */
+/* line 52, ../sass/framework/partials/common/_primary-nav.scss */
 .nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
   display: block;
 }
 
-/* #Social Icons
+/* line 62, ../sass/framework/partials/common/_primary-nav.scss */
+.nav-menu-toggle {
+  position: absolute;
+  right: 1.875em;
+  top: -5.3125em;
+}
 
-	<i class="icon"   
+/* #Site Logo 
+
+	<a href="/" class="site-logo" title="Return to website homepage">
+		<img src="http://www.placehold.it/200x100" alt="My Logo">
+	</a>    
 */
-@font-face {
-  font-family: 'social-icons';
-  src: url("fonts/social-icons/font/social-icons.eot?92693809");
-  src: url("fonts/social-icons/font/social-icons.eot?92693809#iefix") format("embedded-opentype"), url("fonts/social-icons/font/social-icons.woff?92693809") format("woff"), url("fonts/social-icons/font/social-icons.ttf?92693809") format("truetype"), url("fonts/social-icons/font/social-icons.svg?92693809#social-icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* line 19, ../sass/framework/partials/common/_site-logo.scss */
-[class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "social-icons";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
+/* line 8, ../sass/framework/partials/common/_site-logo.scss */
+.site-logo {
+  display: -moz-inline-stack;
   display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  border: 0;
+  padding: 0;
+  margin: 30px 0;
+  vertical-align: bottom;
+}
+/* line 14, ../sass/framework/partials/common/_site-logo.scss */
+.site-logo a {
+  text-indent: -999em;
+  text-align: left;
+  direction: ltr;
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url('../images/site-logo.png?1370421097');
+  width: 200px;
+  height: 80px;
+}
+/* line 27, ../sass/framework/partials/common/_site-logo.scss */
+.site-logo a:hover, .site-logo a:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+/* line 39, ../sass/framework/partials/common/_site-logo.scss */
+.lt-ie9 .site-logo img {
+  max-width: none;
 }
 
-/* line 50, ../sass/framework/partials/common/_site-logo.scss */
-.icon-linkedin:before {
-  content: '\4c';
-}
-
-/* 'L' */
-/* line 51, ../sass/framework/partials/common/_site-logo.scss */
-.icon-twitter:before {
-  content: '\54';
-}
-
-/* 'T' */
-/* line 52, ../sass/framework/partials/common/_site-logo.scss */
-.icon-youtube:before {
-  content: '\e803';
-}
-
-/* '' */
-/* line 53, ../sass/framework/partials/common/_site-logo.scss */
-.icon-vimeo:before {
-  content: '\e802';
-}
-
-/* '' */
-/* line 54, ../sass/framework/partials/common/_site-logo.scss */
-.icon-facebook:before {
-  content: '\66';
-}
-
-/* 'f' */
-/* line 55, ../sass/framework/partials/common/_site-logo.scss */
-.icon-googleplus-rect:before {
-  content: '\e801';
-}
-
-/* '' */
 /* #Site Credit */
 /* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
 /*
@@ -3081,6 +3084,60 @@ html[xmlns] .slides {
 }
 
 /* #Social Icons */
+/* ============================================================ */
+/* ============================================================ */
+/* The Gallery container (div) */
+/* line 16, ../sass/framework/partials/common/_gallery.scss */
+.gallery {
+  margin: 0;
+  padding: 0;
+  zoom: 1;
+}
+/* line 86, ../sass/framework/partials/base/_mixins.scss */
+.gallery:before {
+  content: "";
+  display: table;
+}
+/* line 91, ../sass/framework/partials/base/_mixins.scss */
+.gallery:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 25, ../sass/framework/partials/common/_gallery.scss */
+.gallery-row {
+  clear: both;
+}
+
+/* line 34, ../sass/framework/partials/common/_gallery.scss */
+.gallery-item {
+  margin-top: 0;
+  margin-bottom: 1.666em;
+  padding-top: 0;
+}
+/* line 39, ../sass/framework/partials/common/_gallery.scss */
+.gallery-item a {
+  display: block;
+}
+/* line 44, ../sass/framework/partials/common/_gallery.scss */
+.gallery-item img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* line 55, ../sass/framework/partials/common/_gallery.scss */
+.gallery-caption {
+  margin: 0;
+  padding: 0;
+  color: #777;
+  font-size: 0.75em;
+  text-align: left;
+  line-height: 1.3;
+  padding: 0.625em;
+}
+
 /* ==========================================================================
    HELPERS
    Global overides. Utility classes intended to overide all other styles.
