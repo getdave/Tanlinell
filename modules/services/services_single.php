@@ -44,6 +44,8 @@ get_header(); ?>
 					<?php endforeach; ?>
 					</h5>
 					
+					<h4><?php the_excerpt(); ?></h4>
+					
 					<?php the_content(); ?>
 			   </div>
 			</div>
