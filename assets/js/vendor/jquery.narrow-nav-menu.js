@@ -4,13 +4,14 @@
 		// Default settings
 		var settings = {
 			wrapperClass: 'nav-menu-narrow', // Class name added to the inserted wrapper element
-			expandedClass: 'expanded', // Class name added to the wrapper when the menu is expanded
+			expandedClass: 'is-expanded', // Class name added to the wrapper when the menu is expanded
 			menuText: 'Menu', // The button's visible text
 			showText: 'show', // Text (visually hidden) that is added to the button when the menu is closed
 			hideText: 'hide' // Text (visually hidden) that is added to the button when the menu is open
 		};
 
-		var binding = (('ontouchstart' in window) || (window.DocumentTouch && document instanceof DocumentTouch)) ? 'touchstart' : 'click';
+
+		var binding = ("ontouchstart" in document.documentElement) ? 'touchstart' : 'click';
 
 		return this.each(function () {
 
@@ -25,8 +26,9 @@
 			var wrap = $this.parent();
 
 			// Create and insert the button before the menu
-			var $button = $('<button type="button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>');
-			$button.on(binding,function () {
+			var $button = $('<button type="button" class="nav-menu-toggle" title="Toggle navigation"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>');
+			
+			$button.on(binding,function() {
 				if (wrap.hasClass(settings.expandedClass)) {
 					hideMenu();
 				} else {

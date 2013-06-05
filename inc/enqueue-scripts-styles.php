@@ -37,6 +37,18 @@ function tanlinell_scripts() {
     if (!is_admin()) {
         wp_deregister_script('jquery');
         wp_register_script('jquery', '/wp-includes/js/jquery/jquery.js', false, false, true);
+				
+		$theID = '';
+        if(!empty($post->ID))
+        	$theID = $post->ID;
+		
+        $site_details = array(
+								'template_directory_uri'	=> get_template_directory_uri(),
+								'site_url'					=> get_site_url(),
+								'the_permalink'				=> get_permalink(),
+								'zlk_id'					=> $theID
+							);
+		wp_localize_script('jquery', 'tanlinell_site_details', $site_details );
         wp_enqueue_script('jquery');
     }
 
