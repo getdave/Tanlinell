@@ -14,7 +14,9 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
+		<?php do_atomic('before_post_content'); ?>		
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'tanlinell' ) ); ?>
+		<?php do_atomic('after_post_content'); ?>		
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tanlinell' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>

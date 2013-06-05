@@ -21,8 +21,9 @@
 			<?php }	?>
 	
 		
-	
+		<?php do_atomic('before_single_post_content'); ?>		
 		<?php the_content(); ?>
+		<?php do_atomic('after_single_post_content'); ?>		
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tanlinell' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 

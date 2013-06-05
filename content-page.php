@@ -11,8 +11,9 @@
 	<?php get_template_part( 'templates/partials/pagetitle' ); ?>
 
 	<div class="entry-content">
+		<?php do_atomic('before_page_content'); ?>	
 		<?php the_content(); ?>
+		<?php do_atomic('after_page_content'); ?>	
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tanlinell' ), 'after' => '</div>' ) ); ?>
-		<?php edit_post_link( __( 'Edit', 'tanlinell' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
