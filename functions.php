@@ -166,7 +166,14 @@ function tanlinell_setup() {
 	
 }
 endif; // tanlinell_setup
-add_action( 'after_setup_theme', 'tanlinell_setup' );
+
+/**
+ * Hook theme setup with priority of 10
+ * this allows us to hook up child theme setup with higher priority therefore
+ * ensuring that child theme setup runs after the parent theme
+ * http://justintadlock.com/archives/2010/12/30/wordpress-theme-function-files
+ */
+add_action( 'after_setup_theme', 'tanlinell_setup', 10 ); // 10 is the default but we're being explicit
 
 
 
