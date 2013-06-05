@@ -60,19 +60,15 @@ wp_title( '|', true, 'right' );
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<?php do_action( 'before' ); ?>
+	<?php do_atomic( 'before_banner' ); ?>
 	<header class="banner container-extend" role="banner">
 		<div class="banner-inner container">
-			<a class="site-logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img src="<?php echo get_template_directory_uri() ?>/assets/images/site-logo.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
-			</a>
-
-			
+			<?php get_template_part( 'templates/partials/site-logo' ); ?>
 			<div class="vh skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'tanlinell' ); ?>"><?php _e( 'Skip to content', 'tanlinell' ); ?></a></div>
 			<?php get_template_part( 'menu', 'primary' ); ?>
 		</div>	
 	</header><!-- #masthead .site-header -->
-
-	<div id="content" class="container site-content">
+	<?php do_atomic( 'after_banner' ); ?>
+	<div id="content" class="<?php echo apply_atomic( 'site_content_class', 'container site-content ' ); ?>">
 		<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail(); ?>
 	

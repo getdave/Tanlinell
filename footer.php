@@ -44,5 +44,6 @@
 
 <?php wp_footer(); ?>
 
+<?php do_atomic( 'before_close_body'); ?>
 </body>
 </html>
