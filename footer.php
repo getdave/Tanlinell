@@ -32,8 +32,7 @@
 			<?php get_template_part( 'menu', 'subsidiary' ); ?>	
 			<div class="site-info">
 				<?php 
-					$atts = array();
-					echo tanlinell_developer_credit($atts);
+					echo tanlinell_developer_credit();
 				?>		
 			</div><!-- .site-info -->
 		</div>
