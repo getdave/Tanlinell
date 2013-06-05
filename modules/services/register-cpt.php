@@ -41,12 +41,13 @@ function tanlinell_register_cpt_services() {
 			'has_archive' => false,
 			'query_var' => true,
 			'can_export' => true,
-			'rewrite' => array('slug'=>$slug,'with_front'=>false),
+			'rewrite' => array('slug'=>$slug,'with_front'=>true),
 			'capability_type' => 'post',
 			'menu_icon' => get_stylesheet_directory_uri() . '/assets/images/cpt-icons/service-bell.png',  // Icon Path
 	);
 
 	register_post_type( $slug, $args );
+	flush_rewrite_rules();
 }
 
 
@@ -90,8 +91,8 @@ add_action('do_meta_boxes', 'tanlinell_services_remove_defaults');
  */
 function build_services_taxonomies() {  
 	register_taxonomy(  
-		'service-types',  
-		'services',  
+		'service_types',  
+		'services',
 		array(  
 		    'hierarchical' => true,  
 		    'label' => 'Service Types',  
@@ -102,7 +103,6 @@ function build_services_taxonomies() {
 	);
 }
 add_action( 'init', 'build_services_taxonomies', 0 );
-
 
 
 
@@ -119,7 +119,7 @@ function tanlinell_services_create_page() {
 
 	// Setup the author, slug, and title for the post
 	$author_id = 1;
-	$slug = 'services';
+	$slug = 'services-list';
 	$title = 'Services';
 
 	// If the page doesn't already exist, then create it
@@ -166,9 +166,9 @@ function tanlinell_services_set_template( $template ) {
 	
 	if( is_singular('services') ) {
 		$template = get_stylesheet_directory() . '/modules/services/services_single.php';
-	} elseif ( has_term('','service-types') ) {
+	} elseif ( has_term('','service_types') ) {
 		$template = get_stylesheet_directory() . '/modules/services/services_category.php';
-	} elseif ( is_page('services') ) {
+	} elseif ( is_page('services-list') ) {
 		$template = get_stylesheet_directory() . '/modules/services/services_list.php';
 	}
 

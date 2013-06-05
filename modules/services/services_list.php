@@ -46,7 +46,7 @@ get_header();
 								$featured_image_alt = 'Image for '.ucwords(get_the_title()); //defaults if none found
 							
 											
-							$categories = wp_get_post_terms($post->ID, 'service-types', array("fields" => "slugs"));
+							$categories = wp_get_post_terms($post->ID, 'service_types', array("fields" => "slugs"));
 							
 						?>
 					
@@ -63,9 +63,9 @@ get_header();
 								<h5>
 								<?php
 								foreach($categories AS $slug) :
-								$term = get_term_by('slug', $slug, 'service-types')
+								$term = get_term_by('slug', $slug, 'service_types')
 								?>
-								<a href="<?php echo get_term_link($term->slug,'service-types');?>"><?php echo $term->name; ?></a>								
+								<a href="<?php echo get_term_link($term->slug,'service_types');?>"><?php echo $term->name; ?></a>								
 								<?php endforeach; ?>
 								</h5>
 								
