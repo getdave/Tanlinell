@@ -4,7 +4,7 @@
 		'theme_location' => 'subsidiary', 
 		'container' => 'nav', 
 		'container_class' => 'menu menu-subsidiary', 
-		'menu_class' => 'nav-subsidiary', 
+		'menu_class' => 'nav-subsidiary inline-list inline-list--divided', 
 		'menu_id' => 'nav-subsidiary', 
 		'fallback_cb' => '',
 		'depth' => 1
