@@ -1041,7 +1041,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1370421097');
+    background-image: url('../images/select_arrow.png?1370430313');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2989,7 +2989,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1370421097');
+  background-image: url('../images/site-logo.png?1370430313');
   width: 200px;
   height: 80px;
 }
@@ -3028,18 +3028,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1370421097');
+  background-image: url('../images/site-credit.png?1370430313');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1370421097');
+  background-image: url('../images/site-credit--dark.svg?1370430313');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1370421097');
+  background-image: url('../images/site-credit--dark.png?1370430313');
 }
 
 /* ==========================================================================
