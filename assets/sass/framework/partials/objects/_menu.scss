@@ -8,6 +8,39 @@
 
 
 
+// ==========================================================================
+// SILENT
+// ==========================================================================
+
+// TOP LEVEL
+// ==========================================================================
+
+// Navigation <ul> itself
+%responsive-nav {
+	@extend %nav;
+}
+
+// Top Level Nav Items
+%responsive-nav__item {
+	position: relative;	
+
+	@include respond-to($mobileBreak) {
+		float: left;			
+	}
+}
+
+%responsive-nav__link {
+	display: block;		
+	padding: rsize(10px) rsize(20px);
+	text-align: left;	
+	text-decoration: none;
+
+	@include respond-to($mobileBreak) {
+		text-align: center;	
+	}
+}
+
+
 
 // ==========================================================================
 // NAV PRIMARY
@@ -15,39 +48,17 @@
 
 .nav-primary,
 .nav-primary ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	overflow: visible;
-	clear: both;
-	@include clearfix;
+	@extend %responsive-nav;
 }
 
 .nav-primary {
 
 	> li {
-		position: relative;	
-	
-		@include respond-to($mobileBreak) {
-			float: left;			
-		}
+		@extend %responsive-nav__item;		
 	}
 
 	a {
-		display: block;		
-		padding: rsize(10px) rsize(20px);
-		color: $navbarLinkColor;	
-		text-align: left;	
-		text-decoration: none;
-
-		@include respond-to($mobileBreak) {
-			text-align: center;	
-		}
-
-		&:hover,
-		&:focus {
-			color: $navbarLinkColorHover;
-		}
+		@extend %responsive-nav__link;		
 	}	
 }
 

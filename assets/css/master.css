@@ -1047,7 +1047,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1370418880');
+    background-image: url('../images/select_arrow.png?1370421097');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1942,21 +1942,11 @@ Borrowed from inuit.css
     </ul>
  */
 /* line 14, ../sass/framework/partials/objects/_nav.scss */
-.nav {
+.nav-primary,
+.nav-primary ul {
   list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-/* line 22, ../sass/framework/partials/objects/_nav.scss */
-.nav > li,
-.nav > li > a {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
+  margin: 0;
+  padding: 0;
 }
 
 /* ##Stacked */
@@ -1969,31 +1959,6 @@ Borrowed from inuit.css
         <li><a href="#">Contact</a></li>
     </ul>
 */
-/* line 37, ../sass/framework/partials/objects/_nav.scss */
-.nav-stacked > li {
-  display: list-item;
-}
-
-/* line 40, ../sass/framework/partials/objects/_nav.scss */
-.nav-stacked > li > a {
-  display: block;
-}
-
-/* ##Banner */
-/* `.nav-banner` extends `.nav` and centres the list. */
-/*
-    <ul class="nav nav-banner">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-  */
-/* line 56, ../sass/framework/partials/objects/_nav.scss */
-.nav-banner {
-  text-align: center;
-}
-
 /* #Buttons */
 /* Adding the class `.btn` to an anchor `<button>` or `<input>` provides extra visual weight and identifies the primary action in a set of buttons.
 
@@ -2881,67 +2846,39 @@ html[xmlns] .slides {
    COMMON
    Common components/requirements for standard websites
    ========================================================================== */
-/* line 17, ../sass/framework/partials/objects/_menu.scss */
-.nav-primary,
-.nav-primary ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: visible;
-  clear: both;
-  zoom: 1;
-}
-/* line 86, ../sass/framework/partials/base/_mixins.scss */
-.nav-primary:before,
-.nav-primary ul:before {
-  content: "";
-  display: table;
-}
-/* line 91, ../sass/framework/partials/base/_mixins.scss */
-.nav-primary:after,
-.nav-primary ul:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 28, ../sass/framework/partials/objects/_menu.scss */
+/* line 24, ../sass/framework/partials/objects/_menu.scss */
 .nav-primary > li {
   position: relative;
 }
 @media only screen and (min-width: 768px) {
-  /* line 28, ../sass/framework/partials/objects/_menu.scss */
+  /* line 24, ../sass/framework/partials/objects/_menu.scss */
   .nav-primary > li {
     float: left;
   }
 }
-/* line 36, ../sass/framework/partials/objects/_menu.scss */
+
+/* line 32, ../sass/framework/partials/objects/_menu.scss */
 .nav-primary a {
   display: block;
   padding: 0.625em 1.25em;
-  color: #333333;
   text-align: left;
   text-decoration: none;
 }
 @media only screen and (min-width: 768px) {
-  /* line 36, ../sass/framework/partials/objects/_menu.scss */
+  /* line 32, ../sass/framework/partials/objects/_menu.scss */
   .nav-primary a {
     text-align: center;
   }
 }
-/* line 48, ../sass/framework/partials/objects/_menu.scss */
-.nav-primary a:hover, .nav-primary a:focus {
-  color: white;
-}
 
 @media only screen and (min-width: 768px) {
-  /* line 58, ../sass/framework/partials/objects/_menu.scss */
+  /* line 69, ../sass/framework/partials/objects/_menu.scss */
   .nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
     left: 0;
   }
 }
 
-/* line 68, ../sass/framework/partials/objects/_menu.scss */
+/* line 79, ../sass/framework/partials/objects/_menu.scss */
 .nav-fixed {
   position: fixed;
   top: 0;
@@ -2950,7 +2887,7 @@ html[xmlns] .slides {
   z-index: 1030;
 }
 
-/* line 80, ../sass/framework/partials/objects/_menu.scss */
+/* line 91, ../sass/framework/partials/objects/_menu.scss */
 .sub-menu {
   position: absolute;
   top: auto;
@@ -2960,7 +2897,7 @@ html[xmlns] .slides {
   direction: ltr;
   background-color: #999999;
 }
-/* line 89, ../sass/framework/partials/objects/_menu.scss */
+/* line 100, ../sass/framework/partials/objects/_menu.scss */
 .sub-menu li {
   vertical-align: bottom;
   /* This fixes the IE5 Win gap (no harm done to modern browsers) */
@@ -2970,7 +2907,7 @@ html[xmlns] .slides {
   clear: both;
   display: list-item;
 }
-/* line 97, ../sass/framework/partials/objects/_menu.scss */
+/* line 108, ../sass/framework/partials/objects/_menu.scss */
 .sub-menu li a {
   white-space: nowrap;
   /* forces drop down to stretch to accommodate length of text (and not wrap) */
@@ -3073,18 +3010,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1370418881');
+  background-image: url('../images/site-credit.png?1370421097');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1370418880');
+  background-image: url('../images/site-credit--dark.svg?1370421097');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1370418880');
+  background-image: url('../images/site-credit--dark.png?1370421097');
 }
 
 /* ==========================================================================
@@ -3176,14 +3113,17 @@ html[xmlns] .slides {
 */
 /* line 50, ../sass/framework/partials/base/_helpers.scss */
 .clearfix, .island, .headed-island,
-.islet, .nav,
+.islet, .nav-primary,
+.nav-primary ul,
 .cf {
   zoom: 1;
 }
 /* line 54, ../sass/framework/partials/base/_helpers.scss */
 .clearfix:before, .island:before, .headed-island:before,
-.islet:before, .nav:before, .clearfix:after, .island:after, .headed-island:after,
-.islet:after, .nav:after,
+.islet:before, .nav-primary:before,
+.nav-primary ul:before, .clearfix:after, .island:after, .headed-island:after,
+.islet:after, .nav-primary:after,
+.nav-primary ul:after,
 .cf:before,
 .cf:after {
   content: "";
@@ -3191,7 +3131,8 @@ html[xmlns] .slides {
 }
 /* line 59, ../sass/framework/partials/base/_helpers.scss */
 .clearfix:after, .island:after, .headed-island:after,
-.islet:after, .nav:after,
+.islet:after, .nav-primary:after,
+.nav-primary ul:after,
 .cf:after {
   clear: both;
 }
