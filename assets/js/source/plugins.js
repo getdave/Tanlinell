@@ -25,4 +25,15 @@
 	});
 
 
+
+	/**
+	 * NARROW MENU
+	 *
+	 * Initialise the Narrow menu for small screen navs
+	 */
+	$(document).ready(function(){
+		$("#nav-primary").narrowNavMenu();
+	});
+
+
 }(jQuery));
