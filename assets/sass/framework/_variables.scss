@@ -177,7 +177,7 @@ $infoBorder:              		darken(adjust-hue($infoBackground, -10), 7%);
 // NAVBAR
 // ==========================================================================
 
-$navbarBackground: 				$grayLight;
+$navbarBackground: 				$grayLighter;
 $navbarLinkColor: 				$grayDark;
 $navbarLinkColorHover: 			$white;
 
@@ -193,5 +193,12 @@ $button_background_shader-f     : url(../images/site/button-shader.png) left cen
 
 
 
+
+// ==========================================================================
+// ICONS
+// ==========================================================================
+
+// Social Icons
+$icons-social: 					false !default;
 
 

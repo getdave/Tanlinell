@@ -23,15 +23,16 @@
  * Inuit.css 				- https://raw.github.com/csswizardry/inuit.css/
  * SMACSS guidelines 		- http://smacss.com/
  * Twitter Bootstrap		- http://twitter.github.com/bootstrap/
- * ZURB Foundation		- http://foundation.zurb.com/
+ * ZURB Foundation			- http://foundation.zurb.com/
  *
  */
 
 
 
-/* ==========================================================================
-   LIBRARIES & FRAMEWORKS
-   ========================================================================== */
+
+// ==========================================================================
+// LIBRARIES & FRAMEWORKS
+// ==========================================================================
 
 	// Compass
 	@import "compass";
@@ -52,6 +53,8 @@
    Base for framework. Mostly global, tag-based selector rules.
    ========================================================================== */
 
+	// Normalize
+	@import "partials/base/_normalize.scss";
 
 	// Block level (h1, p) and text-level (em, strong) type...etc
 	@import "partials/base/_typo.scss";
@@ -88,11 +91,17 @@
 	// Hero Unit
 	@import "partials/objects/_hero-unit.scss";
 
+	// Menu
+	@import "partials/objects/_menu.scss";
+
 	// Item List
 	@import "partials/objects/_item-list.scss";
 
 	// Block Lists
 	@import "partials/objects/_block-list.scss";
+
+	// Controls - common control styles interactive navigation elements
+	@import "partials/objects/_controls.scss";
 
 	// "Nav" object - floated lists of content
 	@import "partials/objects/_nav.scss";
@@ -141,17 +150,24 @@
    Common components/requirements for standard websites
    ========================================================================== */
 
-	// Menu
-	@import "partials/objects/_menu.scss";
+   	// Primary Nav
+	@import "partials/common/_primary-nav.scss";
 
 	// Site logo
 	@import "partials/common/_site-logo.scss";
 
 	// Site Credit
 	@import "partials/common/site-credit.scss";
-
+	
 	// Columns
 	@import "partials/common/_columns.scss";
+
+	// Social Icons (conditional)
+	@import "partials/common/social-icons.scss";
+
+	// Gallery
+	@import "partials/common/_gallery.scss";
+	
 
 
 

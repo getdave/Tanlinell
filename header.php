@@ -45,8 +45,6 @@ wp_title( '|', true, 'right' );
 
 
 <!-- CSS FRAMEWORK -->
-<!-- Normalize - included separately -->
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/normalize.css">
 <!--[if (gt IE 8) | (IEMobile)]><!-->
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/master.css">
 <!--<![endif]-->

@@ -11,16 +11,13 @@
     </ul>
  */
 
-.nav {
-    list-style:none;
-    margin-left:0;
-    padding-left: 0;
+%nav {
+    @include list-reset;
     @extend .clearfix;
 }
 
-.nav > li,
-.nav > li > a {
-    @include inline-block;
+%nav__item {
+    float: left;
 }
 
 /* ##Stacked */
@@ -34,25 +31,14 @@
     </ul>
 */
 
-.nav-stacked > li {
+%nav--stacked {
+
+}
+
+%nav--stacked__item {
     display:list-item;
-}
-.nav-stacked > li > a{
-    display:block;
+    float: none;
 }
 
 
-/* ##Banner */
-/* `.nav-banner` extends `.nav` and centres the list. */
-/*
-    <ul class="nav nav-banner">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-  */
 
-.nav-banner {
-    text-align:center;
-}

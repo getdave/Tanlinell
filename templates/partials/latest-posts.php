@@ -5,7 +5,8 @@ $args = array(
 	'posts_per_page'		=> 3,
 	'ignore_sticky_posts' 	=> 1
 );
-$latest_blog_posts = new WP_Query($args);
+
+$latest_blog_posts = new WP_Query( apply_filters( 'tanlinell_latest_post_query', $args ) );
 
 if($latest_blog_posts->have_posts()) : ?>
 <ul class="latest-posts__list">
@@ -13,7 +14,7 @@ if($latest_blog_posts->have_posts()) : ?>
 	<li class="latest-posts__item">
 		<article>
 			<?php the_title( '<h6 class="">', '</h6>' ); ?>
-			<?php tanlinell_truncate_posts(157,' [read more...]') ?>
+			<?php tanlinell_truncate_posts(apply_filters( 'tanlinell_latest_post_truncate', 157 ),' [read more...]') ?>
 		</article>
 	</li>
 <?php endwhile;

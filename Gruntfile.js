@@ -65,14 +65,7 @@ module.exports = function(grunt) {
             all: [
                 'Gruntfile.js',
                 'assets/js/source/**/*.js'
-            ],
-			"globals": {
-				"Backbone": true,
-				"_": true,
-				"jQuery": true,
-				"Modernizr": true,
-				"WebFontConfig": true
-			}
+            ]
 		},
 
         // uglify to concat, minify, and make source maps

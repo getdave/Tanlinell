@@ -59,8 +59,8 @@ $baseLineHeight:        		1.666em;
 //$gutter: 						3;		// gutter between each column
 
 // Include "push-" and "pull-" classes for source reordering?
-$bGridPushClasses:				true;
-$bGridPullClasses:				true;
+$bGridPushClasses:				false;
+$bGridPullClasses:				false;
 
 // Do we want to use the packaged grid breakpoints
 // If not we need to create our own by including
@@ -116,7 +116,14 @@ $break-xlarge:          1382px;
 // grid system switches from full to "linearised" layout.
 // Don't really like this but can't think of a better way whilst
 // maintaining the required flexability
-$mobileBreak:			$break-large;
+$mobileBreak:			medium;
 
 
 
+
+// ==========================================================================
+// ICONS
+// ==========================================================================
+
+// Social Icons
+//$icons-social: 			true;

@@ -1,7 +1,14 @@
+<?php
+	$description 	= get_bloginfo( 'description' );
+
+	$latitude 		= of_get_option( 'contact_address_latitude' );
+	$longitude 		= of_get_option( 'contact_address_longitude' );
+?>
+
 <div class="vcard" itemscope itemtype="http://schema.org/Organization">
 		
 	<div itemprop="name"><?php echo bloginfo( 'name' ); ?></div>
-	<div class="vh" itemprop="description"><?php echo bloginfo( 'description' ); ?></div>
+	<div class="vh" itemprop="description"><?php echo ($description !== "Just another WordPress site") ? $description : ''?></div>
 	
 	<?php 
 	if(of_get_option( 'contact_address_latitude' ))
@@ -78,8 +85,14 @@
 		<?php endif; ?>
 			
 	<?php endif; ?>
-	
 </div>
+
+<?php if ($latitude && $longitude) { ?>
+<div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+	<meta itemprop="latitude" content="<?php echo esc_attr( $latitude ); ?>" />
+	<meta itemprop="longitude" content="<?php echo esc_attr( $longitude ); ?>" />
+</div>
+<?php } ?>
 
 
 

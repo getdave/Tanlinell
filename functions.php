@@ -35,11 +35,6 @@ if ( ! function_exists( 'tanlinell_setup' ) ):
 
 function tanlinell_setup() {
 	
-	/**
-	 * Modify the head
-	 */
-	require( get_template_directory() . '/inc/modify-wp-header.php' );
-	
 
 	/**
 	 * TGM Required Plugins Script
@@ -109,13 +104,6 @@ function tanlinell_setup() {
 	 */	
 	require( get_template_directory() . '/inc/add-theme-support.php' );
 
-
-
-	/**
-	 * Register Nav Menus
-	 * This theme uses wp_nav_menu() in one location.
-	 */	
-	require( get_template_directory() . '/inc/register-nav-menus.php' );
 
 
 	/**

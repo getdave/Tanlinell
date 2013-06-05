@@ -1,0 +1,116 @@
+/* #Social Icons */
+
+
+// Only include if specified in config file
+@if ($icons-social == true) {	
+
+	// ==========================================================================
+	// FONTFACE
+	// ==========================================================================
+
+	@font-face {
+		font-family: 'social-icons';
+		src: url('../fonts/social-icons/font/social-icons.eot?92693809');
+		src: url('../fonts/social-icons/font/social-icons.eot?92693809#iefix') format('embedded-opentype'),
+		   url('../fonts/social-icons/font/social-icons.woff?92693809') format('woff'),
+		   url('../fonts/social-icons/font/social-icons.ttf?92693809') format('truetype'),
+		   url('../fonts/social-icons/font/social-icons.svg?92693809#social-icons') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+
+
+	// ==========================================================================
+	// ICON RULES
+	// ==========================================================================
+	 
+	[class^="icon-"]:before, [class*=" icon-"]:before {
+		font-family: "social-icons";
+		font-style: normal;
+		font-weight: normal;
+		speak: none;
+
+		display: inline-block;
+		text-decoration: inherit;
+		width: 1em;
+		margin-right: .2em;
+		text-align: center;
+		/* opacity: .8; */
+
+		/* For safety - reset parent styles, that can break glyph codes*/
+		font-variant: normal;
+		text-transform: none;
+
+		/* fix buttons height, for twitter bootstrap */
+		line-height: 1em;
+
+		/* Animation center compensation - margins should be symmetric */
+		/* remove if not needed */
+		margin-left: .2em;
+
+		/* you can be more comfortable with increased icons size */
+		/* font-size: 120%; */
+
+		/* Uncomment for 3D effect */
+		/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+	}
+	 
+	.icon-linkedin:before { content: '\4c'; } /* 'L' */
+	.icon-twitter:before { content: '\54'; } /* 'T' */
+	.icon-youtube:before { content: '\e803'; } /* '' */
+	.icon-vimeo:before { content: '\e802'; } /* '' */
+	.icon-facebook:before { content: '\66'; } /* 'f' */
+	.icon-googleplus-rect:before { content: '\e801'; } /* '' */
+
+
+
+	// IE FALLBACK
+	// ==========================================================================
+
+	.lt-ie7 {
+		[class^="icon-"], [class*=" icon-"] {
+			font-family: 'social-icons';
+			font-style: normal;
+			font-weight: normal;
+
+			/* fix buttons height */
+			line-height: 1em;
+
+			/* you can be more comfortable with increased icons size */
+			/* font-size: 120%; */
+		}
+		 
+		.icon-linkedin { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x4c;&nbsp;'); }
+		.icon-twitter { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x54;&nbsp;'); }
+		.icon-youtube { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+		.icon-vimeo { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+		.icon-facebook { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x66;&nbsp;'); }
+		.icon-googleplus-rect { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+	}
+
+
+
+	// ==========================================================================
+	// SOCIAL LINKS
+	// ==========================================================================
+
+	.social-icons {
+		@extend .inline-list;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.social-icons__icon {
+		font-size: rsize(30px,16px);
+	}
+
+	.social-icons__name {
+		@extend .vh;
+	}
+
+
+} // end conditional
+

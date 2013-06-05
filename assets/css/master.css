@@ -22,12 +22,9 @@
  * Inuit.css 				- https://raw.github.com/csswizardry/inuit.css/
  * SMACSS guidelines 		- http://smacss.com/
  * Twitter Bootstrap		- http://twitter.github.com/bootstrap/
- * ZURB Foundation		- http://foundation.zurb.com/
+ * ZURB Foundation			- http://foundation.zurb.com/
  *
  */
-/* ==========================================================================
-   LIBRARIES & FRAMEWORKS
-   ========================================================================== */
 @-ms-viewport {
   width: device-width;
 }
@@ -36,6 +33,464 @@
    BASE
    Base for framework. Mostly global, tag-based selector rules.
    ========================================================================== */
+/* normalize.css 2012-01-31T16:06 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/* line 6, ../sass/framework/partials/base/_normalize.scss */
+html {
+  overflow-y: scroll;
+  /* Alaways force a scrollbar in non-IE */
+}
+
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 23, ../sass/framework/partials/base/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 33, ../sass/framework/partials/base/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ */
+/* line 43, ../sass/framework/partials/base/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+/* line 52, ../sass/framework/partials/base/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+/* line 68, ../sass/framework/partials/base/_normalize.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* 
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+/* line 82, ../sass/framework/partials/base/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+/* line 90, ../sass/framework/partials/base/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+/* line 103, ../sass/framework/partials/base/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+/* line 113, ../sass/framework/partials/base/_normalize.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+/* line 126, ../sass/framework/partials/base/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+/* line 135, ../sass/framework/partials/base/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 139, ../sass/framework/partials/base/_normalize.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+/* line 147, ../sass/framework/partials/base/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+/* line 155, ../sass/framework/partials/base/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+/* line 168, ../sass/framework/partials/base/_normalize.scss */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+/* line 178, ../sass/framework/partials/base/_normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+/* 1 */
+/* line 191, ../sass/framework/partials/base/_normalize.scss */
+q {
+  quotes: none;
+}
+
+/* 2 */
+/* line 198, ../sass/framework/partials/base/_normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* line 203, ../sass/framework/partials/base/_normalize.scss */
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+/* line 213, ../sass/framework/partials/base/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 220, ../sass/framework/partials/base/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 224, ../sass/framework/partials/base/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/* line 234, ../sass/framework/partials/base/_normalize.scss */
+ul,
+ol {
+  margin-left: 0;
+  padding: 0 0 0 40px;
+}
+
+/* line 239, ../sass/framework/partials/base/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/* line 244, ../sass/framework/partials/base/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+/* line 260, ../sass/framework/partials/base/_normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+  vertical-align: bottom;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9 
+ */
+/* line 270, ../sass/framework/partials/base/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+/* line 283, ../sass/framework/partials/base/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+/* line 296, ../sass/framework/partials/base/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+/* line 304, ../sass/framework/partials/base/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3 
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+/* line 316, ../sass/framework/partials/base/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+/* line 332, ../sass/framework/partials/base/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+/* line 344, ../sass/framework/partials/base/_normalize.scss */
+button,
+input {
+  line-height: normal;
+  /* 1 */
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+/* line 358, ../sass/framework/partials/base/_normalize.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 1 */
+  -webkit-appearance: button;
+  /* 2 */
+  *overflow: visible;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+/* line 369, ../sass/framework/partials/base/_normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+      Known issue: excess padding remains in IE6
+ */
+/* line 381, ../sass/framework/partials/base/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+/* line 393, ../sass/framework/partials/base/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+/* line 405, ../sass/framework/partials/base/_normalize.scss */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+/* line 415, ../sass/framework/partials/base/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+/* line 425, ../sass/framework/partials/base/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/* 
+ * Remove most spacing between table cells
+ */
+/* line 439, ../sass/framework/partials/base/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* #Typography */
 /* 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque suscipit voluptas illo maiores optio cupiditate nam repellat ad voluptatum vitae ipsum quia quae fugiat laborum architecto dignissimos sit! Facere nobis!</p>
@@ -242,6 +697,27 @@ h6, .h6 {
 /* ###Misc Headings */
 /* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
 /* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
+@media only screen and (min-width: 768px) {
+  /* line 67, ../sass/framework/partials/base/_headings.scss */
+  .giga {
+    font-size: 6em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 75, ../sass/framework/partials/base/_headings.scss */
+  .mega {
+    font-size: 4.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 82, ../sass/framework/partials/base/_headings.scss */
+  .kilo {
+    font-size: 3em;
+  }
+}
+
 /* #Forms */
 /* line 5, ../sass/framework/partials/base/_forms.scss */
 label {
@@ -571,7 +1047,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1367227794');
+    background-image: url('../images/select_arrow.png?1370433159');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -672,7 +1148,7 @@ optgroup::-moz-focus-inner {
 	</div>
 */
 /* line 28, ../sass/framework/partials/base/_grid.scss */
-.grid-wrap, .large-gutter, .half-gutter, .no-gutter, .column-container {
+.grid-wrap, .large-gutter, .half-gutter, .gallery-row, .no-gutter, .column-container {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -681,12 +1157,12 @@ optgroup::-moz-focus-inner {
   zoom: 1;
 }
 /* line 86, ../sass/framework/partials/base/_mixins.scss */
-.grid-wrap:before, .large-gutter:before, .half-gutter:before, .no-gutter:before, .column-container:before {
+.grid-wrap:before, .large-gutter:before, .half-gutter:before, .gallery-row:before, .no-gutter:before, .column-container:before {
   content: "";
   display: table;
 }
 /* line 91, ../sass/framework/partials/base/_mixins.scss */
-.grid-wrap:after, .large-gutter:after, .half-gutter:after, .no-gutter:after, .column-container:after {
+.grid-wrap:after, .large-gutter:after, .half-gutter:after, .gallery-row:after, .no-gutter:after, .column-container:after {
   content: "";
   display: table;
   clear: both;
@@ -698,7 +1174,7 @@ optgroup::-moz-focus-inner {
 }
 
 /* line 42, ../sass/framework/partials/base/_grid.scss */
-.half-gutter {
+.half-gutter, .gallery-row {
   margin-left: -1.5em;
 }
 
@@ -721,41 +1197,58 @@ optgroup::-moz-focus-inner {
 .g1-12, .gonecolumns, .g1-6, .gtwocolumns, .g1-4, .gthreecolumns, .g1-3, .gfourcolumns, .gfivecolumns, .g1-2, .gsixcolumns, .gsevencolumns, .g2-3, .geightcolumns, .g3-4, .gninecolumns, .gtencolumns, .gelevencolumns, .g1-1, .gtwelvecolumns,
 .gc,
 .main,
-.sub {
+.sub,
+.gallery-row .col-2,
+.gallery-row .col-3,
+.gallery-row .col-4,
+.gallery-row .col-6,
+.gallery-row .col-5 {
   width: 100%;
   padding-left: 3em;
   float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(boxsizing.htc);
+  *behavior: url(/boxsizing.htc);
 }
 /* line 78, ../sass/framework/partials/base/_grid.scss */
 .large-gutter .g1-12, .large-gutter .gonecolumns, .large-gutter .g1-6, .large-gutter .gtwocolumns, .large-gutter .g1-4, .large-gutter .gthreecolumns, .large-gutter .g1-3, .large-gutter .gfourcolumns, .large-gutter .gfivecolumns, .large-gutter .g1-2, .large-gutter .gsixcolumns, .large-gutter .gsevencolumns, .large-gutter .g2-3, .large-gutter .geightcolumns, .large-gutter .g3-4, .large-gutter .gninecolumns, .large-gutter .gtencolumns, .large-gutter .gelevencolumns, .large-gutter .g1-1, .large-gutter .gtwelvecolumns, .large-gutter
 .gc, .large-gutter
 .main,
-.large-gutter .sub {
+.large-gutter .sub, .large-gutter .gallery-row .col-2, .gallery-row .large-gutter .col-2, .large-gutter .gallery-row .col-3, .gallery-row .large-gutter .col-3, .large-gutter .gallery-row .col-4, .gallery-row .large-gutter .col-4, .large-gutter .gallery-row .col-6, .gallery-row .large-gutter .col-6,
+.large-gutter .gallery-row .col-5,
+.gallery-row .large-gutter .col-5 {
   padding-left: 6em;
 }
 /* line 82, ../sass/framework/partials/base/_grid.scss */
-.half-gutter .g1-12, .half-gutter .gonecolumns, .half-gutter .g1-6, .half-gutter .gtwocolumns, .half-gutter .g1-4, .half-gutter .gthreecolumns, .half-gutter .g1-3, .half-gutter .gfourcolumns, .half-gutter .gfivecolumns, .half-gutter .g1-2, .half-gutter .gsixcolumns, .half-gutter .gsevencolumns, .half-gutter .g2-3, .half-gutter .geightcolumns, .half-gutter .g3-4, .half-gutter .gninecolumns, .half-gutter .gtencolumns, .half-gutter .gelevencolumns, .half-gutter .g1-1, .half-gutter .gtwelvecolumns, .half-gutter
+.half-gutter .g1-12, .gallery-row .g1-12, .half-gutter .gonecolumns, .gallery-row .gonecolumns, .half-gutter .g1-6, .gallery-row .g1-6, .half-gutter .gtwocolumns, .gallery-row .gtwocolumns, .half-gutter .g1-4, .gallery-row .g1-4, .half-gutter .gthreecolumns, .gallery-row .gthreecolumns, .half-gutter .g1-3, .gallery-row .g1-3, .half-gutter .gfourcolumns, .gallery-row .gfourcolumns, .half-gutter .gfivecolumns, .gallery-row .gfivecolumns, .half-gutter .g1-2, .gallery-row .g1-2, .half-gutter .gsixcolumns, .gallery-row .gsixcolumns, .half-gutter .gsevencolumns, .gallery-row .gsevencolumns, .half-gutter .g2-3, .gallery-row .g2-3, .half-gutter .geightcolumns, .gallery-row .geightcolumns, .half-gutter .g3-4, .gallery-row .g3-4, .half-gutter .gninecolumns, .gallery-row .gninecolumns, .half-gutter .gtencolumns, .gallery-row .gtencolumns, .half-gutter .gelevencolumns, .gallery-row .gelevencolumns, .half-gutter .g1-1, .gallery-row .g1-1, .half-gutter .gtwelvecolumns, .gallery-row .gtwelvecolumns, .half-gutter
+.gc, .gallery-row
 .gc, .half-gutter
+.main, .gallery-row
 .main,
-.half-gutter .sub {
+.half-gutter .sub,
+.gallery-row .sub, .half-gutter .gallery-row .col-2, .gallery-row .half-gutter .col-2, .gallery-row .col-2, .half-gutter .gallery-row .col-3, .gallery-row .half-gutter .col-3, .gallery-row .col-3, .half-gutter .gallery-row .col-4, .gallery-row .half-gutter .col-4, .gallery-row .col-4, .half-gutter .gallery-row .col-6, .gallery-row .half-gutter .col-6, .gallery-row .col-6,
+.half-gutter .gallery-row .col-5,
+.gallery-row .half-gutter .col-5,
+.gallery-row .col-5 {
   padding-left: 1.5em;
 }
 /* line 86, ../sass/framework/partials/base/_grid.scss */
 .no-gutter .g1-12, .no-gutter .gonecolumns, .no-gutter .g1-6, .no-gutter .gtwocolumns, .no-gutter .g1-4, .no-gutter .gthreecolumns, .no-gutter .g1-3, .no-gutter .gfourcolumns, .no-gutter .gfivecolumns, .no-gutter .g1-2, .no-gutter .gsixcolumns, .no-gutter .gsevencolumns, .no-gutter .g2-3, .no-gutter .geightcolumns, .no-gutter .g3-4, .no-gutter .gninecolumns, .no-gutter .gtencolumns, .no-gutter .gelevencolumns, .no-gutter .g1-1, .no-gutter .gtwelvecolumns, .no-gutter
 .gc, .no-gutter
 .main,
-.no-gutter .sub {
+.no-gutter .sub, .no-gutter .gallery-row .col-2, .gallery-row .no-gutter .col-2, .no-gutter .gallery-row .col-3, .gallery-row .no-gutter .col-3, .no-gutter .gallery-row .col-4, .gallery-row .no-gutter .col-4, .no-gutter .gallery-row .col-6, .gallery-row .no-gutter .col-6,
+.no-gutter .gallery-row .col-5,
+.gallery-row .no-gutter .col-5 {
   padding-left: 0;
 }
 /* line 90, ../sass/framework/partials/base/_grid.scss */
 .grid-ib .g1-12, .grid-ib .gonecolumns, .grid-ib .g1-6, .grid-ib .gtwocolumns, .grid-ib .g1-4, .grid-ib .gthreecolumns, .grid-ib .g1-3, .grid-ib .gfourcolumns, .grid-ib .gfivecolumns, .grid-ib .g1-2, .grid-ib .gsixcolumns, .grid-ib .gsevencolumns, .grid-ib .g2-3, .grid-ib .geightcolumns, .grid-ib .g3-4, .grid-ib .gninecolumns, .grid-ib .gtencolumns, .grid-ib .gelevencolumns, .grid-ib .g1-1, .grid-ib .gtwelvecolumns, .grid-ib
 .gc, .grid-ib
 .main,
-.grid-ib .sub {
+.grid-ib .sub, .grid-ib .gallery-row .col-2, .gallery-row .grid-ib .col-2, .grid-ib .gallery-row .col-3, .gallery-row .grid-ib .col-3, .grid-ib .gallery-row .col-4, .gallery-row .grid-ib .col-4, .grid-ib .gallery-row .col-6, .gallery-row .grid-ib .col-6,
+.grid-ib .gallery-row .col-5,
+.gallery-row .grid-ib .col-5 {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -769,7 +1262,8 @@ optgroup::-moz-focus-inner {
 .grid-divide > .g1-12, .grid-divide > .gonecolumns, .grid-divide > .g1-6, .grid-divide > .gtwocolumns, .grid-divide > .g1-4, .grid-divide > .gthreecolumns, .grid-divide > .g1-3, .grid-divide > .gfourcolumns, .grid-divide > .gfivecolumns, .grid-divide > .g1-2, .grid-divide > .gsixcolumns, .grid-divide > .gsevencolumns, .grid-divide > .g2-3, .grid-divide > .geightcolumns, .grid-divide > .g3-4, .grid-divide > .gninecolumns, .grid-divide > .gtencolumns, .grid-divide > .gelevencolumns, .grid-divide > .g1-1, .grid-divide > .gtwelvecolumns, .grid-divide >
 .gc, .grid-divide >
 .main,
-.grid-divide > .sub {
+.grid-divide > .sub, .gallery-row .grid-divide > .col-2, .gallery-row .grid-divide > .col-3, .gallery-row .grid-divide > .col-4, .gallery-row .grid-divide > .col-6,
+.gallery-row .grid-divide > .col-5 {
   margin-bottom: 1.666em;
 }
 
@@ -851,7 +1345,8 @@ optgroup::-moz-focus-inner {
   }
 
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
-  .l1-3, .lfourcolumns {
+  .l1-3, .gallery-row .col-3, .gallery-row .col-6,
+  .gallery-row .col-5, .lfourcolumns {
     width: 33.33333%;
   }
 
@@ -861,7 +1356,7 @@ optgroup::-moz-focus-inner {
   }
 
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
-  .l1-2, .lsixcolumns {
+  .l1-2, .gallery-row .col-2, .gallery-row .col-4, .lsixcolumns {
     width: 50%;
   }
 
@@ -902,12 +1397,14 @@ optgroup::-moz-focus-inner {
   }
 
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
-  .d1-6, .dtwocolumns {
+  .d1-6, .gallery-row .col-6,
+  .gallery-row .col-5, .dtwocolumns {
     width: 16.66667%;
   }
 
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
-  .d1-4, .sub, .dthreecolumns {
+  .d1-4, .layout-2c-r .sub,
+  .sub, .gallery-row .col-4, .dthreecolumns {
     width: 25%;
   }
 
@@ -937,7 +1434,8 @@ optgroup::-moz-focus-inner {
   }
 
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
-  .d3-4, .main, .dninecolumns {
+  .d3-4, .layout-2c-r .main,
+  .main, .dninecolumns {
     width: 75%;
   }
 
@@ -1368,6 +1866,83 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
   bottom: 10%;
 }
 
+/* line 18, ../sass/framework/partials/objects/_menu.scss */
+.nav-primary {
+  position: relative;
+  background-color: #eeeeee;
+}
+
+/* line 29, ../sass/framework/partials/objects/_menu.scss */
+.nav-primary > li {
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  /* line 29, ../sass/framework/partials/objects/_menu.scss */
+  .nav-primary > li {
+    float: left;
+  }
+}
+
+/* line 38, ../sass/framework/partials/objects/_menu.scss */
+.nav-primary a {
+  display: block;
+  padding: 0.625em 1.25em;
+  text-decoration: none;
+}
+
+/* line 45, ../sass/framework/partials/objects/_menu.scss */
+.nav-primary > li > a {
+  text-align: left;
+}
+@media only screen and (min-width: 768px) {
+  /* line 45, ../sass/framework/partials/objects/_menu.scss */
+  .nav-primary > li > a {
+    text-align: center;
+  }
+}
+
+/* line 58, ../sass/framework/partials/objects/_menu.scss */
+.js .nav-primary {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  /* line 58, ../sass/framework/partials/objects/_menu.scss */
+  .js .nav-primary {
+    display: block;
+  }
+}
+/* line 67, ../sass/framework/partials/objects/_menu.scss */
+.is-expanded .nav-primary {
+  display: block;
+}
+
+/* line 73, ../sass/framework/partials/objects/_menu.scss */
+.nav-menu-toggle {
+  float: right;
+  display: none;
+  border: 0;
+  background-color: transparent;
+}
+/* line 80, ../sass/framework/partials/objects/_menu.scss */
+.js .nav-menu-toggle {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  /* line 80, ../sass/framework/partials/objects/_menu.scss */
+  .js .nav-menu-toggle {
+    display: none;
+  }
+}
+
+/* line 100, ../sass/framework/partials/objects/_menu.scss */
+.nav-menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 20px;
+  margin-bottom: 3px;
+  background-color: #cccccc;
+}
+
 /* #Item List */
 /* Create standard lists of "post"-like content. 
 */
@@ -1450,6 +2025,8 @@ Borrowed from inuit.css
   padding: 15px;
 }
 
+/* ============================================================ */
+/* ============================================================ */
 /* #Nav */
 /* Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction. When used on an `ol` or `ul`, this class throws the list into horizontal mode. */
 /* ##Base */
@@ -1462,21 +2039,10 @@ Borrowed from inuit.css
     </ul>
  */
 /* line 14, ../sass/framework/partials/objects/_nav.scss */
-.nav {
+.nav-primary {
   list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-/* line 22, ../sass/framework/partials/objects/_nav.scss */
-.nav > li,
-.nav > li > a {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
+  margin: 0;
+  padding: 0;
 }
 
 /* ##Stacked */
@@ -1489,31 +2055,6 @@ Borrowed from inuit.css
         <li><a href="#">Contact</a></li>
     </ul>
 */
-/* line 37, ../sass/framework/partials/objects/_nav.scss */
-.nav-stacked > li {
-  display: list-item;
-}
-
-/* line 40, ../sass/framework/partials/objects/_nav.scss */
-.nav-stacked > li > a {
-  display: block;
-}
-
-/* ##Banner */
-/* `.nav-banner` extends `.nav` and centres the list. */
-/*
-    <ul class="nav nav-banner">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-  */
-/* line 56, ../sass/framework/partials/objects/_nav.scss */
-.nav-banner {
-  text-align: center;
-}
-
 /* #Buttons */
 /* Adding the class `.btn` to an anchor `<button>` or `<input>` provides extra visual weight and identifies the primary action in a set of buttons.
 
@@ -1624,7 +2165,7 @@ input.btn {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .btn-group:after {
   content: "";
   display: table;
@@ -1683,33 +2224,46 @@ input.btn {
 	</ul>
 */
 /* line 16, ../sass/framework/partials/objects/_dropdowns.scss */
-.dropdown .caret,
-.dropdown-toggle .caret {
-  display: inline-block;
-  color: #fff !important;
-  width: 0;
-  height: 0;
-  text-indent: -99999px;
-  *text-indent: 0;
-  vertical-align: top;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 4px solid #fff;
-  background: 0;
-  margin-left: 7px;
-  margin-top: 0.4375em;
-  content: "\2193";
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
-  opacity: 0.75;
+.dropdown-menu, .nav-primary .sub-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  text-align: left;
+  direction: ltr;
+  background-color: #eeeeee;
 }
 
-/* line 37, ../sass/framework/partials/objects/_dropdowns.scss */
-.dropdown:hover .caret,
-.dropdown:focus .caret
-.dropdown-toggle:hover .caret,
-.dropdown-toggle:focus .caret {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
+/* line 30, ../sass/framework/partials/objects/_dropdowns.scss */
+.dropdown-menu__item, .nav-primary .sub-menu li {
+  position: relative;
+  vertical-align: bottom;
+  /* This fixes the IE5 Win gap (no harm done to modern browsers) */
+  white-space: nowrap;
+  width: 100%;
+  /* inherit the width of the parent <ul> */
+  clear: both;
+  display: list-item;
+}
+
+/* line 39, ../sass/framework/partials/objects/_dropdowns.scss */
+.dropdown-menu__link, .nav-primary .sub-menu a {
+  display: block;
+  white-space: nowrap;
+  /* forces drop down to stretch to accommodate length of text (and not wrap) */
+  padding: 0.375em 1.25em;
+  text-align: left;
+}
+
+/* line 46, ../sass/framework/partials/objects/_dropdowns.scss */
+.dropdown-menu--is-open {
+  display: block;
 }
 
 /* #ALERTS */
@@ -2116,7 +2670,7 @@ input.btn {
     <img src="http://www.placehold.it/200x200" class="img-polaroid" />
 */
 /* line 26, ../sass/framework/partials/objects/_images.scss */
-.img-polaroid {
+.img-polaroid, .gallery-item a {
   padding: 4px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -2389,7 +2943,7 @@ html[xmlns] .slides {
 /* line 12, ../sass/framework/partials/objects/_graybox.scss */
 .graybox {
   background-color: rgba(0, 0, 0, 0.15);
-  background-color: #e9e9e9 \9;
+  background-color: #e9e9e9\9;
   color: #000;
 }
 /* line 17, ../sass/framework/partials/objects/_graybox.scss */
@@ -2401,82 +2955,23 @@ html[xmlns] .slides {
    COMMON
    Common components/requirements for standard websites
    ========================================================================== */
-/* line 17, ../sass/framework/partials/objects/_menu.scss */
-.nav-primary,
-.nav-primary ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: visible;
-  clear: both;
-  zoom: 1;
-}
-/* line 86, ../sass/framework/partials/base/_mixins.scss */
-.nav-primary:before,
-.nav-primary ul:before {
-  content: "";
-  display: table;
-}
-/* line 91, ../sass/framework/partials/base/_mixins.scss */
-.nav-primary:after,
-.nav-primary ul:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 28, ../sass/framework/partials/objects/_menu.scss */
-.nav-primary > li {
+/* line 5, ../sass/framework/partials/common/_primary-nav.scss */
+.menu-primary {
   position: relative;
 }
-/* line 36, ../sass/framework/partials/objects/_menu.scss */
-.nav-primary a {
-  display: block;
-  padding: 0.625em 1.25em;
-  color: #333333;
-  text-align: left;
-  text-decoration: none;
-}
-/* line 48, ../sass/framework/partials/objects/_menu.scss */
-.nav-primary a:hover, .nav-primary a:focus {
-  color: white;
+
+@media only screen and (min-width: 768px) {
+  /* line 52, ../sass/framework/partials/common/_primary-nav.scss */
+  .nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
+    display: block;
+  }
 }
 
-/* line 68, ../sass/framework/partials/objects/_menu.scss */
-.nav-fixed {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-
-/* line 80, ../sass/framework/partials/objects/_menu.scss */
-.sub-menu {
+/* line 62, ../sass/framework/partials/common/_primary-nav.scss */
+.nav-menu-toggle {
   position: absolute;
-  top: auto;
-  left: -999em;
-  z-index: 1000;
-  text-align: left;
-  direction: ltr;
-  background-color: #999999;
-}
-/* line 89, ../sass/framework/partials/objects/_menu.scss */
-.sub-menu li {
-  vertical-align: bottom;
-  /* This fixes the IE5 Win gap (no harm done to modern browsers) */
-  white-space: nowrap;
-  width: 100%;
-  /* inherit the width of the parent <ul> */
-  clear: both;
-  display: list-item;
-}
-/* line 97, ../sass/framework/partials/objects/_menu.scss */
-.sub-menu li a {
-  white-space: nowrap;
-  /* forces drop down to stretch to accommodate length of text (and not wrap) */
-  padding: 0.4615384615384615em 20px;
-  text-align: left;
+  right: 1.875em;
+  top: -5.3125em;
 }
 
 /* #Site Logo 
@@ -2507,7 +3002,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1370253482');
+  background-image: url('../images/site-logo.png?1370433159');
   width: 200px;
   height: 80px;
 }
@@ -2546,18 +3041,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1369410288');
+  background-image: url('../images/site-credit.png?1370433159');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1370253482');
+  background-image: url('../images/site-credit--dark.svg?1370433159');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1369410288');
+  background-image: url('../images/site-credit--dark.png?1370433159');
 }
 
 /* ==========================================================================
@@ -2573,7 +3068,8 @@ html[xmlns] .slides {
 
 /* 2 Column [Sub] Right (Default)
    ========================================================================== */
-/* line 23, ../sass/framework/partials/common/_columns.scss */
+/* line 25, ../sass/framework/partials/common/_columns.scss */
+.layout-2c-r .main,
 .main {
   float: right;
   overflow: hidden;
@@ -2581,16 +3077,16 @@ html[xmlns] .slides {
 
 /* 2 Column [Sub] Left
    ========================================================================== */
-/* line 38, ../sass/framework/partials/common/_columns.scss */
+/* line 41, ../sass/framework/partials/common/_columns.scss */
 .layout-2c-l .main {
   float: left;
 }
 
-/* line 47, ../sass/framework/partials/common/_columns.scss */
+/* line 50, ../sass/framework/partials/common/_columns.scss */
 .layout-1c .column-container {
   margin-left: 0;
 }
-/* line 52, ../sass/framework/partials/common/_columns.scss */
+/* line 55, ../sass/framework/partials/common/_columns.scss */
 .layout-1c .main,
 .layout-1c .sub {
   float: none;
@@ -2598,6 +3094,61 @@ html[xmlns] .slides {
   clear: both;
   overflow: visible;
   padding-left: 0;
+}
+
+/* #Social Icons */
+/* ============================================================ */
+/* ============================================================ */
+/* The Gallery container (div) */
+/* line 16, ../sass/framework/partials/common/_gallery.scss */
+.gallery {
+  margin: 0;
+  padding: 0;
+  zoom: 1;
+}
+/* line 86, ../sass/framework/partials/base/_mixins.scss */
+.gallery:before {
+  content: "";
+  display: table;
+}
+/* line 91, ../sass/framework/partials/base/_mixins.scss */
+.gallery:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 25, ../sass/framework/partials/common/_gallery.scss */
+.gallery-row {
+  clear: both;
+}
+
+/* line 34, ../sass/framework/partials/common/_gallery.scss */
+.gallery-item {
+  margin-top: 0;
+  margin-bottom: 1.666em;
+  padding-top: 0;
+}
+/* line 39, ../sass/framework/partials/common/_gallery.scss */
+.gallery-item a {
+  display: block;
+}
+/* line 44, ../sass/framework/partials/common/_gallery.scss */
+.gallery-item img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* line 55, ../sass/framework/partials/common/_gallery.scss */
+.gallery-caption {
+  margin: 0;
+  padding: 0;
+  color: #777;
+  font-size: 0.75em;
+  text-align: left;
+  line-height: 1.3;
+  padding: 0.625em;
 }
 
 /* ==========================================================================
@@ -2647,14 +3198,14 @@ html[xmlns] .slides {
 */
 /* line 50, ../sass/framework/partials/base/_helpers.scss */
 .clearfix, .island, .headed-island,
-.islet, .nav,
+.islet, .nav-primary,
 .cf {
   zoom: 1;
 }
 /* line 54, ../sass/framework/partials/base/_helpers.scss */
 .clearfix:before, .island:before, .headed-island:before,
-.islet:before, .nav:before, .clearfix:after, .island:after, .headed-island:after,
-.islet:after, .nav:after,
+.islet:before, .nav-primary:before, .clearfix:after, .island:after, .headed-island:after,
+.islet:after, .nav-primary:after,
 .cf:before,
 .cf:after {
   content: "";
@@ -2662,7 +3213,7 @@ html[xmlns] .slides {
 }
 /* line 59, ../sass/framework/partials/base/_helpers.scss */
 .clearfix:after, .island:after, .headed-island:after,
-.islet:after, .nav:after,
+.islet:after, .nav-primary:after,
 .cf:after {
   clear: both;
 }

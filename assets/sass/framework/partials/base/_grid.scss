@@ -73,7 +73,7 @@ $allGridClasses: #{grid-selectors()};
     padding-left: $gutter_width;
     float: left;
     @include box-sizing(border-box);
-    *behavior: url(boxsizing.htc);
+    *behavior: url(/boxsizing.htc);
 
     .large-gutter & {
         padding-left: $large_gutter_width;
