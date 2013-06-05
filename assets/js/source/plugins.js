@@ -78,20 +78,20 @@
 	 * 
 	 */
 	
-	/* (function() {
+	(function() {
 		Modernizr.load({
 			test: 1,
 			yep : [
-				tplUri + '/assets/js/conditional/socialite/socialite.min.js'
+				tanlinell_site_details.template_directory_uri + '/assets/js/conditional/socialite/socialite.min.js'
 				],
 			complete: function(){
 				$('.social-actions').on("hover", function() {
-					Socialite.load();
+					Socialite.load('.main');
 				});
 				
 			}
 		});
-	}()); */
+	}()); 
 
 
 }(jQuery));

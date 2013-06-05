@@ -1041,7 +1041,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1370433159');
+    background-image: url('../images/select_arrow.png?1370440380');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2835,17 +2835,17 @@ html[xmlns] .slides {
 	</ul>
 */
 /* line 15, ../sass/framework/partials/objects/_inline-list.scss */
-.inline-list {
+.inline-list, .social-actions {
   margin: 0 0 1.666em -1.666em;
   zoom: 1;
 }
 /* line 86, ../sass/framework/partials/base/_mixins.scss */
-.inline-list:before {
+.inline-list:before, .social-actions:before {
   content: "";
   display: table;
 }
 /* line 91, ../sass/framework/partials/base/_mixins.scss */
-.inline-list:after {
+.inline-list:after, .social-actions:after {
   content: "";
   display: table;
   clear: both;
@@ -2853,7 +2853,8 @@ html[xmlns] .slides {
 
 /* line 21, ../sass/framework/partials/objects/_inline-list.scss */
 .inline-list__item,
-.inline-list > li {
+.inline-list > li,
+.social-actions > li {
   float: left;
   list-style: none;
   margin-left: 1.666em;
@@ -2989,7 +2990,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1370433159');
+  background-image: url('../images/site-logo.png?1370440380');
   width: 200px;
   height: 80px;
 }
@@ -3028,18 +3029,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1370433159');
+  background-image: url('../images/site-credit.png?1370440380');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1370433159');
+  background-image: url('../images/site-credit--dark.svg?1370440380');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1370433159');
+  background-image: url('../images/site-credit--dark.png?1370440380');
 }
 
 /* ==========================================================================
@@ -3084,6 +3085,51 @@ html[xmlns] .slides {
 }
 
 /* #Social Icons */
+/* #Social Actions */
+/* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
+/*
+	<ul class="social-actions">
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance twitter-share" href="http://twitter.com/share" data-count="none">
+			    Share on Twitter
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance facebook-like" href="http://www.facebook.com/sharer.php" data-send="false" data-show-faces="false" data-font="arial" data-count="false" data-layout="button_count">
+			    Like on Facebook
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance linkedin-share" href="http://www.linkedin.com/shareArticle?mini=true" data-counter="false">
+			    Share on LinkedIn
+			</a>
+		</li>
+	</ul>
+*/
+/* line 31, ../sass/framework/partials/common/_social-actions.scss */
+.social-actions__link {
+  background: url('../images/social-actions-sprite.png?1370442137') no-repeat 0 0;
+  width: 60px;
+  height: 20px;
+}
+
+/* line 39, ../sass/framework/partials/common/_social-actions.scss */
+.social-actions .facebook-like {
+  background-position: 0 -28px;
+}
+/* line 43, ../sass/framework/partials/common/_social-actions.scss */
+.social-actions .linkedin-share {
+  background-position: 0 -56px;
+}
+
+/* line 50, ../sass/framework/partials/common/_social-actions.scss */
+.socialite-loaded {
+  background: 0;
+  text-indent: 0;
+}
+
 /* ============================================================ */
 /* ============================================================ */
 /* The Gallery container (div) */
@@ -3305,7 +3351,8 @@ html[xmlns] .slides {
 /* line 165, ../sass/framework/partials/base/_helpers.scss */
 .img-replace,
 .ir,
-.site-credit {
+.site-credit,
+.social-actions__link {
   display: inline-block;
   text-indent: -999em;
   overflow: hidden;
