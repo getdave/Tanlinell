@@ -46,6 +46,12 @@ function my_theme_register_required_plugins() {
 		),
 
 		array(
+			'name' 		=> 'BlackBox Debug Bar',
+			'slug' 		=> 'blackbox-debug-bar',
+			'required' 	=> false,
+		),		
+
+		array(
             'name'      => 'WordPress SEO by Yoast',
             'slug'      => 'wordpress-seo',
             'required'  => true,
