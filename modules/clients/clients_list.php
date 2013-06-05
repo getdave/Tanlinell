@@ -67,14 +67,12 @@ get_header();
 							$clients_metabox->the_field('client_linkedin');
 							$client['linkedin'] = $clients_metabox->get_the_value();
 							
-							$featured_image       =  tanlinell_get_post_thumb( $post->ID );
-							$post_thumbnail_sized =  trailingslashit(get_stylesheet_directory_uri()) . 'timthumb.php?src='.$featured_image[0] . '&q=80&w120&h=120&zc=1';
+							$post_thumbnail_sized	=  tanlinell_get_post_thumb( $post->ID , array( 'width' => 844, 'height' => 494, 'crop' => true, 'resize' => true ));							
 							
 							//get the alt text
 							$featured_image_alt = trim(strip_tags( get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ));
 							if(empty($featured_image_alt))
-								$featured_image_alt = 'Image for '.ucwords($job_title).', '.ucwords($name); //defaults if none found
-							
+								$featured_image_alt = 'Image for '.ucwords(get_the_title()); //defaults if none found
 											
 							$service_types = wp_get_post_terms($post->ID, 'service_types', array("fields" => "slugs")); 
 							
@@ -83,7 +81,7 @@ get_header();
 						<div class="grid-wrap gc">
 							<div class="img-polaroid gc mbl d1-4">
 								<a href="<?php echo get_permalink() ?>">
-									<img src="<?php echo $post_thumbnail_sized; ?>" alt="<?php echo $featured_image_alt; ?>" style="">
+									<img src="<?php echo $post_thumbnail_sized[0]; ?>" alt="<?php echo $featured_image_alt; ?>">
 								</a>
 							</div>
 							<div class="gc d3-4">
