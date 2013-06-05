@@ -22,20 +22,20 @@ get_header();
 		</section>
 		
 	    <section>
-			
+
 			<?php 
-			query_posts(array(
-							'post_type' => 'clients',
-							'posts_per_page' => -1,
-							'orderby' => 'menu_order',
-							'order' => 'ASC'
-							)
+			$args = array(
+						'post_type' => 'clients',
+						'posts_per_page' => -1,
+						'orderby' => 'menu_order',
+						'order' => 'ASC'
 						);
-			if (have_posts()):
+			$posts = new WP_Query($args);	
+			if ($posts->have_posts()):
 			?>
             <ul class="grid-wrap">
 				
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
 					<li class="gc d1-2">
 						<?php
 							//setup the custom meta object
@@ -121,7 +121,7 @@ get_header();
             </ul>
 	        <?php 
 	        endif;
-	        wp_reset_query();
+	        wp_reset_postdata();
 	        ?>
 	    </section>
         

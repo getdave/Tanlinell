@@ -22,20 +22,21 @@ get_header();
 		</section>
 		
 	    <section>
-			
+
 			<?php 
-			query_posts(array(
-							'post_type' => 'services',
-							'posts_per_page' => -1,
-							'orderby' => 'menu_order',
-							'order' => 'ASC'
-							)
+			$args = array(
+						'post_type' => 'services',
+						'posts_per_page' => -1,
+						'orderby' => 'menu_order',
+						'order' => 'ASC'
 						);
-			if (have_posts()):
+			$posts = new WP_Query($args);	
+			if ($posts->have_posts()):
 			?>
             <ul class="grid-wrap">
 				
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
+
 					<li class="gc d1-2 l1-1">
 						<?php
 							$post_thumbnail_sized	=  tanlinell_get_post_thumb( $post->ID , array( 'width' => 844, 'height' => 494, 'crop' => true, 'resize' => true ));							
@@ -79,7 +80,7 @@ get_header();
             </ul>
 	        <?php 
 	        endif;
-	        wp_reset_query();
+	        wp_reset_postdata();
 	        ?>
 	    </section>
         
