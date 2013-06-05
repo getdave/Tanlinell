@@ -135,6 +135,14 @@ function my_theme_register_required_plugins() {
 			'required' 	=> true,
 		),
 
+		array(
+			'name' 		=> 'Posts 2 Posts',
+			'slug' 		=> 'posts-to-posts',
+			'required' 	=> false,
+		),
+
+
+
 
 		
 
@@ -172,7 +180,7 @@ function my_theme_register_required_plugins() {
 		'menu'         		=> 'install-required-plugins', 	// Menu slug
 		'has_notices'      	=> true,                       	// Show admin notices or not
 		'is_automatic'    	=> false,					   	// Automatically activate plugins after installation or not
-		'message' 			=> '',							// Message to output right before the plugins table
+		'message' 			=> 'The following Plugins are recommended for use with Tanlinell core.',							// Message to output right before the plugins table
 		'strings'      		=> array(
 			'page_title'                       			=> __( 'Install Required Plugins', $theme_text_domain ),
 			'menu_title'                       			=> __( 'Install Plugins', $theme_text_domain ),
