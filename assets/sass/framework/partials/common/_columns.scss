@@ -20,12 +20,15 @@
 /* 2 Column [Sub] Right (Default)
    ========================================================================== */
 
+
+.layout-2c-r .main,
 .main {
-	@extend .d3-4;
-	float: right;
-	overflow: hidden;
+    @extend .d3-4;
+    float: right;
+    overflow: hidden;
 }
 
+.layout-2c-r .sub,
 .sub {
 	@extend .d1-4;
 }

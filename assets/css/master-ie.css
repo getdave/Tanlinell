@@ -1041,7 +1041,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1370355393');
+    background-image: url('../images/select_arrow.png?1370418880');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1374,7 +1374,8 @@ optgroup::-moz-focus-inner {
 }
 
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
-.d1-4, .sub, .dthreecolumns {
+.d1-4, .layout-2c-r .sub,
+.sub, .dthreecolumns {
   width: 25%;
 }
 
@@ -1404,7 +1405,8 @@ optgroup::-moz-focus-inner {
 }
 
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
-.d3-4, .main, .dninecolumns {
+.d3-4, .layout-2c-r .main,
+.main, .dninecolumns {
   width: 75%;
 }
 
@@ -3058,18 +3060,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1370355393');
+  background-image: url('../images/site-credit.png?1370418881');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1370355393');
+  background-image: url('../images/site-credit--dark.svg?1370418880');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1370355393');
+  background-image: url('../images/site-credit--dark.png?1370418880');
 }
 
 /* ==========================================================================
@@ -3085,7 +3087,8 @@ html[xmlns] .slides {
 
 /* 2 Column [Sub] Right (Default)
    ========================================================================== */
-/* line 23, ../sass/framework/partials/common/_columns.scss */
+/* line 25, ../sass/framework/partials/common/_columns.scss */
+.layout-2c-r .main,
 .main {
   float: right;
   overflow: hidden;
@@ -3093,16 +3096,16 @@ html[xmlns] .slides {
 
 /* 2 Column [Sub] Left
    ========================================================================== */
-/* line 38, ../sass/framework/partials/common/_columns.scss */
+/* line 41, ../sass/framework/partials/common/_columns.scss */
 .layout-2c-l .main {
   float: left;
 }
 
-/* line 47, ../sass/framework/partials/common/_columns.scss */
+/* line 50, ../sass/framework/partials/common/_columns.scss */
 .layout-1c .column-container {
   margin-left: 0;
 }
-/* line 52, ../sass/framework/partials/common/_columns.scss */
+/* line 55, ../sass/framework/partials/common/_columns.scss */
 .layout-1c .main,
 .layout-1c .sub {
   float: none;
