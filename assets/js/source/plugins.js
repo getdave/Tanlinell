@@ -78,20 +78,48 @@
 	 * 
 	 */
 	
-	(function() {
-		Modernizr.load({
-			test: 1,
-			yep : [
-				tanlinell_site_details.template_directory_uri + '/assets/js/conditional/socialite/socialite.min.js'
-				],
-			complete: function(){
-				$('.social-actions').on("hover", function() {
-					Socialite.load('.main');
-				});
-				
-			}
-		});
-	}()); 
+	/* (function() {
+			Modernizr.load({
+				test: 1,
+				yep : [
+					tanlinell_site_details.template_directory_uri + '/assets/js/conditional/socialite/socialite.min.js'
+					],
+				complete: function(){
+					$('.social-actions').on("hover", function() {
+						Socialite.load('.main');
+					});
+					
+				}
+			});
+		}());  */
+
+
+
+	/**
+	 * jPanelMenu
+	 *
+	 * jPanelMenu is a jQuery plugin that creates a paneled-style menu (like the type seen in the mobile versions of Facebook and Google, as well as in many native iPhone applications).
+	 * 
+	 */
+	
+	/* (function() {
+			Modernizr.load({
+				test: Modernizr.mq('only screen and (max-width: 62em)'),
+				yep : [
+					tanlinell_site_details.template_directory_uri + '/assets/js/conditional/jquery.jpanelmenu.min.js'
+					],
+				complete: function(){
+					
+					var jPM = $.jPanelMenu({
+					    menu: '.menu-secondary',
+					    trigger: '.menu-secondary-toggle',
+					});
+	
+					jPM.on();
+					
+				}
+			});
+		}());  */
 
 
 }(jQuery));
