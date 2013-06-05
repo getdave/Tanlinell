@@ -8,6 +8,6 @@
         'after' => '</div>',
         'echo' => true,
     );
-    loop_pagination($args); 
+    loop_pagination(apply_filters( 'tanlinell_loop_pagination_args', $args )); 
 }
 ?>
