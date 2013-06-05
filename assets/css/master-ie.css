@@ -2860,21 +2860,48 @@ html[xmlns] .slides {
   text-align: center;
 }
 
-/* line 69, ../sass/framework/partials/objects/_menu.scss */
+/* line 48, ../sass/framework/partials/objects/_menu.scss */
+.js .nav-primary,
+.js .nav-primary ul,
+.nav-primary .js ul {
+  display: none;
+  display: block;
+}
+/* line 56, ../sass/framework/partials/objects/_menu.scss */
+.is-expanded .nav-primary,
+.is-expanded .nav-primary ul,
+.nav-primary .is-expanded ul {
+  display: block;
+}
+
+/* line 61, ../sass/framework/partials/objects/_menu.scss */
+.nav-menu-toggle {
+  float: right;
+  display: none;
+  border: 0;
+  background-color: transparent;
+}
+/* line 67, ../sass/framework/partials/objects/_menu.scss */
+.js .nav-menu-toggle {
+  display: block;
+  display: none;
+}
+
+/* line 81, ../sass/framework/partials/objects/_menu.scss */
+.nav-menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 20px;
+  margin-bottom: 3px;
+  background-color: #cccccc;
+}
+
+/* line 120, ../sass/framework/partials/objects/_menu.scss */
 .nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
   left: 0;
 }
 
-/* line 79, ../sass/framework/partials/objects/_menu.scss */
-.nav-fixed {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-}
-
-/* line 91, ../sass/framework/partials/objects/_menu.scss */
+/* line 130, ../sass/framework/partials/objects/_menu.scss */
 .sub-menu {
   position: absolute;
   top: auto;
@@ -2884,7 +2911,7 @@ html[xmlns] .slides {
   direction: ltr;
   background-color: #999999;
 }
-/* line 100, ../sass/framework/partials/objects/_menu.scss */
+/* line 139, ../sass/framework/partials/objects/_menu.scss */
 .sub-menu li {
   vertical-align: bottom;
   /* This fixes the IE5 Win gap (no harm done to modern browsers) */
@@ -2894,12 +2921,24 @@ html[xmlns] .slides {
   clear: both;
   display: list-item;
 }
-/* line 108, ../sass/framework/partials/objects/_menu.scss */
+/* line 147, ../sass/framework/partials/objects/_menu.scss */
 .sub-menu li a {
   white-space: nowrap;
   /* forces drop down to stretch to accommodate length of text (and not wrap) */
   padding: 0.4615384615384615em 20px;
   text-align: left;
+}
+
+/* line 160, ../sass/framework/partials/objects/_menu.scss */
+.nav-menu-narrow {
+  position: relative;
+}
+
+/* line 164, ../sass/framework/partials/objects/_menu.scss */
+.nav-menu-toggle {
+  position: absolute;
+  right: 0;
+  top: -2.8125em;
 }
 
 /* #Social Icons
