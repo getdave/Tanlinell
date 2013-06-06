@@ -9,6 +9,46 @@
 get_header(); ?>
 
 
+<?php
+	//setup the custom meta object
+	global $clients_slides_metabox;
+	
+	// get the meta data for the current post
+	$clients_slides_metabox->the_meta();
+	
+	$i=0;	
+	while($clients_slides_metabox->have_fields('slides'))
+	{
+	    $images[$i]['title']=$clients_slides_metabox->get_the_value('title');
+	 
+	    $images[$i]['img_url']=$clients_slides_metabox->get_the_value('imgurl');
+	    
+	    $images[$i]['img_id']=tanlinell_get_attachment_id_from_src($clients_slides_metabox->get_the_value('imgurl'));
+	    $i++;
+	}
+
+?>
+
+<?php foreach($images AS $k=>$s) : 
+
+		
+		$featured_image_small 		= wp_get_attachment_image_src( $s['img_id'], 'featured_image_small');
+		$featured_image_medium 		= wp_get_attachment_image_src( $s['img_id'], 'featured_image_medium');
+		$featured_image_large 		= wp_get_attachment_image_src( $s['img_id'], 'featured_image_large');
+		$featured_image_xlarge 		= wp_get_attachment_image_src( $s['img_id'], 'featured_image_xlarge');
+
+?>
+	
+<img src="<?php echo esc_attr( $featured_image_large[0] );?>" alt="<?php echo $featured_image_alt; ?>"></noscript>
+
+<?php endforeach; ?>
+		
+
+    
+
+
+
+
 <div class="column-container">
 	<div class="main d1-1" role="main">
 

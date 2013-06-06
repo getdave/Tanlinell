@@ -1,6 +1,7 @@
 <?php
 
 include_once get_stylesheet_directory() . '/libs/wpalchemy/MetaBox.php';
+include_once get_stylesheet_directory() . '/libs/wpalchemy/MediaAccess.php';
 
 // global styles for the meta boxes
 if (is_admin()) add_action('admin_enqueue_scripts', 'metabox_style');

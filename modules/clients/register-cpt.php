@@ -93,7 +93,23 @@ $clients_metabox = $simple_mb = new WPAlchemy_MetaBox(array
 	'context' => 'side',
 	'mode' => WPALCHEMY_MODE_EXTRACT
 ));
+/**
+ * Meta Box SLIDES
+ *
+ * Create meta box to take in SLIDES
+ */
 
+global $clients_slides_metabox;
+$clients_slides_metabox = $simple_mb = new WPAlchemy_MetaBox(array
+(
+	'id' => '_clients_slides',
+	'title' => 'Client Slides',
+	'template' => get_stylesheet_directory() . '/modules/clients/clients-slides-meta.php',
+	'types' => array('clients'),
+	'priority' => 'low',
+	'context' => 'normal',
+	'mode' => WPALCHEMY_MODE_EXTRACT
+));
 
 
 /**

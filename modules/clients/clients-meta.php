@@ -1,6 +1,6 @@
 <div class="my_meta_control">
  
-	<p>Details of the Team Member</p>
+	<h4>Details of the Client</h4>
  
 	<p>
 	
