@@ -45,8 +45,6 @@ function tanlinell_register_cpt_our_team() {
 	);
 
 	register_post_type( 'our-team', $args );
-	
-	flush_rewrite_rules();
 }
 
 

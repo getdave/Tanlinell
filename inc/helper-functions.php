@@ -31,6 +31,25 @@ function tanlinell_get_post_thumb( $post_id, $size='full' ){
 }
 
 
+
+
+/**
+ * 	Function to get attachement id from src
+ * 
+ * @param	$url			( str )		# url to the attachement src 
+ * @return	$attachment[0]	( int )		# ID of the attachement
+ */
+ 
+function tanlinell_get_attachment_id_from_src($url) {
+  global $wpdb;
+  $prefix = $wpdb->prefix;
+  $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM " . $prefix . "posts" . " WHERE guid='%s';", $url ));
+    return $attachment[0];
+}
+
+
+
+
 /**
  * 	Function to get the root parent of a page
  * 
