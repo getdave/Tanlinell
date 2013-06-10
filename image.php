@@ -11,7 +11,7 @@ get_header();
 
 
 <div class="column-container">
-	<div class="main" role="main">
+	<div class="main d1-1" role="main">
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
