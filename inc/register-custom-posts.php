@@ -40,3 +40,11 @@ require( get_template_directory() . '/modules/services/register-cpt.php' );
  * Custom post for Clients Pages
  */
 require( get_template_directory() . '/modules/clients/register-cpt.php' );
+
+
+/**
+ * Testimonials
+ *
+ * Custom post for Testimonials Pages
+ */
+require( get_template_directory() . '/modules/testimonials/register-cpt.php' );
