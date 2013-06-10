@@ -7,10 +7,10 @@
 	
 	//link meta data
 	$global_metabox->the_field('page_title');
-	$page_title = $global_metabox->get_the_value();
+	$page_title = esc_html( $global_metabox->get_the_value() );
 	
 	$global_metabox->the_field('page_subtitle');
-	$page_subtitle = $global_metabox->get_the_value();
+	$page_subtitle = esc_html( $global_metabox->get_the_value() );
 ?>
 <header class="title-block entry-header">
 	<h1 class="title-block__heading entry-title">
