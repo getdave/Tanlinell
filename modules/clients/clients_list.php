@@ -38,44 +38,12 @@ get_header();
 				<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
 					<li class="gc d1-2">
 						<?php
-							//setup the custom meta object
-							global $clients_metabox;
-							
-							// get the meta data for the current post
-							$clients_metabox->the_meta();
-							
-										
-							//link meta data
-							$clients_metabox->the_field('client_industry');
-							$client['industry'] = $clients_metabox->get_the_value();
-							
-							$clients_metabox->the_field('client_website');
-							$client['website'] = $clients_metabox->get_the_value();
-							
-							$clients_metabox->the_field('client_email');
-							$client['email'] = $clients_metabox->get_the_value();
-							
-							$clients_metabox->the_field('client_phone');
-							$client['phone'] = $clients_metabox->get_the_value();
-							
-							$clients_metabox->the_field('client_facebook');
-							$client['facebook'] = $clients_metabox->get_the_value();
-							
-							$clients_metabox->the_field('client_twitter');
-							$client['twitter'] = $clients_metabox->get_the_value();
-							
-							$clients_metabox->the_field('client_linkedin');
-							$client['linkedin'] = $clients_metabox->get_the_value();
-							
 							$post_thumbnail_sized	=  tanlinell_get_post_thumb( $post->ID , array( 'width' => 844, 'height' => 494, 'crop' => true, 'resize' => true ));							
 							
 							//get the alt text
 							$featured_image_alt = trim(strip_tags( get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ));
 							if(empty($featured_image_alt))
 								$featured_image_alt = 'Image for '.ucwords(get_the_title()); //defaults if none found
-											
-							$service_types = wp_get_post_terms($post->ID, 'service_types', array("fields" => "slugs")); 
-							
 						?>
 					
 						<div class="grid-wrap gc">
@@ -88,28 +56,9 @@ get_header();
 								
 								<h3><a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h3>
 								
-								<h5>
-								<?php
-								foreach($service_types AS $slug) :
-								$term = get_term_by('slug', $slug, 'service_types')
-								?>
-								<a href="<?php echo get_term_link($term->slug,'service_types');?>"><?php echo $term->name; ?></a>								
-								<?php endforeach; ?>
-								</h5>
-								
 								<?php the_excerpt(); ?>
 								
-								<ul>
-									<?php 
-									foreach ($client AS $c) : 
-										if(!empty($c)) :
-									?>								
-									<li><?php echo $c; ?></li>
-									<?php 
-										endif;
-									endforeach;
-									?>
-								</ul>
+								<a href="<?php echo get_permalink() ?>">Read More</a>
 								
 						   </div>
 						</div>

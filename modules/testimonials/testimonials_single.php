@@ -55,49 +55,21 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			
 			<?php
-				//setup the custom meta object
-				global $testimonials_metabox;
-				
-				// get the meta data for the current post
-				$testimonials_metabox->the_meta();
-				
-							
-				//link meta data
-				$testimonials_metabox->the_field('client');
-				$client['client_ID'] = $testimonials_metabox->get_the_value();
-				
 				$post_thumbnail_sized	=  tanlinell_get_post_thumb( $post->ID , array( 'width' => 844, 'height' => 494, 'crop' => true, 'resize' => true ));							
 				
 				//get the alt text
 				$featured_image_alt = trim(strip_tags( get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ));
 				if(empty($featured_image_alt))
 					$featured_image_alt = 'Image for '.ucwords(get_the_title()); //defaults if none found
-								
-				$service_types = wp_get_post_terms($post->ID, 'service_types', array("fields" => "slugs")); 
-				
 			?>
 		
-			<div class="grid-wrap gc">
-				<div class="img-polaroid gc mbl d1-2 h1-1">
-					<a href="<?php echo get_permalink() ?>">
-						<img src="<?php echo $post_thumbnail_sized[0]; ?>" alt="<?php echo $featured_image_alt; ?>">
-					</a>
-				</div>
-				<div class="gc d1-2 h1-1">
-					
-					<h1><?php the_title(); ?></h1>
-					
-					<h5>
-					<?php
-					foreach($service_types AS $slug) :
-					$term = get_term_by('slug', $slug, 'service_types')
-					?>
-					<a href="<?php echo get_term_link($term->slug,'service_types');?>"><?php echo $term->name; ?></a>
-					<?php endforeach; ?>
-					</h5>
-					
-					<?php the_content(); ?>
-					
+			<div class="grid-wrap">
+				<div class="gc d1-2 h1-3">
+					<div class="img-polaroid mbl">
+						<a href="<?php echo get_permalink() ?>">
+							<img src="<?php echo $post_thumbnail_sized[0]; ?>" alt="<?php echo $featured_image_alt; ?>">
+						</a>
+					</div>
 					
 					<?php
 					// Find connected pages
@@ -109,15 +81,26 @@ get_header(); ?>
 					
 					// Display connected pages
 					if ( $connected->have_posts() ) :
-					<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+						while ( $connected->have_posts() ) : $connected->the_post(); 
+					?>
 						<h6>Provided by: <a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h6>
-					<?php endwhile; ?>					
 					<?php 
+						endwhile;
+						
 					// Prevent weirdness
 					wp_reset_postdata();
 					
 					endif;
 					?>
+					
+				</div>
+				<div class="gc d1-2 h2-3">
+					
+					<h1><?php the_title(); ?></h1>
+					
+					<h4><?php the_excerpt(); ?></h4>
+					
+					<?php the_content(); ?>
 					
 			   </div>
 			</div>

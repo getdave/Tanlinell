@@ -30,7 +30,11 @@ get_header();
 						'orderby' => 'menu_order',
 						'order' => 'ASC'
 						);
-			$posts = new WP_Query($args);	
+			$posts = new WP_Query($args);
+			
+			//get client connections for services
+			p2p_type( 'clients_to_services' )->each_connected( $posts );
+			
 			if ($posts->have_posts()):
 			?>
             <ul class="grid-wrap">
@@ -45,10 +49,6 @@ get_header();
 							$featured_image_alt = trim(strip_tags( get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ));
 							if(empty($featured_image_alt))
 								$featured_image_alt = 'Image for '.ucwords(get_the_title()); //defaults if none found
-							
-											
-							$categories = wp_get_post_terms($post->ID, 'service_types', array("fields" => "slugs"));
-							
 						?>
 					
 						<div class="grid-wrap gc">
@@ -60,18 +60,26 @@ get_header();
 							<div class="gc d2-4 l2-3 h2-3">
 								
 								<h3><a href="<?php echo get_permalink() ?>"><?php echo ucwords(get_the_title()); ?></a></h3>
-								
-								<h5>
-								<?php
-								foreach($categories AS $slug) :
-								$term = get_term_by('slug', $slug, 'service_types')
-								?>
-								<a href="<?php echo get_term_link($term->slug,'service_types');?>"><?php echo $term->name; ?></a>								
-								<?php endforeach; ?>
-								</h5>
-								
+																
 								<?php the_excerpt(); ?>
 								
+								<a href="<?php echo get_permalink() ?>">Read More</a>
+								
+								<?php		
+								//output connected clients
+								if ( $post->connected ) :
+																
+									echo '<h6>Clients of this service:</h6>';
+									echo '<ul>';
+									foreach ( $post->connected as $post ) : setup_postdata( $post );
+									?>
+										<li><a href="<?php echo get_permalink() ?>"><?php echo get_the_title(); ?></a></li>
+									<?php
+									echo '</ul>';
+									endforeach;
+									
+								endif;
+								?>								
 						   </div>
 						</div>
 					</li>

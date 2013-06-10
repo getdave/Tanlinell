@@ -27,10 +27,38 @@ get_header(); ?>
 				
 			?>
 		
-			<div class="grid-wrap gc">
-				<div class="img-polaroid gc mbl d1-3">
-					<img src="<?php echo $post_thumbnail_sized[0]; ?>" alt="<?php echo $featured_image_alt; ?>">
+			<div class="grid-wrap">
+				<div class="gc d1-3">
+					<div class="mbl img-polaroid">
+						<img src="<?php echo $post_thumbnail_sized[0]; ?>" alt="<?php echo $featured_image_alt; ?>">
+					</div>
+					
+					<?php
+						//get client connections for services
+						$connected = new WP_Query( array(
+						  'connected_type' => 'clients_to_services',
+						  'connected_items' => get_queried_object(),
+						  'nopaging' => true,
+						) );
+					
+					// Display connected pages
+					if ( $connected->have_posts() ) :
+						echo '<h6>Clients of this service:</h6>';
+						echo '<ul>';
+						
+						while ( $connected->have_posts() ) : $connected->the_post(); 
+					?>
+							<li><a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></li>
+					<?php 
+						endwhile;
+						
+						echo '</ul>';
+						// Prevent weirdness
+						wp_reset_postdata();					
+					endif;
+					?>
 				</div>
+				
 				<div class="gc d2-3">
 					
 					<h1><?php echo ucwords(get_the_title()); ?></h1>
@@ -47,6 +75,7 @@ get_header(); ?>
 					<h4><?php the_excerpt(); ?></h4>
 					
 					<?php the_content(); ?>
+										
 			   </div>
 			</div>
 			

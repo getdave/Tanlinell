@@ -50,14 +50,6 @@ function tanlinell_register_cpt_clients() {
 	flush_rewrite_rules();
 }
 
-/**
- * Assign Taxonomy
- */
-add_action( 'init', 'assign_clients_taxonomies' );
-function assign_clients_taxonomies() {  
-	register_taxonomy_for_object_type( 'service_types', 'clients' );
-}
-
 
 
 /**
@@ -123,6 +115,23 @@ function tanlinell_clients_remove_defaults() {
 	remove_meta_box( 'theme-layouts-post-meta-box', 'clients', 'side' );
 }
 add_action('do_meta_boxes', 'tanlinell_clients_remove_defaults');
+
+
+
+/**
+ * Connection
+ *
+ * Create connections to related content using p2p plugin
+ * Client->Service
+ */
+function s_to_c_connection() {
+	p2p_register_connection_type( array(
+		'name' => 'clients_to_services',
+		'from' => 'clients',
+		'to' => 'services'
+	) );
+}
+add_action( 'p2p_init', 's_to_c_connection' );
 
 
 

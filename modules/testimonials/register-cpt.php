@@ -50,14 +50,6 @@ function tanlinell_register_cpt_testimonials() {
 	flush_rewrite_rules();
 }
 
-/**
- * Assign Taxonomy
- */
-add_action( 'init', 'assign_testimonials_taxonomies' );
-function assign_testimonials_taxonomies() {  
-	register_taxonomy_for_object_type( 'service_types', 'testimonials' );
-}
-
 
 
 /**
@@ -135,11 +127,18 @@ add_filter( 'init', 'tanlinell_testimonials_create_page' );
 
 
 
+/**
+ * Connection
+ *
+ * Create connections to related content using p2p plugin
+ * Testimonial->Client
+ */
 function t_to_c_connection() {
 	p2p_register_connection_type( array(
 		'name' => 'testimonial_to_client',
 		'from' => 'testimonials',
-		'to' => 'clients'
+		'to' => 'clients',
+		'cardinality' => 'many-to-one'
 	) );
 }
 add_action( 'p2p_init', 't_to_c_connection' );

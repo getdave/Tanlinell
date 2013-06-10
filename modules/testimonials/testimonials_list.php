@@ -32,6 +32,7 @@ get_header();
 						);
 			$posts = new WP_Query($args);	
 			
+			//get client connections for testimonials
 			p2p_type( 'testimonial_to_client' )->each_connected( $posts );
 			
 			if ($posts->have_posts()):
@@ -40,27 +41,13 @@ get_header();
 				
 				<?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
 					<li class="gc d1-2">
-						<?php
-							//setup the custom meta object
-							global $testimonials_metabox;
-							
-							// get the meta data for the current post
-							$testimonials_metabox->the_meta();
-							
-										
-							//link meta data
-							$testimonials_metabox->the_field('client');
-							$client['client_ID'] = $testimonials_metabox->get_the_value();
-							
+						<?php							
 							$post_thumbnail_sized	=  tanlinell_get_post_thumb( $post->ID , array( 'width' => 844, 'height' => 494, 'crop' => true, 'resize' => true ));							
 							
 							//get the alt text
 							$featured_image_alt = trim(strip_tags( get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ));
 							if(empty($featured_image_alt))
-								$featured_image_alt = 'Image for '.ucwords(get_the_title()); //defaults if none found
-											
-							$service_types = wp_get_post_terms($post->ID, 'service_types', array("fields" => "slugs")); 
-							
+								$featured_image_alt = 'Image for '.ucwords(get_the_title()); //defaults if none found							
 						?>
 					
 						<div class="grid-wrap gc">
@@ -74,15 +61,6 @@ get_header();
 								<h3><a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h3>
 								
 								
-								<h5>
-								<?php
-								foreach($service_types AS $slug) :
-								$term = get_term_by('slug', $slug, 'service_types')
-								?>
-								<?php echo $term->name; ?>								
-								<?php endforeach; ?>
-								</h5>
-								
 								<?php the_excerpt(); ?>
 								
 								<a href="<?php echo get_permalink() ?>">Read More</a>
@@ -90,12 +68,11 @@ get_header();
 								<?php		
 								//output connected clients					
 								foreach ( $post->connected as $post ) : setup_postdata( $post );
-									echo '<h6>Provided by: '.get_the_title().'</h6>';
+								?>
+									<h6>Provided by: <a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h6>
+								<?php
 								endforeach;
 								?>
-								
-								
-								
 								
 						   </div>
 						</div>
