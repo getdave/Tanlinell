@@ -31,6 +31,9 @@ get_header();
 						'order' => 'ASC'
 						);
 			$posts = new WP_Query($args);	
+			
+			p2p_type( 'testimonial_to_client' )->each_connected( $posts );
+			
 			if ($posts->have_posts()):
 			?>
             <ul class="grid-wrap">
@@ -70,6 +73,7 @@ get_header();
 								
 								<h3><a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h3>
 								
+								
 								<h5>
 								<?php
 								foreach($service_types AS $slug) :
@@ -83,28 +87,14 @@ get_header();
 								
 								<a href="<?php echo get_permalink() ?>">Read More</a>
 								
-								<?php
-								/*OUTPUT THE CLIENT - Start*/
-								if(!empty($client['client_ID']))
-								{
-									$args = array(
-												'post_type' => 'clients',
-												'page_id'	=> $client['client_ID']
-												);
-									$client_query = new WP_Query($args);
-									if ($client_query->have_posts()):
-										while ( $client_query->have_posts() ) : $client_query->the_post();					
-								?>			
-															
-											<h6>Provided by: <?php the_title(); ?></h6>
-											
-								<?php
-										endwhile;
-									endif;
-									wp_reset_postdata();
-								}
-								/*OUTPUT THE CLIENT - End*/
+								<?php		
+								//output connected clients					
+								foreach ( $post->connected as $post ) : setup_postdata( $post );
+									echo '<h6>Provided by: '.get_the_title().'</h6>';
+								endforeach;
 								?>
+								
+								
 								
 								
 						   </div>

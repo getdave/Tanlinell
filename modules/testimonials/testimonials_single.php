@@ -100,28 +100,24 @@ get_header(); ?>
 					
 					
 					<?php
-					/*OUTPUT THE CLIENT - Start*/
-					if(!empty($client['client_ID']))
-					{
-						$args = array(
-									'post_type' => 'clients',
-									'page_id'	=> $client['client_ID']
-									);
-						$client_query = new WP_Query($args);
-						if ($client_query->have_posts()):
-							while ( $client_query->have_posts() ) : $client_query->the_post();					
-					?>			
-												
-								<h6>Provided by: <a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h6>
-								
-					<?php
-							endwhile;
-						endif;
-						wp_reset_postdata();
-					}
-					/*OUTPUT THE CLIENT - End*/
-					?>
+					// Find connected pages
+					$connected = new WP_Query( array(
+					  'connected_type' => 'testimonial_to_client',
+					  'connected_items' => get_queried_object(),
+					  'nopaging' => true,
+					) );
 					
+					// Display connected pages
+					if ( $connected->have_posts() ) :
+					<?php while ( $connected->have_posts() ) : $connected->the_post(); ?>
+						<h6>Provided by: <a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h6>
+					<?php endwhile; ?>					
+					<?php 
+					// Prevent weirdness
+					wp_reset_postdata();
+					
+					endif;
+					?>
 					
 			   </div>
 			</div>

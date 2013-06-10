@@ -76,25 +76,6 @@ function tanlinell_testimonials_photo_box() {
 add_action('do_meta_boxes', 'tanlinell_testimonials_photo_box');
 
 
-/**
- * Meta Box
- *
- * Create meta box to take in details
- */
-
-global $testimonials_metabox;
-$testimonials_metabox = $simple_mb = new WPAlchemy_MetaBox(array
-(
-	'id' => '_testimonials_details',
-	'title' => 'Testimonials Details',
-	'template' => get_stylesheet_directory() . '/modules/testimonials/testimonials-meta.php',
-	'types' => array('testimonials'),
-	'priority' => 'low',
-	'context' => 'side',
-	'mode' => WPALCHEMY_MODE_EXTRACT
-));
-
-
 
 /**
  * Remove defaults
@@ -151,6 +132,18 @@ function tanlinell_testimonials_create_page() {
 
 } // end programmatically_create_post
 add_filter( 'init', 'tanlinell_testimonials_create_page' );
+
+
+
+function t_to_c_connection() {
+	p2p_register_connection_type( array(
+		'name' => 'testimonial_to_client',
+		'from' => 'testimonials',
+		'to' => 'clients'
+	) );
+}
+add_action( 'p2p_init', 't_to_c_connection' );
+
 
 
 /**
