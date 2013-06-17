@@ -13,15 +13,22 @@
 		if( $featured_image ) {
 			$post_thumbnail_sized =  trailingslashit(get_stylesheet_directory_uri()) . 'timthumb.php?src=' . $featured_image[0] . '&q=80&h=140&zc=1';
 		?>
-		
+
 		<img itemprop="image" src="<?php echo $post_thumbnail_sized; ?>" class="img-thumb" />
-		
+
 	<?php }	?>
-	<div class="entry-content" itemprop="articleBody">	
-		<?php do_atomic('before_single_post_content'); ?>		
+	<div class="entry-content" itemprop="articleBody">
+		<?php do_atomic('before_single_post_content'); ?>
 		<?php the_content(); ?>
-		<?php do_atomic('after_single_post_content'); ?>		
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tanlinell' ), 'after' => '</div>' ) ); ?>
+		<?php do_atomic('after_single_post_content'); ?>
+		<?php wp_link_pages( 
+			array( 
+				'before' 	=> '<div class="page-links">' . __( 'Pages:', 'tanlinell' ), 
+				'after'	 	=> '</div>',
+				'link_before'      => '<span class="pager__link">',
+				'link_after'       => '</span>',	
+			) 
+		); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
