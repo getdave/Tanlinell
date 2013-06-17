@@ -13,7 +13,7 @@
 	$page_subtitle = esc_html( $global_metabox->get_the_value() );
 ?>
 <header class="title-block entry-header">
-	<h1 class="title-block__heading entry-title">
+	<h1 class="title-block__heading entry-title" itemprop="headline">
 		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'tanlinell' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 		<?php if ( $page_title ) : ?>
 			<?php echo $page_title; ?>
@@ -26,7 +26,7 @@
 	<p class="page-subtitle"><?php echo $page_subtitle ?></p>
 	<?php endif; ?>	
 	
-	<div class="title-block__meta entry-meta">
+	<div class="title-block__meta entry-meta" itemprop="dateCreated">
 		<?php tanlinell_posted_on(); ?>
 	</div><!-- .entry-meta -->	
 </header>

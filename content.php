@@ -5,7 +5,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/BlogPosting">
 	<?php get_template_part( 'templates/partials/pagetitle', 'post' ); ?>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
@@ -13,7 +13,7 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
-	<div class="entry-content">
+	<div class="entry-content" itemprop="description">
 		<?php do_atomic('before_post_content'); ?>		
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'tanlinell' ) ); ?>
 		<?php do_atomic('after_post_content'); ?>		
