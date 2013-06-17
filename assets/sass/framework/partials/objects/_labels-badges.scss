@@ -58,7 +58,8 @@ a.badge:focus {
 
 .label-warning,
 .badge-warning {
-	background-color: #f89406;
+    background-color: $errorBackground;
+    color: $errorText;
 }
 
 .label-warning[href],
@@ -68,7 +69,8 @@ a.badge:focus {
 
 .label-success,
 .badge-success {
-	background-color: #468847;
+	background-color: $successBackground;
+	color: $successText;
 }
 
 .label-success[href],
@@ -78,7 +80,8 @@ a.badge:focus {
 
 .label-info,
 .badge-info {
-	background-color: #3a87ad;
+    background-color: $infoBackground;
+    color: $infoText;
 }
 
 .label-info[href],
@@ -86,11 +89,4 @@ a.badge:focus {
 	background-color: #2d6987;
 }
 
-.tag-list {
-
-	a {
-		@extend .label;
-		margin-right: $baseLineHeight/2;
-	}
-}
 
