@@ -60,8 +60,7 @@ get_header();
 							$our_team_metabox->the_field('linkedin');
 							$linkedin = $our_team_metabox->get_the_value();
 							
-							$featured_image       =  tanlinell_get_post_thumb( $post->ID );
-							$post_thumbnail_sized =  trailingslashit(get_stylesheet_directory_uri()) . 'timthumb.php?src='.$featured_image[0] . '&q=80&w120&h=120&zc=1';
+							$post_thumbnail_sized	=  tanlinell_get_post_thumb( $post->ID , array( 'width' => 270, 'height' => 160, 'crop' => true, 'resize' => true ));
 							
 							//get the alt text
 							$featured_image_alt = trim(strip_tags( get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ));
@@ -76,7 +75,7 @@ get_header();
 						<div class="grid-wrap gc">
 							<div class="img-polaroid gc mbl d1-4">
 								<a href="<?php echo get_permalink() ?>">
-									<img src="<?php echo $post_thumbnail_sized; ?>" alt="<?php echo $featured_image_alt; ?>" style="">
+									<img src="<?php echo $post_thumbnail_sized[0]; ?>" alt="<?php echo $featured_image_alt; ?>" style="">
 								</a>
 							</div>
 							<div class="gc d3-4">

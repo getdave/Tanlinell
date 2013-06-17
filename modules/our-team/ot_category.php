@@ -49,8 +49,7 @@ get_header(); ?>
 				$our_team_metabox->the_field('linkedin');
 				$linkedin = $our_team_metabox->get_the_value();
 				
-				$featured_image       =  tanlinell_get_post_thumb( $post->ID );
-				$post_thumbnail_sized =  trailingslashit(get_stylesheet_directory_uri()) . 'timthumb.php?src='.$featured_image[0] . '&q=80&w=900&zc=1';
+				$post_thumbnail_sized	=  tanlinell_get_post_thumb( $post->ID , array( 'width' => 844, 'height' => 494, 'crop' => true, 'resize' => true ));
 									
 				$departments_roles = wp_get_post_terms($post->ID, 'departments_roles', array("fields" => "names"));
 			
@@ -59,7 +58,7 @@ get_header(); ?>
 			<div class="grid-wrap gc">
 				<div class="img-polaroid gc mbl d1-3">
 					<a href="<?php echo get_permalink() ?>">
-						<img src="<?php echo $post_thumbnail_sized; ?>" alt="" style="">
+						<img src="<?php echo $post_thumbnail_sized[0]; ?>" alt="" style="">
 					</a>
 				</div>
 				<div class="gc d2-3">

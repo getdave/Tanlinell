@@ -8,15 +8,15 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/BlogPosting">
 	<?php get_template_part( 'templates/partials/pagetitle', 'post' ); ?>
 	<?php
-		$featured_image       =  tanlinell_get_post_thumb( $post->ID );
+		$featured_image       =  tanlinell_get_post_thumb( $post->ID, array( 'width' => 844, 'height' => 494, 'crop' => true, 'resize' => true ) );
 
-		if( $featured_image ) {
-			$post_thumbnail_sized =  trailingslashit(get_stylesheet_directory_uri()) . 'timthumb.php?src=' . $featured_image[0] . '&q=80&h=140&zc=1';
-		?>
-
-		<img itemprop="image" src="<?php echo $post_thumbnail_sized; ?>" class="img-thumb" />
-
-	<?php }	?>
+		if( $featured_image ) :
+	?>
+		<img itemprop="image" src="<?php echo $featured_image[0]; ?>" class="img-thumb" />
+		
+	<?php endif; ?>
+	
+	
 	<div class="entry-content" itemprop="articleBody">
 		<?php do_atomic('before_single_post_content'); ?>
 		<?php the_content(); ?>
