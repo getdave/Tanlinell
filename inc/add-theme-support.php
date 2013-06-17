@@ -36,14 +36,15 @@ add_theme_support( 'post-thumbnails' );
  * add theme support for post formats
  */
 
-add_theme_support( 'post-formats', array( 
-	//'aside', 
-	//'link', 
-	'gallery', 
-	//'status', 
-	//'quote', 
-	//'image' 
-));
+add_theme_support( 'post-formats', array(
+		'aside',
+		'gallery',
+		'link',
+		'image',
+		'quote',
+		'status',
+		'video'
+	) );
 
 
 
@@ -58,21 +59,21 @@ add_theme_support( 'post-formats', array(
 
 
 /* Register menus. */
-add_theme_support( 
-	'hybrid-core-menus', 
-	array( 'primary', 'secondary', 'subsidiary' ) 
+add_theme_support(
+	'hybrid-core-menus',
+	array( 'primary', 'secondary', 'subsidiary' )
 );
 
 
 /**
  * Add Core Sidebars
- * 
+ *
  * other widget areas are available - http://themehybrid.com/docs/tutorials/hybrid-core-sidebars
  * additional widget areas are defined in register-widget-areas.php
  */
-add_theme_support( 'hybrid-core-sidebars', 
-	array( 
-		'primary', 
+add_theme_support( 'hybrid-core-sidebars',
+	array(
+		'primary',
 		'secondary',
 	)
 );
@@ -85,10 +86,10 @@ add_theme_support( 'hybrid-core-drop-downs' );
 add_theme_support( 'hybrid-core-template-hierarchy' );
 
 /* Add theme support for framework extensions. */
-add_theme_support( 
-	'theme-layouts', 
-	array( '1c', '2c-l', '2c-r' ), 
-	array( 'default' => '2c-l', 'customizer' => true ) 
+add_theme_support(
+	'theme-layouts',
+	array( '1c', '2c-l', '2c-r' ),
+	array( 'default' => '2c-l', 'customizer' => true )
 );
 
 
