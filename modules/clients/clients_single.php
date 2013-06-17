@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<!--
+
 <?php
 	//setup the custom meta object
 	global $clients_slides_metabox;
@@ -29,21 +29,12 @@ get_header(); ?>
 
 ?>
 
-<?php foreach($images AS $k=>$s) : 
+<?php foreach($images AS $k=>$s) : ?>
 
-		
-		$featured_image_small 		= wp_get_attachment_image_src( $s['img_id'], 'featured_image_small');
-		$featured_image_medium 		= wp_get_attachment_image_src( $s['img_id'], 'featured_image_medium');
-		$featured_image_large 		= wp_get_attachment_image_src( $s['img_id'], 'featured_image_large');
-		$featured_image_xlarge 		= wp_get_attachment_image_src( $s['img_id'], 'featured_image_xlarge');
-
-?>
+	<?php brimg( $s['img_id'] ); ?>	
 	
-<img src="<?php echo esc_attr( $featured_image_large[0] );?>" alt="<?php echo $featured_image_alt; ?>"></noscript>
-
 <?php endforeach; ?>
-		
--->
+
     
 
 
