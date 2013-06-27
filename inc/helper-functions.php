@@ -80,7 +80,7 @@ function tanlinell_get_attachment_id_from_src($url) {
 
 function tanlinell_truncate_posts( $amount, $read_more_link='read more' ) {
 	
-	echo balanceTags(wp_trim_words( get_the_content(), $amount, '…<a href="'.get_permalink().'">'.$quote_after.'</a>' ), true);
+	echo balanceTags(wp_trim_words( get_the_content(), $amount, '…<a href="'.get_permalink().'">'.$read_more_link.'</a>' ), true);
 	
 }
 
