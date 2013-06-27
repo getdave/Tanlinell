@@ -71,24 +71,17 @@ function tanlinell_get_attachment_id_from_src($url) {
 /**
  * 	Function to strip the posts content. Called within the loop
  * 
- * 	@param1		$amount			(int)		# no. of characters that have to be shown 
- * 	@param2		$quote_after	(Boolean)	# If TRUE include 'read more' link; Default: FALSE
+ * 	@param1		$amount			(int)		# no. of WORDS that have to be shown 
+ * 	@param2		$read_more_link	(String)	# If provided becomes click text for 'read more' link; Default: `read more`
  * 
- * 	@return		$truncate		(String)	# striped content of a post
+ * 	@return		no return		(String)	# echo'd to screen
  * 
  **/
 
-function tanlinell_truncate_posts( $amount, $quote_after=false ) {
-
-	$truncate = get_the_content();
-	$truncate = apply_filters( 'the_content', $truncate );
-	$truncate = preg_replace( '@<script[^>]*?>.*?</script>@si', '', $truncate );
-	$truncate = preg_replace( '@<style[^>]*?>.*?</style>@si', '', $truncate );
-	$truncate = strip_tags( $truncate );
-	$truncate = substr( $truncate, 0, $amount );
-	echo $truncate;
-	echo ".";
-	if ($quote_after) echo('<a href="'.get_permalink().'">Read more...</a>');
+function tanlinell_truncate_posts( $amount, $read_more_link='read more' ) {
+	
+	echo balanceTags(wp_trim_words( get_the_content(), $amount, '…<a href="'.get_permalink().'">'.$quote_after.'</a>' ), true);
+	
 }
 
 
