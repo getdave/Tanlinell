@@ -7,14 +7,18 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/BlogPosting">
 	<?php get_template_part( 'templates/partials/pagetitle', 'post' ); ?>
-	<?php
-		$featured_image       =  tanlinell_get_post_thumb( $post->ID, array( 'width' => 844, 'height' => 494, 'crop' => true, 'resize' => true ) );
-
-		if( $featured_image ) :
+	
+	<?php		
+		//get the alt text
+		$featured_image_alt = trim(strip_tags( get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ));
+		if(empty($alt))
+			if (get_the_title())
+				$featured_image_alt = 'Image for '.get_the_title(); //defaults if none found
 	?>
-		<img itemprop="image" src="<?php echo $featured_image[0]; ?>" class="img-thumb" />
-		
-	<?php endif; ?>
+	<?php brimg(get_post_thumbnail_id( $post->ID ), $featured_image_alt); ?>
+	
+	
+	
 	
 	
 	<div class="entry-content" itemprop="articleBody">
