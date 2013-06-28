@@ -29,7 +29,13 @@ get_header(); ?>
 	</div><!-- .main -->
 
 	<div class="sub">
-	<?php get_sidebar(); ?>
+		
+		<?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); ?>
+		<?php if(is_plugin_active('BC-Our-Team/bc-our-team.php')): ?>
+			<?php get_template_part( 'templates/bc-plugin-templates/our-team-sidebar' ); ?>
+		<?php endif; ?>
+			
+		<?php get_sidebar(); ?>
 	</div>
 </div>
 <?php get_footer(); ?>
