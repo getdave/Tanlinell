@@ -13,8 +13,8 @@
 	$page_subtitle = esc_html( $global_metabox->get_the_value() );
 ?>
 <header class="title-block entry-header">
-	<h1 class="<?php echo ( $page_subtitle ) ? 'title-block__heading ' : ''; ?> entry-title">
-		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'tanlinell' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+	<h1 class="<?php echo ( $page_subtitle ) ? 'title-block__heading ' : ''; ?> entry-title" itemprop="name headline">
+		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'tanlinell' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark" itemprop="url">
 		<?php if ( $page_title ) : ?>
 			<?php echo $page_title; ?>
 		<?php else : ?>
