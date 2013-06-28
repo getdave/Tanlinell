@@ -28,12 +28,18 @@ $our_team = get_posts( array(
 						'crop_from_position' => 'top, left'
 						);
 		$post_thumbnail_sized	=  tanlinell_get_post_thumb( $member->ID , $thumb_args);
-							
+		
+		//get the alt text
+		$featured_image_alt = trim(strip_tags( get_post_meta(get_post_thumbnail_id( $member->ID ), '_wp_attachment_image_alt', true) ));
+		if(empty($alt))
+			if (get_the_title())
+				$featured_image_alt = 'Image for '.$member->post_title; //defaults if none found
+		
 		$departments_roles = wp_get_post_terms($member->ID, 'departments_roles', array("fields" => "names"));
 	
 	?>
 
-	<img src="<?php echo $post_thumbnail_sized[0]; ?>" alt="" style="">
+	<img src="<?php echo $post_thumbnail_sized[0]; ?>" alt="<?php echo $featured_image_alt; ?>" itemprop="image">
 					
 	<h3><?php echo ucwords($member->post_title); ?></h3>
 	<h4><?php echo $job_title; ?></h4>
