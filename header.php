@@ -44,6 +44,15 @@ wp_title( '|', true, 'right' );
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 
+<!-- Tanlinell Google+ Publisher Link -->
+<?php
+$google_company_page_url 	= of_get_option('google_company_page_url');
+if ($google_company_page_url) :
+?>
+<link rel="publisher" href="<?php echo $google_company_page_url; ?>" />
+<?php endif; ?>
+
+
 <!-- CSS FRAMEWORK -->
 <!--[if (gt IE 8) | (IEMobile)]><!-->
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/css/master.css">

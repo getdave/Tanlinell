@@ -88,6 +88,15 @@ function optionsframework_options() {
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');
+	
+	// Google+ Company Page
+	$options[] = array(
+		'name' => __('Google+ Company Page', 'options_framework_theme'),
+		'desc' => __('Enter your Google+ Company Page url. Used throughout the website.', 'options_framework_theme'),
+		'id' => 'google_company_page_url',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
 
 
 
