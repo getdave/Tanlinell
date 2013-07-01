@@ -2,9 +2,11 @@
 
 echo "Installing Tanlinell"
 
-rm -rf .git/            && \
+rm -rf .git*            && \
+rm README.md            && \
 cd hybrid-core          && \
-rm -rf .git/            && \
+rm -rf .git*	        && \
 cd ../           		&& \
+rm init
 
 echo "Tanlinell successfully installed"
