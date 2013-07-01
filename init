@@ -1,0 +1,16 @@
+#!/bin/sh
+
+echo "Installing clean project"
+
+mv .git/modules .       && \
+rm -rf .git/            && \
+git hf init             && \
+mv modules .git/        && \
+git add .gitmodules     && \
+mv wp-config-local-sample.php wp-config-local.php	&& \
+rm README.md && \
+rm init
+
+echo "BC WordPress Base project successfully installed and ready for WordPress installation"
+
+git status
