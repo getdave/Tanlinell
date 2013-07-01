@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "Installing Tanlinell"
+
+rm -rf .git/            && \
+cd hybrid-core          && \
+rm -rf .git/            && \
+cd ../           		&& \
+
+echo "Tanlinell successfully installed"
