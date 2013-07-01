@@ -279,4 +279,18 @@ function tanlinell_is_blog_page() {
 }
 
 
+/**
+ * 	Function to get the categories for the post
+ * 
+ * 	@param 	$post_ID		(int)	# Post ID
+ *  @return $category_list	(array)	# returns the category id's
+ * 
+ */
+
+function tanlinell_get_the_categories( $post_ID ){
+	
+	$category_list = get_the_category_list( ' ', '', $post_ID );
+	
+	return $category_list;
+}
 
