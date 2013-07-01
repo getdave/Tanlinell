@@ -10,20 +10,21 @@ Tanlinell is brought to you by myself and the team at [Burfield Creative](http:/
 
 ## Usage
 
-To use this project simply clone the repo using:
+Tanlinell ships with a simple bash script for easy installation via git clone. Follow the instructions below:
 
-git clone --recursive git://github.com/foo/bar.git
+1. Clone the repo using ````git clone --recursive git://github.com/foo/bar.git````. __Note:__ if you would like to clone the `develop` branch then add the branch argument to the above command (eg: (````git clone --recursive git://github.com/foo/bar.git -b develop````).
+2. Set file permissions on the `init` script using ````chmod 744 init````.
+3. Run the `init` command using ````./init```` - the script will remove all `.git` directories and files leaving you with a clean set of checked-out files
+4. Start coding.
 
 Note the use of the --recursive flag. This tells git to fetch the files for the submodules contained within the repo (eg: Hybrid Core).
 
 
-## Tips & Tricks
+## Grunt Configuration
 
-* For nice Custom Post Type icons check out [randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/](http://randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/)
+Tanlinell ships with a Gruntfile for usage via [GruntJS](http://gruntjs.com/). If you aren't using Grunt don't worry, you can still make use of Tanlinell.
 
-## Installing grunt.js
-
-First install grunt globally as admin.
+To utilize the Gruntfile you will first need to install grunt globally as admin.
 * Open Terminal
 * run: ```sudo npm install -g grunt```
 * navigate to project directory in terminal e.g. ```cd Sites/Tanlinell/wp-content/themes/tanlinell```
@@ -33,3 +34,9 @@ your good to go!
 
 Further reading and details about starting new projects can be found at:
 http://gruntjs.com/getting-started
+
+
+## Tips & Tricks
+
+* For nice Custom Post Type icons check out [randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/](http://randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/)
+
