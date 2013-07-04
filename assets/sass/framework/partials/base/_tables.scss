@@ -154,11 +154,3 @@ td{
 .table--data{
     font:12px/1.5 sans-serif;
 }
-
-
-
-
-.main table, {
-    @extend .table--bordered;
-    @extend .table--striped;
-}
