@@ -34,34 +34,24 @@ $half_gutter_width: ($gutter/2)+em;
     @include clearfix;
 }
 
-.grid-wrap--large-gutter {
+.grid-wrap--large-gutter,
+.large-gutter {
 	@extend .grid-wrap;
 	margin-left: -$large_gutter_width;
 }
 
-.grid-wrap--half-gutter {
+.grid-wrap--half-gutter,
+.half-gutter {
 	@extend .grid-wrap;
 	margin-left: -$half_gutter_width;
 }
 
-.grid-wrap--no-gutter {
+.grid-wrap--no-gutter,
+.no-gutter {
 	@extend .grid-wrap;
 	margin-left: 0;
 }
 
-/*Grid gutter aliases for backward compatibility*/
-
-.large-gutter {
-	@extend .grid-wrap--large-gutter;	
-}
-
-.half-gutter {
-	@extend .grid-wrap--half-gutter;
-}
-
-.no-gutter {
-	@extend .grid-wrap--no-gutter
-}
 
 .grid-ib {
     letter-spacing: rsize(-4px);
