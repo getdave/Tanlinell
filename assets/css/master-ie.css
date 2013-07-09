@@ -1630,19 +1630,19 @@ optgroup::-moz-focus-inner {
 /* ## Reduced Container */
 /* Use to create a container half the default width of the standard container */
 /* line 23, ../sass/framework/partials/objects/_containers.scss */
-.container-reduced {
+.container--reduced {
   width: 45%;
   margin: 0 auto;
   display: block;
   zoom: 1;
 }
 /* line 86, ../sass/framework/partials/base/_mixins.scss */
-.container-reduced:before {
+.container--reduced:before {
   content: "";
   display: table;
 }
 /* line 91, ../sass/framework/partials/base/_mixins.scss */
-.container-reduced:after {
+.container--reduced:after {
   content: "";
   display: table;
   clear: both;
@@ -1658,17 +1658,17 @@ optgroup::-moz-focus-inner {
 	</div>
 */
 /* line 43, ../sass/framework/partials/objects/_containers.scss */
-.container-extend {
+.container--extend {
   width: auto;
   zoom: 1;
 }
 /* line 86, ../sass/framework/partials/base/_mixins.scss */
-.container-extend:before {
+.container--extend:before {
   content: "";
   display: table;
 }
 /* line 91, ../sass/framework/partials/base/_mixins.scss */
-.container-extend:after {
+.container--extend:after {
   content: "";
   display: table;
   clear: both;

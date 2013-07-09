@@ -20,7 +20,7 @@
 /* ## Reduced Container */
 /* Use to create a container half the default width of the standard container */
 
-.container-reduced {
+.container--reduced {
 	width: $containerWidth/2;
 	margin: 0 auto;
 	display: block;
@@ -40,7 +40,7 @@
 	</div>
 */
 
-.container-extend {
+.container--extend {
 	width: auto;
 	@include clearfix;
 }
