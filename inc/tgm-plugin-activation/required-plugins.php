@@ -159,6 +159,12 @@ function my_theme_register_required_plugins() {
 			'required' 	=> true,
 		),
 
+		array(
+			'name' 		=> 'WordPress Status Dashboard',
+			'slug' 		=> 'wp-status-dashboard',
+			'required' 	=> true,
+		),
+
 		
 
 
