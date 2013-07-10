@@ -166,15 +166,16 @@ add_filter( 'user_contactmethods' , 'tanlinell_remove_contactmethods');
 
 
 /**
-* Remove Theme Upgrade Notice
+* Remove Upgrade Notice
 *
-* Stops WP Admin from displaying prompt to update theme.
+* Stops WP Admin from displaying prompt to update WordPress core, so this can be handled by us via status dashboard.
 */
 
 function wphidenag() {
 	remove_action( 'admin_notices', 'update_nag', 3 );
 }
 add_action('admin_menu','wphidenag');
+
 
 
 

@@ -153,6 +153,12 @@ function my_theme_register_required_plugins() {
 			'required' 	=> false,
 		),
 
+		array(
+			'name' 		=> 'Disable Wordpress Plugin Updates',
+			'slug' 		=> 'disable-wordpress-plugin-updates',
+			'required' 	=> true,
+		),
+
 		
 
 
