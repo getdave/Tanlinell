@@ -164,3 +164,18 @@ function tanlinell_remove_contactmethods( $contactmethods ) {
 add_filter( 'user_contactmethods' , 'tanlinell_remove_contactmethods');
 
 
+
+/**
+* Remove Theme Upgrade Notice
+*
+* Stops WP Admin from displaying prompt to update theme.
+*/
+
+function wphidenag() {
+	remove_action( 'admin_notices', 'update_nag', 3 );
+}
+add_action('admin_menu','wphidenag');
+
+
+
+
