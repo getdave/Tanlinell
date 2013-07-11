@@ -99,9 +99,9 @@ blockquote cite a, blockquote cite a:visited { color: #555; }
 // Set things up for responsive
 img {
 	max-width: 100%;
+	height: auto;
 	vertical-align: middle;
 	border: 0;
-	height:auto;
 	-ms-interpolation-mode: bicubic;
 }
 
