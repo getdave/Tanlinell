@@ -15,7 +15,11 @@
 			if (get_the_title())
 				$featured_image_alt = 'Image for '.get_the_title(); //defaults if none found
 	?>
-	<?php brimg(get_post_thumbnail_id( $post->ID ), $featured_image_alt); ?>
+	<?php 
+	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+	  the_post_thumbnail();
+	} 
+	?>
 	
 	
 	
