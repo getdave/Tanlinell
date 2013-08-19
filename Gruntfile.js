@@ -2,35 +2,21 @@
 
 var path = require('path');
 
-var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 
-var folderMount = function folderMount(connect, point) {
-  return connect.static(path.resolve(point));
-};
 module.exports = function(grunt) {
 
         // load all grunt tasks
         require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
         grunt.initConfig({
-            livereload: {
-          port: 35729 // Default livereload listening port.
-        },
-
-        connect: {
-          livereload: {
-            options: {
-              port: 9001,
-              base: 'assets',
-              middleware: function(connect, options) {
-                return [lrSnippet, folderMount(connect, options.base)];
-              }
-            }
-          }
-        },
+            
 
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
+            options: {
+                livereload: true,
+            },
+
             compass: {
                 files: ['assets/sass/**/*.{scss,sass}'],
                 //files: ['master.scss'],
@@ -39,11 +25,7 @@ module.exports = function(grunt) {
             js: {
                 files: '<%= jshint.all %>',
                 tasks: ['jshint', 'uglify']
-            },
-            livereload: {
-                files: ['assets/css/*.css', 'assets/js/*.js', '*.html', '*.php', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}'],
-                tasks: ['livereload']
-            }
+            },          
         },
 
         // compass and scss
@@ -51,7 +33,15 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     config: 'config.rb',
-                    force: true
+                    force: true,
+                }
+            },
+            build: {
+                options: {
+                    environment: 'production',
+                    force: true,
+                    noLineComments: true,
+                    outputStyle: 'compressed'
                 }
             }
         },
@@ -66,7 +56,7 @@ module.exports = function(grunt) {
                 'Gruntfile.js',
                 'assets/js/source/**/*.js'
             ]
-		},
+        },
 
         // uglify to concat, minify, and make source maps
         uglify: {
@@ -103,27 +93,68 @@ module.exports = function(grunt) {
             }
         },
 
-        // deploy via rsync
-        /* 
-        deploy: {
-            staging: {
-                src: "./",
-                dest: "~/path/to/theme",
-                host: "user@host.com",
-                recursive: true,
-                syncDest: true,
-                exclude: ['.git*', 'node_modules', '.sass-cache', 'Gruntfile.js', 'package.json', '.DS_Store', 'README.md', 'config.rb', '.jshintrc']
-            },
-            production: {
-                src: "./",
-                dest: "~/path/to/theme",
-                host: "user@host.com",
-                recursive: true,
-                syncDest: true,
-                exclude: '<%= rsync.staging.exclude %>'
+        grunticon: {
+            myIcons: {
+                options: {
+                    src: "assets/images/svg-icons/source/",
+                    dest: "assets/images/svg-icons/",
+                    defaultWidth: "64px",
+                    defaultHeight: "64px",
+                    cssprefix: "grunt-icon-",
+                    colors: {
+                        "white": "#ffffff",
+                        "black": "#000000"
+                    }
+                }
             }
         },
-         */
+
+        // Code Deployments (via rsync)
+        /* deploy: {
+            options: {
+                exclude: ['.git*', 'node_modules', '.sass-cache', 'Gruntfile.js', 'package.json', '.DS_Store', 'README.md', 'readme.html', 'license.txt', 'humans.txt','config.rb', '.jshintrc', '.gitignore', 'wp-config-local.php'],
+                args: [
+                        "-avz",     //  -a is an alias for -rlptgoD; -v is verbose; -z is compression
+                        "--progress",
+                ],
+                recursive: true,
+                syncDest: false,
+            },
+            develop: {
+                src: "../../../",
+                dest: "~/public_html/",
+                host: "user@134.0.18.114",
+                recursive: "<%= deploy.options.recursive %>",
+                syncDest: "<%= deploy.options.syncDest %>",
+                exclude: "<%= deploy.options.exclude %>",
+                args: "<%= deploy.options.args %>",
+            },
+        }, */
+
+        // Database Deployments (via grunt-deployments)
+        /* deployments: {
+                options: {
+                    backups_dir: '../../../../backups'
+                },
+                "local": {
+                    "title": "Local",
+                    "database": "db_name",
+                    "user": "db_user",
+                    "pass": "db_pass",
+                    "host": "localhost",
+                    "url": "local_url",
+                },
+                "remote": {
+                    "title": "Remote",
+                    "database": "remote_db_name",
+                    "user": "remote_db_user",
+                    "pass": "remote_db_pass",
+                    "host": "localhost",
+                    "url": "remote_url",
+                    "ssh_host": "user@host"
+                },
+            }, */
+
         cc: {
             // catch that comma!
         }
@@ -131,13 +162,10 @@ module.exports = function(grunt) {
     });
 
     // rename tasks
-    grunt.renameTask('regarde', 'watch');
     grunt.renameTask('rsync', 'deploy');
 
     // register task
     grunt.registerTask('default', [
-        'livereload-start', // must be the first task else we'll get an error
-        'connect',
         'watch'
     ]);
 
