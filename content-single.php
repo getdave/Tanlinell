@@ -74,6 +74,7 @@
 			);
 		?>
 
-		<?php edit_post_link( __( 'Edit', 'tanlinell' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
+	
+	<?php get_template_part( 'templates/partials/social', 'actions' ); ?>
 </article><!-- #post-<?php the_ID(); ?> -->
