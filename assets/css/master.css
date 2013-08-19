@@ -1048,7 +1048,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1372764355');
+    background-image: url('../images/select_arrow.png?1376927176');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1228,7 +1228,9 @@ optgroup::-moz-focus-inner {
 .main, .gallery-row
 .main,
 .half-gutter .sub,
-.gallery-row .sub, .gallery-row .col-2, .gallery-row .col-3, .gallery-row .col-4, .gallery-row .col-6,
+.gallery-row .sub, .half-gutter .gallery-row .col-2, .gallery-row .half-gutter .col-2, .gallery-row .col-2, .half-gutter .gallery-row .col-3, .gallery-row .half-gutter .col-3, .gallery-row .col-3, .half-gutter .gallery-row .col-4, .gallery-row .half-gutter .col-4, .gallery-row .col-4, .half-gutter .gallery-row .col-6, .gallery-row .half-gutter .col-6, .gallery-row .col-6,
+.half-gutter .gallery-row .col-5,
+.gallery-row .half-gutter .col-5,
 .gallery-row .col-5 {
   padding-left: 1.5em;
 }
@@ -3045,7 +3047,7 @@ html[xmlns] .slides {
 /* line 12, ../sass/framework/partials/objects/_graybox.scss */
 .graybox {
   background-color: rgba(0, 0, 0, 0.15);
-  background-color: #e9e9e9 \9;
+  background-color: #e9e9e9\9;
   color: #000;
 }
 /* line 17, ../sass/framework/partials/objects/_graybox.scss */
@@ -3104,7 +3106,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1372764355');
+  background-image: url('../images/site-logo.png?1376927176');
   width: 200px;
   height: 80px;
 }
@@ -3143,18 +3145,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1372764355');
+  background-image: url('../images/site-credit.png?1376927176');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1372764355');
+  background-image: url('../images/site-credit--dark.svg?1376927176');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1372764355');
+  background-image: url('../images/site-credit--dark.png?1376927176');
 }
 
 /* ==========================================================================
@@ -3222,26 +3224,64 @@ html[xmlns] .slides {
 		</li>
 	</ul>
 */
-/* line 31, ../sass/framework/partials/common/_social-actions.scss */
+/* #Social Actions */
+/* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
+/*
+	<ul class="social-actions">
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance twitter-share" href="http://twitter.com/share" data-count="none">
+			    Share on Twitter
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance facebook-like" href="http://www.facebook.com/sharer.php" data-send="false" data-show-faces="false" data-font="arial" data-count="false" data-layout="button_count">
+			    Like on Facebook
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance linkedin-share" href="http://www.linkedin.com/shareArticle?mini=true" data-counter="false">
+			    Share on LinkedIn
+			</a>
+		</li>
+	</ul>
+*/
+/* line 57, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions__link {
-  background: url('../images/social-actions-sprite.png?1372764355') no-repeat 0 0;
+  background: url('../images/social-actions-sprite.png?1376928083') no-repeat 0 0;
   width: 60px;
   height: 20px;
+  text-indent: 0 !important;
 }
 
-/* line 39, ../sass/framework/partials/common/_social-actions.scss */
+/* line 65, ../sass/framework/partials/common/_social-actions.scss */
+.social-actions__text {
+  position: absolute;
+  top: 0;
+  left: -999em;
+  overflow: hidden;
+}
+
+/* line 73, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions .facebook-like {
   background-position: 0 -28px;
 }
-/* line 43, ../sass/framework/partials/common/_social-actions.scss */
+/* line 77, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions .linkedin-share {
   background-position: 0 -56px;
 }
+/* line 81, ../sass/framework/partials/common/_social-actions.scss */
+.social-actions .googleplus-one {
+  background-position: 0 -86px;
+  width: 60px;
+}
 
-/* line 50, ../sass/framework/partials/common/_social-actions.scss */
-.socialite-loaded {
-  background: 0;
-  text-indent: 0;
+/* line 90, ../sass/framework/partials/common/_social-actions.scss */
+.socialite-loaded,
+.socialite-loaded .social-actions__text {
+  background: 0 !important;
+  text-indent: 0 !important;
 }
 
 /* ============================================================ */
