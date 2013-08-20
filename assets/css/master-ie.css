@@ -1042,7 +1042,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1376989995');
+    background-image: url('../images/select_arrow.png?1376990667');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -3094,7 +3094,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1376989995');
+  background-image: url('../images/site-logo.png?1376990667');
   width: 200px;
   height: 80px;
 }
@@ -3133,18 +3133,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1376989995');
+  background-image: url('../images/site-credit.png?1376990667');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1376989995');
+  background-image: url('../images/site-credit--dark.svg?1376990667');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1376989995');
+  background-image: url('../images/site-credit--dark.png?1376990667');
 }
 
 /* ==========================================================================
@@ -3338,7 +3338,7 @@ html[xmlns] .slides {
 */
 /* line 57, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions__link {
-  background: url('../images/social-actions-sprite.png?1376989995') no-repeat 0 0;
+  background: url('../images/social-actions-sprite.png?1376990667') no-repeat 0 0;
   width: 60px;
   height: 20px;
   text-indent: 0 !important;
@@ -3592,16 +3592,22 @@ html[xmlns] .slides {
 	</span>
 */
 /* line 165, ../sass/framework/partials/base/_helpers.scss */
-.img-replace,
-.ir,
-.site-credit,
-.social-actions__link {
-  display: inline-block;
-  text-indent: -999em;
+.ir, .site-credit, .social-actions__link,
+.img-replace {
+  background-color: transparent;
+  border: 0;
   overflow: hidden;
-  background-repeat: no-repeat;
-  text-align: left;
-  direction: ltr;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 174, ../sass/framework/partials/base/_helpers.scss */
+.ir:before, .site-credit:before, .social-actions__link:before,
+.img-replace:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
 }
 
 /* ##Hidden Content */
@@ -3610,9 +3616,9 @@ html[xmlns] .slides {
 /* 	
 	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
 */
-/* line 184, ../sass/framework/partials/base/_helpers.scss */
+/* line 191, ../sass/framework/partials/base/_helpers.scss */
 .hidden {
-  display: none;
+  display: none !important;
   visibility: hidden;
 }
 
@@ -3622,18 +3628,22 @@ html[xmlns] .slides {
 /* 	
 	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
 */
-/* line 199, ../sass/framework/partials/base/_helpers.scss */
+/* line 206, ../sass/framework/partials/base/_helpers.scss */
 .vh, .generatedcontent .social-icons__name,
 .v-hidden,
 .screen-reader-text,
 .assistive-text {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
-/* line 208, ../sass/framework/partials/base/_helpers.scss */
+/* line 220, ../sass/framework/partials/base/_helpers.scss */
 .vh.focusable:active, .generatedcontent .focusable.social-icons__name:active,
 .vh.focusable:focus
 .v-hidden.focusable:active,
@@ -3642,10 +3652,10 @@ html[xmlns] .slides {
 .v-hidden.focusable:focus {
   clip: auto;
   height: auto;
+  margin: 0;
   overflow: visible;
   position: static;
   width: auto;
-  margin: 0;
 }
 
 /* ###Hide: Visually From All + Maintain Layout */
@@ -3653,14 +3663,14 @@ html[xmlns] .slides {
 /* 	
 	<p>Lorem ipsum dolor sit amet, <strong class="invisible">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
 */
-/* line 222, ../sass/framework/partials/base/_helpers.scss */
+/* line 234, ../sass/framework/partials/base/_helpers.scss */
 .invisible {
   visibility: hidden;
 }
 
 /* ##Resetting */
 /* ###Lists */
-/* line 232, ../sass/framework/partials/base/_helpers.scss */
+/* line 244, ../sass/framework/partials/base/_helpers.scss */
 .list-reset {
   list-style: none;
   margin: 0;
