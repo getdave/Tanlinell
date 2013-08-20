@@ -4,9 +4,9 @@
  * This file contains all simple JS to init JavaScript plugins
  * For example you might initialise your slideshow from this.
  *
- * I'd advise avoiding coding custom JS in this file. That's 
+ * I'd advise avoiding coding custom JS in this file. That's
  * what main.js is for...
- * 
+ *
  */
 
 // Capture jQuery in noConflict mode and retranslate to $ alias
@@ -17,7 +17,7 @@
 	 * %%MY_PLUGIN%%
 	 *
 	 * %%PLUGIN_DESCRIPTION%%
-	 * 
+	 *
 	 */
 
 	$(document).ready(function(){
@@ -44,24 +44,24 @@
 	 * only if on suitably large screen
 	 * device. Not perfect but ....
 	 */
-	
+
 	(function() {
 		Modernizr.load({
 			test: Modernizr.mq('only screen and (min-width: 62em)'),
 			yep : [
-				tanlinell_site_details.template_directory_uri + '/assets/js/conditional/jquery.hoverIntent.js',
-				tanlinell_site_details.template_directory_uri + '/assets/js/conditional/superfish/superfish.js'				
+				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/jquery.hoverIntent.js',
+				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/superfish/superfish.js'
 				],
 			complete: function(){
 				if (jQuery().superfish) {
 					jQuery('#nav-primary').superfish({
-						speed:		250, 
+						speed:		250,
 						speedOut:	100,
 						delay:		250,
 						animation:	{
 							opacity:'show',
 							height:'show'
-						}	
+						}
 					});
 				}
 			}
@@ -75,23 +75,23 @@
 	 *
 	 * Loads socialite and required social network extensions
 	 * when required by page
-	 * 
+	 *
 	 */
-	/* 
+	/*
 	(function() {
 		Modernizr.load({
 			test: 1,
 			yep : [
-				tanlinell_site_details.template_directory_uri + '/assets/js/conditional/socialite/socialite.min.js'
+				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/socialite/socialite.min.js'
 				],
 			complete: function(){
 				$('.social-actions').on("touchstart hover", function() {
 					Socialite.load('.main');
 				});
-				
+
 			}
 		});
-	}());  
+	}());
 	 */
 
 
@@ -99,24 +99,24 @@
 	 * jPanelMenu
 	 *
 	 * jPanelMenu is a jQuery plugin that creates a paneled-style menu (like the type seen in the mobile versions of Facebook and Google, as well as in many native iPhone applications).
-	 * 
+	 *
 	 */
-	
+
 	/* (function() {
 			Modernizr.load({
 				test: Modernizr.mq('only screen and (max-width: 62em)'),
 				yep : [
-					tanlinell_site_details.template_directory_uri + '/assets/js/conditional/jquery.jpanelmenu.min.js'
+					tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/jquery.jpanelmenu.min.js'
 					],
 				complete: function(){
-					
+
 					var jPM = $.jPanelMenu({
-					    menu: '.menu-secondary',
-					    trigger: '.menu-secondary-toggle',
+						menu: '.menu-secondary',
+						trigger: '.menu-secondary-toggle',
 					});
-	
+
 					jPM.on();
-					
+
 				}
 			});
 		}());  */
