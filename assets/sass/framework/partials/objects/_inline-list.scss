@@ -73,6 +73,45 @@
         margin-right: $baseLineHeight/2;
     }
 }
+
+/* ##Inline Block 
+	<ul class="inline-list inline-list--ib">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+.inline-list--ib {
+    letter-spacing: rsize(-4px);
+
+    .inline-list__item,
+    > li {
+        @include inline-block;
+        vertical-align: middle;
+        float: none;
+        letter-spacing: normal;
+    }
+}
+
+/* ##Centered 
+	<ul class="inline-list inline-list--spaced">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+.inline-list--spaced {
+    margin-left: -#{$baseLineHeight*2};
+
+    .inline-list__item,
+    > li {
+         margin-left: $baseLineHeight*2;
+    }
+}
   
 
 
