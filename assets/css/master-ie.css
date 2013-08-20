@@ -1041,7 +1041,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1376993964');
+    background-image: url('../images/select_arrow.png?1372764355');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1221,9 +1221,7 @@ optgroup::-moz-focus-inner {
 .main, .gallery-row
 .main,
 .half-gutter .sub,
-.gallery-row .sub, .half-gutter .gallery-row .col-2, .gallery-row .half-gutter .col-2, .gallery-row .col-2, .half-gutter .gallery-row .col-3, .gallery-row .half-gutter .col-3, .gallery-row .col-3, .half-gutter .gallery-row .col-4, .gallery-row .half-gutter .col-4, .gallery-row .col-4, .half-gutter .gallery-row .col-6, .gallery-row .half-gutter .col-6, .gallery-row .col-6,
-.half-gutter .gallery-row .col-5,
-.gallery-row .half-gutter .col-5,
+.gallery-row .sub, .gallery-row .col-2, .gallery-row .col-3, .gallery-row .col-4, .gallery-row .col-6,
 .gallery-row .col-5 {
   padding-left: 1.5em;
 }
@@ -3138,7 +3136,7 @@ html[xmlns] .slides {
 /* line 12, ../sass/framework/partials/objects/_graybox.scss */
 .graybox {
   background-color: rgba(0, 0, 0, 0.15);
-  background-color: #e9e9e9\9;
+  background-color: #e9e9e9 \9;
   color: #000;
 }
 /* line 17, ../sass/framework/partials/objects/_graybox.scss */
@@ -3195,7 +3193,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1376993964');
+  background-image: url('../images/site-logo.png?1372764355');
   width: 200px;
   height: 80px;
 }
@@ -3234,18 +3232,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1376993964');
+  background-image: url('../images/site-credit.png?1372764355');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1376993964');
+  background-image: url('../images/site-credit--dark.svg?1372764355');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1376993964');
+  background-image: url('../images/site-credit--dark.png?1372764355');
 }
 
 /* ==========================================================================
@@ -3444,7 +3442,7 @@ html[xmlns] .slides {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  background: url('../images/social-actions-sprite.png?1376993964') no-repeat 0 0;
+  background: url('../images/social-actions-sprite.png?1376994736') no-repeat 0 0;
   width: 60px;
   height: 20px;
   text-indent: 0 !important;
