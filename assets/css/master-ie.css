@@ -1042,7 +1042,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1376990897');
+    background-image: url('../images/select_arrow.png?1376991101');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -3094,7 +3094,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1376990897');
+  background-image: url('../images/site-logo.png?1376991101');
   width: 200px;
   height: 80px;
 }
@@ -3133,18 +3133,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1376990897');
+  background-image: url('../images/site-credit.png?1376991101');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1376990897');
+  background-image: url('../images/site-credit--dark.svg?1376991101');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1376990897');
+  background-image: url('../images/site-credit--dark.png?1376991101');
 }
 
 /* ==========================================================================
@@ -3338,35 +3338,33 @@ html[xmlns] .slides {
 */
 /* line 57, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions__link {
-  background: url('../images/social-actions-sprite.png?1376990897') no-repeat 0 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background: url('../images/social-actions-sprite.png?1376991101') no-repeat 0 0;
   width: 60px;
   height: 20px;
   text-indent: 0 !important;
 }
 
-/* line 65, ../sass/framework/partials/common/_social-actions.scss */
-.social-actions__text {
-  position: absolute;
-  top: 0;
-  left: -999em;
-  overflow: hidden;
-}
-
-/* line 73, ../sass/framework/partials/common/_social-actions.scss */
+/* line 71, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions .facebook-like {
   background-position: 0 -28px;
 }
-/* line 77, ../sass/framework/partials/common/_social-actions.scss */
+/* line 75, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions .linkedin-share {
   background-position: 0 -56px;
 }
-/* line 81, ../sass/framework/partials/common/_social-actions.scss */
+/* line 79, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions .googleplus-one {
   background-position: 0 -86px;
   width: 60px;
 }
 
-/* line 90, ../sass/framework/partials/common/_social-actions.scss */
+/* line 88, ../sass/framework/partials/common/_social-actions.scss */
 .socialite-loaded,
 .socialite-loaded .social-actions__text {
   background: 0 !important;
@@ -3629,7 +3627,7 @@ html[xmlns] .slides {
 	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
 */
 /* line 206, ../sass/framework/partials/base/_helpers.scss */
-.vh, .generatedcontent .social-icons__name,
+.vh, .generatedcontent .social-icons__name, .social-actions__text,
 .v-hidden,
 .screen-reader-text,
 .assistive-text {
@@ -3644,10 +3642,12 @@ html[xmlns] .slides {
 }
 
 /* line 220, ../sass/framework/partials/base/_helpers.scss */
-.vh.focusable:active, .generatedcontent .focusable.social-icons__name:active,
+.vh.focusable:active, .generatedcontent .focusable.social-icons__name:active, .focusable.social-actions__text:active,
 .vh.focusable:focus
 .v-hidden.focusable:active,
 .generatedcontent .focusable.social-icons__name:focus
+.v-hidden.focusable:active,
+.focusable.social-actions__text:focus
 .v-hidden.focusable:active,
 .v-hidden.focusable:focus {
   clip: auto;
