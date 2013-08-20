@@ -1663,7 +1663,7 @@ optgroup::-moz-focus-inner {
 		<p>I'm a section on the layout/page which should be centered in the window</p>
 	</div>  
 */
-/* line 13, ../sass/framework/partials/objects/_containers.scss */
+/* line 12, ../sass/framework/partials/objects/_containers.scss */
 .container {
   width: 90%;
   margin: 0 auto;
@@ -1682,27 +1682,54 @@ optgroup::-moz-focus-inner {
   clear: both;
 }
 
+/* ## Reduced Container */
+/* Use to create a container half the default width of the standard container */
+/*
+	<div class="container container--reduced">
+		<!-- SOME STUFF -->
+	</div>
+*/
+/* line 27, ../sass/framework/partials/objects/_containers.scss */
+.container--reduced {
+  width: 45%;
+}
+
+/* ##Padded Container */
+/* Use to create a container with top and bottom padding */
+/*
+*/
+/* line 38, ../sass/framework/partials/objects/_containers.scss */
+.container--padded {
+  padding-top: 2.499em;
+  padding-bottom: 2.499em;
+}
+/* line 42, ../sass/framework/partials/objects/_containers.scss */
+.container--padded > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 /* ## Extended Container */
 /* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
 /*
-	<div class="container-extend" style="background: #f7f7f7f;">
+	<div class="container--extend" style="background: #f7f7f7f;">
 		<div class="container">
 			<p>A section of content where you need the background to extend to the full width of the browser whilst the content remains centered</p>
 		</div> 
 	</div>
 */
-/* line 33, ../sass/framework/partials/objects/_containers.scss */
-.container-extend {
+/* line 58, ../sass/framework/partials/objects/_containers.scss */
+.container--extend {
   width: auto;
   zoom: 1;
 }
 /* line 86, ../sass/framework/partials/base/_mixins.scss */
-.container-extend:before {
+.container--extend:before {
   content: "";
   display: table;
 }
 /* line 91, ../sass/framework/partials/base/_mixins.scss */
-.container-extend:after {
+.container--extend:after {
   content: "";
   display: table;
   clear: both;
@@ -3442,7 +3469,7 @@ html[xmlns] .slides {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  background: url('../images/social-actions-sprite.png?1376994736') no-repeat 0 0;
+  background: url('../images/social-actions-sprite.png?1376996063') no-repeat 0 0;
   width: 60px;
   height: 20px;
   text-indent: 0 !important;
