@@ -3014,6 +3014,47 @@ html[xmlns] .slides {
   display: block;
 }
 
+/* ============================================================ */
+/* ============================================================ */
+/* line 16, ../sass/framework/partials/objects/_feature-element.scss */
+.feature-element {
+  position: relative;
+  text-align: center;
+}
+@media only screen and (min-width: 48em) {
+  /* line 21, ../sass/framework/partials/objects/_feature-element.scss */
+  .feature-element:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    height: 1px;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #999;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 37, ../sass/framework/partials/objects/_feature-element.scss */
+  .feature-element__wrap {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    background: white;
+    padding-left: 0.833em;
+    padding-right: 0.833em;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+}
+
 /* #Title Block */
 /* Addresses common markup/presentation scenario of title with meta information
 */
