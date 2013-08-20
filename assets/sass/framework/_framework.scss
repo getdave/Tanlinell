@@ -35,8 +35,8 @@
 
 	@import "compass";
 	@import "_variables";
-	@import "partials/base/_mixins";
-	@import "partials/base/_normalize.scss";
+	@import "base/_mixins";
+	@import "base/_normalize.scss";
 
 
 /* ==========================================================================
@@ -44,10 +44,10 @@
    Base for framework. Mostly global, tag-based selector rules.
    ========================================================================== */
 
-	@import "partials/base/_typo.scss";
-	@import "partials/base/_headings.scss";
-	@import "partials/base/_forms.scss";
-	@import "partials/base/_grid.scss";
+	@import "base/_typo.scss";
+	@import "base/_headings.scss";
+	@import "base/_forms.scss";
+	@import "base/_grid.scss";
 
 
 /* ==========================================================================
@@ -57,79 +57,79 @@
 
 
 	// Media Block
-	@import "partials/objects/_media.scss";
+	@import "objects/_media.scss";
 
 	// Containers - used to define "sections" on a layout/page
-	@import "partials/objects/_containers.scss";
+	@import "objects/_containers.scss";
 
 	// Island/Islet - simple boxed off content
-	@import "partials/objects/_island.scss";
+	@import "objects/_island.scss";
 
 	// Split (Listings)
-	@import "partials/objects/_split.scss";
+	@import "objects/_split.scss";
 
 	// Hero Unit
-	@import "partials/objects/_hero-unit.scss";
+	@import "objects/_hero-unit.scss";
 
 	// Menu
-	@import "partials/objects/_menu.scss";
+	@import "objects/_menu.scss";
 
 	// Item List
-	@import "partials/objects/_item-list.scss";
+	@import "objects/_item-list.scss";
 
 	// Block Lists
-	@import "partials/objects/_block-list.scss";
+	@import "objects/_block-list.scss";
 
 	// Controls - common control styles interactive navigation elements
-	@import "partials/objects/_controls.scss";
+	@import "objects/_controls.scss";
 
 	// "Nav" object - floated lists of content
-	@import "partials/objects/_nav.scss";
+	@import "objects/_nav.scss";
 
 	// Buttons
-	@import "partials/objects/_buttons.scss";
+	@import "objects/_buttons.scss";
 
 	// Dropdowns
-	@import "partials/objects/_dropdowns.scss";
+	@import "objects/_dropdowns.scss";
 
 	// Alerts
-	@import "partials/objects/_alerts.scss";
+	@import "objects/_alerts.scss";
 
 	// Labels & Badges
-	@import "partials/objects/_labels-badges.scss";
+	@import "objects/_labels-badges.scss";
 
 	// Pagination
-	@import "partials/objects/_pagination.scss";
+	@import "objects/_pagination.scss";
 
 	// Paging (controls for Next/Previous)
-	@import "partials/objects/_pager.scss";
+	@import "objects/_pager.scss";
 
 	// Breadcrumb navigation
-	@import "partials/objects/_breadcrumbs.scss";
+	@import "objects/_breadcrumbs.scss";
 
 	// Complex (split) Link
-	@import "partials/objects/_complex-link.scss";
+	@import "objects/_complex-link.scss";
 
 	// Images
-	@import "partials/objects/_images.scss";
+	@import "objects/_images.scss";
 
 	// Flexslider (slideshow styles)
-	@import "partials/objects/_flexslider.scss";
+	@import "objects/_flexslider.scss";
 
 	// Feature Element
-	@import "partials/objects/_feature-element.scss";
+	@import "objects/_feature-element.scss";
 
 	// Title Block
-	@import "partials/objects/_title-block.scss";
+	@import "objects/_title-block.scss";
 
 	// Inline List
-	@import "partials/objects/_inline-list.scss";
+	@import "objects/_inline-list.scss";
 
 	// Flippable
-	@import "partials/objects/_flippable.scss";
+	@import "objects/_flippable.scss";
 
 	// Graybox
-	@import "partials/objects/_graybox.scss";
+	@import "objects/_graybox.scss";
 
 
 
@@ -140,25 +140,25 @@
    ========================================================================== */
 
    	// Primary Nav
-	@import "partials/common/_primary-nav.scss";
+	@import "compounds/_primary-nav.scss";
 
 	// Site logo
-	@import "partials/common/_site-logo.scss";
+	@import "compounds/_site-logo.scss";
 
 	// Site Credit
-	@import "partials/common/site-credit.scss";
+	@import "compounds/site-credit.scss";
 
 	// Columns
-	@import "partials/common/_columns.scss";
+	@import "compounds/_columns.scss";
 
 	// Social Icons (conditional)
-	@import "partials/common/social-icons.scss";
+	@import "compounds/social-icons.scss";
 
 	// Social Actions
-	@import "partials/common/social-actions.scss";
+	@import "compounds/social-actions.scss";
 
 	// Gallery
-	@import "partials/common/_gallery.scss";
+	@import "compounds/_gallery.scss";
 
 
 
@@ -170,8 +170,8 @@
    ========================================================================== */
 
 	// Helper classes
-	@import "partials/base/_helpers.scss";
+	@import "base/_helpers.scss";
 
 	// Spacing classes
-	@import "partials/base/_spacing.scss";
+	@import "base/_spacing.scss";
 
