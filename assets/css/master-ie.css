@@ -506,37 +506,36 @@ body {
 /* line 23, ../sass/framework/partials/base/_typo.scss */
 p {
   margin: 0 0 1.666em;
-  line-height: 1.666em;
 }
 
-/* line 34, ../sass/framework/partials/base/_typo.scss */
+/* line 33, ../sass/framework/partials/base/_typo.scss */
 a {
   color: #0088cc;
 }
 
-/* line 39, ../sass/framework/partials/base/_typo.scss */
+/* line 38, ../sass/framework/partials/base/_typo.scss */
 a:hover,
 a:focus {
   color: #005580;
 }
 
-/* line 43, ../sass/framework/partials/base/_typo.scss */
+/* line 42, ../sass/framework/partials/base/_typo.scss */
 a:focus {
   outline: thin dotted;
 }
 
-/* line 47, ../sass/framework/partials/base/_typo.scss */
+/* line 46, ../sass/framework/partials/base/_typo.scss */
 a:hover, a:active {
   outline: none;
 }
 
-/* line 57, ../sass/framework/partials/base/_typo.scss */
+/* line 56, ../sass/framework/partials/base/_typo.scss */
 ul, ol {
   padding: 0;
   margin: 0 0 1.666em 25px;
 }
 
-/* line 66, ../sass/framework/partials/base/_typo.scss */
+/* line 65, ../sass/framework/partials/base/_typo.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -544,52 +543,52 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 70, ../sass/framework/partials/base/_typo.scss */
+/* line 69, ../sass/framework/partials/base/_typo.scss */
 ul {
   list-style: disc;
 }
 
-/* line 74, ../sass/framework/partials/base/_typo.scss */
+/* line 73, ../sass/framework/partials/base/_typo.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 78, ../sass/framework/partials/base/_typo.scss */
+/* line 77, ../sass/framework/partials/base/_typo.scss */
 li {
   line-height: 1.666em;
 }
 
-/* line 87, ../sass/framework/partials/base/_typo.scss */
+/* line 86, ../sass/framework/partials/base/_typo.scss */
 blockquote, blockquote p {
   line-height: 1.5;
   color: #777;
 }
 
-/* line 88, ../sass/framework/partials/base/_typo.scss */
+/* line 87, ../sass/framework/partials/base/_typo.scss */
 blockquote {
   margin: 0 0 1.666em;
   padding: 9px 20px 0 19px;
   border-left: 1px solid #ddd;
 }
 
-/* line 89, ../sass/framework/partials/base/_typo.scss */
+/* line 88, ../sass/framework/partials/base/_typo.scss */
 blockquote cite {
   display: block;
   font-size: ms(0)-1;
   color: #555;
 }
 
-/* line 90, ../sass/framework/partials/base/_typo.scss */
+/* line 89, ../sass/framework/partials/base/_typo.scss */
 blockquote cite:before {
   content: "\2014 \0020";
 }
 
-/* line 91, ../sass/framework/partials/base/_typo.scss */
+/* line 90, ../sass/framework/partials/base/_typo.scss */
 blockquote cite a, blockquote cite a:visited {
   color: #555;
 }
 
-/* line 100, ../sass/framework/partials/base/_typo.scss */
+/* line 99, ../sass/framework/partials/base/_typo.scss */
 img {
   max-width: 100%;
   height: auto;
@@ -598,22 +597,22 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 109, ../sass/framework/partials/base/_typo.scss */
+/* line 108, ../sass/framework/partials/base/_typo.scss */
 #googlemap img, object, embed {
   max-width: none;
 }
 
-/* line 110, ../sass/framework/partials/base/_typo.scss */
+/* line 109, ../sass/framework/partials/base/_typo.scss */
 #map_canvas embed {
   max-width: none;
 }
 
-/* line 111, ../sass/framework/partials/base/_typo.scss */
+/* line 110, ../sass/framework/partials/base/_typo.scss */
 #map_canvas img {
   max-width: none;
 }
 
-/* line 112, ../sass/framework/partials/base/_typo.scss */
+/* line 111, ../sass/framework/partials/base/_typo.scss */
 #map_canvas object {
   max-width: none;
 }
@@ -3080,6 +3079,52 @@ html[xmlns] .slides {
   margin-right: 0.833em;
 }
 
+/* ##Inline Block 
+	<ul class="inline-list inline-list--ib">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+/* line 86, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list--ib {
+  letter-spacing: -0.25em;
+}
+/* line 90, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list--ib .inline-list__item,
+.inline-list--ib > li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  float: none;
+  letter-spacing: normal;
+}
+
+/* ##Centered 
+	<ul class="inline-list inline-list--spaced">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+/* line 107, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list--spaced {
+  margin-left: -3.332em;
+}
+/* line 111, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list--spaced .inline-list__item,
+.inline-list--spaced > li {
+  margin-left: 3.332em;
+}
+
 /* #Gray Box */
 /* Simple background box styles. Can be applied safetly to any element. Useful for prototyping */
 /* ##Gray Box */
@@ -3491,7 +3536,7 @@ html[xmlns] .slides {
 /* Set of simple classes to implement common CSS patterns */
 /* ##Clearfix & Clearing */
 /* ###Clearing */
-/* 
+/*
 	<p class="clear">I will clear both sides</p>
 */
 /* line 14, ../sass/framework/partials/base/_helpers.scss */
@@ -3499,16 +3544,16 @@ html[xmlns] .slides {
   clear: both;
 }
 
-/* 	
-	<p class="clear-l">I will clear to the left</p> 
+/*
+	<p class="clear-l">I will clear to the left</p>
 */
 /* line 21, ../sass/framework/partials/base/_helpers.scss */
 .clear-l {
   clear: left;
 }
 
-/* 	
-	<p class="clear-r">I will clear to the right</p> 
+/*
+	<p class="clear-r">I will clear to the right</p>
 */
 /* line 28, ../sass/framework/partials/base/_helpers.scss */
 .clear-r {
@@ -3517,7 +3562,7 @@ html[xmlns] .slides {
 
 /* ###Clearfix */
 /* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations nicolasgallagher.com/micro-clearfix-hack/ */
-/* 	
+/*
 	<div class="wrapper clearfix">
 		<div class="floated-left">
 			<p>I'm floated but my parent has a clearfix so I am contained</p>
@@ -3552,16 +3597,16 @@ html[xmlns] .slides {
 
 /* ##Floats and Alignment */
 /* ###Floats */
-/* 	
-	<p class="fr">I will float to the right.</p> 
+/*
+	<p class="fr">I will float to the right.</p>
 */
 /* line 75, ../sass/framework/partials/base/_helpers.scss */
 .fr {
   float: right;
 }
 
-/* 	
-	<p class="fl">I will float to the left.</p> 
+/*
+	<p class="fl">I will float to the left.</p>
 */
 /* line 82, ../sass/framework/partials/base/_helpers.scss */
 .fl {
@@ -3569,24 +3614,24 @@ html[xmlns] .slides {
 }
 
 /* ###Text Alignment */
-/* 	
-	<p class="text-right">My text is aligned right.</p> 
+/*
+	<p class="text-right">My text is aligned right.</p>
 */
 /* line 92, ../sass/framework/partials/base/_helpers.scss */
 .text-right {
   text-align: right;
 }
 
-/* 	
-	<p class="text-left">My text is aligned left.</p> 
+/*
+	<p class="text-left">My text is aligned left.</p>
 */
 /* line 99, ../sass/framework/partials/base/_helpers.scss */
 .text-left {
   text-align: left;
 }
 
-/* 	
-	<p class="text-center">My text is aligned centrally.</p> 
+/*
+	<p class="text-center">My text is aligned centrally.</p>
 */
 /* line 106, ../sass/framework/partials/base/_helpers.scss */
 .text-center {
@@ -3595,12 +3640,12 @@ html[xmlns] .slides {
 
 /* ##Imagery */
 /* ###Image Positioning */
-/* 	
+/*
 	<img src="http://www.placehold.it/200x200" class="img-left" />
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.</p> 
+	consequat.</p>
 */
 /* line 123, ../sass/framework/partials/base/_helpers.scss */
 .img-left,
@@ -3610,27 +3655,27 @@ html[xmlns] .slides {
   margin: 0 1.666em 1.666em 0;
 }
 
-/* 	
+/*
 	<img src="http://www.placehold.it/200x200" class="img-right" />
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.</p> 
+	consequat.</p>
 */
 /* line 137, ../sass/framework/partials/base/_helpers.scss */
 .img-right,
 .img-r,
 .alignright {
   float: right;
-  margin: 0 0 1.666em 0.833em;
+  margin: 0 0 1.666em 1.666em;
 }
 
-/* 	
+/*
 	<img src="http://www.placehold.it/200x200" class="img-center" />
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.</p> 
+	consequat.</p>
 */
 /* line 150, ../sass/framework/partials/base/_helpers.scss */
 .img-center,
@@ -3642,7 +3687,7 @@ html[xmlns] .slides {
 
 /* ###Image Replacement */
 /* This is a safe way to replace HTML content with an image. Advice is not to set width and height via the `style` attribute. Rather achieve this via an additional CSS rule where possible. */
-/* 	
+/*
 	<span class="img-replace" style="background-image: url(http://www.placehold.it/300x100); width: 300px; height: 100px;">
 		I should be replaced with an image
 	</span>
@@ -3669,8 +3714,8 @@ html[xmlns] .slides {
 /* ##Hidden Content */
 /* ###Hide: Screenreaders & Browsers */
 /* css-discuss.incutio.com/wiki/Screenreader_Visibility */
-/* 	
-	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+/*
+	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p>
 */
 /* line 191, ../sass/framework/partials/base/_helpers.scss */
 .hidden {
@@ -3681,8 +3726,8 @@ html[xmlns] .slides {
 /* ###Hide: Visually For Browsers */
 /* Hide only visually, but have it available for screenreaders: by Jon Neal. */
 /* www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
-/* 	
-	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+/*
+	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p>
 */
 /* line 206, ../sass/framework/partials/base/_helpers.scss */
 .vh, .generatedcontent .social-icons__name, .social-actions__text,
@@ -3718,8 +3763,8 @@ html[xmlns] .slides {
 
 /* ###Hide: Visually From All + Maintain Layout */
 /* Hide visually and from screenreaders, but maintain layout  */
-/* 	
-	<p>Lorem ipsum dolor sit amet, <strong class="invisible">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+/*
+	<p>Lorem ipsum dolor sit amet, <strong class="invisible">Hah! You are stupid but you don't know it!</strong>consequat.</p>
 */
 /* line 234, ../sass/framework/partials/base/_helpers.scss */
 .invisible {
