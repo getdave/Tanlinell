@@ -35,133 +35,65 @@
 
 	@import "compass";
 	@import "_variables";
-	@import "base/_mixins";
-	@import "base/_normalize.scss";
+	@import "imports/_mixins";
+	@import "imports/_normalize.scss";
 
 
 /* ==========================================================================
-   BASE
-   Base for framework. Mostly global, tag-based selector rules.
+   ATOMS
+   Base styles/objects. Mostly global, tag-based selector rules.
    ========================================================================== */
 
-	@import "base/_typo.scss";
-	@import "base/_headings.scss";
-	@import "base/_forms.scss";
-	@import "base/_grid.scss";
+	@import "atoms/_typo.scss";
+	@import "atoms/_headings.scss";
+	@import "atoms/_forms.scss";
+	@import "atoms/_grid.scss";
 
 
 /* ==========================================================================
-   OBJECTS
-   Common patterns to be reused and extended in site-specific styles.
+   MOLECULES
+   Groupings of base atomic objects to create reusable elements
    ========================================================================== */
 
-
-	// Media Block
-	@import "objects/_media.scss";
-
-	// Containers - used to define "sections" on a layout/page
-	@import "objects/_containers.scss";
-
-	// Island/Islet - simple boxed off content
-	@import "objects/_island.scss";
-
-	// Split (Listings)
-	@import "objects/_split.scss";
-
-	// Hero Unit
-	@import "objects/_hero-unit.scss";
-
-	// Menu
-	@import "objects/_menu.scss";
-
-	// Item List
-	@import "objects/_item-list.scss";
-
-	// Block Lists
-	@import "objects/_block-list.scss";
-
-	// Controls - common control styles interactive navigation elements
-	@import "objects/_controls.scss";
-
-	// "Nav" object - floated lists of content
-	@import "objects/_nav.scss";
-
-	// Buttons
-	@import "objects/_buttons.scss";
-
-	// Dropdowns
-	@import "objects/_dropdowns.scss";
-
-	// Alerts
-	@import "objects/_alerts.scss";
-
-	// Labels & Badges
-	@import "objects/_labels-badges.scss";
-
-	// Pagination
-	@import "objects/_pagination.scss";
-
-	// Paging (controls for Next/Previous)
-	@import "objects/_pager.scss";
-
-	// Breadcrumb navigation
-	@import "objects/_breadcrumbs.scss";
-
-	// Complex (split) Link
-	@import "objects/_complex-link.scss";
-
-	// Images
-	@import "objects/_images.scss";
-
-	// Flexslider (slideshow styles)
-	@import "objects/_flexslider.scss";
-
-	// Feature Element
-	@import "objects/_feature-element.scss";
-
-	// Title Block
-	@import "objects/_title-block.scss";
-
-	// Inline List
-	@import "objects/_inline-list.scss";
-
-	// Flippable
-	@import "objects/_flippable.scss";
-
-	// Graybox
-	@import "objects/_graybox.scss";
-
-
+	@import "molecules/_media.scss";
+	@import "molecules/_containers.scss";
+	@import "molecules/_island.scss";
+	@import "molecules/_split.scss";
+	@import "molecules/_hero-unit.scss";
+	@import "molecules/_menu.scss";
+	@import "molecules/_item-list.scss";
+	@import "molecules/_block-list.scss";
+	@import "molecules/_controls.scss";
+	@import "molecules/_nav.scss";
+	@import "molecules/_buttons.scss";
+	@import "molecules/_dropdowns.scss";
+	@import "molecules/_alerts.scss";
+	@import "molecules/_labels-badges.scss";
+	@import "molecules/_pagination.scss";
+	@import "molecules/_pager.scss";
+	@import "molecules/_breadcrumbs.scss";
+	@import "molecules/_complex-link.scss";
+	@import "molecules/_images.scss";
+	@import "molecules/_flexslider.scss";
+	@import "molecules/_feature-element.scss";
+	@import "molecules/_title-block.scss";
+	@import "molecules/_inline-list.scss";
+	@import "molecules/_flippable.scss";
+	@import "molecules/_graybox.scss";
 
 
 /* ==========================================================================
-   COMMON
-   Common components/requirements for standard websites
+   COMPOUNDS
+   Groupings of molecular objects to create common components
    ========================================================================== */
 
-   	// Primary Nav
 	@import "compounds/_primary-nav.scss";
-
-	// Site logo
 	@import "compounds/_site-logo.scss";
-
-	// Site Credit
 	@import "compounds/site-credit.scss";
-
-	// Columns
 	@import "compounds/_columns.scss";
-
-	// Social Icons (conditional)
 	@import "compounds/social-icons.scss";
-
-	// Social Actions
 	@import "compounds/social-actions.scss";
-
-	// Gallery
 	@import "compounds/_gallery.scss";
-
-
-
 
 
 /* ==========================================================================
@@ -169,9 +101,8 @@
    Global overides. Utility classes intended to overide all other styles.
    ========================================================================== */
 
-	// Helper classes
-	@import "base/_helpers.scss";
+	@import "atoms/_helpers.scss";
+	@import "atoms/_spacing.scss";
+	//@import "imports/_debug.scss";
 
-	// Spacing classes
-	@import "base/_spacing.scss";
 
