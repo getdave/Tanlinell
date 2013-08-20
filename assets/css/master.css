@@ -1048,7 +1048,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1376991666');
+    background-image: url('../images/select_arrow.png?1376993279');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1594,6 +1594,23 @@ optgroup::-moz-focus-inner {
   margin-left: 20px;
 }
 
+/* line 59, ../sass/framework/partials/objects/_media.scss */
+.m-block--ib {
+  letter-spacing: -0.25em;
+}
+/* line 63, ../sass/framework/partials/objects/_media.scss */
+.m-block--ib .m-img,
+.m-block--ib .m-content {
+  float: none;
+  letter-spacing: normal;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
 /* #Containers */
 /* Standard structures for dividing pages into "sections" */
 /* ##Standard Container */
@@ -1664,7 +1681,7 @@ optgroup::-moz-focus-inner {
 
 /* line 20, ../sass/framework/partials/objects/_island.scss */
 .island, .headed-island {
-  padding: 15px 30px;
+  padding: 1.666em;
 }
 
 /* line 25, ../sass/framework/partials/objects/_island.scss */
@@ -1682,7 +1699,7 @@ optgroup::-moz-focus-inner {
 */
 /* line 38, ../sass/framework/partials/objects/_island.scss */
 .islet {
-  padding: 15px;
+  padding: 0.833em;
 }
 
 /* ##Headed Island */
@@ -1706,14 +1723,14 @@ optgroup::-moz-focus-inner {
 }
 /* line 63, ../sass/framework/partials/objects/_island.scss */
 .headed-island .island-heading {
-  padding: 15px 30px;
+  padding: 0.833em 1.666em;
   margin: 0;
   border-top: 0;
   border-bottom: 1px solid #ccc;
 }
 /* line 70, ../sass/framework/partials/objects/_island.scss */
 .headed-island .island-content {
-  padding: 15px 30px;
+  padding: 0.833em 1.666em;
 }
 /* line 73, ../sass/framework/partials/objects/_island.scss */
 .headed-island .island-content > :last-child {
@@ -3108,7 +3125,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1376991666');
+  background-image: url('../images/site-logo.png?1376993279');
   width: 200px;
   height: 80px;
 }
@@ -3147,18 +3164,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1376991666');
+  background-image: url('../images/site-credit.png?1376993279');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1376991666');
+  background-image: url('../images/site-credit--dark.svg?1376993279');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1376991666');
+  background-image: url('../images/site-credit--dark.png?1376993279');
 }
 
 /* ==========================================================================
@@ -3357,7 +3374,7 @@ html[xmlns] .slides {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  background: url('../images/social-actions-sprite.png?1376991666') no-repeat 0 0;
+  background: url('../images/social-actions-sprite.png?1376993279') no-repeat 0 0;
   width: 60px;
   height: 20px;
   text-indent: 0 !important;
