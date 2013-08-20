@@ -6,16 +6,16 @@
  * Author: David Smith (@get_dave)
  */
 /**
- * This project aims to be a starter kit for building websites using SASS and Compass. 
- * 
+ * This project aims to be a starter kit for building websites using SASS and Compass.
+ *
  * The framework comes as a stand-alone packaged collection of SASS files. The _framework.scss file
  * should be @import'd into your projects' master SASS/SCSS file and extended as required.
- * 
+ *
  * You should NEVER modify the files of the framework. If you find something you cannot work around it is
- * a bug and should be raised as an issue on Github at: 
- * 
+ * a bug and should be raised as an issue on Github at:
+ *
  * https://github.com/getdave/Web-Starter-Toolkit/issues
- * 
+ *
  * This framework borrows heavily and draws inspiration from the great work of the following projects/authors:
 
  * OOCSS 					- https://github.com/stubbornella/oocss
@@ -3220,6 +3220,116 @@ html[xmlns] .slides {
 .inline-list--spaced .inline-list__item,
 .inline-list--spaced > li {
   margin-left: 3.332em;
+}
+
+/* ============================================================ */
+/* ============================================================ */
+/* line 16, ../sass/framework/partials/objects/_flippable.scss */
+.flippable {
+  position: relative;
+  height: auto !important;
+}
+
+/* line 23, ../sass/framework/partials/objects/_flippable.scss */
+.flippable__wrap,
+.flippable__content,
+.flippable__face {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 34, ../sass/framework/partials/objects/_flippable.scss */
+.flippable__face {
+  background-color: #ccc;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 39, ../sass/framework/partials/objects/_flippable.scss */
+.flippable__face--back {
+  background: #c9c9c9;
+  left: -999em;
+}
+
+/* line 47, ../sass/framework/partials/objects/_flippable.scss */
+.flippable--is-flipped .flippable__face--back,
+.flippable:hover .flippable__face--back,
+.flippable:focus .flippable__face--back {
+  left: 0;
+}
+
+/* line 56, ../sass/framework/partials/objects/_flippable.scss */
+.csstransforms3d .flippable__wrap {
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  -ms-perspective: 500px;
+  -o-perspective: 500px;
+  perspective: 500px;
+}
+/* line 60, ../sass/framework/partials/objects/_flippable.scss */
+.csstransforms3d .flippable__content {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+/* line 65, ../sass/framework/partials/objects/_flippable.scss */
+.csstransforms3d .flippable__face {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+/* line 71, ../sass/framework/partials/objects/_flippable.scss */
+.csstransforms3d .flippable__face--back {
+  left: 0;
+  -webkit-transform: rotate3d(0, 1, 0, 180deg);
+  -moz-transform: rotate3d(0, 1, 0, 180deg);
+  -ms-transform: rotate3d(0, 1, 0, 180deg);
+  -o-transform: rotate3d(0, 1, 0, 180deg);
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+/* line 79, ../sass/framework/partials/objects/_flippable.scss */
+.csstransforms3d .flippable--is-flipped .flippable__content,
+.csstransforms3d .flippable:hover .flippable__content,
+.csstransforms3d .flippable:focus .flippable__content {
+  -webkit-transform: rotate3d(0, 1, 0, -180deg);
+  -moz-transform: rotate3d(0, 1, 0, -180deg);
+  -ms-transform: rotate3d(0, 1, 0, -180deg);
+  -o-transform: rotate3d(0, 1, 0, -180deg);
+  transform: rotate3d(0, 1, 0, -180deg);
+}
+
+/* line 90, ../sass/framework/partials/objects/_flippable.scss */
+.csstransforms3d .flippable--alt:hover .flippable__content, .csstransforms3d .flippable--alt:focus .flippable__content {
+  -webkit-transform: rotate3d(0, 1, 0, 180deg);
+  -moz-transform: rotate3d(0, 1, 0, 180deg);
+  -ms-transform: rotate3d(0, 1, 0, 180deg);
+  -o-transform: rotate3d(0, 1, 0, 180deg);
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+
+/* line 103, ../sass/framework/partials/objects/_flippable.scss */
+.flippable--circle .flippable__face {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
 }
 
 /* #Gray Box */
