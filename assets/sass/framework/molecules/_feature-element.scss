@@ -37,7 +37,7 @@
 .feature-element__wrap {
 	@include respond-to($mobileBreak) {
 		@include inline-block;
-		background: $bodyBackground;
+		background: $body-background;
 		padding-left: $baseLineHeight/2;
 		padding-right: $baseLineHeight/2;
 		vertical-align: middle;

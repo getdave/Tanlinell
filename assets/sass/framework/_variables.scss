@@ -26,7 +26,7 @@ $debug-mode:					false !default;
 // BRAND
 // ==========================================================================
 
-// COLOURS
+// Colours
 // ==========================================================================
 
 // Tones
@@ -50,20 +50,20 @@ $pink:                  		#c3325f;
 $purple:                		#7a43b6;
 
 
-// BACKGROUNDS
+// Backgrounds
 // ==========================================================================
 
-$bodyBackground: 				#fff;
+$body-background: 				#fff !default;
 
 
 // ==========================================================================
 // TYPOGRAPHY
 // ==========================================================================
 
-// Font Stacks
-// https://github.com/tokokoo/pondasee
-// http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
-// https://github.com/lloydk/font-stack
+// FONT STACKS
+// * https://github.com/tokokoo/pondasee
+// * http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
+// * https://github.com/lloydk/font-stack
 // ==========================================================================
 
 // Serif font-stacks
@@ -110,7 +110,7 @@ $cursive			: "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive !de
 
 
 
-// Heading Levels
+// HEADINGS
 // These are set as defaults and overidden in the site config
 // ==========================================================================
 
