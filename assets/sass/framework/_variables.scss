@@ -38,6 +38,11 @@ $pink:                  		#c3325f;
 $purple:                		#7a43b6;
 
 
+// BACKGROUNDS
+// ==========================================================================
+
+$bodyBackground: 				#fff;
+
 
 // ==========================================================================
 // TYPOGRAPHY
@@ -48,7 +53,7 @@ $purple:                		#7a43b6;
 // http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
 // https://github.com/lloydk/font-stack
 // ==========================================================================
- 
+
 // Serif font-stacks
 $georgia			: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif !default;
 $georgia-heading	: Georgia, Times, "Times New Roman", serif !default;
@@ -128,7 +133,7 @@ $bStdGridBreakpoints: 			true !default;
 // ==========================================================================
 // ELEMENTS & COMPONENTS
 // ==========================================================================
-// 
+//
 
 // MASTER Z-INDEX
 // ==========================================================================
@@ -186,10 +191,10 @@ $navbarLinkColorHover: 			$white;
 // ==========================================================================
 
 $button_background              : $linkColor !default;
-$button_background_shader       : linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.25)) !default; // standard bg shader 
-$button_background_shader_h     : linear-gradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0.30)) !default; // :hover bg shader 
-$button_background_shader_i     : linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0)) !default; // inverted bg shader 
-$button_background_shader-f     : url(../images/site/button-shader.png) left center repeat-x !default; // fallback bg shader 
+$button_background_shader       : linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.25)) !default; // standard bg shader
+$button_background_shader_h     : linear-gradient(top, rgba(0,0,0,0.05), rgba(0,0,0,0.30)) !default; // :hover bg shader
+$button_background_shader_i     : linear-gradient(top, rgba(0,0,0,0.25), rgba(0,0,0,0)) !default; // inverted bg shader
+$button_background_shader-f     : url(../images/site/button-shader.png) left center repeat-x !default; // fallback bg shader
 
 
 
