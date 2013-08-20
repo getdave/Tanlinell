@@ -147,6 +147,18 @@ function my_theme_register_required_plugins() {
 			'required' 	=> false,
 		),
 
+		array(
+			'name' 		=> 'Disable Wordpress Plugin Updates',
+			'slug' 		=> 'disable-wordpress-plugin-updates',
+			'required' 	=> true,
+		),
+
+		array(
+			'name' 		=> 'WordPress Status Dashboard',
+			'slug' 		=> 'wp-status-dashboard',
+			'required' 	=> false,
+		),
+
 		
 
 
