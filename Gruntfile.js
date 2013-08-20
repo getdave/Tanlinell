@@ -20,11 +20,11 @@ module.exports = function(grunt) {
             compass: {
                 files: ['assets/sass/**/*.{scss,sass}'],
                 //files: ['master.scss'],
-                tasks: ['compass']
+                tasks: ['compass:dist']
             },
             js: {
                 files: '<%= jshint.all %>',
-                tasks: ['jshint', 'uglify']
+                tasks: ['jshint', 'uglify:dist']
             },          
         },
 
@@ -62,7 +62,24 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 options: {
-                    sourceMap: 'assets/js/map/source-map.js'
+                    compress:   false,
+                    mangle:     false,
+                    beautify:   true,
+                },
+                files: {
+                    'assets/js/plugins.min.js': [
+                        'assets/js/source/plugins.js',
+                        'assets/js/vendor/**/*.js',
+                        '!assets/js/vendor/modernizr*.js'
+                    ],
+                    'assets/js/main.min.js': [
+                        'assets/js/source/main.js'
+                    ]
+                }
+            },
+            build: {
+                options: {
+                    sourceMap: 'assets/js/map/source-map.js',
                 },
                 files: {
                     'assets/js/plugins.min.js': [
@@ -96,8 +113,8 @@ module.exports = function(grunt) {
         grunticon: {
             myIcons: {
                 options: {
-                    src: "assets/images/svg-icons/source/",
-                    dest: "assets/images/svg-icons/",
+                    src: "assets/images/grunt-icons/source/",
+                    dest: "assets/images/grunt-icons/",
                     defaultWidth: "64px",
                     defaultHeight: "64px",
                     cssprefix: "grunt-icon-",
@@ -167,6 +184,13 @@ module.exports = function(grunt) {
     // register task
     grunt.registerTask('default', [
         'watch'
+    ]);
+
+    // Build task - run to optimise before pushing to production
+    grunt.registerTask('build', [
+        'compass:build',
+        'jshint',
+        'uglify:build'
     ]);
 
 };
