@@ -1,7 +1,7 @@
 /**
  * WEB STARTER CSS FRAMEWORK
  * Version: 2.6
- * URL: https://github.com/getdave/Web-Starter-Toolkit
+ * URL: https://github.com/getdave/Tanlinell
  * Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  * Author: David Smith (@get_dave)
  */
@@ -29,15 +29,10 @@
   width: device-width;
 }
 
-/* ==========================================================================
-   BASE
-   Base for framework. Mostly global, tag-based selector rules.
-   ========================================================================== */
-/* normalize.css 2012-01-31T16:06 UTC - http://github.com/necolas/normalize.css */
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
-/* line 6, ../sass/framework/partials/base/_normalize.scss */
+/* line 10, ../sass/framework/partials/base/_normalize.scss */
 html {
   overflow-y: scroll;
   /* Alaways force a scrollbar in non-IE */
@@ -46,7 +41,7 @@ html {
 /*
  * Corrects block display not defined in IE6/7/8/9 & FF3
  */
-/* line 23, ../sass/framework/partials/base/_normalize.scss */
+/* line 27, ../sass/framework/partials/base/_normalize.scss */
 article,
 aside,
 details,
@@ -63,7 +58,7 @@ section {
 /*
  * Corrects inline-block display not defined in IE6/7/8/9 & FF3
  */
-/* line 33, ../sass/framework/partials/base/_normalize.scss */
+/* line 37, ../sass/framework/partials/base/_normalize.scss */
 audio,
 canvas,
 video {
@@ -75,7 +70,7 @@ video {
 /*
  * Prevents modern browsers from displaying 'audio' without controls
  */
-/* line 43, ../sass/framework/partials/base/_normalize.scss */
+/* line 47, ../sass/framework/partials/base/_normalize.scss */
 audio:not([controls]) {
   display: none;
 }
@@ -84,7 +79,7 @@ audio:not([controls]) {
  * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
  * Known issue: no IE6 support
  */
-/* line 52, ../sass/framework/partials/base/_normalize.scss */
+/* line 56, ../sass/framework/partials/base/_normalize.scss */
 [hidden] {
   display: none;
 }
@@ -98,7 +93,7 @@ audio:not([controls]) {
  * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
  *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
  */
-/* line 68, ../sass/framework/partials/base/_normalize.scss */
+/* line 72, ../sass/framework/partials/base/_normalize.scss */
 html {
   font-size: 100%;
   /* 1 */
@@ -111,7 +106,7 @@ html {
 /* 
  * Addresses font-family inconsistency between 'textarea' and other form elements.
  */
-/* line 82, ../sass/framework/partials/base/_normalize.scss */
+/* line 86, ../sass/framework/partials/base/_normalize.scss */
 html,
 button,
 input,
@@ -123,7 +118,7 @@ textarea {
 /*
  * Addresses margins handled incorrectly in IE6/7
  */
-/* line 90, ../sass/framework/partials/base/_normalize.scss */
+/* line 94, ../sass/framework/partials/base/_normalize.scss */
 body {
   margin: 0;
 }
@@ -134,7 +129,7 @@ body {
 /*
  * Addresses outline displayed oddly in Chrome
  */
-/* line 103, ../sass/framework/partials/base/_normalize.scss */
+/* line 107, ../sass/framework/partials/base/_normalize.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -143,7 +138,7 @@ a:focus {
  * Improves readability when focused and also mouse hovered in all browsers
  * people.opera.com/patrickl/experiments/keyboard/test
  */
-/* line 113, ../sass/framework/partials/base/_normalize.scss */
+/* line 117, ../sass/framework/partials/base/_normalize.scss */
 a:hover,
 a:active {
   outline: 0;
@@ -155,7 +150,7 @@ a:active {
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome
  */
-/* line 126, ../sass/framework/partials/base/_normalize.scss */
+/* line 130, ../sass/framework/partials/base/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -163,13 +158,13 @@ abbr[title] {
 /*
  * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
 */
-/* line 135, ../sass/framework/partials/base/_normalize.scss */
+/* line 139, ../sass/framework/partials/base/_normalize.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 139, ../sass/framework/partials/base/_normalize.scss */
+/* line 143, ../sass/framework/partials/base/_normalize.scss */
 blockquote {
   margin: 1em 40px;
 }
@@ -177,7 +172,7 @@ blockquote {
 /*
  * Addresses styling not present in S5, Chrome
  */
-/* line 147, ../sass/framework/partials/base/_normalize.scss */
+/* line 151, ../sass/framework/partials/base/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -185,7 +180,7 @@ dfn {
 /*
  * Addresses styling not present in IE6/7/8/9
  */
-/* line 155, ../sass/framework/partials/base/_normalize.scss */
+/* line 159, ../sass/framework/partials/base/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -195,7 +190,7 @@ mark {
  * Corrects font family set oddly in IE6, S4/5, Chrome
  * en.wikipedia.org/wiki/User:Davidgothberg/Test59
  */
-/* line 168, ../sass/framework/partials/base/_normalize.scss */
+/* line 172, ../sass/framework/partials/base/_normalize.scss */
 pre,
 code,
 kbd,
@@ -208,7 +203,7 @@ samp {
 /*
  * Improves readability of pre-formatted text in all browsers
  */
-/* line 178, ../sass/framework/partials/base/_normalize.scss */
+/* line 182, ../sass/framework/partials/base/_normalize.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -220,20 +215,20 @@ pre {
  * 2. Addresses quote property not supported in S4
  */
 /* 1 */
-/* line 191, ../sass/framework/partials/base/_normalize.scss */
+/* line 195, ../sass/framework/partials/base/_normalize.scss */
 q {
   quotes: none;
 }
 
 /* 2 */
-/* line 198, ../sass/framework/partials/base/_normalize.scss */
+/* line 202, ../sass/framework/partials/base/_normalize.scss */
 q:before,
 q:after {
   content: '';
   content: none;
 }
 
-/* line 203, ../sass/framework/partials/base/_normalize.scss */
+/* line 207, ../sass/framework/partials/base/_normalize.scss */
 small {
   font-size: 75%;
 }
@@ -242,7 +237,7 @@ small {
  * Prevents sub and sup affecting line-height in all browsers
  * gist.github.com/413930
  */
-/* line 213, ../sass/framework/partials/base/_normalize.scss */
+/* line 217, ../sass/framework/partials/base/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -251,12 +246,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 220, ../sass/framework/partials/base/_normalize.scss */
+/* line 224, ../sass/framework/partials/base/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 224, ../sass/framework/partials/base/_normalize.scss */
+/* line 228, ../sass/framework/partials/base/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -264,19 +259,19 @@ sub {
 /* =============================================================================
    Lists
    ========================================================================== */
-/* line 234, ../sass/framework/partials/base/_normalize.scss */
+/* line 238, ../sass/framework/partials/base/_normalize.scss */
 ul,
 ol {
   margin-left: 0;
   padding: 0 0 0 40px;
 }
 
-/* line 239, ../sass/framework/partials/base/_normalize.scss */
+/* line 243, ../sass/framework/partials/base/_normalize.scss */
 dd {
   margin: 0 0 0 40px;
 }
 
-/* line 244, ../sass/framework/partials/base/_normalize.scss */
+/* line 248, ../sass/framework/partials/base/_normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -291,7 +286,7 @@ nav ol {
  * 2. Improves image quality when scaled in IE7
  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
-/* line 260, ../sass/framework/partials/base/_normalize.scss */
+/* line 264, ../sass/framework/partials/base/_normalize.scss */
 img {
   border: 0;
   /* 1 */
@@ -303,7 +298,7 @@ img {
 /*
  * Corrects overflow displayed oddly in IE9 
  */
-/* line 270, ../sass/framework/partials/base/_normalize.scss */
+/* line 274, ../sass/framework/partials/base/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -314,7 +309,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE6/7/8/9, S5, O11
  */
-/* line 283, ../sass/framework/partials/base/_normalize.scss */
+/* line 287, ../sass/framework/partials/base/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -325,7 +320,7 @@ figure {
 /*
  * Corrects margin displayed oddly in IE6/7
  */
-/* line 296, ../sass/framework/partials/base/_normalize.scss */
+/* line 300, ../sass/framework/partials/base/_normalize.scss */
 form {
   margin: 0;
 }
@@ -333,7 +328,7 @@ form {
 /*
  * Define consistent border, margin, and padding
  */
-/* line 304, ../sass/framework/partials/base/_normalize.scss */
+/* line 308, ../sass/framework/partials/base/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -345,7 +340,7 @@ fieldset {
  * 2. Corrects text not wrapping in FF3 
  * 3. Corrects alignment displayed oddly in IE6/7
  */
-/* line 316, ../sass/framework/partials/base/_normalize.scss */
+/* line 320, ../sass/framework/partials/base/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -361,7 +356,7 @@ legend {
  * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
  * 3. Improves appearance and consistency in all browsers
  */
-/* line 332, ../sass/framework/partials/base/_normalize.scss */
+/* line 336, ../sass/framework/partials/base/_normalize.scss */
 button,
 input,
 select,
@@ -379,7 +374,7 @@ textarea {
 /*
  * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
  */
-/* line 344, ../sass/framework/partials/base/_normalize.scss */
+/* line 348, ../sass/framework/partials/base/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -392,7 +387,7 @@ input {
  * 3. Removes inner spacing in IE7 without affecting normal text inputs
  *    Known issue: inner spacing remains in IE6
  */
-/* line 358, ../sass/framework/partials/base/_normalize.scss */
+/* line 362, ../sass/framework/partials/base/_normalize.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -408,7 +403,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements
  */
-/* line 369, ../sass/framework/partials/base/_normalize.scss */
+/* line 373, ../sass/framework/partials/base/_normalize.scss */
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -420,7 +415,7 @@ input[disabled] {
  * 3. Removes excess padding in IE7
       Known issue: excess padding remains in IE6
  */
-/* line 381, ../sass/framework/partials/base/_normalize.scss */
+/* line 385, ../sass/framework/partials/base/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -437,7 +432,7 @@ input[type="radio"] {
  * 1. Addresses appearance set to searchfield in S5, Chrome
  * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
  */
-/* line 393, ../sass/framework/partials/base/_normalize.scss */
+/* line 397, ../sass/framework/partials/base/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -450,7 +445,7 @@ input[type="search"] {
 /*
  * Removes inner padding and search cancel button in S5, Chrome on OS X
  */
-/* line 405, ../sass/framework/partials/base/_normalize.scss */
+/* line 409, ../sass/framework/partials/base/_normalize.scss */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -460,7 +455,7 @@ input[type="search"]::-webkit-search-cancel-button {
  * Removes inner padding and border in FF3+
  * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
  */
-/* line 415, ../sass/framework/partials/base/_normalize.scss */
+/* line 419, ../sass/framework/partials/base/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -471,7 +466,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE6/7/8/9
  * 2. Improves readability and alignment in all browsers
  */
-/* line 425, ../sass/framework/partials/base/_normalize.scss */
+/* line 429, ../sass/framework/partials/base/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -485,12 +480,16 @@ textarea {
 /* 
  * Remove most spacing between table cells
  */
-/* line 439, ../sass/framework/partials/base/_normalize.scss */
+/* line 443, ../sass/framework/partials/base/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+/* ==========================================================================
+   BASE
+   Base for framework. Mostly global, tag-based selector rules.
+   ========================================================================== */
 /* #Typography */
 /* 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque suscipit voluptas illo maiores optio cupiditate nam repellat ad voluptatum vitae ipsum quia quae fugiat laborum architecto dignissimos sit! Facere nobis!</p>
@@ -1047,7 +1046,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1377013941');
+    background-image: url('../images/select_arrow.png?1377014241');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -3404,7 +3403,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1377013941');
+  background-image: url('../images/site-logo.png?1377014241');
   width: 200px;
   height: 80px;
 }
@@ -3443,18 +3442,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1377013941');
+  background-image: url('../images/site-credit.png?1377014241');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1377013941');
+  background-image: url('../images/site-credit--dark.svg?1377014241');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1377013941');
+  background-image: url('../images/site-credit--dark.png?1377014241');
 }
 
 /* ==========================================================================
@@ -3653,7 +3652,7 @@ html[xmlns] .slides {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  background: url('../images/social-actions-sprite.png?1377013941') no-repeat 0 0;
+  background: url('../images/social-actions-sprite.png?1377014241') no-repeat 0 0;
   width: 60px;
   height: 20px;
   text-indent: 0 !important;

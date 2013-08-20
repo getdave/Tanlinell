@@ -1,7 +1,7 @@
 /**
  * WEB STARTER CSS FRAMEWORK
  * Version: 2.6
- * URL: https://github.com/getdave/Web-Starter-Toolkit
+ * URL: https://github.com/getdave/Tanlinell
  * Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
  * Author: David Smith (@get_dave)
  */
@@ -28,24 +28,15 @@
  */
 
 
-
-
 // ==========================================================================
-// LIBRARIES & FRAMEWORKS
+// IMPORTS
+// Frameworks and configuration
 // ==========================================================================
 
-	// Compass
 	@import "compass";
-
-	// Variables and Mixins
 	@import "_variables";
 	@import "partials/base/_mixins";
-
-	// Cater for IE10 Windows 8 "Snap Mode"
-	// http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
-	@-ms-viewport{
-	    width: device-width;
-	}
+	@import "partials/base/_normalize.scss";
 
 
 /* ==========================================================================
@@ -53,21 +44,10 @@
    Base for framework. Mostly global, tag-based selector rules.
    ========================================================================== */
 
-	// Normalize
-	@import "partials/base/_normalize.scss";
-
-	// Block level (h1, p) and text-level (em, strong) type...etc
 	@import "partials/base/_typo.scss";
-
-	// Headings
 	@import "partials/base/_headings.scss";
-
-	// Forms
 	@import "partials/base/_forms.scss";
-
-	// Grid System
 	@import "partials/base/_grid.scss";
-
 
 
 /* ==========================================================================
