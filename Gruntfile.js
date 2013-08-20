@@ -190,7 +190,8 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'compass:build',
         'jshint',
-        'uglify:build'
+        'uglify:build',
+        'imagemin'
     ]);
 
 };
