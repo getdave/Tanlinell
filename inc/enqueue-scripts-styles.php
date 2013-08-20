@@ -43,12 +43,11 @@ function tanlinell_scripts() {
         	$theID = $post->ID;
 		
         $site_details = array(
-								'template_directory_uri'	=> get_template_directory_uri(),
-								'site_url'					=> get_site_url(),
-								'the_permalink'				=> get_permalink(),
-								'zlk_id'					=> $theID
+								'templateDirectoryUri'		=> get_template_directory_uri(),
+								'siteUrl'					=> get_site_url(),
+								'thePermalink'				=> get_permalink()
 							);
-		wp_localize_script('jquery', 'tanlinell_site_details', $site_details );
+		wp_localize_script('jquery', 'tanlinellSiteDetails', $site_details );
         wp_enqueue_script('jquery');
     }
 

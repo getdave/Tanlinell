@@ -102,21 +102,50 @@ $allGridClasses: #{grid-selectors()};
 	// Handheld Grids
 	@include respond-to('tiny') {
 		@include grid-set('h');
+		.h-grid-clear {
+			clear: left;
+		}
 	}
 
 	// Lap Grids
 	@include respond-to('small') {
 		@include grid-set('l');
+
+		.h-grid-clear {
+			clear: none;
+		}
+
+		.l-grid-clear {
+			clear: left;
+		}
 	}
 
 	// Desktop Grids
 	@include respond-to('large') {
 		@include grid-set('d');
+		.h-grid-clear,
+		.l-grid-clear {
+			clear: none;
+		}
+
+		.d-grid-clear {
+			clear: left;
+		}
 	}
 
 	// Widescreen Grids
 	@include respond-to('xlarge') {
 		@include grid-set('w');
+
+		.h-grid-clear,
+		.l-grid-clear,
+		.d-grid-clear {
+			clear: none;
+		}
+
+		.w-grid-clear {
+			clear: left;
+		}
 	}
 }
 

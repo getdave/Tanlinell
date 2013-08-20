@@ -161,14 +161,21 @@
 	</span>
 */
 
-.img-replace,
-.ir {
-	display:inline-block;
-	text-indent:-999em;
-	overflow:hidden;
-	background-repeat:no-repeat;
-	text-align:left;
-	direction:ltr;
+.ir,
+.img-replace {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before,
+.img-replace:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
 }
 
 
@@ -181,9 +188,9 @@
 /* 	
 	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
 */
-.hidden { 
-	display:none;
-	visibility:hidden;
+.hidden {
+    display: none !important;
+    visibility: hidden;
 }
 
 
@@ -197,21 +204,26 @@
 .v-hidden,
 .screen-reader-text,
 .assistive-text {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 .vh.focusable:active,
 .vh.focusable:focus
 .v-hidden.focusable:active,
 .v-hidden.focusable:focus {
-	clip:auto;
-	height:auto;
-	overflow:visible;
-	position:static;
-	width:auto;
-	margin:0;
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
 }
 
 /* ###Hide: Visually From All + Maintain Layout */

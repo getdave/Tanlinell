@@ -18,7 +18,7 @@
 }
 
 .island {
-    padding: $halfSpacingUnit +px $spacingUnit +px;
+    padding: $baseLineHeight;
 }
 
 .island > :last-child,
@@ -36,7 +36,7 @@
 */
 
 .islet{
-    padding: $halfSpacingUnit +px;
+    padding: $baseLineHeight/2;
 }
 
 
@@ -61,14 +61,14 @@
     padding: 0;
 
     .island-heading {
-        padding: $halfSpacingUnit +px $spacingUnit +px;
+        padding: $baseLineHeight/2 $baseLineHeight;
         margin: 0;
         border-top: 0;
         border-bottom: 1px solid #ccc;
     }
 
     .island-content {
-        padding: $halfSpacingUnit +px $spacingUnit +px;
+        padding: $baseLineHeight/2 $baseLineHeight;
 
         > :last-child {
             margin-bottom: 0;

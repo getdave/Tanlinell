@@ -592,27 +592,28 @@ blockquote cite a, blockquote cite a:visited {
 /* line 100, ../sass/framework/partials/base/_typo.scss */
 img {
   max-width: 100%;
+  height: auto;
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 108, ../sass/framework/partials/base/_typo.scss */
+/* line 109, ../sass/framework/partials/base/_typo.scss */
 #googlemap img, object, embed {
   max-width: none;
 }
 
-/* line 109, ../sass/framework/partials/base/_typo.scss */
+/* line 110, ../sass/framework/partials/base/_typo.scss */
 #map_canvas embed {
   max-width: none;
 }
 
-/* line 110, ../sass/framework/partials/base/_typo.scss */
+/* line 111, ../sass/framework/partials/base/_typo.scss */
 #map_canvas img {
   max-width: none;
 }
 
-/* line 111, ../sass/framework/partials/base/_typo.scss */
+/* line 112, ../sass/framework/partials/base/_typo.scss */
 #map_canvas object {
   max-width: none;
 }
@@ -1319,6 +1320,11 @@ optgroup::-moz-focus-inner {
   width: 100%;
 }
 
+/* line 105, ../sass/framework/partials/base/_grid.scss */
+.h-grid-clear {
+  clear: left;
+}
+
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
 .l1-12, .lonecolumns {
   width: 8.33333%;
@@ -1378,6 +1384,16 @@ optgroup::-moz-focus-inner {
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
 .l1-1, .ltwelvecolumns {
   width: 100%;
+}
+
+/* line 114, ../sass/framework/partials/base/_grid.scss */
+.h-grid-clear {
+  clear: none;
+}
+
+/* line 118, ../sass/framework/partials/base/_grid.scss */
+.l-grid-clear {
+  clear: left;
 }
 
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
@@ -1443,6 +1459,17 @@ optgroup::-moz-focus-inner {
   width: 100%;
 }
 
+/* line 127, ../sass/framework/partials/base/_grid.scss */
+.h-grid-clear,
+.l-grid-clear {
+  clear: none;
+}
+
+/* line 131, ../sass/framework/partials/base/_grid.scss */
+.d-grid-clear {
+  clear: left;
+}
+
 /* line 65, ../sass/framework/partials/base/_mixins.scss */
 .w1-12, .wonecolumns {
   width: 8.33333%;
@@ -1503,7 +1530,19 @@ optgroup::-moz-focus-inner {
   width: 100%;
 }
 
-/* line 131, ../sass/framework/partials/base/_grid.scss */
+/* line 142, ../sass/framework/partials/base/_grid.scss */
+.h-grid-clear,
+.l-grid-clear,
+.d-grid-clear {
+  clear: none;
+}
+
+/* line 146, ../sass/framework/partials/base/_grid.scss */
+.w-grid-clear {
+  clear: left;
+}
+
+/* line 160, ../sass/framework/partials/base/_grid.scss */
 .no-js .g1-12, .no-js .gonecolumns, .no-js .g1-6, .no-js .gtwocolumns, .no-js .g1-4, .no-js .gthreecolumns, .no-js .g1-3, .no-js .gfourcolumns, .no-js .gfivecolumns, .no-js .g1-2, .no-js .gsixcolumns, .no-js .gsevencolumns, .no-js .g2-3, .no-js .geightcolumns, .no-js .g3-4, .no-js .gninecolumns, .no-js .gtencolumns, .no-js .gelevencolumns, .no-js .g1-1, .no-js .gtwelvecolumns,
 .no-js .gc,
 .no-js .main,
@@ -1529,7 +1568,7 @@ optgroup::-moz-focus-inner {
 		I'm a full width column. You probably won't need to use me that often...
 	</div>
 */
-/* line 160, ../sass/framework/partials/base/_grid.scss */
+/* line 189, ../sass/framework/partials/base/_grid.scss */
 .full-col {
   width: auto;
   float: none;
@@ -1541,7 +1580,7 @@ optgroup::-moz-focus-inner {
 		I'm a centered column. Useful on the odd occassion you need to center a grid unit
 	</div>
 */
-/* line 173, ../sass/framework/partials/base/_grid.scss */
+/* line 202, ../sass/framework/partials/base/_grid.scss */
 .centered-col {
   margin: 0 auto;
   float: none;
@@ -1598,6 +1637,23 @@ optgroup::-moz-focus-inner {
 .m-block .m-img-alt {
   float: right;
   margin-left: 20px;
+}
+
+/* line 59, ../sass/framework/partials/objects/_media.scss */
+.m-block--ib {
+  letter-spacing: -0.25em;
+}
+/* line 63, ../sass/framework/partials/objects/_media.scss */
+.m-block--ib .m-img,
+.m-block--ib .m-content {
+  float: none;
+  letter-spacing: normal;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
 }
 
 /* #Containers */
@@ -1670,7 +1726,7 @@ optgroup::-moz-focus-inner {
 
 /* line 20, ../sass/framework/partials/objects/_island.scss */
 .island, .headed-island {
-  padding: 15px 30px;
+  padding: 1.666em;
 }
 
 /* line 25, ../sass/framework/partials/objects/_island.scss */
@@ -1688,7 +1744,7 @@ optgroup::-moz-focus-inner {
 */
 /* line 38, ../sass/framework/partials/objects/_island.scss */
 .islet {
-  padding: 15px;
+  padding: 0.833em;
 }
 
 /* ##Headed Island */
@@ -1712,14 +1768,14 @@ optgroup::-moz-focus-inner {
 }
 /* line 63, ../sass/framework/partials/objects/_island.scss */
 .headed-island .island-heading {
-  padding: 15px 30px;
+  padding: 0.833em 1.666em;
   margin: 0;
   border-top: 0;
   border-bottom: 1px solid #ccc;
 }
 /* line 70, ../sass/framework/partials/objects/_island.scss */
 .headed-island .island-content {
-  padding: 15px 30px;
+  padding: 0.833em 1.666em;
 }
 /* line 73, ../sass/framework/partials/objects/_island.scss */
 .headed-island .island-content > :last-child {
@@ -2636,9 +2692,10 @@ a.badge:focus {
 .pager li,
 .pager__item {
   display: inline;
+  float: left;
 }
 
-/* line 29, ../sass/framework/partials/objects/_pager.scss */
+/* line 30, ../sass/framework/partials/objects/_pager.scss */
 .pager__link,
 .pager a {
   display: -moz-inline-stack;
@@ -2653,8 +2710,9 @@ a.badge:focus {
   border: 1px solid #ccc;
 }
 
-/* line 37, ../sass/framework/partials/objects/_pager.scss */
-.pager__item--next {
+/* line 39, ../sass/framework/partials/objects/_pager.scss */
+.pager__item--next,
+li.pager__item--next {
   float: right;
 }
 
@@ -3181,10 +3239,110 @@ html[xmlns] .slides {
   width: auto;
   clear: both;
   overflow: visible;
-  padding-left: 0;
 }
 
 /* #Social Icons */
+@font-face {
+  font-family: 'social-icons';
+  src: url("../fonts/social-icons/font/social-icons.eot?92693809");
+  src: url("../fonts/social-icons/font/social-icons.eot?92693809#iefix") format("embedded-opentype"), url("../fonts/social-icons/font/social-icons.woff?92693809") format("woff"), url("../fonts/social-icons/font/social-icons.ttf?92693809") format("truetype"), url("../fonts/social-icons/font/social-icons.svg?92693809#social-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 28, ../sass/framework/partials/common/_social-icons.scss */
+[class^="social-icons__icon-"]:before, [class*=" social-icons__icon-"]:before {
+  font-family: "social-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 59, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--linkedin:before {
+  content: '\4c';
+}
+
+/* 'L' */
+/* line 60, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--twitter:before {
+  content: '\54';
+}
+
+/* 'T' */
+/* line 61, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--youtube:before {
+  content: '\e803';
+}
+
+/* '' */
+/* line 62, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--vimeo:before {
+  content: '\e802';
+}
+
+/* '' */
+/* line 63, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--facebook:before {
+  content: '\66';
+}
+
+/* 'f' */
+/* line 64, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--googleplus-rect:before {
+  content: '\e801';
+}
+
+/* '' */
+/* line 72, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 75, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons a {
+  text-decoration: none;
+}
+
+/* line 80, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon {
+  font-size: 1.875em;
+  display: none;
+}
+/* line 84, ../sass/framework/partials/common/_social-icons.scss */
+.generatedcontent .social-icons__icon {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
 /* #Social Actions */
 /* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
 /*
@@ -3208,26 +3366,62 @@ html[xmlns] .slides {
 		</li>
 	</ul>
 */
-/* line 31, ../sass/framework/partials/common/_social-actions.scss */
+/* #Social Actions */
+/* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
+/*
+	<ul class="social-actions">
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance twitter-share" href="http://twitter.com/share" data-count="none">
+			    Share on Twitter
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance facebook-like" href="http://www.facebook.com/sharer.php" data-send="false" data-show-faces="false" data-font="arial" data-count="false" data-layout="button_count">
+			    Like on Facebook
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance linkedin-share" href="http://www.linkedin.com/shareArticle?mini=true" data-counter="false">
+			    Share on LinkedIn
+			</a>
+		</li>
+	</ul>
+*/
+/* line 57, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions__link {
-  background: url('../images/social-actions-sprite.png?1372764355') no-repeat 0 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background: url('../images/social-actions-sprite.png?1376994736') no-repeat 0 0;
   width: 60px;
   height: 20px;
+  text-indent: 0 !important;
 }
 
-/* line 39, ../sass/framework/partials/common/_social-actions.scss */
+/* line 71, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions .facebook-like {
   background-position: 0 -28px;
 }
-/* line 43, ../sass/framework/partials/common/_social-actions.scss */
+/* line 75, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions .linkedin-share {
   background-position: 0 -56px;
 }
+/* line 79, ../sass/framework/partials/common/_social-actions.scss */
+.social-actions .googleplus-one {
+  background-position: 0 -86px;
+  width: 60px;
+}
 
-/* line 50, ../sass/framework/partials/common/_social-actions.scss */
-.socialite-loaded {
-  background: 0;
-  text-indent: 0;
+/* line 88, ../sass/framework/partials/common/_social-actions.scss */
+.socialite-loaded,
+.socialite-loaded .social-actions__text {
+  background: 0 !important;
+  text-indent: 0 !important;
 }
 
 /* ============================================================ */
@@ -3264,7 +3458,12 @@ html[xmlns] .slides {
 }
 /* line 39, ../sass/framework/partials/common/_gallery.scss */
 .gallery-item a {
-  display: block;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
 }
 /* line 44, ../sass/framework/partials/common/_gallery.scss */
 .gallery-item img {
@@ -3449,16 +3648,22 @@ html[xmlns] .slides {
 	</span>
 */
 /* line 165, ../sass/framework/partials/base/_helpers.scss */
-.img-replace,
-.ir,
-.site-credit,
-.social-actions__link {
-  display: inline-block;
-  text-indent: -999em;
+.ir, .site-credit, .social-actions__link,
+.img-replace {
+  background-color: transparent;
+  border: 0;
   overflow: hidden;
-  background-repeat: no-repeat;
-  text-align: left;
-  direction: ltr;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 174, ../sass/framework/partials/base/_helpers.scss */
+.ir:before, .site-credit:before, .social-actions__link:before,
+.img-replace:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
 }
 
 /* ##Hidden Content */
@@ -3467,9 +3672,9 @@ html[xmlns] .slides {
 /* 	
 	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
 */
-/* line 184, ../sass/framework/partials/base/_helpers.scss */
+/* line 191, ../sass/framework/partials/base/_helpers.scss */
 .hidden {
-  display: none;
+  display: none !important;
   visibility: hidden;
 }
 
@@ -3479,28 +3684,36 @@ html[xmlns] .slides {
 /* 	
 	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
 */
-/* line 199, ../sass/framework/partials/base/_helpers.scss */
-.vh,
+/* line 206, ../sass/framework/partials/base/_helpers.scss */
+.vh, .generatedcontent .social-icons__name, .social-actions__text,
 .v-hidden,
 .screen-reader-text,
 .assistive-text {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
-/* line 208, ../sass/framework/partials/base/_helpers.scss */
-.vh.focusable:active,
+/* line 220, ../sass/framework/partials/base/_helpers.scss */
+.vh.focusable:active, .generatedcontent .focusable.social-icons__name:active, .focusable.social-actions__text:active,
 .vh.focusable:focus
+.v-hidden.focusable:active,
+.generatedcontent .focusable.social-icons__name:focus
+.v-hidden.focusable:active,
+.focusable.social-actions__text:focus
 .v-hidden.focusable:active,
 .v-hidden.focusable:focus {
   clip: auto;
   height: auto;
+  margin: 0;
   overflow: visible;
   position: static;
   width: auto;
-  margin: 0;
 }
 
 /* ###Hide: Visually From All + Maintain Layout */
@@ -3508,14 +3721,14 @@ html[xmlns] .slides {
 /* 	
 	<p>Lorem ipsum dolor sit amet, <strong class="invisible">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
 */
-/* line 222, ../sass/framework/partials/base/_helpers.scss */
+/* line 234, ../sass/framework/partials/base/_helpers.scss */
 .invisible {
   visibility: hidden;
 }
 
 /* ##Resetting */
 /* ###Lists */
-/* line 232, ../sass/framework/partials/base/_helpers.scss */
+/* line 244, ../sass/framework/partials/base/_helpers.scss */
 .list-reset {
   list-style: none;
   margin: 0;
