@@ -1,34 +1,35 @@
-/* #Grid */
-
-/* Custom grid system for rapid prototyping and quick layout solutions.
-
-##Example 1 - fractions
-	<div class="size1of2 firstcol">
-		I'm the first of two grid items. I need an extra class to remove my gutter!
-	</div>
-	<div class="size1of2">
-		I'm the second of the two grid items. No need for a second class for me!
-	</div>
-
-
-##Example 2 - columns
-	<div class="sixcolumns firstcol">
-		I'm the first of two grid items. I need an extra class to remove my gutter!
-	</div>
-	<div class="sixcolumns">
-		I'm the second of the two grid items. No need for a second class for me!
-	</div>
-*/
+// Grid
+//
+// Custom grid system for rapid prototyping and quick layout solutions.
+//
+// Styleguide 1.0
 
 $gutter_width: $gutter+em;
 $large_gutter_width: ($gutter*2)+em;
 $half_gutter_width: ($gutter/2)+em;
 
+$allGridClasses: #{grid-selectors()};
 
+// Grid Wrappers
+//
+// Each grid you create must be contained with an wrapping HTML element used to "contain" the grid units and provide styling to ensure correct alignment
+//
+// Markup: <div class="grid-wrap {$modifiers}">
+//   <div class="gc d1-2">I am an example grid unit</div>
+//   <div class="gc d1-2">I am an example grid unit</div>
+// </div>
+//
+// .large-gutter       	- doubles the size of the grid gutter
+// .half-gutter       	- halves the size of the grid gutter
+// .no-gutter       	- removes the grid gutter entirely
+// .grid-ib       		- throws grid into inline-block mode as opposed to default "float" mode
+// .grid-divide       	- adds bottom margin to each grid unit
+//
+// Styleguide 1.1
 .grid-wrap {
-	list-style:none;                
-    margin:0;                       
-    padding:0;                      
+	list-style:none;
+    margin:0;
+    padding:0;
     margin-left: -$gutter_width;
     clear: both;
     @include clearfix;
@@ -57,16 +58,18 @@ $half_gutter_width: ($gutter/2)+em;
 	margin-bottom: $baseLineHeight;
 }
 
+// Grid Units
+//
+// Each grid unit must have the base `.gc` class applied to it.
+//
+// Markup: <div class="grid-wrap">
+//   <div class="gc">I am an example grid unit</div>
+//   <div class="gc">I am an example grid unit</div>
+// </div>
+//
+// Styleguide 1.2
 
-// Generate a CSS selector string for all the possibile grid classes
-$allGridClasses: #{grid-selectors()};
 
-
-// ==========================================================================
-// MOBILE GRID
-// ==========================================================================
-
-// Add styles to all the grid classes
 #{$allGridClasses},
 .gc {
     width: 100%;
@@ -100,6 +103,15 @@ $allGridClasses: #{grid-selectors()};
 
 @if ($bStdGridBreakpoints == true) {
 	// Handheld Grids
+	//
+	// Add grid unit width modifiers prefixed with `.h` to control grid units on "handheld" viewports
+	//
+	// Markup: <div class="grid-wrap">
+	//   <div class="gc h1-2">I will be 50% wide at the "handheld" breakpoint</div>
+	//   <div class="gc h1-2">I will be 50% wide at the "handheld" breakpoint</div>
+	// </div>
+	//
+	// Styleguide 1.2.1
 	@include respond-to('tiny') {
 		@include grid-set('h');
 		.h-grid-clear {
@@ -108,6 +120,15 @@ $allGridClasses: #{grid-selectors()};
 	}
 
 	// Lap Grids
+	//
+	// Add grid unit width modifiers prefixed with `.l` to control grid units on "lap" viewports
+	//
+	// Markup: <div class="grid-wrap">
+	//   <div class="gc l1-2">I will be 50% wide at the "lap" breakpoint</div>
+	//   <div class="gc l1-2">I will be 50% wide at the "lap" breakpoint</div>
+	// </div>
+	//
+	// Styleguide 1.2.1
 	@include respond-to('small') {
 		@include grid-set('l');
 
@@ -152,7 +173,7 @@ $allGridClasses: #{grid-selectors()};
 
 // If we're in IE and JS is disabled then
 // the .htc box-sizing hack won't run
-// therefore we need to linearise our layout to ensure it 
+// therefore we need to linearise our layout to ensure it
 // doesn't break in older IE
 @if ($bIE == true) {
 	.no-js {
@@ -180,7 +201,7 @@ $allGridClasses: #{grid-selectors()};
 /* ##Column Extensions */
 
 /* ###Full Width */
-/* 
+/*
 	<div class="full-col">
 		I'm a full width column. You probably won't need to use me that often...
 	</div>
@@ -193,7 +214,7 @@ $allGridClasses: #{grid-selectors()};
 
 
 /* ###Centered */
-/* 
+/*
 	<div class="size1of3 centered-col">
 		I'm a centered column. Useful on the odd occassion you need to center a grid unit
 	</div>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>kss-node Styleguide</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel="stylesheet" href="public/style.css" />
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <h1 class="kss-doc-title"><a href="./">kss-node Styleguide</a></h1>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="1">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Grid</span></a></li>
+              
+            </ul>
+            
+            <ul class="kss-menu-child">
+              
+              
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.1"><span class="kss-ref">1.1</span><span class="kss-name">Grid Wrappers</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.2"><span class="kss-ref">1.2</span><span class="kss-name">Grid Units</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.2.1"><span class="kss-ref">1.2.1</span><span class="kss-name">Handheld Grids</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.2.1"><span class="kss-ref">1.2.1</span><span class="kss-name">Lap Grids</span></a></li>
+              
+              
+            </ul>
+            
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          
+          
+          <section id="section-1" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">1</span> Grid</h1>
+            
+            
+            <div class="kss-description">
+              <p>Custom grid system for rapid prototyping and quick layout solutions.</p>
+
+            </div>
+            
+            
+          </section>
+          
+          <section id="section-1.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.1</span> Grid Wrappers</h1>
+            
+            
+            <div class="kss-description">
+              <p>Each grid you create must be contained with an wrapping HTML element used to &quot;contain&quot; the grid units and provide styling to ensure correct alignment</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="grid-wrap {$modifiers}">
+  <div class="gc d1-2">I am an example grid unit</div>
+  <div class="gc d1-2">I am an example grid unit</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.large-gutter</div>
+                  <div class="kss-modifier-description">
+                    <p>doubles the size of the grid gutter</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="grid-wrap large-gutter">
+  <div class="gc d1-2">I am an example grid unit</div>
+  <div class="gc d1-2">I am an example grid unit</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.half-gutter</div>
+                  <div class="kss-modifier-description">
+                    <p>halves the size of the grid gutter</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="grid-wrap half-gutter">
+  <div class="gc d1-2">I am an example grid unit</div>
+  <div class="gc d1-2">I am an example grid unit</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.no-gutter</div>
+                  <div class="kss-modifier-description">
+                    <p>removes the grid gutter entirely</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="grid-wrap no-gutter">
+  <div class="gc d1-2">I am an example grid unit</div>
+  <div class="gc d1-2">I am an example grid unit</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.grid-ib</div>
+                  <div class="kss-modifier-description">
+                    <p>throws grid into inline-block mode as opposed to default &quot;float&quot; mode</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="grid-wrap grid-ib">
+  <div class="gc d1-2">I am an example grid unit</div>
+  <div class="gc d1-2">I am an example grid unit</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.grid-divide</div>
+                  <div class="kss-modifier-description">
+                    <p>adds bottom margin to each grid unit</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="grid-wrap grid-divide">
+  <div class="gc d1-2">I am an example grid unit</div>
+  <div class="gc d1-2">I am an example grid unit</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;grid-wrap {$modifiers}&quot;&gt;
+  &lt;div class=&quot;gc d1-2&quot;&gt;I am an example grid unit&lt;/div&gt;
+  &lt;div class=&quot;gc d1-2&quot;&gt;I am an example grid unit&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.2</span> Grid Units</h1>
+            
+            
+            <div class="kss-description">
+              <p>Each grid unit must have the base <code>.gc</code> class applied to it.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="grid-wrap">
+  <div class="gc">I am an example grid unit</div>
+  <div class="gc">I am an example grid unit</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;grid-wrap&quot;&gt;
+  &lt;div class=&quot;gc&quot;&gt;I am an example grid unit&lt;/div&gt;
+  &lt;div class=&quot;gc&quot;&gt;I am an example grid unit&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.2.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.2.1</span> Handheld Grids</h1>
+            
+            
+            <div class="kss-description">
+              <p>Add grid unit width modifiers prefixed with <code>.h</code> to control grid units on &quot;handheld&quot; viewports</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="grid-wrap">
+  <div class="gc h1-2">I will be 50% wide at the "handheld" breakpoint</div>
+  <div class="gc h1-2">I will be 50% wide at the "handheld" breakpoint</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;grid-wrap&quot;&gt;
+  &lt;div class=&quot;gc h1-2&quot;&gt;I will be 50% wide at the &quot;handheld&quot; breakpoint&lt;/div&gt;
+  &lt;div class=&quot;gc h1-2&quot;&gt;I will be 50% wide at the &quot;handheld&quot; breakpoint&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.2.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">1.2.1</span> Lap Grids</h1>
+            
+            
+            <div class="kss-description">
+              <p>Add grid unit width modifiers prefixed with <code>.l</code> to control grid units on &quot;lap&quot; viewports</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="grid-wrap">
+  <div class="gc l1-2">I will be 50% wide at the "lap" breakpoint</div>
+  <div class="gc l1-2">I will be 50% wide at the "lap" breakpoint</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;grid-wrap&quot;&gt;
+  &lt;div class=&quot;gc l1-2&quot;&gt;I will be 50% wide at the &quot;lap&quot; breakpoint&lt;/div&gt;
+  &lt;div class=&quot;gc l1-2&quot;&gt;I will be 50% wide at the &quot;lap&quot; breakpoint&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          
+        </article>
+        <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer>
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+  </body>
+</html>

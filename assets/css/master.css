@@ -1047,7 +1047,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1376996635');
+    background-image: url('../images/select_arrow.png?1376997038');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1127,27 +1127,7 @@ optgroup::-moz-focus-inner {
   vertical-align: middle;
 }
 
-/* #Grid */
-/* Custom grid system for rapid prototyping and quick layout solutions.
-
-##Example 1 - fractions
-	<div class="size1of2 firstcol">
-		I'm the first of two grid items. I need an extra class to remove my gutter!
-	</div>
-	<div class="size1of2">
-		I'm the second of the two grid items. No need for a second class for me!
-	</div>
-
-
-##Example 2 - columns
-	<div class="sixcolumns firstcol">
-		I'm the first of two grid items. I need an extra class to remove my gutter!
-	</div>
-	<div class="sixcolumns">
-		I'm the second of the two grid items. No need for a second class for me!
-	</div>
-*/
-/* line 28, ../sass/framework/partials/base/_grid.scss */
+/* line 24, ../sass/framework/partials/base/_grid.scss */
 .grid-wrap, .large-gutter, .half-gutter, .gallery-row, .no-gutter, .column-container {
   list-style: none;
   margin: 0;
@@ -1168,32 +1148,32 @@ optgroup::-moz-focus-inner {
   clear: both;
 }
 
-/* line 37, ../sass/framework/partials/base/_grid.scss */
+/* line 33, ../sass/framework/partials/base/_grid.scss */
 .large-gutter {
   margin-left: -6em;
 }
 
-/* line 42, ../sass/framework/partials/base/_grid.scss */
+/* line 38, ../sass/framework/partials/base/_grid.scss */
 .half-gutter, .gallery-row {
   margin-left: -1.5em;
 }
 
-/* line 47, ../sass/framework/partials/base/_grid.scss */
+/* line 43, ../sass/framework/partials/base/_grid.scss */
 .no-gutter {
   margin-left: 0;
 }
 
-/* line 52, ../sass/framework/partials/base/_grid.scss */
+/* line 48, ../sass/framework/partials/base/_grid.scss */
 .grid-ib {
   letter-spacing: -0.25em;
 }
 
-/* line 56, ../sass/framework/partials/base/_grid.scss */
+/* line 52, ../sass/framework/partials/base/_grid.scss */
 .grid-divide {
   margin-bottom: 1.666em;
 }
 
-/* line 71, ../sass/framework/partials/base/_grid.scss */
+/* line 67, ../sass/framework/partials/base/_grid.scss */
 .g1-12, .gonecolumns, .g1-6, .gtwocolumns, .g1-4, .gthreecolumns, .g1-3, .gfourcolumns, .gfivecolumns, .g1-2, .gsixcolumns, .gsevencolumns, .g2-3, .geightcolumns, .g3-4, .gninecolumns, .gtencolumns, .gelevencolumns, .g1-1, .gtwelvecolumns,
 .gc,
 .main,
@@ -1211,7 +1191,7 @@ optgroup::-moz-focus-inner {
   box-sizing: border-box;
   *behavior: url(/boxsizing.htc);
 }
-/* line 78, ../sass/framework/partials/base/_grid.scss */
+/* line 74, ../sass/framework/partials/base/_grid.scss */
 .large-gutter .g1-12, .large-gutter .gonecolumns, .large-gutter .g1-6, .large-gutter .gtwocolumns, .large-gutter .g1-4, .large-gutter .gthreecolumns, .large-gutter .g1-3, .large-gutter .gfourcolumns, .large-gutter .gfivecolumns, .large-gutter .g1-2, .large-gutter .gsixcolumns, .large-gutter .gsevencolumns, .large-gutter .g2-3, .large-gutter .geightcolumns, .large-gutter .g3-4, .large-gutter .gninecolumns, .large-gutter .gtencolumns, .large-gutter .gelevencolumns, .large-gutter .g1-1, .large-gutter .gtwelvecolumns, .large-gutter
 .gc, .large-gutter
 .main,
@@ -1220,7 +1200,7 @@ optgroup::-moz-focus-inner {
 .gallery-row .large-gutter .col-5 {
   padding-left: 6em;
 }
-/* line 82, ../sass/framework/partials/base/_grid.scss */
+/* line 78, ../sass/framework/partials/base/_grid.scss */
 .half-gutter .g1-12, .gallery-row .g1-12, .half-gutter .gonecolumns, .gallery-row .gonecolumns, .half-gutter .g1-6, .gallery-row .g1-6, .half-gutter .gtwocolumns, .gallery-row .gtwocolumns, .half-gutter .g1-4, .gallery-row .g1-4, .half-gutter .gthreecolumns, .gallery-row .gthreecolumns, .half-gutter .g1-3, .gallery-row .g1-3, .half-gutter .gfourcolumns, .gallery-row .gfourcolumns, .half-gutter .gfivecolumns, .gallery-row .gfivecolumns, .half-gutter .g1-2, .gallery-row .g1-2, .half-gutter .gsixcolumns, .gallery-row .gsixcolumns, .half-gutter .gsevencolumns, .gallery-row .gsevencolumns, .half-gutter .g2-3, .gallery-row .g2-3, .half-gutter .geightcolumns, .gallery-row .geightcolumns, .half-gutter .g3-4, .gallery-row .g3-4, .half-gutter .gninecolumns, .gallery-row .gninecolumns, .half-gutter .gtencolumns, .gallery-row .gtencolumns, .half-gutter .gelevencolumns, .gallery-row .gelevencolumns, .half-gutter .g1-1, .gallery-row .g1-1, .half-gutter .gtwelvecolumns, .gallery-row .gtwelvecolumns, .half-gutter
 .gc, .gallery-row
 .gc, .half-gutter
@@ -1233,7 +1213,7 @@ optgroup::-moz-focus-inner {
 .gallery-row .col-5 {
   padding-left: 1.5em;
 }
-/* line 86, ../sass/framework/partials/base/_grid.scss */
+/* line 82, ../sass/framework/partials/base/_grid.scss */
 .no-gutter .g1-12, .no-gutter .gonecolumns, .no-gutter .g1-6, .no-gutter .gtwocolumns, .no-gutter .g1-4, .no-gutter .gthreecolumns, .no-gutter .g1-3, .no-gutter .gfourcolumns, .no-gutter .gfivecolumns, .no-gutter .g1-2, .no-gutter .gsixcolumns, .no-gutter .gsevencolumns, .no-gutter .g2-3, .no-gutter .geightcolumns, .no-gutter .g3-4, .no-gutter .gninecolumns, .no-gutter .gtencolumns, .no-gutter .gelevencolumns, .no-gutter .g1-1, .no-gutter .gtwelvecolumns, .no-gutter
 .gc, .no-gutter
 .main,
@@ -1242,7 +1222,7 @@ optgroup::-moz-focus-inner {
 .gallery-row .no-gutter .col-5 {
   padding-left: 0;
 }
-/* line 90, ../sass/framework/partials/base/_grid.scss */
+/* line 86, ../sass/framework/partials/base/_grid.scss */
 .grid-ib .g1-12, .grid-ib .gonecolumns, .grid-ib .g1-6, .grid-ib .gtwocolumns, .grid-ib .g1-4, .grid-ib .gthreecolumns, .grid-ib .g1-3, .grid-ib .gfourcolumns, .grid-ib .gfivecolumns, .grid-ib .g1-2, .grid-ib .gsixcolumns, .grid-ib .gsevencolumns, .grid-ib .g2-3, .grid-ib .geightcolumns, .grid-ib .g3-4, .grid-ib .gninecolumns, .grid-ib .gtencolumns, .grid-ib .gelevencolumns, .grid-ib .g1-1, .grid-ib .gtwelvecolumns, .grid-ib
 .gc, .grid-ib
 .main,
@@ -1258,7 +1238,7 @@ optgroup::-moz-focus-inner {
   float: none;
   letter-spacing: normal;
 }
-/* line 96, ../sass/framework/partials/base/_grid.scss */
+/* line 92, ../sass/framework/partials/base/_grid.scss */
 .grid-divide > .g1-12, .grid-divide > .gonecolumns, .grid-divide > .g1-6, .grid-divide > .gtwocolumns, .grid-divide > .g1-4, .grid-divide > .gthreecolumns, .grid-divide > .g1-3, .grid-divide > .gfourcolumns, .grid-divide > .gfivecolumns, .grid-divide > .g1-2, .grid-divide > .gsixcolumns, .grid-divide > .gsevencolumns, .grid-divide > .g2-3, .grid-divide > .geightcolumns, .grid-divide > .g3-4, .grid-divide > .gninecolumns, .grid-divide > .gtencolumns, .grid-divide > .gelevencolumns, .grid-divide > .g1-1, .grid-divide > .gtwelvecolumns, .grid-divide >
 .gc, .grid-divide >
 .main,
@@ -1328,7 +1308,7 @@ optgroup::-moz-focus-inner {
     width: 100%;
   }
 
-  /* line 105, ../sass/framework/partials/base/_grid.scss */
+  /* line 101, ../sass/framework/partials/base/_grid.scss */
   .h-grid-clear {
     clear: left;
   }
@@ -1395,12 +1375,12 @@ optgroup::-moz-focus-inner {
     width: 100%;
   }
 
-  /* line 114, ../sass/framework/partials/base/_grid.scss */
+  /* line 110, ../sass/framework/partials/base/_grid.scss */
   .h-grid-clear {
     clear: none;
   }
 
-  /* line 118, ../sass/framework/partials/base/_grid.scss */
+  /* line 114, ../sass/framework/partials/base/_grid.scss */
   .l-grid-clear {
     clear: left;
   }
@@ -1469,13 +1449,13 @@ optgroup::-moz-focus-inner {
     width: 100%;
   }
 
-  /* line 127, ../sass/framework/partials/base/_grid.scss */
+  /* line 123, ../sass/framework/partials/base/_grid.scss */
   .h-grid-clear,
   .l-grid-clear {
     clear: none;
   }
 
-  /* line 131, ../sass/framework/partials/base/_grid.scss */
+  /* line 127, ../sass/framework/partials/base/_grid.scss */
   .d-grid-clear {
     clear: left;
   }
@@ -1541,38 +1521,38 @@ optgroup::-moz-focus-inner {
     width: 100%;
   }
 
-  /* line 142, ../sass/framework/partials/base/_grid.scss */
+  /* line 138, ../sass/framework/partials/base/_grid.scss */
   .h-grid-clear,
   .l-grid-clear,
   .d-grid-clear {
     clear: none;
   }
 
-  /* line 146, ../sass/framework/partials/base/_grid.scss */
+  /* line 142, ../sass/framework/partials/base/_grid.scss */
   .w-grid-clear {
     clear: left;
   }
 }
 /* ##Column Extensions */
 /* ###Full Width */
-/* 
+/*
 	<div class="full-col">
 		I'm a full width column. You probably won't need to use me that often...
 	</div>
 */
-/* line 189, ../sass/framework/partials/base/_grid.scss */
+/* line 185, ../sass/framework/partials/base/_grid.scss */
 .full-col {
   width: auto;
   float: none;
 }
 
 /* ###Centered */
-/* 
+/*
 	<div class="size1of3 centered-col">
 		I'm a centered column. Useful on the odd occassion you need to center a grid unit
 	</div>
 */
-/* line 202, ../sass/framework/partials/base/_grid.scss */
+/* line 198, ../sass/framework/partials/base/_grid.scss */
 .centered-col {
   margin: 0 auto;
   float: none;
@@ -3388,7 +3368,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1376996635');
+  background-image: url('../images/site-logo.png?1376997038');
   width: 200px;
   height: 80px;
 }
@@ -3427,18 +3407,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1376996635');
+  background-image: url('../images/site-credit.png?1376997038');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1376996635');
+  background-image: url('../images/site-credit--dark.svg?1376997038');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1376996635');
+  background-image: url('../images/site-credit--dark.png?1376997038');
 }
 
 /* ==========================================================================
@@ -3637,7 +3617,7 @@ html[xmlns] .slides {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  background: url('../images/social-actions-sprite.png?1376996635') no-repeat 0 0;
+  background: url('../images/social-actions-sprite.png?1376997038') no-repeat 0 0;
   width: 60px;
   height: 20px;
   text-indent: 0 !important;

@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
         grunt.initConfig({
-            
+
 
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             js: {
                 files: '<%= jshint.all %>',
                 tasks: ['jshint', 'uglify:dist']
-            },          
+            },
         },
 
         // compass and scss
@@ -123,6 +123,30 @@ module.exports = function(grunt) {
                         "black": "#000000"
                     }
                 }
+            }
+        },
+
+        styleguide: {
+
+            options: {
+                name: 'Tanlinell CSS Framework',
+                framework: {
+                    name: 'kss',
+                    options: {
+                        'css': 'assets/css/master.css'
+                    },
+                },
+                template: {
+                    src: 'assets/sass/docs/template',
+                }
+
+            },
+
+            dist: {
+                files: {
+                    'assets/sass/docs': 'assets/sass/framework'
+                }
+
             }
         },
 

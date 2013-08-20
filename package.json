@@ -12,6 +12,7 @@
     "matchdep": "~0.1.2",
     "grunt-deployments": "~0.1.5",
     "grunt-grunticon": "~0.6.8",
-    "grunt-contrib-watch": "~0.5.1"
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-styleguide": "~0.2.6"
   }
 }
