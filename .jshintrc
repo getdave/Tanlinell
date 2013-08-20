@@ -16,7 +16,7 @@
     "jquery": true,
     "curly": true,
     "supernew": true,
-
+    "es5": false,
     "globals": {
         "Backbone": true,
         "_": true,
