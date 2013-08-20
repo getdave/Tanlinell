@@ -506,37 +506,36 @@ body {
 /* line 23, ../sass/framework/partials/base/_typo.scss */
 p {
   margin: 0 0 1.666em;
-  line-height: 1.666em;
 }
 
-/* line 34, ../sass/framework/partials/base/_typo.scss */
+/* line 33, ../sass/framework/partials/base/_typo.scss */
 a {
   color: #0088cc;
 }
 
-/* line 39, ../sass/framework/partials/base/_typo.scss */
+/* line 38, ../sass/framework/partials/base/_typo.scss */
 a:hover,
 a:focus {
   color: #005580;
 }
 
-/* line 43, ../sass/framework/partials/base/_typo.scss */
+/* line 42, ../sass/framework/partials/base/_typo.scss */
 a:focus {
   outline: thin dotted;
 }
 
-/* line 47, ../sass/framework/partials/base/_typo.scss */
+/* line 46, ../sass/framework/partials/base/_typo.scss */
 a:hover, a:active {
   outline: none;
 }
 
-/* line 57, ../sass/framework/partials/base/_typo.scss */
+/* line 56, ../sass/framework/partials/base/_typo.scss */
 ul, ol {
   padding: 0;
   margin: 0 0 1.666em 25px;
 }
 
-/* line 66, ../sass/framework/partials/base/_typo.scss */
+/* line 65, ../sass/framework/partials/base/_typo.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -544,52 +543,52 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 70, ../sass/framework/partials/base/_typo.scss */
+/* line 69, ../sass/framework/partials/base/_typo.scss */
 ul {
   list-style: disc;
 }
 
-/* line 74, ../sass/framework/partials/base/_typo.scss */
+/* line 73, ../sass/framework/partials/base/_typo.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 78, ../sass/framework/partials/base/_typo.scss */
+/* line 77, ../sass/framework/partials/base/_typo.scss */
 li {
   line-height: 1.666em;
 }
 
-/* line 87, ../sass/framework/partials/base/_typo.scss */
+/* line 86, ../sass/framework/partials/base/_typo.scss */
 blockquote, blockquote p {
   line-height: 1.5;
   color: #777;
 }
 
-/* line 88, ../sass/framework/partials/base/_typo.scss */
+/* line 87, ../sass/framework/partials/base/_typo.scss */
 blockquote {
   margin: 0 0 1.666em;
   padding: 9px 20px 0 19px;
   border-left: 1px solid #ddd;
 }
 
-/* line 89, ../sass/framework/partials/base/_typo.scss */
+/* line 88, ../sass/framework/partials/base/_typo.scss */
 blockquote cite {
   display: block;
   font-size: ms(0)-1;
   color: #555;
 }
 
-/* line 90, ../sass/framework/partials/base/_typo.scss */
+/* line 89, ../sass/framework/partials/base/_typo.scss */
 blockquote cite:before {
   content: "\2014 \0020";
 }
 
-/* line 91, ../sass/framework/partials/base/_typo.scss */
+/* line 90, ../sass/framework/partials/base/_typo.scss */
 blockquote cite a, blockquote cite a:visited {
   color: #555;
 }
 
-/* line 100, ../sass/framework/partials/base/_typo.scss */
+/* line 99, ../sass/framework/partials/base/_typo.scss */
 img {
   max-width: 100%;
   height: auto;
@@ -598,22 +597,22 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 109, ../sass/framework/partials/base/_typo.scss */
+/* line 108, ../sass/framework/partials/base/_typo.scss */
 #googlemap img, object, embed {
   max-width: none;
 }
 
-/* line 110, ../sass/framework/partials/base/_typo.scss */
+/* line 109, ../sass/framework/partials/base/_typo.scss */
 #map_canvas embed {
   max-width: none;
 }
 
-/* line 111, ../sass/framework/partials/base/_typo.scss */
+/* line 110, ../sass/framework/partials/base/_typo.scss */
 #map_canvas img {
   max-width: none;
 }
 
-/* line 112, ../sass/framework/partials/base/_typo.scss */
+/* line 111, ../sass/framework/partials/base/_typo.scss */
 #map_canvas object {
   max-width: none;
 }
