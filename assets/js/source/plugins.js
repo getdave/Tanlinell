@@ -37,6 +37,34 @@
 
 
 
+
+
+
+	/**
+	 * FitVids
+	 *
+	 * Loads FitVids only when there are videos on the page rather than
+	 * for no reason
+	 */
+
+	(function() {
+		Modernizr.load({
+			test: $(".format-video"),
+			yep : [
+				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/jquery.fitvids.min.js'
+				],
+			complete: function(){
+				if (jQuery().fitVids) {
+					$(document).ready(function(){
+						// Target your .container, .wrapper, .post, etc.
+						$(".format-video").fitVids();
+					});
+				}
+			}
+		});
+	}());
+
+
 	/**
 	 * SuperFish Menus
 	 *
