@@ -506,37 +506,36 @@ body {
 /* line 23, ../sass/framework/partials/base/_typo.scss */
 p {
   margin: 0 0 1.666em;
-  line-height: 1.666em;
 }
 
-/* line 34, ../sass/framework/partials/base/_typo.scss */
+/* line 33, ../sass/framework/partials/base/_typo.scss */
 a {
   color: #0088cc;
 }
 
-/* line 39, ../sass/framework/partials/base/_typo.scss */
+/* line 38, ../sass/framework/partials/base/_typo.scss */
 a:hover,
 a:focus {
   color: #005580;
 }
 
-/* line 43, ../sass/framework/partials/base/_typo.scss */
+/* line 42, ../sass/framework/partials/base/_typo.scss */
 a:focus {
   outline: thin dotted;
 }
 
-/* line 47, ../sass/framework/partials/base/_typo.scss */
+/* line 46, ../sass/framework/partials/base/_typo.scss */
 a:hover, a:active {
   outline: none;
 }
 
-/* line 57, ../sass/framework/partials/base/_typo.scss */
+/* line 56, ../sass/framework/partials/base/_typo.scss */
 ul, ol {
   padding: 0;
   margin: 0 0 1.666em 25px;
 }
 
-/* line 66, ../sass/framework/partials/base/_typo.scss */
+/* line 65, ../sass/framework/partials/base/_typo.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -544,54 +543,55 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 70, ../sass/framework/partials/base/_typo.scss */
+/* line 69, ../sass/framework/partials/base/_typo.scss */
 ul {
   list-style: disc;
 }
 
-/* line 74, ../sass/framework/partials/base/_typo.scss */
+/* line 73, ../sass/framework/partials/base/_typo.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 78, ../sass/framework/partials/base/_typo.scss */
+/* line 77, ../sass/framework/partials/base/_typo.scss */
 li {
   line-height: 1.666em;
 }
 
-/* line 87, ../sass/framework/partials/base/_typo.scss */
+/* line 86, ../sass/framework/partials/base/_typo.scss */
 blockquote, blockquote p {
   line-height: 1.5;
   color: #777;
 }
 
-/* line 88, ../sass/framework/partials/base/_typo.scss */
+/* line 87, ../sass/framework/partials/base/_typo.scss */
 blockquote {
   margin: 0 0 1.666em;
   padding: 9px 20px 0 19px;
   border-left: 1px solid #ddd;
 }
 
-/* line 89, ../sass/framework/partials/base/_typo.scss */
+/* line 88, ../sass/framework/partials/base/_typo.scss */
 blockquote cite {
   display: block;
   font-size: ms(0)-1;
   color: #555;
 }
 
-/* line 90, ../sass/framework/partials/base/_typo.scss */
+/* line 89, ../sass/framework/partials/base/_typo.scss */
 blockquote cite:before {
   content: "\2014 \0020";
 }
 
-/* line 91, ../sass/framework/partials/base/_typo.scss */
+/* line 90, ../sass/framework/partials/base/_typo.scss */
 blockquote cite a, blockquote cite a:visited {
   color: #555;
 }
 
-/* line 100, ../sass/framework/partials/base/_typo.scss */
+/* line 99, ../sass/framework/partials/base/_typo.scss */
 img {
   max-width: 100%;
+  height: auto;
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
@@ -697,21 +697,21 @@ h6, .h6 {
 /* ###Misc Headings */
 /* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
 /* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 67, ../sass/framework/partials/base/_headings.scss */
   .giga {
     font-size: 6em;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 75, ../sass/framework/partials/base/_headings.scss */
   .mega {
     font-size: 4.5em;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 82, ../sass/framework/partials/base/_headings.scss */
   .kilo {
     font-size: 3em;
@@ -1281,7 +1281,7 @@ optgroup::-moz-focus-inner {
   margin-bottom: 1.666em;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 30em) {
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
   .h1-12, .honecolumns {
     width: 8.33333%;
@@ -1341,8 +1341,13 @@ optgroup::-moz-focus-inner {
   .h1-1, .htwelvecolumns {
     width: 100%;
   }
+
+  /* line 109, ../sass/framework/partials/base/_grid.scss */
+  .h-grid-clear {
+    clear: left;
+  }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 37.5em) {
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
   .l1-12, .lonecolumns {
     width: 8.33333%;
@@ -1403,8 +1408,18 @@ optgroup::-moz-focus-inner {
   .l1-1, .ltwelvecolumns {
     width: 100%;
   }
+
+  /* line 118, ../sass/framework/partials/base/_grid.scss */
+  .h-grid-clear {
+    clear: none;
+  }
+
+  /* line 122, ../sass/framework/partials/base/_grid.scss */
+  .l-grid-clear {
+    clear: left;
+  }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 62em) {
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
   .d1-12, .donecolumns {
     width: 8.33333%;
@@ -1467,8 +1482,19 @@ optgroup::-moz-focus-inner {
   .d1-1, .dtwelvecolumns {
     width: 100%;
   }
+
+  /* line 131, ../sass/framework/partials/base/_grid.scss */
+  .h-grid-clear,
+  .l-grid-clear {
+    clear: none;
+  }
+
+  /* line 135, ../sass/framework/partials/base/_grid.scss */
+  .d-grid-clear {
+    clear: left;
+  }
 }
-@media only screen and (min-width: 1382px) {
+@media only screen and (min-width: 86.375em) {
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
   .w1-12, .wonecolumns {
     width: 8.33333%;
@@ -1528,6 +1554,18 @@ optgroup::-moz-focus-inner {
   .w1-1, .wtwelvecolumns {
     width: 100%;
   }
+
+  /* line 146, ../sass/framework/partials/base/_grid.scss */
+  .h-grid-clear,
+  .l-grid-clear,
+  .d-grid-clear {
+    clear: none;
+  }
+
+  /* line 150, ../sass/framework/partials/base/_grid.scss */
+  .w-grid-clear {
+    clear: left;
+  }
 }
 /* ##Column Extensions */
 /* ###Full Width */
@@ -1536,7 +1574,7 @@ optgroup::-moz-focus-inner {
 		I'm a full width column. You probably won't need to use me that often...
 	</div>
 */
-/* line 164, ../sass/framework/partials/base/_grid.scss */
+/* line 193, ../sass/framework/partials/base/_grid.scss */
 .full-col {
   width: auto;
   float: none;
@@ -1548,7 +1586,7 @@ optgroup::-moz-focus-inner {
 		I'm a centered column. Useful on the odd occassion you need to center a grid unit
 	</div>
 */
-/* line 177, ../sass/framework/partials/base/_grid.scss */
+/* line 206, ../sass/framework/partials/base/_grid.scss */
 .centered-col {
   margin: 0 auto;
   float: none;
@@ -1607,6 +1645,23 @@ optgroup::-moz-focus-inner {
   margin-left: 20px;
 }
 
+/* line 59, ../sass/framework/partials/objects/_media.scss */
+.m-block--ib {
+  letter-spacing: -0.25em;
+}
+/* line 63, ../sass/framework/partials/objects/_media.scss */
+.m-block--ib .m-img,
+.m-block--ib .m-content {
+  float: none;
+  letter-spacing: normal;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
 /* #Containers */
 /* Standard structures for dividing pages into "sections" */
 /* ##Standard Container */
@@ -1615,7 +1670,7 @@ optgroup::-moz-focus-inner {
 		<p>I'm a section on the layout/page which should be centered in the window</p>
 	</div>  
 */
-/* line 13, ../sass/framework/partials/objects/_containers.scss */
+/* line 12, ../sass/framework/partials/objects/_containers.scss */
 .container {
   width: 90%;
   margin: 0 auto;
@@ -1634,27 +1689,56 @@ optgroup::-moz-focus-inner {
   clear: both;
 }
 
+/* ## Reduced Container */
+/* Use to create a container half the default width of the standard container */
+/*
+	<div class="container container--reduced">
+		<!-- SOME STUFF -->
+	</div>
+*/
+@media only screen and (min-width: 48em) {
+  /* line 27, ../sass/framework/partials/objects/_containers.scss */
+  .container--reduced {
+    width: 45%;
+  }
+}
+
+/* ##Padded Container */
+/* Use to create a container with top and bottom padding */
+/*
+*/
+/* line 38, ../sass/framework/partials/objects/_containers.scss */
+.container--padded {
+  padding-top: 2.499em;
+  padding-bottom: 2.499em;
+}
+/* line 42, ../sass/framework/partials/objects/_containers.scss */
+.container--padded > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 /* ## Extended Container */
 /* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
 /*
-	<div class="container-extend" style="background: #f7f7f7f;">
+	<div class="container--extend" style="background: #f7f7f7f;">
 		<div class="container">
 			<p>A section of content where you need the background to extend to the full width of the browser whilst the content remains centered</p>
 		</div> 
 	</div>
 */
-/* line 33, ../sass/framework/partials/objects/_containers.scss */
-.container-extend {
+/* line 58, ../sass/framework/partials/objects/_containers.scss */
+.container--extend {
   width: auto;
   zoom: 1;
 }
 /* line 86, ../sass/framework/partials/base/_mixins.scss */
-.container-extend:before {
+.container--extend:before {
   content: "";
   display: table;
 }
 /* line 91, ../sass/framework/partials/base/_mixins.scss */
-.container-extend:after {
+.container--extend:after {
   content: "";
   display: table;
   clear: both;
@@ -1677,7 +1761,7 @@ optgroup::-moz-focus-inner {
 
 /* line 20, ../sass/framework/partials/objects/_island.scss */
 .island, .headed-island {
-  padding: 15px 30px;
+  padding: 1.666em;
 }
 
 /* line 25, ../sass/framework/partials/objects/_island.scss */
@@ -1695,7 +1779,7 @@ optgroup::-moz-focus-inner {
 */
 /* line 38, ../sass/framework/partials/objects/_island.scss */
 .islet {
-  padding: 15px;
+  padding: 0.833em;
 }
 
 /* ##Headed Island */
@@ -1719,14 +1803,14 @@ optgroup::-moz-focus-inner {
 }
 /* line 63, ../sass/framework/partials/objects/_island.scss */
 .headed-island .island-heading {
-  padding: 15px 30px;
+  padding: 0.833em 1.666em;
   margin: 0;
   border-top: 0;
   border-bottom: 1px solid #ccc;
 }
 /* line 70, ../sass/framework/partials/objects/_island.scss */
 .headed-island .island-content {
-  padding: 15px 30px;
+  padding: 0.833em 1.666em;
 }
 /* line 73, ../sass/framework/partials/objects/_island.scss */
 .headed-island .island-content > :last-child {
@@ -1890,7 +1974,7 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 .nav-primary > li {
   position: relative;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 29, ../sass/framework/partials/objects/_menu.scss */
   .nav-primary > li {
     float: left;
@@ -1908,7 +1992,7 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 .nav-primary > li > a {
   text-align: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 45, ../sass/framework/partials/objects/_menu.scss */
   .nav-primary > li > a {
     text-align: center;
@@ -1919,7 +2003,7 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 .js .nav-primary {
   display: none;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 58, ../sass/framework/partials/objects/_menu.scss */
   .js .nav-primary {
     display: block;
@@ -1941,7 +2025,7 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 .js .nav-menu-toggle {
   display: block;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 80, ../sass/framework/partials/objects/_menu.scss */
   .js .nav-menu-toggle {
     display: none;
@@ -2663,9 +2747,10 @@ a.badge:focus {
 .pager li,
 .pager__item {
   display: inline;
+  float: left;
 }
 
-/* line 29, ../sass/framework/partials/objects/_pager.scss */
+/* line 30, ../sass/framework/partials/objects/_pager.scss */
 .pager__link,
 .pager a {
   display: -moz-inline-stack;
@@ -2680,8 +2765,9 @@ a.badge:focus {
   border: 1px solid #ccc;
 }
 
-/* line 37, ../sass/framework/partials/objects/_pager.scss */
-.pager__item--next {
+/* line 39, ../sass/framework/partials/objects/_pager.scss */
+.pager__item--next,
+li.pager__item--next {
   float: right;
 }
 
@@ -3049,6 +3135,52 @@ html[xmlns] .slides {
   margin-right: 0.833em;
 }
 
+/* ##Inline Block 
+	<ul class="inline-list inline-list--ib">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+/* line 86, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list--ib {
+  letter-spacing: -0.25em;
+}
+/* line 90, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list--ib .inline-list__item,
+.inline-list--ib > li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  float: none;
+  letter-spacing: normal;
+}
+
+/* ##Centered 
+	<ul class="inline-list inline-list--spaced">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+/* line 107, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list--spaced {
+  margin-left: -3.332em;
+}
+/* line 111, ../sass/framework/partials/objects/_inline-list.scss */
+.inline-list--spaced .inline-list__item,
+.inline-list--spaced > li {
+  margin-left: 3.332em;
+}
+
 /* #Gray Box */
 /* Simple background box styles. Can be applied safetly to any element. Useful for prototyping */
 /* ##Gray Box */
@@ -3077,7 +3209,7 @@ html[xmlns] .slides {
   position: relative;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 52, ../sass/framework/partials/common/_primary-nav.scss */
   .nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
     display: block;
@@ -3210,10 +3342,110 @@ html[xmlns] .slides {
   width: auto;
   clear: both;
   overflow: visible;
-  padding-left: 0;
 }
 
 /* #Social Icons */
+@font-face {
+  font-family: 'social-icons';
+  src: url("../fonts/social-icons/font/social-icons.eot?92693809");
+  src: url("../fonts/social-icons/font/social-icons.eot?92693809#iefix") format("embedded-opentype"), url("../fonts/social-icons/font/social-icons.woff?92693809") format("woff"), url("../fonts/social-icons/font/social-icons.ttf?92693809") format("truetype"), url("../fonts/social-icons/font/social-icons.svg?92693809#social-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 28, ../sass/framework/partials/common/_social-icons.scss */
+[class^="social-icons__icon-"]:before, [class*=" social-icons__icon-"]:before {
+  font-family: "social-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+/* line 59, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--linkedin:before {
+  content: '\4c';
+}
+
+/* 'L' */
+/* line 60, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--twitter:before {
+  content: '\54';
+}
+
+/* 'T' */
+/* line 61, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--youtube:before {
+  content: '\e803';
+}
+
+/* '' */
+/* line 62, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--vimeo:before {
+  content: '\e802';
+}
+
+/* '' */
+/* line 63, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--facebook:before {
+  content: '\66';
+}
+
+/* 'f' */
+/* line 64, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon--googleplus-rect:before {
+  content: '\e801';
+}
+
+/* '' */
+/* line 72, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 75, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons a {
+  text-decoration: none;
+}
+
+/* line 80, ../sass/framework/partials/common/_social-icons.scss */
+.social-icons__icon {
+  font-size: 1.875em;
+  display: none;
+}
+/* line 84, ../sass/framework/partials/common/_social-icons.scss */
+.generatedcontent .social-icons__icon {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
 /* #Social Actions */
 /* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
 /*
@@ -3237,26 +3469,62 @@ html[xmlns] .slides {
 		</li>
 	</ul>
 */
-/* line 31, ../sass/framework/partials/common/_social-actions.scss */
+/* #Social Actions */
+/* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
+/*
+	<ul class="social-actions">
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance twitter-share" href="http://twitter.com/share" data-count="none">
+			    Share on Twitter
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance facebook-like" href="http://www.facebook.com/sharer.php" data-send="false" data-show-faces="false" data-font="arial" data-count="false" data-layout="button_count">
+			    Like on Facebook
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance linkedin-share" href="http://www.linkedin.com/shareArticle?mini=true" data-counter="false">
+			    Share on LinkedIn
+			</a>
+		</li>
+	</ul>
+*/
+/* line 57, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions__link {
-  background: url('../images/social-actions-sprite.png?1372764355') no-repeat 0 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background: url('../images/social-actions-sprite.png?1376996641') no-repeat 0 0;
   width: 60px;
   height: 20px;
+  text-indent: 0 !important;
 }
 
-/* line 39, ../sass/framework/partials/common/_social-actions.scss */
+/* line 71, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions .facebook-like {
   background-position: 0 -28px;
 }
-/* line 43, ../sass/framework/partials/common/_social-actions.scss */
+/* line 75, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions .linkedin-share {
   background-position: 0 -56px;
 }
+/* line 79, ../sass/framework/partials/common/_social-actions.scss */
+.social-actions .googleplus-one {
+  background-position: 0 -86px;
+  width: 60px;
+}
 
-/* line 50, ../sass/framework/partials/common/_social-actions.scss */
-.socialite-loaded {
-  background: 0;
-  text-indent: 0;
+/* line 88, ../sass/framework/partials/common/_social-actions.scss */
+.socialite-loaded,
+.socialite-loaded .social-actions__text {
+  background: 0 !important;
+  text-indent: 0 !important;
 }
 
 /* ============================================================ */
@@ -3293,7 +3561,12 @@ html[xmlns] .slides {
 }
 /* line 39, ../sass/framework/partials/common/_gallery.scss */
 .gallery-item a {
-  display: block;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
 }
 /* line 44, ../sass/framework/partials/common/_gallery.scss */
 .gallery-item img {
@@ -3321,7 +3594,7 @@ html[xmlns] .slides {
 /* Set of simple classes to implement common CSS patterns */
 /* ##Clearfix & Clearing */
 /* ###Clearing */
-/* 
+/*
 	<p class="clear">I will clear both sides</p>
 */
 /* line 14, ../sass/framework/partials/base/_helpers.scss */
@@ -3329,16 +3602,16 @@ html[xmlns] .slides {
   clear: both;
 }
 
-/* 	
-	<p class="clear-l">I will clear to the left</p> 
+/*
+	<p class="clear-l">I will clear to the left</p>
 */
 /* line 21, ../sass/framework/partials/base/_helpers.scss */
 .clear-l {
   clear: left;
 }
 
-/* 	
-	<p class="clear-r">I will clear to the right</p> 
+/*
+	<p class="clear-r">I will clear to the right</p>
 */
 /* line 28, ../sass/framework/partials/base/_helpers.scss */
 .clear-r {
@@ -3347,7 +3620,7 @@ html[xmlns] .slides {
 
 /* ###Clearfix */
 /* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations nicolasgallagher.com/micro-clearfix-hack/ */
-/* 	
+/*
 	<div class="wrapper clearfix">
 		<div class="floated-left">
 			<p>I'm floated but my parent has a clearfix so I am contained</p>
@@ -3382,16 +3655,16 @@ html[xmlns] .slides {
 
 /* ##Floats and Alignment */
 /* ###Floats */
-/* 	
-	<p class="fr">I will float to the right.</p> 
+/*
+	<p class="fr">I will float to the right.</p>
 */
 /* line 75, ../sass/framework/partials/base/_helpers.scss */
 .fr {
   float: right;
 }
 
-/* 	
-	<p class="fl">I will float to the left.</p> 
+/*
+	<p class="fl">I will float to the left.</p>
 */
 /* line 82, ../sass/framework/partials/base/_helpers.scss */
 .fl {
@@ -3399,24 +3672,24 @@ html[xmlns] .slides {
 }
 
 /* ###Text Alignment */
-/* 	
-	<p class="text-right">My text is aligned right.</p> 
+/*
+	<p class="text-right">My text is aligned right.</p>
 */
 /* line 92, ../sass/framework/partials/base/_helpers.scss */
 .text-right {
   text-align: right;
 }
 
-/* 	
-	<p class="text-left">My text is aligned left.</p> 
+/*
+	<p class="text-left">My text is aligned left.</p>
 */
 /* line 99, ../sass/framework/partials/base/_helpers.scss */
 .text-left {
   text-align: left;
 }
 
-/* 	
-	<p class="text-center">My text is aligned centrally.</p> 
+/*
+	<p class="text-center">My text is aligned centrally.</p>
 */
 /* line 106, ../sass/framework/partials/base/_helpers.scss */
 .text-center {
@@ -3425,12 +3698,12 @@ html[xmlns] .slides {
 
 /* ##Imagery */
 /* ###Image Positioning */
-/* 	
+/*
 	<img src="http://www.placehold.it/200x200" class="img-left" />
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.</p> 
+	consequat.</p>
 */
 /* line 123, ../sass/framework/partials/base/_helpers.scss */
 .img-left,
@@ -3440,27 +3713,27 @@ html[xmlns] .slides {
   margin: 0 1.666em 1.666em 0;
 }
 
-/* 	
+/*
 	<img src="http://www.placehold.it/200x200" class="img-right" />
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.</p> 
+	consequat.</p>
 */
 /* line 137, ../sass/framework/partials/base/_helpers.scss */
 .img-right,
 .img-r,
 .alignright {
   float: right;
-  margin: 0 0 1.666em 0.833em;
+  margin: 0 0 1.666em 1.666em;
 }
 
-/* 	
+/*
 	<img src="http://www.placehold.it/200x200" class="img-center" />
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat.</p> 
+	consequat.</p>
 */
 /* line 150, ../sass/framework/partials/base/_helpers.scss */
 .img-center,
@@ -3472,79 +3745,93 @@ html[xmlns] .slides {
 
 /* ###Image Replacement */
 /* This is a safe way to replace HTML content with an image. Advice is not to set width and height via the `style` attribute. Rather achieve this via an additional CSS rule where possible. */
-/* 	
+/*
 	<span class="img-replace" style="background-image: url(http://www.placehold.it/300x100); width: 300px; height: 100px;">
 		I should be replaced with an image
 	</span>
 */
 /* line 165, ../sass/framework/partials/base/_helpers.scss */
-.img-replace,
-.ir,
-.site-credit,
-.social-actions__link {
-  display: inline-block;
-  text-indent: -999em;
+.ir, .site-credit, .social-actions__link,
+.img-replace {
+  background-color: transparent;
+  border: 0;
   overflow: hidden;
-  background-repeat: no-repeat;
-  text-align: left;
-  direction: ltr;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 174, ../sass/framework/partials/base/_helpers.scss */
+.ir:before, .site-credit:before, .social-actions__link:before,
+.img-replace:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
 }
 
 /* ##Hidden Content */
 /* ###Hide: Screenreaders & Browsers */
 /* css-discuss.incutio.com/wiki/Screenreader_Visibility */
-/* 	
-	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+/*
+	<p>Lorem ipsum dolor sit amet, <strong class="hidden">Hah! You are stupid but you don't know it!</strong>consequat.</p>
 */
-/* line 184, ../sass/framework/partials/base/_helpers.scss */
+/* line 191, ../sass/framework/partials/base/_helpers.scss */
 .hidden {
-  display: none;
+  display: none !important;
   visibility: hidden;
 }
 
 /* ###Hide: Visually For Browsers */
 /* Hide only visually, but have it available for screenreaders: by Jon Neal. */
 /* www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
-/* 	
-	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+/*
+	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p>
 */
-/* line 199, ../sass/framework/partials/base/_helpers.scss */
-.vh,
+/* line 206, ../sass/framework/partials/base/_helpers.scss */
+.vh, .generatedcontent .social-icons__name, .social-actions__text,
 .v-hidden,
 .screen-reader-text,
 .assistive-text {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
-/* line 208, ../sass/framework/partials/base/_helpers.scss */
-.vh.focusable:active,
+/* line 220, ../sass/framework/partials/base/_helpers.scss */
+.vh.focusable:active, .generatedcontent .focusable.social-icons__name:active, .focusable.social-actions__text:active,
 .vh.focusable:focus
+.v-hidden.focusable:active,
+.generatedcontent .focusable.social-icons__name:focus
+.v-hidden.focusable:active,
+.focusable.social-actions__text:focus
 .v-hidden.focusable:active,
 .v-hidden.focusable:focus {
   clip: auto;
   height: auto;
+  margin: 0;
   overflow: visible;
   position: static;
   width: auto;
-  margin: 0;
 }
 
 /* ###Hide: Visually From All + Maintain Layout */
 /* Hide visually and from screenreaders, but maintain layout  */
-/* 	
-	<p>Lorem ipsum dolor sit amet, <strong class="invisible">Hah! You are stupid but you don't know it!</strong>consequat.</p> 
+/*
+	<p>Lorem ipsum dolor sit amet, <strong class="invisible">Hah! You are stupid but you don't know it!</strong>consequat.</p>
 */
-/* line 222, ../sass/framework/partials/base/_helpers.scss */
+/* line 234, ../sass/framework/partials/base/_helpers.scss */
 .invisible {
   visibility: hidden;
 }
 
 /* ##Resetting */
 /* ###Lists */
-/* line 232, ../sass/framework/partials/base/_helpers.scss */
+/* line 244, ../sass/framework/partials/base/_helpers.scss */
 .list-reset {
   list-style: none;
   margin: 0;

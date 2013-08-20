@@ -16,12 +16,13 @@
     "jquery": true,
     "curly": true,
     "supernew": true,
-
+    "es5": false,
     "globals": {
         "Backbone": true,
         "_": true,
         "jQuery": true,
         "Modernizr": true,
-        "WebFontConfig": true
+        "WebFontConfig": true,
+        "tanlinellSiteDetails": true
     }
 }

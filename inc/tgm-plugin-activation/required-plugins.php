@@ -54,25 +54,25 @@ function my_theme_register_required_plugins() {
 		array(
             'name'      => 'WordPress SEO by Yoast',
             'slug'      => 'wordpress-seo',
-            'required'  => true,
+            'required'  => false,
         ),
 
         array(
             'name'      => 'Google Analytics for WordPress',
             'slug'      => 'google-analytics-for-wordpress',
-            'required'  => true,
+            'required'  => false,
         ),
 
         array(
             'name'      => 'Google XML Sitemaps',
             'slug'      => 'google-sitemap-generator',
-            'required'  => true,
+            'required'  => false,
         ),
 
         array(
             'name'      => 'Advanced Sitemap Generator',
             'slug'      => 'advanced-sitemap-generator',
-            'required'  => true,
+            'required'  => false,
         ),
 
 		array(
@@ -94,21 +94,9 @@ function my_theme_register_required_plugins() {
 		),
 
 		array(
-			'name' 		=> 'Features by WooThemes',
-			'slug' 		=> 'features-by-woothemes',
-			'required' 	=> false,
-		),
-
-		array(
-			'name' 		=> 'Testimonials by WooThemes',
-			'slug' 		=> 'testimonials-by-woothemes',
-			'required' 	=> false,
-		),
-
-		array(
 			'name' 		=> 'User Role Editor',
 			'slug' 		=> 'user-role-editor',
-			'required' 	=> true,
+			'required' 	=> false,
 		),
 
 		array(
@@ -132,12 +120,18 @@ function my_theme_register_required_plugins() {
 		array(
 			'name' 		=> 'WP Smush.it',
 			'slug' 		=> 'wp-smushit',
-			'required' 	=> true,
+			'required' 	=> false,
 		),
 
 		array(
 			'name' 		=> 'WPThumb',
 			'slug' 		=> 'wp-thumb',
+			'required' 	=> true,
+		),
+
+		array(
+			'name' 		=> 'BC Responsive Images',
+			'slug' 		=> 'bc-responsive-images',
 			'required' 	=> true,
 		),
 
@@ -151,6 +145,18 @@ function my_theme_register_required_plugins() {
 			'name' 		=> 'Add Descendants As Submenu Items',
 			'slug' 		=> 'add-descendants-as-submenu-items',
 			'required' 	=> false,
+		),
+
+		array(
+			'name' 		=> 'Disable Wordpress Plugin Updates',
+			'slug' 		=> 'disable-wordpress-plugin-updates',
+			'required' 	=> true,
+		),
+
+		array(
+			'name' 		=> 'WordPress Status Dashboard',
+			'slug' 		=> 'wp-status-dashboard',
+			'required' 	=> true,
 		),
 
 		
