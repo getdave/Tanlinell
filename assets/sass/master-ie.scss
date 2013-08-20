@@ -4,8 +4,6 @@
 // variable which is used to trigger specific behaviour for old IE
 
 
-$bIE: true;
-
-
+$is-oldie: true;
 
 @import "master.scss";

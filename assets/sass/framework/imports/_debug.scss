@@ -1,3 +1,5 @@
+@if $debug-mode == true {
+
 /**
  * Are there any empty elements in your page?
  */
@@ -116,3 +118,5 @@ input[type=submit][value]{
 [style]{
 	outline:5px solid yellow;
 }
+
+}//endif

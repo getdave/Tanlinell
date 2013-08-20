@@ -221,7 +221,7 @@ $one_col: 100% / $cols;
 
 @mixin respond-to($media) {
 
-    @if ($bIE == true or $isFixed == true) {
+    @if ($is-oldie == true or $isFixed == true) {
         // Check if we're IE. If so then just return the content sans-media query
         @content;
     } @else {

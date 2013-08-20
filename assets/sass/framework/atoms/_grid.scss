@@ -158,7 +158,7 @@ $allGridClasses: #{grid-selectors()};
 // the .htc box-sizing hack won't run
 // therefore we need to linearise our layout to ensure it 
 // doesn't break in older IE
-@if ($bIE == true) {
+@if ($is-oldie == true) {
 	.no-js {
 		#{$allGridClasses},
 		.gc {

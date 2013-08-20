@@ -1,23 +1,35 @@
+// ==========================================================================
 // FRAMEWORK VARIABLES
-
+//
 // The following variables are utilities to provide defaults for the framework.
-// Do not alter these values. Instead override as required in your Projects'
-// _config file.
+// Do not alter these values.
+//
+// Instead override as required in your Projects `_config` file.
+//
+// ==========================================================================
+
+
 
 // ==========================================================================
-// IE HACK
+// HACKS & OVERIDES
 // ==========================================================================
 
 // This is a flag which is set to "true" by master-ie.scss
-// This allows us to target specifically IE within Sass files!
-$bIE: false !default;
+// This allows us to target specifically IE within Sass files
+$is-oldie: 						false !default;
+
+// Highlights any potential markup/accessibility problems
+$debug-mode:					false !default;
 
 
 // ==========================================================================
-// COLORS
+// BRAND
 // ==========================================================================
 
-// Grays
+// COLOURS
+// ==========================================================================
+
+// Tones
 $black:                 		#000;
 $grayDarker:            		#222;
 $grayDark:              		#333;
