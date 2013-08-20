@@ -1048,7 +1048,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1376993279');
+    background-image: url('../images/select_arrow.png?1376993400');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1328,6 +1328,11 @@ optgroup::-moz-focus-inner {
   .h1-1, .htwelvecolumns {
     width: 100%;
   }
+
+  /* line 105, ../sass/framework/partials/base/_grid.scss */
+  .h-grid-clear {
+    clear: left;
+  }
 }
 @media only screen and (min-width: 37.5em) {
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
@@ -1389,6 +1394,16 @@ optgroup::-moz-focus-inner {
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
   .l1-1, .ltwelvecolumns {
     width: 100%;
+  }
+
+  /* line 114, ../sass/framework/partials/base/_grid.scss */
+  .h-grid-clear {
+    clear: none;
+  }
+
+  /* line 118, ../sass/framework/partials/base/_grid.scss */
+  .l-grid-clear {
+    clear: left;
   }
 }
 @media only screen and (min-width: 62em) {
@@ -1454,6 +1469,17 @@ optgroup::-moz-focus-inner {
   .d1-1, .dtwelvecolumns {
     width: 100%;
   }
+
+  /* line 127, ../sass/framework/partials/base/_grid.scss */
+  .h-grid-clear,
+  .l-grid-clear {
+    clear: none;
+  }
+
+  /* line 131, ../sass/framework/partials/base/_grid.scss */
+  .d-grid-clear {
+    clear: left;
+  }
 }
 @media only screen and (min-width: 86.375em) {
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
@@ -1515,6 +1541,18 @@ optgroup::-moz-focus-inner {
   .w1-1, .wtwelvecolumns {
     width: 100%;
   }
+
+  /* line 142, ../sass/framework/partials/base/_grid.scss */
+  .h-grid-clear,
+  .l-grid-clear,
+  .d-grid-clear {
+    clear: none;
+  }
+
+  /* line 146, ../sass/framework/partials/base/_grid.scss */
+  .w-grid-clear {
+    clear: left;
+  }
 }
 /* ##Column Extensions */
 /* ###Full Width */
@@ -1523,7 +1561,7 @@ optgroup::-moz-focus-inner {
 		I'm a full width column. You probably won't need to use me that often...
 	</div>
 */
-/* line 160, ../sass/framework/partials/base/_grid.scss */
+/* line 189, ../sass/framework/partials/base/_grid.scss */
 .full-col {
   width: auto;
   float: none;
@@ -1535,7 +1573,7 @@ optgroup::-moz-focus-inner {
 		I'm a centered column. Useful on the odd occassion you need to center a grid unit
 	</div>
 */
-/* line 173, ../sass/framework/partials/base/_grid.scss */
+/* line 202, ../sass/framework/partials/base/_grid.scss */
 .centered-col {
   margin: 0 auto;
   float: none;
@@ -3125,7 +3163,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1376993279');
+  background-image: url('../images/site-logo.png?1376993400');
   width: 200px;
   height: 80px;
 }
@@ -3164,18 +3202,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1376993279');
+  background-image: url('../images/site-credit.png?1376993400');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1376993279');
+  background-image: url('../images/site-credit--dark.svg?1376993400');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1376993279');
+  background-image: url('../images/site-credit--dark.png?1376993400');
 }
 
 /* ==========================================================================
@@ -3374,7 +3412,7 @@ html[xmlns] .slides {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  background: url('../images/social-actions-sprite.png?1376993279') no-repeat 0 0;
+  background: url('../images/social-actions-sprite.png?1376993400') no-repeat 0 0;
   width: 60px;
   height: 20px;
   text-indent: 0 !important;
