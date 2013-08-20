@@ -77,22 +77,22 @@
 	 * when required by page
 	 * 
 	 */
-	
-	/* (function() {
-			Modernizr.load({
-				test: 1,
-				yep : [
-					tanlinell_site_details.template_directory_uri + '/assets/js/conditional/socialite/socialite.min.js'
-					],
-				complete: function(){
-					$('.social-actions').on("hover", function() {
-						Socialite.load('.main');
-					});
-					
-				}
-			});
-		}());  */
-
+	/* 
+	(function() {
+		Modernizr.load({
+			test: 1,
+			yep : [
+				tanlinell_site_details.template_directory_uri + '/assets/js/conditional/socialite/socialite.min.js'
+				],
+			complete: function(){
+				$('.social-actions').on("touchstart hover", function() {
+					Socialite.load('.main');
+				});
+				
+			}
+		});
+	}());  
+	 */
 
 
 	/**
