@@ -18,13 +18,13 @@
 	position: absolute;
 	top: 100%;
 	left: 0;
-	z-index: $zindexDropdown;
+	z-index: $zindex-tier-1;
 	display: none;
 	float: left;
 	min-width: 160px;
 	text-align: left;
 	direction:ltr;
-	background-color: $navbarBackground;
+	background-color: $navbar-background;
 }
 
 .dropdown-menu__item {

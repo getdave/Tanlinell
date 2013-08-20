@@ -18,7 +18,7 @@
 %responsive-menu {
 	@extend %nav;
 	position: relative;
-	background-color: $navbarBackground;
+	background-color: $navbar-background;
 
 	@if ($isFixed == false) { // ie: if we're in "Responsive" mode
 		@extend %responsive-menu__toggle-target;

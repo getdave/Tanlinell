@@ -26,9 +26,9 @@ $half_gutter_width: ($gutter/2)+em;
 
 
 .grid-wrap {
-	list-style:none;                
-    margin:0;                       
-    padding:0;                      
+	list-style:none;
+    margin:0;
+    padding:0;
     margin-left: -$gutter_width;
     clear: both;
     @include clearfix;
@@ -102,7 +102,7 @@ $allGridClasses: #{grid-selectors()};
     }
 }
 
-@if ($bStdGridBreakpoints == true) {
+@if ($use-standard-breakpoints == true) {
 	// Handheld Grids
 	@include respond-to('tiny') {
 		@include grid-set('h');
@@ -156,7 +156,7 @@ $allGridClasses: #{grid-selectors()};
 
 // If we're in IE and JS is disabled then
 // the .htc box-sizing hack won't run
-// therefore we need to linearise our layout to ensure it 
+// therefore we need to linearise our layout to ensure it
 // doesn't break in older IE
 @if ($is-oldie == true) {
 	.no-js {
@@ -184,7 +184,7 @@ $allGridClasses: #{grid-selectors()};
 /* ##Column Extensions */
 
 /* ###Full Width */
-/* 
+/*
 	<div class="full-col">
 		I'm a full width column. You probably won't need to use me that often...
 	</div>
@@ -197,7 +197,7 @@ $allGridClasses: #{grid-selectors()};
 
 
 /* ###Centered */
-/* 
+/*
 	<div class="size1of3 centered-col">
 		I'm a centered column. Useful on the odd occassion you need to center a grid unit
 	</div>

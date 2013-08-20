@@ -1570,7 +1570,7 @@ optgroup::-moz-focus-inner {
 }
 /* ##Column Extensions */
 /* ###Full Width */
-/* 
+/*
 	<div class="full-col">
 		I'm a full width column. You probably won't need to use me that often...
 	</div>
@@ -1582,7 +1582,7 @@ optgroup::-moz-focus-inner {
 }
 
 /* ###Centered */
-/* 
+/*
 	<div class="size1of3 centered-col">
 		I'm a centered column. Useful on the odd occassion you need to center a grid unit
 	</div>
