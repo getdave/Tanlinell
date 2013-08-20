@@ -193,19 +193,22 @@ $one_col: 100% / $cols;
     } @else {
         // Return the appropriate MQ declaration for modern browsers
         @if $media == tiny {
-            @media only screen and (min-width: $break-tiny) { @content; }
+            @media only screen and (min-width: rsize($break-tiny)) { @content; }
         }
         @else if $media == small {
-            @media only screen and (min-width: $break-small) { @content; }
+            @media only screen and (min-width: rsize($break-small)) { @content; }
         }
         @else if $media == medium {
-            @media only screen and (min-width: $break-medium) { @content; }
+            @media only screen and (min-width: rsize($break-medium)) { @content; }
         }
         @else if $media == large {
-            @media only screen and (min-width: $break-large) { @content; }
+            @media only screen and (min-width: rsize($break-large)) { @content; }
         }
         @else if $media == xlarge {
-            @media only screen and (min-width: $break-xlarge) { @content; }
+            @media only screen and (min-width: rsize($break-xlarge)) { @content; }
+        }
+        @else {
+            @media only screen and (min-width: $media) { @content; }
         }
     }
 }

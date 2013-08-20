@@ -698,21 +698,21 @@ h6, .h6 {
 /* ###Misc Headings */
 /* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
 /* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 67, ../sass/framework/partials/base/_headings.scss */
   .giga {
     font-size: 6em;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 75, ../sass/framework/partials/base/_headings.scss */
   .mega {
     font-size: 4.5em;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 82, ../sass/framework/partials/base/_headings.scss */
   .kilo {
     font-size: 3em;
@@ -1048,7 +1048,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1376990667');
+    background-image: url('../images/select_arrow.png?1376990897');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1268,7 +1268,7 @@ optgroup::-moz-focus-inner {
   margin-bottom: 1.666em;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 30em) {
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
   .h1-12, .honecolumns {
     width: 8.33333%;
@@ -1329,7 +1329,7 @@ optgroup::-moz-focus-inner {
     width: 100%;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 37.5em) {
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
   .l1-12, .lonecolumns {
     width: 8.33333%;
@@ -1391,7 +1391,7 @@ optgroup::-moz-focus-inner {
     width: 100%;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 62em) {
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
   .d1-12, .donecolumns {
     width: 8.33333%;
@@ -1455,7 +1455,7 @@ optgroup::-moz-focus-inner {
     width: 100%;
   }
 }
-@media only screen and (min-width: 1382px) {
+@media only screen and (min-width: 86.375em) {
   /* line 65, ../sass/framework/partials/base/_mixins.scss */
   .w1-12, .wonecolumns {
     width: 8.33333%;
@@ -1877,7 +1877,7 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 .nav-primary > li {
   position: relative;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 29, ../sass/framework/partials/objects/_menu.scss */
   .nav-primary > li {
     float: left;
@@ -1895,7 +1895,7 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 .nav-primary > li > a {
   text-align: left;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 45, ../sass/framework/partials/objects/_menu.scss */
   .nav-primary > li > a {
     text-align: center;
@@ -1906,7 +1906,7 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 .js .nav-primary {
   display: none;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 58, ../sass/framework/partials/objects/_menu.scss */
   .js .nav-primary {
     display: block;
@@ -1928,7 +1928,7 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 .js .nav-menu-toggle {
   display: block;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 80, ../sass/framework/partials/objects/_menu.scss */
   .js .nav-menu-toggle {
     display: none;
@@ -3065,7 +3065,7 @@ html[xmlns] .slides {
   position: relative;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   /* line 52, ../sass/framework/partials/common/_primary-nav.scss */
   .nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
     display: block;
@@ -3107,7 +3107,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1376990667');
+  background-image: url('../images/site-logo.png?1376990897');
   width: 200px;
   height: 80px;
 }
@@ -3146,18 +3146,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1376990667');
+  background-image: url('../images/site-credit.png?1376990897');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1376990667');
+  background-image: url('../images/site-credit--dark.svg?1376990897');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1376990667');
+  background-image: url('../images/site-credit--dark.png?1376990897');
 }
 
 /* ==========================================================================
@@ -3351,7 +3351,7 @@ html[xmlns] .slides {
 */
 /* line 57, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions__link {
-  background: url('../images/social-actions-sprite.png?1376990667') no-repeat 0 0;
+  background: url('../images/social-actions-sprite.png?1376990897') no-repeat 0 0;
   width: 60px;
   height: 20px;
   text-indent: 0 !important;

@@ -1042,7 +1042,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1376990667');
+    background-image: url('../images/select_arrow.png?1376990897');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -3094,7 +3094,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1376990667');
+  background-image: url('../images/site-logo.png?1376990897');
   width: 200px;
   height: 80px;
 }
@@ -3133,18 +3133,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1376990667');
+  background-image: url('../images/site-credit.png?1376990897');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1376990667');
+  background-image: url('../images/site-credit--dark.svg?1376990897');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1376990667');
+  background-image: url('../images/site-credit--dark.png?1376990897');
 }
 
 /* ==========================================================================
@@ -3338,7 +3338,7 @@ html[xmlns] .slides {
 */
 /* line 57, ../sass/framework/partials/common/_social-actions.scss */
 .social-actions__link {
-  background: url('../images/social-actions-sprite.png?1376990667') no-repeat 0 0;
+  background: url('../images/social-actions-sprite.png?1376990897') no-repeat 0 0;
   width: 60px;
   height: 20px;
   text-indent: 0 !important;
