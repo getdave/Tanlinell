@@ -35,7 +35,8 @@
 	border: 1px solid #ccc;	
 }
 
-.pager__item--next {
+.pager__item--next,
+li.pager__item--next {
 	float: right;
 }
 

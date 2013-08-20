@@ -10,8 +10,8 @@ get_header();
 ?>
 
 
-<div class="column-container">
-	<div class="main d1-1" role="main">
+<div class="column-container layout-1c">
+	<div class="main" role="main">
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -35,10 +35,7 @@ get_header();
 					<?php edit_post_link( __( 'Edit', 'tanlinell' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
 				</div><!-- .entry-meta -->
 
-				<nav id="image-navigation" class="site-navigation">
-					<span class="previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'tanlinell' ) ); ?></span>
-					<span class="next-image"><?php next_image_link( false, __( 'Next &rarr;', 'tanlinell' ) ); ?></span>
-				</nav><!-- #image-navigation -->
+				
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
@@ -102,6 +99,11 @@ get_header();
 			</footer><!-- .entry-meta -->
 		</article><!-- #post-<?php the_ID(); ?> -->
 
+		<ul id="image-navigation" class="pager site-navigation">
+			<li class="pager__item previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'tanlinell' ) ); ?></li>
+			<li class="pager__item pager__item--next next-image"><?php next_image_link( false, __( 'Next &rarr;', 'tanlinell' ) ); ?></li>
+		</ul><!-- #image-navigation -->
+		
 		<?php comments_template(); ?>
 
 	<?php endwhile; // end of the loop. ?>

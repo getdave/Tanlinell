@@ -1042,7 +1042,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1376991516');
+    background-image: url('../images/select_arrow.png?1376991666');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2657,8 +2657,9 @@ a.badge:focus {
   border: 1px solid #ccc;
 }
 
-/* line 38, ../sass/framework/partials/objects/_pager.scss */
-.pager__item--next {
+/* line 39, ../sass/framework/partials/objects/_pager.scss */
+.pager__item--next,
+li.pager__item--next {
   float: right;
 }
 
@@ -3094,7 +3095,7 @@ html[xmlns] .slides {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1376991516');
+  background-image: url('../images/site-logo.png?1376991666');
   width: 200px;
   height: 80px;
 }
@@ -3133,18 +3134,18 @@ html[xmlns] .slides {
 }
 /* line 18, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1376991516');
+  background-image: url('../images/site-credit.png?1376991666');
   width: 62px;
   height: 20px;
 }
 
 /* line 25, ../sass/framework/partials/common/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1376991516');
+  background-image: url('../images/site-credit--dark.svg?1376991666');
 }
 /* line 28, ../sass/framework/partials/common/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1376991516');
+  background-image: url('../images/site-credit--dark.png?1376991666');
 }
 
 /* ==========================================================================
@@ -3185,7 +3186,6 @@ html[xmlns] .slides {
   width: auto;
   clear: both;
   overflow: visible;
-  padding-left: 0;
 }
 
 /* #Social Icons */
@@ -3344,7 +3344,7 @@ html[xmlns] .slides {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  background: url('../images/social-actions-sprite.png?1376991516') no-repeat 0 0;
+  background: url('../images/social-actions-sprite.png?1376991666') no-repeat 0 0;
   width: 60px;
   height: 20px;
   text-indent: 0 !important;
@@ -3405,7 +3405,12 @@ html[xmlns] .slides {
 }
 /* line 39, ../sass/framework/partials/common/_gallery.scss */
 .gallery-item a {
-  display: block;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
 }
 /* line 44, ../sass/framework/partials/common/_gallery.scss */
 .gallery-item img {
