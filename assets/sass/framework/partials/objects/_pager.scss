@@ -23,6 +23,7 @@
 .pager li,
 .pager__item {
 	display: inline;
+	float: left; // required for IE7 alignment
 }
 
 .pager__link,
@@ -34,7 +35,8 @@
 	border: 1px solid #ccc;	
 }
 
-.pager__item--next {
+.pager__item--next,
+li.pager__item--next {
 	float: right;
 }
 

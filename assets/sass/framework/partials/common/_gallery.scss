@@ -37,7 +37,7 @@
 	padding-top: 0;
 
 	a {
-		display: block;
+		@include inline-block;
 		@extend .img-polaroid;
 	}
 

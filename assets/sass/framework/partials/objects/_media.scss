@@ -55,3 +55,16 @@
 }
 
 
+
+.m-block--ib {
+	letter-spacing: rsize(-4px);
+
+	.m-img,
+	.m-content {
+		float: none;
+		letter-spacing: normal;
+		@include inline-block;
+	}
+}
+
+
