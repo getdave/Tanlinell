@@ -29,38 +29,7 @@
 
 
 
-// ==========================================================================
-// MEDIA QUERY BREAKPOINTS
-// ==========================================================================
-
-// Note: these are placeholders! 
-// Alter these to suit the breakpoints as dictated by your design.
-// DO NOT rely on device widths to define your breakpoints! It's a bad idea.
-// 
-// Usage:
-// 
-// @mixin respond-to(tiny/small/medium/large/xlarge) {
-// 
-// }
-
-$break-tiny:            480px;
-$break-small:           600px;
-$break-medium:          768px;
-$break-large:           992px;
-$break-xlarge:          1382px;
-
-// Select a break point (from above) to use as the point at which 
-// grid system switches from full to "linearised" layout.
-// Don't really like this but can't think of a better way whilst
-// maintaining the required flexability
-$mobileBreak:			medium;
 
 
 
 
-// ==========================================================================
-// ICONS
-// ==========================================================================
-
-// Social Icons
-$icons-social: 			true;

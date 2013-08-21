@@ -1,3 +1,4 @@
+@if $use-complex-link == true {
 /* #COMPLEX LINK */
 
 /* Add hover behaviour to only selected items within links. Useful if you have are using icon fonts. */
@@ -17,3 +18,5 @@
       text-decoration: underline;
     }
 }
+
+}//endif

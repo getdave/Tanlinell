@@ -1,3 +1,4 @@
+@if $use-alerts == true {
 /* #ALERTS */
 
 /* Standard alert styles with variations 
@@ -96,3 +97,5 @@
 .alert-block p + p {
     margin-top: rsize(5px);
 }
+
+}//endif

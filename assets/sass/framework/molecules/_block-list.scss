@@ -1,3 +1,4 @@
+@if $use-hero-unit == true {
 /* #Block Lists */
 /*
 Vertically stacked blocky lists of content. Ideal for sub navigation or similar.
@@ -33,3 +34,5 @@ Borrowed from inuit.css
     display:block;
     padding: $baseLineHeight/2;
 }
+
+}//endif

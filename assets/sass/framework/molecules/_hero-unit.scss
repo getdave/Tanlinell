@@ -1,3 +1,5 @@
+@if $use-hero-unit == true {
+
 /* #Hero Unit */
 /* 
 Creates an image-based feature "hero" areas with absolutely positioned content blocks
@@ -95,3 +97,5 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 	top: auto;
 	bottom: 10%;
 }
+
+}//endif

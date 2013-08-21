@@ -1,3 +1,4 @@
+@if $use-breadcrumbs == true {
 /* #Breadcrumbs */
 
 /* Standard Breadcrumb navigation for assisting users with establishing their position within the website hierarchy
@@ -55,6 +56,8 @@
 	padding-left: 1em;
 }
 
+
+}//endif
 
 
 

@@ -1,8 +1,4 @@
-/* #Social Icons */
-
-
-// Only include if specified in config file
-@if ($icons-social == true) {	
+@if $use-icons-social == true {
 
 	// ==========================================================================
 	// FONTFACE
@@ -94,5 +90,5 @@
 	}
 
 
-} // end conditional
+}//endif
 

@@ -1,3 +1,4 @@
+@if $use-buttons == true {
 /* #Buttons */
 
 /* Adding the class `.btn` to an anchor `<button>` or `<input>` provides extra visual weight and identifies the primary action in a set of buttons.
@@ -121,7 +122,7 @@ input.btn {
 	@include border-radius(0 4px 4px 0);
 }
 
-
+}//endif
 
 
 
