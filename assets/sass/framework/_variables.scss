@@ -211,6 +211,7 @@ $bGridPullClasses:				false !default;
 $cols_as_string: 				one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty !default;
 
 
+
 // ==========================================================================
 // STACKING
 // bird's eye view of components dependent on the z-axis
@@ -227,7 +228,7 @@ $zindex-tier-6:           		6000 !default;
 
 // ==========================================================================
 // MOLECULES & COMPOUNDS
-// Declare which molescules to include
+// Declare which molescules to include. Overide these as required.
 // ==========================================================================
 
 // Molecules
@@ -262,6 +263,7 @@ $use-title-block:				false !default;
 // Compounds
 // ==========================================================================
 
+// Default "on"
 $use-page-layouts: 				true !default;
 $use-flexslider: 				true !default;
 $use-gallery: 					true !default;
