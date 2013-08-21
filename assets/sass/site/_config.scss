@@ -1,9 +1,13 @@
+// ==========================================================================
 // PROJECT CONFIGURATION
-
-// This file allows you to set variables which will be reused
-// throughout your project to save you time and energy. 
-// The variables defined here are used throughout the framework.
-// Removing them may cause errors during compelation.
+//
+// Use this file to set variables used throughout your stylesheets
+// Tanelinell prefers variables in this file to those in it's own defaults.
+// Therefore you can easily overide any framework defaults simply by redeclaring
+// the variable below. This allows you to completely modify how the framework works
+// without ever having to modify the framework
+//
+// ==========================================================================
 
 
 
@@ -11,7 +15,7 @@
 // BRANDING
 // ==========================================================================
 
-// COLORS
+// BRAND COLOURS
 // ==========================================================================
 
 // Primary
@@ -23,8 +27,20 @@
 // Tertiary
 //$tColor:						YOURHEXCODE;
 
-// Links
-//$linkColor:             		#08c;
+
+// ==========================================================================
+// MOLECULES & COMPOUNDS
+// Some of the frameworks components are turned off by default. Activate them
+// here by setting the require variables to "true"/"false".
+// ==========================================================================
+
+// example....
+// $use-nav: 						false;
+
+
+
+
+
 
 
 
