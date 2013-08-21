@@ -1,5 +1,5 @@
 /* #Block Lists */
-/* 
+/*
 Vertically stacked blocky lists of content. Ideal for sub navigation or similar.
 Borrowed from inuit.css
 */
@@ -23,13 +23,13 @@ Borrowed from inuit.css
     li {
         clear: both;
     }
-    
+
     a {
         @extend .block-list-link;
-    }    
+    }
 }
 
 .block-list-link {
     display:block;
-    padding: $halfSpacingUnit +px;
+    padding: $baseLineHeight/2;
 }

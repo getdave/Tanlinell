@@ -9,7 +9,7 @@
 	@include inline-block;
 	border: 0;
 	padding: 0;
-	margin: $spacingUnit +px 0;
+	margin: $baseLineHeight 0;
 	vertical-align: bottom;
 	a {
 		text-indent: -999em; 
