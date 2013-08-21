@@ -1686,55 +1686,143 @@ optgroup::-moz-focus-inner {
    MOLECULES
    Groupings of base atomic objects to create reusable elements
    ========================================================================== */
-/* #Split */
+/* #Media Block */
+/* The media object is an image to the left, with descriptive content to the right. The content area on the right can contain any other objects. */
+/* ##Base 
 /* 
-Simple split item for creating two elements floated away from one another.
+	<div class="m-block">
+		<img class="m-img" src="http://www.placehold.it/138x151" />
 
-Borrowed from inuit.css
-
-https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_split.scss
+		<div class="m-content">
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</div>
+	</div>
 */
-/* ##Simple Split 
-
-    <dl class="split">       
-        <dt class="split-title">Burger and fries</dt>
-        <dd>&pound;5.99</dd>       
-        <dt class="split-title">Fillet steak</dt>
-        <dd>&pound;19.99</dd>       
-        <dt class="split-title">Ice cream</dt>
-        <dd>&pound;2.99</dd>       
-    </dl>   
-*/
-/* ##Split Results List
-
-    <ol class="split results">
-        <li class="first"><b class="split-title">1st place</b> Bob</li>       
-        <li class="second"><b class="split-title">2nd place</b> Lilly</li>       
-        <li class="third"><b class="split-title">3rd place</b> Ted</li>       
-    </ol>​ 
-*/
-/* line 34, ../sass/framework/molecules/_split.scss */
-.split {
-  text-align: right;
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-/* line 40, ../sass/framework/molecules/_split.scss */
-.split .split__title {
-  text-align: left;
-  float: left;
-  clear: left;
-  padding-right: 1.666em;
-}
-/* line 46, ../sass/framework/molecules/_split.scss */
-.split .split__content {
+/* line 19, ../sass/framework/molecules/_media-block.scss */
+.m-block,
+.m-block .m-content {
   overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
 }
 
-/* line 50, ../sass/framework/molecules/_split.scss */
-.split--alt {
-  text-align: left;
+/* line 30, ../sass/framework/molecules/_media-block.scss */
+.m-block .m-img {
+  float: left;
+  margin-right: 20px;
+}
+/* line 34, ../sass/framework/molecules/_media-block.scss */
+.m-block .m-img img {
+  display: block;
+}
+
+/* ##Reversed */
+/* Image on right with content on the left */
+/* 
+	<div class="m-block">
+		<img class="m-img-alt" src="http://www.placehold.it/138x151" />
+
+		<div class="m-content">
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</div>
+	</div>
+*/
+/* line 53, ../sass/framework/molecules/_media-block.scss */
+.m-block .m-img-alt {
+  float: right;
+  margin-left: 20px;
+}
+
+/* line 60, ../sass/framework/molecules/_media-block.scss */
+.m-block--ib {
+  letter-spacing: -0.25em;
+}
+/* line 64, ../sass/framework/molecules/_media-block.scss */
+.m-block--ib .m-img,
+.m-block--ib .m-content {
+  float: none;
+  letter-spacing: normal;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* #Island and Islet */
+/* Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object. `@extend` me in your site styles */
+/* ##Island */
+/*
+    <div class="island">
+        I am boxed off.
+    </div>
+*/
+/* line 15, ../sass/framework/molecules/_island.scss */
+.island, .headed-island,
+.islet {
+  display: block;
+  margin-bottom: 1.666em;
+}
+
+/* line 21, ../sass/framework/molecules/_island.scss */
+.island, .headed-island {
+  padding: 1.666em;
+}
+
+/* line 26, ../sass/framework/molecules/_island.scss */
+.island > :last-child, .headed-island > :last-child,
+.islet > :last-child {
+  margin-bottom: 0;
+}
+
+/* ##Island */
+/* Just like `.island`, only less padding/smaller. */
+/*
+    <div class="islet">
+        I am boxed off too only with less padding
+    </div>
+*/
+/* line 39, ../sass/framework/molecules/_island.scss */
+.islet {
+  padding: 0.833em;
+}
+
+/* ##Headed Island */
+/* Just like `.island`, only with a definite boxed heading */
+/*
+    <div class="headed-island">
+        <h3 class="island-heading">I am the Island Heading</h3>
+        <div class="island-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
+        </div>
+    </div>
+*/
+/* line 60, ../sass/framework/molecules/_island.scss */
+.headed-island {
+  padding: 0;
+}
+/* line 64, ../sass/framework/molecules/_island.scss */
+.headed-island .island-heading {
+  padding: 0.833em 1.666em;
+  margin: 0;
+  border-top: 0;
+  border-bottom: 1px solid #ccc;
+}
+/* line 71, ../sass/framework/molecules/_island.scss */
+.headed-island .island-content {
+  padding: 0.833em 1.666em;
+}
+/* line 74, ../sass/framework/molecules/_island.scss */
+.headed-island .island-content > :last-child {
+  margin-bottom: 0;
 }
 
 /* line 18, ../sass/framework/molecules/_menu.scss */
@@ -1794,6 +1882,58 @@ https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_
   background-color: #cccccc;
 }
 
+/* #Item List */
+/* Create standard lists of "post"-like content. 
+*/
+/* ##Standard Example - Grid "Two Up" */
+/*
+    <ul class="item-list">
+        <li>Item in the list</li>
+        <li>Item in the list</li>
+        <li>Item in the list</li>
+        <li>Item in the list</li>
+        <li>Item in the list</li>
+    </ul>
+*/
+/* line 19, ../sass/framework/molecules/_item-list.scss */
+.item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  zoom: 1;
+}
+/* line 86, ../sass/framework/imports/_mixins.scss */
+.item-list:before {
+  content: "";
+  display: table;
+}
+/* line 91, ../sass/framework/imports/_mixins.scss */
+.item-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 24, ../sass/framework/molecules/_item-list.scss */
+.item-list > li,
+.item-list .list-item {
+  margin-bottom: 1.875em;
+  padding-bottom: 1.875em;
+  zoom: 1;
+}
+/* line 86, ../sass/framework/imports/_mixins.scss */
+.item-list > li:before,
+.item-list .list-item:before {
+  content: "";
+  display: table;
+}
+/* line 91, ../sass/framework/imports/_mixins.scss */
+.item-list > li:after,
+.item-list .list-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* ============================================================ */
 /* ============================================================ */
 /* #Nav */
@@ -1807,7 +1947,7 @@ https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_
         <li><a href="#">Contact</a></li>
     </ul>
  */
-/* line 14, ../sass/framework/molecules/_nav.scss */
+/* line 15, ../sass/framework/molecules/_nav.scss */
 .nav-primary {
   list-style: none;
   margin: 0;
@@ -1824,243 +1964,615 @@ https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_
         <li><a href="#">Contact</a></li>
     </ul>
 */
-/* #Pagination */
-/* Standard controls for navigation between "paged" content. */
-/* ##Base 
-	<div class="pagination">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-		  		<a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
-		</ul>
-	</div>
+/* #Buttons */
+/* Adding the class `.btn` to an anchor `<button>` or `<input>` provides extra visual weight and identifies the primary action in a set of buttons.
+
+    <button class="btn primary">Primary</button>
 */
-/* line 20, ../sass/framework/molecules/_pagination.scss */
-.pagination {
-  margin-bottom: 1.5em;
-}
-
-/* line 29, ../sass/framework/molecules/_pagination.scss */
-.pagination ul,
-.pagination ol,
-.pagination .pagination__list, .pagination .pagination-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  display: -moz-inline-stack;
+/* line 10, ../sass/framework/molecules/_buttons.scss */
+.btn {
+  color: #FFF;
   display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-
-/* line 39, ../sass/framework/molecules/_pagination.scss */
-.pagination__item,
-.pagination li {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  margin-right: 0.3125em;
-  margin-bottom: 0.625em;
-}
-
-/* line 47, ../sass/framework/molecules/_pagination.scss */
-.pagination__link,
-.pagination a,
-.pagination span {
-  display: block;
-  padding: 0.5em 0.75em;
-  text-decoration: none;
-  border: 1px solid #ccc;
-  line-height: 1;
-}
-
-/* line 58, ../sass/framework/molecules/_pagination.scss */
-.pagination__link:hover, .pagination__link:focus,
-.pagination a:hover,
-.pagination a:focus {
-  background-color: #f9f9f9;
-}
-
-/* line 69, ../sass/framework/molecules/_pagination.scss */
-.pagination__item--disabled a,
-.pagination .disabled a {
-  color: #ccc;
-}
-
-/* line 79, ../sass/framework/molecules/_pagination.scss */
-.pagination__item--current a,
-.pagination .current a {
-  background-color: #f1f1f1;
-  border-color: #a8a8a8;
-  color: #666;
-}
-
-/* line 91, ../sass/framework/molecules/_pagination.scss */
-.pagination .range a,
-.pagination .range a:hover,
-.pagination .range a:focus {
-  background-color: transparent;
-  border-color: #ccc;
-  color: #666;
-}
-
-/* line 104, ../sass/framework/molecules/_pagination.scss */
-.pagination__prev a,
-.pagination .prev a,
-.pagination__next a,
-.pagination .next a {
-  border: 0;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-/* ## Centered */
-/* 
-	<div class="pagination pagination--centered">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-			  <a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
-		</ul>
-	</div>
-*/
-/* line 129, ../sass/framework/molecules/_pagination.scss */
-.pagination--centered {
   text-align: center;
+  padding: 0.625em 15px;
+  text-decoration: none;
+  font-size: 100%;
+  border: 0;
+  background-color: #ccc;
 }
 
-/* ##Right */
+/* line 21, ../sass/framework/molecules/_buttons.scss */
+input.btn {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 2.5em;
+}
+
+/* ## Button Sizes */
+/* Various sizes for buttons */
 /* 
-	<div class="pagination pagination--right">
-		<ul>
-			<li><a href="#">Prev</a></li>
-			<li class="active">
-			  <a href="#">1</a>
-			</li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">Next</a></li>
-		</ul>
+	<a href="#" class="btn btn-huge">Button Huge</a>
+*/
+/* line 32, ../sass/framework/molecules/_buttons.scss */
+.btn-huge {
+  padding-right: 40px;
+  padding-left: 40px;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* 
+	<a href="#" class="btn btn-large">Button Large</a>
+*/
+/* line 42, ../sass/framework/molecules/_buttons.scss */
+.btn-large {
+  font-size: 123.0769230769231%;
+  line-height: 1.75;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* 
+	<a href="#" class="btn btn-small">Button Small</a>
+*/
+/* line 52, ../sass/framework/molecules/_buttons.scss */
+.btn-small {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 0.3125em;
+  padding-bottom: 0.3125em;
+  font-size: 84.61538461538462%;
+}
+
+/* ## Button States */
+/* 
+	<a href="#" class="btn btn-disabled">Button Disabled</a>
+*/
+/* line 66, ../sass/framework/molecules/_buttons.scss */
+.btn[disabled],
+.btn-disabled {
+  background-image: none !important;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+  opacity: 0.65;
+  cursor: default !important;
+}
+/* line 71, ../sass/framework/molecules/_buttons.scss */
+.btn[disabled]:active,
+.btn-disabled:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* ## Button Full */
+/* 
+	<a href="#" class="btn btn-full">Full Width Button</a>
+*/
+/* line 82, ../sass/framework/molecules/_buttons.scss */
+.btn-full {
+  display: block;
+}
+
+/* ## Button Groups */
+/* 
+	<div class="btn-group">
+	  <button class="btn">1</button>
+	  <button class="btn">2</button>
+	  <button class="btn">3</button>
 	</div>
 */
-/* line 151, ../sass/framework/molecules/_pagination.scss */
-.pagination--right {
-  text-align: right;
+/* line 97, ../sass/framework/molecules/_buttons.scss */
+.btn-group {
+  display: inline-block;
+  *zoom: 1;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 1px 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
 }
-
-/* #PAGER */
-/* Standard prev/next controls for navigation between "paged" content. /*
-
-/* ##Base 
-	<ul class="pager">
-		<li class="pager__item pager__item--prev">
-			<a href="#" class="pager__link">&larr; Older</a>
-		</li>
-		<li class="pager__item pager__item--next">
-			<a href="#" class="pager__link">Newer &rarr;</a>
-		</li>
-	</ul>
-*/
-/* line 16, ../sass/framework/molecules/_pager.scss */
-.pager {
-  margin: 0 0 1.666em 0;
-  padding: 0;
-  list-style: none;
-  zoom: 1;
-}
-/* line 86, ../sass/framework/imports/_mixins.scss */
-.pager:before {
-  content: "";
-  display: table;
-}
-/* line 91, ../sass/framework/imports/_mixins.scss */
-.pager:after {
+/* line 38, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.btn-group:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 24, ../sass/framework/molecules/_pager.scss */
-.pager li,
-.pager__item {
-  display: inline;
+/* line 104, ../sass/framework/molecules/_buttons.scss */
+.btn-group .btn {
   float: left;
+  margin-left: -1px;
+  position: relative;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+/* line 111, ../sass/framework/molecules/_buttons.scss */
+.btn-group .btn:active {
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-/* line 30, ../sass/framework/molecules/_pager.scss */
-.pager__link,
-.pager a {
+/* line 116, ../sass/framework/molecules/_buttons.scss */
+.btn-group .btn:first-child {
+  margin-left: 0;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -ms-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+/* line 121, ../sass/framework/molecules/_buttons.scss */
+.btn-group .btn:last-child {
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  -ms-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* #DROPDOWNS */
+/* Create dropdown menus with caret arrow
+
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+		<li><a tabindex="-1" href="#">Action</a></li>
+		<li><a tabindex="-1" href="#">Another action</a></li>
+		<li><a tabindex="-1" href="#">Something else here</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="#">Separated link</a></li>
+	</ul>
+*/
+/* line 15, ../sass/framework/molecules/_dropdowns.scss */
+.dropdown-menu, .nav-primary .sub-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  text-align: left;
+  direction: ltr;
+  background-color: #eeeeee;
+}
+
+/* line 29, ../sass/framework/molecules/_dropdowns.scss */
+.dropdown-menu__item, .nav-primary .sub-menu li {
+  position: relative;
+  vertical-align: bottom;
+  /* This fixes the IE5 Win gap (no harm done to modern browsers) */
+  white-space: nowrap;
+  width: 100%;
+  /* inherit the width of the parent <ul> */
+  clear: both;
+  display: list-item;
+}
+
+/* line 38, ../sass/framework/molecules/_dropdowns.scss */
+.dropdown-menu__link, .nav-primary .sub-menu a {
+  display: block;
+  white-space: nowrap;
+  /* forces drop down to stretch to accommodate length of text (and not wrap) */
+  padding: 0.375em 1.25em;
+  text-align: left;
+}
+
+/* line 45, ../sass/framework/molecules/_dropdowns.scss */
+.dropdown-menu--is-open {
+  display: block;
+}
+
+/* #ALERTS */
+/* Standard alert styles with variations 
+
+    <div class="alert">
+        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+    </div>
+*/
+/* line 11, ../sass/framework/molecules/_alerts.scss */
+.alert {
+  padding: 0.5em 35px 0.5em 14px;
+  margin-bottom: 1.666em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  color: #c09853;
+}
+
+/* line 21, ../sass/framework/molecules/_alerts.scss */
+.alert-heading {
+  color: inherit;
+}
+
+/* line 25, ../sass/framework/molecules/_alerts.scss */
+.alert :last-child {
+  margin-bottom: 0;
+}
+
+/* line 30, ../sass/framework/molecules/_alerts.scss */
+.alert .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  line-height: 1.666em;
+}
+
+/* ##Alert Success */
+/* 
+    <div class="alert alert-success">
+        <strong>Success</strong> Looking good!
+    </div>
+*/
+/* line 45, ../sass/framework/molecules/_alerts.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+}
+
+/* ##Alert Danger/Error */
+/* 
+    <div class="alert alert-danger">
+        <strong>Danger!</strong> Best check yo self, you're not looking too good.
+    </div>
+*/
+/* line 59, ../sass/framework/molecules/_alerts.scss */
+.alert-danger,
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+}
+
+/* ##Alert Info */
+/* 
+    <div class="alert alert-info">
+        <strong>Notice</strong> Everything isn't what it seems...
+    </div>
+*/
+/* line 72, ../sass/framework/molecules/_alerts.scss */
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #3a87ad;
+}
+
+/* ##Alert Blocks */
+/* 
+    <div class="alert alert-block">
+        <h4>Warning!</h4>
+        Best check yo self, you're not...
+    </div>
+*/
+/* line 89, ../sass/framework/molecules/_alerts.scss */
+.alert-block {
+  padding-top: 0.875em;
+  padding-bottom: 0.875em;
+}
+
+/* line 94, ../sass/framework/molecules/_alerts.scss */
+.alert-block > p,
+.alert-block > ul {
+  margin-bottom: 0;
+}
+
+/* line 97, ../sass/framework/molecules/_alerts.scss */
+.alert-block p + p {
+  margin-top: 0.3125em;
+}
+
+/* #Breadcrumbs */
+/* Standard Breadcrumb navigation for assisting users with establishing their position within the website hierarchy
+
+	<ul class="breadcrumbs">
+	    <li>
+	        <a href="#">Home</a>
+	    </li>
+	    <li>
+	        <a href="#">Crumb</a>
+	    </li>
+	    <li>
+	        <a href="#">Crumb</a>
+	    </li>
+	    <li class="current">
+	        <a href="#">Current Crumb</a>
+	    </li>
+	</ul>
+*/
+/* line 22, ../sass/framework/molecules/_breadcrumbs.scss */
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+/* line 28, ../sass/framework/molecules/_breadcrumbs.scss */
+.breadcrumbs li {
+  float: left;
+  margin-bottom: 0;
+}
+/* line 34, ../sass/framework/molecules/_breadcrumbs.scss */
+.breadcrumbs a,
+.breadcrumbs .trail-end {
+  position: relative;
+  padding: 0.7em 1em;
+  text-decoration: none;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  line-height: 1;
-  padding: 0.5em 0.75em;
-  text-decoration: none;
-  border: 1px solid #ccc;
+  vertical-align: middle;
+}
+/* line 43, ../sass/framework/molecules/_breadcrumbs.scss */
+.breadcrumbs .current a {
+  color: #999;
+}
+/* line 48, ../sass/framework/molecules/_breadcrumbs.scss */
+.breadcrumbs .current a:before, .breadcrumbs .current a:after {
+  display: none;
 }
 
-/* line 39, ../sass/framework/molecules/_pager.scss */
-.pager__item--next,
-li.pager__item--next {
-  float: right;
+/* line 55, ../sass/framework/molecules/_breadcrumbs.scss */
+.breadcrumbs li:first-child a,
+.breadcrumbs .first a {
+  padding-left: 1em;
 }
 
-/* #Title Block */
-/* Addresses common markup/presentation scenario of title with meta information
-*/
-/* ##Example */
+/* #Images */
+/* Common styling patterns for images to be applied to `<img` elements. */
+/* Please note that `.img-rounded` and `.img-circle` do not work in IE7-8. */
+/* ##Rounded */
 /*
-    <header class="title-block">
-		<h1 class="title-block__heading">Article Heading</h1>
-		<small class="title-block__meta">March 19th, 2013 by David Smith</small>
-    </header>
+    <img src="http://www.placehold.it/200x200" class="img-rounded" />
 */
-/* line 15, ../sass/framework/molecules/_title-block.scss */
-.title-block__heading {
-  margin-bottom: 0;
+/* line 17, ../sass/framework/molecules/_images.scss */
+.img-rounded {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }
 
-/* line 19, ../sass/framework/molecules/_title-block.scss */
-.title-block__meta {
+/* ##Poloroid */
+/*
+    <img src="http://www.placehold.it/200x200" class="img-polaroid" />
+*/
+/* line 27, ../sass/framework/molecules/_images.scss */
+.img-polaroid, .gallery-item a {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ##Circle */
+/*
+    <img src="http://www.placehold.it/200x200" class="img-circle" />
+*/
+/* line 41, ../sass/framework/molecules/_images.scss */
+.img-circle {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  -ms-border-radius: 500px;
+  -o-border-radius: 500px;
+  border-radius: 500px;
+}
+
+/* ##Image Thumb */
+/*
+    <img src="http://www.placehold.it/200x200" class="img-thumb" />
+*/
+/* line 52, ../sass/framework/molecules/_images.scss */
+.img-thumb {
   margin-bottom: 0.833em;
-  color: #999999;
+}
+
+/* ##Ratios */
+/*
+    <div class="img-ratio img-ratio--4-3">
+        <img src="http://www.placehold.it/200x200" />
+    </div>
+*/
+/* line 63, ../sass/framework/molecules/_images.scss */
+.img-ratio {
+  height: 0;
+  overflow: hidden;
+}
+
+/* line 68, ../sass/framework/molecules/_images.scss */
+.img-ratio--4-3 {
+  padding-bottom: 75%;
+}
+
+/* line 72, ../sass/framework/molecules/_images.scss */
+.img-ratio--16-8 {
+  padding-bottom: 56.25%;
+}
+
+/* #Inline List */
+/* Creates list for when you just need a horizontal list of links /*
+
+/* ##Base 
+	<ul class="inline-list">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+/* line 16, ../sass/framework/molecules/_inline-list.scss */
+.inline-list {
+  margin: 0 0 1.666em -1.666em;
+  zoom: 1;
+}
+/* line 86, ../sass/framework/imports/_mixins.scss */
+.inline-list:before {
+  content: "";
+  display: table;
+}
+/* line 91, ../sass/framework/imports/_mixins.scss */
+.inline-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 22, ../sass/framework/molecules/_inline-list.scss */
+.inline-list__item,
+.inline-list > li {
+  float: left;
+  list-style: none;
+  margin-left: 1.666em;
+  display: block;
+}
+
+/* ##Divided 
+	<ul class="inline-list inline-list--divided">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+/* line 39, ../sass/framework/molecules/_inline-list.scss */
+.inline-list--divided {
+  margin-left: -0.833em;
+}
+/* line 43, ../sass/framework/molecules/_inline-list.scss */
+.inline-list--divided .inline-list__item,
+.inline-list--divided > li {
+  margin-left: 0.833em;
+}
+/* line 45, ../sass/framework/molecules/_inline-list.scss */
+.inline-list--divided .inline-list__item:after,
+.inline-list--divided > li:after {
+  content: "|";
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-left: 0.833em;
+}
+
+/* ##Centered 
+	<ul class="inline-list inline-list--centered">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+/* line 63, ../sass/framework/molecules/_inline-list.scss */
+.inline-list--centered {
+  text-align: center;
+  letter-spacing: -4px;
+  margin-left: 0;
+}
+/* line 69, ../sass/framework/molecules/_inline-list.scss */
+.inline-list--centered > li,
+.inline-list--centered .inline-list__item {
+  float: none;
+  letter-spacing: normal;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-left: 0.833em;
+  margin-right: 0.833em;
+}
+
+/* ##Inline Block 
+	<ul class="inline-list inline-list--ib">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+/* line 87, ../sass/framework/molecules/_inline-list.scss */
+.inline-list--ib {
+  letter-spacing: -0.25em;
+}
+/* line 91, ../sass/framework/molecules/_inline-list.scss */
+.inline-list--ib .inline-list__item,
+.inline-list--ib > li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: middle;
+  float: none;
+  letter-spacing: normal;
+}
+
+/* ##Centered 
+	<ul class="inline-list inline-list--spaced">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+/* line 108, ../sass/framework/molecules/_inline-list.scss */
+.inline-list--spaced {
+  margin-left: -3.332em;
+}
+/* line 112, ../sass/framework/molecules/_inline-list.scss */
+.inline-list--spaced .inline-list__item,
+.inline-list--spaced > li {
+  margin-left: 3.332em;
 }
 
 /* ==========================================================================
    COMPOUNDS
    Groupings of molecular objects to create common components
    ========================================================================== */
-/* line 5, ../sass/framework/compounds/_primary-nav.scss */
+/* line 7, ../sass/framework/compounds/_primary-nav.scss */
 .menu-primary {
   position: relative;
 }
 
-/* line 52, ../sass/framework/compounds/_primary-nav.scss */
+/* line 54, ../sass/framework/compounds/_primary-nav.scss */
 .nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
   display: block;
 }
 
-/* line 62, ../sass/framework/compounds/_primary-nav.scss */
+/* line 64, ../sass/framework/compounds/_primary-nav.scss */
 .nav-menu-toggle {
   position: absolute;
   right: 1.875em;
@@ -2073,7 +2585,7 @@ li.pager__item--next {
 		<img src="http://www.placehold.it/200x100" alt="My Logo">
 	</a>    
 */
-/* line 8, ../sass/framework/compounds/_site-logo.scss */
+/* line 9, ../sass/framework/compounds/_site-logo.scss */
 .site-logo {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2086,7 +2598,7 @@ li.pager__item--next {
   margin: 1.666em 0;
   vertical-align: bottom;
 }
-/* line 14, ../sass/framework/compounds/_site-logo.scss */
+/* line 15, ../sass/framework/compounds/_site-logo.scss */
 .site-logo a {
   text-indent: -999em;
   text-align: left;
@@ -2099,7 +2611,7 @@ li.pager__item--next {
   width: 200px;
   height: 80px;
 }
-/* line 27, ../sass/framework/compounds/_site-logo.scss */
+/* line 28, ../sass/framework/compounds/_site-logo.scss */
 .site-logo a:hover, .site-logo a:focus {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
@@ -2108,7 +2620,7 @@ li.pager__item--next {
   -o-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
 }
-/* line 39, ../sass/framework/compounds/_site-logo.scss */
+/* line 40, ../sass/framework/compounds/_site-logo.scss */
 .lt-ie9 .site-logo img {
   max-width: none;
 }
@@ -2118,7 +2630,7 @@ li.pager__item--next {
 /*
 	<p>Developed by <a href="#" class="ir site-credit">Burfield Creative</a></p> 
 */
-/* line 9, ../sass/framework/compounds/_site-credit.scss */
+/* line 10, ../sass/framework/compounds/_site-credit.scss */
 .site-credit {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2133,18 +2645,18 @@ li.pager__item--next {
   width: 66px;
   height: 31px;
 }
-/* line 19, ../sass/framework/compounds/_site-credit.scss */
+/* line 20, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
   background-image: url('../images/site-credit.png?1377014241');
   width: 62px;
   height: 20px;
 }
 
-/* line 26, ../sass/framework/compounds/_site-credit.scss */
+/* line 27, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
   background-image: url('../images/site-credit--dark.svg?1377014241');
 }
-/* line 29, ../sass/framework/compounds/_site-credit.scss */
+/* line 30, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
   background-image: url('../images/site-credit--dark.png?1377014241');
 }
@@ -2154,7 +2666,7 @@ li.pager__item--next {
    ========================================================================== */
 /* BASE
    ========================================================================== */
-/* line 14, ../sass/framework/compounds/_columns.scss */
+/* line 16, ../sass/framework/compounds/_page-layouts.scss */
 .main,
 .sub {
   margin-bottom: 3.332em;
@@ -2162,7 +2674,7 @@ li.pager__item--next {
 
 /* 2 Column [Sub] Right (Default)
    ========================================================================== */
-/* line 25, ../sass/framework/compounds/_columns.scss */
+/* line 27, ../sass/framework/compounds/_page-layouts.scss */
 .layout-2c-r .main,
 .main {
   float: right;
@@ -2171,16 +2683,16 @@ li.pager__item--next {
 
 /* 2 Column [Sub] Left
    ========================================================================== */
-/* line 41, ../sass/framework/compounds/_columns.scss */
+/* line 43, ../sass/framework/compounds/_page-layouts.scss */
 .layout-2c-l .main {
   float: left;
 }
 
-/* line 50, ../sass/framework/compounds/_columns.scss */
+/* line 52, ../sass/framework/compounds/_page-layouts.scss */
 .layout-1c .column-container {
   margin-left: 0;
 }
-/* line 55, ../sass/framework/compounds/_columns.scss */
+/* line 57, ../sass/framework/compounds/_page-layouts.scss */
 .layout-1c .main,
 .layout-1c .sub {
   float: none;
@@ -2189,90 +2701,9 @@ li.pager__item--next {
   overflow: visible;
 }
 
-/* #Social Actions */
-/* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
-/*
-	<ul class="social-actions">
-		<li class="social-actions__item">
-			<a class="social-actions__link socialite socialite-instance twitter-share" href="http://twitter.com/share" data-count="none">
-			    Share on Twitter
-			</a>
-		</li>
-		
-		<li class="social-actions__item">
-			<a class="social-actions__link socialite socialite-instance facebook-like" href="http://www.facebook.com/sharer.php" data-send="false" data-show-faces="false" data-font="arial" data-count="false" data-layout="button_count">
-			    Like on Facebook
-			</a>
-		</li>
-		
-		<li class="social-actions__item">
-			<a class="social-actions__link socialite socialite-instance linkedin-share" href="http://www.linkedin.com/shareArticle?mini=true" data-counter="false">
-			    Share on LinkedIn
-			</a>
-		</li>
-	</ul>
-*/
-/* #Social Actions */
-/* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
-/*
-	<ul class="social-actions">
-		<li class="social-actions__item">
-			<a class="social-actions__link socialite socialite-instance twitter-share" href="http://twitter.com/share" data-count="none">
-			    Share on Twitter
-			</a>
-		</li>
-		
-		<li class="social-actions__item">
-			<a class="social-actions__link socialite socialite-instance facebook-like" href="http://www.facebook.com/sharer.php" data-send="false" data-show-faces="false" data-font="arial" data-count="false" data-layout="button_count">
-			    Like on Facebook
-			</a>
-		</li>
-		
-		<li class="social-actions__item">
-			<a class="social-actions__link socialite socialite-instance linkedin-share" href="http://www.linkedin.com/shareArticle?mini=true" data-counter="false">
-			    Share on LinkedIn
-			</a>
-		</li>
-	</ul>
-*/
-/* line 57, ../sass/framework/compounds/_social-actions.scss */
-.social-actions__link {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  background: url('../images/social-actions-sprite.png?1377014241') no-repeat 0 0;
-  width: 60px;
-  height: 20px;
-  text-indent: 0 !important;
-}
-
-/* line 71, ../sass/framework/compounds/_social-actions.scss */
-.social-actions .facebook-like {
-  background-position: 0 -28px;
-}
-/* line 75, ../sass/framework/compounds/_social-actions.scss */
-.social-actions .linkedin-share {
-  background-position: 0 -56px;
-}
-/* line 79, ../sass/framework/compounds/_social-actions.scss */
-.social-actions .googleplus-one {
-  background-position: 0 -86px;
-  width: 60px;
-}
-
-/* line 88, ../sass/framework/compounds/_social-actions.scss */
-.socialite-loaded,
-.socialite-loaded .social-actions__text {
-  background: 0 !important;
-  text-indent: 0 !important;
-}
-
 /* ============================================================ */
 /* ============================================================ */
-/* line 14, ../sass/framework/compounds/_gallery.scss */
+/* line 15, ../sass/framework/compounds/_gallery.scss */
 .gallery {
   margin: 0;
   padding: 0;
@@ -2290,18 +2721,18 @@ li.pager__item--next {
   clear: both;
 }
 
-/* line 23, ../sass/framework/compounds/_gallery.scss */
+/* line 24, ../sass/framework/compounds/_gallery.scss */
 .gallery-row {
   clear: both;
 }
 
-/* line 32, ../sass/framework/compounds/_gallery.scss */
+/* line 33, ../sass/framework/compounds/_gallery.scss */
 .gallery-item {
   margin-top: 0;
   margin-bottom: 1.666em;
   padding-top: 0;
 }
-/* line 37, ../sass/framework/compounds/_gallery.scss */
+/* line 38, ../sass/framework/compounds/_gallery.scss */
 .gallery-item a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2310,14 +2741,14 @@ li.pager__item--next {
   zoom: 1;
   *display: inline;
 }
-/* line 42, ../sass/framework/compounds/_gallery.scss */
+/* line 43, ../sass/framework/compounds/_gallery.scss */
 .gallery-item img {
   display: block;
   height: auto;
   margin: 0 auto;
 }
 
-/* line 53, ../sass/framework/compounds/_gallery.scss */
+/* line 54, ../sass/framework/compounds/_gallery.scss */
 .gallery-caption {
   margin: 0;
   padding: 0;
@@ -2326,6 +2757,94 @@ li.pager__item--next {
   text-align: left;
   line-height: 1.3;
   padding: 0.625em;
+}
+
+/* #Flexslider */
+/* Utilise the power of WooThemes' Flexslider plugin to power slideshows */
+/* ##Base */
+/*
+	<div class="flexslider">
+	    <ul class="slides">
+	        <li class="slide">
+	        	<p>Slide 1 content</p>
+	        </li>
+	        <li class="slide" style="display: none;">
+	        	<p>Slide 2 content</p>
+	        </li>
+	    </ul>
+	</div>
+ */
+/* Browser Resets */
+/* line 24, ../sass/framework/molecules/_flexslider.scss */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+/* line 27, ../sass/framework/molecules/_flexslider.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 31, ../sass/framework/molecules/_flexslider.scss */
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 32, ../sass/framework/molecules/_flexslider.scss */
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 33, ../sass/framework/molecules/_flexslider.scss */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+/* line 34, ../sass/framework/molecules/_flexslider.scss */
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 37, ../sass/framework/molecules/_flexslider.scss */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 38, ../sass/framework/molecules/_flexslider.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 39, ../sass/framework/molecules/_flexslider.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 44, ../sass/framework/molecules/_flexslider.scss */
+.js .slides > li:first-child {
+  display: block;
 }
 
 /* ==========================================================================
@@ -2374,19 +2893,23 @@ li.pager__item--next {
 	</div>
 */
 /* line 50, ../sass/framework/atoms/_helpers.scss */
-.clearfix, .nav-primary,
+.clearfix, .island, .headed-island,
+.islet, .nav-primary,
 .cf {
   zoom: 1;
 }
 /* line 54, ../sass/framework/atoms/_helpers.scss */
-.clearfix:before, .nav-primary:before, .clearfix:after, .nav-primary:after,
+.clearfix:before, .island:before, .headed-island:before,
+.islet:before, .nav-primary:before, .clearfix:after, .island:after, .headed-island:after,
+.islet:after, .nav-primary:after,
 .cf:before,
 .cf:after {
   content: "";
   display: table;
 }
 /* line 59, ../sass/framework/atoms/_helpers.scss */
-.clearfix:after, .nav-primary:after,
+.clearfix:after, .island:after, .headed-island:after,
+.islet:after, .nav-primary:after,
 .cf:after {
   clear: both;
 }
@@ -2489,7 +3012,7 @@ li.pager__item--next {
 	</span>
 */
 /* line 165, ../sass/framework/atoms/_helpers.scss */
-.ir, .site-credit, .social-actions__link,
+.ir, .site-credit,
 .img-replace {
   background-color: transparent;
   border: 0;
@@ -2499,7 +3022,7 @@ li.pager__item--next {
 }
 
 /* line 174, ../sass/framework/atoms/_helpers.scss */
-.ir:before, .site-credit:before, .social-actions__link:before,
+.ir:before, .site-credit:before,
 .img-replace:before {
   content: "";
   display: block;
@@ -2526,7 +3049,7 @@ li.pager__item--next {
 	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p>
 */
 /* line 206, ../sass/framework/atoms/_helpers.scss */
-.vh, .social-actions__text,
+.vh,
 .v-hidden,
 .screen-reader-text,
 .assistive-text {
@@ -2541,10 +3064,8 @@ li.pager__item--next {
 }
 
 /* line 220, ../sass/framework/atoms/_helpers.scss */
-.vh.focusable:active, .focusable.social-actions__text:active,
+.vh.focusable:active,
 .vh.focusable:focus
-.v-hidden.focusable:active,
-.focusable.social-actions__text:focus
 .v-hidden.focusable:active,
 .v-hidden.focusable:focus {
   clip: auto;

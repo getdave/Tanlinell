@@ -1,3 +1,4 @@
+@if $use-site-credit == true {
 /* #Site Credit */
 
 /* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
@@ -30,3 +31,5 @@
         background-image: image-url("site-credit--dark.png");
     }
 }
+
+}//endif

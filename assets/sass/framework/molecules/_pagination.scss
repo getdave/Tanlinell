@@ -1,3 +1,4 @@
+@if $use-pagination == true {
 /* #Pagination */
 
 /* Standard controls for navigation between "paged" content. */
@@ -152,8 +153,4 @@
 	text-align: right;
 }
 
-
-
-
-
-
+}//endif

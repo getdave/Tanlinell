@@ -16,7 +16,7 @@
 
 // Navigation <ul> itself
 %responsive-menu {
-	@extend %nav;
+	@extend %nav !optional;
 	position: relative;
 	background-color: $navbar-background;
 

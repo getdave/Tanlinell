@@ -1,3 +1,4 @@
+@if $use-split == true {
 /* #Split */
 
 /* 
@@ -50,3 +51,5 @@ https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_
 .split--alt {
     text-align: left;
 }
+
+}//endif

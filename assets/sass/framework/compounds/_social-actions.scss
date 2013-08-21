@@ -1,3 +1,4 @@
+@if $use-social-actions == true {
 /* #Social Actions */
 
 /* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
@@ -89,3 +90,5 @@
 	background: 0 !important;
 	text-indent: 0 !important;
 }
+
+}//endif

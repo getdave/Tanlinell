@@ -1,3 +1,4 @@
+@if $use-pager == true {
 /* #PAGER */
 
 /* Standard prev/next controls for navigation between "paged" content. /*
@@ -40,5 +41,4 @@ li.pager__item--next {
 	float: right;
 }
 
-
-
+}//endif

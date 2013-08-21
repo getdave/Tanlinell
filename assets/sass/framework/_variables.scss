@@ -232,30 +232,46 @@ $zindex-tier-6:           		6000 !default;
 
 // Molecules
 // ==========================================================================
+
+// Default "on"
+$use-media-block: 				true !default;
+$use-nav: 						true !default;
+$use-buttons: 					true !default;
+$use-images: 					true !default;
+$use-dropdowns: 				true !default;
+$use-inline-list: 				true !default;
+$use-item-list: 				true !default;
+$use-island: 					true !default;
+$use-alerts: 					true !default;
+$use-breadcrumbs: 				true !default;
+
+// Default "off"
 $use-block-list: 				false !default;
-$use-alerts: 					false !default;
-$use-breadcrumbs: 				false !default;
-$use-buttons: 					false !default;
 $use-complex-link: 				false !default;
-$use-dropdowns: 				false !default;
 $use-feature-element: 			false !default;
 $use-flippable: 				false !default;
-
 $use-graybox: 					false !default;
 $use-hero-unit: 				false !default;
-$use-images: 					false !default;
-$use-inline-list: 				false !default;
-$use-island: 					false !default;
-$use-item-list: 				false !default;
 $use-labels-badges: 			false !default;
-$use-media-block: 				false !default;
+$use-pager: 					false !default;
+$use-pagination: 				false !default;
+$use-split: 					false !default;
+$use-title-block:				false !default;
 
 
 // Compounds
 // ==========================================================================
-$use-flexslider: 				false !default;
-$use-icons-social: 				false !default;
 
+$use-page-layouts: 				true !default;
+$use-flexslider: 				true !default;
+$use-gallery: 					true !default;
+$use-primary-nav: 				true !default;
+$use-site-logo: 				true !default;
+$use-site-credit: 				true !default;
+
+// Default "off"
+$use-social-icons: 				false !default;
+$use-social-actions: 			false !default;
 
 
 
