@@ -1,0 +1,49 @@
+@if $use-feature-element == true {
+/* ============================================================ */
+
+// FEATURE ELEMENT
+
+// Description:		Provides emphasis to selected element by creating 
+// 					two horiztonal lines on either side and vertically
+// 					aligning everything
+
+/* ============================================================ */
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+	
+.feature-element {
+	position: relative;
+	text-align: center;
+
+	@include respond-to($mobileBreak) {
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			z-index: -1;
+			height: 1px;
+			width: 100%;
+			vertical-align: middle;
+			background-color: #999;
+			border-bottom: 1px solid #fff;
+		}
+	}
+}
+
+.feature-element__wrap {
+	@include respond-to($mobileBreak) {
+		@include inline-block;
+		background: $body-background;
+		padding-left: $baseLineHeight/2;
+		padding-right: $baseLineHeight/2;
+		vertical-align: middle;
+		margin-bottom: 0;
+	}
+}
+
+}//endif

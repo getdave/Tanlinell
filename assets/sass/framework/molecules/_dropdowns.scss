@@ -1,0 +1,49 @@
+@if $use-dropdowns == true {
+/* #DROPDOWNS */
+
+/* Create dropdown menus with caret arrow
+
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+		<li><a tabindex="-1" href="#">Action</a></li>
+		<li><a tabindex="-1" href="#">Another action</a></li>
+		<li><a tabindex="-1" href="#">Something else here</a></li>
+		<li class="divider"></li>
+		<li><a tabindex="-1" href="#">Separated link</a></li>
+	</ul>
+*/
+
+.dropdown-menu {
+	@include list-reset;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: $zindex-tier-1;
+	display: none;
+	float: left;
+	min-width: 160px;
+	text-align: left;
+	direction:ltr;
+	background-color: $navbar-background;
+}
+
+.dropdown-menu__item {
+	position: relative; // positioning context for secondary level if required
+	vertical-align: bottom; /* This fixes the IE5 Win gap (no harm done to modern browsers) */
+	white-space: nowrap;
+	width: 100%;	/* inherit the width of the parent <ul> */
+	clear: both;
+	display: list-item;
+}
+
+.dropdown-menu__link {
+	display: block;
+	white-space: nowrap; /* forces drop down to stretch to accommodate length of text (and not wrap) */
+	padding: rsize(6px) rsize(20px);
+	text-align: left;
+}
+
+.dropdown-menu--is-open {
+	display: block;
+}
+
+}//endif

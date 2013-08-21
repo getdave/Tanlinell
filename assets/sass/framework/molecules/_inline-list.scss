@@ -1,0 +1,117 @@
+@if $use-inline-list == true {
+/* #Inline List */
+
+/* Creates list for when you just need a horizontal list of links /*
+
+/* ##Base 
+	<ul class="inline-list">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+
+.inline-list {
+	margin: 0 0 $baseLineHeight -#{$baseLineHeight};
+	@include clearfix;
+}
+
+.inline-list__item,
+.inline-list > li {
+	float: left;
+    list-style: none;
+    margin-left: $baseLineHeight;
+    display: block; 
+}
+
+/* ##Divided 
+	<ul class="inline-list inline-list--divided">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+
+.inline-list--divided {
+	margin-left: -#{$baseLineHeight/2};
+
+	.inline-list__item,
+	> li {
+		margin-left: $baseLineHeight/2;
+		&:after {
+			content: "|";
+			@include inline-block;
+			margin-left: $baseLineHeight/2;
+		}
+	}
+}
+
+/* ##Centered 
+	<ul class="inline-list inline-list--centered">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+
+.inline-list--centered {
+    text-align: center;
+    letter-spacing: -4px;
+    margin-left: 0;
+
+    > li,
+    .inline-list__item {
+        float: none;
+        letter-spacing: normal;
+        @include inline-block;
+        margin-left: $baseLineHeight/2;
+        margin-right: $baseLineHeight/2;
+    }
+}
+
+/* ##Inline Block 
+	<ul class="inline-list inline-list--ib">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+.inline-list--ib {
+    letter-spacing: rsize(-4px);
+
+    .inline-list__item,
+    > li {
+        @include inline-block;
+        vertical-align: middle;
+        float: none;
+        letter-spacing: normal;
+    }
+}
+
+/* ##Centered 
+	<ul class="inline-list inline-list--spaced">
+	  <li class="inline-list__item"><a href="#">Link 1</a></li>
+	  <li class="inline-list__item"><a href="#">Link 2</a></li>
+	  <li class="inline-list__item"><a href="#">Link 3</a></li>
+	  <li class="inline-list__item"><a href="#">Link 4</a></li>
+	  <li class="inline-list__item"><a href="#">Link 5</a></li>
+	</ul>
+*/
+.inline-list--spaced {
+    margin-left: -#{$baseLineHeight*2};
+
+    .inline-list__item,
+    > li {
+         margin-left: $baseLineHeight*2;
+    }
+}
+
+}//endif
