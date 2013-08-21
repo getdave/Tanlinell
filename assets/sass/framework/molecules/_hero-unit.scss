@@ -25,7 +25,7 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 
 .hero-unit {
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: $baseLineHeight;
 	background-color: #eeeeee;
 }
 
@@ -34,7 +34,7 @@ Width of the content should be defined using standard grid classes (eg: `.size2o
 	position: absolute;
 	top: 10%;
 	left: 0;
-	padding: $spacingUnit +px;
+	padding: $baseLineHeight;
 	margin: 0;
 	background-color: #999;
 	font-size: rsize(18px);

@@ -26,6 +26,12 @@ $debug-mode:					false !default;
 // BRAND
 // ==========================================================================
 
+// Logos
+// ==========================================================================
+
+$logo: 							"site-logo.png" !default;
+$site-credit:					"site-credit.png" !default;
+
 // Tones
 // ==========================================================================
 
@@ -55,51 +61,44 @@ $purple:                		#7a43b6;
 // ==========================================================================
 
 $body-background: 				#fff !default;
-$navbar-background: 			$grayLighter;
+$navbar-background: 			$grayLighter !default;
+
+
+// Links
+// ==========================================================================
+
+$linkColor:             		#08c !default;
+$linkColorHover:        		darken($linkColor, 15%) !default;
 
 
 // Alerts & Messages
 // ==========================================================================
-$warningText:            		 #c09853;
-$warningBackground:       		#fcf8e3;
-$warningBorder:           		darken(adjust-hue($warningBackground, -10), 3%);
 
-$errorText:               		#b94a48;
-$errorBackground:         		#f2dede;
-$errorBorder:             		darken(adjust-hue($errorBackground, -10), 3%);
+$warningText:            		#c09853 !default;
+$warningBackground:       		#fcf8e3 !default;
+$warningBorder:           		darken(adjust-hue($warningBackground, -10), 3%) !default;
 
-$successText:             		#468847;
-$successBackground:       		#dff0d8;
-$successBorder:           		darken(adjust-hue($successBackground, -10), 5%);
+$errorText:               		#b94a48 !default;
+$errorBackground:         		#f2dede !default;
+$errorBorder:             		darken(adjust-hue($errorBackground, -10), 3%) !default;
 
-$infoText:                		#3a87ad;
-$infoBackground:          		#d9edf7;
-$infoBorder:              		darken(adjust-hue($infoBackground, -10), 7%);
+$successText:             		#468847 !default;
+$successBackground:       		#dff0d8 !default;
+$successBorder:           		darken(adjust-hue($successBackground, -10), 5%) !default;
+
+$infoText:                		#3a87ad !default;
+$infoBackground:          		#d9edf7 !default;
+$infoBorder:              		darken(adjust-hue($infoBackground, -10), 7%) !default;
 
 
 // ==========================================================================
 // TYPOGRAPHY
 // ==========================================================================
 
-// Heading Levels
-// ==========================================================================
-
-$giga:							96px !default;
-$mega:							72px !default;
-$kilo:							48px !default;
-
-$headingLevel1:					36px !default;
-$headingLevel2:					30px !default;
-$headingLevel3:					24px !default;
-$headingLevel4:					20px !default;
-$headingLevel5:					16px !default;
-$headingLevel6:					14px !default;
-
-
 // Font Stacks
 // ==========================================================================
 
-// Serif 
+// Serif
 $georgia			: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif !default;
 $georgia-heading	: Georgia, Times, "Times New Roman", serif !default;
 $garamond			: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif !default;
@@ -116,7 +115,7 @@ $cambria			: Cambria, Georgia, serif !default;
 $book-antiqua		: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif !default;
 $times				: Times, "Times New Roman", Georgia, serif !default;
 
-// Sans-Serif 
+// Sans-Serif
 $arial				: Arial, "Helvetica Neue", Helvetica, sans-serif !default;
 $optima				: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif !default;
 $futura				: Futura, "Trebuchet MS", Arial, sans-serif !default;
@@ -141,25 +140,75 @@ $consolas			: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Luci
 $cursive			: "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive !default;
 
 
-
-// ==========================================================================
-// GRID
+// Typographic Constants
 // ==========================================================================
 
-// We loop thorugh this string to produce our written grid classes
-$cols_as_string: 				one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty !default;
+$baseFontSize:          		16px !default;
+$baseFontFamily:        		$arial !default; // or write your own custom font-stack
+$baseLineHeight:        		1.666em !default;
 
-// Column Configuration
-$cols: 							12 !default;	// number of columns required
-$gutter: 						3 !default;		// gutter between each column
+// Heading Levels
+// ==========================================================================
+
+$giga:							96px !default;
+$mega:							72px !default;
+$kilo:							48px !default;
+
+$headingLevel1:					36px !default;
+$headingLevel2:					30px !default;
+$headingLevel3:					24px !default;
+$headingLevel4:					20px !default;
+$headingLevel5:					16px !default;
+$headingLevel6:					14px !default;
+
 
 
 // ==========================================================================
 // RESPONSIVE
 // ==========================================================================
 
+
+// Is this a Fixed width website (ie: non-Responsive)?
+// If "true" then be sure to set your fixed width below.
+// Setting to "false" will cause all media queries to simply
+// return the rule withou the wrapping media query
+$isFixed:						false;
+
+// Width of primary ".container" elements
+$containerWidth:				if($isFixed, 960px, 90%);
+
+
+// Breakpoints
+// ==========================================================================
+
+$break-tiny:            		480px !default;
+$break-small:           		600px !default;
+$break-medium:          		768px !default;
+$break-large:           		992px !default;
+$break-xlarge:          		1382px !default;
+
+
+// Constant to define which breakpoint name (above) determines the point
+// at which the grid system switches from full to "linearised" layout.
+$mobileBreak:					"medium" !default;
+
+
+// Grid
+// ==========================================================================
+
 // Include a set of standard grid breakpoints?
 $use-standard-breakpoints: 		true !default;
+
+// Grid configuration
+$cols: 							12 !default;	// number of columns required
+$gutter: 						3 !default;		// gutter between each column in em's
+
+// Include "push-" and "pull-" classes for source reordering?
+$bGridPushClasses:				false !default;
+$bGridPullClasses:				false !default;
+
+// We loop thorugh this string to produce our written grid classes (TODO: remove this)
+$cols_as_string: 				one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty !default;
 
 
 // ==========================================================================
