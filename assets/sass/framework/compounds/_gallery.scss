@@ -11,8 +11,6 @@
 // BASE
 // ==========================================================================
 
-
-/* The Gallery container (div) */
 .gallery { 
 	margin: 0;
 	padding: 0;
@@ -37,8 +35,8 @@
 	padding-top: 0;
 
 	a {
+		@extend .img-polaroid !optional;
 		@include inline-block;
-		@extend .img-polaroid;
 	}
 
 	img {
@@ -66,7 +64,6 @@
 // ==========================================================================
 // COLUMNS
 // ==========================================================================
-
 
 .gallery-row {
 	.col-2 {

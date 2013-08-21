@@ -34,14 +34,14 @@
 // SUBMENUS
 // ==========================================================================
 .nav-primary .sub-menu {
-	@extend .dropdown-menu;
+	@extend .dropdown-menu !optional;
 
 	li {
-		@extend .dropdown-menu__item;
+		@extend .dropdown-menu__item !optional;
 	}
 
 	a {
-		@extend .dropdown-menu__link;
+		@extend .dropdown-menu__link !optional;
 	}
 }
 

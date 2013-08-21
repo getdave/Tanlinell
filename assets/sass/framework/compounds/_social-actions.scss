@@ -51,7 +51,7 @@
 */
 
 .social-actions {
-	@extend .inline-list;
+	@extend .inline-list !optional;
 }
 
 .social-actions__link {

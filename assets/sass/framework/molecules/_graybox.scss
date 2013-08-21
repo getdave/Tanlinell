@@ -1,3 +1,4 @@
+@if $use-graybox == true {
 /* #Gray Box */
 
 /* Simple background box styles. Can be applied safetly to any element. Useful for prototyping */
@@ -18,3 +19,5 @@
 		color: #000;
 	}
 }
+
+}//endif

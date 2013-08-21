@@ -1,3 +1,4 @@
+@if $use-item-list == true {
 /* #Item List */
 
 /* Create standard lists of "post"-like content. 
@@ -27,6 +28,4 @@
 	}
 }
 
-
-
-
+}//endif

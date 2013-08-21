@@ -1,3 +1,4 @@
+@if $use-labels-badges == true {
 /* #LABELS AND BADGES */
 
 /* Standard alert styles with variations 
@@ -89,4 +90,4 @@ a.badge:focus {
 	background-color: #2d6987;
 }
 
-
+}//endif

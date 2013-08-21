@@ -1,3 +1,4 @@
+@if $use-inline-list == true {
 /* #Inline List */
 
 /* Creates list for when you just need a horizontal list of links /*
@@ -112,7 +113,5 @@
          margin-left: $baseLineHeight*2;
     }
 }
-  
 
-
-
+}//endif

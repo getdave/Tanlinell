@@ -1,3 +1,4 @@
+@if $use-dropdowns == true {
 /* #DROPDOWNS */
 
 /* Create dropdown menus with caret arrow
@@ -10,8 +11,6 @@
 		<li><a tabindex="-1" href="#">Separated link</a></li>
 	</ul>
 */
-
-
 
 .dropdown-menu {
 	@include list-reset;
@@ -47,5 +46,4 @@
 	display: block;
 }
 
-
-
+}//endif

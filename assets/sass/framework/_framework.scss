@@ -46,8 +46,9 @@
 
 	@import "atoms/_typo.scss";
 	@import "atoms/_headings.scss";
-	@import "atoms/_forms.scss";
+	@import "atoms/_containers.scss";
 	@import "atoms/_grid.scss";
+	@import "atoms/_forms.scss";
 
 
 /* ==========================================================================
@@ -55,8 +56,7 @@
    Groupings of base atomic objects to create reusable elements
    ========================================================================== */
 
-	@import "molecules/_media.scss";
-	@import "molecules/_containers.scss";
+	@import "molecules/_media-block.scss";
 	@import "molecules/_island.scss";
 	@import "molecules/_split.scss";
 	@import "molecules/_hero-unit.scss";
@@ -74,7 +74,6 @@
 	@import "molecules/_breadcrumbs.scss";
 	@import "molecules/_complex-link.scss";
 	@import "molecules/_images.scss";
-	@import "molecules/_flexslider.scss";
 	@import "molecules/_feature-element.scss";
 	@import "molecules/_title-block.scss";
 	@import "molecules/_inline-list.scss";
@@ -94,6 +93,7 @@
 	@import "compounds/social-icons.scss";
 	@import "compounds/social-actions.scss";
 	@import "compounds/_gallery.scss";
+	@import "molecules/_flexslider.scss";
 
 
 /* ==========================================================================

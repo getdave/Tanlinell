@@ -711,413 +711,84 @@ h6, .h6 {
   font-size: 3em;
 }
 
-/* #Forms */
-/* line 5, ../sass/framework/atoms/_forms.scss */
-label {
-  font-weight: bold;
-  font-size: 100%;
-}
-
-/* line 10, ../sass/framework/atoms/_forms.scss */
-fieldset {
-  border: 1px solid #999999;
-  font-size: 12px;
-  line-height: 1.3em;
-  margin: 0 0 1.5em;
-  padding: 0 1.4em 1.4em 1.4em;
-}
-
-/* line 18, ../sass/framework/atoms/_forms.scss */
-legend {
-  background: #f9f9f9;
-  border: 1px solid #999999;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  font-weight: bold;
+/* #Containers */
+/* Standard structures for dividing pages into "sections" */
+/* ##Standard Container */
+/*
+	<div class="container">
+		<p>I'm a section on the layout/page which should be centered in the window</p>
+	</div>  
+*/
+/* line 12, ../sass/framework/atoms/_containers.scss */
+.container {
+  width: 90%;
+  margin: 0 auto;
   display: block;
-  left: 0;
-  margin: 0;
-  padding: 0.3em 1.2em;
-  position: relative;
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
-  top: 0;
+  zoom: 1;
+}
+/* line 86, ../sass/framework/imports/_mixins.scss */
+.container:before {
+  content: "";
+  display: table;
+}
+/* line 91, ../sass/framework/imports/_mixins.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* line 32, ../sass/framework/atoms/_forms.scss */
-fieldset {
-  padding-top: 1.4em;
-}
-
-/* line 36, ../sass/framework/atoms/_forms.scss */
-legend {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-/* line 44, ../sass/framework/atoms/_forms.scss */
-.input-tiny {
-  width: 50px;
-}
-
-/* line 48, ../sass/framework/atoms/_forms.scss */
-.input-small {
-  width: 100px;
-}
-
-/* line 52, ../sass/framework/atoms/_forms.scss */
-.input-medium {
-  width: 150px;
-}
-
-/* line 56, ../sass/framework/atoms/_forms.scss */
-.input-large {
-  width: 200px;
-}
-
-/* line 60, ../sass/framework/atoms/_forms.scss */
-.input-xlarge {
-  width: 250px;
-}
-
-/* line 64, ../sass/framework/atoms/_forms.scss */
-.input-xxlarge {
-  width: 300px;
-}
-
-/* line 68, ../sass/framework/atoms/_forms.scss */
-.input-xxxlarge {
-  width: 350px;
-}
-
-/* line 72, ../sass/framework/atoms/_forms.scss */
-.input-full {
-  width: 100%;
-}
-
-/* line 79, ../sass/framework/atoms/_forms.scss */
-.input_full_wrap {
-  display: block;
-  padding-right: 8px;
-}
-
-/* line 86, ../sass/framework/atoms/_forms.scss */
-input[type="search"]::-webkit-search-decoration {
-  display: none;
-}
-
-/* line 94, ../sass/framework/atoms/_forms.scss */
-button:invalid,
-select:invalid {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-
-/* line 104, ../sass/framework/atoms/_forms.scss */
-input:invalid,
-textarea:invalid {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-
-/* line 117, ../sass/framework/atoms/_forms.scss */
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus,
-select:focus,
-button:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-input[type="button"]:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-
-/* line 127, ../sass/framework/atoms/_forms.scss */
-input[type="file"]:focus, input[type="file"]:active,
-input[type="radio"]:focus,
-input[type="radio"]:active,
-input[type="checkbox"]:focus,
-input[type="checkbox"]:active {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-
-/* line 135, ../sass/framework/atoms/_forms.scss */
-button,
-input[type="reset"],
-input[type="submit"],
-input[type="button"] {
-  -webkit-appearance: none;
-  cursor: pointer;
-  outline: 0;
-  overflow: visible;
-  margin: 0;
-  *padding-top: 2px;
-  *padding-bottom: 0;
-  vertical-align: top;
-  width: auto;
-}
-/* line 153, ../sass/framework/atoms/_forms.scss */
-button:active,
-input[type="reset"]:active,
-input[type="submit"]:active,
-input[type="button"]:active {
-  outline: 0;
-}
-/* line 157, ../sass/framework/atoms/_forms.scss */
-button::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/* line 163, ../sass/framework/atoms/_forms.scss */
-button {
-  *padding-top: 1px;
-  *padding-bottom: 1px;
-}
-
-/* line 183, ../sass/framework/atoms/_forms.scss */
-textarea,
-select,
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  background-color: white;
-  border: 1px solid;
-  border-color: #555555;
-  color: black;
-  outline: 0;
-  margin: 0;
-  padding: 3px 4px;
-  text-align: left;
-  font-size: 16px;
-  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
-  height: 2em;
-  vertical-align: top;
-  *padding-top: 2px;
-  *padding-bottom: 1px;
-  *height: auto;
-}
-/* line 204, ../sass/framework/atoms/_forms.scss */
-textarea[disabled],
-select[disabled],
-input[type="date"][disabled],
-input[type="datetime"][disabled],
-input[type="datetime-local"][disabled],
-input[type="email"][disabled],
-input[type="month"][disabled],
-input[type="number"][disabled],
-input[type="password"][disabled],
-input[type="search"][disabled],
-input[type="tel"][disabled],
-input[type="text"][disabled],
-input[type="time"][disabled],
-input[type="url"][disabled],
-input[type="week"][disabled] {
-  background-color: #eeeeee;
-}
-/* line 207, ../sass/framework/atoms/_forms.scss */
-textarea:focus,
-select:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="email"]:focus,
-input[type="month"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="text"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="week"]:focus {
-  border-color: rgba(82, 168, 236, 0.8);
-  outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-}
-
-/* line 223, ../sass/framework/atoms/_forms.scss */
-button[disabled],
-input[disabled],
-select[disabled],
-select[disabled] option,
-select[disabled] optgroup,
-textarea[disabled] {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  -moz-user-select: -moz-none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  user-select: none;
-  color: #888888;
-  cursor: default;
-}
-
-/* line 237, ../sass/framework/atoms/_forms.scss */
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #88888;
-}
-
-/* line 242, ../sass/framework/atoms/_forms.scss */
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-  color: #888888;
-}
-
-/* line 247, ../sass/framework/atoms/_forms.scss */
-input.placeholder_text,
-textarea.placeholder_text {
-  color: #888888;
-}
-
-/* line 253, ../sass/framework/atoms/_forms.scss */
-textarea,
-select[size],
-select[multiple] {
-  height: auto;
-}
-
-/* line 257, ../sass/framework/atoms/_forms.scss */
-select {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-}
-
-/* line 264, ../sass/framework/atoms/_forms.scss */
-select[size="0"],
-select[size="1"] {
-  height: 1.8em;
-  *height: auto;
-}
-
-@media (-webkit-min-device-pixel-ratio: 0) {
-  /* line 274, ../sass/framework/atoms/_forms.scss */
-  select[size],
-  select[multiple],
-  select[multiple][size] {
-    background-image: none;
-    padding-right: 3px;
-  }
-
-  /* line 281, ../sass/framework/atoms/_forms.scss */
-  select,
-  select[size="0"],
-  select[size="1"] {
-    background-image: url('../images/select_arrow.png?1377014241');
-    background-repeat: no-repeat;
-    background-position: right center;
-    padding-right: 20px;
-  }
-
-  /* line 288, ../sass/framework/atoms/_forms.scss */
-  ::-webkit-validation-bubble-message {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
-    border: 1px solid;
-    border-color: #747474 #5e5e5e #4f4f4f;
-    color: white;
-    font: 0.94118 "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
-    overflow: hidden;
-    padding: 15px 15px 17px;
-    text-shadow: black 0 0 1px;
-    height: 16px;
-  }
-
-  /* line 304, ../sass/framework/atoms/_forms.scss */
-  ::-webkit-validation-bubble-arrow,
-  ::-webkit-validation-bubble-top-outer-arrow,
-  ::-webkit-validation-bubble-top-inner-arrow {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background: #666666;
-    border: 0;
-  }
-}
-/* line 312, ../sass/framework/atoms/_forms.scss */
-textarea {
-  min-height: 40px;
-  overflow: auto;
-  resize: vertical;
-  width: 100%;
-}
-
-/* line 319, ../sass/framework/atoms/_forms.scss */
-optgroup {
-  color: black;
-  font-style: normal;
-  font-weight: normal;
-  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
-}
-/* line 327, ../sass/framework/atoms/_forms.scss */
-optgroup::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/* ##Form Instances */
-/* ##Prepend/Append */
-/* 
-	<div class="input-append">
-		<input type="text">
-		<button class="btn" type="button">Go!</button>
+/* ## Reduced Container */
+/* Use to create a container half the default width of the standard container */
+/*
+	<div class="container container--reduced">
+		<!-- SOME STUFF -->
 	</div>
 */
-/* line 348, ../sass/framework/atoms/_forms.scss */
-.input-append,
-.input-prepend {
-  white-space: nowrap;
+/* line 27, ../sass/framework/atoms/_containers.scss */
+.container--reduced {
+  width: 45%;
 }
 
-/* ##Search Form */
-/* 
-	<form class="form-search input-append">
-		<input type="text" class="input-medium search-query">
-		<button type="submit" class="btn">Search</button>
-	</form>
+/* ##Padded Container */
+/* Use to create a container with top and bottom padding */
+/*
 */
-/* line 363, ../sass/framework/atoms/_forms.scss */
-.form-search .search-query {
-  display: inline-block;
+/* line 38, ../sass/framework/atoms/_containers.scss */
+.container--padded {
+  padding-top: 2.499em;
+  padding-bottom: 2.499em;
+}
+/* line 42, ../sass/framework/atoms/_containers.scss */
+.container--padded > :last-child {
   margin-bottom: 0;
-  vertical-align: middle;
+  padding-bottom: 0;
+}
+
+/* ## Extended Container */
+/* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
+/*
+	<div class="container--extend" style="background: #f7f7f7f;">
+		<div class="container">
+			<p>A section of content where you need the background to extend to the full width of the browser whilst the content remains centered</p>
+		</div> 
+	</div>
+*/
+/* line 58, ../sass/framework/atoms/_containers.scss */
+.container--extend {
+  width: auto;
+  zoom: 1;
+}
+/* line 86, ../sass/framework/imports/_mixins.scss */
+.container--extend:before {
+  content: "";
+  display: table;
+}
+/* line 91, ../sass/framework/imports/_mixins.scss */
+.container--extend:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* #Grid */
@@ -1602,229 +1273,419 @@ optgroup::-moz-focus-inner {
   float: none;
 }
 
+/* #Forms */
+/* line 5, ../sass/framework/atoms/_forms.scss */
+label {
+  font-weight: bold;
+  font-size: 100%;
+}
+
+/* line 10, ../sass/framework/atoms/_forms.scss */
+fieldset {
+  border: 1px solid #999999;
+  font-size: 12px;
+  line-height: 1.3em;
+  margin: 0 0 1.5em;
+  padding: 0 1.4em 1.4em 1.4em;
+}
+
+/* line 18, ../sass/framework/atoms/_forms.scss */
+legend {
+  background: #f9f9f9;
+  border: 1px solid #999999;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: block;
+  left: 0;
+  margin: 0;
+  padding: 0.3em 1.2em;
+  position: relative;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.7);
+  top: 0;
+}
+
+/* line 32, ../sass/framework/atoms/_forms.scss */
+fieldset {
+  padding-top: 1.4em;
+}
+
+/* line 36, ../sass/framework/atoms/_forms.scss */
+legend {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 44, ../sass/framework/atoms/_forms.scss */
+.input-tiny {
+  width: 50px;
+}
+
+/* line 48, ../sass/framework/atoms/_forms.scss */
+.input-small {
+  width: 100px;
+}
+
+/* line 52, ../sass/framework/atoms/_forms.scss */
+.input-medium {
+  width: 150px;
+}
+
+/* line 56, ../sass/framework/atoms/_forms.scss */
+.input-large {
+  width: 200px;
+}
+
+/* line 60, ../sass/framework/atoms/_forms.scss */
+.input-xlarge {
+  width: 250px;
+}
+
+/* line 64, ../sass/framework/atoms/_forms.scss */
+.input-xxlarge {
+  width: 300px;
+}
+
+/* line 68, ../sass/framework/atoms/_forms.scss */
+.input-xxxlarge {
+  width: 350px;
+}
+
+/* line 72, ../sass/framework/atoms/_forms.scss */
+.input-full {
+  width: 100%;
+}
+
+/* line 79, ../sass/framework/atoms/_forms.scss */
+.input_full_wrap {
+  display: block;
+  padding-right: 8px;
+}
+
+/* line 86, ../sass/framework/atoms/_forms.scss */
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+/* line 94, ../sass/framework/atoms/_forms.scss */
+button:invalid,
+select:invalid {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 104, ../sass/framework/atoms/_forms.scss */
+input:invalid,
+textarea:invalid {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 117, ../sass/framework/atoms/_forms.scss */
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus,
+button:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 127, ../sass/framework/atoms/_forms.scss */
+input[type="file"]:focus, input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 135, ../sass/framework/atoms/_forms.scss */
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: 0;
+  overflow: visible;
+  margin: 0;
+  *padding-top: 2px;
+  *padding-bottom: 0;
+  vertical-align: top;
+  width: auto;
+}
+/* line 153, ../sass/framework/atoms/_forms.scss */
+button:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:active {
+  outline: 0;
+}
+/* line 157, ../sass/framework/atoms/_forms.scss */
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 163, ../sass/framework/atoms/_forms.scss */
+button {
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+
+/* line 183, ../sass/framework/atoms/_forms.scss */
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid;
+  border-color: #555555;
+  color: black;
+  outline: 0;
+  margin: 0;
+  padding: 3px 4px;
+  text-align: left;
+  font-size: 16px;
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
+  height: 2em;
+  vertical-align: top;
+  *padding-top: 2px;
+  *padding-bottom: 1px;
+  *height: auto;
+}
+/* line 204, ../sass/framework/atoms/_forms.scss */
+textarea[disabled],
+select[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eeeeee;
+}
+/* line 207, ../sass/framework/atoms/_forms.scss */
+textarea:focus,
+select:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+/* line 223, ../sass/framework/atoms/_forms.scss */
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  color: #888888;
+  cursor: default;
+}
+
+/* line 237, ../sass/framework/atoms/_forms.scss */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #88888;
+}
+
+/* line 242, ../sass/framework/atoms/_forms.scss */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888888;
+}
+
+/* line 247, ../sass/framework/atoms/_forms.scss */
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #888888;
+}
+
+/* line 253, ../sass/framework/atoms/_forms.scss */
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+/* line 257, ../sass/framework/atoms/_forms.scss */
+select {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+/* line 264, ../sass/framework/atoms/_forms.scss */
+select[size="0"],
+select[size="1"] {
+  height: 1.8em;
+  *height: auto;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  /* line 274, ../sass/framework/atoms/_forms.scss */
+  select[size],
+  select[multiple],
+  select[multiple][size] {
+    background-image: none;
+    padding-right: 3px;
+  }
+
+  /* line 281, ../sass/framework/atoms/_forms.scss */
+  select,
+  select[size="0"],
+  select[size="1"] {
+    background-image: url('../images/select_arrow.png?1377014241');
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+  }
+
+  /* line 288, ../sass/framework/atoms/_forms.scss */
+  ::-webkit-validation-bubble-message {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
+    border: 1px solid;
+    border-color: #747474 #5e5e5e #4f4f4f;
+    color: white;
+    font: 0.94118 "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    overflow: hidden;
+    padding: 15px 15px 17px;
+    text-shadow: black 0 0 1px;
+    height: 16px;
+  }
+
+  /* line 304, ../sass/framework/atoms/_forms.scss */
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #666666;
+    border: 0;
+  }
+}
+/* line 312, ../sass/framework/atoms/_forms.scss */
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+/* line 319, ../sass/framework/atoms/_forms.scss */
+optgroup {
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
+}
+/* line 327, ../sass/framework/atoms/_forms.scss */
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* ##Form Instances */
+/* ##Prepend/Append */
+/* 
+	<div class="input-append">
+		<input type="text">
+		<button class="btn" type="button">Go!</button>
+	</div>
+*/
+/* line 348, ../sass/framework/atoms/_forms.scss */
+.input-append,
+.input-prepend {
+  white-space: nowrap;
+}
+
+/* ##Search Form */
+/* 
+	<form class="form-search input-append">
+		<input type="text" class="input-medium search-query">
+		<button type="submit" class="btn">Search</button>
+	</form>
+*/
+/* line 363, ../sass/framework/atoms/_forms.scss */
+.form-search .search-query {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
 /* ==========================================================================
    MOLECULES
    Groupings of base atomic objects to create reusable elements
    ========================================================================== */
-/* #Media Block */
-/* The media object is an image to the left, with descriptive content to the right. The content area on the right can contain any other objects. */
-/* ##Base 
-/* 
-	<div class="m-block">
-		<img class="m-img" src="http://www.placehold.it/138x151" />
-
-		<div class="m-content">
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		</div>
-	</div>
-*/
-/* line 18, ../sass/framework/molecules/_media.scss */
-.m-block,
-.m-block .m-content {
-  overflow: hidden;
-  *overflow: visible;
-  zoom: 1;
-}
-
-/* line 29, ../sass/framework/molecules/_media.scss */
-.m-block .m-img {
-  float: left;
-  margin-right: 20px;
-}
-/* line 33, ../sass/framework/molecules/_media.scss */
-.m-block .m-img img {
-  display: block;
-}
-
-/* ##Reversed */
-/* Image on right with content on the left */
-/* 
-	<div class="m-block">
-		<img class="m-img-alt" src="http://www.placehold.it/138x151" />
-
-		<div class="m-content">
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-		</div>
-	</div>
-*/
-/* line 52, ../sass/framework/molecules/_media.scss */
-.m-block .m-img-alt {
-  float: right;
-  margin-left: 20px;
-}
-
-/* line 59, ../sass/framework/molecules/_media.scss */
-.m-block--ib {
-  letter-spacing: -0.25em;
-}
-/* line 63, ../sass/framework/molecules/_media.scss */
-.m-block--ib .m-img,
-.m-block--ib .m-content {
-  float: none;
-  letter-spacing: normal;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-
-/* #Containers */
-/* Standard structures for dividing pages into "sections" */
-/* ##Standard Container */
-/*
-	<div class="container">
-		<p>I'm a section on the layout/page which should be centered in the window</p>
-	</div>  
-*/
-/* line 12, ../sass/framework/molecules/_containers.scss */
-.container {
-  width: 90%;
-  margin: 0 auto;
-  display: block;
-  zoom: 1;
-}
-/* line 86, ../sass/framework/imports/_mixins.scss */
-.container:before {
-  content: "";
-  display: table;
-}
-/* line 91, ../sass/framework/imports/_mixins.scss */
-.container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* ## Reduced Container */
-/* Use to create a container half the default width of the standard container */
-/*
-	<div class="container container--reduced">
-		<!-- SOME STUFF -->
-	</div>
-*/
-/* line 27, ../sass/framework/molecules/_containers.scss */
-.container--reduced {
-  width: 45%;
-}
-
-/* ##Padded Container */
-/* Use to create a container with top and bottom padding */
-/*
-*/
-/* line 38, ../sass/framework/molecules/_containers.scss */
-.container--padded {
-  padding-top: 2.499em;
-  padding-bottom: 2.499em;
-}
-/* line 42, ../sass/framework/molecules/_containers.scss */
-.container--padded > :last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-/* ## Extended Container */
-/* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
-/*
-	<div class="container--extend" style="background: #f7f7f7f;">
-		<div class="container">
-			<p>A section of content where you need the background to extend to the full width of the browser whilst the content remains centered</p>
-		</div> 
-	</div>
-*/
-/* line 58, ../sass/framework/molecules/_containers.scss */
-.container--extend {
-  width: auto;
-  zoom: 1;
-}
-/* line 86, ../sass/framework/imports/_mixins.scss */
-.container--extend:before {
-  content: "";
-  display: table;
-}
-/* line 91, ../sass/framework/imports/_mixins.scss */
-.container--extend:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* #Island and Islet */
-/* Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object. `@extend` me in your site styles */
-/* ##Island */
-/*
-    <div class="island">
-        I am boxed off.
-    </div>
-*/
-/* line 14, ../sass/framework/molecules/_island.scss */
-.island, .headed-island,
-.islet {
-  display: block;
-  margin-bottom: 1.666em;
-}
-
-/* line 20, ../sass/framework/molecules/_island.scss */
-.island, .headed-island {
-  padding: 1.666em;
-}
-
-/* line 25, ../sass/framework/molecules/_island.scss */
-.island > :last-child, .headed-island > :last-child,
-.islet > :last-child {
-  margin-bottom: 0;
-}
-
-/* ##Island */
-/* Just like `.island`, only less padding/smaller. */
-/*
-    <div class="islet">
-        I am boxed off too only with less padding
-    </div>
-*/
-/* line 38, ../sass/framework/molecules/_island.scss */
-.islet {
-  padding: 0.833em;
-}
-
-/* ##Headed Island */
-/* Just like `.island`, only with a definite boxed heading */
-/*
-    <div class="headed-island">
-        <h3 class="island-heading">I am the Island Heading</h3>
-        <div class="island-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-        </div>
-    </div>
-*/
-/* line 59, ../sass/framework/molecules/_island.scss */
-.headed-island {
-  padding: 0;
-}
-/* line 63, ../sass/framework/molecules/_island.scss */
-.headed-island .island-heading {
-  padding: 0.833em 1.666em;
-  margin: 0;
-  border-top: 0;
-  border-bottom: 1px solid #ccc;
-}
-/* line 70, ../sass/framework/molecules/_island.scss */
-.headed-island .island-content {
-  padding: 0.833em 1.666em;
-}
-/* line 73, ../sass/framework/molecules/_island.scss */
-.headed-island .island-content > :last-child {
-  margin-bottom: 0;
-}
-
 /* #Split */
 /* 
 Simple split item for creating two elements floated away from one another.
@@ -1933,58 +1794,6 @@ https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_
   background-color: #cccccc;
 }
 
-/* #Item List */
-/* Create standard lists of "post"-like content. 
-*/
-/* ##Standard Example - Grid "Two Up" */
-/*
-    <ul class="item-list">
-        <li>Item in the list</li>
-        <li>Item in the list</li>
-        <li>Item in the list</li>
-        <li>Item in the list</li>
-        <li>Item in the list</li>
-    </ul>
-*/
-/* line 18, ../sass/framework/molecules/_item-list.scss */
-.item-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  zoom: 1;
-}
-/* line 86, ../sass/framework/imports/_mixins.scss */
-.item-list:before {
-  content: "";
-  display: table;
-}
-/* line 91, ../sass/framework/imports/_mixins.scss */
-.item-list:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* line 23, ../sass/framework/molecules/_item-list.scss */
-.item-list > li,
-.item-list .list-item {
-  margin-bottom: 1.875em;
-  padding-bottom: 1.875em;
-  zoom: 1;
-}
-/* line 86, ../sass/framework/imports/_mixins.scss */
-.item-list > li:before,
-.item-list .list-item:before {
-  content: "";
-  display: table;
-}
-/* line 91, ../sass/framework/imports/_mixins.scss */
-.item-list > li:after,
-.item-list .list-item:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* ============================================================ */
 /* ============================================================ */
 /* #Nav */
@@ -2015,162 +1824,6 @@ https://raw.github.com/csswizardry/inuit.css/master/inuit.css/partials/objects/_
         <li><a href="#">Contact</a></li>
     </ul>
 */
-/* #DROPDOWNS */
-/* Create dropdown menus with caret arrow
-
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-		<li><a tabindex="-1" href="#">Action</a></li>
-		<li><a tabindex="-1" href="#">Another action</a></li>
-		<li><a tabindex="-1" href="#">Something else here</a></li>
-		<li class="divider"></li>
-		<li><a tabindex="-1" href="#">Separated link</a></li>
-	</ul>
-*/
-/* line 16, ../sass/framework/molecules/_dropdowns.scss */
-.dropdown-menu, .nav-primary .sub-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 160px;
-  text-align: left;
-  direction: ltr;
-  background-color: #eeeeee;
-}
-
-/* line 30, ../sass/framework/molecules/_dropdowns.scss */
-.dropdown-menu__item, .nav-primary .sub-menu li {
-  position: relative;
-  vertical-align: bottom;
-  /* This fixes the IE5 Win gap (no harm done to modern browsers) */
-  white-space: nowrap;
-  width: 100%;
-  /* inherit the width of the parent <ul> */
-  clear: both;
-  display: list-item;
-}
-
-/* line 39, ../sass/framework/molecules/_dropdowns.scss */
-.dropdown-menu__link, .nav-primary .sub-menu a {
-  display: block;
-  white-space: nowrap;
-  /* forces drop down to stretch to accommodate length of text (and not wrap) */
-  padding: 0.375em 1.25em;
-  text-align: left;
-}
-
-/* line 46, ../sass/framework/molecules/_dropdowns.scss */
-.dropdown-menu--is-open {
-  display: block;
-}
-
-/* #LABELS AND BADGES */
-/* Standard alert styles with variations 
-
-	<span class="label label-success">Success</span>
-*/
-/* line 9, ../sass/framework/molecules/_labels-badges.scss */
-.label,
-.badge {
-  padding: 0.125em 0.25em;
-  font-size: 0.75em;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  white-space: nowrap;
-  vertical-align: baseline;
-  background-color: #999999;
-  text-decoration: none;
-}
-
-/* line 21, ../sass/framework/molecules/_labels-badges.scss */
-.label {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-
-/* line 27, ../sass/framework/molecules/_labels-badges.scss */
-.badge {
-  padding-right: 9px;
-  padding-left: 9px;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  border-radius: 9px;
-}
-
-/* line 36, ../sass/framework/molecules/_labels-badges.scss */
-.label:empty,
-.badge:empty {
-  display: none;
-}
-
-/* line 43, ../sass/framework/molecules/_labels-badges.scss */
-a.label:hover,
-a.label:focus,
-a.badge:hover,
-a.badge:focus {
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* line 50, ../sass/framework/molecules/_labels-badges.scss */
-.label-important,
-.badge-important {
-  background-color: #b94a48;
-}
-
-/* line 55, ../sass/framework/molecules/_labels-badges.scss */
-.label-important[href],
-.badge-important[href] {
-  background-color: #953b39;
-}
-
-/* line 60, ../sass/framework/molecules/_labels-badges.scss */
-.label-warning,
-.badge-warning {
-  background-color: #f2dede;
-  color: #b94a48;
-}
-
-/* line 66, ../sass/framework/molecules/_labels-badges.scss */
-.label-warning[href],
-.badge-warning[href] {
-  background-color: #c67605;
-}
-
-/* line 71, ../sass/framework/molecules/_labels-badges.scss */
-.label-success,
-.badge-success {
-  background-color: #dff0d8;
-  color: #468847;
-}
-
-/* line 77, ../sass/framework/molecules/_labels-badges.scss */
-.label-success[href],
-.badge-success[href] {
-  background-color: #356635;
-}
-
-/* line 82, ../sass/framework/molecules/_labels-badges.scss */
-.label-info,
-.badge-info {
-  background-color: #d9edf7;
-  color: #3a87ad;
-}
-
-/* line 88, ../sass/framework/molecules/_labels-badges.scss */
-.label-info[href],
-.badge-info[href] {
-  background-color: #2d6987;
-}
-
 /* #Pagination */
 /* Standard controls for navigation between "paged" content. */
 /* ##Base 
@@ -2372,206 +2025,6 @@ li.pager__item--next {
   float: right;
 }
 
-/* #Images */
-/* Common styling patterns for images to be applied to `<img` elements. */
-/* Please note that `.img-rounded` and `.img-circle` do not work in IE7-8. */
-/* ##Rounded */
-/*
-    <img src="http://www.placehold.it/200x200" class="img-rounded" />
-*/
-/* line 16, ../sass/framework/molecules/_images.scss */
-.img-rounded {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-
-/* ##Poloroid */
-/*
-    <img src="http://www.placehold.it/200x200" class="img-polaroid" />
-*/
-/* line 26, ../sass/framework/molecules/_images.scss */
-.img-polaroid, .gallery-item a {
-  padding: 4px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-/* ##Circle */
-/*
-    <img src="http://www.placehold.it/200x200" class="img-circle" />
-*/
-/* line 40, ../sass/framework/molecules/_images.scss */
-.img-circle {
-  -webkit-border-radius: 500px;
-  -moz-border-radius: 500px;
-  -ms-border-radius: 500px;
-  -o-border-radius: 500px;
-  border-radius: 500px;
-}
-
-/* ##Image Thumb */
-/*
-    <img src="http://www.placehold.it/200x200" class="img-thumb" />
-*/
-/* line 51, ../sass/framework/molecules/_images.scss */
-.img-thumb {
-  margin-bottom: 0.833em;
-}
-
-/* ##Ratios */
-/*
-    <div class="img-ratio img-ratio--4-3">
-        <img src="http://www.placehold.it/200x200" />
-    </div>
-*/
-/* line 62, ../sass/framework/molecules/_images.scss */
-.img-ratio {
-  height: 0;
-  overflow: hidden;
-}
-
-/* line 67, ../sass/framework/molecules/_images.scss */
-.img-ratio--4-3 {
-  padding-bottom: 75%;
-}
-
-/* line 71, ../sass/framework/molecules/_images.scss */
-.img-ratio--16-8 {
-  padding-bottom: 56.25%;
-}
-
-/* #Flexslider */
-/* Utilise the power of WooThemes' Flexslider plugin to power slideshows */
-/* ##Base */
-/*
-	<div class="flexslider">
-	    <ul class="slides">
-	        <li class="slide">
-	        	<p>Slide 1 content</p>
-	        </li>
-	        <li class="slide" style="display: none;">
-	        	<p>Slide 2 content</p>
-	        </li>
-	    </ul>
-	</div>
- */
-/* Browser Resets */
-/* line 23, ../sass/framework/molecules/_flexslider.scss */
-.flex-container a:active,
-.flexslider a:active,
-.flex-container a:focus,
-.flexslider a:focus {
-  outline: none;
-}
-
-/* line 26, ../sass/framework/molecules/_flexslider.scss */
-.slides,
-.flex-control-nav,
-.flex-direction-nav {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* FlexSlider Necessary Styles
-*********************************/
-/* line 30, ../sass/framework/molecules/_flexslider.scss */
-.flexslider {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 31, ../sass/framework/molecules/_flexslider.scss */
-.flexslider .slides > li {
-  display: none;
-  -webkit-backface-visibility: hidden;
-}
-
-/* Hide the slides before the JS is loaded. Avoids image jumping */
-/* line 32, ../sass/framework/molecules/_flexslider.scss */
-.flexslider .slides img {
-  width: 100%;
-  display: block;
-}
-
-/* line 33, ../sass/framework/molecules/_flexslider.scss */
-.flex-pauseplay span {
-  text-transform: capitalize;
-}
-
-/* Clearfix for the .slides element */
-/* line 36, ../sass/framework/molecules/_flexslider.scss */
-.slides:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-/* line 37, ../sass/framework/molecules/_flexslider.scss */
-html[xmlns] .slides {
-  display: block;
-}
-
-/* line 38, ../sass/framework/molecules/_flexslider.scss */
-* html .slides {
-  height: 1%;
-}
-
-/* No JavaScript Fallback */
-/* If you are not using another script, such as Modernizr, make sure you
- * include js that eliminates this class on page load */
-/* line 43, ../sass/framework/molecules/_flexslider.scss */
-.js .slides > li:first-child {
-  display: block;
-}
-
-/* ============================================================ */
-/* ============================================================ */
-/* line 16, ../sass/framework/molecules/_feature-element.scss */
-.feature-element {
-  position: relative;
-  text-align: center;
-}
-/* line 21, ../sass/framework/molecules/_feature-element.scss */
-.feature-element:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: -1;
-  height: 1px;
-  width: 100%;
-  vertical-align: middle;
-  background-color: #999;
-  border-bottom: 1px solid #fff;
-}
-
-/* line 37, ../sass/framework/molecules/_feature-element.scss */
-.feature-element__wrap {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  background: white;
-  padding-left: 0.833em;
-  padding-right: 0.833em;
-  vertical-align: middle;
-  margin-bottom: 0;
-}
-
 /* #Title Block */
 /* Addresses common markup/presentation scenario of title with meta information
 */
@@ -2591,281 +2044,6 @@ html[xmlns] .slides {
 .title-block__meta {
   margin-bottom: 0.833em;
   color: #999999;
-}
-
-/* #Inline List */
-/* Creates list for when you just need a horizontal list of links /*
-
-/* ##Base 
-	<ul class="inline-list">
-	  <li class="inline-list__item"><a href="#">Link 1</a></li>
-	  <li class="inline-list__item"><a href="#">Link 2</a></li>
-	  <li class="inline-list__item"><a href="#">Link 3</a></li>
-	  <li class="inline-list__item"><a href="#">Link 4</a></li>
-	  <li class="inline-list__item"><a href="#">Link 5</a></li>
-	</ul>
-*/
-/* line 15, ../sass/framework/molecules/_inline-list.scss */
-.inline-list, .social-actions {
-  margin: 0 0 1.666em -1.666em;
-  zoom: 1;
-}
-/* line 86, ../sass/framework/imports/_mixins.scss */
-.inline-list:before, .social-actions:before {
-  content: "";
-  display: table;
-}
-/* line 91, ../sass/framework/imports/_mixins.scss */
-.inline-list:after, .social-actions:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 21, ../sass/framework/molecules/_inline-list.scss */
-.inline-list__item,
-.inline-list > li,
-.social-actions > li {
-  float: left;
-  list-style: none;
-  margin-left: 1.666em;
-  display: block;
-}
-
-/* ##Divided 
-	<ul class="inline-list inline-list--divided">
-	  <li class="inline-list__item"><a href="#">Link 1</a></li>
-	  <li class="inline-list__item"><a href="#">Link 2</a></li>
-	  <li class="inline-list__item"><a href="#">Link 3</a></li>
-	  <li class="inline-list__item"><a href="#">Link 4</a></li>
-	  <li class="inline-list__item"><a href="#">Link 5</a></li>
-	</ul>
-*/
-/* line 38, ../sass/framework/molecules/_inline-list.scss */
-.inline-list--divided {
-  margin-left: -0.833em;
-}
-/* line 42, ../sass/framework/molecules/_inline-list.scss */
-.inline-list--divided .inline-list__item,
-.inline-list--divided > li {
-  margin-left: 0.833em;
-}
-/* line 44, ../sass/framework/molecules/_inline-list.scss */
-.inline-list--divided .inline-list__item:after,
-.inline-list--divided > li:after {
-  content: "|";
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  margin-left: 0.833em;
-}
-
-/* ##Centered 
-	<ul class="inline-list inline-list--centered">
-	  <li class="inline-list__item"><a href="#">Link 1</a></li>
-	  <li class="inline-list__item"><a href="#">Link 2</a></li>
-	  <li class="inline-list__item"><a href="#">Link 3</a></li>
-	  <li class="inline-list__item"><a href="#">Link 4</a></li>
-	  <li class="inline-list__item"><a href="#">Link 5</a></li>
-	</ul>
-*/
-/* line 62, ../sass/framework/molecules/_inline-list.scss */
-.inline-list--centered {
-  text-align: center;
-  letter-spacing: -4px;
-  margin-left: 0;
-}
-/* line 68, ../sass/framework/molecules/_inline-list.scss */
-.inline-list--centered > li,
-.inline-list--centered .inline-list__item {
-  float: none;
-  letter-spacing: normal;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  margin-left: 0.833em;
-  margin-right: 0.833em;
-}
-
-/* ##Inline Block 
-	<ul class="inline-list inline-list--ib">
-	  <li class="inline-list__item"><a href="#">Link 1</a></li>
-	  <li class="inline-list__item"><a href="#">Link 2</a></li>
-	  <li class="inline-list__item"><a href="#">Link 3</a></li>
-	  <li class="inline-list__item"><a href="#">Link 4</a></li>
-	  <li class="inline-list__item"><a href="#">Link 5</a></li>
-	</ul>
-*/
-/* line 86, ../sass/framework/molecules/_inline-list.scss */
-.inline-list--ib {
-  letter-spacing: -0.25em;
-}
-/* line 90, ../sass/framework/molecules/_inline-list.scss */
-.inline-list--ib .inline-list__item,
-.inline-list--ib > li {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  vertical-align: middle;
-  float: none;
-  letter-spacing: normal;
-}
-
-/* ##Centered 
-	<ul class="inline-list inline-list--spaced">
-	  <li class="inline-list__item"><a href="#">Link 1</a></li>
-	  <li class="inline-list__item"><a href="#">Link 2</a></li>
-	  <li class="inline-list__item"><a href="#">Link 3</a></li>
-	  <li class="inline-list__item"><a href="#">Link 4</a></li>
-	  <li class="inline-list__item"><a href="#">Link 5</a></li>
-	</ul>
-*/
-/* line 107, ../sass/framework/molecules/_inline-list.scss */
-.inline-list--spaced {
-  margin-left: -3.332em;
-}
-/* line 111, ../sass/framework/molecules/_inline-list.scss */
-.inline-list--spaced .inline-list__item,
-.inline-list--spaced > li {
-  margin-left: 3.332em;
-}
-
-/* ============================================================ */
-/* ============================================================ */
-/* line 16, ../sass/framework/molecules/_flippable.scss */
-.flippable {
-  position: relative;
-  height: auto !important;
-}
-
-/* line 23, ../sass/framework/molecules/_flippable.scss */
-.flippable__wrap,
-.flippable__content,
-.flippable__face {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-/* line 34, ../sass/framework/molecules/_flippable.scss */
-.flippable__face {
-  background-color: #ccc;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-/* line 39, ../sass/framework/molecules/_flippable.scss */
-.flippable__face--back {
-  background: #c9c9c9;
-  left: -999em;
-}
-
-/* line 47, ../sass/framework/molecules/_flippable.scss */
-.flippable--is-flipped .flippable__face--back,
-.flippable:hover .flippable__face--back,
-.flippable:focus .flippable__face--back {
-  left: 0;
-}
-
-/* line 56, ../sass/framework/molecules/_flippable.scss */
-.csstransforms3d .flippable__wrap {
-  -webkit-perspective: 500px;
-  -moz-perspective: 500px;
-  -ms-perspective: 500px;
-  -o-perspective: 500px;
-  perspective: 500px;
-}
-/* line 60, ../sass/framework/molecules/_flippable.scss */
-.csstransforms3d .flippable__content {
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-/* line 65, ../sass/framework/molecules/_flippable.scss */
-.csstransforms3d .flippable__face {
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-/* line 71, ../sass/framework/molecules/_flippable.scss */
-.csstransforms3d .flippable__face--back {
-  left: 0;
-  -webkit-transform: rotate3d(0, 1, 0, 180deg);
-  -moz-transform: rotate3d(0, 1, 0, 180deg);
-  -ms-transform: rotate3d(0, 1, 0, 180deg);
-  -o-transform: rotate3d(0, 1, 0, 180deg);
-  transform: rotate3d(0, 1, 0, 180deg);
-}
-/* line 79, ../sass/framework/molecules/_flippable.scss */
-.csstransforms3d .flippable--is-flipped .flippable__content,
-.csstransforms3d .flippable:hover .flippable__content,
-.csstransforms3d .flippable:focus .flippable__content {
-  -webkit-transform: rotate3d(0, 1, 0, -180deg);
-  -moz-transform: rotate3d(0, 1, 0, -180deg);
-  -ms-transform: rotate3d(0, 1, 0, -180deg);
-  -o-transform: rotate3d(0, 1, 0, -180deg);
-  transform: rotate3d(0, 1, 0, -180deg);
-}
-
-/* line 90, ../sass/framework/molecules/_flippable.scss */
-.csstransforms3d .flippable--alt:hover .flippable__content, .csstransforms3d .flippable--alt:focus .flippable__content {
-  -webkit-transform: rotate3d(0, 1, 0, 180deg);
-  -moz-transform: rotate3d(0, 1, 0, 180deg);
-  -ms-transform: rotate3d(0, 1, 0, 180deg);
-  -o-transform: rotate3d(0, 1, 0, 180deg);
-  transform: rotate3d(0, 1, 0, 180deg);
-}
-
-/* line 103, ../sass/framework/molecules/_flippable.scss */
-.flippable--circle .flippable__face {
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
-  border-radius: 100%;
-}
-
-/* #Gray Box */
-/* Simple background box styles. Can be applied safetly to any element. Useful for prototyping */
-/* ##Gray Box */
-/*
-    <div class="island graybox">
-        I am a prototype box
-    </div>
-*/
-/* line 12, ../sass/framework/molecules/_graybox.scss */
-.graybox {
-  background-color: rgba(0, 0, 0, 0.15);
-  background-color: #e9e9e9\9;
-  color: #000;
-}
-/* line 17, ../sass/framework/molecules/_graybox.scss */
-.graybox a {
-  color: #000;
 }
 
 /* ==========================================================================
@@ -3094,8 +2272,7 @@ html[xmlns] .slides {
 
 /* ============================================================ */
 /* ============================================================ */
-/* The Gallery container (div) */
-/* line 16, ../sass/framework/compounds/_gallery.scss */
+/* line 14, ../sass/framework/compounds/_gallery.scss */
 .gallery {
   margin: 0;
   padding: 0;
@@ -3113,18 +2290,18 @@ html[xmlns] .slides {
   clear: both;
 }
 
-/* line 25, ../sass/framework/compounds/_gallery.scss */
+/* line 23, ../sass/framework/compounds/_gallery.scss */
 .gallery-row {
   clear: both;
 }
 
-/* line 34, ../sass/framework/compounds/_gallery.scss */
+/* line 32, ../sass/framework/compounds/_gallery.scss */
 .gallery-item {
   margin-top: 0;
   margin-bottom: 1.666em;
   padding-top: 0;
 }
-/* line 39, ../sass/framework/compounds/_gallery.scss */
+/* line 37, ../sass/framework/compounds/_gallery.scss */
 .gallery-item a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -3133,14 +2310,14 @@ html[xmlns] .slides {
   zoom: 1;
   *display: inline;
 }
-/* line 44, ../sass/framework/compounds/_gallery.scss */
+/* line 42, ../sass/framework/compounds/_gallery.scss */
 .gallery-item img {
   display: block;
   height: auto;
   margin: 0 auto;
 }
 
-/* line 55, ../sass/framework/compounds/_gallery.scss */
+/* line 53, ../sass/framework/compounds/_gallery.scss */
 .gallery-caption {
   margin: 0;
   padding: 0;
@@ -3197,23 +2374,19 @@ html[xmlns] .slides {
 	</div>
 */
 /* line 50, ../sass/framework/atoms/_helpers.scss */
-.clearfix, .island, .headed-island,
-.islet, .nav-primary,
+.clearfix, .nav-primary,
 .cf {
   zoom: 1;
 }
 /* line 54, ../sass/framework/atoms/_helpers.scss */
-.clearfix:before, .island:before, .headed-island:before,
-.islet:before, .nav-primary:before, .clearfix:after, .island:after, .headed-island:after,
-.islet:after, .nav-primary:after,
+.clearfix:before, .nav-primary:before, .clearfix:after, .nav-primary:after,
 .cf:before,
 .cf:after {
   content: "";
   display: table;
 }
 /* line 59, ../sass/framework/atoms/_helpers.scss */
-.clearfix:after, .island:after, .headed-island:after,
-.islet:after, .nav-primary:after,
+.clearfix:after, .nav-primary:after,
 .cf:after {
   clear: both;
 }
