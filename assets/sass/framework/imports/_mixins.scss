@@ -1,0 +1,305 @@
+
+// MIXINS
+
+// Standard mixins and functions to help make life easier
+
+
+
+// ==========================================================================
+// GRID MIXINS
+// ==========================================================================
+
+$one_col: 100% / $cols;
+
+
+// Returns the width of given column
+// ==========================================================================
+@function grid-width($num) {
+    @return ($one_col * $num);
+}
+
+
+
+// Returns a CSS selector for a single grid col/unit based on input provided
+// ==========================================================================
+@function grid-col($column,$nColumn,$sPrepend: "g") {
+    @if ($cols % $nColumn == 0) {
+        @return "."#{$sPrepend}"1-"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"columns";
+    } @else if ($nColumn == 8) {
+        @return ".#{$sPrepend}2-3,.#{$sPrepend}"#{$column}"columns";
+    } @else if ($nColumn == 9) {
+        @return ".#{$sPrepend}3-4,.#{$sPrepend}"#{$column}"columns";
+    } @else {
+        @return ".#{$sPrepend}"#{$column}"columns";   
+    } 
+}
+
+
+// Returns a CSS selector string for all grid classes to be used in _grid.scss
+// ==========================================================================
+@function grid-selectors() {
+    $count: 1;
+    $selectorString: "";
+    @each $col in $cols_as_string {
+        @if ($count <= $cols) {
+            @if ($count == 1) {
+                $selectorString: $selectorString + "#{grid-col($col,$count)}"; 
+            } @else {
+                $selectorString: $selectorString + ",#{grid-col($col,$count)}";
+            }
+            $count: $count + 1;
+        }
+    }
+    @return $selectorString;
+}
+
+
+
+// Outputs a full set of grid classes with the associated width
+// optional ability to define a prefix to be appended to the selector
+// ==========================================================================
+@mixin grid-set($prefix:"") {
+    $count: 1;
+    @each $col in $cols_as_string {
+      @if ($count <= $cols) {
+          #{grid-col($col,$count,$prefix)} {
+              width: #{grid-width($count)};
+          }
+          $count: $count + 1;
+      }
+    }
+}
+
+@mixin grid-span($cols) {
+    width: grid-width($cols);
+}
+
+
+// ==========================================================================
+// HELPERS
+// ==========================================================================
+
+// Clear fix
+@mixin clearfix {
+    zoom: 1; 
+    
+    &:before { 
+        content: ""; 
+        display: table;     
+    }
+
+    &:after {
+        content: ""; 
+        display: table; 
+        clear: both; 
+    }
+}
+
+
+// Relative Size
+@function rsize($pxval, $baseline : $baseFontSize) {
+    @return ($pxval/$baseline) + em;
+}
+
+// Font Size
+@mixin fsize($font-size) {
+    font-size: $font-size;
+    font-size: ($font-size/$baseFontSize) * 1rem;
+    line-height:ceil($font-size / $baseLineHeight) * ($baseLineHeight / $font-size);
+}
+
+// Mixin for selection markup
+@mixin selection($background, $color, $element:false) {
+    @if($element) {
+        &::-moz-selection{ background:$background; color:$color; text-shadow:none; }
+        &::selection { background:$background; color:$color; text-shadow:none; }
+    } @else {
+        ::-moz-selection{ background:$background; color:$color; text-shadow:none; }
+        ::selection { background:$background; color:$color; text-shadow:none; }
+    }
+}
+
+// Mixin for reset list
+@mixin list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+// Mixin for placeholder styling
+@mixin placeHolder($color) {
+    &::-webkit-input-placeholder { color:$color; }
+    &:-moz-placeholder { color:$color; }
+}
+
+// Webkit-style focus
+@mixin tab-focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+
+@mixin font-face( $font-name, $font-path :"assets" ) {
+
+    @font-face{
+        font-family: $font-name;
+        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot');
+        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.woff') format('woff'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.ttf') format('truetype'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.svg##{$font-name}') format('svg');
+        font-weight:normal;
+        font-style:normal;
+    }
+}
+
+
+// The CSS property pointer-events allows authors to control under what
+// circumstances (if any) a particular graphic element can become the target of
+// mouse events.
+// @see https://developer.mozilla.org/en/CSS/pointer-events
+//
+// @param $type [ auto | none | visiblePainted | visibleFill | visibleStroke |
+// visible | painted | fill | stroke | all | inherit ]
+@mixin pointer-events($type: none) {
+    $type: unquote($type);
+    @include experimental(pointer-events, $type,
+        -moz, -webkit, not -o, not -ms, -khtml, official
+    );
+}
+
+
+// Easily create and apply styles to multiple heading levels
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to{
+      h#{$i}, .h#{$i} {
+        @content
+      }
+    }
+}
+
+
+
+
+@mixin keyframe ($animation-name){
+    @-webkit-keyframes $animation-name{
+        @content;
+    }
+
+    @-moz-keyframes $animation-name{
+        @content;
+    }
+
+    @-ms-keyframes $animation-name{
+        @content;
+    }
+
+    @-o-keyframes $animation-name{
+        @content;
+    }
+
+    @keyframes $animation-name{
+        @content;
+    }
+}
+
+
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+
+
+// ==========================================================================
+// MEDIA QUERY INLINE
+// ==========================================================================
+
+@mixin respond-to($media) {
+
+    @if ($is-oldie == true or $isFixed == true) {
+        // Check if we're IE. If so then just return the content sans-media query
+        @content;
+    } @else {
+        // Return the appropriate MQ declaration for modern browsers
+        @if $media == tiny {
+            @media only screen and (min-width: rsize($break-tiny)) { @content; }
+        }
+        @else if $media == small {
+            @media only screen and (min-width: rsize($break-small)) { @content; }
+        }
+        @else if $media == medium {
+            @media only screen and (min-width: rsize($break-medium)) { @content; }
+        }
+        @else if $media == large {
+            @media only screen and (min-width: rsize($break-large)) { @content; }
+        }
+        @else if $media == xlarge {
+            @media only screen and (min-width: rsize($break-xlarge)) { @content; }
+        }
+        @else {
+            @media only screen and (min-width: $media) { @content; }
+        }
+    }
+}
+
+
+
+// ==========================================================================
+// TEXTURE
+// ==========================================================================
+
+
+// ARROWS
+// ==========================================================================
+
+// 	
+//  $direction: top, left, right, bottom, top-left, top-right, bottom-left, bottom-right
+// 	$color: hex, rgb or rbga
+// 	$size: px or em
+//  
+// 	@example
+// 	.element{
+//  	 @include arrow(top, #000, 50px);   
+// 	}
+//
+
+@mixin arrow($direction, $color, $size){
+    display: block;
+    height: 0;
+    width: 0;
+    
+    @if $direction == 'top' {
+        border-left: $size solid transparent;
+    	border-right: $size solid transparent;
+    	border-bottom: $size solid $color;
+    } @else if $direction == 'right' {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+    	border-left: $size solid $color;
+    } @else if $direction == 'bottom' {
+        border-top: $size solid $color;
+        border-right: $size solid transparent;
+        border-left: $size solid transparent;
+    } @else if $direction == 'left' {
+        border-top: $size solid transparent;
+    	border-right: $size solid $color;
+    	border-bottom: $size solid transparent;
+    } @else if $direction == 'top-left' {
+        border-top: $size solid $color; 
+        border-right: $size solid transparent;	
+    } @else if $direction == 'top-right' {
+        border-top: $size solid $color; 
+        border-left: $size solid transparent;
+    } @else if $direction == 'bottom-left' {
+        border-bottom: $size solid $color; 
+        border-right: $size solid transparent;	
+    } @else if $direction == 'bottom-right' {
+        border-bottom: $size solid $color; 
+        border-left: $size solid transparent;
+    }
+}

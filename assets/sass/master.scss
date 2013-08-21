@@ -1,4 +1,21 @@
 // ==========================================================================
+// MASTER STYLESHEET
+//
+// The is the master sass stylesheet. It controls the inclusion of:
+//
+// * the SCSS framework
+// * site specific SCSS
+//
+// There is also a master-ie.scss file (disabled by default) which creates a
+// separate stylesheet when the site for IE browsers so that (when using RWD)
+// they aren't simply served the "mobile" styles. See
+//
+// http://jakearchibald.github.io/sass-ie/
+//
+// ==========================================================================
+
+
+// ==========================================================================
 // FRAMEWORK & CONFIG
 // ==========================================================================
 
@@ -7,18 +24,6 @@
 
 // Import the "Web Starter" framework
 @import "framework/_framework.scss";
-
-
-
-
-// ==========================================================================
-// WIREFRAME/PROTOTYPING
-// Temp styles used for quick prototypes or wireframes. 
-// ==========================================================================
-
-// Wireframe
-//@import "site/_wireframe.scss";
-
 
 
 // ==========================================================================
@@ -43,7 +48,7 @@
 // Individual stylesheets for unique pages on the site/application
 // ==========================================================================
 
-// Home 
+// Home
 //@import "site/pages/_home.scss";
 
 // Blog
@@ -51,17 +56,3 @@
 
 // Contact
 //@import "site/pages/_contact.scss";
-
-
-
-
-
-
-
-
-
-
-
-
-
-

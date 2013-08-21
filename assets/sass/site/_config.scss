@@ -1,9 +1,13 @@
+// ==========================================================================
 // PROJECT CONFIGURATION
-
-// This file allows you to set variables which will be reused
-// throughout your project to save you time and energy. 
-// The variables defined here are used throughout the framework.
-// Removing them may cause errors during compelation.
+//
+// Use this file to set variables used throughout your stylesheets
+// Tanelinell prefers variables in this file to those in it's own defaults.
+// Therefore you can easily overide any framework defaults simply by redeclaring
+// the variable below. This allows you to completely modify how the framework works
+// without ever having to modify the framework
+//
+// ==========================================================================
 
 
 
@@ -11,7 +15,7 @@
 // BRANDING
 // ==========================================================================
 
-// COLORS
+// BRAND COLOURS
 // ==========================================================================
 
 // Primary
@@ -23,107 +27,25 @@
 // Tertiary
 //$tColor:						YOURHEXCODE;
 
-// Links
-$linkColor:             		#08c;
-$linkColorHover:        		darken($linkColor, 15%);
-
-
-// SITE BRAND
-// ==========================================================================
-
-$logo: 							"site-logo.png";			// assumes location of "/images/"
-$site-credit:					"site-credit.png";	// assumes location of "/images/"
-
-
 
 // ==========================================================================
-// TYPOGRAPHY
+// MOLECULES & COMPOUNDS
+// Some of the frameworks components are turned off by default. Activate them
+// here by setting the require variables to "true"/"false".
 // ==========================================================================
 
-// Fontstack
-// ==========================================================================
-
-$baseFontSize:          		16px;
-$baseFontFamily:        		Arial, "Helvetica Neue", Helvetica, sans-serif !default; // or write your own custom font-stack
-$baseLineHeight:        		1.666em;
+// example....
+// $use-nav: 						false;
 
 
 
 
-// ==========================================================================
-// GRID
-// ==========================================================================
-
-// Column Configuration
-//$cols: 							12;		// number of columns required
-//$gutter: 						3;		// gutter between each column
-
-// Include "push-" and "pull-" classes for source reordering?
-$bGridPushClasses:				false;
-$bGridPullClasses:				false;
-
-// Do we want to use the packaged grid breakpoints
-// If not we need to create our own by including
-// the @include grid-set() at our required breakpoints
-//$bStdGridBreakpoints: 			true;
-
-
-// ==========================================================================
-// LAYOUT
-// ==========================================================================
-
-// Is this a Fixed width website (ie: non-Responsive)?
-// If "true" then be sure to set your fixed width below.
-// Setting to "false" will cause all media queries to simply
-// return the rule withou the wrapping media query
-$isFixed:						false;
-
-// Width of primary width ".container" elements
-$containerWidth:				90%;
-@if ($isFixed == true) {
-	$containerWidth:			960px;
-} 
-
-
-// Spacing 
-$spacingUnit:					30;
-$halfSpacingUnit:				15;
 
 
 
 
-// ==========================================================================
-// MEDIA QUERY BREAKPOINTS
-// ==========================================================================
-
-// Note: these are placeholders! 
-// Alter these to suit the breakpoints as dictated by your design.
-// DO NOT rely on device widths to define your breakpoints! It's a bad idea.
-// 
-// Usage:
-// 
-// @mixin respond-to(tiny/small/medium/large/xlarge) {
-// 
-// }
-
-$break-tiny:            480px;
-$break-small:           600px;
-$break-medium:          768px;
-$break-large:           992px;
-$break-xlarge:          1382px;
-
-// Select a break point (from above) to use as the point at which 
-// grid system switches from full to "linearised" layout.
-// Don't really like this but can't think of a better way whilst
-// maintaining the required flexability
-$mobileBreak:			medium;
 
 
 
 
-// ==========================================================================
-// ICONS
-// ==========================================================================
 
-// Social Icons
-$icons-social: 			true;

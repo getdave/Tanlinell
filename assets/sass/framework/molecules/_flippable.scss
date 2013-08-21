@@ -1,0 +1,109 @@
+@if $use-flippable == true {
+/* ============================================================ */
+
+// FLIPABLE MODULE
+
+// Description: content that can be flipped in a 3D plain to reveal
+// content on the reverse side. Functions like flipping a playing
+// card.
+
+/* ============================================================ */
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+.flippable {
+	position: relative;
+    height: auto !important; // fix for IE7
+}
+
+.flippable__wrap,
+.flippable__content,
+.flippable__face {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.flippable__face {
+    background-color: #ccc;
+    @include background-size(cover);
+}
+
+.flippable__face--back {
+    background: #c9c9c9;
+    left: -999em;
+}
+
+.flippable--is-flipped,
+.flippable:hover,
+.flippable:focus {
+	.flippable__face--back {
+		left: 0;
+	}
+}
+
+// 3D "FLIPPING" EFFECT
+// ==========================================================================
+
+.csstransforms3d {
+	.flippable__wrap {
+		@include perspective( 500px );
+	}
+
+	.flippable__content {
+		@include transition(all 0.4s ease-in-out);
+	    @include transform-style(preserve-3d);
+	}
+
+	.flippable__face {
+	    @include backface-visibility(hidden);
+	}
+
+	
+
+	.flippable__face--back {
+		left: 0; // overide base "hidden" style
+		@include transform(rotate3d(0,1,0,180deg));
+	}
+
+	.flippable--is-flipped,
+	.flippable:hover,
+	.flippable:focus, {
+		.flippable__content {
+	    	@include transform( rotate3d(0,1,0,-180deg));
+		}
+	}
+}
+
+// REVERSED FLIP DIRECTION
+.csstransforms3d {
+	.flippable--alt {
+		&:hover,
+		&:focus {
+			.flippable__content {
+				@include transform( rotate3d(0,1,0,180deg));
+			}
+		}
+	}
+}
+
+
+// ==========================================================================
+// CIRCULAR
+// ==========================================================================
+
+.flippable--circle {
+	.flippable__face {
+		@include border-radius(100%);
+	}
+}
+
+}//endif
