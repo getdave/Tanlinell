@@ -3417,22 +3417,23 @@ html[xmlns] .slides {
   *display: inline;
   vertical-align: middle;
   background-position: 50% 50%;
+  background-repeat: no-repeat;
   background-size: contain;
   width: 66px;
-  height: 30px;
+  height: 31px;
 }
-/* line 18, ../sass/framework/compounds/_site-credit.scss */
+/* line 19, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
   background-image: url('../images/site-credit.png?1377014241');
   width: 62px;
   height: 20px;
 }
 
-/* line 25, ../sass/framework/compounds/_site-credit.scss */
+/* line 26, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
   background-image: url('../images/site-credit--dark.svg?1377014241');
 }
-/* line 28, ../sass/framework/compounds/_site-credit.scss */
+/* line 29, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
   background-image: url('../images/site-credit--dark.png?1377014241');
 }

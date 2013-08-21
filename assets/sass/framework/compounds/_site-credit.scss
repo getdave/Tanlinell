@@ -11,9 +11,10 @@
     @include inline-block;
     vertical-align: middle;
     background-position: 50% 50%;
+    background-repeat: no-repeat;
     background-size: contain;
     width: 66px;
-    height: 30px;
+    height: 31px;
 
     .no-svg & {
         background-image: image-url("site-credit.png");
