@@ -33,7 +33,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     config: 'config.rb',
-                    force: true,
+                    force: false,
                 }
             },
             build: {
