@@ -214,6 +214,14 @@ $one_col: 100% / $cols;
 }
 
 
+@function black($opacity){
+    @return rgba(0,0,0,$opacity)
+}
+
+@function white($opacity){
+    @return rgba(255,255,255,$opacity)
+}
+
 
 // ==========================================================================
 // MEDIA QUERY INLINE

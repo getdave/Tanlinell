@@ -1594,7 +1594,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('select_arrow.png?1377014241');
+    background-image: url('select_arrow.png?1377079647');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2621,7 +2621,7 @@ input.btn {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('site-logo.png?1377014241');
+  background-image: url('site-logo.png?1377079647');
   width: 200px;
   height: 80px;
 }
@@ -2661,18 +2661,18 @@ input.btn {
 }
 /* line 20, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('site-credit.png?1377014241');
+  background-image: url('site-credit.png?1377079647');
   width: 62px;
   height: 20px;
 }
 
 /* line 27, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('site-credit--dark.svg?1377014241');
+  background-image: url('site-credit--dark.svg?1377079647');
 }
 /* line 30, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('site-credit--dark.png?1377014241');
+  background-image: url('site-credit--dark.png?1377079647');
 }
 
 /* ==========================================================================
