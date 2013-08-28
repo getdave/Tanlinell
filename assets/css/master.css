@@ -2789,7 +2789,7 @@ input.btn {
 	</div>
  */
 /* Browser Resets */
-/* line 24, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_flexslider.scss */
+/* line 24, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_flexslider.scss */
 .flex-container a:active,
 .flexslider a:active,
 .flex-container a:focus,
@@ -2797,7 +2797,7 @@ input.btn {
   outline: none;
 }
 
-/* line 27, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_flexslider.scss */
+/* line 27, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_flexslider.scss */
 .slides,
 .flex-control-nav,
 .flex-direction-nav {
@@ -2808,32 +2808,32 @@ input.btn {
 
 /* FlexSlider Necessary Styles
 *********************************/
-/* line 31, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_flexslider.scss */
+/* line 31, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_flexslider.scss */
 .flexslider {
   margin: 0;
   padding: 0;
 }
 
-/* line 32, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_flexslider.scss */
+/* line 32, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_flexslider.scss */
 .flexslider .slides > li {
   display: none;
   -webkit-backface-visibility: hidden;
 }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
-/* line 33, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_flexslider.scss */
+/* line 33, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_flexslider.scss */
 .flexslider .slides img {
   width: 100%;
   display: block;
 }
 
-/* line 34, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_flexslider.scss */
+/* line 34, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_flexslider.scss */
 .flex-pauseplay span {
   text-transform: capitalize;
 }
 
 /* Clearfix for the .slides element */
-/* line 37, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_flexslider.scss */
+/* line 37, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_flexslider.scss */
 .slides:after {
   content: ".";
   display: block;
@@ -2843,12 +2843,12 @@ input.btn {
   height: 0;
 }
 
-/* line 38, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_flexslider.scss */
+/* line 38, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_flexslider.scss */
 html[xmlns] .slides {
   display: block;
 }
 
-/* line 39, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_flexslider.scss */
+/* line 39, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_flexslider.scss */
 * html .slides {
   height: 1%;
 }
@@ -2856,7 +2856,7 @@ html[xmlns] .slides {
 /* No JavaScript Fallback */
 /* If you are not using another script, such as Modernizr, make sure you
  * include js that eliminates this class on page load */
-/* line 44, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_flexslider.scss */
+/* line 44, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_flexslider.scss */
 .js .slides > li:first-child {
   display: block;
 }
