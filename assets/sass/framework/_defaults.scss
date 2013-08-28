@@ -168,14 +168,11 @@ $headingLevel6:					14px !default;
 // ==========================================================================
 
 
-// Is this a Fixed width website (ie: non-Responsive)?
-// If "true" then be sure to set your fixed width below.
-// Setting to "false" will cause all media queries to simply
-// return the rule withou the wrapping media query
-$isFixed:						false !default;
+// Determines whether the site is fixed width. Defaults to "false" unless served is an oldie browser
+$isFixed:						if($is-oldie, true, false) !default;
 
-// Width of primary ".container" elements
-$containerWidth:				if($isFixed, 960px, 90%);
+// Width of primary ".container" elements - determined by $isFixed var
+$containerWidth:				if($isFixed, 960px, 90%) !default;
 
 
 // Breakpoints
@@ -245,6 +242,8 @@ $use-item-list: 				true !default;
 $use-island: 					true !default;
 $use-alerts: 					true !default;
 $use-breadcrumbs: 				true !default;
+$use-pager: 					true !default;
+$use-pagination: 				true !default;
 
 // Default "off"
 $use-block-list: 				false !default;
@@ -254,8 +253,6 @@ $use-flippable: 				false !default;
 $use-graybox: 					false !default;
 $use-hero-unit: 				false !default;
 $use-labels-badges: 			false !default;
-$use-pager: 					false !default;
-$use-pagination: 				false !default;
 $use-split: 					false !default;
 $use-title-block:				false !default;
 

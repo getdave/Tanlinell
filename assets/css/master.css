@@ -1594,7 +1594,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('select_arrow.png?1377079647');
+    background-image: url('select_arrow.png?1377685172');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2291,6 +2291,207 @@ input.btn {
   margin-top: 0.3125em;
 }
 
+/* #Pagination */
+/* Standard controls for navigation between "paged" content. */
+/* ##Base 
+	<div class="pagination">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+		  		<a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+*/
+/* line 21, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pagination.scss */
+.pagination {
+  margin-bottom: 1.5em;
+}
+
+/* line 30, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pagination.scss */
+.pagination ul,
+.pagination ol,
+.pagination .pagination__list, .pagination .pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 40, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pagination.scss */
+.pagination__item,
+.pagination li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-right: 0.3125em;
+  margin-bottom: 0.625em;
+}
+
+/* line 48, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pagination.scss */
+.pagination__link,
+.pagination a,
+.pagination span {
+  display: block;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  line-height: 1;
+}
+
+/* line 59, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pagination.scss */
+.pagination__link:hover, .pagination__link:focus,
+.pagination a:hover,
+.pagination a:focus {
+  background-color: #f9f9f9;
+}
+
+/* line 70, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pagination.scss */
+.pagination__item--disabled a,
+.pagination .disabled a {
+  color: #ccc;
+}
+
+/* line 80, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pagination.scss */
+.pagination__item--current a,
+.pagination .current a {
+  background-color: #f1f1f1;
+  border-color: #a8a8a8;
+  color: #666;
+}
+
+/* line 92, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pagination.scss */
+.pagination .range a,
+.pagination .range a:hover,
+.pagination .range a:focus {
+  background-color: transparent;
+  border-color: #ccc;
+  color: #666;
+}
+
+/* line 105, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pagination.scss */
+.pagination__prev a,
+.pagination .prev a,
+.pagination__next a,
+.pagination .next a {
+  border: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* ## Centered */
+/* 
+	<div class="pagination pagination--centered">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			  <a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+*/
+/* line 130, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pagination.scss */
+.pagination--centered {
+  text-align: center;
+}
+
+/* ##Right */
+/* 
+	<div class="pagination pagination--right">
+		<ul>
+			<li><a href="#">Prev</a></li>
+			<li class="active">
+			  <a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+*/
+/* line 152, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pagination.scss */
+.pagination--right {
+  text-align: right;
+}
+
+/* #PAGER */
+/* Standard prev/next controls for navigation between "paged" content. /*
+
+/* ##Base 
+	<ul class="pager">
+		<li class="pager__item pager__item--prev">
+			<a href="#" class="pager__link">&larr; Older</a>
+		</li>
+		<li class="pager__item pager__item--next">
+			<a href="#" class="pager__link">Newer &rarr;</a>
+		</li>
+	</ul>
+*/
+/* line 17, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pager.scss */
+.pager {
+  margin: 0 0 1.666em 0;
+  padding: 0;
+  list-style: none;
+  zoom: 1;
+}
+/* line 86, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/imports/_mixins.scss */
+.pager:before {
+  content: "";
+  display: table;
+}
+/* line 91, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/imports/_mixins.scss */
+.pager:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 25, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pager.scss */
+.pager li,
+.pager__item {
+  display: inline;
+  float: left;
+}
+
+/* line 31, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pager.scss */
+.pager__link,
+.pager a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  line-height: 1;
+  padding: 0.5em 0.75em;
+  text-decoration: none;
+  border: 1px solid #ccc;
+}
+
+/* line 40, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/molecules/_pager.scss */
+.pager__item--next,
+li.pager__item--next {
+  float: right;
+}
+
 /* #Breadcrumbs */
 /* Standard Breadcrumb navigation for assisting users with establishing their position within the website hierarchy
 
@@ -2621,7 +2822,7 @@ input.btn {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('site-logo.png?1377079647');
+  background-image: url('site-logo.png?1377685172');
   width: 200px;
   height: 80px;
 }
@@ -2661,18 +2862,18 @@ input.btn {
 }
 /* line 20, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('site-credit.png?1377079647');
+  background-image: url('site-credit.png?1377685172');
   width: 62px;
   height: 20px;
 }
 
 /* line 27, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('site-credit--dark.svg?1377079647');
+  background-image: url('site-credit--dark.svg?1377685172');
 }
 /* line 30, /Applications/MAMP/htdocs/tanlinell/wordpress/wp-content/themes/Tanlinell/assets/sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('site-credit--dark.png?1377079647');
+  background-image: url('site-credit--dark.png?1377685172');
 }
 
 /* ==========================================================================

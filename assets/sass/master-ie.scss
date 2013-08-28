@@ -4,7 +4,7 @@
 // variable which is used to trigger specific behaviour for old IE
 
 
-$is-oldie: true;
+$is-oldie: true !default;
 
 // Uncomment to activate IE styles
-//@import "master.scss";
+@import "master.scss";
