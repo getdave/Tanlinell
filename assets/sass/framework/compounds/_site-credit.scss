@@ -14,13 +14,12 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 66px;
-    height: 31px;
+    width: 98px;
+    height: 13px;
 
     .no-svg & {
         background-image: image-url("site-credit.png");
-        width: 62px;
-        height: 20px;
+
     }
 }
 

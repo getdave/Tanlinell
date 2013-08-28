@@ -2857,23 +2857,21 @@ li.pager__item--next {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 66px;
-  height: 31px;
+  width: 98px;
+  height: 13px;
 }
 /* line 20, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png');
-  width: 62px;
-  height: 20px;
+  background-image: url('../images/site-credit.png?1377696293');
 }
 
-/* line 27, ../sass/framework/compounds/_site-credit.scss */
+/* line 26, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
   background-image: url('../images/site-credit--dark.svg?1377164534');
 }
-/* line 30, ../sass/framework/compounds/_site-credit.scss */
+/* line 29, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png');
+  background-image: url('../images/site-credit--dark.png?1377696293');
 }
 
 /* ==========================================================================

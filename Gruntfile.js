@@ -135,7 +135,7 @@ module.exports = function(grunt) {
                     { src: ['assets/images/*.svg'] }
                 ]
             }
-        }
+        },
 
         // Code Deployments (via rsync)
         /* deploy: {
