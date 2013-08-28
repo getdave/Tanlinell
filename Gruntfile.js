@@ -33,7 +33,8 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     config: 'config.rb',
-                    force: false,
+                    force: true,
+                    relativeAssets: true
                 }
             },
             build: {
@@ -125,6 +126,16 @@ module.exports = function(grunt) {
                 }
             }
         },
+
+        svg2png: {
+            all: {
+                // specify files in array format with multiple src-dest mapping
+                files: [
+                    // rasterize SVG file to same directory
+                    { src: ['assets/images/*.svg'] }
+                ]
+            }
+        }
 
         // Code Deployments (via rsync)
         /* deploy: {
