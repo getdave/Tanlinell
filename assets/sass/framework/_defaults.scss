@@ -172,7 +172,7 @@ $headingLevel6:					14px !default;
 // If "true" then be sure to set your fixed width below.
 // Setting to "false" will cause all media queries to simply
 // return the rule withou the wrapping media query
-$isFixed:						false;
+$isFixed:						false !default;
 
 // Width of primary ".container" elements
 $containerWidth:				if($isFixed, 960px, 90%);
