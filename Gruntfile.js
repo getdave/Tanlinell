@@ -140,8 +140,7 @@ module.exports = function(grunt) {
         // Code Deployments (via rsync)
         /* deploy: {
             options: {
-                exclude: ['.git*', 'node_modules', '.sass-cache', 'Gruntfile.js', 'package.json', '.DS_Store', 'README.md', 'readme.html', 'license.txt', 'humans.txt','config.rb', '.jshintrc', '.gitignore', 'wp-config-local.php'],
-                args: [
+                        exclude: ['.git*', 'node_modules', '.sass-cache', 'Gruntfile.js', 'package.json', '.DS_Store', 'README.md', 'readme.html', 'license.txt', 'humans.txt','config.rb', '.jshintrc', '.gitignore', 'wp-config-local.php', 'w3tc-config', 'advanced-cache.php', 'object-cache.php'],                args: [
                         "-avz",     //  -a is an alias for -rlptgoD; -v is verbose; -z is compression
                         "--progress",
                 ],
