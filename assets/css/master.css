@@ -506,34 +506,47 @@ p {
   margin: 0 0 1.666em;
 }
 
-/* line 33, ../sass/framework/atoms/_typo.scss */
+/* line 27, ../sass/framework/atoms/_typo.scss */
+.lead {
+  font-size: 1.15em;
+  line-height: 1.4;
+  margin-bottom: 0.833em;
+}
+@media only screen and (min-width: 48em) {
+  /* line 27, ../sass/framework/atoms/_typo.scss */
+  .lead {
+    font-size: 1.5em;
+  }
+}
+
+/* line 43, ../sass/framework/atoms/_typo.scss */
 a {
   color: #0088cc;
 }
 
-/* line 38, ../sass/framework/atoms/_typo.scss */
+/* line 48, ../sass/framework/atoms/_typo.scss */
 a:hover,
 a:focus {
   color: #005580;
 }
 
-/* line 42, ../sass/framework/atoms/_typo.scss */
+/* line 52, ../sass/framework/atoms/_typo.scss */
 a:focus {
   outline: thin dotted;
 }
 
-/* line 46, ../sass/framework/atoms/_typo.scss */
+/* line 56, ../sass/framework/atoms/_typo.scss */
 a:hover, a:active {
   outline: none;
 }
 
-/* line 56, ../sass/framework/atoms/_typo.scss */
+/* line 66, ../sass/framework/atoms/_typo.scss */
 ul, ol {
   padding: 0;
   margin: 0 0 1.666em 25px;
 }
 
-/* line 65, ../sass/framework/atoms/_typo.scss */
+/* line 75, ../sass/framework/atoms/_typo.scss */
 ul ul,
 ul ol,
 ol ol,
@@ -541,52 +554,52 @@ ol ul {
   margin-bottom: 0;
 }
 
-/* line 69, ../sass/framework/atoms/_typo.scss */
+/* line 79, ../sass/framework/atoms/_typo.scss */
 ul {
   list-style: disc;
 }
 
-/* line 73, ../sass/framework/atoms/_typo.scss */
+/* line 83, ../sass/framework/atoms/_typo.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 77, ../sass/framework/atoms/_typo.scss */
+/* line 87, ../sass/framework/atoms/_typo.scss */
 li {
   line-height: 1.666em;
 }
 
-/* line 86, ../sass/framework/atoms/_typo.scss */
+/* line 96, ../sass/framework/atoms/_typo.scss */
 blockquote, blockquote p {
   line-height: 1.5;
   color: #777;
 }
 
-/* line 87, ../sass/framework/atoms/_typo.scss */
+/* line 97, ../sass/framework/atoms/_typo.scss */
 blockquote {
   margin: 0 0 1.666em;
   padding: 9px 20px 0 19px;
   border-left: 1px solid #ddd;
 }
 
-/* line 88, ../sass/framework/atoms/_typo.scss */
+/* line 98, ../sass/framework/atoms/_typo.scss */
 blockquote cite {
   display: block;
   font-size: ms(0)-1;
   color: #555;
 }
 
-/* line 89, ../sass/framework/atoms/_typo.scss */
+/* line 99, ../sass/framework/atoms/_typo.scss */
 blockquote cite:before {
   content: "\2014 \0020";
 }
 
-/* line 90, ../sass/framework/atoms/_typo.scss */
+/* line 100, ../sass/framework/atoms/_typo.scss */
 blockquote cite a, blockquote cite a:visited {
   color: #555;
 }
 
-/* line 99, ../sass/framework/atoms/_typo.scss */
+/* line 109, ../sass/framework/atoms/_typo.scss */
 img {
   max-width: 100%;
   height: auto;
@@ -595,22 +608,22 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* line 108, ../sass/framework/atoms/_typo.scss */
+/* line 118, ../sass/framework/atoms/_typo.scss */
 #googlemap img, object, embed {
   max-width: none;
 }
 
-/* line 109, ../sass/framework/atoms/_typo.scss */
+/* line 119, ../sass/framework/atoms/_typo.scss */
 #map_canvas embed {
   max-width: none;
 }
 
-/* line 110, ../sass/framework/atoms/_typo.scss */
+/* line 120, ../sass/framework/atoms/_typo.scss */
 #map_canvas img {
   max-width: none;
 }
 
-/* line 111, ../sass/framework/atoms/_typo.scss */
+/* line 121, ../sass/framework/atoms/_typo.scss */
 #map_canvas object {
   max-width: none;
 }
@@ -714,6 +727,48 @@ h6, .h6 {
   .kilo {
     font-size: 3em;
   }
+}
+
+/* line 91, ../sass/framework/atoms/_headings.scss */
+h1 small, .h1 small, .giga small, .mega small, .kilo small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+
+/* line 91, ../sass/framework/atoms/_headings.scss */
+h2 small, .h2 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+
+/* line 91, ../sass/framework/atoms/_headings.scss */
+h3 small, .h3 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+
+/* line 91, ../sass/framework/atoms/_headings.scss */
+h4 small, .h4 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+
+/* line 91, ../sass/framework/atoms/_headings.scss */
+h5 small, .h5 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+
+/* line 91, ../sass/framework/atoms/_headings.scss */
+h6 small, .h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
 }
 
 /* #Containers */

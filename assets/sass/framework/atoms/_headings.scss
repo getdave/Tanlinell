@@ -85,3 +85,12 @@ h6,.h6 {
         font-size: rsize($kilo);
     }   
 }
+
+
+@include headings() {
+	small {
+		font-weight: normal;
+		line-height: 1;
+		color: #999;
+	}
+}
