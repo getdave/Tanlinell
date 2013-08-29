@@ -3,6 +3,7 @@
 
 
 label {
+	display: block;
 	font-weight: bold; 
 	font-size: 100%;
 }
@@ -166,6 +167,7 @@ button {
 	*padding-bottom: 1px; 
 }
 
+
 textarea,
 select,
 input[type="date"],
@@ -182,20 +184,24 @@ input[type="time"],
 input[type="url"],
 input[type="week"] {
 	@include box-sizing(border-box);
-	-webkit-appearance: none;
+	@include appearance(none);
+	@include box-shadow(none);
 	background-color: $white;
 	border: 1px solid;
 	border-color: $gray;
 	color: $black;
 	outline: 0;
 	margin: 0;
-	padding: 3px 4px;
 	text-align: left;
-	font-size: $baseFontSize;
+	width: 100%;
+	height: $baseLineHeight*1.5;
+	padding: rsize(3px) rsize(10px);
+	//max-width: rsize(420px);
+	font-size: 100%;
+
 	// Leaving out Helvetica Neue, to not throw off size="..."
 	// on inputs. Arial is more reliable, on Windows and OS X.
 	font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
-	height: 2em;
 	vertical-align: top;
 	// IE7
 	*padding-top: 2px;
@@ -212,6 +218,24 @@ input[type="week"] {
 			inset 0 1px 1px rgba($black, .075), 
 			0 0 8px rgba(82,168,236,.6)
 		);
+	}
+}
+
+textarea {
+	height: auto;
+	padding: rsize(10px) 15px;
+}
+
+select {
+	cursor: pointer;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: right center;
+	@include background-image( image-url('select_arrow.png'));
+	height: rsize(40px);
+	&:hover,
+	&:focus {
+		background-color: #fefefe;
 	}
 }
 
@@ -329,6 +353,8 @@ optgroup {
 		padding: 0; 
 	} 
 }
+
+
 
 
 
