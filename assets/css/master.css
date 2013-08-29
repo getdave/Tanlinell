@@ -1594,7 +1594,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1377685172');
+    background-image: url('../images/select_arrow.png?1377790296');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2626,6 +2626,27 @@ li.pager__item--next {
   padding-bottom: 56.25%;
 }
 
+/* #Title Block */
+/* Addresses common markup/presentation scenario of title with meta information
+*/
+/* ##Example */
+/*
+    <header class="title-block">
+		<h1 class="title-block__heading">Article Heading</h1>
+		<small class="title-block__meta">March 19th, 2013 by David Smith</small>
+    </header>
+*/
+/* line 17, ../sass/framework/molecules/_title-block.scss */
+.title-block__heading {
+  margin-bottom: 0;
+}
+
+/* line 21, ../sass/framework/molecules/_title-block.scss */
+.title-block__meta {
+  margin-bottom: 0.833em;
+  color: #999999;
+}
+
 /* #Inline List */
 /* Creates list for when you just need a horizontal list of links /*
 
@@ -2771,6 +2792,56 @@ li.pager__item--next {
   margin-left: 3.332em;
 }
 
+/* line 4, ../sass/framework/molecules/_code.scss */
+code,
+pre {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+/* line 8, ../sass/framework/molecules/_code.scss */
+code {
+  padding: 0.125em 0.25em;
+  font-size: 90%;
+  color: #c7254e;
+  white-space: nowrap;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
+/* line 17, ../sass/framework/molecules/_code.scss */
+pre {
+  display: block;
+  padding: 0.59375em;
+  margin: 0 0 1.666em;
+  color: #333333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+
+/* line 29, ../sass/framework/molecules/_code.scss */
+pre.prettyprint {
+  margin-bottom: 1.666em;
+}
+
+/* line 33, ../sass/framework/molecules/_code.scss */
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
+
+/* line 42, ../sass/framework/molecules/_code.scss */
+.pre-scrollable {
+  max-height: 21.25em;
+  overflow-y: scroll;
+}
+
 /* ==========================================================================
    COMPOUNDS
    Groupings of molecular objects to create common components
@@ -2822,7 +2893,7 @@ li.pager__item--next {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1377685172');
+  background-image: url('../images/site-logo.png?1377790296');
   width: 200px;
   height: 80px;
 }
@@ -2862,16 +2933,16 @@ li.pager__item--next {
 }
 /* line 20, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1377696293');
+  background-image: url('../images/site-credit.png?1377790296');
 }
 
 /* line 26, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1377164534');
+  background-image: url('../images/site-credit--dark.svg?1377790296');
 }
 /* line 29, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1377696293');
+  background-image: url('../images/site-credit--dark.png?1377790296');
 }
 
 /* ==========================================================================
