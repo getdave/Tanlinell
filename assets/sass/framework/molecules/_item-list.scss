@@ -22,8 +22,8 @@
 
 	> li,
 	.list-item {
-		margin-bottom: rsize(30px);
-		padding-bottom: rsize(30px);
+		margin-bottom: $baseLineHeight;
+		padding-bottom: $baseLineHeight;
 		@include clearfix;
 	}
 }

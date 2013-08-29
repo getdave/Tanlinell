@@ -1651,7 +1651,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1377792215');
+    background-image: url('../images/select_arrow.png?1377792503');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1985,8 +1985,8 @@ optgroup::-moz-focus-inner {
 /* line 24, ../sass/framework/molecules/_item-list.scss */
 .item-list > li,
 .item-list .list-item {
-  margin-bottom: 1.875em;
-  padding-bottom: 1.875em;
+  margin-bottom: 1.666em;
+  padding-bottom: 1.666em;
   zoom: 1;
 }
 /* line 86, ../sass/framework/imports/_mixins.scss */
@@ -2950,7 +2950,7 @@ pre code {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1377792215');
+  background-image: url('../images/site-logo.png?1377792503');
   width: 200px;
   height: 80px;
 }
@@ -2990,16 +2990,16 @@ pre code {
 }
 /* line 20, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1377792215');
+  background-image: url('../images/site-credit.png?1377792503');
 }
 
 /* line 26, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1377792215');
+  background-image: url('../images/site-credit--dark.svg?1377792503');
 }
 /* line 29, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1377792215');
+  background-image: url('../images/site-credit--dark.png?1377792503');
 }
 
 /* ==========================================================================
