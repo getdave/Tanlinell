@@ -79,19 +79,19 @@ $allGridClasses: #{grid-selectors()};
     @include box-sizing(border-box);
     *behavior: url(/boxsizing.htc);
 
-    .large-gutter & {
+    .large-gutter > & {
         padding-left: $large_gutter_width;
     }
 
-    .half-gutter & {
+    .half-gutter > & {
         padding-left: $half_gutter_width;
     }
 
-    .no-gutter & {
+    .no-gutter > & {
         padding-left: 0;
     }
 
-    .grid-ib & {
+    .grid-ib > & {
         @include inline-block;
         float: none;
         letter-spacing: normal;
