@@ -26,17 +26,17 @@ function tanlinell_scripts() {
 	wp_enqueue_script('modernizr');
 	
 	// Plugins - all calls to init common plugins
-	wp_register_script('plugins', get_template_directory_uri() . '/assets/js/plugins.min.js', array('jquery'), '1.0' , true );
+	wp_register_script('plugins', get_template_directory_uri() . '/assets/js/plugins.min.js', array('jquery-core'), '1.0' , true );
 	wp_enqueue_script('plugins');
 
 	// Main.js - custom javascript for the site
-	wp_register_script('main', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), '1.0' , true );
+	wp_register_script('main', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery-core'), '1.0' , true );
 	wp_enqueue_script('main'); 
 
 	// jQuery - load jQuery in the footer instead of header
     if (!is_admin()) {
-        wp_deregister_script('jquery');
-        wp_register_script('jquery', '/wp-includes/js/jquery/jquery.js', false, false, true);
+        wp_deregister_script('jquery-core');
+        wp_register_script('jquery-core', '/wp-includes/js/jquery/jquery.js', false, false, true);
 				
 		$theID = '';
         if(!empty($post->ID))
@@ -47,8 +47,8 @@ function tanlinell_scripts() {
 								'siteUrl'					=> get_site_url(),
 								'thePermalink'				=> get_permalink()
 							);
-		wp_localize_script('jquery', 'tanlinellSiteDetails', $site_details );
-        wp_enqueue_script('jquery');
+		wp_localize_script('jquery-core', 'tanlinellSiteDetails', $site_details );
+        wp_enqueue_script('jquery-core');
     }
 
 
