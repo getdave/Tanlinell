@@ -12,6 +12,14 @@
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
+	<?php elseif ( is_home()) : // Custom output for home.php i.e. blog home ?>
+	
+		<?php if( has_excerpt() ) : ?>
+			<?php the_excerpt(); ?>
+		<?php else: ?>
+			<p><?php echo balanceTags(wp_trim_words( get_the_content(), $num_words = 30 ), true); ?></p>
+		<?php endif; ?>
+	
 	<?php else : ?>
 	<div class="entry-content" itemprop="description">
 		<?php do_atomic('before_post_content'); ?>		
