@@ -12,7 +12,7 @@
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
-	<?php elseif ( is_home()) : // Custom output for home.php i.e. blog home ?>
+	<?php elseif ( !is_single() ) : // Custom output for home.php i.e. blog home ?>
 	
 		<?php if( has_excerpt() ) : ?>
 			<?php the_excerpt(); ?>
