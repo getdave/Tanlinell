@@ -14,27 +14,11 @@ get_header(); ?>
 	<div class="column-container">
 		<div class="main" role="main">
 			<div class="main-inner">
+				
+				<?php $post = get_page_by_title( 'News' ); ?>				
+				<?php get_template_part( 'templates/partials/pagetitle' ); ?>
+				
 				<?php if ( have_posts() ) : ?>
-
-					<header class="entry-header">
-						<h1 class="page-title entry-title">
-							News
-						</h1>
-						<?php
-							if ( is_category() ) {
-								// show an optional category description
-								$category_description = category_description();
-								if ( ! empty( $category_description ) )
-									echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . '</div>' );
-
-							} elseif ( is_tag() ) {
-								// show an optional tag description
-								$tag_description = tag_description();
-								if ( ! empty( $tag_description ) )
-									echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );
-							}
-						?>
-					</header>
 					
 					<ul class="article-list item-list">
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -64,7 +48,7 @@ get_header(); ?>
 
 		<div class="sub">
 			<div class="sub-inner">
-			<?php get_sidebar('newsletters'); ?>
+			<?php get_sidebar(); ?>
 			</div>
 		</div>
 	</div>
