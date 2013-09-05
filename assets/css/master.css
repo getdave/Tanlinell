@@ -1602,7 +1602,7 @@ select {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
-  background-image: url('../images/select_arrow.png?1377792913');
+  background-image: url('../images/select_arrow.png?1378397613');
   height: 2.5em;
 }
 /* line 237, ../sass/framework/atoms/_forms.scss */
@@ -1682,7 +1682,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1377792913');
+    background-image: url('../images/select_arrow.png?1378397613');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2981,7 +2981,7 @@ pre code {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1377792913');
+  background-image: url('../images/site-logo.png?1378397613');
   width: 200px;
   height: 80px;
 }
@@ -3012,25 +3012,27 @@ pre code {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
+  position: relative;
+  top: -2px;
   vertical-align: middle;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 98px;
-  height: 13px;
+  width: 84px;
+  height: 12px;
+  margin-left: 2px;
 }
-/* line 20, ../sass/framework/compounds/_site-credit.scss */
+/* line 22, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1377792913');
+  background-image: url('../images/site-credit.png?1378398423');
 }
 
-/* line 26, ../sass/framework/compounds/_site-credit.scss */
+/* line 28, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1377792913');
+  background-image: url('../images/site-credit--dark.svg?1378386846');
 }
-/* line 29, ../sass/framework/compounds/_site-credit.scss */
+/* line 31, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1377792913');
+  background-image: url('../images/site-credit--dark.png?1378398423');
 }
 
 /* ==========================================================================
