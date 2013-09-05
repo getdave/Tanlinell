@@ -35,6 +35,14 @@ if ( ! function_exists( 'tanlinell_setup' ) ):
 
 function tanlinell_setup() {
 	
+	/**
+	 * FAVICON
+	 */
+	function favicon_link() {
+	    echo '<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />' . "\n";
+	}
+	add_action( 'wp_head', 'favicon_link' );
+	
 
 	/**
 	 * TGM Required Plugins Script
