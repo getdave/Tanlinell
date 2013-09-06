@@ -575,7 +575,7 @@ li {
 
 /* line 96, ../sass/framework/atoms/_typo.scss */
 .list-unstyled {
-  padding-left: 0;
+  margin-left: 0;
   list-style: none;
 }
 
