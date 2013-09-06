@@ -2611,11 +2611,12 @@ li.pager__item--next {
   float: left;
   margin-bottom: 0;
 }
-/* line 34, ../sass/framework/molecules/_breadcrumbs.scss */
+/* line 35, ../sass/framework/molecules/_breadcrumbs.scss */
 .breadcrumbs a,
-.breadcrumbs .trail-end {
+.breadcrumbs .trail-end,
+.breadcrumbs .sep {
   position: relative;
-  padding: 0.7em 1em;
+  padding: 0.7em 0.5em;
   text-decoration: none;
   display: -moz-inline-stack;
   display: inline-block;
@@ -2625,16 +2626,16 @@ li.pager__item--next {
   *display: inline;
   vertical-align: middle;
 }
-/* line 43, ../sass/framework/molecules/_breadcrumbs.scss */
+/* line 44, ../sass/framework/molecules/_breadcrumbs.scss */
 .breadcrumbs .current a {
   color: #999;
 }
-/* line 48, ../sass/framework/molecules/_breadcrumbs.scss */
+/* line 49, ../sass/framework/molecules/_breadcrumbs.scss */
 .breadcrumbs .current a:before, .breadcrumbs .current a:after {
   display: none;
 }
 
-/* line 55, ../sass/framework/molecules/_breadcrumbs.scss */
+/* line 56, ../sass/framework/molecules/_breadcrumbs.scss */
 .breadcrumbs li:first-child a,
 .breadcrumbs .first a {
   padding-left: 1em;

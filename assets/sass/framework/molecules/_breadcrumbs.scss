@@ -31,9 +31,10 @@
 	}
 
 	a,
-	.trail-end {
+	.trail-end,
+	.sep {
 		position: relative;		
-	  	padding: 0.7em 1em;
+	  	padding: 0.7em 0.5em;
 		text-decoration: none;
 		@include inline-block;		
 		vertical-align: middle;
