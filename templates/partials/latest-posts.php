@@ -14,7 +14,7 @@ if($latest_blog_posts->have_posts()) : ?>
 	<li class="latest-posts__item">
 		<article>
 			<?php the_title( '<h6 class="">', '</h6>' ); ?>
-			<?php tanlinell_truncate_posts(apply_filters( 'tanlinell_latest_post_truncate', 20 )) ?>
+			<p><?php echo balanceTags(wp_trim_words( get_the_content(), $num_words = 20, $more = "...<a href='" . get_permalink() . "'>[read more]</a>" ), true); ?></p>
 		</article>
 	</li>
 <?php endwhile;
