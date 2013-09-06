@@ -29,7 +29,7 @@
 	// Standard left layout
 	.m-img {	
 		float:left;	
-		margin-right: 20px;
+		margin-right: $baseLineHeight;
 
 		img {
 			display: block;
@@ -52,7 +52,7 @@
 
 .m-block .m-img-alt {
 	float:right;
-	margin-left: 20px;	
+	margin-left: $baseLineHeight;	
 }
 
 
