@@ -7,10 +7,6 @@
  * @package Tanlinell
  * @since Tanlinell 1.0
  */
- 
-
-add_action( 'init', 'tanlinell_default_page_setup' );
-
 
 function tanlinell_default_page_setup() {
 	
@@ -66,4 +62,5 @@ function tanlinell_default_page_setup() {
 	update_option( 'page_for_posts', $home->ID );
 	
 }
+add_action( 'after_switch_theme', 'tanlinell_default_page_setup' );
 ?>
