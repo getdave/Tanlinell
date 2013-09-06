@@ -10,12 +10,14 @@
 .site-credit {
     @extend .ir;
     @include inline-block;
+    position: relative;
+    top: -2px;
     vertical-align: middle;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: contain;
-    width: 98px;
-    height: 13px;
+    width: 84px;
+    height: 12px;
+    margin-left: 2px;
 
     .no-svg & {
         background-image: image-url("site-credit.png");
