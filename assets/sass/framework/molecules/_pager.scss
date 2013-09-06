@@ -15,7 +15,7 @@
 */
 
 .pager {
-	margin: 0 0 $baseLineHeight 0;
+	margin: 0;
 	padding:0;
 	list-style: none;
 	@include clearfix;
@@ -23,6 +23,7 @@
 
 .pager li,
 .pager__item {
+	margin: $baseLineHeight 0;
 	display: inline;
 	float: left; // required for IE7 alignment
 }

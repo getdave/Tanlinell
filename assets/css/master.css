@@ -1602,7 +1602,7 @@ select {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
-  background-image: url('../images/select_arrow.png?1378397613');
+  background-image: url('../images/select_arrow.png?1378389149');
   height: 2.5em;
 }
 /* line 237, ../sass/framework/atoms/_forms.scss */
@@ -1682,7 +1682,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1378397613');
+    background-image: url('../images/select_arrow.png?1378389149');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2535,7 +2535,7 @@ input.btn, input.gform_button {
 */
 /* line 17, ../sass/framework/molecules/_pager.scss */
 .pager {
-  margin: 0 0 1.666em 0;
+  margin: 0;
   padding: 0;
   list-style: none;
   zoom: 1;
@@ -2555,11 +2555,12 @@ input.btn, input.gform_button {
 /* line 25, ../sass/framework/molecules/_pager.scss */
 .pager li,
 .pager__item {
+  margin: 1.666em 0;
   display: inline;
   float: left;
 }
 
-/* line 31, ../sass/framework/molecules/_pager.scss */
+/* line 32, ../sass/framework/molecules/_pager.scss */
 .pager__link,
 .pager a {
   display: -moz-inline-stack;
@@ -2574,7 +2575,7 @@ input.btn, input.gform_button {
   border: 1px solid #ccc;
 }
 
-/* line 40, ../sass/framework/molecules/_pager.scss */
+/* line 41, ../sass/framework/molecules/_pager.scss */
 .pager__item--next,
 li.pager__item--next {
   float: right;
@@ -2981,7 +2982,7 @@ pre code {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1378397613');
+  background-image: url('../images/site-logo.png?1378389149');
   width: 200px;
   height: 80px;
 }
@@ -3023,16 +3024,16 @@ pre code {
 }
 /* line 22, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1378398423');
+  background-image: url('../images/site-credit.png?1378456029');
 }
 
 /* line 28, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1378386846');
+  background-image: url('../images/site-credit--dark.svg?1378456029');
 }
 /* line 31, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1378398423');
+  background-image: url('../images/site-credit--dark.png?1378456029');
 }
 
 /* ==========================================================================
