@@ -6,7 +6,6 @@ $curr_pageid 	= get_the_ID();
 $root_parent_id = tanlinell_get_root_parent( $curr_pageid, 'page');
 
 $args = array(
-	'depth' => 1,
 	'title_li' => false,
 	'echo' => 0,
 	'child_of' => $root_parent_id,
