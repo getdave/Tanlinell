@@ -105,7 +105,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'assets/images/',
-                    src: '**/*',
+                    src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
                     dest: 'assets/images/'
                 }]
             }
