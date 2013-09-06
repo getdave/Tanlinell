@@ -17,7 +17,7 @@
 		<?php if( has_excerpt() ) : ?>
 			<?php the_excerpt(); ?>
 		<?php else: ?>
-			<p><?php echo balanceTags(wp_trim_words( get_the_content(), $num_words = 30 ), true); ?></p>
+			<p><?php tanlinell_truncate_posts( 30, false ); ?></p>			
 		<?php endif; ?>
 	
 	<?php else : ?>
