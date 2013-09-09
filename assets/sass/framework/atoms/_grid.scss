@@ -20,9 +20,7 @@
 	</div>
 */
 
-$gutter_width: $gutter+em;
-$large_gutter_width: ($gutter*2)+em;
-$half_gutter_width: ($gutter/2)+em;
+
 
 
 .grid-wrap {
@@ -71,7 +69,7 @@ $allGridClasses: #{grid-selectors()};
 // ==========================================================================
 
 // Add styles to all the grid classes
-#{$allGridClasses},
+//#{$allGridClasses},
 .gc {
     width: 100%;
     padding-left: $gutter_width;
@@ -105,7 +103,7 @@ $allGridClasses: #{grid-selectors()};
 @if ($use-standard-breakpoints == true) {
 	// Handheld Grids
 	@include respond-to('tiny') {
-		@include grid-set('h');
+		@include griddle-build($grids,'h');
 		.h-grid-clear {
 			clear: left;
 		}
@@ -113,7 +111,7 @@ $allGridClasses: #{grid-selectors()};
 
 	// Lap Grids
 	@include respond-to('small') {
-		@include grid-set('l');
+		@include griddle-build($grids,'l');
 
 		.h-grid-clear {
 			clear: none;
@@ -126,7 +124,7 @@ $allGridClasses: #{grid-selectors()};
 
 	// Desktop Grids
 	@include respond-to('large') {
-		@include grid-set('d');
+		@include griddle-build($grids,'d');
 		.h-grid-clear,
 		.l-grid-clear {
 			clear: none;
@@ -139,7 +137,7 @@ $allGridClasses: #{grid-selectors()};
 
 	// Widescreen Grids
 	@include respond-to('xlarge') {
-		@include grid-set('w');
+		@include griddle-build($grids,'w');
 
 		.h-grid-clear,
 		.l-grid-clear,

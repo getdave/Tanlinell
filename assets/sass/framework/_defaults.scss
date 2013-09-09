@@ -197,8 +197,8 @@ $mobileBreak:					"medium" !default;
 $use-standard-breakpoints: 		true !default;
 
 // Grid configuration
-$cols: 							12 !default;	// number of columns required
-$gutter: 						3 !default;		// gutter between each column in em's
+$grids: 						2 3 4 5 6 12 !default;	// number of columns required
+$gutter: 						3em !default;	 // gutter between each column in em's
 
 // Include "push-" and "pull-" classes for source reordering?
 $bGridPushClasses:				false !default;

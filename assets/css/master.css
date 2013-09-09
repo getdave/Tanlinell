@@ -796,12 +796,12 @@ h6 small, .h6 small {
   display: block;
   zoom: 1;
 }
-/* line 86, ../sass/framework/imports/_mixins.scss */
+/* line 91, ../sass/framework/imports/_mixins.scss */
 .container:before {
   content: "";
   display: table;
 }
-/* line 91, ../sass/framework/imports/_mixins.scss */
+/* line 96, ../sass/framework/imports/_mixins.scss */
 .container:after {
   content: "";
   display: table;
@@ -851,12 +851,12 @@ h6 small, .h6 small {
   width: auto;
   zoom: 1;
 }
-/* line 86, ../sass/framework/imports/_mixins.scss */
+/* line 91, ../sass/framework/imports/_mixins.scss */
 .container--extend:before {
   content: "";
   display: table;
 }
-/* line 91, ../sass/framework/imports/_mixins.scss */
+/* line 96, ../sass/framework/imports/_mixins.scss */
 .container--extend:after {
   content: "";
   display: table;
@@ -883,7 +883,7 @@ h6 small, .h6 small {
 		I'm the second of the two grid items. No need for a second class for me!
 	</div>
 */
-/* line 28, ../sass/framework/atoms/_grid.scss */
+/* line 26, ../sass/framework/atoms/_grid.scss */
 .grid-wrap, .grid-wrap--large-gutter,
 .large-gutter, .grid-wrap--half-gutter,
 .half-gutter,
@@ -896,7 +896,7 @@ h6 small, .h6 small {
   clear: both;
   zoom: 1;
 }
-/* line 86, ../sass/framework/imports/_mixins.scss */
+/* line 91, ../sass/framework/imports/_mixins.scss */
 .grid-wrap:before, .grid-wrap--large-gutter:before,
 .large-gutter:before, .grid-wrap--half-gutter:before,
 .half-gutter:before,
@@ -905,7 +905,7 @@ h6 small, .h6 small {
   content: "";
   display: table;
 }
-/* line 91, ../sass/framework/imports/_mixins.scss */
+/* line 96, ../sass/framework/imports/_mixins.scss */
 .grid-wrap:after, .grid-wrap--large-gutter:after,
 .large-gutter:after, .grid-wrap--half-gutter:after,
 .half-gutter:after,
@@ -916,44 +916,38 @@ h6 small, .h6 small {
   clear: both;
 }
 
-/* line 38, ../sass/framework/atoms/_grid.scss */
+/* line 36, ../sass/framework/atoms/_grid.scss */
 .grid-wrap--large-gutter,
 .large-gutter {
   margin-left: -6em;
 }
 
-/* line 44, ../sass/framework/atoms/_grid.scss */
+/* line 42, ../sass/framework/atoms/_grid.scss */
 .grid-wrap--half-gutter,
 .half-gutter,
 .gallery-row {
   margin-left: -1.5em;
 }
 
-/* line 50, ../sass/framework/atoms/_grid.scss */
+/* line 48, ../sass/framework/atoms/_grid.scss */
 .grid-wrap--no-gutter,
 .no-gutter {
   margin-left: 0;
 }
 
-/* line 56, ../sass/framework/atoms/_grid.scss */
+/* line 54, ../sass/framework/atoms/_grid.scss */
 .grid-ib {
   letter-spacing: -0.25em;
 }
 
-/* line 60, ../sass/framework/atoms/_grid.scss */
+/* line 58, ../sass/framework/atoms/_grid.scss */
 .grid-divide {
   margin-bottom: 1.666em;
 }
 
-/* line 75, ../sass/framework/atoms/_grid.scss */
-.g1-12, .gonecolumns, .g1-6, .gtwocolumns, .g1-4, .gthreecolumns, .g1-3, .gfourcolumns, .gfivecolumns, .g1-2, .gsixcolumns, .gsevencolumns, .g2-3, .geightcolumns, .g3-4, .gninecolumns, .gtencolumns, .gelevencolumns, .g1-1, .gtwelvecolumns,
-.gc,
-.main,
-.sub,
-.gallery-row .col-2,
-.gallery-row .col-3,
-.gallery-row .col-4,
-.gallery-row .col-6,
+/* line 73, ../sass/framework/atoms/_grid.scss */
+.gc, .main,
+.sub, .gallery-row .col-2, .gallery-row .col-3, .gallery-row .col-4, .gallery-row .col-6,
 .gallery-row .col-5 {
   width: 100%;
   padding-left: 3em;
@@ -963,38 +957,28 @@ h6 small, .h6 small {
   box-sizing: border-box;
   *behavior: url(/boxsizing.htc);
 }
-/* line 82, ../sass/framework/atoms/_grid.scss */
-.large-gutter > .g1-12, .large-gutter > .gonecolumns, .large-gutter > .g1-6, .large-gutter > .gtwocolumns, .large-gutter > .g1-4, .large-gutter > .gthreecolumns, .large-gutter > .g1-3, .large-gutter > .gfourcolumns, .large-gutter > .gfivecolumns, .large-gutter > .g1-2, .large-gutter > .gsixcolumns, .large-gutter > .gsevencolumns, .large-gutter > .g2-3, .large-gutter > .geightcolumns, .large-gutter > .g3-4, .large-gutter > .gninecolumns, .large-gutter > .gtencolumns, .large-gutter > .gelevencolumns, .large-gutter > .g1-1, .large-gutter > .gtwelvecolumns, .large-gutter >
-.gc, .large-gutter >
-.main,
+/* line 80, ../sass/framework/atoms/_grid.scss */
+.large-gutter > .gc, .large-gutter > .main,
 .large-gutter > .sub, .gallery-row .large-gutter > .col-2, .gallery-row .large-gutter > .col-3, .gallery-row .large-gutter > .col-4, .gallery-row .large-gutter > .col-6,
 .gallery-row .large-gutter > .col-5 {
   padding-left: 6em;
 }
-/* line 86, ../sass/framework/atoms/_grid.scss */
-.half-gutter > .g1-12, .gallery-row > .g1-12, .half-gutter > .gonecolumns, .gallery-row > .gonecolumns, .half-gutter > .g1-6, .gallery-row > .g1-6, .half-gutter > .gtwocolumns, .gallery-row > .gtwocolumns, .half-gutter > .g1-4, .gallery-row > .g1-4, .half-gutter > .gthreecolumns, .gallery-row > .gthreecolumns, .half-gutter > .g1-3, .gallery-row > .g1-3, .half-gutter > .gfourcolumns, .gallery-row > .gfourcolumns, .half-gutter > .gfivecolumns, .gallery-row > .gfivecolumns, .half-gutter > .g1-2, .gallery-row > .g1-2, .half-gutter > .gsixcolumns, .gallery-row > .gsixcolumns, .half-gutter > .gsevencolumns, .gallery-row > .gsevencolumns, .half-gutter > .g2-3, .gallery-row > .g2-3, .half-gutter > .geightcolumns, .gallery-row > .geightcolumns, .half-gutter > .g3-4, .gallery-row > .g3-4, .half-gutter > .gninecolumns, .gallery-row > .gninecolumns, .half-gutter > .gtencolumns, .gallery-row > .gtencolumns, .half-gutter > .gelevencolumns, .gallery-row > .gelevencolumns, .half-gutter > .g1-1, .gallery-row > .g1-1, .half-gutter > .gtwelvecolumns, .gallery-row > .gtwelvecolumns, .half-gutter >
-.gc, .gallery-row >
-.gc, .half-gutter >
-.main, .gallery-row >
-.main,
+/* line 84, ../sass/framework/atoms/_grid.scss */
+.half-gutter > .gc, .gallery-row > .gc, .half-gutter > .main, .gallery-row > .main,
 .half-gutter > .sub,
 .gallery-row > .sub, .gallery-row .half-gutter > .col-2, .gallery-row > .col-2, .gallery-row .half-gutter > .col-3, .gallery-row > .col-3, .gallery-row .half-gutter > .col-4, .gallery-row > .col-4, .gallery-row .half-gutter > .col-6, .gallery-row > .col-6,
 .gallery-row .half-gutter > .col-5,
 .gallery-row > .col-5 {
   padding-left: 1.5em;
 }
-/* line 90, ../sass/framework/atoms/_grid.scss */
-.no-gutter > .g1-12, .no-gutter > .gonecolumns, .no-gutter > .g1-6, .no-gutter > .gtwocolumns, .no-gutter > .g1-4, .no-gutter > .gthreecolumns, .no-gutter > .g1-3, .no-gutter > .gfourcolumns, .no-gutter > .gfivecolumns, .no-gutter > .g1-2, .no-gutter > .gsixcolumns, .no-gutter > .gsevencolumns, .no-gutter > .g2-3, .no-gutter > .geightcolumns, .no-gutter > .g3-4, .no-gutter > .gninecolumns, .no-gutter > .gtencolumns, .no-gutter > .gelevencolumns, .no-gutter > .g1-1, .no-gutter > .gtwelvecolumns, .no-gutter >
-.gc, .no-gutter >
-.main,
+/* line 88, ../sass/framework/atoms/_grid.scss */
+.no-gutter > .gc, .no-gutter > .main,
 .no-gutter > .sub, .gallery-row .no-gutter > .col-2, .gallery-row .no-gutter > .col-3, .gallery-row .no-gutter > .col-4, .gallery-row .no-gutter > .col-6,
 .gallery-row .no-gutter > .col-5 {
   padding-left: 0;
 }
-/* line 94, ../sass/framework/atoms/_grid.scss */
-.grid-ib > .g1-12, .grid-ib > .gonecolumns, .grid-ib > .g1-6, .grid-ib > .gtwocolumns, .grid-ib > .g1-4, .grid-ib > .gthreecolumns, .grid-ib > .g1-3, .grid-ib > .gfourcolumns, .grid-ib > .gfivecolumns, .grid-ib > .g1-2, .grid-ib > .gsixcolumns, .grid-ib > .gsevencolumns, .grid-ib > .g2-3, .grid-ib > .geightcolumns, .grid-ib > .g3-4, .grid-ib > .gninecolumns, .grid-ib > .gtencolumns, .grid-ib > .gelevencolumns, .grid-ib > .g1-1, .grid-ib > .gtwelvecolumns, .grid-ib >
-.gc, .grid-ib >
-.main,
+/* line 92, ../sass/framework/atoms/_grid.scss */
+.grid-ib > .gc, .grid-ib > .main,
 .grid-ib > .sub, .gallery-row .grid-ib > .col-2, .gallery-row .grid-ib > .col-3, .gallery-row .grid-ib > .col-4, .gallery-row .grid-ib > .col-6,
 .gallery-row .grid-ib > .col-5 {
   display: -moz-inline-stack;
@@ -1006,297 +990,383 @@ h6 small, .h6 small {
   float: none;
   letter-spacing: normal;
 }
-/* line 100, ../sass/framework/atoms/_grid.scss */
-.grid-divide > .g1-12, .grid-divide > .gonecolumns, .grid-divide > .g1-6, .grid-divide > .gtwocolumns, .grid-divide > .g1-4, .grid-divide > .gthreecolumns, .grid-divide > .g1-3, .grid-divide > .gfourcolumns, .grid-divide > .gfivecolumns, .grid-divide > .g1-2, .grid-divide > .gsixcolumns, .grid-divide > .gsevencolumns, .grid-divide > .g2-3, .grid-divide > .geightcolumns, .grid-divide > .g3-4, .grid-divide > .gninecolumns, .grid-divide > .gtencolumns, .grid-divide > .gelevencolumns, .grid-divide > .g1-1, .grid-divide > .gtwelvecolumns, .grid-divide >
-.gc, .grid-divide >
-.main,
+/* line 98, ../sass/framework/atoms/_grid.scss */
+.grid-divide > .gc, .grid-divide > .main,
 .grid-divide > .sub, .gallery-row .grid-divide > .col-2, .gallery-row .grid-divide > .col-3, .gallery-row .grid-divide > .col-4, .gallery-row .grid-divide > .col-6,
 .gallery-row .grid-divide > .col-5 {
   margin-bottom: 1.666em;
 }
 
 @media only screen and (min-width: 30em) {
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .h1-12, .honecolumns {
-    width: 8.33333%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .h1-6, .htwocolumns {
-    width: 16.66667%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .h1-4, .hthreecolumns {
-    width: 25%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .h1-3, .hfourcolumns {
-    width: 33.33333%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .hfivecolumns {
-    width: 41.66667%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .h1-2, .hsixcolumns {
+  /* Proportional units
+     ========================================================================== */
+  /*
+   * Specify the proportional width of an object.
+   * Primarily for, but not limited to, use with `.grid__cell` components.
+   * Intentional redundancy build into each set of unit classes.
+   */
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h1-2, .h2-4, .h3-6, .h6-12 {
     width: 50%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .hsevencolumns {
-    width: 58.33333%;
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h1-3, .h2-6, .h4-12 {
+    width: 33.33333%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .h2-3, .heightcolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h2-3, .h4-6, .h8-12 {
     width: 66.66667%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .h3-4, .hninecolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h1-4, .h3-12 {
+    width: 25%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h3-4, .h9-12 {
     width: 75%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .htencolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h1-5 {
+    width: 20%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h2-5 {
+    width: 40%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h3-5 {
+    width: 60%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h4-5 {
+    width: 80%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h1-6, .h2-12 {
+    width: 16.66667%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h5-6, .h10-12 {
     width: 83.33333%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .helevencolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h1-12 {
+    width: 8.33333%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h5-12 {
+    width: 41.66667%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h7-12 {
+    width: 58.33333%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .h11-12 {
     width: 91.66667%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .h1-1, .htwelvecolumns {
-    width: 100%;
-  }
-
-  /* line 109, ../sass/framework/atoms/_grid.scss */
+  /* line 107, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear {
     clear: left;
   }
 }
 @media only screen and (min-width: 37.5em) {
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .l1-12, .lonecolumns {
-    width: 8.33333%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .l1-6, .ltwocolumns {
-    width: 16.66667%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .l1-4, .lthreecolumns {
-    width: 25%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .l1-3, .gallery-row .col-3, .gallery-row .col-6,
-  .gallery-row .col-5, .lfourcolumns {
-    width: 33.33333%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .lfivecolumns {
-    width: 41.66667%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .l1-2, .gallery-row .col-2, .gallery-row .col-4, .lsixcolumns {
+  /* Proportional units
+     ========================================================================== */
+  /*
+   * Specify the proportional width of an object.
+   * Primarily for, but not limited to, use with `.grid__cell` components.
+   * Intentional redundancy build into each set of unit classes.
+   */
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l1-2, .l2-4, .l3-6, .l6-12, .gallery-row .col-2, .gallery-row .col-4 {
     width: 50%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .lsevencolumns {
-    width: 58.33333%;
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l1-3, .l2-6, .l4-12, .gallery-row .col-3, .gallery-row .col-6,
+  .gallery-row .col-5 {
+    width: 33.33333%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .l2-3, .leightcolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l2-3, .l4-6, .l8-12 {
     width: 66.66667%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .l3-4, .lninecolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l1-4, .l3-12 {
+    width: 25%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l3-4, .l9-12 {
     width: 75%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .ltencolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l1-5 {
+    width: 20%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l2-5 {
+    width: 40%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l3-5 {
+    width: 60%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l4-5 {
+    width: 80%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l1-6, .l2-12 {
+    width: 16.66667%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l5-6, .l10-12 {
     width: 83.33333%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .lelevencolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l1-12 {
+    width: 8.33333%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l5-12 {
+    width: 41.66667%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l7-12 {
+    width: 58.33333%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .l11-12 {
     width: 91.66667%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .l1-1, .ltwelvecolumns {
-    width: 100%;
-  }
-
-  /* line 118, ../sass/framework/atoms/_grid.scss */
+  /* line 116, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear {
     clear: none;
   }
 
-  /* line 122, ../sass/framework/atoms/_grid.scss */
+  /* line 120, ../sass/framework/atoms/_grid.scss */
   .l-grid-clear {
     clear: left;
   }
 }
 @media only screen and (min-width: 62em) {
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .d1-12, .donecolumns {
-    width: 8.33333%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .d1-6, .gallery-row .col-6,
-  .gallery-row .col-5, .dtwocolumns {
-    width: 16.66667%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .d1-4, .layout-2c-r .sub,
-  .sub, .gallery-row .col-4, .dthreecolumns {
-    width: 25%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .d1-3, .dfourcolumns {
-    width: 33.33333%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .dfivecolumns {
-    width: 41.66667%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .d1-2, .dsixcolumns {
+  /* Proportional units
+     ========================================================================== */
+  /*
+   * Specify the proportional width of an object.
+   * Primarily for, but not limited to, use with `.grid__cell` components.
+   * Intentional redundancy build into each set of unit classes.
+   */
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d1-2, .d2-4, .d3-6, .d6-12 {
     width: 50%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .dsevencolumns {
-    width: 58.33333%;
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d1-3, .d2-6, .d4-12 {
+    width: 33.33333%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .d2-3, .deightcolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d2-3, .d4-6, .d8-12 {
     width: 66.66667%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .d3-4, .layout-2c-r .main,
-  .main, .dninecolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d1-4, .d3-12, .layout-2c-r .sub,
+  .sub, .gallery-row .col-4 {
+    width: 25%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d3-4, .d9-12, .layout-2c-r .main,
+  .main {
     width: 75%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .dtencolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d1-5 {
+    width: 20%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d2-5 {
+    width: 40%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d3-5 {
+    width: 60%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d4-5 {
+    width: 80%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d1-6, .d2-12, .gallery-row .col-6,
+  .gallery-row .col-5 {
+    width: 16.66667%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d5-6, .d10-12 {
     width: 83.33333%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .delevencolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d1-12 {
+    width: 8.33333%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d5-12 {
+    width: 41.66667%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d7-12 {
+    width: 58.33333%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .d11-12 {
     width: 91.66667%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .d1-1, .dtwelvecolumns {
-    width: 100%;
-  }
-
-  /* line 131, ../sass/framework/atoms/_grid.scss */
+  /* line 129, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear,
   .l-grid-clear {
     clear: none;
   }
 
-  /* line 135, ../sass/framework/atoms/_grid.scss */
+  /* line 133, ../sass/framework/atoms/_grid.scss */
   .d-grid-clear {
     clear: left;
   }
 }
 @media only screen and (min-width: 86.375em) {
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .w1-12, .wonecolumns {
-    width: 8.33333%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .w1-6, .wtwocolumns {
-    width: 16.66667%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .w1-4, .wthreecolumns {
-    width: 25%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .w1-3, .wfourcolumns {
-    width: 33.33333%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .wfivecolumns {
-    width: 41.66667%;
-  }
-
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .w1-2, .wsixcolumns {
+  /* Proportional units
+     ========================================================================== */
+  /*
+   * Specify the proportional width of an object.
+   * Primarily for, but not limited to, use with `.grid__cell` components.
+   * Intentional redundancy build into each set of unit classes.
+   */
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w1-2, .w2-4, .w3-6, .w6-12 {
     width: 50%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .wsevencolumns {
-    width: 58.33333%;
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w1-3, .w2-6, .w4-12 {
+    width: 33.33333%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .w2-3, .weightcolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w2-3, .w4-6, .w8-12 {
     width: 66.66667%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .w3-4, .wninecolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w1-4, .w3-12 {
+    width: 25%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w3-4, .w9-12 {
     width: 75%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .wtencolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w1-5 {
+    width: 20%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w2-5 {
+    width: 40%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w3-5 {
+    width: 60%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w4-5 {
+    width: 80%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w1-6, .w2-12 {
+    width: 16.66667%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w5-6, .w10-12 {
     width: 83.33333%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .welevencolumns {
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w1-12 {
+    width: 8.33333%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w5-12 {
+    width: 41.66667%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w7-12 {
+    width: 58.33333%;
+  }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .w11-12 {
     width: 91.66667%;
   }
 
-  /* line 65, ../sass/framework/imports/_mixins.scss */
-  .w1-1, .wtwelvecolumns {
-    width: 100%;
-  }
-
-  /* line 146, ../sass/framework/atoms/_grid.scss */
+  /* line 144, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear,
   .l-grid-clear,
   .d-grid-clear {
     clear: none;
   }
 
-  /* line 150, ../sass/framework/atoms/_grid.scss */
+  /* line 148, ../sass/framework/atoms/_grid.scss */
   .w-grid-clear {
     clear: left;
   }
@@ -1308,7 +1378,7 @@ h6 small, .h6 small {
 		I'm a full width column. You probably won't need to use me that often...
 	</div>
 */
-/* line 193, ../sass/framework/atoms/_grid.scss */
+/* line 191, ../sass/framework/atoms/_grid.scss */
 .full-col {
   width: auto;
   float: none;
@@ -1320,7 +1390,7 @@ h6 small, .h6 small {
 		I'm a centered column. Useful on the odd occassion you need to center a grid unit
 	</div>
 */
-/* line 206, ../sass/framework/atoms/_grid.scss */
+/* line 204, ../sass/framework/atoms/_grid.scss */
 .centered-col {
   margin: 0 auto;
   float: none;
@@ -1602,7 +1672,7 @@ select {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
-  background-image: url('../images/framework/select-arrow.png?1378739698');
+  background-image: url('../images/framework/select-arrow.png?1378739906');
   height: 2.5em;
 }
 /* line 237, ../sass/framework/atoms/_forms.scss */
@@ -1682,7 +1752,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/framework/select-arrow.png?1378739698');
+    background-image: url('../images/framework/select-arrow.png?1378739906');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2002,12 +2072,12 @@ optgroup::-moz-focus-inner {
   padding: 0;
   zoom: 1;
 }
-/* line 86, ../sass/framework/imports/_mixins.scss */
+/* line 91, ../sass/framework/imports/_mixins.scss */
 .item-list:before {
   content: "";
   display: table;
 }
-/* line 91, ../sass/framework/imports/_mixins.scss */
+/* line 96, ../sass/framework/imports/_mixins.scss */
 .item-list:after {
   content: "";
   display: table;
@@ -2020,13 +2090,13 @@ optgroup::-moz-focus-inner {
   padding-bottom: 1.666em;
   zoom: 1;
 }
-/* line 86, ../sass/framework/imports/_mixins.scss */
+/* line 91, ../sass/framework/imports/_mixins.scss */
 .item-list > li:before,
 .item-list .list-item:before {
   content: "";
   display: table;
 }
-/* line 91, ../sass/framework/imports/_mixins.scss */
+/* line 96, ../sass/framework/imports/_mixins.scss */
 .item-list > li:after,
 .item-list .list-item:after {
   content: "";
@@ -2571,12 +2641,12 @@ input.btn, input.gform_button {
   list-style: none;
   zoom: 1;
 }
-/* line 86, ../sass/framework/imports/_mixins.scss */
+/* line 91, ../sass/framework/imports/_mixins.scss */
 .pager:before {
   content: "";
   display: table;
 }
-/* line 91, ../sass/framework/imports/_mixins.scss */
+/* line 96, ../sass/framework/imports/_mixins.scss */
 .pager:after {
   content: "";
   display: table;
@@ -2764,12 +2834,12 @@ li.pager__item--next {
   margin: 0 0 1.666em -1.666em;
   zoom: 1;
 }
-/* line 86, ../sass/framework/imports/_mixins.scss */
+/* line 91, ../sass/framework/imports/_mixins.scss */
 .inline-list:before, .social-actions:before {
   content: "";
   display: table;
 }
-/* line 91, ../sass/framework/imports/_mixins.scss */
+/* line 96, ../sass/framework/imports/_mixins.scss */
 .inline-list:after, .social-actions:after {
   content: "";
   display: table;
@@ -3071,7 +3141,7 @@ pre code {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1378739465');
+  background-image: url('../images/site-logo.png?1378739906');
   width: 200px;
   height: 80px;
 }
@@ -3113,16 +3183,16 @@ pre code {
 }
 /* line 22, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/framework/site-credit.png?1378739698');
+  background-image: url('../images/framework/site-credit.png?1378739906');
 }
 
 /* line 28, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/framework/site-credit--dark.svg?1378739698');
+  background-image: url('../images/framework/site-credit--dark.svg?1378739906');
 }
 /* line 31, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/framework/site-credit--dark.png?1378739698');
+  background-image: url('../images/framework/site-credit--dark.png?1378739906');
 }
 
 /* ==========================================================================
@@ -3255,12 +3325,12 @@ pre code {
   padding: 0;
   zoom: 1;
 }
-/* line 86, ../sass/framework/imports/_mixins.scss */
+/* line 91, ../sass/framework/imports/_mixins.scss */
 .gallery:before {
   content: "";
   display: table;
 }
-/* line 91, ../sass/framework/imports/_mixins.scss */
+/* line 96, ../sass/framework/imports/_mixins.scss */
 .gallery:after {
   content: "";
   display: table;
@@ -3416,22 +3486,22 @@ html[xmlns] .slides {
   padding-bottom: 1.666em;
   zoom: 1;
 }
-/* line 86, ../sass/framework/imports/_mixins.scss */
+/* line 91, ../sass/framework/imports/_mixins.scss */
 .gfield:before {
   content: "";
   display: table;
 }
-/* line 91, ../sass/framework/imports/_mixins.scss */
+/* line 96, ../sass/framework/imports/_mixins.scss */
 .gfield:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 131, ../sass/framework/imports/_mixins.scss */
+/* line 136, ../sass/framework/imports/_mixins.scss */
 .gfield::-webkit-input-placeholder {
   color: #cccccc;
 }
-/* line 132, ../sass/framework/imports/_mixins.scss */
+/* line 137, ../sass/framework/imports/_mixins.scss */
 .gfield:-moz-placeholder {
   color: #cccccc;
 }

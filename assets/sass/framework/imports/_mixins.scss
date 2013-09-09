@@ -4,74 +4,79 @@
 // Standard mixins and functions to help make life easier
 
 
+// =============================================================================
+// Griddle functions
+// borrowed from https://raw.github.com/necolas/griddle/master/_griddle-build.scss
+// =============================================================================
 
-// ==========================================================================
-// GRID MIXINS
-// ==========================================================================
-
-$one_col: 100% / $cols;
+$gutter_width: $gutter;
+$large_gutter_width: ($gutter*2);
+$half_gutter_width: ($gutter/2);
 
 
-// Returns the width of given column
-// ==========================================================================
-@function grid-width($num) {
-    @return ($one_col * $num);
+// Find the greatest common factor of two integers
+@function gcf($a, $b) {
+    @if $b == 0 { @return $a; }
+    @else { @return gcf($b, $a % $b) }
 }
 
-
-
-// Returns a CSS selector for a single grid col/unit based on input provided
-// ==========================================================================
-@function grid-col($column,$nColumn,$sPrepend: "g") {
-    @if ($cols % $nColumn == 0) {
-        @return "."#{$sPrepend}"1-"#{$cols/$nColumn}",.#{$sPrepend}"#{$column}"columns";
-    } @else if ($nColumn == 8) {
-        @return ".#{$sPrepend}2-3,.#{$sPrepend}"#{$column}"columns";
-    } @else if ($nColumn == 9) {
-        @return ".#{$sPrepend}3-4,.#{$sPrepend}"#{$column}"columns";
-    } @else {
-        @return ".#{$sPrepend}"#{$column}"columns";   
-    } 
+// Check if a list contains a value
+@function contains($list, $value) {
+    @if type-of($list) == list { @return not not index($list, $value); }
+    @else { @return $list == $value; }
 }
 
+// Fluid grid units
+// modified from original to remove "modifier" and replace
+// with "prefix" which is better suited to our grid system
 
-// Returns a CSS selector string for all grid classes to be used in _grid.scss
-// ==========================================================================
-@function grid-selectors() {
-    $count: 1;
-    $selectorString: "";
-    @each $col in $cols_as_string {
-        @if ($count <= $cols) {
-            @if ($count == 1) {
-                $selectorString: $selectorString + "#{grid-col($col,$count)}"; 
-            } @else {
-                $selectorString: $selectorString + ",#{grid-col($col,$count)}";
+@mixin griddle-build($units, $prefix: 'gc') {
+
+    /* Proportional units
+       ========================================================================== */
+
+    /*
+     * Specify the proportional width of an object.
+     * Primarily for, but not limited to, use with `.grid__cell` components.
+     * Intentional redundancy build into each set of unit classes.
+     */
+
+    @each $n in $units {
+        // Avoid creating rules like `.unit-12-12 {}`
+        $x: $n - 1;
+
+        @for $i from 1 through $x {
+            // Initialize variables
+            $i-r: 0;
+            $n-r: 0;
+
+            // Find the greatest common factor
+            $g: gcf($i, $n);
+
+            @if $g > 1 {
+                // Reduced value of $i
+                $i-r: $i/$g;
+                // Reduced value of $n
+                $n-r: $n/$g;
             }
-            $count: $count + 1;
+
+            // Check if the reduced value of $n was also supplied in the list
+            // of units to be built
+            $canreduce: contains($units, $n-r);
+
+            // Create units based on fractions
+            .#{$prefix}#{$i}-#{$n} {
+                // If this unit can be reduced then extend the previous rule
+                @if $canreduce {
+                    @extend .#{$prefix}#{$i-r}-#{$n-r};
+                }
+                // Otherwise create a new % width
+                @else {
+                    width: percentage($i / $n);
+                }
+            }
         }
     }
-    @return $selectorString;
-}
-
-
-
-// Outputs a full set of grid classes with the associated width
-// optional ability to define a prefix to be appended to the selector
-// ==========================================================================
-@mixin grid-set($prefix:"") {
-    $count: 1;
-    @each $col in $cols_as_string {
-      @if ($count <= $cols) {
-          #{grid-col($col,$count,$prefix)} {
-              width: #{grid-width($count)};
-          }
-          $count: $count + 1;
-      }
-    }
-}
-
-@mixin grid-span($cols) {
-    width: grid-width($cols);
 }
 
 
