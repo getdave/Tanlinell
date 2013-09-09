@@ -25,7 +25,7 @@
 
 <?php 
 	// Is this a responsive site? Uncomment if so...
-	//echo '<meta name="viewport" content="width=device-width" />'; 
+	echo '<meta name="viewport" content="width=device-width" />'; 
 ?>
 
 <title>
