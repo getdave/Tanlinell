@@ -27,45 +27,6 @@
 
 
 	/**
-	 * NARROW MENU
-	 *
-	 * Initialise the Narrow menu for small screen navs
-	 */
-	$(document).ready(function(){
-		$("#nav-primary").narrowNavMenu();
-	});
-
-
-
-
-
-
-	/**
-	 * FitVids
-	 *
-	 * Loads FitVids only when there are videos on the page rather than
-	 * for no reason
-	 */
-
-	(function() {
-		Modernizr.load({
-			test: $(".format-video"),
-			yep : [
-				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/jquery.fitvids.min.js'
-				],
-			complete: function(){
-				if (jQuery().fitVids) {
-					$(document).ready(function(){
-						// Target your .container, .wrapper, .post, etc.
-						$(".format-video").fitVids();
-					});
-				}
-			}
-		});
-	}());
-
-
-	/**
 	 * SuperFish Menus
 	 *
 	 * Loads Superfish menus and intialises
@@ -98,6 +59,75 @@
 
 
 
+
+	/**
+	 * NARROW MENU
+	 *
+	 * Initialise the Narrow menu for small screen navs
+	 */
+	/* $(document).ready(function(){
+		$("#nav-primary").narrowNavMenu();
+	}); */
+
+
+
+	/**
+	 * MAGNIFIC POPUP/LIGHTBOX
+	 * lightbox solution for various types of content
+	 */
+	/*
+	(function() {
+		Modernizr.load({
+			test: $(".gallery").length,
+			yep : [
+				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/magnific.min.js'
+				],
+			complete: function(){
+				if (jQuery().magnificPopup) {
+					$(document).ready(function(){
+						// Target your .container, .wrapper, .post, etc.
+						$(".gallery").magnificPopup({
+							type: 'image',
+							gallery:{enabled:true},
+							delegate: 'a'
+						});
+					});
+				}
+			}
+		});
+	}());
+
+
+
+
+	/**
+	 * FitVids
+	 *
+	 * Loads FitVids only when there are videos on the page rather than
+	 * for no reason
+	 */
+
+	/* (function() {
+		Modernizr.load({
+			test: $(".format-video"),
+			yep : [
+				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/jquery.fitvids.min.js'
+				],
+			complete: function(){
+				if (jQuery().fitVids) {
+					$(document).ready(function(){
+						// Target your .container, .wrapper, .post, etc.
+						$(".format-video").fitVids();
+					});
+				}
+			}
+		});
+	}()); */
+
+
+
+
+
 	/**
 	 * SOCIALITE
 	 *
@@ -123,31 +153,6 @@
 	 */
 
 
-	/**
-	 * jPanelMenu
-	 *
-	 * jPanelMenu is a jQuery plugin that creates a paneled-style menu (like the type seen in the mobile versions of Facebook and Google, as well as in many native iPhone applications).
-	 *
-	 */
-
-	/* (function() {
-			Modernizr.load({
-				test: Modernizr.mq('only screen and (max-width: 62em)'),
-				yep : [
-					tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/jquery.jpanelmenu.min.js'
-					],
-				complete: function(){
-
-					var jPM = $.jPanelMenu({
-						menu: '.menu-secondary',
-						trigger: '.menu-secondary-toggle',
-					});
-
-					jPM.on();
-
-				}
-			});
-		}());  */
 
 
 }(jQuery));
