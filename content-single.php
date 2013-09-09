@@ -39,6 +39,7 @@
 		); ?>
 	</div><!-- .entry-content -->
 
-	
-	<?php get_template_part( 'templates/partials/social', 'actions' ); ?>
+	<section class="entry-social-actions">
+		<?php get_template_part( 'templates/partials/social', 'actions' ); ?>
+	</section>
 </article><!-- #post-<?php the_ID(); ?> -->
