@@ -17,11 +17,9 @@ $section_title = (get_the_title($root_parent_id)) ? get_the_title($root_parent_i
 	
 <?php if( $descendants_list ) : ?>
 <aside class="menu-sub">
-	<div class="menu-secondary">
-		<h4 class="menu-sub__heading"><?php echo ucwords(esc_html($section_title)); ?></h4>
-		<ul class="nav-sub">
-		<?php echo $descendants_list; ?>
-		</ul>
-	</div>
+	<h4 class="menu-sub__heading"><?php echo ucwords(esc_html($section_title)); ?></h4>
+	<ul class="nav-sub">
+	<?php echo $descendants_list; ?>
+	</ul>
 </aside>
 <?php endif; ?>
