@@ -1602,7 +1602,7 @@ select {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
-  background-image: url('../images/select_arrow.png?1378735649');
+  background-image: url('../images/select_arrow.png?1378735920');
   height: 2.5em;
 }
 /* line 237, ../sass/framework/atoms/_forms.scss */
@@ -1682,7 +1682,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1378735649');
+    background-image: url('../images/select_arrow.png?1378735920');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -1941,12 +1941,12 @@ optgroup::-moz-focus-inner {
 }
 
 /* line 58, ../sass/framework/molecules/_menu.scss */
-.js .nav-primary {
+.narrow-menu-active .nav-primary {
   display: none;
 }
 @media only screen and (min-width: 48em) {
   /* line 58, ../sass/framework/molecules/_menu.scss */
-  .js .nav-primary {
+  .narrow-menu-active .nav-primary {
     display: block;
   }
 }
@@ -1963,12 +1963,12 @@ optgroup::-moz-focus-inner {
   background-color: transparent;
 }
 /* line 80, ../sass/framework/molecules/_menu.scss */
-.js .nav-menu-toggle {
+.narrow-menu-active .nav-menu-toggle {
   display: block;
 }
 @media only screen and (min-width: 48em) {
   /* line 80, ../sass/framework/molecules/_menu.scss */
-  .js .nav-menu-toggle {
+  .narrow-menu-active .nav-menu-toggle {
     display: none;
   }
 }
@@ -2993,7 +2993,7 @@ pre code {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1378735649');
+  background-image: url('../images/site-logo.png?1378735920');
   width: 200px;
   height: 80px;
 }
@@ -3035,16 +3035,16 @@ pre code {
 }
 /* line 22, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1378735649');
+  background-image: url('../images/site-credit.png?1378735920');
 }
 
 /* line 28, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1378735649');
+  background-image: url('../images/site-credit--dark.svg?1378735920');
 }
 /* line 31, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1378735649');
+  background-image: url('../images/site-credit--dark.png?1378735920');
 }
 
 /* ==========================================================================
@@ -3300,6 +3300,37 @@ html[xmlns] .slides {
 /* line 82, ../sass/framework/compounds/_gravity-forms.scss */
 .gfield_error .gfield_description {
   color: #b94a48;
+}
+
+/* line 3, ../sass/framework/compounds/_site-colophon.scss */
+.site-colophon {
+  font-size: 0.875em;
+  margin-top: 0.833em;
+  margin-bottom: 0.833em;
+  text-align: center;
+}
+@media only screen and (min-width: 48em) {
+  /* line 3, ../sass/framework/compounds/_site-colophon.scss */
+  .site-colophon {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 14, ../sass/framework/compounds/_site-colophon.scss */
+  .site-colophon--copyright {
+    float: left;
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 21, ../sass/framework/compounds/_site-colophon.scss */
+  .site-colophon--develop-credit {
+    float: right;
+    width: 48%;
+    text-align: right;
+  }
 }
 
 /* ==========================================================================

@@ -89,14 +89,15 @@
 
 	@import "compounds/_primary-nav.scss";
 	@import "compounds/_site-logo.scss";
-	@import "compounds/site-credit.scss";
+	@import "compounds/_site-credit.scss";
 	@import "compounds/_page-layouts.scss";
-	@import "compounds/social-icons.scss";
-	@import "compounds/social-actions.scss";
+	@import "compounds/_social-icons.scss";
+	@import "compounds/_social-actions.scss";
 	@import "compounds/_gallery.scss";
 	@import "compounds/_flexslider.scss";
 	@import "compounds/_gravity-forms.scss";
 	@import "compounds/_magnific.scss";
+	@import "compounds/_site-colophon.scss";
 
 /* ==========================================================================
    HELPERS

@@ -35,12 +35,12 @@ function tanlinell_developer_credit( $atts=array() ) {
 
 	// Our defaults
 	$defaults = array(
-		'the_credit' => 'Designed & Developed',
+		'the_credit' 	=> 'Designed & Developed',
 		'designer_name' => 'Burfield',
-		'designer_url' => 'http://burfieldcreative.co.uk',
-		'title'   => 'Digital Agency Bristol',
-		'hidden_text' => 'a Digital Agency in Bristol',
-		'logo_style' => 'dark'
+		'designer_url' 	=> 'http://burfieldcreative.co.uk',
+		'title'   		=> 'Digital Agency Bristol',
+		'hidden_text' 	=> 'a Digital Agency in Bristol',
+		'logo_style' 	=> 'dark'
 	);
 
 	// Merge defaults with atts passed by user and extract to vars

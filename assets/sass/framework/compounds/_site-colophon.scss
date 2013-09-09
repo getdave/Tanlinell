@@ -1,0 +1,29 @@
+@if $use-site-colophon == true {
+
+.site-colophon {
+    font-size: 0.875em;
+    margin-top: $baseLineHeight/2;
+    margin-bottom: $baseLineHeight/2;
+    text-align: center;
+
+    @include respond-to($mobileBreak) {
+        text-align: left;
+    }
+}
+
+.site-colophon--copyright {
+    @include respond-to($mobileBreak) {
+        float: left;
+        width: 48%;
+    }
+}
+
+.site-colophon--develop-credit {
+    @include respond-to($mobileBreak) {
+        float: right;
+        width: 48%;
+        text-align: right;
+    }
+}
+
+}//endif

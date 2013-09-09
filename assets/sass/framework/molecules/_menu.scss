@@ -55,7 +55,7 @@
 
 // Menu to be toggled by the Trigger element (below)
 %responsive-menu__toggle-target {
-	.js & {
+	.narrow-menu-active & {
 		display: none;
 
 		@include respond-to($mobileBreak) {
@@ -77,7 +77,7 @@
 	background-color: transparent;
 
 
-	.js & {
+	.narrow-menu-active & {
 		display: block;
 
 		@include respond-to($mobileBreak) {
