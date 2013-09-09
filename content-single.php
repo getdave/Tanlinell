@@ -8,18 +8,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/BlogPosting">
 	<?php get_template_part( 'templates/partials/pagetitle', 'post' ); ?>
 	
-	<?php		
-		//get the alt text
-		$featured_image_alt = trim(strip_tags( get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ));
-		if(empty($alt))
-			if (get_the_title())
-				$featured_image_alt = 'Image for '.get_the_title(); //defaults if none found
-	?>
-	<?php 
-	if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-	  the_post_thumbnail();
-	} 
-	?>
+	<?php get_template_part( 'templates/partials/post-thumbnail'); ?>
 	
 	
 	
