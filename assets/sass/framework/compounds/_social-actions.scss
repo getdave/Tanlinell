@@ -56,12 +56,7 @@
 }
 
 .social-actions__link {
-	@extend .ir;
-	@include inline-block;
-	background: image-url('social-actions-sprite.png') no-repeat 0 0;
-	width: 60px;
-	height: 20px;
-	text-indent: 0 !important;
+	@extend .sprite !optional;
 }
 
 .social-actions__text {
@@ -69,17 +64,21 @@
 }
 
 .social-actions {
+
+	.twitter-share {
+		@include sprite($social-action-twitter);
+	}
+
 	.facebook-like {
-		background-position: 0 -28px;
+		@include sprite($social-action-facebook);
 	}
 
 	.linkedin-share {
-		background-position: 0 -56px;
+		@include sprite($social-action-linkedin);
 	}
 
 	.googleplus-one {
-		background-position: 0 -86px;
-		width: 60px;
+		@include sprite($social-action-googleplus);
 	}
 }
 

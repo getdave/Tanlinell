@@ -246,6 +246,7 @@ $use-pager: 					true !default;
 $use-pagination: 				true !default;
 $use-code:						true !default;
 $use-block-list: 				true !default;
+$use-sprite:					true !default;
 
 // Default "off"
 $use-title-block:				false !default;
@@ -256,7 +257,6 @@ $use-graybox: 					false !default;
 $use-hero-unit: 				false !default;
 $use-labels-badges: 			false !default;
 $use-split: 					false !default;
-$use-sprite:					false !default;
 
 
 // Compounds
@@ -274,7 +274,7 @@ $use-site-colophon: 			true !default;
 
 // Default "off"
 $use-social-icons: 				false !default;
-$use-social-actions: 			false !default;
+$use-social-actions: 			true !default;
 $use-magnific: 					false !default;
 
 
