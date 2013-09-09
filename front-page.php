@@ -15,8 +15,6 @@ get_header(); ?>
 
 <div id="content" class="<?php echo apply_atomic( 'site_content_class', 'site-content' ); ?>">
 	
-	<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail(); ?>
-
 	<?php get_template_part( '/modules/homepage-slider/slider-template' ); ?>
 
 
