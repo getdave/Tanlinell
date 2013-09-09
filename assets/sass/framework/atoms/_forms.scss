@@ -231,7 +231,7 @@ select {
 	background-color: #fff;
 	background-repeat: no-repeat;
 	background-position: right center;
-	@include background-image( image-url('select_arrow.png'));
+	@include background-image( image-url('framework/select-arrow.png'));
 	height: rsize(40px);
 	&:hover,
 	&:focus {
@@ -303,7 +303,7 @@ select[size="1"] {
 	select,
 	select[size="0"],
 	select[size="1"] {
-		background-image: image-url("select_arrow.png");
+		background-image: image-url("framework/select-arrow.png");
 		background-repeat: no-repeat;
 		background-position: right center;
 		padding-right: 20px; 
