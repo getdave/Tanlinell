@@ -24,6 +24,7 @@
 .gallery-row {
 	@extend .half-gutter;
 	clear: both;
+	margin-bottom: $baseLineHeight;
 }
 
 
@@ -38,6 +39,10 @@
 	a {
 		@extend .img-polaroid !optional;
 		@include inline-block;
+
+		.lt-ie7 & {
+            display: block; // required by IE7 to display layout
+        }
 	}
 
 	img {

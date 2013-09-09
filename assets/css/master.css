@@ -1602,7 +1602,7 @@ select {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
-  background-image: url('../images/select_arrow.png?1378735920');
+  background-image: url('../images/select_arrow.png?1378737202');
   height: 2.5em;
 }
 /* line 237, ../sass/framework/atoms/_forms.scss */
@@ -1682,7 +1682,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1378735920');
+    background-image: url('../images/select_arrow.png?1378737202');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2993,7 +2993,7 @@ pre code {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1378735920');
+  background-image: url('../images/site-logo.png?1378737202');
   width: 200px;
   height: 80px;
 }
@@ -3035,16 +3035,16 @@ pre code {
 }
 /* line 22, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1378735920');
+  background-image: url('../images/site-credit.png?1378737202');
 }
 
 /* line 28, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1378735920');
+  background-image: url('../images/site-credit--dark.svg?1378737202');
 }
 /* line 31, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1378735920');
+  background-image: url('../images/site-credit--dark.png?1378737202');
 }
 
 /* ==========================================================================
@@ -3110,15 +3110,16 @@ pre code {
 /* line 24, ../sass/framework/compounds/_gallery.scss */
 .gallery-row {
   clear: both;
+  margin-bottom: 1.666em;
 }
 
-/* line 33, ../sass/framework/compounds/_gallery.scss */
+/* line 34, ../sass/framework/compounds/_gallery.scss */
 .gallery-item {
   margin-top: 0;
   margin-bottom: 1.666em;
   padding-top: 0;
 }
-/* line 38, ../sass/framework/compounds/_gallery.scss */
+/* line 39, ../sass/framework/compounds/_gallery.scss */
 .gallery-item a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -3128,13 +3129,17 @@ pre code {
   *display: inline;
 }
 /* line 43, ../sass/framework/compounds/_gallery.scss */
+.lt-ie7 .gallery-item a {
+  display: block;
+}
+/* line 48, ../sass/framework/compounds/_gallery.scss */
 .gallery-item img {
   display: block;
   height: auto;
   margin: 0 auto;
 }
 
-/* line 54, ../sass/framework/compounds/_gallery.scss */
+/* line 59, ../sass/framework/compounds/_gallery.scss */
 .gallery-caption {
   margin: 0;
   padding: 0;
