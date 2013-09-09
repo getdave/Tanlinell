@@ -19,9 +19,9 @@ $section_title = $pt_obj->name;
 
 <?php /*
 if( $list_pages ) : ?>
-    <aside class="menu-sub">
-        <h4 class="menu-sub__heading"><?php echo ucwords(esc_html($section_title)); ?></h4>
-        <ul class="nav-sub">
+    <aside class="menu-%%cpt_name%% sidebar">
+        <h4 class="menu-%%cpt_name%%__heading"><?php echo ucwords(esc_html($section_title)); ?></h4>
+        <ul class="nav-%%cpt_name%%">
         <?php echo $list_pages; ?>
         </ul>
     </aside>

@@ -12,7 +12,7 @@ $section_title = 'Archives';
 ?>
 	
 <?php if( $archives_list ) : ?>
-<aside class="menu-sub">
+<aside class="menu-sub sidebar">
 	<div class="menu-secondary">
 		<h4 class="menu-sub__heading"><?php echo ucwords(esc_html($section_title)); ?></h4>
 		<ul class="nav-sub">
