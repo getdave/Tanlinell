@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
         grunt.initConfig({
-            
+
 
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             js: {
                 files: '<%= jshint.all %>',
                 tasks: ['jshint', 'uglify:dist']
-            },          
+            },
         },
 
         // compass and scss
@@ -138,7 +138,7 @@ module.exports = function(grunt) {
         },
 
         // Code Deployments (via rsync)
-        /* deploy: {
+        deploy: {
             options: {
                         exclude: ['.git*', 'node_modules', '.sass-cache', 'Gruntfile.js', 'package.json', '.DS_Store', 'README.md', 'readme.html', 'license.txt', 'humans.txt','config.rb', '.jshintrc', '.gitignore', 'wp-config-local.php', 'w3tc-config', 'advanced-cache.php', 'object-cache.php'],                args: [
                         "-avz",     //  -a is an alias for -rlptgoD; -v is verbose; -z is compression
@@ -146,41 +146,46 @@ module.exports = function(grunt) {
                 ],
                 recursive: true,
                 syncDest: false,
+                untracked_config: grunt.file.readJSON('code_deployments_untracked_config.json') // file not under version control
             },
-            develop: {
-                src: "../../../",
-                dest: "~/public_html/",
-                host: "user@134.0.18.114",
-                recursive: "<%= deploy.options.recursive %>",
-                syncDest: "<%= deploy.options.syncDest %>",
-                exclude: "<%= deploy.options.exclude %>",
-                args: "<%= deploy.options.args %>",
-            },
-        }, */
+            
+            "develop": "<%= deploy.options.untracked_config.develop %>"
+
+            /*
+            "develop": {
+                "src": "../../../",
+                "dest": "~/public_html/",
+                "host": "user@host",
+                "recursive": "<%= deploy.options.recursive %>",
+                "syncDest": "<%= deploy.options.syncDest %>",
+                "exclude": "<%= deploy.options.exclude %>",
+                "args": "<%= deploy.options.args %>"
+            }
+             */
+        },
 
         // Database Deployments (via grunt-deployments)
-        /* deployments: {
-                options: {
-                    backups_dir: '../../../../backups'
-                },
-                "local": {
-                    "title": "Local",
-                    "database": "db_name",
-                    "user": "db_user",
-                    "pass": "db_pass",
-                    "host": "localhost",
-                    "url": "local_url",
-                },
-                "remote": {
-                    "title": "Remote",
-                    "database": "remote_db_name",
-                    "user": "remote_db_user",
-                    "pass": "remote_db_pass",
-                    "host": "localhost",
-                    "url": "remote_url",
-                    "ssh_host": "user@host"
-                },
+        deployments: {
+             options: {
+                backups_dir: "../../../../backups",
+                untracked_config: grunt.file.readJSON('db_deployments_untracked_config.json') // file not under version control under version control
+            },
+
+            "local": "<%= deployments.options.untracked_config.local %>",
+            "develop": "<%= deployments.options.untracked_config.develop %>"
+
+
+
+            /* "remote": {
+                "title": "Remote",
+                "database": "remote_db_name",
+                "user": "remote_db_user",
+                "pass": "remote_db_pass",
+                "host": "localhost",
+                "url": "remote_url",
+                "ssh_host": "user@host"
             }, */
+        },
 
         cc: {
             // catch that comma!
@@ -188,8 +193,12 @@ module.exports = function(grunt) {
 
     });
 
+
+
     // rename tasks
     grunt.renameTask('rsync', 'deploy');
+
+
 
     // register task
     grunt.registerTask('default', [
