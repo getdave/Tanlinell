@@ -1,6 +1,6 @@
 /* ============================================================ */
 
-// PAGE LAYOUT 
+// PAGE LAYOUT
 
 // Description:			Page level layout styles (banner, navigation, content, contentinfo)
 
@@ -14,9 +14,116 @@
 
 
 // ==========================================================================
-// NAVIGATION
+// PRIMARY NAVIGATION
 // ==========================================================================
 
+// ROOT
+// ==========================================================================
+.menu-primary {
+
+}
+
+// ANCHORS
+// ==========================================================================
+
+.nav-primary {
+
+	// Global anchors
+	a {
+        &:hover,
+        &:focus {
+
+        }
+    }
+
+	// Top level anchors
+    > li > a {
+
+    }
+
+	// Anchors which have a dropdown
+    .sf-with-ul {
+
+    }
+}
+
+// Top level Hover state
+.nav-primary {
+	> .sfHover > a {
+
+	}
+}
+
+
+// Top level active items
+.nav-primary {
+    > .current_page_item,
+    > .current_page_ancestor {
+        > a {
+
+        }
+    }
+}
+
+
+// DROPDOWNS/SUB MENUS
+// ==========================================================================
+
+.nav-primary .sub-menu {
+
+    li {
+
+    }
+
+    a {
+
+    }
+
+    .sub-menu {
+        display: none !important;
+    }
+}
+
+
+// ==========================================================================
+// SUB NAVIGATION
+// ==========================================================================
+
+.menu-sub {
+
+}
+
+// HEADING
+// ==========================================================================
+
+.menu-sub__heading {
+    //@extend .vh;
+}
+
+// NAV
+// ==========================================================================
+
+.nav-sub {
+    //@extend .block-list;
+
+    li {
+
+    }
+
+    a {
+
+    }
+    
+}
+
+// Current/active
+.nav-sub {
+    .current_page_item {
+        a {
+
+        }
+    }
+}
 
 
 
