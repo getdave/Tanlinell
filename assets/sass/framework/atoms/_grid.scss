@@ -36,13 +36,6 @@
 
 
 
-
-.grid--divided,
-.grid-divide {
-	margin-bottom: $baseLineHeight;
-}
-
-
 // ==========================================================================
 // MOBILE GRID
 // ==========================================================================
@@ -56,12 +49,6 @@
     text-rendering: auto; // Reset text defaults.
     @include box-sizing(border-box);
     *behavior: url(/boxsizing.htc);
-
-	
-	.grid--divided,
-    .grid-divide > & {
-        margin-bottom: $baseLineHeight;
-    }
 }
 
 @if ($use-standard-breakpoints == true) {
@@ -132,7 +119,7 @@
 
 
 // ==========================================================================
-// MODIFIERS
+// GRID MODIFIERS
 // ==========================================================================
 
 
@@ -191,10 +178,86 @@
 
     > .gc {
 		@include inline-block;
+		vertical-align: top;
         float: none;
 		letter-spacing: normal; // Reset text defaults.
 		word-spacing: normal; // Reset text defaults.
     }
 }
 
+// CENTERED
+// ==========================================================================
 
+.grid--center {
+	@extend .grid--ib;
+	text-align: center;
+}
+
+// LEFT
+// ==========================================================================
+
+.grid--left {
+	@extend .grid--ib;
+	text-align: left;
+}
+
+
+// RIGHT
+// ==========================================================================
+
+.grid--right {
+	@extend .grid--ib;
+	text-align: right;
+}
+
+
+// DIVIDED
+// ==========================================================================
+
+.grid--divided,
+.grid-divide {
+	> .gc {
+        margin-bottom: $baseLineHeight;
+    }
+}
+
+
+// VERITCAL ALIGN: MIDDLE
+// ==========================================================================
+
+.grid--middle {
+	> .gc {
+		vertical-align: middle;
+	}
+}
+
+// VERITCAL ALIGN: BOTTOM
+// ==========================================================================
+
+.grid--bottom {
+	> .gc {
+		vertical-align: bottom;
+	}
+}
+
+
+
+// ==========================================================================
+// GRID COLUMN MODIFIERS
+// ==========================================================================
+
+.gc--center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gc--left {
+	display: block;
+	margin-right: auto;
+}
+
+.gc--right {
+	display: block;
+	margin-left: auto;
+}

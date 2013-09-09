@@ -929,13 +929,7 @@ h6 small, .h6 small {
   clear: both;
 }
 
-/* line 41, ../sass/framework/atoms/_grid.scss */
-.grid--divided,
-.grid-divide {
-  margin-bottom: 1.666em;
-}
-
-/* line 52, ../sass/framework/atoms/_grid.scss */
+/* line 45, ../sass/framework/atoms/_grid.scss */
 .gc, .main,
 .sub, .gallery-row .col-2, .gallery-row .col-3, .gallery-row .col-4, .gallery-row .col-6,
 .gallery-row .col-5 {
@@ -947,14 +941,6 @@ h6 small, .h6 small {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url(/boxsizing.htc);
-}
-/* line 62, ../sass/framework/atoms/_grid.scss */
-.gc .grid--divided, .main .grid--divided,
-.sub .grid--divided, .gallery-row .col-2 .grid--divided, .gallery-row .col-3 .grid--divided, .gallery-row .col-4 .grid--divided, .gallery-row .col-6 .grid--divided,
-.gallery-row .col-5 .grid--divided, .grid-divide > .gc, .grid-divide > .main,
-.grid-divide > .sub, .gallery-row .grid-divide > .col-2, .gallery-row .grid-divide > .col-3, .gallery-row .grid-divide > .col-4, .gallery-row .grid-divide > .col-6,
-.gallery-row .grid-divide > .col-5 {
-  margin-bottom: 1.666em;
 }
 
 @media only screen and (min-width: 30em) {
@@ -1040,7 +1026,7 @@ h6 small, .h6 small {
     width: 91.66667%;
   }
 
-  /* line 71, ../sass/framework/atoms/_grid.scss */
+  /* line 58, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear {
     clear: left;
   }
@@ -1129,12 +1115,12 @@ h6 small, .h6 small {
     width: 91.66667%;
   }
 
-  /* line 80, ../sass/framework/atoms/_grid.scss */
+  /* line 67, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear {
     clear: none;
   }
 
-  /* line 84, ../sass/framework/atoms/_grid.scss */
+  /* line 71, ../sass/framework/atoms/_grid.scss */
   .l-grid-clear {
     clear: left;
   }
@@ -1225,13 +1211,13 @@ h6 small, .h6 small {
     width: 91.66667%;
   }
 
-  /* line 93, ../sass/framework/atoms/_grid.scss */
+  /* line 80, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear,
   .l-grid-clear {
     clear: none;
   }
 
-  /* line 97, ../sass/framework/atoms/_grid.scss */
+  /* line 84, ../sass/framework/atoms/_grid.scss */
   .d-grid-clear {
     clear: left;
   }
@@ -1319,25 +1305,25 @@ h6 small, .h6 small {
     width: 91.66667%;
   }
 
-  /* line 108, ../sass/framework/atoms/_grid.scss */
+  /* line 95, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear,
   .l-grid-clear,
   .d-grid-clear {
     clear: none;
   }
 
-  /* line 112, ../sass/framework/atoms/_grid.scss */
+  /* line 99, ../sass/framework/atoms/_grid.scss */
   .w-grid-clear {
     clear: left;
   }
 }
-/* line 144, ../sass/framework/atoms/_grid.scss */
+/* line 131, ../sass/framework/atoms/_grid.scss */
 .grid--double-gutter,
 .grid-wrap--large-gutter,
 .large-gutter {
   margin-left: -6em;
 }
-/* line 148, ../sass/framework/atoms/_grid.scss */
+/* line 135, ../sass/framework/atoms/_grid.scss */
 .grid--double-gutter > .gc, .grid--double-gutter > .main,
 .grid--double-gutter > .sub, .gallery-row .grid--double-gutter > .col-2, .gallery-row .grid--double-gutter > .col-3, .gallery-row .grid--double-gutter > .col-4, .gallery-row .grid--double-gutter > .col-6,
 .gallery-row .grid--double-gutter > .col-5,
@@ -1360,14 +1346,14 @@ h6 small, .h6 small {
   padding-left: 6em;
 }
 
-/* line 158, ../sass/framework/atoms/_grid.scss */
+/* line 145, ../sass/framework/atoms/_grid.scss */
 .grid--half-gutter,
 .grid-wrap--half-gutter,
 .half-gutter,
 .gallery-row {
   margin-left: -1.5em;
 }
-/* line 162, ../sass/framework/atoms/_grid.scss */
+/* line 149, ../sass/framework/atoms/_grid.scss */
 .grid--half-gutter > .gc, .grid--half-gutter > .main,
 .grid--half-gutter > .sub, .gallery-row .grid--half-gutter > .col-2, .gallery-row .grid--half-gutter > .col-3, .gallery-row .grid--half-gutter > .col-4, .gallery-row .grid--half-gutter > .col-6,
 .gallery-row .grid--half-gutter > .col-5,
@@ -1398,13 +1384,13 @@ h6 small, .h6 small {
   padding-left: 1.5em;
 }
 
-/* line 174, ../sass/framework/atoms/_grid.scss */
+/* line 161, ../sass/framework/atoms/_grid.scss */
 .grid--no-gutter,
 .grid-wrap--no-gutter,
 .no-gutter {
   margin-left: 0;
 }
-/* line 178, ../sass/framework/atoms/_grid.scss */
+/* line 165, ../sass/framework/atoms/_grid.scss */
 .grid--no-gutter > .gc, .grid--no-gutter > .main,
 .grid--no-gutter > .sub, .gallery-row .grid--no-gutter > .col-2, .gallery-row .grid--no-gutter > .col-3, .gallery-row .grid--no-gutter > .col-4, .gallery-row .grid--no-gutter > .col-6,
 .gallery-row .grid--no-gutter > .col-5,
@@ -1427,18 +1413,22 @@ h6 small, .h6 small {
   padding-left: 0;
 }
 
-/* line 188, ../sass/framework/atoms/_grid.scss */
-.grid--ib, .column-container,
+/* line 175, ../sass/framework/atoms/_grid.scss */
+.grid--ib, .grid--center, .grid--left, .grid--right,
 .grid-ib {
   letter-spacing: -0.31em;
   word-spacing: -0.43em;
 }
-/* line 192, ../sass/framework/atoms/_grid.scss */
-.grid--ib > .gc, .column-container > .gc, .grid--ib > .main, .column-container > .main,
+/* line 179, ../sass/framework/atoms/_grid.scss */
+.grid--ib > .gc, .grid--center > .gc, .grid--left > .gc, .grid--right > .gc, .grid--ib > .main, .grid--center > .main, .grid--left > .main, .grid--right > .main,
 .grid--ib > .sub,
-.column-container > .sub, .gallery-row .grid--ib > .col-2, .gallery-row .column-container > .col-2, .gallery-row .grid--ib > .col-3, .gallery-row .column-container > .col-3, .gallery-row .grid--ib > .col-4, .gallery-row .column-container > .col-4, .gallery-row .grid--ib > .col-6, .gallery-row .column-container > .col-6,
+.grid--center > .sub,
+.grid--left > .sub,
+.grid--right > .sub, .gallery-row .grid--ib > .col-2, .gallery-row .grid--center > .col-2, .gallery-row .grid--left > .col-2, .gallery-row .grid--right > .col-2, .gallery-row .grid--ib > .col-3, .gallery-row .grid--center > .col-3, .gallery-row .grid--left > .col-3, .gallery-row .grid--right > .col-3, .gallery-row .grid--ib > .col-4, .gallery-row .grid--center > .col-4, .gallery-row .grid--left > .col-4, .gallery-row .grid--right > .col-4, .gallery-row .grid--ib > .col-6, .gallery-row .grid--center > .col-6, .gallery-row .grid--left > .col-6, .gallery-row .grid--right > .col-6,
 .gallery-row .grid--ib > .col-5,
-.gallery-row .column-container > .col-5,
+.gallery-row .grid--center > .col-5,
+.gallery-row .grid--left > .col-5,
+.gallery-row .grid--right > .col-5,
 .grid-ib > .gc,
 .grid-ib > .main,
 .grid-ib > .sub,
@@ -1453,9 +1443,73 @@ h6 small, .h6 small {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
+  vertical-align: top;
   float: none;
   letter-spacing: normal;
   word-spacing: normal;
+}
+
+/* line 191, ../sass/framework/atoms/_grid.scss */
+.grid--center {
+  text-align: center;
+}
+
+/* line 199, ../sass/framework/atoms/_grid.scss */
+.grid--left {
+  text-align: left;
+}
+
+/* line 208, ../sass/framework/atoms/_grid.scss */
+.grid--right {
+  text-align: right;
+}
+
+/* line 219, ../sass/framework/atoms/_grid.scss */
+.grid--divided > .gc, .grid--divided > .main,
+.grid--divided > .sub, .gallery-row .grid--divided > .col-2, .gallery-row .grid--divided > .col-3, .gallery-row .grid--divided > .col-4, .gallery-row .grid--divided > .col-6,
+.gallery-row .grid--divided > .col-5,
+.grid-divide > .gc,
+.grid-divide > .main,
+.grid-divide > .sub,
+.gallery-row .grid-divide > .col-2,
+.gallery-row .grid-divide > .col-3,
+.gallery-row .grid-divide > .col-4,
+.gallery-row .grid-divide > .col-6,
+.gallery-row .grid-divide > .col-5 {
+  margin-bottom: 1.666em;
+}
+
+/* line 229, ../sass/framework/atoms/_grid.scss */
+.grid--middle > .gc, .grid--middle > .main,
+.grid--middle > .sub, .gallery-row .grid--middle > .col-2, .gallery-row .grid--middle > .col-3, .gallery-row .grid--middle > .col-4, .gallery-row .grid--middle > .col-6,
+.gallery-row .grid--middle > .col-5 {
+  vertical-align: middle;
+}
+
+/* line 238, ../sass/framework/atoms/_grid.scss */
+.grid--bottom > .gc, .grid--bottom > .main,
+.grid--bottom > .sub, .gallery-row .grid--bottom > .col-2, .gallery-row .grid--bottom > .col-3, .gallery-row .grid--bottom > .col-4, .gallery-row .grid--bottom > .col-6,
+.gallery-row .grid--bottom > .col-5 {
+  vertical-align: bottom;
+}
+
+/* line 249, ../sass/framework/atoms/_grid.scss */
+.gc--center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 255, ../sass/framework/atoms/_grid.scss */
+.gc--left {
+  display: block;
+  margin-right: auto;
+}
+
+/* line 260, ../sass/framework/atoms/_grid.scss */
+.gc--right {
+  display: block;
+  margin-left: auto;
 }
 
 /* #Forms */
@@ -3262,7 +3316,7 @@ pre code {
    ========================================================================== */
 /* BASE
    ========================================================================== */
-/* line 17, ../sass/framework/compounds/_page-layouts.scss */
+/* line 16, ../sass/framework/compounds/_page-layouts.scss */
 .main,
 .sub {
   margin-bottom: 3.332em;
@@ -3270,7 +3324,7 @@ pre code {
 
 /* 2 Column [Sub] Right (Default)
    ========================================================================== */
-/* line 28, ../sass/framework/compounds/_page-layouts.scss */
+/* line 27, ../sass/framework/compounds/_page-layouts.scss */
 .layout-2c-r .main,
 .main {
   float: right;
@@ -3279,16 +3333,16 @@ pre code {
 
 /* 2 Column [Sub] Left
    ========================================================================== */
-/* line 44, ../sass/framework/compounds/_page-layouts.scss */
+/* line 43, ../sass/framework/compounds/_page-layouts.scss */
 .layout-2c-l .main {
   float: left;
 }
 
-/* line 53, ../sass/framework/compounds/_page-layouts.scss */
+/* line 52, ../sass/framework/compounds/_page-layouts.scss */
 .layout-1c .column-container {
   margin-left: 0;
 }
-/* line 58, ../sass/framework/compounds/_page-layouts.scss */
+/* line 57, ../sass/framework/compounds/_page-layouts.scss */
 .layout-1c .main,
 .layout-1c .sub {
   float: none;
