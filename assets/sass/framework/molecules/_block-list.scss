@@ -22,17 +22,21 @@ Borrowed from inuit.css
     padding-left: 0;
 
     li {
-        clear: both;
+        @extend .block-list__item;
     }
 
     a {
-        @extend .block-list-link;
+        @extend .block-list__link;
     }
 }
 
-.block-list-link {
+.block-list__item {
+    clear: both;
+}
+
+.block-list__link {
     display:block;
-    padding: $baseLineHeight/2;
+    padding: $baseLineHeight/3 $baseLineHeight/2;
 }
 
 }//endif
