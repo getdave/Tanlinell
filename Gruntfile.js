@@ -137,6 +137,28 @@ module.exports = function(grunt) {
             }
         },
 
+
+        sprite:{
+            framework: {
+                src: 'assets/images/framework/sprites/*.png',
+                destImg: 'assets/images/framework/spritesheet.png',
+                destCSS: 'assets/sass/framework/compounds/_sprites.scss',
+                cssFormat: 'scss',
+                padding: 30,
+                imgPath: '../images/framework/spritesheet.png'
+            },
+
+            site: {
+                src: 'assets/images/sprites/*.png',
+                destImg: 'assets/images/spritesheet.png',
+                destCSS: 'assets/sass/site/modules/_sprites.scss',
+                cssFormat: 'scss',
+                padding: 30,
+                imgPath: '../images/spritesheet.png'
+            },
+        },
+
+
         // Code Deployments (via rsync)
         deploy: {
             options: {

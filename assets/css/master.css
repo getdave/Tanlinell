@@ -1602,7 +1602,7 @@ select {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
-  background-image: url('../images/select_arrow.png?1378737202');
+  background-image: url('../images/select_arrow.png?1378737697');
   height: 2.5em;
 }
 /* line 237, ../sass/framework/atoms/_forms.scss */
@@ -1682,7 +1682,7 @@ select[size="1"] {
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/select_arrow.png?1378737202');
+    background-image: url('../images/select_arrow.png?1378737697');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
@@ -2760,17 +2760,17 @@ li.pager__item--next {
 	</ul>
 */
 /* line 16, ../sass/framework/molecules/_inline-list.scss */
-.inline-list {
+.inline-list, .social-actions {
   margin: 0 0 1.666em -1.666em;
   zoom: 1;
 }
 /* line 86, ../sass/framework/imports/_mixins.scss */
-.inline-list:before {
+.inline-list:before, .social-actions:before {
   content: "";
   display: table;
 }
 /* line 91, ../sass/framework/imports/_mixins.scss */
-.inline-list:after {
+.inline-list:after, .social-actions:after {
   content: "";
   display: table;
   clear: both;
@@ -2778,7 +2778,8 @@ li.pager__item--next {
 
 /* line 22, ../sass/framework/molecules/_inline-list.scss */
 .inline-list__item,
-.inline-list > li {
+.inline-list > li,
+.social-actions > li {
   float: left;
   list-style: none;
   margin-left: 1.666em;
@@ -2942,6 +2943,83 @@ pre code {
   overflow-y: scroll;
 }
 
+/* line 10, ../sass/framework/molecules/_sprite.scss */
+.sprite, .social-actions__link,
+.icon {
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+  vertical-align: middle;
+  zoom: 1;
+  /**
+   * So using `.icon` on certain elements doesn’t make a visual difference.
+   */
+  font-style: normal;
+  font-weight: normal;
+  /**
+   * So icons added using `.icon` sit in the centre of the element.
+   */
+  text-align: center;
+}
+
+/* line 26, ../sass/framework/molecules/_sprite.scss */
+.sprite, .social-actions__link {
+  /**
+   * The typical size of most icons. Override in your theme stylesheet.
+   */
+  width: 16px;
+  height: 16px;
+  top: -1px;
+  /*
+   * H5BP method image replacement:
+   * github.com/h5bp/html5-boilerplate/commit/adecc5da035d6d76b77e3fa95c6abde841073da2
+   */
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+/* line 41, ../sass/framework/molecules/_sprite.scss */
+.sprite:before, .social-actions__link:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+/**
+ * Set up icon font
+ */
+/* line 52, ../sass/framework/molecules/_sprite.scss */
+.icon {
+  font-size: 16px;
+  /**
+   * Place the icon in a box the exact same dimensions as the icon itself.
+   */
+  width: 1em;
+  height: 1em;
+}
+/* line 60, ../sass/framework/molecules/_sprite.scss */
+.icon:before {
+  content: attr(data-icon);
+}
+
+/**
+ * Icon size modifiers.
+ */
+/* line 68, ../sass/framework/molecules/_sprite.scss */
+.icon--large {
+  font-size: 32px;
+}
+
+/* line 69, ../sass/framework/molecules/_sprite.scss */
+.icon--huge {
+  font-size: 64px;
+}
+
+/* line 70, ../sass/framework/molecules/_sprite.scss */
+.icon--natural {
+  font-size: inherit;
+}
+
 /* ==========================================================================
    COMPOUNDS
    Groupings of molecular objects to create common components
@@ -2993,7 +3071,7 @@ pre code {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1378737202');
+  background-image: url('../images/site-logo.png?1378737697');
   width: 200px;
   height: 80px;
 }
@@ -3035,16 +3113,16 @@ pre code {
 }
 /* line 22, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/site-credit.png?1378737202');
+  background-image: url('../images/site-credit.png?1378737697');
 }
 
 /* line 28, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/site-credit--dark.svg?1378737202');
+  background-image: url('../images/site-credit--dark.svg?1378737697');
 }
 /* line 31, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/site-credit--dark.png?1378737202');
+  background-image: url('../images/site-credit--dark.png?1378737697');
 }
 
 /* ==========================================================================
@@ -3085,6 +3163,88 @@ pre code {
   width: auto;
   clear: both;
   overflow: visible;
+}
+
+/* #Social Actions */
+/* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
+/*
+	<ul class="social-actions">
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance twitter-share" href="http://twitter.com/share" data-count="none">
+			    Share on Twitter
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance facebook-like" href="http://www.facebook.com/sharer.php" data-send="false" data-show-faces="false" data-font="arial" data-count="false" data-layout="button_count">
+			    Like on Facebook
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance linkedin-share" href="http://www.linkedin.com/shareArticle?mini=true" data-counter="false">
+			    Share on LinkedIn
+			</a>
+		</li>
+	</ul>
+*/
+/* #Social Actions */
+/* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
+/*
+	<ul class="social-actions">
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance twitter-share" href="http://twitter.com/share" data-count="none">
+			    Share on Twitter
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance facebook-like" href="http://www.facebook.com/sharer.php" data-send="false" data-show-faces="false" data-font="arial" data-count="false" data-layout="button_count">
+			    Like on Facebook
+			</a>
+		</li>
+		
+		<li class="social-actions__item">
+			<a class="social-actions__link socialite socialite-instance linkedin-share" href="http://www.linkedin.com/shareArticle?mini=true" data-counter="false">
+			    Share on LinkedIn
+			</a>
+		</li>
+	</ul>
+*/
+/* line 68, ../sass/framework/compounds/_social-actions.scss */
+.social-actions .twitter-share {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px -150px;
+  width: 56px;
+  height: 20px;
+}
+/* line 72, ../sass/framework/compounds/_social-actions.scss */
+.social-actions .facebook-like {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px 0px;
+  width: 48px;
+  height: 20px;
+}
+/* line 76, ../sass/framework/compounds/_social-actions.scss */
+.social-actions .linkedin-share {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px -100px;
+  width: 59px;
+  height: 20px;
+}
+/* line 80, ../sass/framework/compounds/_social-actions.scss */
+.social-actions .googleplus-one {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px -50px;
+  width: 32px;
+  height: 20px;
+}
+
+/* line 88, ../sass/framework/compounds/_social-actions.scss */
+.socialite-loaded,
+.socialite-loaded .social-actions__text {
+  background: 0 !important;
+  text-indent: 0 !important;
 }
 
 /* ============================================================ */
@@ -3540,7 +3700,7 @@ html[xmlns] .slides {
 	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p>
 */
 /* line 206, ../sass/framework/atoms/_helpers.scss */
-.vh,
+.vh, .social-actions__text,
 .v-hidden,
 .screen-reader-text,
 .assistive-text {
@@ -3555,8 +3715,10 @@ html[xmlns] .slides {
 }
 
 /* line 220, ../sass/framework/atoms/_helpers.scss */
-.vh.focusable:active,
+.vh.focusable:active, .focusable.social-actions__text:active,
 .vh.focusable:focus
+.v-hidden.focusable:active,
+.focusable.social-actions__text:focus
 .v-hidden.focusable:active,
 .v-hidden.focusable:focus {
   clip: auto;
