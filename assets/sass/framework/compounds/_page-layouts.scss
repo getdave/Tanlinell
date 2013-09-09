@@ -9,7 +9,8 @@
    ========================================================================== */
 
 .column-container {
-	@extend .grid-wrap;
+    @extend .grid;
+    @extend .grid--ib;
 }
 
 .main,
