@@ -1782,7 +1782,20 @@ input[type="week"] {
   text-align: left;
   width: 100%;
   height: 2.499em;
-  padding: 0.1875em 0.625em;
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  padding: 8px 10px;
+  /* 9 */
+  padding: 0.5rem 0.625rem;
+  /* 9 */
   font-size: 100%;
   font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
   vertical-align: top;
@@ -1845,15 +1858,35 @@ select {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
-  background-image: url('../images/framework/select-arrow.png?1378803999');
-  height: 2.5em;
+  background-image: url('../images/framework/select-arrow.png?1378805951');
+  height: auto;
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  padding-top: 11px;
+  /* 9 */
+  padding-top: 0.6875rem;
+  /* 9 */
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  padding-bottom: 11px;
+  /* 9 */
+  padding-bottom: 0.6875rem;
+  /* 9 */
 }
-/* line 237, ../sass/framework/atoms/_forms.scss */
+/* line 240, ../sass/framework/atoms/_forms.scss */
 select:hover, select:focus {
   background-color: #fefefe;
 }
 
-/* line 247, ../sass/framework/atoms/_forms.scss */
+/* line 251, ../sass/framework/atoms/_forms.scss */
 button[disabled],
 input[disabled],
 select[disabled],
@@ -1871,32 +1904,32 @@ textarea[disabled] {
   cursor: default;
 }
 
-/* line 261, ../sass/framework/atoms/_forms.scss */
+/* line 265, ../sass/framework/atoms/_forms.scss */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #88888;
 }
 
-/* line 266, ../sass/framework/atoms/_forms.scss */
+/* line 270, ../sass/framework/atoms/_forms.scss */
 input:-moz-placeholder,
 textarea:-moz-placeholder {
   color: #888888;
 }
 
-/* line 271, ../sass/framework/atoms/_forms.scss */
+/* line 275, ../sass/framework/atoms/_forms.scss */
 input.placeholder_text,
 textarea.placeholder_text {
   color: #888888;
 }
 
-/* line 277, ../sass/framework/atoms/_forms.scss */
+/* line 281, ../sass/framework/atoms/_forms.scss */
 textarea,
 select[size],
 select[multiple] {
   height: auto;
 }
 
-/* line 281, ../sass/framework/atoms/_forms.scss */
+/* line 285, ../sass/framework/atoms/_forms.scss */
 select {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1905,7 +1938,7 @@ select {
   border-radius: 0;
 }
 
-/* line 288, ../sass/framework/atoms/_forms.scss */
+/* line 292, ../sass/framework/atoms/_forms.scss */
 select[size="0"],
 select[size="1"] {
   height: 1.8em;
@@ -1913,7 +1946,7 @@ select[size="1"] {
 }
 
 @media (-webkit-min-device-pixel-ratio: 0) {
-  /* line 298, ../sass/framework/atoms/_forms.scss */
+  /* line 302, ../sass/framework/atoms/_forms.scss */
   select[size],
   select[multiple],
   select[multiple][size] {
@@ -1921,17 +1954,17 @@ select[size="1"] {
     padding-right: 3px;
   }
 
-  /* line 305, ../sass/framework/atoms/_forms.scss */
+  /* line 309, ../sass/framework/atoms/_forms.scss */
   select,
   select[size="0"],
   select[size="1"] {
-    background-image: url('../images/framework/select-arrow.png?1378803999');
+    background-image: url('../images/framework/select-arrow.png?1378805951');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px;
   }
 
-  /* line 312, ../sass/framework/atoms/_forms.scss */
+  /* line 316, ../sass/framework/atoms/_forms.scss */
   ::-webkit-validation-bubble-message {
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -1946,7 +1979,7 @@ select[size="1"] {
     height: 16px;
   }
 
-  /* line 328, ../sass/framework/atoms/_forms.scss */
+  /* line 332, ../sass/framework/atoms/_forms.scss */
   ::-webkit-validation-bubble-arrow,
   ::-webkit-validation-bubble-top-outer-arrow,
   ::-webkit-validation-bubble-top-inner-arrow {
@@ -1956,7 +1989,7 @@ select[size="1"] {
     border: 0;
   }
 }
-/* line 336, ../sass/framework/atoms/_forms.scss */
+/* line 340, ../sass/framework/atoms/_forms.scss */
 textarea {
   min-height: 40px;
   overflow: auto;
@@ -1964,14 +1997,14 @@ textarea {
   width: 100%;
 }
 
-/* line 343, ../sass/framework/atoms/_forms.scss */
+/* line 347, ../sass/framework/atoms/_forms.scss */
 optgroup {
   color: black;
   font-style: normal;
   font-weight: normal;
   font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
 }
-/* line 351, ../sass/framework/atoms/_forms.scss */
+/* line 355, ../sass/framework/atoms/_forms.scss */
 optgroup::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -1985,7 +2018,7 @@ optgroup::-moz-focus-inner {
 		<button class="btn" type="button">Go!</button>
 	</div>
 */
-/* line 374, ../sass/framework/atoms/_forms.scss */
+/* line 378, ../sass/framework/atoms/_forms.scss */
 .input-append,
 .input-prepend {
   white-space: nowrap;
@@ -1998,7 +2031,7 @@ optgroup::-moz-focus-inner {
 		<button type="submit" class="btn">Search</button>
 	</form>
 */
-/* line 389, ../sass/framework/atoms/_forms.scss */
+/* line 393, ../sass/framework/atoms/_forms.scss */
 .form-search .search-query {
   display: inline-block;
   margin-bottom: 0;
@@ -3314,7 +3347,7 @@ pre code {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1378803999');
+  background-image: url('../images/site-logo.png?1378805951');
   width: 200px;
   height: 80px;
 }
@@ -3356,16 +3389,16 @@ pre code {
 }
 /* line 22, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/framework/site-credit.png?1378803999');
+  background-image: url('../images/framework/site-credit.png?1378805951');
 }
 
 /* line 28, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/framework/site-credit--dark.svg?1378803999');
+  background-image: url('../images/framework/site-credit--dark.svg?1378805951');
 }
 /* line 31, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/framework/site-credit--dark.png?1378803999');
+  background-image: url('../images/framework/site-credit--dark.png?1378805951');
 }
 
 /* ==========================================================================

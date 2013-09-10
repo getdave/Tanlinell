@@ -9,16 +9,11 @@
 			<text><![CDATA[Send]]></text>
 		</button>
 		<fields>
-			<field id="9" type="name" size="medium">
-				<label><![CDATA[Name]]></label>
-				<inputs>
-					<input id="9.3">
-						<label><![CDATA[First]]></label>
-					</input>
-					<input id="9.6">
-						<label><![CDATA[Last]]></label>
-					</input>
-				</inputs>
+			<field id="9" type="text" isRequired="1" size="medium">
+				<label><![CDATA[Firstname]]></label>
+			</field>
+			<field id="10" type="text" isRequired="1" size="medium">
+				<label><![CDATA[Lastname]]></label>
 			</field>
 			<field id="2" isRequired="1" size="medium" type="email">
 				<label><![CDATA[Email]]></label>
@@ -28,9 +23,6 @@
 			</field>
 			<field id="5" size="medium" type="textarea">
 				<label><![CDATA[Message]]></label>
-			</field>
-			<field id="8" size="medium" type="captcha" displayOnly="1">
-				<label><![CDATA[Captcha]]></label>
 			</field>
 		</fields>
 		<descriptionPlacement><![CDATA[below]]></descriptionPlacement>

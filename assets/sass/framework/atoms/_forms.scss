@@ -195,7 +195,7 @@ input[type="week"] {
 	text-align: left;
 	width: 100%;
 	height: $baseLineHeight*1.5;
-	padding: rsize(3px) rsize(10px);
+	@include rem(padding, 8px 10px);
 	//max-width: rsize(420px);
 	font-size: 100%;
 
@@ -232,11 +232,15 @@ select {
 	background-repeat: no-repeat;
 	background-position: right center;
 	@include background-image( image-url('framework/select-arrow.png'));
-	height: rsize(40px);
+	height: auto;
+	@include rem(padding-top, 11px);
+	@include rem(padding-bottom, 11px);
+	
 	&:hover,
 	&:focus {
 		background-color: #fefefe;
 	}
+
 }
 
 button[disabled],
