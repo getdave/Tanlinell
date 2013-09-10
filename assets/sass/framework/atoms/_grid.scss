@@ -20,50 +20,20 @@
 	</div>
 */
 
-$gutter_width: $gutter+em;
-$large_gutter_width: ($gutter*2)+em;
-$half_gutter_width: ($gutter/2)+em;
 
 
+.grid,
 .grid-wrap {
 	list-style:none;
     margin:0;
     padding:0;
     margin-left: -$gutter_width;
     clear: both;
+	text-rendering: optimizespeed; // Protect against WebKit bug with optimizelegibility.
     @include clearfix;
 }
 
-.grid-wrap--large-gutter,
-.large-gutter {
-	@extend .grid-wrap;
-	margin-left: -$large_gutter_width;
-}
 
-.grid-wrap--half-gutter,
-.half-gutter {
-	@extend .grid-wrap;
-	margin-left: -$half_gutter_width;
-}
-
-.grid-wrap--no-gutter,
-.no-gutter {
-	@extend .grid-wrap;
-	margin-left: 0;
-}
-
-
-.grid-ib {
-    letter-spacing: rsize(-4px);
-}
-
-.grid-divide {
-	margin-bottom: $baseLineHeight;
-}
-
-
-// Generate a CSS selector string for all the possibile grid classes
-$allGridClasses: #{grid-selectors()};
 
 
 // ==========================================================================
@@ -71,41 +41,20 @@ $allGridClasses: #{grid-selectors()};
 // ==========================================================================
 
 // Add styles to all the grid classes
-#{$allGridClasses},
+//#{$allGridClasses},
 .gc {
     width: 100%;
     padding-left: $gutter_width;
     float: left;
+    text-rendering: auto; // Reset text defaults.
     @include box-sizing(border-box);
     *behavior: url(/boxsizing.htc);
-
-    .large-gutter > & {
-        padding-left: $large_gutter_width;
-    }
-
-    .half-gutter > & {
-        padding-left: $half_gutter_width;
-    }
-
-    .no-gutter > & {
-        padding-left: 0;
-    }
-
-    .grid-ib > & {
-        @include inline-block;
-        float: none;
-        letter-spacing: normal;
-    }
-
-    .grid-divide > & {
-        margin-bottom: $baseLineHeight;
-    }
 }
 
 @if ($use-standard-breakpoints == true) {
 	// Handheld Grids
 	@include respond-to('tiny') {
-		@include grid-set('h');
+		@include griddle-build($grids,'h');
 		.h-grid-clear {
 			clear: left;
 		}
@@ -113,7 +62,7 @@ $allGridClasses: #{grid-selectors()};
 
 	// Lap Grids
 	@include respond-to('small') {
-		@include grid-set('l');
+		@include griddle-build($grids,'l');
 
 		.h-grid-clear {
 			clear: none;
@@ -126,7 +75,7 @@ $allGridClasses: #{grid-selectors()};
 
 	// Desktop Grids
 	@include respond-to('large') {
-		@include grid-set('d');
+		@include griddle-build($grids,'d');
 		.h-grid-clear,
 		.l-grid-clear {
 			clear: none;
@@ -139,7 +88,7 @@ $allGridClasses: #{grid-selectors()};
 
 	// Widescreen Grids
 	@include respond-to('xlarge') {
-		@include grid-set('w');
+		@include griddle-build($grids,'w');
 
 		.h-grid-clear,
 		.l-grid-clear,
@@ -169,47 +118,146 @@ $allGridClasses: #{grid-selectors()};
 }
 
 
-
-
-
-
-
-
 // ==========================================================================
-// OVERIDES & EXTENSIONS
+// GRID MODIFIERS
 // ==========================================================================
 
 
+// DOUBLE GUTTER
+// ==========================================================================
 
-/* ##Column Extensions */
+.grid--double-gutter,
+.grid-wrap--large-gutter,
+.large-gutter {
+	@extend .grid;
+	margin-left: -$large_gutter_width;
 
-/* ###Full Width */
-/*
-	<div class="full-col">
-		I'm a full width column. You probably won't need to use me that often...
-	</div>
-*/
-
-.full-col {
-	width: auto;
-	float: none;
+	> .gc {
+		padding-left: $large_gutter_width;
+	}
 }
 
+// HALF GUTTER
+// ==========================================================================
 
-/* ###Centered */
-/*
-	<div class="size1of3 centered-col">
-		I'm a centered column. Useful on the odd occassion you need to center a grid unit
-	</div>
-*/
+.grid--half-gutter,
+.grid-wrap--half-gutter,
+.half-gutter {
+	@extend .grid;
+	margin-left: -$half_gutter_width;
 
-.centered-col {
-    margin: 0 auto;
-    float: none;
+   	> .gc {
+        padding-left: $half_gutter_width;
+    }
 }
 
 
 
+// NO GUTTER
+// ==========================================================================
+
+.grid--no-gutter,
+.grid-wrap--no-gutter,
+.no-gutter {
+	@extend .grid;
+	margin-left: 0;
+
+    > .gc {
+        padding-left: 0;
+    }
+}
+
+
+// INLINE BLOCK
+// ==========================================================================
+
+.grid--ib,
+.grid-ib {
+    letter-spacing: -0.31em; // Remove inter-unit whitespace that appears between `inline-block` child
+    word-spacing: -0.43em; //  Remove inter-unit whitespace that appears between `inline-block` child
+
+    > .gc {
+		@include inline-block;
+		vertical-align: top;
+        float: none;
+		letter-spacing: normal; // Reset text defaults.
+		word-spacing: normal; // Reset text defaults.
+    }
+}
+
+// CENTERED
+// ==========================================================================
+
+.grid--center {
+	@extend .grid--ib;
+	text-align: center;
+}
+
+// LEFT
+// ==========================================================================
+
+.grid--left {
+	@extend .grid--ib;
+	text-align: left;
+}
+
+
+// RIGHT
+// ==========================================================================
+
+.grid--right {
+	@extend .grid--ib;
+	text-align: right;
+}
+
+
+// DIVIDED
+// ==========================================================================
+
+.grid--divided,
+.grid-divide {
+	> .gc {
+        margin-bottom: $baseLineHeight;
+    }
+}
+
+
+// VERITCAL ALIGN: MIDDLE
+// ==========================================================================
+
+.grid--middle {
+	> .gc {
+		vertical-align: middle;
+	}
+}
+
+// VERITCAL ALIGN: BOTTOM
+// ==========================================================================
+
+.grid--bottom {
+	> .gc {
+		vertical-align: bottom;
+	}
+}
 
 
 
+// ==========================================================================
+// GRID COLUMN MODIFIERS
+// ==========================================================================
+
+.gc--center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gc--left {
+	display: block;
+	margin-right: auto;
+}
+
+.gc--right {
+	display: block;
+	margin-left: auto;
+}
