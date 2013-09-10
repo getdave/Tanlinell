@@ -1,12 +1,12 @@
 
 // MIXINS
-
 // Standard mixins and functions to help make life easier
 
 
 // =============================================================================
-// Griddle functions
-// borrowed from https://raw.github.com/necolas/griddle/master/_griddle-build.scss
+// GRID MIXINS & FUNCTIONS
+// borrowed and adapted from original source at
+// https://raw.github.com/necolas/griddle/master/_griddle-build.scss
 // =============================================================================
 
 $gutter_width: $gutter;
@@ -81,7 +81,46 @@ $half_gutter_width: ($gutter/2);
 
 
 // ==========================================================================
-// HELPERS
+// TYPOGRAPHY
+// ==========================================================================
+
+
+// Font Size
+@mixin fsize($font-size) {
+    font-size: $font-size;
+    font-size: ($font-size/$baseFontSize) * 1rem;
+    line-height:ceil($font-size / $baseLineHeight) * ($baseLineHeight / $font-size);
+}
+
+// Fontface
+@mixin font-face( $font-name, $font-path :"assets" ) {
+
+    @font-face{
+        font-family: $font-name;
+        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot');
+        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.woff') format('woff'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.ttf') format('truetype'),
+            url('#{$font-path}/#{$font-name}/#{$font-name}.svg##{$font-name}') format('svg');
+        font-weight:normal;
+        font-style:normal;
+    }
+}
+
+
+
+// Easily create and apply styles to multiple heading levels
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to{
+      h#{$i}, .h#{$i} {
+        @content
+      }
+    }
+}
+
+
+// ==========================================================================
+// LAYOUT
 // ==========================================================================
 
 // Clear fix
@@ -100,30 +139,6 @@ $half_gutter_width: ($gutter/2);
     }
 }
 
-
-// Relative Size
-@function rsize($pxval, $baseline : $baseFontSize) {
-    @return ($pxval/$baseline) + em;
-}
-
-// Font Size
-@mixin fsize($font-size) {
-    font-size: $font-size;
-    font-size: ($font-size/$baseFontSize) * 1rem;
-    line-height:ceil($font-size / $baseLineHeight) * ($baseLineHeight / $font-size);
-}
-
-// Mixin for selection markup
-@mixin selection($background, $color, $element:false) {
-    @if($element) {
-        &::-moz-selection{ background:$background; color:$color; text-shadow:none; }
-        &::selection { background:$background; color:$color; text-shadow:none; }
-    } @else {
-        ::-moz-selection{ background:$background; color:$color; text-shadow:none; }
-        ::selection { background:$background; color:$color; text-shadow:none; }
-    }
-}
-
 // Mixin for reset list
 @mixin list-reset {
     list-style: none;
@@ -131,93 +146,10 @@ $half_gutter_width: ($gutter/2);
     padding: 0;
 }
 
-// Mixin for placeholder styling
-@mixin placeHolder($color) {
-    &::-webkit-input-placeholder { color:$color; }
-    &:-moz-placeholder { color:$color; }
-}
 
-// Webkit-style focus
-@mixin tab-focus {
-    outline: thin dotted #333;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-}
-
-
-@mixin font-face( $font-name, $font-path :"assets" ) {
-
-    @font-face{
-        font-family: $font-name;
-        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot');
-        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
-            url('#{$font-path}/#{$font-name}/#{$font-name}.woff') format('woff'),
-            url('#{$font-path}/#{$font-name}/#{$font-name}.ttf') format('truetype'),
-            url('#{$font-path}/#{$font-name}/#{$font-name}.svg##{$font-name}') format('svg');
-        font-weight:normal;
-        font-style:normal;
-    }
-}
-
-
-// The CSS property pointer-events allows authors to control under what
-// circumstances (if any) a particular graphic element can become the target of
-// mouse events.
-// @see https://developer.mozilla.org/en/CSS/pointer-events
-//
-// @param $type [ auto | none | visiblePainted | visibleFill | visibleStroke |
-// visible | painted | fill | stroke | all | inherit ]
-@mixin pointer-events($type: none) {
-    $type: unquote($type);
-    @include experimental(pointer-events, $type,
-        -moz, -webkit, not -o, not -ms, -khtml, official
-    );
-}
-
-
-// Easily create and apply styles to multiple heading levels
-@mixin headings($from: 1, $to: 6){
-    @for $i from $from through $to{
-      h#{$i}, .h#{$i} {
-        @content
-      }
-    }
-}
-
-
-
-
-@mixin keyframe ($animation-name){
-    @-webkit-keyframes $animation-name{
-        @content;
-    }
-
-    @-moz-keyframes $animation-name{
-        @content;
-    }
-
-    @-ms-keyframes $animation-name{
-        @content;
-    }
-
-    @-o-keyframes $animation-name{
-        @content;
-    }
-
-    @keyframes $animation-name{
-        @content;
-    }
-}
-
-
-@mixin vendor($property, $value...){
-    -webkit-#{$property}:$value;
-       -moz-#{$property}:$value;
-        -ms-#{$property}:$value;
-         -o-#{$property}:$value;
-            #{$property}:$value;
-}
-
+// ==========================================================================
+// COLOUR
+// ==========================================================================
 
 @function black($opacity){
     @return rgba(0,0,0,$opacity)
@@ -228,8 +160,9 @@ $half_gutter_width: ($gutter/2);
 }
 
 
+
 // ==========================================================================
-// MEDIA QUERY INLINE
+// RESPONSIVE
 // ==========================================================================
 
 @mixin respond-to($media) {
@@ -259,8 +192,6 @@ $half_gutter_width: ($gutter/2);
         }
     }
 }
-
-
 
 // ==========================================================================
 // TEXTURE
@@ -315,4 +246,88 @@ $half_gutter_width: ($gutter/2);
         border-bottom: $size solid $color; 
         border-left: $size solid transparent;
     }
+}
+
+
+
+// ==========================================================================
+// GENERAL HELPERS
+// ==========================================================================
+
+// Relative Size
+@function rsize($pxval, $baseline : $baseFontSize) {
+    @return ($pxval/$baseline) + em;
+}
+
+
+// Mixin for selection markup
+@mixin selection($background, $color, $element:false) {
+    @if($element) {
+        &::-moz-selection{ background:$background; color:$color; text-shadow:none; }
+        &::selection { background:$background; color:$color; text-shadow:none; }
+    } @else {
+        ::-moz-selection{ background:$background; color:$color; text-shadow:none; }
+        ::selection { background:$background; color:$color; text-shadow:none; }
+    }
+}
+
+
+
+// Mixin for placeholder styling
+@mixin placeHolder($color) {
+    &::-webkit-input-placeholder { color:$color; }
+    &:-moz-placeholder { color:$color; }
+}
+
+// Webkit-style focus
+@mixin tab-focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+
+// The CSS property pointer-events allows authors to control under what
+// circumstances (if any) a particular graphic element can become the target of
+// mouse events.
+// @see https://developer.mozilla.org/en/CSS/pointer-events
+//
+// @param $type [ auto | none | visiblePainted | visibleFill | visibleStroke |
+// visible | painted | fill | stroke | all | inherit ]
+@mixin pointer-events($type: none) {
+    $type: unquote($type);
+    @include experimental(pointer-events, $type,
+        -moz, -webkit, not -o, not -ms, -khtml, official
+    );
+}
+
+@mixin keyframe ($animation-name){
+    @-webkit-keyframes $animation-name{
+        @content;
+    }
+
+    @-moz-keyframes $animation-name{
+        @content;
+    }
+
+    @-ms-keyframes $animation-name{
+        @content;
+    }
+
+    @-o-keyframes $animation-name{
+        @content;
+    }
+
+    @keyframes $animation-name{
+        @content;
+    }
+}
+
+
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
 }
