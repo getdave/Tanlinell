@@ -9,7 +9,7 @@
 
 body {
 	font-family: $baseFontFamily;
-	font-size: $baseFontSize;
+	@include rem(font-size, $baseFontSize);
 	line-height: $baseLineHeight;
 	color: $grayDark;
 }
