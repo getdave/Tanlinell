@@ -1,0 +1,28 @@
+{
+    "bitwise": true,
+    "eqeqeq": true,
+    "eqnull": true,
+    "immed": true,
+    "newcap": true,
+    "es5": true,
+    "esnext": true,
+    "camelcase": false,
+    "latedef": true,
+    "noarg": true,
+    "node": true,
+    "undef": true,
+    "browser": true,
+    "trailing": false,
+    "jquery": true,
+    "curly": true,
+    "supernew": true,
+    "es5": false,
+    "globals": {
+        "Backbone": true,
+        "_": true,
+        "jQuery": true,
+        "Modernizr": true,
+        "WebFontConfig": true,
+        "tanlinellSiteDetails": true
+    }
+}

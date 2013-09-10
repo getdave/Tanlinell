@@ -12,45 +12,53 @@
 
 get_header(); ?>
 
-<div class="main" role="main">
-<?php while ( have_posts() ) : the_post(); ?>
 
-	<?php get_template_part( 'content', 'page' ); ?>
+<div id="content" class="<?php echo apply_atomic( 'site_content_class', 'site-content' ); ?>">
 	
-	<?php if ( is_active_sidebar( 'homepage-feature-one' ) ) : ?>
+	<?php get_template_part( '/modules/homepage-slider/slider-template' ); ?>
 
-		<div id="homepage-feature-one" class="homepage-feature">
 
-			<?php dynamic_sidebar( 'homepage-feature-one' ); ?>
-
-		</div><!-- #primary -->
-
-	<?php endif; ?>
+	<div class="column-container">
+		<div class="main" role="main">
+		<?php while ( have_posts() ) : the_post(); ?>
 	
-	<?php if ( is_active_sidebar( 'homepage-feature-two' ) ) : ?>
-
-		<div id="homepage-feature-two" class="homepage-feature">
-
-			<?php dynamic_sidebar( 'homepage-feature-two' ); ?>
-
-		</div><!-- #primary -->
-
-	<?php endif; ?>
+			<?php get_template_part( 'content', 'page' ); ?>
+			
+			<?php if ( is_active_sidebar( 'homepage-feature-one' ) ) : ?>
 	
-	<?php if ( is_active_sidebar( 'homepage-feature-three' ) ) : ?>
+				<div id="homepage-feature-one" class="homepage-feature">
+	
+					<?php dynamic_sidebar( 'homepage-feature-one' ); ?>
+	
+				</div><!-- #primary -->
+	
+			<?php endif; ?>
+			
+			<?php if ( is_active_sidebar( 'homepage-feature-two' ) ) : ?>
+	
+				<div id="homepage-feature-two" class="homepage-feature">
+	
+					<?php dynamic_sidebar( 'homepage-feature-two' ); ?>
+	
+				</div><!-- #primary -->
+	
+			<?php endif; ?>
+			
+			<?php if ( is_active_sidebar( 'homepage-feature-three' ) ) : ?>
+	
+				<div id="homepage-feature-three" class="homepage-feature">
+	
+					<?php dynamic_sidebar( 'homepage-feature-three' ); ?>
+	
+				</div><!-- #primary -->
+	
+			<?php endif; ?>
+	
+		<?php endwhile; // end of the loop. ?>
+	
+		</div><!-- .main -->
+	</div>
 
-		<div id="homepage-feature-three" class="homepage-feature">
-
-			<?php dynamic_sidebar( 'homepage-feature-three' ); ?>
-
-		</div><!-- #primary -->
-
-	<?php endif; ?>
-
-<?php endwhile; // end of the loop. ?>
-
-</div><!-- .main -->
-
-
+</div>
 
 <?php get_footer(); ?>

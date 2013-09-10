@@ -13,26 +13,17 @@
 
 get_header(); ?>
 
-<div class="main" role="main">
-		
-		
-<?php while ( have_posts() ) : the_post(); ?>
+<div class="column-container">
+	<div class="main" role="main">
+	<?php while ( have_posts() ) : the_post(); ?>
 
-	<?php get_template_part( 'content', 'page' ); ?>
+		<?php get_template_part( 'content', 'page' ); ?>
 
+	<?php endwhile; // end of the loop. ?>		
+	</div><!-- .main -->
 
-
-	<?php
-		// REMOVED: If comments are required for Page templates then uncomment
-		/* comments_template( '', true );  */
-	?>
-
-<?php endwhile; // end of the loop. ?>
-
-	
-</div><!-- .main -->
-
-<div class="sub">
-<?php get_sidebar(); ?>
+	<div class="sub">
+	<?php get_sidebar(); ?>
+	</div>
 </div>
 <?php get_footer(); ?>

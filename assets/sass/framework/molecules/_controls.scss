@@ -1,0 +1,87 @@
+/* ============================================================ */
+
+// CONTROLS
+
+// Description:	Abstracted set of styles for various controls
+// 				Typically utilized on sliders and various other
+// 				dynamic presentational units of markup
+
+/* ============================================================ */
+
+
+// ==========================================================================
+// DOTTED NAV
+// ==========================================================================
+
+%control-dotted {
+	text-align: center;
+	letter-spacing: rsize(-4px);
+	width: 100%;
+}
+
+%control-dotted__item {
+	@include inline-block;
+	line-height: 1;
+	letter-spacing: normal;
+	margin: 0 rsize(5px);
+}
+
+%control-dotted__link {
+	@extend .img-replace;
+	display: block;
+	width: 15px;
+	height: 15px;
+	overflow: hidden;
+	background-color: $grayLight;
+	background-color: rgba(255,255,255,.6);
+	cursor: pointer;
+	@include border-radius(100px);
+	@include box-shadow(inset 0 0 4px rgba(0,0,0,.6), 0 1px 0 rgba(255,255,255,.5));
+
+	&:hover,
+	&:focus {
+		background-color: $grayLighter;
+	}
+}
+
+%control-dotted__link--active {
+	background-color: $linkColor;
+}
+
+
+// ORIENTATION
+// ==========================================================================
+
+%control-dotted--stacked {
+	%control-dotted__item {
+		display: block;
+		clear: both;
+		margin: rsize(3px) 0;
+	}
+}
+
+// POSITIONED
+// ==========================================================================
+
+%control-dotted--pos {
+	position: absolute;
+	bottom: $baseLineHeight;
+	left: 0;
+	z-index: 2000;
+}
+
+%control-dotted--pos-r {
+	@extend %control-dotted--pos;
+	bottom: $baseLineHeight;
+	right: $baseLineHeight;
+	left: auto;
+	width: auto;
+}
+
+%control-dotted--pos-l {
+	@extend %control-dotted--pos;
+	bottom: $baseLineHeight;
+	left: $baseLineHeight;
+	right: auto;
+	width: auto;
+}

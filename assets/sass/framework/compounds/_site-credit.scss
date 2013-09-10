@@ -1,0 +1,36 @@
+@if $use-site-credit == true {
+/* #Site Credit */
+
+/* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
+
+/*
+	<p>Developed by <a href="#" class="ir site-credit">Burfield Creative</a></p> 
+*/
+
+.site-credit {
+    @extend .ir;
+    @include inline-block;
+    position: relative;
+    top: -2px;
+    vertical-align: middle;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 84px;
+    height: 12px;
+    margin-left: 2px;
+
+    .no-svg & {
+        background-image: image-url("framework/site-credit.png");
+
+    }
+}
+
+.site-credit--dark {
+    background-image: image-url("framework/site-credit--dark.svg");
+
+    .no-svg & {
+        background-image: image-url("framework/site-credit--dark.png");
+    }
+}
+
+}//endif

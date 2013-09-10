@@ -4,13 +4,13 @@
  * Required Plugins
  *
  * Utilises the TGM Plugin Activation system to require/recommend that users
- * install certain Plugins before using your Theme. 
+ * install certain Plugins before using your Theme.
  * http://tgmpluginactivation.com/
  *
  * @package Tanlinell
  * @since Tanlinell 1.0
  */
- 
+
 
 /**
  * Include the TGM_Plugin_Activation class.
@@ -46,10 +46,34 @@ function my_theme_register_required_plugins() {
 		),
 
 		array(
-			'name' 		=> 'WordPress SEO by Yoast',
-			'slug' 		=> 'wordpress-seo',
+			'name' 		=> 'BlackBox Debug Bar',
+			'slug' 		=> 'blackbox-debug-bar',
 			'required' 	=> false,
 		),
+
+		array(
+            'name'      => 'WordPress SEO by Yoast',
+            'slug'      => 'wordpress-seo',
+            'required'  => false,
+        ),
+
+        array(
+            'name'      => 'Google Analytics for WordPress',
+            'slug'      => 'google-analytics-for-wordpress',
+            'required'  => false,
+        ),
+
+        array(
+            'name'      => 'Google XML Sitemaps',
+            'slug'      => 'google-sitemap-generator',
+            'required'  => false,
+        ),
+
+        array(
+            'name'      => 'Advanced Sitemap Generator',
+            'slug'      => 'advanced-sitemap-generator',
+            'required'  => false,
+        ),
 
 		array(
 			'name' 		=> 'WP Example Content',
@@ -58,26 +82,14 @@ function my_theme_register_required_plugins() {
 		),
 
 		array(
-			'name' 		=> 'Contact Form 7',
-			'slug' 		=> 'contact-form-7',
+			'name' 		=> 'Widget Logic',
+			'slug' 		=> 'widget-logic',
 			'required' 	=> false,
 		),
 
 		array(
 			'name' 		=> 'Advanced Custom Fields',
 			'slug' 		=> 'advanced-custom-fields',
-			'required' 	=> false,
-		),
-
-		array(
-			'name' 		=> 'Features by WooThemes',
-			'slug' 		=> 'features-by-woothemes',
-			'required' 	=> false,
-		),
-
-		array(
-			'name' 		=> 'Testimonials by WooThemes',
-			'slug' 		=> 'testimonials-by-woothemes',
 			'required' 	=> false,
 		),
 
@@ -94,8 +106,8 @@ function my_theme_register_required_plugins() {
 		),
 
 		array(
-			'name' 		=> 'Force Strong Passwords',
-			'slug' 		=> 'force-strong-passwords',
+			'name' 		=> 'Better WP Security',
+			'slug' 		=> 'better-wp-security',
 			'required' 	=> false,
 		),
 
@@ -105,17 +117,73 @@ function my_theme_register_required_plugins() {
 			'required' 	=> false,
 		),
 
-		
+		array(
+			'name' 		=> 'WP Smush.it',
+			'slug' 		=> 'wp-smushit',
+			'required' 	=> false,
+		),
+
+		array(
+			'name' 		=> 'WPThumb',
+			'slug' 		=> 'wp-thumb',
+			'required' 	=> true,
+		),
+
+		array(
+			'name' 		=> 'BC Responsive Images',
+			'slug' 		=> 'bc-responsive-images',
+			'required' 	=> true,
+		),
+
+		array(
+			'name' 		=> 'Posts 2 Posts',
+			'slug' 		=> 'posts-to-posts',
+			'required' 	=> false,
+		),
+
+		array(
+			'name' 		=> 'Add Descendants As Submenu Items',
+			'slug' 		=> 'add-descendants-as-submenu-items',
+			'required' 	=> false,
+		),
+
+		array(
+			'name' 		=> 'Disable Wordpress Plugin Updates',
+			'slug' 		=> 'disable-wordpress-plugin-updates',
+			'required' 	=> true,
+		),
+
+		array(
+			'name' 		=> 'WordPress Status Dashboard',
+			'slug' 		=> 'wp-status-dashboard',
+			'required' 	=> false,
+		),
+		array(
+			'name' 		=> 'Disable Comments',
+			'slug' 		=> 'disable-comments',
+			'required' 	=> false,
+		),
 
 
 
 
-		
-
-		
 
 
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	);
 
@@ -137,7 +205,7 @@ function my_theme_register_required_plugins() {
 		'menu'         		=> 'install-required-plugins', 	// Menu slug
 		'has_notices'      	=> true,                       	// Show admin notices or not
 		'is_automatic'    	=> false,					   	// Automatically activate plugins after installation or not
-		'message' 			=> '',							// Message to output right before the plugins table
+		'message' 			=> 'The following Plugins are recommended for use with Tanlinell core.',							// Message to output right before the plugins table
 		'strings'      		=> array(
 			'page_title'                       			=> __( 'Install Required Plugins', $theme_text_domain ),
 			'menu_title'                       			=> __( 'Install Plugins', $theme_text_domain ),

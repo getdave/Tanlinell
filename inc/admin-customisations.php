@@ -11,15 +11,33 @@
 
 
 /**
- * Remove Default WP Menu Items
+ * Remove The Ability to Edit Plugins via Edit screen
  */
+define( 'DISALLOW_FILE_EDIT', true );
 
+
+
+
+/**
+ * Remove The Theme Editor
+ */ 
+function remove_editor() {
+  $page = remove_submenu_page( 'themes.php', 'theme-editor.php' );
+}
+add_action( 'admin_init', 'remove_editor' );
+
+
+
+
+/**
+ * Remove Default WP Menu Items
+ */ 
 function remove_menu_items() {
 	global $menu;
 
 	// List those items you'd like to remove here
 	$restricted = array(
-		__('Links'), 
+		__('Links'),
 		//__('Comments')
 	);
 	end ($menu);
@@ -100,7 +118,7 @@ function tanlinell_unhide_kitchensink( $args ) {
 	$args['wordpress_adv_hidden'] = false;
 	return $args;
 }
-add_filter( 'tiny_mce_before_init', 'unhide_kitchensink' );
+add_filter( 'tiny_mce_before_init', 'tanlinell_unhide_kitchensink' );
 
 
 
@@ -121,3 +139,44 @@ function cpt_icons() {
     </style>
 <?php } 
 add_action( 'admin_head', 'cpt_icons' );
+
+
+
+/**
+ * Customize Contact Methods
+ * @since 1.0.0
+ *
+ * @author Bill Erickson
+ * @link http://sillybean.net/2010/01/creating-a-user-directory-part-1-changing-user-contact-fields/
+ *
+ * @param array $contactmethods
+ * @return array
+ */
+
+function tanlinell_remove_contactmethods( $contactmethods ) {
+    unset( $contactmethods['aim'] );
+    unset( $contactmethods['yim'] );
+    unset( $contactmethods['jabber'] );
+
+    return $contactmethods;
+}
+
+add_filter( 'user_contactmethods' , 'tanlinell_remove_contactmethods');
+
+
+
+/**
+* Remove Upgrade Notice
+*
+* Stops WP Admin from displaying prompt to update WordPress core, so this can be handled by us via status dashboard.
+*/
+
+function wphidenag() {
+	remove_action( 'admin_notices', 'update_nag', 3 );
+}
+add_action('admin_menu','wphidenag');
+
+
+
+
+

@@ -1,0 +1,69 @@
+/* #Containers */
+
+/* Standard structures for dividing pages into "sections" */
+
+/* ##Standard Container */
+/*
+	<div class="container">
+		<p>I'm a section on the layout/page which should be centered in the window</p>
+	</div>  
+*/
+
+.container {
+	width: $containerWidth;
+	margin: 0 auto;	
+	display: block;
+	@include clearfix;
+}
+
+/* ## Reduced Container */
+/* Use to create a container half the default width of the standard container */
+/*
+	<div class="container container--reduced">
+		<!-- SOME STUFF -->
+	</div>
+*/
+
+.container--reduced {
+	@include respond-to($mobileBreak) {
+		width: $containerWidth/2;
+	}
+}
+
+/* ##Padded Container */
+/* Use to create a container with top and bottom padding */
+/*
+*/
+
+.container--padded {
+	padding-top: $baseLineHeight*1.5;
+	padding-bottom: $baseLineHeight*1.5;
+
+		> :last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+}
+
+/* ## Extended Container */
+/* Use to extend the content to be the full width of the window. Additional wrapping element around `.container`. */
+/*
+	<div class="container--extend" style="background: #f7f7f7f;">
+		<div class="container">
+			<p>A section of content where you need the background to extend to the full width of the browser whilst the content remains centered</p>
+		</div> 
+	</div>
+*/
+
+.container--extend {
+	width: auto;
+	@include clearfix;
+}
+
+
+
+
+
+
+
+

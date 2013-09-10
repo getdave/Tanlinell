@@ -88,6 +88,15 @@ function optionsframework_options() {
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');
+	
+	// Google+ Company Page
+	$options[] = array(
+		'name' => __('Google+ Company Page', 'options_framework_theme'),
+		'desc' => __('Enter your Google+ Company Page url. Used throughout the website.', 'options_framework_theme'),
+		'id' => 'google_company_page_url',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
 
 
 
@@ -104,35 +113,101 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __('Contact Telephone', 'options_framework_theme'),
 		'desc' => __('Enter contact telephone. Used throughout the website.', 'options_framework_theme'),
-		'id' => 'contact_telephone_number',
+		'id' => 'contact_telephone',
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');
-
+		
 	// Contact Fax
 	$options[] = array(
 		'name' => __('Contact Fax', 'options_framework_theme'),
 		'desc' => __('Enter contact fax. Used throughout the website.', 'options_framework_theme'),
-		'id' => 'contact_fax_number',
+		'id' => 'contact_fax',
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');
-
+	
+	// Allow Contact Numbers to display in vcard
+	$options[] = array(
+		'name' => __('Display Contact Numbers', 'options_framework_theme'),
+		'desc' => __('Display the contact numbers in the vcard? This includes \'Contact Telephone\' &amp; \'Contact Fax\'', 'options_framework_theme'),
+		'id' => 'display_numbers',
+		'std' => '',
+		'type' => 'checkbox');
+		
+	
 	// Contact Email
 	$options[] = array(
 		'name' => __('Contact Email', 'options_framework_theme'),
 		'desc' => __('Enter contact email address. Used throughout the website.', 'options_framework_theme'),
-		'id' => 'contact_email_address',
+		'id' => 'contact_email',
 		'std' => '',
 		'class' => 'mini',
 		'type' => 'text');
 
 	$options[] = array(
-		'name' => __('Contact Address', 'options_framework_theme'),
-		'desc' => __('Enter your full postal address. One line per address field.', 'options_framework_theme'),
-		'id' => 'contact_address',
+		'name' => __('Street Address 1', 'options_framework_theme'),
+		'desc' => __('1st line of address', 'options_framework_theme'),
+		'id' => 'contact_address_street_address_1',
 		'std' => '',
-		'type' => 'textarea');
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Street Address 2', 'options_framework_theme'),
+		'desc' => __('2nd line of address', 'options_framework_theme'),
+		'id' => 'contact_address_street_address_2',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Town/City', 'options_framework_theme'),
+		'desc' => __('Town or City', 'options_framework_theme'),
+		'id' => 'contact_address_locality',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('County', 'options_framework_theme'),
+		'desc' => __('The county or region', 'options_framework_theme'),
+		'id' => 'contact_address_region',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Postcode', 'options_framework_theme'),
+		'desc' => __('Enter your postcode', 'options_framework_theme'),
+		'id' => 'contact_address_post_code',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Country', 'options_framework_theme'),
+		'desc' => __('Enter your Country (eg: England)', 'options_framework_theme'),
+		'id' => 'contact_address_country',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+	
+	$options[] = array(
+		'name' => __('Address Latitude', 'options_framework_theme'),
+		'desc' => __('Enter the Latitude', 'options_framework_theme'),
+		'id' => 'contact_address_latitude',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
+	$options[] = array(
+		'name' => __('Address Longitude', 'options_framework_theme'),
+		'desc' => __('Enter the Longitude', 'options_framework_theme'),
+		'id' => 'contact_address_longitude',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
 
 
 

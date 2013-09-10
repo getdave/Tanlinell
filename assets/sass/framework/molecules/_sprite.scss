@@ -1,0 +1,72 @@
+@if $use-sprite == true {
+
+// ==========================================================================
+// SPRITE
+// 
+// borrowed from inuit.css 
+// https://github.com/csswizardry/inuit.css/blob/master/objects/_sprite.scss
+// ==========================================================================
+.sprite,
+.icon{
+    display:inline-block;
+    line-height:1;
+    position:relative;
+    vertical-align:middle;
+    zoom:1;
+    /**
+     * So using `.icon` on certain elements doesn’t make a visual difference.
+     */
+    font-style:normal;
+    font-weight:normal;
+    /**
+     * So icons added using `.icon` sit in the centre of the element.
+     */
+    text-align:center;
+}
+.sprite{
+    /**
+     * The typical size of most icons. Override in your theme stylesheet.
+     */
+    width: 16px;
+    height:16px;
+    top:-1px;
+
+    /*
+     * H5BP method image replacement:
+     * github.com/h5bp/html5-boilerplate/commit/adecc5da035d6d76b77e3fa95c6abde841073da2
+     */
+    overflow:hidden;
+   *text-indent:-9999px;
+
+    &:before{
+        content:"";
+        display:block;
+        width:0;
+        height:100%;
+    }
+}
+
+/**
+ * Set up icon font
+ */
+.icon{
+    font-size:16px;
+    /**
+     * Place the icon in a box the exact same dimensions as the icon itself.
+     */
+    width:1em;
+    height:1em;
+
+    &:before{
+        content:attr(data-icon);
+    }
+}
+
+/**
+ * Icon size modifiers.
+ */
+.icon--large   { font-size:32px; }
+.icon--huge    { font-size:64px; }
+.icon--natural { font-size:inherit; }
+
+}//endif

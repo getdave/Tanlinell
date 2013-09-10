@@ -1,0 +1,26 @@
+@if $use-title-block == true {
+
+/* #Title Block */
+
+/* Addresses common markup/presentation scenario of title with meta information
+*/
+
+/* ##Example */
+/*
+    <header class="title-block">
+		<h1 class="title-block__heading">Article Heading</h1>
+		<small class="title-block__meta">March 19th, 2013 by David Smith</small>
+    </header>
+*/
+
+
+.title-block__heading {
+	margin-bottom: 0;
+}
+
+.title-block__meta {
+	margin-bottom: $baseLineHeight/2;
+	color: $grayLight;
+}
+
+}//endif

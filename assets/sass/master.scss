@@ -1,0 +1,58 @@
+// ==========================================================================
+// MASTER STYLESHEET
+//
+// The is the master sass stylesheet. It controls the inclusion of:
+//
+// * the SCSS framework
+// * site specific SCSS
+//
+// There is also a master-ie.scss file (disabled by default) which creates a
+// separate stylesheet when the site for IE browsers so that (when using RWD)
+// they aren't simply served the "mobile" styles. See
+//
+// http://jakearchibald.github.io/sass-ie/
+//
+// ==========================================================================
+
+
+// ==========================================================================
+// FRAMEWORK & CONFIG
+// ==========================================================================
+
+// Configure your project and the "Web Starter" framework
+@import "site/_config.scss";
+
+// Import the "Web Starter" framework
+@import "framework/_framework.scss";
+
+
+// ==========================================================================
+// SITE
+// ==========================================================================
+
+// MODULES
+// ==========================================================================
+
+// Example: Sprite Module
+//@import "site/modules/_EXAMPLE_MODULE.scss";
+
+
+// SITE LAYOUT
+// ==========================================================================
+
+// Page level layout styles (banner, navigation, content, contentinfo)
+@import "site/_page.scss";
+
+
+// PAGES
+// Individual stylesheets for unique pages on the site/application
+// ==========================================================================
+
+// Home
+//@import "site/pages/_home.scss";
+
+// Blog
+//@import "site/pages/_blog.scss";
+
+// Contact
+//@import "site/pages/_contact.scss";

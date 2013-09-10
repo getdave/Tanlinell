@@ -1,0 +1,116 @@
+
+
+// RESPONSIVE MENU
+
+// Description:	Silent selectors to create a mobile first responsive menu. 
+// 				Typically extended onto the primary navigation
+
+
+
+// ==========================================================================
+// SILENT
+// ==========================================================================
+
+// TOP LEVEL
+// ==========================================================================
+
+// Navigation <ul> itself
+%responsive-menu {
+	@extend %nav !optional;
+	position: relative;
+	background-color: $navbar-background;
+
+	@if ($isFixed == false) { // ie: if we're in "Responsive" mode
+		@extend %responsive-menu__toggle-target;
+	}
+}
+
+// Top Level Nav Items
+%responsive-menu__item {
+	position: relative;	
+
+	@include respond-to($mobileBreak) {
+		float: left;			
+	}
+}
+
+// General link styles for nav bar
+%responsive-menu__link {
+	display: block;		
+	padding: rsize(10px) rsize(20px);
+	text-decoration: none;
+}
+
+// Styles specifically for top level of nav bar
+%responsive-menu__link--top {
+	text-align: left;
+	@include respond-to($mobileBreak) {
+		text-align: center;	
+	}
+}
+
+
+// TOGGLE ("RESPONSIVE" MODE)
+// ==========================================================================
+
+// Menu to be toggled by the Trigger element (below)
+%responsive-menu__toggle-target {
+	.narrow-menu-active & {
+		display: none;
+
+		@include respond-to($mobileBreak) {
+			display: block;	
+		}
+	}
+
+	// Script adds "expanded" class to open menu
+	.is-expanded & {
+		display: block;
+	}
+}
+
+// Element which is used to trigger the toggle of the menu
+%responsive-menu__toggle-trigger {
+	float: right;
+	display: none;
+	border: 0;
+	background-color: transparent;
+
+
+	.narrow-menu-active & {
+		display: block;
+
+		@include respond-to($mobileBreak) {
+			display: none;	
+		}
+	}
+
+	span {
+		@extend %responsive-menu__icon-bar;
+	}
+
+
+	// In "Fixed" mode we want to def hide the toggle button
+	@if ($isFixed == true) { 
+		display: none !important; 
+	}
+}
+
+// Toggle Trigger Icon Bars
+%responsive-menu__icon-bar {
+	display: block;
+	height: 3px;
+	width: 20px;
+	margin-bottom: 3px;
+	background-color: lighten(#000, 80%);
+}
+
+
+
+
+
+
+
+
+
+

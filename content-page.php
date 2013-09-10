@@ -7,14 +7,13 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
+	<?php get_template_part( 'templates/partials/pagetitle' ); ?>
 
-	<div class="entry-content">
+	<div class="entry-content" itemprop="articleBody">
+		<?php do_atomic('before_page_content'); ?>	
 		<?php the_content(); ?>
+		<?php do_atomic('after_page_content'); ?>	
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tanlinell' ), 'after' => '</div>' ) ); ?>
-		<?php edit_post_link( __( 'Edit', 'tanlinell' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->

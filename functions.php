@@ -34,7 +34,15 @@ require_once( trailingslashit( get_template_directory() ) . 'inc/tgm-plugin-acti
 if ( ! function_exists( 'tanlinell_setup' ) ):
 
 function tanlinell_setup() {
-
+	
+	/**
+	 * FAVICON
+	 */
+	function favicon_link() {
+	    echo '<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />' . "\n";
+	}
+	add_action( 'wp_head', 'favicon_link' );
+	
 
 	/**
 	 * TGM Required Plugins Script
@@ -107,13 +115,6 @@ function tanlinell_setup() {
 
 
 	/**
-	 * Register Nav Menus
-	 * This theme uses wp_nav_menu() in one location.
-	 */	
-	require( get_template_directory() . '/inc/register-nav-menus.php' );
-
-
-	/**
 	 * Custom Widgets
 	 * add your own custom Widgets into this file
 	 */	
@@ -127,14 +128,28 @@ function tanlinell_setup() {
 	require( get_template_directory() . '/inc/register-widget-areas.php' );
 
 
-
-
-
+	/**
+	 * WPAlchemy
+	 * call initial setup and make class available
+	 * NOTE: before register-custom-posts
+	 */	
+	require( get_template_directory() . '/libs/wpalchemy/setup.php');
+	
+	
 	/**
 	 * 	Register 'Custom Posts Types' for the theme
 	 */
 	require( get_template_directory() . '/inc/register-custom-posts.php' );
 
+	
+	/**
+	 * 	Register 'Custom Posts Types' for the theme
+	 * NOTE: after register-custom-posts
+	 * so we can get a list of all registered post types
+	 */
+	require( get_template_directory() . '/inc/global-custom-meta.php' );
+	
+	
 	
 	/**
 	 * Enqueue Scripts & CSS Styles
@@ -157,13 +172,32 @@ function tanlinell_setup() {
 	require( get_template_directory() . '/inc/burfield-customisations.php' );
 	
 	
-
+	add_image_size( 'featured_image_xlarge', 2000, 1400, false );
+	add_image_size( 'featured_image_large', 991, 743, false );
+	add_image_size( 'featured_image_medium', 800, 600, false );
+	add_image_size( 'featured_image_small', 420, 390, false );
 	
+	
+	
+	/**
+	 * Default Page Setup
+	 * creates pages and sets config to allow /blog/ and /home/ to load our templates
+	 */
+	require( get_template_directory() . '/inc/default-page-setup.php' );	
 	
 	
 }
 endif; // tanlinell_setup
-add_action( 'after_setup_theme', 'tanlinell_setup' );
+
+/**
+ * Hook theme setup with priority of 10
+ * this allows us to hook up child theme setup with higher priority therefore
+ * ensuring that child theme setup runs after the parent theme
+ * http://justintadlock.com/archives/2010/12/30/wordpress-theme-function-files
+ */
+add_action( 'after_setup_theme', 'tanlinell_setup', 10 ); // 10 is the default but we're being explicit
+
+
 
 
 
