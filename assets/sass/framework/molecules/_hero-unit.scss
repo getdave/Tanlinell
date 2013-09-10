@@ -1,0 +1,101 @@
+@if $use-hero-unit == true {
+
+/* #Hero Unit */
+/* 
+Creates an image-based feature "hero" areas with absolutely positioned content blocks
+
+Provides utility classes to allow for common positioning of content within Hero Unit
+*/
+
+/* ##Base */
+/* 
+By default the content is positioned top left of the Hero Unit. Images are set using `<img />` tags.
+
+Width of the content should be defined using standard grid classes (eg: `.size2of3`) 
+*/
+
+/*
+	<div class="hero-unit">
+        <p class="hero-content size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+*/
+
+.hero-unit {
+	position: relative;
+	margin-bottom: $baseLineHeight;
+	background-color: #eeeeee;
+}
+
+.hero-content,
+.hero-content-tl { // we alias "tl" just in case people are thicl ;)
+	position: absolute;
+	top: 10%;
+	left: 0;
+	padding: $baseLineHeight;
+	margin: 0;
+	background-color: #999;
+	font-size: rsize(18px);
+	color: inherit;
+}
+
+/* ##Positioning Variations */
+
+/* ###Top Right */
+/*
+	<div class="hero-unit">
+        <p class="hero-content-tr size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+ */
+.hero-content-tr {
+	@extend .hero-content;
+	left: auto;
+	right: 0;
+}
+
+/* ###Bottom Right */
+/*
+	<div class="hero-unit">
+        <p class="hero-content-br size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+ */
+.hero-content-br {
+	@extend .hero-content;
+	top: auto;
+	left: auto;
+	right: 0;
+	bottom: 10%;
+}
+
+/* ###Bottom Left */
+/*
+	<div class="hero-unit">
+        <p class="hero-content-bl size1of2">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <img src="http://flickholdr.com/960/360/food" />
+    </div>
+ */
+.hero-content-bl {
+	@extend .hero-content;
+	top: auto;
+	bottom: 10%;
+}
+
+}//endif

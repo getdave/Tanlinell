@@ -4,13 +4,13 @@
  * Required Plugins
  *
  * Utilises the TGM Plugin Activation system to require/recommend that users
- * install certain Plugins before using your Theme. 
+ * install certain Plugins before using your Theme.
  * http://tgmpluginactivation.com/
  *
  * @package Tanlinell
  * @since Tanlinell 1.0
  */
- 
+
 
 /**
  * Include the TGM_Plugin_Activation class.
@@ -49,7 +49,7 @@ function my_theme_register_required_plugins() {
 			'name' 		=> 'BlackBox Debug Bar',
 			'slug' 		=> 'blackbox-debug-bar',
 			'required' 	=> false,
-		),		
+		),
 
 		array(
             'name'      => 'WordPress SEO by Yoast',
@@ -158,27 +158,32 @@ function my_theme_register_required_plugins() {
 			'slug' 		=> 'wp-status-dashboard',
 			'required' 	=> false,
 		),
-
-		
-
-
-
-
-		
-
-		
-
-		
+		array(
+			'name' 		=> 'Disable Comments',
+			'slug' 		=> 'disable-comments',
+			'required' 	=> false,
+		),
 
 
 
 
-		
-
-		
 
 
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	);
 

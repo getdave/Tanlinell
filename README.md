@@ -2,10 +2,11 @@
 
 Tanlinell is a[nother] Wordpress Theme Boilerplate created for rapid development of WP Themes. It aims to reduce the initial overhead of Theme development by providing many of the common WP Theme requirements out of the box.
 
-The word "Tanlinell" means "Underscore" in Welsh, but whilst the theme is based on the fantastic work of the Wordpress Core Theme team's Underscore theme it takes things a little further. This may be good/bad, depending on your preference.
+The word "Tanlinell" (I hope!) means "Underscore" in Welsh, but whilst the theme is based on the fantastic work of the Wordpress Core Theme team's Underscore theme it takes things a little further. This may be good/bad, depending on your preference.
 
 
-Tanlinell is brought to you by myself and the team at [Burfield Creative](http://burfieldcreative.co.uk).
+Tanlinell is brought to you by myself and the team at [Burfield Creative](http://burfieldcreative.co.uk). If you are using this theme to build WordPress websites a genuine backlink to the Burfield Creative website is politely requested under the terms of the license.
+
 
 
 ## Usage
@@ -18,6 +19,11 @@ Tanlinell ships with a simple bash script for easy installation via git clone. F
 4. Start coding.
 
 Note the use of the --recursive flag. This tells git to fetch the files for the submodules contained within the repo (eg: Hybrid Core).
+
+
+## Styles
+
+Tanlinell ships with a fully featured CSS Framework generated in SASS. The framework is tailored for general use but has some nice tweaks to help it to play nicely with Tanlinell.
 
 
 ## Grunt Configuration
@@ -39,4 +45,5 @@ http://gruntjs.com/getting-started
 ## Tips & Tricks
 
 * For nice Custom Post Type icons check out [randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/](http://randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/)
+
 

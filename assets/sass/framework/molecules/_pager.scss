@@ -1,0 +1,45 @@
+@if $use-pager == true {
+/* #PAGER */
+
+/* Standard prev/next controls for navigation between "paged" content. /*
+
+/* ##Base 
+	<ul class="pager">
+		<li class="pager__item pager__item--prev">
+			<a href="#" class="pager__link">&larr; Older</a>
+		</li>
+		<li class="pager__item pager__item--next">
+			<a href="#" class="pager__link">Newer &rarr;</a>
+		</li>
+	</ul>
+*/
+
+.pager {
+	margin: 0;
+	padding:0;
+	list-style: none;
+	@include clearfix;
+}
+
+.pager li,
+.pager__item {
+	margin: $baseLineHeight 0;
+	display: inline;
+	float: left; // required for IE7 alignment
+}
+
+.pager__link,
+.pager a {
+	@include inline-block;
+	line-height: 1;
+	padding: rsize(8px) rsize(12px);
+	text-decoration: none;
+	border: 1px solid #ccc;	
+}
+
+.pager__item--next,
+li.pager__item--next {
+	float: right;
+}
+
+}//endif

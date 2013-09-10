@@ -1,0 +1,283 @@
+// ==========================================================================
+// FRAMEWORK VARIABLES
+//
+// The following variables are utilities to provide defaults for the framework.
+// Do not alter these values.
+//
+// Instead override as required in your Projects `_config` file.
+//
+// ==========================================================================
+
+
+
+// ==========================================================================
+// HACKS & OVERIDES
+// ==========================================================================
+
+// This is a flag which is set to "true" by master-ie.scss
+// This allows us to target specifically IE within Sass files
+$is-oldie: 						false !default;
+
+// Highlights any potential markup/accessibility problems
+$debug-mode:					false !default;
+
+
+// ==========================================================================
+// BRAND
+// ==========================================================================
+
+// Logos
+// ==========================================================================
+
+$logo: 							"site-logo.png" !default;
+$site-credit:					"site-credit.png" !default;
+
+// Tones
+// ==========================================================================
+
+$black:                 		#000;
+$grayDarker:            		#222;
+$grayDark:              		#333;
+$gray:                  		#555;
+$grayLight:             		#999;
+$grayLighter:           		#eee;
+$whiteDark:						#f9f9f9;
+$white:                 		#fff;
+
+// Accents
+// ==========================================================================
+
+$blue:                  		#049cdb;
+$blueDark:              		#0064cd;
+$green:                 		#46a546;
+$red:                   		#9d261d;
+$yellow:                		#ffc40d;
+$orange:                		#f89406;
+$pink:                  		#c3325f;
+$purple:                		#7a43b6;
+
+
+// Backgrounds
+// ==========================================================================
+
+$body-background: 				#fff !default;
+$navbar-background: 			$grayLighter !default;
+
+
+// Links
+// ==========================================================================
+
+$linkColor:             		#08c !default;
+$linkColorHover:        		darken($linkColor, 15%) !default;
+
+
+// Alerts & Messages
+// ==========================================================================
+
+$warningText:            		#c09853 !default;
+$warningBackground:       		#fcf8e3 !default;
+$warningBorder:           		darken(adjust-hue($warningBackground, -10), 3%) !default;
+
+$errorText:               		#b94a48 !default;
+$errorBackground:         		#f2dede !default;
+$errorBorder:             		darken(adjust-hue($errorBackground, -10), 3%) !default;
+
+$successText:             		#468847 !default;
+$successBackground:       		#dff0d8 !default;
+$successBorder:           		darken(adjust-hue($successBackground, -10), 5%) !default;
+
+$infoText:                		#3a87ad !default;
+$infoBackground:          		#d9edf7 !default;
+$infoBorder:              		darken(adjust-hue($infoBackground, -10), 7%) !default;
+
+
+// ==========================================================================
+// TYPOGRAPHY
+// ==========================================================================
+
+// Font Stacks
+// ==========================================================================
+
+// Serif
+$georgia: 						Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif !default;
+$georgia-heading: 				Georgia, Times, "Times New Roman", serif !default;
+$garamond: 						Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif !default;
+$lucida-bright: 				"Lucida Bright", Georgia, serif !default;
+$palatino: 						Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif !default;
+$big-caslon: 					"Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif !default;
+$didot: 						Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif !default;
+$baskerville: 					Baskerville, "Baskerville old face", "Hoefler Text", Garamond, "Times New Roman", serif !default;
+$hoefler-text: 					"Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif !default;
+$bodoni-mt: 					"Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif !default;
+$goudy-old-style: 				"Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif !default;
+$constantia: 					Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif !default;
+$cambria: 						Cambria, Georgia, serif !default;
+$book-antiqua: 					"Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif !default;
+$times: 						Times, "Times New Roman", Georgia, serif !default;
+
+// Sans-Serif
+$arial: 						Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+$optima: 						Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif !default;
+$futura: 						Futura, "Trebuchet MS", Arial, sans-serif !default;
+$gill-sans: 					"Gill Sans", "Gill Sans MT", Calibri, sans-serif !default;
+$trebuchet: 					"Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif !default;
+$helvetica: 					"Helvetica Neue", Arial, Helvetica, sans-serif !default;
+$verdana: 						Verdana, Geneva, sans-serif !default;
+$lucida-grande: 				"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif !default;
+$geneva: 						Geneva, Tahoma, Verdana, sans-serif !default;
+$segoe: 						Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+$candara: 						Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif !default;
+$calibri: 						Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif !default;
+$franklin-gothic: 				"Franklin Gothic Medium", Arial, sans-serif !default;
+$tahoma: 						Tahoma, Geneva, Verdana, sans-serif !default;
+
+// Monospace
+$monospace: 					"Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !default;
+$monospace-simple: 				"andale mono", "lucida console", monospace !default;
+$consolas: 						Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !default;
+
+// Cursive
+$cursive: 						"Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive !default;
+
+
+// Typographic Constants
+// ==========================================================================
+
+$baseFontSize:          		16px !default;
+$baseFontFamily:        		$arial !default; // or write your own custom font-stack
+$baseLineHeight:        		1.666em !default;
+
+// Heading Levels
+// ==========================================================================
+
+$giga:							96px !default;
+$mega:							72px !default;
+$kilo:							48px !default;
+
+$headingLevel1:					36px !default;
+$headingLevel2:					30px !default;
+$headingLevel3:					24px !default;
+$headingLevel4:					20px !default;
+$headingLevel5:					18px !default;
+$headingLevel6:					16px !default;
+
+
+
+// ==========================================================================
+// RESPONSIVE
+// ==========================================================================
+
+
+// Determines whether the site is fixed width. Defaults to "false" unless served is an oldie browser
+$isFixed:						if($is-oldie, true, false) !default;
+
+// Width of primary ".container" elements - determined by $isFixed var
+$containerWidth:				if($isFixed, 960px, 90%) !default;
+
+
+// Breakpoints
+// ==========================================================================
+
+$break-tiny:            		480px !default;
+$break-small:           		600px !default;
+$break-medium:          		768px !default;
+$break-large:           		992px !default;
+$break-xlarge:          		1382px !default;
+
+
+// Constant to define which breakpoint name (above) determines the point
+// at which the grid system switches from full to "linearised" layout.
+$mobileBreak:					"medium" !default;
+
+
+// Grid
+// ==========================================================================
+
+// Include a set of standard grid breakpoints?
+$use-standard-breakpoints: 		true !default;
+
+// Grid configuration
+$grids: 						2 3 4 5 6 12 !default;	// number of columns required
+$gutter: 						3em !default;	 // gutter between each column in em's
+
+// Include "push-" and "pull-" classes for source reordering?
+$bGridPushClasses:				false !default;
+$bGridPullClasses:				false !default;
+
+// We loop thorugh this string to produce our written grid classes (TODO: remove this)
+$cols_as_string: 				one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty !default;
+
+
+
+// ==========================================================================
+// STACKING
+// bird's eye view of components dependent on the z-axis
+// ==========================================================================
+
+$zindex-tier-1:        			1000 !default;
+$zindex-tier-2:         		2000 !default;
+$zindex-tier-3:         		3000 !default;
+$zindex-tier-4:     			4000 !default;
+$zindex-tier-5:   				5000 !default;
+$zindex-tier-6:           		6000 !default;
+
+
+
+// ==========================================================================
+// MOLECULES & COMPOUNDS
+// Declare which molescules to include. Overide these as required.
+// ==========================================================================
+
+// Molecules
+// ==========================================================================
+
+// Default "on"
+$use-media-block: 				true !default;
+$use-nav: 						true !default;
+$use-buttons: 					true !default;
+$use-images: 					true !default;
+$use-dropdowns: 				true !default;
+$use-inline-list: 				true !default;
+$use-item-list: 				true !default;
+$use-island: 					true !default;
+$use-alerts: 					true !default;
+$use-breadcrumbs: 				true !default;
+$use-pager: 					true !default;
+$use-pagination: 				true !default;
+$use-code:						true !default;
+$use-block-list: 				true !default;
+$use-sprite:					true !default;
+
+// Default "off"
+$use-title-block:				false !default;
+$use-complex-link: 				false !default;
+$use-feature-element: 			false !default;
+$use-flippable: 				false !default;
+$use-graybox: 					false !default;
+$use-hero-unit: 				false !default;
+$use-labels-badges: 			false !default;
+$use-split: 					false !default;
+
+
+// Compounds
+// ==========================================================================
+
+// Default "on"
+$use-page-layouts: 				true !default;
+$use-flexslider: 				true !default;
+$use-gallery: 					true !default;
+$use-primary-nav: 				true !default;
+$use-site-logo: 				true !default;
+$use-site-credit: 				true !default;
+$use-gravity-forms: 			true !default;
+$use-site-colophon: 			true !default;
+
+// Default "off"
+$use-social-icons: 				false !default;
+$use-social-actions: 			true !default;
+$use-magnific: 					false !default;
+
+
+
+
+

@@ -1,0 +1,31 @@
+@if $use-item-list == true {
+/* #Item List */
+
+/* Create standard lists of "post"-like content. 
+*/
+
+/* ##Standard Example - Grid "Two Up" */
+/*
+    <ul class="item-list">
+        <li>Item in the list</li>
+        <li>Item in the list</li>
+        <li>Item in the list</li>
+        <li>Item in the list</li>
+        <li>Item in the list</li>
+    </ul>
+*/
+
+
+.item-list {
+	@include list-reset;
+	@include clearfix;
+
+	> li,
+	.list-item {
+		margin-bottom: $baseLineHeight;
+		padding-bottom: $baseLineHeight;
+		@include clearfix;
+	}
+}
+
+}//endif

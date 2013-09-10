@@ -1,0 +1,22 @@
+@if $use-complex-link == true {
+/* #COMPLEX LINK */
+
+/* Add hover behaviour to only selected items within links. Useful if you have are using icon fonts. */
+/*
+	<a href="http://www.google.com" class="complex-link">
+		<span>You should try and </span>
+		<span class="link-target">Login</span>
+	</a>
+*/
+
+.complex-link,
+.complex-link:hover,
+.complex-link:focus {
+    text-decoration:none;
+
+    .link-target {
+      text-decoration: underline;
+    }
+}
+
+}//endif

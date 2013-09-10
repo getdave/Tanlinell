@@ -13,48 +13,52 @@
 get_header(); ?>
 
 
-<?php get_template_part( '/modules/homepage-slider/slider-template' ); ?>
+<div id="content" class="<?php echo apply_atomic( 'site_content_class', 'site-content' ); ?>">
+	
+	<?php get_template_part( '/modules/homepage-slider/slider-template' ); ?>
 
 
-<div class="column-container">
-	<div class="main" role="main">
-	<?php while ( have_posts() ) : the_post(); ?>
+	<div class="column-container">
+		<div class="main" role="main">
+		<?php while ( have_posts() ) : the_post(); ?>
+	
+			<?php get_template_part( 'content', 'page' ); ?>
+			
+			<?php if ( is_active_sidebar( 'homepage-feature-one' ) ) : ?>
+	
+				<div id="homepage-feature-one" class="homepage-feature">
+	
+					<?php dynamic_sidebar( 'homepage-feature-one' ); ?>
+	
+				</div><!-- #primary -->
+	
+			<?php endif; ?>
+			
+			<?php if ( is_active_sidebar( 'homepage-feature-two' ) ) : ?>
+	
+				<div id="homepage-feature-two" class="homepage-feature">
+	
+					<?php dynamic_sidebar( 'homepage-feature-two' ); ?>
+	
+				</div><!-- #primary -->
+	
+			<?php endif; ?>
+			
+			<?php if ( is_active_sidebar( 'homepage-feature-three' ) ) : ?>
+	
+				<div id="homepage-feature-three" class="homepage-feature">
+	
+					<?php dynamic_sidebar( 'homepage-feature-three' ); ?>
+	
+				</div><!-- #primary -->
+	
+			<?php endif; ?>
+	
+		<?php endwhile; // end of the loop. ?>
+	
+		</div><!-- .main -->
+	</div>
 
-		<?php get_template_part( 'content', 'page' ); ?>
-		
-		<?php if ( is_active_sidebar( 'homepage-feature-one' ) ) : ?>
-
-			<div id="homepage-feature-one" class="homepage-feature">
-
-				<?php dynamic_sidebar( 'homepage-feature-one' ); ?>
-
-			</div><!-- #primary -->
-
-		<?php endif; ?>
-		
-		<?php if ( is_active_sidebar( 'homepage-feature-two' ) ) : ?>
-
-			<div id="homepage-feature-two" class="homepage-feature">
-
-				<?php dynamic_sidebar( 'homepage-feature-two' ); ?>
-
-			</div><!-- #primary -->
-
-		<?php endif; ?>
-		
-		<?php if ( is_active_sidebar( 'homepage-feature-three' ) ) : ?>
-
-			<div id="homepage-feature-three" class="homepage-feature">
-
-				<?php dynamic_sidebar( 'homepage-feature-three' ); ?>
-
-			</div><!-- #primary -->
-
-		<?php endif; ?>
-
-	<?php endwhile; // end of the loop. ?>
-
-	</div><!-- .main -->
 </div>
 
 <?php get_footer(); ?>

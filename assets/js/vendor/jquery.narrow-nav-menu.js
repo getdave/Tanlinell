@@ -13,6 +13,8 @@
 
 		var binding = ("ontouchstart" in document.documentElement) ? 'touchstart' : 'click';
 
+		$( ":root" ).addClass('narrow-menu-active');
+
 		return this.each(function () {
 
 			if (options) {

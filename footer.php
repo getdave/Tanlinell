@@ -29,12 +29,13 @@
 	
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
-			<?php get_template_part( 'menu', 'subsidiary' ); ?>	
-			<div class="site-info">
-				<?php 
-					echo tanlinell_developer_credit();
-				?>		
-			</div><!-- .site-info -->
+			<?php get_template_part( 'menu', 'subsidiary' ); ?>
+			<p class="site-colophon site-colophon--copyright">
+				Copyright &copy; <?php echo date("Y") ?> <?php echo esc_html( get_bloginfo( 'name', 'display' ) ); ?>
+			</p>
+			<p class="site-colophon site-colophon--develop-credit">
+				<?php echo do_shortcode('[developer_credit]');?>		
+			</p>
 		</div>
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->

@@ -35,6 +35,14 @@ if ( ! function_exists( 'tanlinell_setup' ) ):
 
 function tanlinell_setup() {
 	
+	/**
+	 * FAVICON
+	 */
+	function favicon_link() {
+	    echo '<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />' . "\n";
+	}
+	add_action( 'wp_head', 'favicon_link' );
+	
 
 	/**
 	 * TGM Required Plugins Script
@@ -168,6 +176,15 @@ function tanlinell_setup() {
 	add_image_size( 'featured_image_large', 991, 743, false );
 	add_image_size( 'featured_image_medium', 800, 600, false );
 	add_image_size( 'featured_image_small', 420, 390, false );
+	
+	
+	
+	/**
+	 * Default Page Setup
+	 * creates pages and sets config to allow /blog/ and /home/ to load our templates
+	 */
+	require( get_template_directory() . '/inc/default-page-setup.php' );	
+	
 	
 }
 endif; // tanlinell_setup

@@ -6,7 +6,7 @@
     "newcap": true,
     "es5": true,
     "esnext": true,
-    "camelcase": true,
+    "camelcase": false,
     "latedef": true,
     "noarg": true,
     "node": true,

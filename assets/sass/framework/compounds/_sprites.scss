@@ -1,0 +1,65 @@
+  $social-action-facebook-x: 0px;
+  $social-action-facebook-y: 0px;
+  $social-action-facebook-offset-x: 0px;
+  $social-action-facebook-offset-y: 0px;
+  $social-action-facebook-width: 48px;
+  $social-action-facebook-height: 20px;
+  $social-action-facebook-total-width: 59px;
+  $social-action-facebook-total-height: 170px;
+  $social-action-facebook-image: '../images/framework/spritesheet.png';
+  $social-action-facebook: 0px 0px 0px 0px 48px 20px 59px 170px '../images/framework/spritesheet.png';
+  $social-action-googleplus-x: 0px;
+  $social-action-googleplus-y: 50px;
+  $social-action-googleplus-offset-x: 0px;
+  $social-action-googleplus-offset-y: -50px;
+  $social-action-googleplus-width: 32px;
+  $social-action-googleplus-height: 20px;
+  $social-action-googleplus-total-width: 59px;
+  $social-action-googleplus-total-height: 170px;
+  $social-action-googleplus-image: '../images/framework/spritesheet.png';
+  $social-action-googleplus: 0px 50px 0px -50px 32px 20px 59px 170px '../images/framework/spritesheet.png';
+  $social-action-linkedin-x: 0px;
+  $social-action-linkedin-y: 100px;
+  $social-action-linkedin-offset-x: 0px;
+  $social-action-linkedin-offset-y: -100px;
+  $social-action-linkedin-width: 59px;
+  $social-action-linkedin-height: 20px;
+  $social-action-linkedin-total-width: 59px;
+  $social-action-linkedin-total-height: 170px;
+  $social-action-linkedin-image: '../images/framework/spritesheet.png';
+  $social-action-linkedin: 0px 100px 0px -100px 59px 20px 59px 170px '../images/framework/spritesheet.png';
+  $social-action-twitter-x: 0px;
+  $social-action-twitter-y: 150px;
+  $social-action-twitter-offset-x: 0px;
+  $social-action-twitter-offset-y: -150px;
+  $social-action-twitter-width: 56px;
+  $social-action-twitter-height: 20px;
+  $social-action-twitter-total-width: 59px;
+  $social-action-twitter-total-height: 170px;
+  $social-action-twitter-image: '../images/framework/spritesheet.png';
+  $social-action-twitter: 0px 150px 0px -150px 56px 20px 59px 170px '../images/framework/spritesheet.png';
+
+  @mixin sprite-width($sprite) {
+    width: nth($sprite, 5);
+  }
+
+  @mixin sprite-height($sprite) {
+    height: nth($sprite, 6);
+  }
+
+  @mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+  }
+
+  @mixin sprite-image($sprite) {
+    background-image: url(nth($sprite, 9));
+  }
+
+  @mixin sprite($sprite) {
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+  }

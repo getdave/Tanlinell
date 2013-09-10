@@ -1,3 +1,5 @@
+<?php $curr_url = get_permalink(); ?>
+
 <?php do_atomic('before_social_actions_items'); ?>
 <h4>Share this</h4>
 <ul class="social-actions">	

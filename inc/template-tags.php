@@ -40,9 +40,9 @@ function tanlinell_content_nav( $nav_id ) {
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="pager__item pager__item--prev">%link</div>', '<span class="pager__arrow">' . _x( '&larr;', 'Previous post link', 'tanlinell' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="pager__item pager__item--next">%link</div>', '%title <span class="pager__arrow">' . _x( '&rarr;', 'Next post link', 'tanlinell' ) . '</span>' ); ?>
-
+		<?php previous_post_link( '<div class="pager__item pager__item--prev">%link</div>', '<span class="pager__arrow">' . _x( '&larr;', 'Previous post link', 'tanlinell' ) . '</span> Previous' ); ?>
+		<?php next_post_link( '<div class="pager__item pager__item--next">%link</div>', 'Next <span class="pager__arrow">' . _x( '&rarr;', 'Next post link', 'tanlinell' ) . '</span>' ); ?>
+		
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>

@@ -14,7 +14,7 @@ if($latest_blog_posts->have_posts()) : ?>
 	<li class="latest-posts__item">
 		<article>
 			<?php the_title( '<h6 class="">', '</h6>' ); ?>
-			<?php tanlinell_truncate_posts(apply_filters( 'tanlinell_latest_post_truncate', 20 )) ?>
+			<p><?php tanlinell_truncate_posts( 20, '[read more]' ); ?></p>
 		</article>
 	</li>
 <?php endwhile;
