@@ -2,8 +2,8 @@
 /**
  * CPT-Example List Navigation
  */
-/*
-$pt_obj = get_post_type_object( 'CPT-Example' );
+
+$pt_obj = get_post_type_object( get_post_type() );
 
 //requires cpt to be defined as 'hierarchical' => true
 $args = array(
@@ -13,17 +13,15 @@ $args = array(
 );
 $list_pages      = wp_list_pages( $args ); 
 
-$section_title = $pt_obj->name;
-*/
+$section_title = $pt_obj->labels->name;
+
 ?>
 
-<?php /*
-if( $list_pages ) : ?>
-    <aside class="menu-%%cpt_name%% sidebar">
-        <h4 class="menu-%%cpt_name%%__heading"><?php echo ucwords(esc_html($section_title)); ?></h4>
-        <ul class="nav-%%cpt_name%%">
+<?php if( $list_pages ) : ?>
+    <aside class="menu-<?php echo $pt_obj->name; ?> sidebar">
+        <h4 class="menu-<?php echo $pt_obj->name; ?>__heading"><?php echo ucwords(esc_html($section_title)); ?></h4>
+        <ul class="nav-<?php echo $pt_obj->name; ?>">
         <?php echo $list_pages; ?>
         </ul>
     </aside>
-<?php endif;
-*/ ?>
+<?php endif; ?>
