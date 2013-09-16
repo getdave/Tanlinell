@@ -25,11 +25,18 @@ add_filter( 'wp_page_menu_args', 'tanlinell_page_menu_args' );
  * @since Tanlinell 1.0
  */
 function tanlinell_body_classes( $classes ) {
+	
+	global $wp_query;
+		
 	// Adds a class of group-blog to blogs with more than 1 published author
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
-
+	
+	if ( in_array($wp_query->queried_object->post_type, array('post','page') ) ) {
+		$classes[] = $wp_query->queried_object->post_type.'-'.$wp_query->queried_object->post_name;
+	}
+		
 	return $classes;
 }
 add_filter( 'body_class', 'tanlinell_body_classes' );
