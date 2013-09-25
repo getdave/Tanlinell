@@ -14,8 +14,7 @@
  */
 ?>
 
-
-<?php if ( 0 == get_post_type_object( get_post_type() )->_builtin ) : ?>
+<?php if ( tanlinell_is_custom_post_type() ) : ?>
 	<?php get_template_part( 'templates/partials/sidebar', 'cpt-example' ); ?>
 <?php endif; ?>
 
