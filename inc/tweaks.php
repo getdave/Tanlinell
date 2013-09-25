@@ -47,7 +47,15 @@ function tanlinell_body_classes( $classes ) {
 			$classes[] = $pre.'group-blog';
 		}
 	}
-		
+	
+	/**
+	 * output the template file being used as a class  
+	 * tanlinell--template-THE FILENAME NAME-php
+	 * tanlinell--template-front-page-php
+	 */	
+	global $template;
+	$classes[]=$pre.'template-'.sanitize_title(str_replace(get_template_directory().'/', '', $template));	
+	
 	return $classes;
 }
 add_filter( 'body_class', 'tanlinell_body_classes' );
