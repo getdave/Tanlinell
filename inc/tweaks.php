@@ -27,14 +27,25 @@ add_filter( 'wp_page_menu_args', 'tanlinell_page_menu_args' );
 function tanlinell_body_classes( $classes ) {
 	
 	global $wp_query;
-		
-	// Adds a class of group-blog to blogs with more than 1 published author
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
 	
-	if ( in_array($wp_query->queried_object->post_type, array('post','page') ) ) {
-		$classes[] = $wp_query->queried_object->post_type.'-'.$wp_query->queried_object->post_name;
+	$pre = 'tanlinell--';
+	
+	if( is_archive() ) {
+	
+		if( is_category() )
+			$classes[] = $pre.'archive-'.sanitize_title(single_cat_title( '', false ));		
+		else
+			$classes[] = $pre.'archive-'.$wp_query->query['post_type'];
+		
+	}
+	elseif( is_singular() )
+	{
+		$classes[] = $pre.$wp_query->queried_object->post_type.'-single';
+				
+		// Adds a class of group-blog to blogs with more than 1 published author
+		if ( is_multi_author() ) {
+			$classes[] = $pre.'group-blog';
+		}
 	}
 		
 	return $classes;
