@@ -1,7 +1,7 @@
 <?php
 
 return array(
-	'version' => '0.9.2.11',
+	'version' => '0.9.3',
 	'cluster.messagebus.debug' => false,
 	'cluster.messagebus.enabled' => false,
 	'cluster.messagebus.sns.region' => '',
@@ -166,7 +166,7 @@ return array(
 	'pgcache.prime.sitemap' => '/sitemap.xml',
 	'pgcache.prime.post.enabled' => false,
 	'minify.enabled' => true,
-	'minify.auto' => true,
+	'minify.auto' => false,
 	'minify.debug' => false,
 	'minify.engine' => 'file',
 	'minify.file.gc' => 86400,
@@ -205,13 +205,23 @@ return array(
 	'minify.js.engine' => 'js',
 	'minify.js.combine.header' => true,
 	'minify.js.header.embed_type' => 'blocking',
-	'minify.js.combine.body' => false,
+	'minify.js.combine.body' => true,
 	'minify.js.body.embed_type' => 'blocking',
-	'minify.js.combine.footer' => false,
+	'minify.js.combine.footer' => true,
 	'minify.js.footer.embed_type' => 'blocking',
 	'minify.js.strip.comments' => false,
 	'minify.js.strip.crlf' => false,
 	'minify.js.groups' => array(
+		'd3bb3' => array(
+			'default' => array(
+				'include-footer' => array(
+					'files' => array(
+						0 => 'wp-includes/js/jquery/jquery.js',
+						1 => 'wp-content/themes/bathford/assets/js/site.min.js',
+					),
+				),
+			),
+		),
 	),
 	'minify.yuijs.path.java' => 'java',
 	'minify.yuijs.path.jar' => 'yuicompressor.jar',
@@ -252,8 +262,7 @@ return array(
 		0 => '',
 	),
 	'minify.reject.files.js' => array(
-		0 => 'http://brucemunro.co.uk.burfield-dev.com/wp-content/themes/tanlinell/assets/js/vendor/modernizr.custom.js',
-		1 => '',
+		0 => '/wp-content/themes/bathford/assets/js/vendor/modernizr.custom.js',
 	),
 	'minify.reject.files.css' => array(
 		0 => '',
@@ -455,7 +464,9 @@ return array(
 	'browsercache.other.etag' => true,
 	'browsercache.other.w3tc' => true,
 	'browsercache.other.replace' => true,
-	'browsercache.timestamp' => '1369394614',
+	'browsercache.timestamp' => '1379411227',
+	'browsercache.replace.exceptions' => array(
+	),
 	'mobile.enabled' => false,
 	'mobile.rgroups' => array(
 		'high' => array(
@@ -696,6 +707,36 @@ return array(
 	'newrelic.use_network_wide_id' => false,
 	'pgcache.late_init' => false,
 	'newrelic.include_rum' => true,
-	'wordpress.home' => 'http://brucemunro.co.uk.burfield-dev.com',
+	'extensions.settings' => array(
+		'genesis.theme' => array(
+			'wp_head' => '0',
+			'genesis_header' => '1',
+			'genesis_do_nav' => '1',
+			'genesis_do_subnav' => '1',
+			'loop_front_page' => '1',
+			'loop_single' => '1',
+			'loop_single_excluded' => '',
+			'loop_single_genesis_comments' => '0',
+			'loop_single_genesis_pings' => '0',
+			'sidebar' => '0',
+			'sidebar_excluded' => '',
+			'genesis_footer' => '1',
+			'wp_footer' => '0',
+			'fragment_reject_logged_roles' => '1',
+			'fragment_reject_logged_roles_on_actions' => array(
+				0 => 'genesis_loop',
+				1 => 'wp_head',
+				2 => 'wp_footer',
+			),
+			'fragment_reject_roles' => array(
+				0 => 'administrator',
+			),
+		),
+	),
+	'extensions.active' => array(
+	),
+	'plugin.license_key' => '',
+	'plugin.type' => '',
+	'wordpress.home' => 'http://www.bathford.bathnes.dev:8888',
 	'pgcache.bad_behavior_path' => '',
 );
