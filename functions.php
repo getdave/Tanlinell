@@ -47,7 +47,8 @@ function tanlinell_setup() {
 	/**
 	 * TGM Required Plugins Script
 	 */
-	require( get_template_directory() . '/inc/tgm-plugin-activation/required-plugins.php' );
+	// Removed in favour of Composer based Plugin dependency management
+	//require( get_template_directory() . '/inc/tgm-plugin-activation/required-plugins.php' );
 	
 	
 	/**
