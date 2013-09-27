@@ -32,7 +32,7 @@ function tanlinell_body_classes( $classes ) {
 	
 	if( is_archive() ) {
 	
-		if( is_category() )
+		if( is_category() || is_tax() )
 			$classes[] = $pre.'archive-'.sanitize_title(single_cat_title( '', false ));		
 		else
 			$classes[] = $pre.'archive-'.$wp_query->query['post_type'];
