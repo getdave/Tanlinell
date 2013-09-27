@@ -15,7 +15,8 @@ require_once( trailingslashit( get_template_directory() ) . 'hybrid-core/hybrid.
 new Hybrid();
 
 // Load the TGM Plugin Class - requires or recommends Plugins to install
-require_once( trailingslashit( get_template_directory() ) . 'inc/tgm-plugin-activation/class-tgm-plugin-activation.php' );
+// Removed in favour of Composer based Plugin dependency management
+//require_once( trailingslashit( get_template_directory() ) . 'inc/tgm-plugin-activation/class-tgm-plugin-activation.php' );
 
 
 
