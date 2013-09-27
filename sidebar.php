@@ -13,13 +13,22 @@
  * Sidebar partials
  */
 ?>
-<?php get_template_part( 'templates/partials/sidebar', 'cpt-example' ); ?>
 
-<?php get_template_part( 'templates/partials/sidebar', 'descendants' ); ?>
+<?php if ( tanlinell_is_custom_post_type() ) : ?>
+	<?php get_template_part( 'templates/partials/sidebar', 'cpt-example' ); ?>
+<?php endif; ?>
 
-<?php get_template_part( 'templates/partials/sidebar', 'categories' ); ?>
+<?php if (tanlinell_is_blog_page()) : ?>
 
-<?php get_template_part( 'templates/partials/sidebar', 'archives' ); ?>
+	<?php get_template_part( 'templates/partials/sidebar', 'categories' ); ?>
+	
+	<?php get_template_part( 'templates/partials/sidebar', 'archives' ); ?>
+
+<?php else : ?>
+	
+	<?php get_template_part( 'templates/partials/sidebar', 'descendants' ); ?>
+	
+<?php endif; ?>
 
 
 <?php

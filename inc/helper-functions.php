@@ -80,7 +80,7 @@ function tanlinell_get_attachment_id_from_src($url) {
 
 function tanlinell_truncate_posts( $amount, $read_more_link='read more' ) {
 	
-	echo balanceTags(wp_trim_words( get_the_content(), $amount, '…<a href="'.get_permalink().'">'.$read_more_link.'</a>' ), true);
+	echo balanceTags(wp_trim_words( do_shortcode(get_the_content()), $amount, '…<a href="'.get_permalink().'">'.$read_more_link.'</a>' ), true);
 	
 }
 
@@ -294,3 +294,26 @@ function tanlinell_get_the_categories( $post_ID ){
 	return $category_list;
 }
 
+
+/**
+ * Check if a post is a custom post type.
+ * @param  mixed $post Post object or ID
+ * @return boolean
+ */
+function tanlinell_is_custom_post_type( $post = NULL )
+{
+    $all_custom_post_types = get_post_types( array ( '_builtin' => FALSE ) );
+
+    // there are no custom post types
+    if ( empty ( $all_custom_post_types ) )
+        return FALSE;
+
+    $custom_types      = array_keys( $all_custom_post_types );
+    $current_post_type = get_post_type( $post );
+
+    // could not detect current type
+    if ( ! $current_post_type )
+        return FALSE;
+
+    return in_array( $current_post_type, $custom_types );
+}
