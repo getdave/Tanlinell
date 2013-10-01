@@ -34,17 +34,12 @@ module.exports = function(grunt) {
                 options: {
                     config: 'config.rb',
                     force: true,
-                    relativeAssets: true
+                    relativeAssets: true,
+                    environment: 'production',
+                    outputStyle: 'compressed',
+                    noLineComments: true,
                 }
             },
-            build: {
-                options: {
-                    environment: 'production',
-                    force: true,
-                    noLineComments: true,
-                    outputStyle: 'compressed'
-                }
-            }
         },
 
         // javascript linting with jshint
@@ -63,36 +58,17 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 options: {
-                    compress:   false,
-                    mangle:     false,
-                    beautify:   true,
+                    sourceMap: 'map/source-map.js',
                 },
                 files: {
-                    'assets/js/plugins.min.js': [
-                        'assets/js/source/plugins.js',
+                    'assets/js/site.min.js': [
                         'assets/js/vendor/**/*.js',
+                        'assets/js/source/plugins.js',
+                        'assets/js/source/main.js',
                         '!assets/js/vendor/modernizr*.js'
                     ],
-                    'assets/js/main.min.js': [
-                        'assets/js/source/main.js'
-                    ]
                 }
             },
-            build: {
-                options: {
-                    sourceMap: 'assets/js/map/source-map.js',
-                },
-                files: {
-                    'assets/js/plugins.min.js': [
-                        'assets/js/source/plugins.js',
-                        'assets/js/vendor/**/*.js',
-                        '!assets/js/vendor/modernizr*.js'
-                    ],
-                    'assets/js/main.min.js': [
-                        'assets/js/source/main.js'
-                    ]
-                }
-            }
         },
 
         // image optimization
@@ -162,28 +138,57 @@ module.exports = function(grunt) {
         // Code Deployments (via rsync)
         deploy: {
             options: {
-                        exclude: ['.git*', 'node_modules', '.sass-cache', 'Gruntfile.js', 'package.json', '.DS_Store', 'README.md', 'readme.html', 'license.txt', 'humans.txt','config.rb', '.jshintrc', '.gitignore', 'wp-config-local.php', 'w3tc-config', 'advanced-cache.php', 'object-cache.php'],                args: [
-                        "-avz",     //  -a is an alias for -rlptgoD; -v is verbose; -z is compression
-                        "--progress",
+                exclude: [
+                    // Git
+                    '.git*',
+                    '.gitignore',
+
+                    // NPM & Grunt
+                    'node_modules',
+                    'package.json',
+                    'Gruntfile.js',
+
+                    // Tools and Libs
+                    '.sass-cache',
+                    '.jshintrc',
+                    'config.rb',
+
+                    // License & Docs
+                    'README.md',
+                    'readme.html',
+                    'license.txt',
+                    'humans.txt',
+
+                    // WordPress
+                    'wp-config-local.php',
+                    'w3tc-config',
+                    'advanced-cache.php',
+                    'object-cache.php',
+                    '/wp-content/uploads/cache/',
+
+                    // Misc file-system
+                    '.DS_Store',
+                ],
+                args: [
+                    "-avzh",     //  -a is an alias for -rlptgoD; -v is verbose; -z is compression, -h is output numbers in a human-readable format
+                    "--progress",
                 ],
                 recursive: true,
                 syncDest: false,
                 untracked_config: grunt.file.readJSON('code_deployments_untracked_config.json') // file not under version control
             },
-            
-            "develop": "<%= deploy.options.untracked_config.develop %>"
+
+            "develop": "<%= deploy.options.untracked_config.develop %>",
 
             /*
             "develop": {
-                "src": "../../../",
-                "dest": "~/public_html/",
-                "host": "user@host",
-                "recursive": "<%= deploy.options.recursive %>",
-                "syncDest": "<%= deploy.options.syncDest %>",
-                "exclude": "<%= deploy.options.exclude %>",
-                "args": "<%= deploy.options.args %>"
-            }
-             */
+                options: {
+                    "src": "../../../",
+                    "dest": "~/public_html/",
+                    "host": "user@host",
+                }
+            },
+            */
         },
 
         // Database Deployments (via grunt-deployments)
@@ -227,12 +232,6 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
-    // Build task - run to optimise before pushing to production
-    grunt.registerTask('build', [
-        'compass:build',
-        'jshint',
-        'uglify:build',
-        'imagemin'
-    ]);
+
 
 };
