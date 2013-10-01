@@ -212,12 +212,12 @@ return array(
 	'minify.js.strip.comments' => false,
 	'minify.js.strip.crlf' => false,
 	'minify.js.groups' => array(
-		'd3bb3' => array(
+		'ca2cc' => array(
 			'default' => array(
-				'include-footer' => array(
+				'include' => array(
 					'files' => array(
-						0 => 'wp-includes/js/jquery/jquery.js',
-						1 => 'wp-content/themes/bathford/assets/js/site.min.js',
+						0 => 'wp-content/themes/Tanlinell/assets/js/site.min.js',
+						1 => 'wp-includes/js/jquery/jquery.js',
 					),
 				),
 			),
@@ -262,7 +262,8 @@ return array(
 		0 => '',
 	),
 	'minify.reject.files.js' => array(
-		0 => '/wp-content/themes/bathford/assets/js/vendor/modernizr.custom.js',
+		0 => '/wp-content/themes/Tanlinell/assets/js/vendor/modernizr.custom.js',
+		1 => '/wp-content/themes/tanlinell/assets/js/vendor/modernizr.custom.js',
 	),
 	'minify.reject.files.css' => array(
 		0 => '',
@@ -464,8 +465,9 @@ return array(
 	'browsercache.other.etag' => true,
 	'browsercache.other.w3tc' => true,
 	'browsercache.other.replace' => true,
-	'browsercache.timestamp' => '1379411227',
+	'browsercache.timestamp' => '1380617810',
 	'browsercache.replace.exceptions' => array(
+		0 => '',
 	),
 	'mobile.enabled' => false,
 	'mobile.rgroups' => array(
@@ -659,8 +661,8 @@ return array(
 	'notes.plugins_updated' => false,
 	'notes.cdn_upload' => true,
 	'notes.cdn_reupload' => false,
-	'notes.need_empty_pgcache' => false,
-	'notes.need_empty_minify' => false,
+	'notes.need_empty_pgcache' => true,
+	'notes.need_empty_minify' => true,
 	'notes.need_empty_objectcache' => false,
 	'notes.root_rules' => true,
 	'notes.rules' => true,
@@ -737,6 +739,6 @@ return array(
 	),
 	'plugin.license_key' => '',
 	'plugin.type' => '',
-	'wordpress.home' => 'http://www.bathford.bathnes.dev:8888',
+	'wordpress.home' => 'http://tanlinell.dev:8888',
 	'pgcache.bad_behavior_path' => '',
 );
