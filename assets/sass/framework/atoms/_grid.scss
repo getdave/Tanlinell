@@ -108,13 +108,12 @@
 // therefore we need to linearise our layout to ensure it
 // doesn't break in older IE
 @if ($is-oldie == true) {
-	.no-js {
-		#{$allGridClasses},
-		.gc {
-			float: none;
-			width: 100%;
-		}
-	}
+    .no-js {
+        .gc {
+            float: none !important;
+            width: 100% !important;
+        }
+    }
 }
 
 
@@ -217,7 +216,7 @@
 .grid--divided,
 .grid-divide {
 	> .gc {
-        margin-bottom: $baseLineHeight;
+        margin-bottom: $gutter-width;
     }
 }
 

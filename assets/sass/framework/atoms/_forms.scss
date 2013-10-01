@@ -361,10 +361,6 @@ optgroup {
 
 
 
-
-
-/* ##Form Instances */
-
 /* ##Prepend/Append */
 
 /* 
@@ -380,23 +376,4 @@ optgroup {
 }
 
 
-/* ##Search Form */
 
-/* 
-	<form class="form-search input-append">
-		<input type="text" class="input-medium search-query">
-		<button type="submit" class="btn">Search</button>
-	</form>
-*/
-
-.form-search {
-	.search-query {
-		display: inline-block;
-		margin-bottom: 0;
-		vertical-align: middle;
-	}
-
-	.search-submit {
-
-	}
-}

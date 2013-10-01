@@ -15,7 +15,8 @@ require_once( trailingslashit( get_template_directory() ) . 'hybrid-core/hybrid.
 new Hybrid();
 
 // Load the TGM Plugin Class - requires or recommends Plugins to install
-require_once( trailingslashit( get_template_directory() ) . 'inc/tgm-plugin-activation/class-tgm-plugin-activation.php' );
+// Removed in favour of Composer based Plugin dependency management
+//require_once( trailingslashit( get_template_directory() ) . 'inc/tgm-plugin-activation/class-tgm-plugin-activation.php' );
 
 
 
@@ -47,8 +48,14 @@ function tanlinell_setup() {
 	/**
 	 * TGM Required Plugins Script
 	 */
-	require( get_template_directory() . '/inc/tgm-plugin-activation/required-plugins.php' );
-
+	// Removed in favour of Composer based Plugin dependency management
+	//require( get_template_directory() . '/inc/tgm-plugin-activation/required-plugins.php' );
+	
+	
+	/**
+	 * Tanlinell Plugin Overides
+	 */
+	require( get_template_directory() . '/inc/plugin-overrides.php' );
 
 
 	/* Set the content width based on the theme's design and stylesheet. */

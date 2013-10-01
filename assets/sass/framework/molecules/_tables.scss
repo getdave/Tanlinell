@@ -1,3 +1,4 @@
+@if $use-tables == true {
 /*------------------------------------*\
     $TABLES
 \*------------------------------------*/
@@ -59,13 +60,20 @@ table{
     width:100%;
     margin-bottom: $baseLineHeight;
 }
+
 th,
-td{
-    padding:$baseLineHeight / 4;
+td {
+    padding: $baseLineHeight / 4;
     @include respond-to($mobileBreak) {
-        padding:$baseLineHeight / 2;
+        padding:$baseLineHeight / 3;
     }
+    border:1px solid #ccc;
     text-align:left;
+
+}
+
+thead tr:last-child th {
+    border-bottom-width:2px;
 }
 
 
@@ -121,20 +129,6 @@ td{
 .t95    { width:95% }
 
 
-/**
- * Bordered tables
- */
-.table--bordered{
-
-    th,
-    td{
-        border:1px solid #ccc;
-    }
-
-    thead tr:last-child th {
-        border-bottom-width:2px;
-    }
-}
 
 
 /**
@@ -154,3 +148,5 @@ td{
 .table--data{
     font:12px/1.5 sans-serif;
 }
+
+}//endif

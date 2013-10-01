@@ -127,7 +127,8 @@ a:active {
  * Addresses styling not present in IE7/8/9, S5, Chrome
  */
 
-abbr[title] {
+abbr[title],
+acronym[title] {
     border-bottom: 1px dotted;
 }
 
@@ -204,6 +205,10 @@ q:after {
     content: none;
 }
 
+big {
+    font-size: 100%;
+}
+
 small {
     font-size: 75%;
 }
@@ -241,7 +246,7 @@ ol {
 }
 
 dd {
-    margin: 0 0 0 40px;
+    margin: 0;
 }
 
 nav ul,

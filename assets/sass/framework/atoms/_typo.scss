@@ -17,6 +17,37 @@ body {
 
 
 // ==========================================================================
+// ENTRIES
+// ==========================================================================
+
+// HEADER
+// ==========================================================================
+
+// canel bottom margin when heading has meta data immediately following it
+.entry-header--has-meta {
+	margin-bottom: $baseLineHeight/3;
+
+	.entry-title {
+		margin-bottom: 0;
+	}
+}
+
+// canel bottom margin when title has meta data immediately following it
+.entry-title--has-meta {
+	margin-bottom: $baseLineHeight/3;
+}
+
+
+// META
+// ==========================================================================
+
+.entry-meta {
+	margin-bottom: $baseLineHeight;
+	color: lighten($grayDark,25%);
+}
+
+
+// ==========================================================================
 // PARAGRAPHS
 // ==========================================================================
 
@@ -104,12 +135,43 @@ li {
 // ==========================================================================
 
 
-blockquote, blockquote p { line-height: 1.5; color: #777; }
-blockquote { margin: 0 0 $baseLineHeight; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
-blockquote cite { display: block; font-size: ms(0) - 1; color: #555; }
-blockquote cite:before { content: "\2014 \0020"; }
-blockquote cite a, blockquote cite a:visited { color: #555; }
+blockquote, 
+blockquote p,
+q {
+	line-height: 1.5; 
+	color: #777; 
+}
 
+blockquote { 
+	margin: 0 0 $baseLineHeight; 
+	@include rem(padding,9px 20px 0 19px);
+	border-left: 1px solid #ddd; 
+}
+
+blockquote cite { 
+	display: block; 
+	color: #555; 
+	font-size: 0.9em;
+	@include rem(padding-top,5px);
+}
+
+blockquote cite:before { 
+	content: "\2014 \0020"; 
+}
+
+blockquote cite a, 
+blockquote cite a:visited { 
+	color: #555; 
+}
+
+
+// ==========================================================================
+// ADDRESS
+// ==========================================================================
+
+address {
+	margin-bottom: $baseLineHeight;
+}
 
 
 // ==========================================================================
@@ -130,3 +192,4 @@ img {
 #map_canvas embed { max-width: none; }
 #map_canvas img { max-width: none; }
 #map_canvas object { max-width: none; }
+.anystretch img { max-width: none;}

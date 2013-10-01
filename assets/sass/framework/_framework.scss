@@ -56,6 +56,7 @@
    Groupings of base atomic objects to create reusable elements
    ========================================================================== */
 
+	@import "molecules/_tables.scss";
 	@import "molecules/_media-block.scss";
 	@import "molecules/_island.scss";
 	@import "molecules/_split.scss";
@@ -81,6 +82,7 @@
 	@import "molecules/_graybox.scss";
 	@import "molecules/_code.scss";
 	@import "molecules/_sprite.scss";
+	@import "molecules/_panel.scss";
 
 /* ==========================================================================
    COMPOUNDS
@@ -99,6 +101,7 @@
 	@import "compounds/_gravity-forms.scss";
 	@import "compounds/_magnific.scss";
 	@import "compounds/_site-colophon.scss";
+	@import "compounds/_search-form.scss";
 
 /* ==========================================================================
    HELPERS

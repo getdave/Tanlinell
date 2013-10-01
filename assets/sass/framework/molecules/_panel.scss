@@ -1,0 +1,77 @@
+@if $use-panel == true {
+/* #Panel */
+
+/* Extends .island to create "boxed" content areas with a definitie "header" and "footer" */
+
+/* ##Island */
+/*
+    <div class="panel">
+        <div class="panel__heading">
+            <h3 class="panel__title">Panel title</h3>
+        </div>
+        <div class="panel__body">
+            Panel content
+        </div>
+        <div class="panel__footer">Panel footer</div>
+    </div>
+*/
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+
+.panel {
+    @extend .island;
+    padding: 0;
+    border: 1px solid #DDD;
+}
+
+.panel__heading,
+.panel__content,
+.panel__footer {
+    padding: $baseLineHeight/3 $baseLineHeight/2;
+}
+
+.panel__heading,
+.panel__footer {
+    color: #333;
+    background-color: #F5F5F5;
+    border-color: #DDD;
+    border-style: solid;
+    border-width: 0;
+    margin-bottom: 0;
+    @include rem(font-size,$baseFontSize);
+}
+
+// HEADING
+// ==========================================================================
+
+.panel__heading {
+    border-bottom-width: 1px;
+}
+
+.panel__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    @include rem(font-size,$baseFontSize);
+}
+
+
+// FOOTER
+// ==========================================================================
+.panel__footer {
+    border-top-width: 1px;
+}
+
+
+// CONTENT
+// ==========================================================================
+
+.panel__content {
+    list-style-type: none; // just in case!
+    margin-left: 0;
+}
+
+}//endif

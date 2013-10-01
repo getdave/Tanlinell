@@ -197,7 +197,7 @@ $mobileBreak:					"medium" !default;
 $use-standard-breakpoints: 		true !default;
 
 // Grid configuration
-$grids: 						2 3 4 5 6 12 !default;	// number of columns required
+$grids: 						2 3 4 5 6 7 8 !default;	// number of columns required
 $gutter: 						3em !default;	 // gutter between each column in em's
 
 // Include "push-" and "pull-" classes for source reordering?
@@ -232,6 +232,7 @@ $zindex-tier-6:           		6000 !default;
 // ==========================================================================
 
 // Default "on"
+$use-tables: 					true !default;
 $use-media-block: 				true !default;
 $use-nav: 						true !default;
 $use-buttons: 					true !default;
@@ -257,7 +258,7 @@ $use-graybox: 					false !default;
 $use-hero-unit: 				false !default;
 $use-labels-badges: 			false !default;
 $use-split: 					false !default;
-
+$use-panel: 					true !default;
 
 // Compounds
 // ==========================================================================
@@ -271,10 +272,11 @@ $use-site-logo: 				true !default;
 $use-site-credit: 				true !default;
 $use-gravity-forms: 			true !default;
 $use-site-colophon: 			true !default;
+$use-social-actions: 			true !default;
+$use-search-form: 				true !default;
 
 // Default "off"
 $use-social-icons: 				false !default;
-$use-social-actions: 			true !default;
 $use-magnific: 					false !default;
 
 
