@@ -280,11 +280,11 @@ $half_gutter_width: ($gutter/2);
 
       @if $unit == "px" {  /* 7 */
         $px : append($px,  $value);
-        $rem: append($rem, ($val / parseInt($baseFontSize) + rem));
+        $rem: append($rem, ($val / 16 + rem));
       }
 
       @if $unit == "rem" { /* 7 */
-        $px : append($px,  ($val * parseInt($baseFontSize) + px));
+        $px : append($px,  ($val * 16 + px));
         $rem: append($rem, $value);
       }
     }
