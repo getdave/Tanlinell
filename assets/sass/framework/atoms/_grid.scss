@@ -216,7 +216,7 @@
 .grid--divided,
 .grid-divide {
 	> .gc {
-        margin-bottom: $baseLineHeight;
+        margin-bottom: $gutter-width;
     }
 }
 
