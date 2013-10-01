@@ -2,12 +2,16 @@
 
 code,
 pre,
-kbd {
+kbd,
+tt,
+var {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
 code,
-kbd {
+kbd,
+tt,
+var {
     @include rem(padding,0 5px);
     @include rem(margin,0 2px);
     @include rem(font-size,12px);
@@ -16,6 +20,10 @@ kbd {
     background-color: #F8F8F8;
     border:1px solid #DDD;
     border-radius: 3px;
+}
+
+var {
+    font-style: normal;
 }
 
 pre {
