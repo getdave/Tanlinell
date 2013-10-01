@@ -72,13 +72,23 @@
 // ==========================================================================
 
 .gallery-row {
+	
+	:first-child {
+		clear: left;
+	}
+	
+	.col-1 {
+		@extend .gc;
+	}
+
 	.col-2 {
 		@extend .gc;
-		@extend .l1-2;
+		@extend .h1-2;
 	}
 
 	.col-3 {
 		@extend .gc;
+		@extend .h1-2;
 		@extend .l1-3;
 	}
 
@@ -88,11 +98,32 @@
 		@extend .d1-4;
 	}
 
-	.col-6,
 	.col-5 {
 		@extend .gc;
 		@extend .l1-3;
+		@extend .d1-5;
+	}
+
+	.col-6 {
+		@extend .gc;
+		@extend .l1-3;
 		@extend .d1-6;
+	}
+
+	.col-7 {
+		@extend .gc;
+		@extend .l1-3;
+		@extend .d1-7;
+	}
+
+	.col-8,
+	.col-9,
+	.col-10,
+	.col-11,
+	.col-12 {
+		@extend .gc;
+		@extend .l1-4;
+		@extend .d1-8;
 	}
 }
 
