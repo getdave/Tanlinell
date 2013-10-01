@@ -16,8 +16,8 @@ get_header(); ?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<p><?php _e( 'It looks like nothing was found at this location. Perhaps you could try the <a href="/sitemap/" title="View the website sitemap">sitemap</a>.', 'tanlinell' ); ?></p>
-
+				<p><?php _e( 'It looks like nothing was found at this location. Perhaps you could try the <a href="/sitemap/" title="View the website sitemap">sitemap</a> or use the search form <a title="Search the site" href="#site-search">below</a>.', 'tanlinell' ); ?></p>
+				<?php get_search_form(); ?>
 			</div><!-- .entry-content -->
 		</article><!-- #post-0 .post .error404 .not-found -->
 	</div><!-- .main -->
