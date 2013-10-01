@@ -1,24 +1,29 @@
 @if $use-code == true {
 
 code,
-pre {
+pre,
+kbd {
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-code {
-    padding: rsize(2px) rsize(4px);
-    font-size: 90%;
-    color: #c7254e;
+code,
+kbd {
+    @include rem(padding,0 5px);
+    @include rem(margin,0 2px);
+    @include rem(font-size,12px);
+    color: #333;
     white-space: nowrap;
-    background-color: #f9f2f4;
-    border-radius: 4px;
+    background-color: #F8F8F8;
+    border:1px solid #DDD;
+    border-radius: 3px;
 }
 
 pre {
     display: block;
-    padding: rsize(9.5px);
+    @include rem(padding,9.5px);
     margin: 0 0 $baseLineHeight;
     color: #333333;
+    @include rem(font-size,13px);
     word-break: break-all;
     word-wrap: break-word;
     background-color: #f5f5f5;
