@@ -17,6 +17,37 @@ body {
 
 
 // ==========================================================================
+// ENTRIES
+// ==========================================================================
+
+// HEADER
+// ==========================================================================
+
+// canel bottom margin when heading has meta data immediately following it
+.entry-header--has-meta {
+	margin-bottom: $baseLineHeight/3;
+
+	.entry-title {
+		margin-bottom: 0;
+	}
+}
+
+// canel bottom margin when title has meta data immediately following it
+.entry-title--has-meta {
+	margin-bottom: $baseLineHeight/3;
+}
+
+
+// META
+// ==========================================================================
+
+.entry-meta {
+	margin-bottom: $baseLineHeight;
+	color: lighten($grayDark,25%);
+}
+
+
+// ==========================================================================
 // PARAGRAPHS
 // ==========================================================================
 

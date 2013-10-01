@@ -15,7 +15,7 @@ $page_subtitle = esc_html( $global_metabox->get_the_value() );
 //if $page_match == true/1 -> we dont need to link this
 $page_match = ( trailingslashit(home_url( $wp->request ))==get_permalink() ) ? true : false;
 ?>
-<header class="entry-header">
+<header class="entry-header entry-header--has-meta">
 
 	<?php if(true == $page_match) : ?>
 
@@ -45,16 +45,16 @@ $page_match = ( trailingslashit(home_url( $wp->request ))==get_permalink() ) ? t
 </header>
 
 
-<footer class="entry-meta title-block__meta">
-	<span itemprop="dateCreated"><?php tanlinell_posted_on(); ?></span>
+<footer class="entry-meta">
+	<span class="entry-meta__created" itemprop="dateCreated"><?php tanlinell_posted_on(); ?></span>
 	<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'tanlinell' ) );
 			if ( $categories_list && tanlinell_categorized_blog() ) :
 		?>
-		<span class="cat-links">
-			<?php printf( __( 'in %1$s', 'tanlinell' ), $categories_list ); ?>
+		<span class="entry-meta__cat-links">
+			<?php printf( __( 'in %1$s', 'tanlinell' ), $categories_list ); ?>.
 		</span>
 		<?php endif; // End if categories ?>
 
@@ -63,7 +63,7 @@ $page_match = ( trailingslashit(home_url( $wp->request ))==get_permalink() ) ? t
 			$tags_list = get_the_tag_list( '', __( ', ', 'tanlinell' ) );
 			if ( $tags_list ) :
 		?>
-		<span class="tag-links">
+		<span class="entry-meta__tag-links">
 			<?php printf( __( 'Tagged %1$s', 'tanlinell' ), $tags_list ); ?>
 		</span>
 		<?php endif; // End if $tags_list ?>

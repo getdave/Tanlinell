@@ -19,7 +19,7 @@ $page_match = ( trailingslashit(home_url( $wp->request ))==get_permalink() ) ? t
 	
 	<?php if(true == $page_match) : ?>
 	
-	<h1 class="<?php echo ( $page_subtitle ) ? 'title-block__heading ' : ''; ?> page-title entry-title" itemprop="name headline">		
+	<h1 class="<?php echo ( $page_subtitle ) ? 'entry-title--has-meta ' : ''; ?> page-title entry-title" itemprop="name headline">		
 		<?php if ( $page_title ) : ?>
 			<?php echo $page_title; ?>
 		<?php else : ?>
@@ -29,7 +29,7 @@ $page_match = ( trailingslashit(home_url( $wp->request ))==get_permalink() ) ? t
 	
 	<?php else: ?>
 	
-	<h2 class="<?php echo ( $page_subtitle ) ? 'title-block__heading ' : ''; ?> page-title entry-title" itemprop="name headline">
+	<h2 class="<?php echo ( $page_subtitle ) ? 'entry-header--has-meta ' : ''; ?> page-title entry-title" itemprop="name headline">
 		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'tanlinell' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark" itemprop="url">
 		<?php if ( $page_title ) : ?>
 			<?php echo $page_title; ?>
