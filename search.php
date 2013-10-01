@@ -18,16 +18,17 @@ get_header(); ?>
 				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'tanlinell' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
-			<?php tanlinell_content_nav( 'nav-above' ); ?>
-
 			<?php /* Start the Loop */ ?>
+		
+			<ul class="article-list item-list">
 			<?php while ( have_posts() ) : the_post(); ?>
+				<li class="article-list__item list-item">
 
 				<?php get_template_part( 'content', 'search' ); ?>
-
+				</li>
 			<?php endwhile; ?>
-
-			<?php tanlinell_content_nav( 'nav-below' ); ?>
+			</ul>
+			<?php get_template_part('pagination'); ?>
 
 		<?php else : ?>
 
