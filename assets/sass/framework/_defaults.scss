@@ -232,6 +232,7 @@ $zindex-tier-6:           		6000 !default;
 // ==========================================================================
 
 // Default "on"
+$use-tables: 					true !default;
 $use-media-block: 				true !default;
 $use-nav: 						true !default;
 $use-buttons: 					true !default;
@@ -271,10 +272,10 @@ $use-site-logo: 				true !default;
 $use-site-credit: 				true !default;
 $use-gravity-forms: 			true !default;
 $use-site-colophon: 			true !default;
+$use-social-actions: 			true !default;
 
 // Default "off"
 $use-social-icons: 				false !default;
-$use-social-actions: 			true !default;
 $use-magnific: 					false !default;
 
 
