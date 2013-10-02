@@ -185,12 +185,18 @@ function tanlinell_setup() {
 	add_image_size( 'featured_image_small', 420, 390, false );
 	
 	
-	
 	/**
 	 * Default Page Setup
 	 * creates pages and sets config to allow /blog/ and /home/ to load our templates
 	 */
-	require( get_template_directory() . '/inc/default-page-setup.php' );	
+	require( get_template_directory() . '/inc/default-page-setup.php' );
+	
+	
+	/**
+	 * Default Menus Setup
+	 * creates menu items and assigns to menu locations that have been created previously
+	 */
+	require( get_template_directory() . '/inc/default-menu-setup.php' );	
 	
 	
 }
