@@ -13,7 +13,11 @@ if($latest_blog_posts->have_posts()) : ?>
 <?php while($latest_blog_posts->have_posts()): $latest_blog_posts->the_post(); ?>
 	<li class="latest-posts__item">
 		<article>
-			<?php the_title( '<h6 class="">', '</h6>' ); ?>
+			<a href="<?php the_permalink(); ?>"
+			   title="<?php printf( esc_attr__( 'Permalink to %s', 'tanlinell' ),
+			   the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title( '<h6 class="">', '</h6>' ); ?>
+			</a>
+			
 			<p><?php tanlinell_truncate_posts( 20, '[read more]' ); ?></p>
 		</article>
 	</li>
