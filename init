@@ -7,7 +7,7 @@ rm README.md            			&& \
 cd hybrid-core          			&& \
 rm -rf .git*	        			&& \
 cd ../           					&& \
-cd mv boxsizing.htc ../../../       && \
+mv boxsizing.htc ../../../			&& \
 rm init
 
 echo "Tanlinell successfully installed"
