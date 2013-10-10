@@ -12,40 +12,7 @@
 
 
 function tanlinell_widgets_init() {
-
-	// HOMEPAGE WIDGETS (x3)
-	register_sidebar( array(
-		'name' => __( 'Homepage Feature One', 'tanlinell' ),
-		'id' => 'homepage-feature-one',
-		'description' => __( '1st feature block used on the website homepage.', 'tanlinell' ),
-		'before_widget' => '',
-		'after_widget' => "",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Homepage Feature Two', 'tanlinell' ),
-		'id' => 'homepage-feature-two',
-		'description' => __( '2nd feature block used on the website homepage.', 'tanlinell' ),
-		'before_widget' => '',
-		'after_widget' => "",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	) );
-
-	register_sidebar( array(
-		'name' => __( 'Homepage Feature Three', 'tanlinell' ),
-		'id' => 'homepage-feature-three',
-		'description' => __( '3rd feature block used on the website homepage.', 'tanlinell' ),
-		'before_widget' => '',
-		'after_widget' => "",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	) );
-
-
-
+	
 	// FOOTER WIDGETS (x3)
 	register_sidebar( array(
 		'name' => __( 'Footer Area One', 'tanlinell' ),
