@@ -31,6 +31,7 @@
 /**
  * Define the image dimensions for archive of cpt and single of cptvv 
  */	
+/*
 function bc_s_b_p_archive_image_args_override( $thumb_args ) {
 		
 	global $wp_query;
@@ -49,6 +50,7 @@ function bc_s_b_p_archive_image_args_override( $thumb_args ) {
 	return $thumb_args;
 }
 add_action( 'bc_s_b_p_archive_image_args', 'bc_s_b_p_archive_image_args_override' );
+*/
 
 
 /**
