@@ -32,7 +32,7 @@ get_header();
 						get_the_title( $post->post_parent )
 					);
 				?>
-				<?php edit_post_link( __( 'Edit', 'tanlinell' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
+				
 			</footer><!-- .entry-meta -->
 
 			<div class="entry-content">
@@ -92,7 +92,7 @@ get_header();
 				<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
 					<?php _e( 'Both comments and trackbacks are currently closed.', 'tanlinell' ); ?>
 				<?php endif; ?>
-				<?php edit_post_link( __( 'Edit', 'tanlinell' ), ' <span class="edit-link">', '</span>' ); ?>
+				
 			</p><!-- .entry-meta -->
 		</article><!-- #post-<?php the_ID(); ?> -->
 
