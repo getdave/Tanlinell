@@ -20,7 +20,7 @@ get_header(); ?>
 			
 			<?php $stat = tanlinell_paging_stat(); ?>
 			<div class="search-stat">
-				<p>Displaying <span class="search-stat__item search-stat__item--floor"><?php echo $stat['floor']; ?></span>-<span class="search-stat__item search-stat__item--ceiling"><?php echo $stat['ceiling']; ?></span> of <span class="search-stat__item search-stat__item--total"><?php echo $stat['total']; ?></span> results</p>
+				<p>Displaying <span class="search-stat__item search-stat__floor"><?php echo $stat['floor']; ?></span>-<span class="search-stat__item search-stat__ceiling"><?php echo $stat['ceiling']; ?></span> of <span class="search-stat__item search-stat__total"><?php echo $stat['total']; ?></span> results</p>
 			</div>
 		
 			<ul class="article-list item-list">
