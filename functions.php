@@ -127,14 +127,8 @@ function tanlinell_setup() {
 	 */	
 	//require( get_template_directory() . '/inc/custom-widgets.php' );
 	
-
-	/**
-	 * Register Widgetized Areas
-	 * sets up and registers required Widgetized areas
-	 */	
-	require( get_template_directory() . '/inc/register-widget-areas.php' );
-
-
+	
+	
 	/**
 	 * WPAlchemy
 	 * call initial setup and make class available
