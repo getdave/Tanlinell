@@ -192,7 +192,6 @@ function tanlinell_setup() {
 	 */
 	require( get_template_directory() . '/inc/default-menu-setup.php' );	
 
-
 	/**
 	 * WooCommerce Customisations
 	 * custom hooks and filter functinos for integration with WooCommerce

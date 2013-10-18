@@ -51,6 +51,19 @@
 	@extend .grid;
 }
 
+.product-single__title {
+	@extend .entry-title--has-meta;
+}
+
+
+.product-single__offers {
+
+}
+
+.product-single__price {
+
+}
+
 // PRODUCT IMAGES
 // ==========================================================================
 
@@ -99,15 +112,83 @@
 
 }
 
-// RELATED PRODUCTS
-// ==========================================================================
-
 
 
 // ==========================================================================
+// CART
+// ==========================================================================
+
+.cart {
+	margin-bottom: $baseLineHeight;
+
+	@include respond-to(large) {
+		width: 50%;
+	}
+
+	.quantity {
+		@include rem(padding-left,60px);
+		@include rem(padding-right,60px);
+	}
+
+	.qty,
+	input.minus,
+	input.plus {
+		@include inline-block;
+		@include rem(width,60px);
+		@include rem(height,50px);
+	}
+
+	.qty {
+		width: 100%;
+	}
+
+	.minus,
+	.plus {
+		@extend .btn;
+		padding: 0;
+	}
+
+	.minus {
+		@include rem(margin-left,-60px);
+	}
+
+	.plus {
+		@include rem(margin-right,-60px);
+	}
+
+}
+
+.single_add_to_cart_button {
+	margin-top: $baseLineHeight;
+	width: 100%;
+	display: block;
+
+	@include respond-to(large) {
+		@include inline-block;
+		width: auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ==========================================================================
+// UI
+// ==========================================================================
+
+
 // NOTICES
 // ==========================================================================
-
 .woocommerce-message {
 	@extend .alert;	
 	@extend .alert-success;	
@@ -126,11 +207,12 @@
 	}
 }
 
-
-// ==========================================================================
 // BUTTONS
 // ==========================================================================
 
 .button {
 	@extend .btn;
 }
+
+
+
