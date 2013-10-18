@@ -133,9 +133,7 @@
 // PRODUCT TABS
 // ==========================================================================
 
-.product .woocommerce-tabs {
 
-}
 
 
 
@@ -240,4 +238,28 @@
 }
 
 
+// WOOCOMMERCE TABS
+// ==========================================================================
+
+.woocommerce-tabs {
+	.tabs {
+		@extend %tabs-list;
+
+		li {
+			@extend %tabs-list__item;
+		}
+
+		.active {
+			@extend %tabs-list__item--current;
+		}
+
+		a {
+			@extend %tabs-list__link;
+		}
+	}
+
+	.panel {
+		@extend %tabcontent;
+	}
+}
 
