@@ -176,14 +176,60 @@
 // SHOP TABLE
 // ==========================================================================
 
+.cart__contents {
+	margin-bottom: $baseLineHeight;
+}
+
+
+.scrollable {
+	position: relative;
+	overflow: hidden;
+
+	table {
+		margin-bottom: 0;
+	}
+
+	> div {
+		overflow-x: auto;
+	}
+	
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 50px;
+		height: 100%;
+		border-radius: 10px 0 0 10px / 50% 0 0 50%;
+		box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
+		content: '';
+	}
+}
+
+.scrollable > div::-webkit-scrollbar {
+    height:12px;
+}
+.scrollable > div::-webkit-scrollbar-track {
+    box-shadow:0 0 2px rgba(0,0,0,0.15) inset;
+    background:#f0f0f0;
+}
+.scrollable > div::-webkit-scrollbar-thumb {
+    border-radius:6px;
+    background:#ccc;
+}
+
 // REMOVE
 .shop_table {
 
+
 	.product-remove {
 		text-align: center;
+		padding: 0;
 	}
 
 	.remove {
+		display: block;
+		margin: 0 auto;
+		@include rem(padding,15px);
 		@include rem(font-size,20px);
 		font-weight: bold;
 		color: $errorText;
@@ -200,6 +246,16 @@
 .shop_table .product-quantity {
 	width: 26%;
 	max-width: 200px;
+}
+
+
+//PRODUCT  THUMBNAIL
+.shop_table .product-thumbnail {
+	display: none;
+
+	@include respond-to(small) {
+		display: table-cell;
+	}
 }
 
 
@@ -225,7 +281,7 @@
 }
 
 // ACTIONS
-.shop_table {
+.cart__actions {
 	.actions {
 		text-align: left;
 		padding: $baseLineHeight/2 $baseLineHeight;
