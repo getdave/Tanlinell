@@ -397,10 +397,47 @@
 
 
 
+// ==========================================================================
+// CHECKOUT
+// ==========================================================================
+
+.checkout {
+	.col2-set {
+		@extend .grid;
+		margin-bottom: $baseLineHeight*2;
+	}
+
+	.col-1,
+	.col-2 {
+		@extend .gc;
+		@extend .l1-2;
+	}
+
+}
 
 
+#order_review {
+	
+	.cart-subtotal {
+		font-size: 1.1em;
+	}
+
+	.total {
+		font-size: 1.4em;
+	}
+}
 
 
+.place-order .button {
+	@extend .btn-large;
+	@extend .btn-full;
+	width: 100%;
+
+	@include respond-to(small) {
+		@include inline-block;
+		width: auto;
+	}
+}
 
 
 
@@ -434,6 +471,18 @@
 		}
 	}
 }
+
+// ERRORS
+// ==========================================================================
+
+.woocommerce-error {
+	@extend .list-unstyled;
+	li {
+		@extend .alert;	
+		@extend .alert-error;	
+	}
+}
+
 
 // BUTTONS
 // ==========================================================================
