@@ -191,6 +191,13 @@ function tanlinell_setup() {
 	 * creates menu items and assigns to menu locations that have been created previously
 	 */
 	require( get_template_directory() . '/inc/default-menu-setup.php' );	
+
+
+	/**
+	 * WooCommerce Customisations
+	 * custom hooks and filter functinos for integration with WooCommerce
+	 */
+	require( get_template_directory() . '/inc/woocommerce-customisations.php' );	
 	
 	
 }

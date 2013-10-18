@@ -1,0 +1,136 @@
+// ==========================================================================
+// CATALOGUE LISTING
+// ==========================================================================
+
+.products {
+	@extend .grid;
+	@extend .grid--divided;
+
+	.product {
+		@extend .gc;
+		@extend .h1-2;
+		@extend .l1-3;
+		@extend .d1-4;
+		position: relative;
+		z-index: $zindex-tier-1;
+	}
+}
+
+
+
+// Product Thumbnail
+.attachment-shop_catalog {
+	@extend .img-thumb;
+	@extend .img-polaroid;
+}
+
+// ==========================================================================
+// PRODUCT META
+// ==========================================================================
+
+.onsale {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: $zindex-tier-1;
+		display: none;
+}
+
+.price {
+	del {
+		color: #ccc;
+	}
+}
+
+
+// ==========================================================================
+// PRODUCT SINGLE
+// ==========================================================================
+
+.product-single__overview {
+	@extend .grid;
+}
+
+// PRODUCT IMAGES
+// ==========================================================================
+
+.images {
+	@extend .gc;
+	@extend .l1-2;
+	@extend .d1-3;
+}
+
+.woocommerce-main-image {
+	@extend .img-thumb;
+	@extend .img-polaroid;
+	display: block;
+}
+
+.thumbnails {
+	@extend .grid;
+
+	a {
+		@extend .gc;
+		@extend .h1-3;
+	}
+
+	img {
+		@extend .img-thumb;
+		@extend .img-polaroid;
+		display: block;
+	}
+}
+
+
+// PRODUCT SUMMARY
+// ==========================================================================
+
+.product .summary {
+	@extend .gc;
+	@extend .l1-2;
+	@extend .d2-3;
+}
+
+
+// PRODUCT TABS
+// ==========================================================================
+
+.product .woocommerce-tabs {
+
+}
+
+// RELATED PRODUCTS
+// ==========================================================================
+
+
+
+// ==========================================================================
+// NOTICES
+// ==========================================================================
+
+.woocommerce-message {
+	@extend .alert;	
+	@extend .alert-success;	
+	overflow: hidden;
+
+	.button {
+		@extend .btn-small;
+		display: block;
+		margin-bottom: $baseLineHeight/2;
+
+		@include respond-to($break-small) {
+			@include inline-block;
+			margin-bottom: 0;
+			margin-right: $baseLineHeight;
+		}
+	}
+}
+
+
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+
+.button {
+	@extend .btn;
+}
