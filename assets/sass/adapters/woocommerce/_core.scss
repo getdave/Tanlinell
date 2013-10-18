@@ -24,6 +24,31 @@
 	@extend .img-polaroid;
 }
 
+
+// RESULT COUNT
+// ==========================================================================
+
+.woocommerce-result-count {
+	@include respond-to(small) {
+		float: left;
+		width: 50%;
+	}
+}
+
+// ORDERING
+// ==========================================================================
+
+.woocommerce-ordering {
+	margin-bottom: $baseLineHeight;
+
+	@include respond-to(small) {
+		@include rem(margin-top,-10px);
+		float: right;
+		width: 25%;
+	}
+}
+
+
 // ==========================================================================
 // PRODUCT META
 // ==========================================================================
