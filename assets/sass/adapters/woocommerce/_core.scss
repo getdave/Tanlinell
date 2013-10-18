@@ -178,6 +178,11 @@
 
 // REMOVE
 .shop_table {
+
+	.product-remove {
+		text-align: center;
+	}
+
 	.remove {
 		@include rem(font-size,20px);
 		font-weight: bold;
@@ -191,21 +196,82 @@
 	}
 }
 
+// PRODUCT QUANTITY
+.shop_table .product-quantity {
+	width: 26%;
+	max-width: 200px;
+}
+
+
+
+// PRODUCT VARIATION
+.shop_table {
+	.variation {
+		font-size: 0.9em;
+		margin-top: 0;
+
+		dt {
+			display: inline;
+			color: #666;
+			@include rem(padding-right,5px);
+		}
+
+		dd {
+			display: inline;
+			overflow: hidden;
+			font-weight: bold;
+		}
+	}
+}
+
 // ACTIONS
 .shop_table {
 	.actions {
 		text-align: left;
 		padding: $baseLineHeight/2 $baseLineHeight;
 	}
+
+	.button {
+		@extend .btn-secondary !optional;
+	}
+
+	.checkout-button {
+		@extend .btn-primary !optional;
+
+		@include respond-to(small) {
+			float: right;
+		}
+	}
 }
 
 // COUPON
 .coupon {
+	margin-bottom: $baseLineHeight;
+
+	.input-text {
+		@extend input[type="text"];
+		width: 99%;
+		@include rem(height,34px);
+		display: block;
+		margin-bottom: $baseLineHeight/3;
+
+		@include respond-to($mobileBreak) {
+			@include inline-block;
+			width: auto;
+			margin-bottom: 0;
+		}
+	}
+
 	.button {
-		@extend .btn-full;
 		@extend .btn-small;
 		clear: both;
+
+		@include respond-to($mobileBreak) {
+			@include inline-block;
+		}
 	}
+
+
 }
 
 
