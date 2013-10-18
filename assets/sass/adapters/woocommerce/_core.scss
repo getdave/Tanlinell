@@ -14,6 +14,11 @@
 		position: relative;
 		z-index: $zindex-tier-1;
 	}
+
+	.button {
+		margin-top: $baseLineHeight/2;
+		@extend .btn-full;
+	}
 }
 
 
@@ -22,6 +27,7 @@
 .attachment-shop_catalog {
 	@extend .img-thumb;
 	@extend .img-polaroid;
+	margin-bottom: $baseLineHeight/2;
 }
 
 
@@ -127,26 +133,88 @@
 	@extend .gc;
 	@extend .l1-2;
 	@extend .d2-3;
+	margin-bottom: $baseLineHeight;
+}
+
+
+// PRODUCT DETAILS
+// ==========================================================================
+
+.product-single__details {
+	@extend .grid;
 }
 
 
 // PRODUCT TABS
 // ==========================================================================
 
+.product-single__tabs {
+	@extend .gc;
+}
 
+// PRODUCT RELATED
+// ==========================================================================
 
+.product-single__related {
+	@extend .gc;
+
+}
+
+// PRODUCT UPSELLS
+// ==========================================================================
+
+.product-single__upsells {
+	@extend .gc;
+
+}
 
 
 // ==========================================================================
 // CART
 // ==========================================================================
 
+// SHOP TABLE
+// ==========================================================================
+
+// REMOVE
+.shop_table {
+	.remove {
+		@include rem(font-size,20px);
+		font-weight: bold;
+		color: $errorText;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: lighten($errorText,10%);
+		}
+	}
+}
+
+// ACTIONS
+.shop_table {
+	.actions {
+		text-align: left;
+		padding: $baseLineHeight/2 $baseLineHeight;
+	}
+}
+
+// COUPON
+.coupon {
+	.button {
+		@extend .btn-full;
+		@extend .btn-small;
+		clear: both;
+	}
+}
+
+
+
+
+// QUANTITY
+// ==========================================================================
 .cart {
 	margin-bottom: $baseLineHeight;
-
-	@include respond-to(large) {
-		width: 50%;
-	}
 
 	.quantity {
 		@include rem(padding-left,60px);
@@ -181,16 +249,31 @@
 
 }
 
-.single_add_to_cart_button {
-	margin-top: $baseLineHeight;
-	width: 100%;
-	display: block;
 
-	@include respond-to(large) {
-		@include inline-block;
-		width: auto;
+// MINI CART
+// ==========================================================================
+.product-single__overview {
+	.cart {
+		@include respond-to(large) {
+			width: 50%;
+		}
+	}
+
+	.single_add_to_cart_button {
+		margin-top: $baseLineHeight;
+		margin-bottom: $baseLineHeight*2;
+		width: 100%;
+		display: block;
+
+		@include respond-to(large) {
+			@include inline-block;
+			width: auto;
+			margin-bottom: 0;
+		}
 	}
 }
+
+
 
 
 
