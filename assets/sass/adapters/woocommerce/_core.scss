@@ -9,8 +9,9 @@
 	.product {
 		@extend .gc;
 		@extend .h1-2;
-		@extend .l1-4;
-		@extend .d1-5;
+		@extend .l1-3;
+		@extend .d1-4;
+		@extend .w1-5;
 		position: relative;
 		z-index: $zindex-tier-1;
 
@@ -18,18 +19,27 @@
 			@extend .h-grid-clear;
 		}
 
-		&:nth-child(4n+1) {
+		&:nth-child(3n+1) {
 			@extend .l-grid-clear;
 		}
 
-		&:nth-child(5n+1) {
+		&:nth-child(4n+1) {
 			@extend .d-grid-clear;
+		}
+
+		&:nth-child(5n+1) {
+			@extend .w-grid-clear;
 		}
 	}
 
 	.button {
 		margin-top: $baseLineHeight/2;
 		@extend .btn-full;
+
+		@include respond-to(medium) {
+			float: left;
+			clear: both;
+		}
 	}
 }
 
