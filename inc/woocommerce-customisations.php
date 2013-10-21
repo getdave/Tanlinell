@@ -37,7 +37,13 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 			add_action('woocommerce_after_main_content', 'tanlinell_wrapper_end', 10);
 
 			function tanlinell_wrapper_start() {
-			  echo '<div class="column-container"><div class="main">';
+				if ( is_product() ) {
+					echo '<div class="layout-1c column-container">';
+				} else {
+					echo '<div class="column-container">';
+				}
+
+				echo '<div class="main">';
 			}
 
 			function tanlinell_wrapper_end() {
