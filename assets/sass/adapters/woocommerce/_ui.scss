@@ -1,0 +1,71 @@
+// ==========================================================================
+// 
+// UI
+// Styles for User Interface elements utilised by WooCommerce 
+// 
+// ==========================================================================
+
+// NOTICES
+// ==========================================================================
+.woocommerce-message {
+	@extend .alert;	
+	@extend .alert-success;	
+	overflow: hidden;
+
+	.button {
+		@extend .btn-small;
+		display: block;
+		margin-bottom: $baseLineHeight/2;
+
+		@include respond-to($break-small) {
+			@include inline-block;
+			margin-bottom: 0;
+			margin-right: $baseLineHeight;
+		}
+	}
+}
+
+// ERRORS
+// ==========================================================================
+
+.woocommerce-error {
+	@extend .list-unstyled;
+	li {
+		@extend .alert;	
+		@extend .alert-error;	
+	}
+}
+
+
+// BUTTONS
+// ==========================================================================
+
+.button {
+	@extend .btn;
+}
+
+
+// WOOCOMMERCE TABS
+// ==========================================================================
+
+.woocommerce-tabs {
+	.tabs {
+		@extend %tabs-list;
+
+		li {
+			@extend %tabs-list__item;
+		}
+
+		.active {
+			@extend %tabs-list__item--current;
+		}
+
+		a {
+			@extend %tabs-list__link;
+		}
+	}
+
+	.panel {
+		@extend %tabcontent;
+	}
+}

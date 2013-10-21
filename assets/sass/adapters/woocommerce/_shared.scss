@@ -1,0 +1,28 @@
+// ==========================================================================
+// 
+// GENERIC
+// Styles for generic elements that do not constitute a distinct UI element
+// and which do not pertain directly any of the other "view" SASS partials
+// 
+// Do not use this as a dumping ground.
+// 
+// ==========================================================================
+
+
+// ==========================================================================
+// PRODUCT META
+// ==========================================================================
+
+.onsale {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: $zindex-tier-1;
+		display: none;
+}
+
+.price {
+	del {
+		color: #ccc;
+	}
+}

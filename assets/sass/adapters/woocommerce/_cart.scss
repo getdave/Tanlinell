@@ -1,0 +1,229 @@
+// ==========================================================================
+// 
+// CART
+// Styles for the Cart template
+// 
+// ==========================================================================
+
+
+// SHOP TABLE
+// ==========================================================================
+
+.cart__contents {
+	margin-bottom: $baseLineHeight;
+}
+
+
+.scrollable {
+	position: relative;
+	overflow: hidden;
+
+	table {
+		margin-bottom: 0;
+	}
+
+	> div {
+		overflow-x: auto;
+	}
+	
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		width: 50px;
+		height: 100%;
+		border-radius: 10px 0 0 10px / 50% 0 0 50%;
+		box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
+		content: '';
+	}
+}
+
+.scrollable > div::-webkit-scrollbar {
+    height:12px;
+}
+.scrollable > div::-webkit-scrollbar-track {
+    box-shadow:0 0 2px rgba(0,0,0,0.15) inset;
+    background:#f0f0f0;
+}
+.scrollable > div::-webkit-scrollbar-thumb {
+    border-radius:6px;
+    background:#ccc;
+}
+
+// REMOVE
+.shop_table {
+
+
+	.product-remove {
+		text-align: center;
+		padding: 0;
+	}
+
+	.remove {
+		display: block;
+		margin: 0 auto;
+		@include rem(padding,15px);
+		@include rem(font-size,20px);
+		font-weight: bold;
+		color: $errorText;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: lighten($errorText,10%);
+		}
+	}
+}
+
+// PRODUCT QUANTITY
+.shop_table .product-quantity {
+	width: 26%;
+	max-width: 200px;
+}
+
+
+//PRODUCT  THUMBNAIL
+.shop_table .product-thumbnail {
+	display: none;
+
+	@include respond-to(small) {
+		display: table-cell;
+	}
+}
+
+
+
+// PRODUCT VARIATION
+.shop_table {
+	.variation {
+		font-size: 0.9em;
+		margin-top: 0;
+
+		dt {
+			display: inline;
+			color: #666;
+			@include rem(padding-right,5px);
+		}
+
+		dd {
+			display: inline;
+			overflow: hidden;
+			font-weight: bold;
+		}
+	}
+}
+
+// ACTIONS
+.cart__actions {
+	.actions {
+		text-align: left;
+		padding: $baseLineHeight/2 $baseLineHeight;
+	}
+
+	.button {
+		@extend .btn-secondary !optional;
+	}
+
+	.checkout-button {
+		@extend .btn-primary !optional;
+
+		@include respond-to(small) {
+			float: right;
+		}
+	}
+}
+
+// COUPON
+.coupon {
+	margin-bottom: $baseLineHeight;
+
+	.input-text {
+		@extend input[type="text"];
+		width: 99%;
+		@include rem(height,34px);
+		display: block;
+		margin-bottom: $baseLineHeight/3;
+
+		@include respond-to($mobileBreak) {
+			@include inline-block;
+			width: auto;
+			margin-bottom: 0;
+		}
+	}
+
+	.button {
+		@extend .btn-small;
+		clear: both;
+
+		@include respond-to($mobileBreak) {
+			@include inline-block;
+		}
+	}
+
+
+}
+
+
+
+
+// QUANTITY
+// ==========================================================================
+.cart {
+	margin-bottom: $baseLineHeight;
+
+	.quantity {
+		@include rem(padding-left,60px);
+		@include rem(padding-right,60px);
+	}
+
+	.qty,
+	input.minus,
+	input.plus {
+		@include inline-block;
+		@include rem(width,60px);
+		@include rem(height,50px);
+	}
+
+	.qty {
+		width: 100%;
+	}
+
+	.minus,
+	.plus {
+		@extend .btn;
+		padding: 0;
+	}
+
+	.minus {
+		@include rem(margin-left,-60px);
+	}
+
+	.plus {
+		@include rem(margin-right,-60px);
+	}
+
+}
+
+
+// MINI CART
+// ==========================================================================
+.product-single__overview {
+	.cart {
+		@include respond-to(large) {
+			width: 50%;
+		}
+	}
+
+	.single_add_to_cart_button {
+		margin-top: $baseLineHeight;
+		margin-bottom: $baseLineHeight*2;
+		width: 100%;
+		display: block;
+
+		@include respond-to(large) {
+			@include inline-block;
+			width: auto;
+			margin-bottom: 0;
+		}
+	}
+}
