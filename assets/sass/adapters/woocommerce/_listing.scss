@@ -40,8 +40,8 @@
 			@extend .w-grid-clear;
 		}
 
-		> a {
-			display: block;
+		.product__info {
+			
 		}
 
 		a {
@@ -51,6 +51,8 @@
 		img {
 			@extend .img-thumb;
 			@extend .img-polaroid;
+			@include box-sizing(border-box);
+			display: block;
 			margin-bottom: $baseLineHeight/2;
 		}
 	}

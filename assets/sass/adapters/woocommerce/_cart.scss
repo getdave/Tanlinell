@@ -192,12 +192,14 @@
 	input.minus,
 	input.plus {
 		@include inline-block;
-		@include rem(width,60px);
-		@include rem(height,50px);
+		@include rem(width,46px);
+		@include rem(height,46px);
 	}
 
 	.qty {
 		width: 100%;
+		@include rem(margin-left,7px);
+		@include rem(margin-right,7px);
 	}
 
 	.minus,

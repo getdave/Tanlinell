@@ -11,7 +11,12 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 		if ( class_exists( 'woocommerce' ) ) {
 
 			
-			add_action('woocommerce_before_shop_loop_item','tanlinell_woocommerce_before_shop_loop_item');
+			
+
+		}
+	}
+}
+		add_action('woocommerce_before_shop_loop_item','tanlinell_woocommerce_before_shop_loop_item');
 
 			function tanlinell_woocommerce_before_shop_loop_item() {
 				echo '<div class="product__info">';
@@ -21,17 +26,31 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 
 			function tanlinell_woocommerce_after_shop_loop_item() {
 				echo '</div>';
+
 			}
 
 
+			remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+			remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+
+			add_action('woocommerce_before_main_content', 'tanlinell_wrapper_start', 10);
+			add_action('woocommerce_after_main_content', 'tanlinell_wrapper_end', 10);
+
+			function tanlinell_wrapper_start() {
+			  echo '<div class="column-container"><div class="main">';
+			}
+
+			function tanlinell_wrapper_end() {
+			  echo '</div>';
+			}
 
 
+			add_action('woocommerce_sidebar', 'tanlinell_woocommerce_sidebar', 10);
 			
+			function tanlinell_woocommerce_sidebar() {
+				return get_sidebar();
+			}
 
-
-		}
-	}
-}
 
 
 
