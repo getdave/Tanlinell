@@ -5,6 +5,10 @@
 // 
 // ==========================================================================
 
+// ==========================================================================
+// CHECKOUT COLUMN LAYOUT
+// ==========================================================================
+
 .checkout {
 	.col2-set {
 		@extend .grid;
@@ -23,8 +27,12 @@
 	@include rem(height,400px);
 }
 
-#order_review {
 
+// ==========================================================================
+// ORDER REVIEW
+// ==========================================================================
+
+#order_review {
 	.product-total {
 		width: 25%;
 	}
@@ -38,7 +46,8 @@
 	}
 }
 
-
+// ORDER BUTTON
+// ==========================================================================
 .place-order .button {
 	@extend .btn-large;
 	@extend .btn-full;
@@ -48,4 +57,34 @@
 		@include inline-block;
 		width: auto;
 	}
+}
+
+
+
+// ==========================================================================
+// PAYMENT METHODS
+// ==========================================================================
+
+.payment_methods {
+	@extend .grid;
+
+	li {
+		@extend .gc;
+		@extend .l1-3;
+		margin-bottom: $baseLineHeight/2;
+	}
+
+	label {
+		overflow: hidden;
+		padding: $baseLineHeight/2 0;
+	}
+
+	input {
+		margin-top: $baseLineHeight/2;
+		margin-bottom: $baseLineHeight/2;
+	}
+}
+
+.payment_box {
+	font-size: 0.9em;
 }

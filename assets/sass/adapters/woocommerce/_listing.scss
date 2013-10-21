@@ -14,7 +14,8 @@
 	@extend .grid;
 	@extend .grid--divided;
 
-	.product {
+	.product,
+	.product-category {
 		@extend .gc;
 		@extend .h1-2;
 		@extend .l1-3;
@@ -38,6 +39,12 @@
 		&:nth-child(5n+1) {
 			@extend .w-grid-clear;
 		}
+
+		img {
+			@extend .img-thumb;
+			@extend .img-polaroid;
+			margin-bottom: $baseLineHeight/2;
+		}
 	}
 }
 
@@ -56,9 +63,7 @@
 // THUMBNAIL
 // ==========================================================================
 .products .attachment-shop_catalog {
-	@extend .img-thumb;
-	@extend .img-polaroid;
-	margin-bottom: $baseLineHeight/2;
+
 }
 
 
