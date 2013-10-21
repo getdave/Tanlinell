@@ -40,6 +40,14 @@
 			@extend .w-grid-clear;
 		}
 
+		> a {
+			display: block;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
 		img {
 			@extend .img-thumb;
 			@extend .img-polaroid;

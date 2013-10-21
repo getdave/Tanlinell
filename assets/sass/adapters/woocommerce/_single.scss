@@ -117,3 +117,107 @@
 	@extend .gc;
 
 }
+
+
+// ==========================================================================
+// REVIEWS
+// ==========================================================================
+
+// LISTING
+// ==========================================================================
+.commentlist {
+	@extend .item-list;
+	padding-top: $baseLineHeight;
+}
+
+// COMMENT ITEM
+// ==========================================================================
+
+.comment_container {
+	max-width: 45em;
+}
+
+
+// AVATAR
+// ==========================================================================
+.comment_container .avatar {
+	@extend .img-polaroid;
+	display: block;
+	margin: 0 auto $baseLineHeight/2 auto;
+
+	@include respond-to(small) {
+		float: left;
+		margin-right: $baseLineHeight;
+		@include rem(margin-top,2px);
+	}
+}
+
+// TEXT
+// ==========================================================================
+.comment-text {
+	overflow: hidden;
+}
+
+
+// REVIEW
+// ==========================================================================
+.comment-text .star-rating {
+	display: block;
+	margin: 0 auto $baseLineHeight/2 auto;
+
+	@include respond-to(small) {
+		float: right;
+	}
+}
+
+// META
+// ==========================================================================
+.comment-text .meta {
+	margin-bottom: $baseLineHeight/3;
+}
+
+
+// REVIEW FORM
+// ==========================================================================
+
+$starWidth: 1.2em;
+
+.comment-form-rating .stars {
+	@extend %star-rating;
+	display: block;
+
+	a {
+		@extend %star-rating__overstar;
+
+		&:before {
+			display: none;
+		}
+	
+		&:hover,
+		&:focus {
+			&:before {
+				display: block;
+			}
+		}
+
+		&:active {
+			@include opacity(.5);
+		}
+	}
+
+	.active {
+		&:before {
+			display: block;
+		}
+	}
+
+	a.star-1 { width: $starWidth; z-index: 10;}
+	a.star-2 { width: 2.6em; z-index: 9;}
+	a.star-3 { width: 3.9em; z-index: 8;}
+	a.star-4 { width: 5.2em; z-index: 7;}
+	a.star-5 { width: 6.4em; z-index: 6;}
+}
+
+#commentform .form-submit input {
+	@extend .btn;
+}
