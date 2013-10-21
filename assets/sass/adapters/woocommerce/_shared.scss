@@ -26,3 +26,23 @@
 		color: #ccc;
 	}
 }
+
+
+// ==========================================================================
+// PAGINATION
+// ==========================================================================
+
+.woocommerce-pagination {
+	.page-numbers {
+		@extend .pagination__list;
+		@extend .list-unstyled;
+		li {
+			@extend .pagination__item;
+		}
+
+		a,
+		span {
+			@extend .pagination__link;
+		}
+	}
+}

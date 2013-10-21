@@ -5,6 +5,11 @@
 // 
 // ==========================================================================
 
+
+// ==========================================================================
+// PRODUCT LIST
+// ==========================================================================
+
 .products {
 	@extend .grid;
 	@extend .grid--divided;
@@ -34,47 +39,35 @@
 			@extend .w-grid-clear;
 		}
 	}
+}
 
-	.button {
-		margin-top: $baseLineHeight/2;
-		@extend .btn-full;
+// CALL TO ACTION
+// ==========================================================================
+.products .button {
+	margin-top: $baseLineHeight/2;
+	@extend .btn-full;
 
-		@include respond-to(medium) {
-			float: left;
-			clear: both;
-		}
+	@include respond-to(medium) {
+		float: left;
+		clear: both;
 	}
 }
 
-.woocommerce-pagination {
-	.page-numbers {
-		@extend .pagination__list;
-		@extend .list-unstyled;
-		li {
-			@extend .pagination__item;
-		}
-
-		a,
-		span {
-			@extend .pagination__link;
-		}
-	}
-}
-
-
-
-
-// Product Thumbnail
-.attachment-shop_catalog {
+// THUMBNAIL
+// ==========================================================================
+.products .attachment-shop_catalog {
 	@extend .img-thumb;
 	@extend .img-polaroid;
 	margin-bottom: $baseLineHeight/2;
 }
 
 
-// RESULT COUNT
+// ==========================================================================
+// SEARCH TOOLS
 // ==========================================================================
 
+// RESULT COUNT
+// ==========================================================================
 .woocommerce-result-count {
 	@include respond-to(small) {
 		float: left;
@@ -84,7 +77,6 @@
 
 // ORDERING
 // ==========================================================================
-
 .woocommerce-ordering {
 	margin-bottom: $baseLineHeight;
 

@@ -6,58 +6,23 @@
 // ==========================================================================
 
 
-// SHOP TABLE
+// ==========================================================================
+// PRODUCT (SHOP) TABLE
 // ==========================================================================
 
 .cart__contents {
 	margin-bottom: $baseLineHeight;
-}
-
-
-.scrollable {
-	position: relative;
-	overflow: hidden;
 
 	table {
 		margin-bottom: 0;
 	}
-
-	> div {
-		overflow-x: auto;
-	}
-	
-	&:after {
-		position: absolute;
-		top: 0;
-		left: 100%;
-		width: 50px;
-		height: 100%;
-		border-radius: 10px 0 0 10px / 50% 0 0 50%;
-		box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
-		content: '';
-	}
 }
 
-.scrollable > div::-webkit-scrollbar {
-    height:12px;
-}
-.scrollable > div::-webkit-scrollbar-track {
-    box-shadow:0 0 2px rgba(0,0,0,0.15) inset;
-    background:#f0f0f0;
-}
-.scrollable > div::-webkit-scrollbar-thumb {
-    border-radius:6px;
-    background:#ccc;
-}
-
-// REMOVE
-.shop_table {
-
-
-	.product-remove {
-		text-align: center;
-		padding: 0;
-	}
+// COLUMN: PRODUCT REMOVE
+// ==========================================================================
+.shop_table .product-remove {
+	text-align: center;
+	padding: 0;
 
 	.remove {
 		display: block;
@@ -75,14 +40,16 @@
 	}
 }
 
-// PRODUCT QUANTITY
+// COLUMN: PRODUCT QUANTITY
+// ==========================================================================
 .shop_table .product-quantity {
 	width: 26%;
 	max-width: 200px;
 }
 
 
-//PRODUCT  THUMBNAIL
+// COLUMN: PRODUCT THUMBNAIL
+// ==========================================================================
 .shop_table .product-thumbnail {
 	display: none;
 
@@ -91,9 +58,8 @@
 	}
 }
 
-
-
 // PRODUCT VARIATION
+// ==========================================================================
 .shop_table {
 	.variation {
 		font-size: 0.9em;
@@ -113,61 +79,107 @@
 	}
 }
 
-// ACTIONS
+
+// ==========================================================================
+// CART ACTIONS
+// ==========================================================================
+
 .cart__actions {
 	.actions {
 		text-align: left;
-		padding: $baseLineHeight/2 $baseLineHeight;
+		padding: $baseLineHeight;
 	}
 
 	.button {
 		@extend .btn-secondary !optional;
+		margin-top: $baseLineHeight;
+		margin-right: $baseLineHeight;
 	}
 
 	.checkout-button {
+		@extend .btn-full;
 		@extend .btn-primary !optional;
+		width: 100%;
 
 		@include respond-to(small) {
 			float: right;
+			margin-right: 0;
+			@include inline-block;
+			width: auto;
 		}
 	}
 }
 
-// COUPON
+// ==========================================================================
+// CART COUPONS
+// ==========================================================================
+
 .coupon {
-	margin-bottom: $baseLineHeight;
 
 	.input-text {
 		@extend input[type="text"];
 		width: 99%;
 		@include rem(height,34px);
 		display: block;
-		margin-bottom: $baseLineHeight/3;
 
 		@include respond-to($mobileBreak) {
 			@include inline-block;
 			width: auto;
-			margin-bottom: 0;
+
 		}
 	}
 
 	.button {
 		@extend .btn-small;
 		clear: both;
+		margin-top: $baseLineHeight/3;
 
 		@include respond-to($mobileBreak) {
 			@include inline-block;
 		}
 	}
+}
 
 
+
+// ==========================================================================
+// CART TOTALS
+// ==========================================================================
+
+/* .cart-collaterals */.cart_totals {
+	
+	overflow: hidden;
+
+	th,
+	td {
+		@include rem(padding,20px);
+	}
+
+	.total {
+		font-size: 1.4em;
+	}
+}
+
+// ==========================================================================
+// CROSS SELLS
+// ==========================================================================
+
+/* .cart-collaterals */.cross-sells {
+
+	@include respond-to(large) {
+		float: left;
+		width: 45%; 
+		padding-right: 5%;
+	}
 }
 
 
 
 
-// QUANTITY
 // ==========================================================================
+// PRODUCT QUANTITY
+// ==========================================================================
+
 .cart {
 	margin-bottom: $baseLineHeight;
 
@@ -204,26 +216,3 @@
 
 }
 
-
-// MINI CART
-// ==========================================================================
-.product-single__overview {
-	.cart {
-		@include respond-to(large) {
-			width: 50%;
-		}
-	}
-
-	.single_add_to_cart_button {
-		margin-top: $baseLineHeight;
-		margin-bottom: $baseLineHeight*2;
-		width: 100%;
-		display: block;
-
-		@include respond-to(large) {
-			@include inline-block;
-			width: auto;
-			margin-bottom: 0;
-		}
-	}
-}
