@@ -1,16 +1,6 @@
 <?php
-//setup the custom meta object
-global $global_metabox;
-
-// get the meta data for the current post
-$global_metabox->the_meta();
-
-//link meta data
-$global_metabox->the_field('page_title');
-$page_title = esc_html( $global_metabox->get_the_value() );
-
-$global_metabox->the_field('page_subtitle');
-$page_subtitle = esc_html( $global_metabox->get_the_value() );
+$page_title = esc_html( get_post_meta( $post->ID, 'page_title', true ) );
+$page_subtitle = esc_html( get_post_meta( $post->ID, 'page_subtitle', true )  );
 
 //if $page_match == true/1 -> we dont need to link this
 $page_match = ( trailingslashit(home_url( $wp->request ))==get_permalink() ) ? true : false;

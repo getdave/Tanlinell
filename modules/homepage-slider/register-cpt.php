@@ -55,27 +55,38 @@ function tanlinell_register_cpt_homepage_slider() {
 function tanlinell_homepage_slides_photo_box() {
 	// Get rid of standard "Featured Image"
 	remove_meta_box( 'postimagediv', 'homepage_slides', 'side' );
-
+	
+	//we use hybrid core, but i dont want it here	
+	remove_meta_box( 'hybrid-core-post-template', 'homepage_slides', 'side' );
+	remove_meta_box( 'theme-layouts-post-meta-box', 'homepage_slides', 'side' );
+	
 	// Because we register it with the same ID (param 1) it retains all standard "Featured Image" functionality - winning!
 	add_meta_box('postimagediv', 'Slide Image', 'post_thumbnail_meta_box', 'homepage_slides', 'normal', 'high');		
 }
 add_action('do_meta_boxes', 'tanlinell_homepage_slides_photo_box');
 
 
-
-/**
- * Homepage Slide Custom Meta Box
- *
- * Create ability to assign links to the slide
- */
-
-global $custom_metabox;
-$custom_metabox = $simple_mb = new WPAlchemy_MetaBox(array
-(
-	'id' => '_slide_link',
-	'title' => 'Slide Link',
-	'template' => get_stylesheet_directory() . '/modules/homepage-slider/slide-link-layout.php',
-	'types' => array('homepage_slides'),
-	'mode' => WPALCHEMY_MODE_EXTRACT
-));
+function homepage_slider_cmb_meta_boxes( $meta_boxes ) {
+	
+	$meta_boxes[] = array(
+		'id' => 'homepage_slides_meta', //used just for storage
+		'title' => 'Link for the slide',
+		'pages' => array( 'homepage_slides' ),
+		'context' => 'normal',
+		'priority' => 'default',
+		'show_names' => true, // show field names on the left
+		'fields' => array(
+			
+			array(
+				'name' => 'Slide Link',
+				'id' => '_slide_link',
+				'type' => 'text'
+			),
+			
+		),
+	);	
+	
+	return $meta_boxes;
+}
+add_filter( 'cmb_meta_boxes', 'homepage_slider_cmb_meta_boxes' );
 ?>

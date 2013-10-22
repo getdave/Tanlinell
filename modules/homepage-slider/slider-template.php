@@ -15,33 +15,12 @@
 		<div class="flexslider">
 			<ul class="slides">
 			<?php while ($slides->have_posts() ) : $slides->the_post(); ?>
-				
-				<?php
-					//setup the custom meta object
-					global $custom_metabox;
-					
-					// get the meta data for the current post
-					$custom_metabox->the_meta();
-					
-					//link meta data
-					$custom_metabox->the_field('text');
-					$link_text = $custom_metabox->get_the_value();
-										
-					$custom_metabox->the_field('page');
-					$link = get_permalink($custom_metabox->get_the_value());
-					
-					if(!$link)
-					{
-						$custom_metabox->the_field('url');
-						$link = $custom_metabox->get_the_value();
-					}
-				?>
-				
+								
 				<li class="slide">				
 					<div class="slide-content">
 						<div class="slide-content-inner">
 							
-							<a href="<?php echo $link ?>"><?php echo $link_text ?></a>
+							<a href="<?php echo esc_url( get_post_meta( $post->ID, '_slide_link', true ) ); ?>"><?php echo esc_url( get_post_meta( $post->ID, '_slide_link', true ) ); ?></a>
 							
 							<?php the_title('<h3>', '</h3>'); ?>
 							<?php the_content();?>
