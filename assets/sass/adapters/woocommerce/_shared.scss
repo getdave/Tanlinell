@@ -8,6 +8,7 @@
 // 
 // ==========================================================================
 
+
 // ==========================================================================
 // PRODUCT WIDGET LISTING
 // ==========================================================================
@@ -30,12 +31,55 @@
 		float: right;
 		margin-left: $baseLineHeight;
 	}
-
+	
 	.amount,
+	.quantity,
 	.from,
 	.variation {
 		font-size: 0.9em;
 		color: #777;
+	}
+
+	.quantity .amount {
+		font-size: 1em;
+	}
+
+	.star-rating {
+		font-size: 0.9em;
+	}
+}
+
+
+
+// ==========================================================================
+// WIDGET: LAYERED NAV
+// ==========================================================================
+
+.widget_layered_nav,
+.widget_layered_nav_filters {
+
+	ul {
+		@extend .list-unstyled;
+	}
+
+	li {
+		position: relative;
+		margin-bottom: $baseLineHeight/2;
+	}
+
+	a {
+		display: block;
+	}
+
+	.count {
+		display: block;
+		@include rem(padding,1px 10px);
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: #f1f1f1;
+		border-radius: 100px;
+		@include rem(font-size,11px);
 	}
 }
 
