@@ -68,6 +68,29 @@ add_action('do_meta_boxes', 'tanlinell_homepage_slides_photo_box');
 
 function homepage_slider_cmb_meta_boxes( $meta_boxes ) {
 	
+	$args = array(
+		'sort_order' => 'ASC',
+		'sort_column' => 'post_title',
+		'hierarchical' => 1,
+		'exclude' => '',
+		'include' => '',
+		'meta_key' => '',
+		'meta_value' => '',
+		'authors' => '',
+		'child_of' => 0,
+		'parent' => -1,
+		'exclude_tree' => '',
+		'number' => '',
+		'offset' => 0,
+		'post_type' => 'page',
+		'post_status' => 'publish'
+	);
+	$pages = get_pages($args);
+	$options[]= array('name' => 'Please Select…', 'value' => 0 );
+	foreach( $pages AS $page ) {
+		$options[]= array('name' => $page->post_title, 'value' => $page->ID );
+	}
+	
 	$meta_boxes[] = array(
 		'id' => 'homepage_slides_meta', //used just for storage
 		'title' => 'Link for the slide',
@@ -78,9 +101,32 @@ function homepage_slider_cmb_meta_boxes( $meta_boxes ) {
 		'fields' => array(
 			
 			array(
-				'name' => 'Slide Link',
-				'id' => '_slide_link',
-				'type' => 'text'
+				'desc' => 'Either provide link destination or select a page from the drop down. Provide optional custom link text.',
+				'type' => 'title',
+				'id' => 'test_title'
+			),
+			
+			array(
+				'name' => 'Custom Link URL',
+				'id' => '_slide_link_url',
+				'type' => 'text',
+				'desc' => 'Destination of link'
+			),
+			
+			array(
+				'name' => 'Page',
+				'id' => '_slide_link_page',
+				'type' => 'select',
+				'options' => $options,
+				'desc' => 'Destination of link'
+			),
+						
+			
+			array(
+				'name' => 'Link Text',
+				'id' => '_slide_link_text',
+				'type' => 'text',
+				'desc' => 'Text of link'
 			),
 			
 		),
