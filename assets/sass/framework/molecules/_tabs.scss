@@ -1,0 +1,94 @@
+@if $use-tabs == true {
+
+/* ============================================================ */
+
+// TABS MODULE
+
+// Description:	styles to create tabs
+
+/* ============================================================ */
+
+
+// ==========================================================================
+// TAB LIST
+// ==========================================================================
+
+%tabs-list {
+	@extend .cf;
+	@include list-reset;
+	border-bottom: 1px solid #ccc;
+}
+
+%tabs-list__item {
+	clear: both;
+
+	@include respond-to($mobileBreak) {
+		float: left;
+		clear: none;
+		margin-bottom: -1px;
+	}
+}
+
+%tabs-list__link {
+	display: block;
+	padding: $baseLineHeight/3 $baseLineHeight*1.5;
+	@include rem(font-size,16px);
+	text-decoration: none;
+	border-color: #ccc;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	background-color: #fff;
+	@include respond-to($mobileBreak) {
+		border-color: #fff;
+		border-bottom-width: 0;
+		background-color: transparent;
+	}
+
+	&:hover,
+	&:focus {
+		
+	}
+}
+
+// CURRENT
+// ==========================================================================
+
+%tabs-list__item--current {
+	border-left: 3px solid #ccc;
+
+	a {
+		background-color: #f1f1f1;
+		color: #333;
+	}
+
+	@include respond-to($mobileBreak) {
+		border-left: 0;
+		a {
+			background-color: #fff;
+			border-top-color: #ccc;
+			border-left-color: #ccc;
+			border-right-color: #ccc;
+		}
+
+	}
+}
+
+
+// ==========================================================================
+// TAB BODY
+// ==========================================================================
+
+%tabcontent {
+	@extend .island;
+	border-top: 0;
+}
+
+%tabhead {
+	@extend .vh;
+}
+
+%tabbody {
+	margin-bottom: $baseLineHeight*2;
+}
+
+}//endif

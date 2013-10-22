@@ -12,7 +12,6 @@
  */
 
 get_header(); ?>
-
 <div class="column-container">
 	<div class="main" role="main">
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -23,7 +22,7 @@ get_header(); ?>
 	</div><!-- .main -->
 
 	<div class="sub">
-	<?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
 	</div>
 </div>
 <?php get_footer(); ?>
