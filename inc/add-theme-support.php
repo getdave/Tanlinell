@@ -107,5 +107,12 @@ add_theme_support( 'cleaner-caption' );
 
 
 
+/* ==========================================================================
+   WOOCOMMERCE SUPPORT
+   ========================================================================== */
+// http://docs.woothemes.com/document/third-party-custom-theme-compatibility/
+add_theme_support( 'woocommerce' );
+
+
 
 ?>

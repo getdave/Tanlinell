@@ -1,0 +1,218 @@
+// ==========================================================================
+// 
+// CART
+// Styles for the Cart template
+// 
+// ==========================================================================
+
+
+// ==========================================================================
+// PRODUCT (SHOP) TABLE
+// ==========================================================================
+
+.cart__contents {
+	margin-bottom: $baseLineHeight;
+
+	table {
+		margin-bottom: 0;
+	}
+}
+
+// COLUMN: PRODUCT REMOVE
+// ==========================================================================
+.shop_table .product-remove {
+	text-align: center;
+	padding: 0;
+
+	.remove {
+		display: block;
+		margin: 0 auto;
+		@include rem(padding,15px);
+		@include rem(font-size,20px);
+		font-weight: bold;
+		color: $errorText;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: lighten($errorText,10%);
+		}
+	}
+}
+
+// COLUMN: PRODUCT QUANTITY
+// ==========================================================================
+.shop_table .product-quantity {
+	width: 26%;
+	max-width: 200px;
+}
+
+
+// COLUMN: PRODUCT THUMBNAIL
+// ==========================================================================
+.shop_table .product-thumbnail {
+	display: none;
+
+	@include respond-to(small) {
+		display: table-cell;
+	}
+}
+
+// PRODUCT VARIATION
+// ==========================================================================
+.shop_table {
+	.variation {
+		font-size: 0.9em;
+		margin-top: 0;
+
+		dt {
+			display: inline;
+			color: #666;
+			@include rem(padding-right,5px);
+		}
+
+		dd {
+			display: inline;
+			overflow: hidden;
+			font-weight: bold;
+		}
+	}
+}
+
+
+// ==========================================================================
+// CART ACTIONS
+// ==========================================================================
+
+.cart__actions {
+	.actions {
+		text-align: left;
+		padding: $baseLineHeight;
+	}
+
+	.button {
+		@extend .btn-secondary !optional;
+		margin-top: $baseLineHeight;
+		margin-right: $baseLineHeight;
+	}
+
+	.checkout-button {
+		@extend .btn-full;
+		@extend .btn-primary !optional;
+		width: 100%;
+
+		@include respond-to(small) {
+			float: right;
+			margin-right: 0;
+			@include inline-block;
+			width: auto;
+		}
+	}
+}
+
+// ==========================================================================
+// CART COUPONS
+// ==========================================================================
+
+.coupon {
+
+	.input-text {
+		@extend input[type="text"];
+		width: 99%;
+		@include rem(height,34px);
+		display: block;
+
+		@include respond-to($mobileBreak) {
+			@include inline-block;
+			width: auto;
+
+		}
+	}
+
+	.button {
+		@extend .btn-small;
+		clear: both;
+		margin-top: $baseLineHeight/3;
+
+		@include respond-to($mobileBreak) {
+			@include inline-block;
+		}
+	}
+}
+
+
+
+// ==========================================================================
+// CART TOTALS
+// ==========================================================================
+
+/* .cart-collaterals */.cart_totals {
+	
+	overflow: hidden;
+
+	th,
+	td {
+		@include rem(padding,20px);
+	}
+
+	.total {
+		font-size: 1.4em;
+	}
+}
+
+// ==========================================================================
+// CROSS SELLS
+// ==========================================================================
+
+/* .cart-collaterals */.cross-sells {
+
+	@include respond-to(large) {
+		float: left;
+		width: 45%; 
+		padding-right: 5%;
+	}
+}
+
+
+
+
+// ==========================================================================
+// PRODUCT QUANTITY
+// ==========================================================================
+
+.cart {
+	margin-bottom: $baseLineHeight;
+
+	.quantity {
+		@include rem(padding-left,60px);
+		@include rem(padding-right,60px);
+	}
+
+	.qty,
+	input.minus,
+	input.plus {
+		@include inline-block;
+		@include rem(width,60px);
+		@include rem(height,50px);
+	}
+
+	.qty {
+		width: 100%;
+	}
+
+	.minus,
+	.plus {
+		@extend .btn;
+		padding: 0;
+	}
+
+	.minus {
+		@include rem(margin-left,-60px);
+	}
+
+	.plus {
+		@include rem(margin-right,-60px);
+	}
+
+}
+

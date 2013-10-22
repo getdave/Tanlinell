@@ -33,9 +33,8 @@
 // WOOCOMMERCE
 // ==========================================================================
 
-// Import the "Web Starter" framework
+// Import core directly (imports all partials) or import partials individually
 @import "adapters/woocommerce/_core.scss";
-
 
 
 

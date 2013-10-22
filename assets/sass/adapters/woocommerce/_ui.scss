@@ -1,0 +1,165 @@
+// ==========================================================================
+// 
+// UI
+// Styles for User Interface elements utilised by WooCommerce 
+// 
+// ==========================================================================
+
+// ==========================================================================
+// NOTICES
+// ==========================================================================
+
+// MESSAGE
+// ==========================================================================
+.woocommerce-message {
+	@extend .alert;	
+	@extend .alert-success;	
+	overflow: hidden;
+
+	.button {
+		@extend .btn-small;
+		display: block;
+		margin-bottom: $baseLineHeight/2;
+
+		@include respond-to($break-small) {
+			@include inline-block;
+			margin-bottom: 0;
+			margin-right: $baseLineHeight;
+		}
+	}
+}
+
+// ERROR
+// ==========================================================================
+.woocommerce-error {
+	@extend .list-unstyled;
+	li {
+		@extend .alert;	
+		@extend .alert-error;	
+	}
+}
+
+// INFO
+// ==========================================================================
+.woocommerce-info {
+	@extend .alert;	
+	@extend .alert-info;	
+}
+
+
+// ==========================================================================
+// BUTTONS
+// ==========================================================================
+
+.button {
+	@extend .btn;
+}
+
+
+// ==========================================================================
+// WOOCOMMERCE TABS
+// ==========================================================================
+
+.woocommerce-tabs {
+	.tabs {
+		@extend %tabs-list;
+
+		li {
+			@extend %tabs-list__item;
+		}
+
+		.active {
+			@extend %tabs-list__item--current;
+		}
+
+		a {
+			@extend %tabs-list__link;
+		}
+	}
+
+	.panel {
+		@extend %tabcontent;
+	}
+}
+
+
+// ==========================================================================
+// STAR RATING
+// ==========================================================================
+
+@font-face {
+	font-family: 'star';
+	src:url('../fonts/star/star.eot');
+	src:url('../fonts/star/star.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/star/star.woff') format('woff'),
+		url('../fonts/star/star.ttf') format('truetype'),
+		url('../fonts/star/star.svg#star') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+%star-rating {
+	overflow: hidden;
+	position: relative;
+	height: 1em;
+	line-height: 1em;
+	font-size: 1em;
+	width: 6.4em;
+	font-family: 'star';
+	
+	&:before {
+		content: "\73\20\73\20\73\20\73\20\73\20";
+		color: #999;
+		float: left;
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+}
+
+%star-rating__overstar {
+	overflow: hidden;
+	float: left;
+	top: 0;
+	left: 0;
+	position: absolute;
+	padding-top: 1.5em;
+
+	&:before {
+		content: "\53\20\53\20\53\20\53\20\53\20";
+		top: 0;
+		position: absolute;
+		left: 0;
+		color: darken(gold,5%);
+	}
+}
+
+.star-rating {
+	@extend %star-rating;
+	span {
+		@extend %star-rating__overstar;
+	}
+}
+
+
+
+
+// ==========================================================================
+// FORMS
+// ==========================================================================
+
+
+// CHECKBOXES
+// ==========================================================================
+
+.input-checkbox,
+.input-radio {
+	float: left;
+	position: relative;
+	@include rem(top,5px);
+	margin-right: $baseLineHeight/2;
+}
+
+label.checkbox {
+	overflow: hidden;
+}
