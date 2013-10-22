@@ -127,26 +127,25 @@ function tanlinell_setup() {
 	 */	
 	//require( get_template_directory() . '/inc/custom-widgets.php' );
 	
-	
+		
 	
 	/**
-	 * WPAlchemy
-	 * call initial setup and make class available
-	 * NOTE: before register-custom-posts
+	 * Custom-Metaboxes-and-Fields-for-WordPress
 	 */	
-	require( get_template_directory() . '/libs/wpalchemy/setup.php');
-	
-	
+	function tanlinell_initialize_cmb_meta_boxes() {
+		if ( !class_exists( 'cmb_Meta_Box' ) ) {
+			require( get_template_directory() . '/libs/Custom-Metaboxes-and-Fields-for-WordPress/init.php');
+		}
+	}
+	add_action( 'init', 'tanlinell_initialize_cmb_meta_boxes', 9999 );
+		
 	/**
-	 * 	Register 'Custom Posts Types' for the theme
+	 * Homepage Slider
 	 */
-	require( get_template_directory() . '/inc/register-custom-posts.php' );
+	require( get_template_directory() . '/modules/homepage-slider/register-cpt.php' );
 
-	
 	/**
-	 * 	Register 'Custom Posts Types' for the theme
-	 * NOTE: after register-custom-posts
-	 * so we can get a list of all registered post types
+	 * Page Title/Page Subtitle
 	 */
 	require( get_template_directory() . '/inc/global-custom-meta.php' );
 	
