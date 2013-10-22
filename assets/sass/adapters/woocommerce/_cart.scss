@@ -60,22 +60,11 @@
 
 // PRODUCT VARIATION
 // ==========================================================================
+
 .shop_table {
 	.variation {
 		font-size: 0.9em;
-		margin-top: 0;
-
-		dt {
-			display: inline;
-			color: #666;
-			@include rem(padding-right,5px);
-		}
-
-		dd {
-			display: inline;
-			overflow: hidden;
-			font-weight: bold;
-		}
+		margin-top: 0;		
 	}
 }
 
@@ -224,6 +213,10 @@
 // CART WIDGET
 // ==========================================================================
 
+.widget_shopping_cart {
+
+}
+
 .mini-cart {
 	@extend .list-unstyled;
 }
@@ -257,8 +250,17 @@
 
 .mini-cart-product__meta {
 	color: #777;
+	font-size: 0.9em;
+	line-height: 1.5;
 }
 
+
+// BUTTONS
+// ==========================================================================
+
+.mini-cart__buttons a {
+
+}
 
 
 

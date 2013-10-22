@@ -68,7 +68,7 @@ global $woocommerce;
 
 	<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 
-	<p class="buttons">
+	<p class="mini-cart__buttons buttons">
 		<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="button"><?php _e( 'View Cart', 'woocommerce' ); ?></a>
 		<a href="<?php echo $woocommerce->cart->get_checkout_url(); ?>" class="button checkout"><?php _e( 'Checkout', 'woocommerce' ); ?></a>
 	</p>
