@@ -1,0 +1,103 @@
+// ==========================================================================
+// 
+// PRODUCT LISTING
+// Styles for the Product listing view template
+// 
+// ==========================================================================
+
+
+// ==========================================================================
+// PRODUCT LIST
+// ==========================================================================
+
+.products {
+	@extend .grid;
+	@extend .grid--divided;
+
+	.product,
+	.product-category {
+		@extend .gc;
+		@extend .h1-2;
+		@extend .l1-3;
+		@extend .d1-4;
+		@extend .w1-5;
+		position: relative;
+		z-index: $zindex-tier-1;
+
+		&:nth-child(2n+1) {
+			@extend .h-grid-clear;
+		}
+
+		&:nth-child(3n+1) {
+			@extend .l-grid-clear;
+		}
+
+		&:nth-child(4n+1) {
+			@extend .d-grid-clear;
+		}
+
+		&:nth-child(5n+1) {
+			@extend .w-grid-clear;
+		}
+
+		.product__info {
+			
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		img {
+			@extend .img-thumb;
+			@extend .img-polaroid;
+			@include box-sizing(border-box);
+			display: block;
+			margin-bottom: $baseLineHeight/2;
+		}
+	}
+}
+
+// CALL TO ACTION
+// ==========================================================================
+.products .button {
+	margin-top: $baseLineHeight/2;
+	@extend .btn-full;
+
+	@include respond-to(medium) {
+		float: left;
+		clear: both;
+	}
+}
+
+// THUMBNAIL
+// ==========================================================================
+.products .attachment-shop_catalog {
+
+}
+
+
+// ==========================================================================
+// SEARCH TOOLS
+// ==========================================================================
+
+// RESULT COUNT
+// ==========================================================================
+.woocommerce-result-count {
+	@include respond-to(small) {
+		float: left;
+		width: 50%;
+	}
+}
+
+// ORDERING
+// ==========================================================================
+.woocommerce-ordering {
+	margin-bottom: $baseLineHeight;
+
+	@include respond-to(small) {
+		@include rem(margin-top,-10px);
+		float: right;
+		width: 25%;
+	}
+}

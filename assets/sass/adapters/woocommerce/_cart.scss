@@ -1,0 +1,269 @@
+// ==========================================================================
+// 
+// CART
+// Styles for the Cart template
+// 
+// ==========================================================================
+
+
+// ==========================================================================
+// PRODUCT (SHOP) TABLE
+// ==========================================================================
+
+.cart__contents {
+	margin-bottom: $baseLineHeight;
+
+	table {
+		margin-bottom: 0;
+	}
+}
+
+// COLUMN: PRODUCT REMOVE
+// ==========================================================================
+.shop_table .product-remove {
+	text-align: center;
+	padding: 0;
+
+	.remove {
+		display: block;
+		margin: 0 auto;
+		@include rem(padding,15px);
+		@include rem(font-size,20px);
+		font-weight: bold;
+		color: $errorText;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: lighten($errorText,10%);
+		}
+	}
+}
+
+// COLUMN: PRODUCT QUANTITY
+// ==========================================================================
+.shop_table .product-quantity {
+	width: 26%;
+	min-width: 200px;
+}
+
+
+// COLUMN: PRODUCT THUMBNAIL
+// ==========================================================================
+.shop_table .product-thumbnail {
+	display: none;
+
+	@include respond-to(small) {
+		display: table-cell;
+	}
+}
+
+// PRODUCT VARIATION
+// ==========================================================================
+
+.shop_table {
+	.variation {
+		font-size: 0.9em;
+		margin-top: 0;		
+	}
+}
+
+
+// ==========================================================================
+// CART ACTIONS
+// ==========================================================================
+
+.cart__actions {
+	.actions {
+		text-align: left;
+		padding: $baseLineHeight;
+	}
+
+	.button {
+		@extend .btn-secondary !optional;
+		margin-top: $baseLineHeight;
+		margin-right: $baseLineHeight;
+	}
+
+	.checkout-button {
+		@extend .btn-full;
+		@extend .btn-primary !optional;
+		width: 100%;
+
+		@include respond-to(small) {
+			float: right;
+			margin-right: 0;
+			@include inline-block;
+			width: auto;
+		}
+	}
+}
+
+// ==========================================================================
+// CART COUPONS
+// ==========================================================================
+
+.coupon {
+
+	.input-text {
+		@extend input[type="text"];
+		width: 99%;
+		@include rem(height,34px);
+		display: block;
+		margin-bottom: $baseLineHeight/2;
+
+		@include respond-to($mobileBreak) {
+			@include inline-block;
+			width: auto;
+			margin-bottom: 0;
+
+		}
+	}
+
+	.button {
+		@extend .btn-small;
+		clear: both;
+		margin-top: 0;
+		@include respond-to($mobileBreak) {
+			@include inline-block;
+		}
+	}
+}
+
+
+
+// ==========================================================================
+// CART TOTALS
+// ==========================================================================
+
+/* .cart-collaterals */.cart_totals {
+	
+	overflow: hidden;
+
+	th,
+	td {
+		@include rem(padding,20px);
+	}
+
+	.total {
+		font-size: 1.4em;
+	}
+}
+
+// ==========================================================================
+// CROSS SELLS
+// ==========================================================================
+
+/* .cart-collaterals */.cross-sells {
+
+	@include respond-to(large) {
+		float: left;
+		width: 45%; 
+		padding-right: 5%;
+	}
+}
+
+
+
+
+// ==========================================================================
+// PRODUCT QUANTITY
+// ==========================================================================
+
+.cart {
+	margin-bottom: $baseLineHeight;
+
+	.quantity {
+		@include rem(padding-left,60px);
+		@include rem(padding-right,60px);
+	}
+
+	.qty,
+	input.minus,
+	input.plus {
+		@include inline-block;
+		@include rem(width,46px);
+		@include rem(height,46px);
+	}
+
+	.qty {
+		width: 100%;
+		@include rem(margin-left,7px);
+		@include rem(margin-right,7px);
+	}
+
+	.minus,
+	.plus {
+		@extend .btn;
+		padding: 0;
+	}
+
+	.minus {
+		@include rem(margin-left,-60px);
+	}
+
+	.plus {
+		@include rem(margin-right,-60px);
+	}
+
+}
+
+
+
+// ==========================================================================
+// CART WIDGET
+// ==========================================================================
+
+/* .widget_shopping_cart {
+
+}
+
+.mini-cart {
+	@extend .list-unstyled;
+}
+
+.mini-cart__item {
+	margin-bottom: $baseLineHeight/2;
+}
+
+.mini-cart-product,
+.mini-cart-product__content {
+	overflow:hidden;
+	*overflow:visible;
+	zoom:1;
+}
+
+.mini-cart-product__media {
+	@extend .img-polaroid;
+	width: 64px;
+	float: left;
+	margin-right: $baseLineHeight;
+}
+
+.mini-cart-product__content {
+
+}
+
+.mini-cart-product__title {
+	font-size: 1em;
+	margin-bottom: 0.1em;
+}
+
+.mini-cart-product__meta {
+	color: #777;
+	font-size: 0.9em;
+	line-height: 1.5;
+} */
+
+
+// BUTTONS
+// ==========================================================================
+
+.mini-cart__buttons a {
+
+}
+
+
+
+
+
