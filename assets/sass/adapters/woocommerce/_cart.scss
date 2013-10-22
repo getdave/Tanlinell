@@ -44,7 +44,7 @@
 // ==========================================================================
 .shop_table .product-quantity {
 	width: 26%;
-	max-width: 200px;
+	min-width: 200px;
 }
 
 
@@ -110,10 +110,12 @@
 		width: 99%;
 		@include rem(height,34px);
 		display: block;
+		margin-bottom: $baseLineHeight/2;
 
 		@include respond-to($mobileBreak) {
 			@include inline-block;
 			width: auto;
+			margin-bottom: 0;
 
 		}
 	}
@@ -121,8 +123,7 @@
 	.button {
 		@extend .btn-small;
 		clear: both;
-		margin-top: $baseLineHeight/3;
-
+		margin-top: 0;
 		@include respond-to($mobileBreak) {
 			@include inline-block;
 		}
