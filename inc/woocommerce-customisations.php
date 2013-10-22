@@ -60,6 +60,24 @@ function tanlinell_woocommerce_after_shop_loop_item() {
 
 
 
+add_action('woocommerce_before_cart_table','tanlinell_woocommerce_before_cart_table');
+                        function tanlinell_woocommerce_before_cart_table() {
+                                echo '<div class="cart__contents scrollable"><div>';
+                        }
+
+
+                        add_action('woocommerce_after_cart_table','tanlinell_woocommerce_after_cart_table');
+                        function tanlinell_woocommerce_after_cart_table() {
+                                echo '</div></div>';
+                        }
+
+
+                        add_action('woocommerce_cart_contents','tanlinell_woocommerce_cart_contents');
+                        function tanlinell_woocommerce_cart_contents() {
+                                echo '</tbody></table></div></div><table class="cart__actions">';
+                        }
+
+
 
 
 
