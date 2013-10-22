@@ -17,38 +17,36 @@
 			<?php while ($slides->have_posts() ) : $slides->the_post(); ?>
 				
 				<?php
-					//setup the custom meta object
-					global $custom_metabox;
-					
-					// get the meta data for the current post
-					$custom_metabox->the_meta();
-					
-					//link meta data
-					$custom_metabox->the_field('text');
-					$link_text = $custom_metabox->get_the_value();
-										
-					$custom_metabox->the_field('page');
-					$link = get_permalink($custom_metabox->get_the_value());
-					
-					if(!$link)
-					{
-						$custom_metabox->the_field('url');
-						$link = $custom_metabox->get_the_value();
-					}
-				?>
+				/**
+				 * Meta Link Values 
+				 */
+				//link destination
+				$_slide_link_url 	= get_post_meta( $post->ID, '_slide_link_url', true );				
+				$_slide_link_page 	= get_post_meta( $post->ID, '_slide_link_page', true );
 				
+				$link_destination = ( ( true == $_slide_link_url ) ? $_slide_link_url : ( ( true == $_slide_link_page ) ? get_permalink($_slide_link_page) : false ) );
+				
+				//link text
+				$_slide_link_text	= get_post_meta( $post->ID, '_slide_link_text', true );
+				?>
+					
 				<li class="slide">				
 					<div class="slide-content">
 						<div class="slide-content-inner">
 							
-							<a href="<?php echo $link ?>"><?php echo $link_text ?></a>
+							<a href="<?php echo esc_url( $link_destination ); ?>">
+								<?php echo esc_html( $_slide_link_text ? $_slide_link_text : 'Click Here' ); ?>
+							</a>
 							
 							<?php the_title('<h3>', '</h3>'); ?>
 							<?php the_content();?>
 															
 						</div>
 					</div>
-					<?php brimg(get_post_thumbnail_id( $post->ID )); ?>
+					
+					<a href="<?php echo esc_url( $link_destination ); ?>">
+						<?php brimg(get_post_thumbnail_id( $post->ID )); ?>
+					</a>
 				</li>
 				
 	        <?php endwhile; wp_reset_postdata();?>

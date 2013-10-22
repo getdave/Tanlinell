@@ -17,8 +17,11 @@ get_header(); ?>
 			<header class="page-header">
 				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'tanlinell' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
-
-			<?php /* Start the Loop */ ?>
+			
+			<?php $stat = tanlinell_paging_stat(); ?>
+			<div class="search-stat">
+				<p>Displaying <span class="search-stat__item search-stat__floor"><?php echo $stat['floor']; ?></span>-<span class="search-stat__item search-stat__ceiling"><?php echo $stat['ceiling']; ?></span> of <span class="search-stat__item search-stat__total"><?php echo $stat['total']; ?></span> results</p>
+			</div>
 		
 			<ul class="article-list item-list">
 			<?php while ( have_posts() ) : the_post(); ?>

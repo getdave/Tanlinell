@@ -127,32 +127,25 @@ function tanlinell_setup() {
 	 */	
 	//require( get_template_directory() . '/inc/custom-widgets.php' );
 	
-
-	/**
-	 * Register Widgetized Areas
-	 * sets up and registers required Widgetized areas
-	 */	
-	require( get_template_directory() . '/inc/register-widget-areas.php' );
-
-
-	/**
-	 * WPAlchemy
-	 * call initial setup and make class available
-	 * NOTE: before register-custom-posts
-	 */	
-	require( get_template_directory() . '/libs/wpalchemy/setup.php');
-	
+		
 	
 	/**
-	 * 	Register 'Custom Posts Types' for the theme
+	 * Custom-Metaboxes-and-Fields-for-WordPress
+	 */	
+	function tanlinell_initialize_cmb_meta_boxes() {
+		if ( !class_exists( 'cmb_Meta_Box' ) ) {
+			require( get_template_directory() . '/libs/Custom-Metaboxes-and-Fields-for-WordPress/init.php');
+		}
+	}
+	add_action( 'init', 'tanlinell_initialize_cmb_meta_boxes', 9999 );
+		
+	/**
+	 * Homepage Slider
 	 */
-	require( get_template_directory() . '/inc/register-custom-posts.php' );
+	require( get_template_directory() . '/modules/homepage-slider/register-cpt.php' );
 
-	
 	/**
-	 * 	Register 'Custom Posts Types' for the theme
-	 * NOTE: after register-custom-posts
-	 * so we can get a list of all registered post types
+	 * Page Title/Page Subtitle
 	 */
 	require( get_template_directory() . '/inc/global-custom-meta.php' );
 	
@@ -185,12 +178,24 @@ function tanlinell_setup() {
 	add_image_size( 'featured_image_small', 420, 390, false );
 	
 	
-	
 	/**
 	 * Default Page Setup
 	 * creates pages and sets config to allow /blog/ and /home/ to load our templates
 	 */
-	require( get_template_directory() . '/inc/default-page-setup.php' );	
+	require( get_template_directory() . '/inc/default-page-setup.php' );
+	
+	
+	/**
+	 * Default Menus Setup
+	 * creates menu items and assigns to menu locations that have been created previously
+	 */
+	require( get_template_directory() . '/inc/default-menu-setup.php' );	
+
+	/**
+	 * WooCommerce Customisations
+	 * custom hooks and filter functinos for integration with WooCommerce
+	 */
+	require( get_template_directory() . '/inc/woocommerce-customisations.php' );	
 	
 	
 }

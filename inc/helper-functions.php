@@ -317,3 +317,28 @@ function tanlinell_is_custom_post_type( $post = NULL )
 
     return in_array( $current_post_type, $custom_types );
 }
+
+
+
+/**
+ * 	Function to get the paging display calculations
+ * 
+ * 	@global $wp_query	(obj)	# WP_Query Object
+ *  @return $stat		(array)	# returns the stat values (XX) for display i.e.Displaying XX-XX of XX results
+ * 
+ */
+
+function tanlinell_paging_stat(  ){
+	
+	global $wp_query;
+	
+	$post_count = min( ( int ) $wp_query->get( 'posts_per_page' ), $wp_query->found_posts );
+    $page = max( ( int ) $wp_query->get( 'paged' ), 1 );
+    $count = ( $page - 1 ) * $post_count;
+
+    $stat['floor'] = $count + 1;
+    $stat['ceiling'] = $count + $wp_query->post_count;
+    $stat['total'] = $wp_query->found_posts;
+	
+	return $stat;
+}

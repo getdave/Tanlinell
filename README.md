@@ -47,3 +47,8 @@ http://gruntjs.com/getting-started
 * For nice Custom Post Type icons check out [randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/](http://randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/)
 
 
+## Changelog
+
+#### 2.1.4
+
+Added WooCommerce support to the Theme.

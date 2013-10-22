@@ -1,0 +1,161 @@
+// ==========================================================================
+// 
+// GENERIC
+// Styles for generic elements that do not constitute a distinct UI element
+// and which do not pertain directly any of the other "view" SASS partials
+// 
+// Do not use this as a dumping ground.
+// 
+// ==========================================================================
+
+
+// ==========================================================================
+// PRODUCT WIDGET LISTING
+// ==========================================================================
+
+.product_list_widget {
+	@extend .list-unstyled;
+
+	li {
+		margin-bottom: $baseLineHeight;
+		@include clearfix;
+
+		a {
+			display: block;
+		}
+	}
+
+	img {
+		@extend .img-polaroid;
+		width: 64px;
+		float: right;
+		margin-left: $baseLineHeight;
+	}
+	
+	.amount,
+	.quantity,
+	.from,
+	.variation {
+		font-size: 0.9em;
+		color: #777;
+	}
+
+	.quantity .amount {
+		font-size: 1em;
+	}
+
+	.star-rating {
+		font-size: 0.9em;
+	}
+}
+
+
+
+// ==========================================================================
+// WIDGET: LAYERED NAV
+// ==========================================================================
+
+.widget_layered_nav,
+.widget_layered_nav_filters {
+
+	ul {
+		@extend .list-unstyled;
+	}
+
+	li {
+		position: relative;
+		margin-bottom: $baseLineHeight/2;
+	}
+
+	a {
+		display: block;
+	}
+
+	.count {
+		display: block;
+		@include rem(padding,1px 10px);
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: #f1f1f1;
+		border-radius: 100px;
+		@include rem(font-size,11px);
+	}
+}
+
+
+// ==========================================================================
+// PRODUCT META
+// ==========================================================================
+
+.onsale {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: $zindex-tier-1;
+		display: none;
+}
+
+.price {
+	del {
+		color: #ccc;
+	}
+}
+
+
+// ==========================================================================
+// PRODUCT VARIATION
+// ==========================================================================
+
+.variation {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	dt {
+		display: inline;
+		color: #666;
+		@include rem(padding-right,5px);
+	}
+
+	dd {
+		display: inline;
+		overflow: hidden;
+		font-weight: bold;
+	}
+}
+
+
+// ==========================================================================
+// PAGINATION
+// ==========================================================================
+
+.woocommerce-pagination {
+	.page-numbers {
+		@extend .pagination__list;
+		@extend .list-unstyled;
+		li {
+			@extend .pagination__item;
+		}
+
+		a,
+		span {
+			@extend .pagination__link;
+		}
+	}
+}
+
+
+// ==========================================================================
+// BREADCRUMBS
+// ==========================================================================
+
+.woocommerce-breadcrumb {
+	@extend .breadcrumbs;
+
+	span:last-child {
+		@extend .trail-end;
+	}
+}
+
+
+

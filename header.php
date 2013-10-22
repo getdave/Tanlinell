@@ -79,5 +79,5 @@ if ($google_company_page_url) :
 	</header><!-- #masthead .site-header -->
 	<?php do_atomic( 'after_banner' ); ?>
 	<div id="content" class="<?php echo apply_atomic( 'site_content_class', 'container site-content ' ); ?>">
-		<?php if ( current_theme_supports( 'breadcrumb-trail' ) ) breadcrumb_trail(); ?>
+		<?php if ( current_theme_supports( 'breadcrumb-trail' ) && !is_woocommerce() ) breadcrumb_trail(); ?>
 	
