@@ -8,6 +8,37 @@
 // 
 // ==========================================================================
 
+// ==========================================================================
+// PRODUCT WIDGET LISTING
+// ==========================================================================
+
+.product_list_widget {
+	@extend .list-unstyled;
+
+	li {
+		margin-bottom: $baseLineHeight;
+		@include clearfix;
+
+		a {
+			display: block;
+		}
+	}
+
+	img {
+		@extend .img-polaroid;
+		width: 64px;
+		float: right;
+		margin-left: $baseLineHeight;
+	}
+
+	.amount,
+	.from,
+	.variation {
+		font-size: 0.9em;
+		color: #777;
+	}
+}
+
 
 // ==========================================================================
 // PRODUCT META
@@ -35,7 +66,7 @@
 .variation {
 	margin-top: 0;
 	margin-bottom: 0;
-	
+
 	dt {
 		display: inline;
 		color: #666;
