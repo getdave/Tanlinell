@@ -57,3 +57,10 @@ function tanlinell_woocommerce_after_shop_loop_item() {
 }
 
 
+
+
+
+
+
+
+

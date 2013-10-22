@@ -218,3 +218,49 @@
 
 }
 
+
+
+// ==========================================================================
+// CART WIDGET
+// ==========================================================================
+
+.mini-cart {
+	@extend .list-unstyled;
+}
+
+.mini-cart__item {
+	margin-bottom: $baseLineHeight/2;
+}
+
+.mini-cart-product,
+.mini-cart-product__content {
+	overflow:hidden;
+	*overflow:visible;
+	zoom:1;
+}
+
+.mini-cart-product__media {
+	@extend .img-polaroid;
+	width: 64px;
+	float: left;
+	margin-right: $baseLineHeight;
+}
+
+.mini-cart-product__content {
+
+}
+
+.mini-cart-product__title {
+	font-size: 1em;
+	margin-bottom: 0.1em;
+}
+
+.mini-cart-product__meta {
+	color: #777;
+}
+
+
+
+
+
+
