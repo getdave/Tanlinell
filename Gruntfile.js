@@ -231,7 +231,7 @@ module.exports = function(grunt) {
         },
         changelog: {
             options: {
-            // Task-specific options go here.
+            // Task-specific options go here.testing the things
             }
         },
 
