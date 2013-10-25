@@ -138,12 +138,9 @@ function tanlinell_setup() {
 		}
 	}
 	add_action( 'init', 'tanlinell_initialize_cmb_meta_boxes', 1 );
-		
-	/**
-	 * Homepage Slider
-	 */
-	require( get_template_directory() . '/modules/homepage-slider/register-cpt.php' );
-
+	
+	
+	
 	/**
 	 * Page Title/Page Subtitle
 	 */
