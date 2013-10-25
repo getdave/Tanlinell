@@ -223,9 +223,6 @@ module.exports = function(grunt) {
                 commit: false,
                 commitMessage: 'Bumped version number to v%VERSION%',
                 commitFiles: ['package.json'], // '-a' for all files
-                createTag: false,
-                tagName: '%VERSION%',
-                tagMessage: 'Version %VERSION%',
                 push: false,
             }
         },
@@ -248,9 +245,14 @@ module.exports = function(grunt) {
 
 
 
-    // register task
+    // register watch task
     grunt.registerTask('default', [
         'watch'
+    ]);
+
+    grunt.registerTask('versionbump', [
+        'bump',
+        'changelog'
     ]);
 
 
