@@ -228,7 +228,7 @@ module.exports = function(grunt) {
                 tagMessage: 'Version %VERSION%',
                 push: false,
             }
-        }
+        },
 
         cc: {
             // catch that comma!
