@@ -229,6 +229,11 @@ module.exports = function(grunt) {
                 push: false,
             }
         },
+        changelog: {
+            options: {
+            // Task-specific options go here.
+            }
+        },
 
         cc: {
             // catch that comma!
