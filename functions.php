@@ -133,7 +133,7 @@ function tanlinell_setup() {
 	 * Custom-Metaboxes-and-Fields-for-WordPress
 	 */	
 	function tanlinell_initialize_cmb_meta_boxes() {
-		if ( !class_exists( 'cmb_meta_boxes' ) ) {
+		if ( !function_exists( 'cmb_init' ) ) {
 			require( get_template_directory() . '/libs/Custom-Meta-Boxes/custom-meta-boxes.php');
 		}
 	}
