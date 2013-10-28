@@ -221,11 +221,9 @@ module.exports = function(grunt) {
                 files: ['package.json'],
                 updateConfigs: [],
                 commit: false,
-                commitMessage: 'Bumped version number to v%VERSION%',
+                commitMessage: 'Bump version number to v%VERSION%',
                 commitFiles: ['package.json'], // '-a' for all files
                 createTag: false,
-                tagName: '%VERSION%',
-                tagMessage: 'Version %VERSION%',
                 push: false,
             }
         },
