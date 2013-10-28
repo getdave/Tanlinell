@@ -214,6 +214,20 @@ module.exports = function(grunt) {
             }, */
         },
 
+
+
+        bump: {
+            options: {
+                files: ['package.json'],
+                updateConfigs: [],
+                commit: false,
+                commitMessage: 'Bump version number to v%VERSION%',
+                commitFiles: ['package.json'], // '-a' for all files
+                createTag: false,
+                push: false,
+            }
+        },
+
         cc: {
             // catch that comma!
         }

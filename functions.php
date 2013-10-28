@@ -133,17 +133,14 @@ function tanlinell_setup() {
 	 * Custom-Metaboxes-and-Fields-for-WordPress
 	 */	
 	function tanlinell_initialize_cmb_meta_boxes() {
-		if ( !class_exists( 'cmb_Meta_Box' ) ) {
-			require( get_template_directory() . '/libs/Custom-Metaboxes-and-Fields-for-WordPress/init.php');
+		if ( !function_exists( 'cmb_init' ) ) {
+			require( get_template_directory() . '/libs/Custom-Meta-Boxes/custom-meta-boxes.php');
 		}
 	}
-	add_action( 'init', 'tanlinell_initialize_cmb_meta_boxes', 9999 );
-		
-	/**
-	 * Homepage Slider
-	 */
-	require( get_template_directory() . '/modules/homepage-slider/register-cpt.php' );
-
+	add_action( 'init', 'tanlinell_initialize_cmb_meta_boxes', 1 );
+	
+	
+	
 	/**
 	 * Page Title/Page Subtitle
 	 */

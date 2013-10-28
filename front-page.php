@@ -15,9 +15,6 @@ get_header(); ?>
 
 <div id="content" class="<?php echo apply_atomic( 'site_content_class', 'site-content' ); ?>">
 	
-	<?php get_template_part( '/modules/homepage-slider/slider-template' ); ?>
-
-
 	<div class="column-container">
 		<div class="main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
