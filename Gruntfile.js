@@ -33,11 +33,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     config: 'config.rb',
-                    force: true,
-                    relativeAssets: true,
-                    environment: 'production',
-                    outputStyle: 'compressed',
-                    noLineComments: true,
+                    force: true
                 }
             },
         },
@@ -113,7 +109,6 @@ module.exports = function(grunt) {
             }
         },
 
-
         sprite:{
             framework: {
                 src: 'assets/images/framework/sprites/*.png',
@@ -133,88 +128,6 @@ module.exports = function(grunt) {
                 imgPath: '../images/spritesheet.png'
             },
         },
-
-
-        // Code Deployments (via rsync)
-        deploy: {
-            options: {
-                exclude: [
-                    // Git
-                    '.git*',
-                    '.gitignore',
-
-                    // NPM & Grunt
-                    'node_modules',
-                    'package.json',
-                    'Gruntfile.js',
-
-                    // Tools and Libs
-                    '.sass-cache',
-                    '.jshintrc',
-                    'config.rb',
-
-                    // License & Docs
-                    'README.md',
-                    'readme.html',
-                    'license.txt',
-                    'humans.txt',
-
-                    // WordPress
-                    'wp-config-local.php',
-                    'w3tc-config',
-                    'advanced-cache.php',
-                    'object-cache.php',
-                    '/wp-content/uploads/cache/',
-
-                    // Misc file-system
-                    '.DS_Store',
-                ],
-                args: [
-                    "-avzh",     //  -a is an alias for -rlptgoD; -v is verbose; -z is compression, -h is output numbers in a human-readable format
-                    "--progress",
-                ],
-                recursive: true,
-                syncDest: false,
-                untracked_config: grunt.file.readJSON('code_deployments_untracked_config.json') // file not under version control
-            },
-
-            "develop": "<%= deploy.options.untracked_config.develop %>",
-
-            /*
-            "develop": {
-                options: {
-                    "src": "../../../",
-                    "dest": "~/public_html/",
-                    "host": "user@host",
-                }
-            },
-            */
-        },
-
-        // Database Deployments (via grunt-deployments)
-        deployments: {
-             options: {
-                backups_dir: "../../../../backups",
-                untracked_config: grunt.file.readJSON('db_deployments_untracked_config.json') // file not under version control under version control
-            },
-
-            "local": "<%= deployments.options.untracked_config.local %>",
-            "develop": "<%= deployments.options.untracked_config.develop %>"
-
-
-
-            /* "remote": {
-                "title": "Remote",
-                "database": "remote_db_name",
-                "user": "remote_db_user",
-                "pass": "remote_db_pass",
-                "host": "localhost",
-                "url": "remote_url",
-                "ssh_host": "user@host"
-            }, */
-        },
-
-
 
         bump: {
             options: {

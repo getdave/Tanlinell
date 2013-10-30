@@ -8,13 +8,15 @@ images_dir 		= "assets/images"
 javascripts_dir = "assets/js"
 fonts_dir 		= "assets/fonts"
 
-output_style 	= :expanded
+# Environments
 environment 	= :development
+#environment 	= :development
 
+output_style 	= (environment == :production) ? :false : :true
+line_comments 	= (environment == :production) ? :false : :true
+
+# Shared
 relative_assets = true
-
-# To disable debugging comments that display the original location of your selectors. Uncomment:
-# line_comments = false
 color_output 	= false
 
 
