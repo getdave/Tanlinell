@@ -195,6 +195,12 @@ function tanlinell_setup() {
 	require( get_template_directory() . '/inc/woocommerce-customisations.php' );	
 	
 	
+	/**
+	 * WP Automatic Updates
+	 * Ensure we recieve the updates we want 
+	 */
+	require( get_template_directory() . '/inc/wp-automatic-updates.php' );
+	
 }
 endif; // tanlinell_setup
 
