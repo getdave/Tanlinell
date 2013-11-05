@@ -169,12 +169,6 @@ function tanlinell_setup() {
 	require( get_template_directory() . '/inc/burfield-customisations.php' );
 	
 	
-	add_image_size( 'featured_image_xlarge', 2000, 1400, false );
-	add_image_size( 'featured_image_large', 991, 743, false );
-	add_image_size( 'featured_image_medium', 800, 600, false );
-	add_image_size( 'featured_image_small', 420, 390, false );
-	
-	
 	/**
 	 * Default Page Setup
 	 * creates pages and sets config to allow /blog/ and /home/ to load our templates
