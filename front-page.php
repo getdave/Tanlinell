@@ -12,20 +12,18 @@
 
 get_header(); ?>
 
-
-<div id="content" class="<?php echo apply_atomic( 'site_content_class', 'site-content' ); ?>">
 	
-	<div class="column-container">
-		<div class="main" role="main">
+<div class="column-container">
+	<div class="main" role="main">
+	
 		<?php while ( have_posts() ) : the_post(); ?>
 	
 			<?php get_template_part( 'content', 'page' ); ?>
 	
 		<?php endwhile; ?>
-	
-		</div><!-- .main -->
-	</div>
 
-</div>
+	</div><!-- .main -->
+</div><!-- .column-container -->
+
 
 <?php get_footer(); ?>

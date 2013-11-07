@@ -9,7 +9,7 @@
  */
 ?>
 
-	</div><!-- #main .site-main -->
+	</div><!-- #content .site-content -->
 	
 	<aside class="sub-footer container">
 		<div class="grid-wrap">
