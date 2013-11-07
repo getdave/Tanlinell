@@ -78,7 +78,7 @@ if ($google_company_page_url) :
 		</div>	
 	</header><!-- #masthead .site-header -->
 	<?php do_atomic( 'after_banner' ); ?>
-	<div id="content" class="<?php echo apply_atomic( 'site_content_class', 'container site-content ' ); ?>">
+	<div id="content" class="<?php echo apply_filters( 'site_content_class', 'container site-content ' ); ?>">
 	
 		<?php if( !function_exists('is_woocommerce') || !is_woocommerce()) : ?>
 		

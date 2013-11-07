@@ -49,6 +49,9 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
+### 2.2.4
+Content class markup fix
+
 ### 2.2.3
 
 #### 2.2.0
