@@ -49,6 +49,8 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
+### 2.2.3
+
 #### 2.2.0
 
 * Added WooCommerce support to the Theme.
