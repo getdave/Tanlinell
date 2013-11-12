@@ -199,3 +199,4 @@ function my_breadcrumb_trail_args( $args ) {
 }
 
 add_filter( 'breadcrumb_trail_args', 'my_breadcrumb_trail_args' );
+

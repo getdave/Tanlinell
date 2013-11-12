@@ -11,8 +11,10 @@
 get_header(); ?>
 
 
-<div class="column-container">
-	<div class="main" role="main">
+<?php echo apply_filters( 'tanlinell_content_wrapper_html_open', '<div class="column-container">' );?>
+
+	<?php echo apply_filters( 'tanlinell_main_wrapper_html_open', '<div class="main">' );?>
+
 
 	<?php if ( have_posts() ) : ?>
 
@@ -68,8 +70,8 @@ get_header(); ?>
 			?>
 		</header><!-- .page-header -->
 
-		
-		
+
+
 		<ul class="article-list item-list">
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -96,12 +98,13 @@ get_header(); ?>
 
 	<?php endif; ?>
 
+	<?php echo apply_filters( 'tanlinell_main_wrapper_html_close', '</div>' );?>
 
 
-	</div><!-- .main -->
+	<?php echo apply_filters( 'tanlinell_sub_wrapper_html_open', '<div class="sub">' );?>
+		<?php get_sidebar(); ?>
+	<?php echo apply_filters( 'tanlinell_sub_wrapper_html_close', '</div>' );?>
 
-	<div class="sub">
-	<?php get_sidebar(); ?>
-	</div>
-</div>
+<?php echo apply_filters( 'tanlinell_content_wrapper_html_close', '</div>' );?>
+
 <?php get_footer(); ?>

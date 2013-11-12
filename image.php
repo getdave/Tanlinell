@@ -9,9 +9,9 @@
 get_header();
 ?>
 
-
-<div class="column-container layout-1c">
-	<div class="main" role="main">
+<?php echo apply_filters( 'tanlinell_content_wrapper_html_open', '<div class="column-container layout-1c">' );?>
+	
+	<?php echo apply_filters( 'tanlinell_main_wrapper_html_open', '<div class="main">' );?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -105,8 +105,9 @@ get_header();
 
 	<?php endwhile; // end of the loop. ?>
 
-	</div><!-- .main -->
-</div>
+	<?php echo apply_filters( 'tanlinell_main_wrapper_html_close', '</div>' );?>
+	
+<?php echo apply_filters( 'tanlinell_content_wrapper_html_close', '</div>' );?>
 
 
 <?php get_footer(); ?>

@@ -13,8 +13,8 @@
 get_header(); ?>
 
 	
-<div class="column-container">
-	<div class="main" role="main">
+<?php echo apply_filters( 'tanlinell_content_wrapper_html_open', '<div class="column-container">' );?>
+	<?php echo apply_filters( 'tanlinell_main_wrapper_html_open', '<div class="main">' );?>
 	
 		<?php while ( have_posts() ) : the_post(); ?>
 	
@@ -22,8 +22,8 @@ get_header(); ?>
 	
 		<?php endwhile; ?>
 
-	</div><!-- .main -->
-</div><!-- .column-container -->
+	<?php echo apply_filters( 'tanlinell_main_wrapper_html_close', '</div>' );?>
+<?php echo apply_filters( 'tanlinell_content_wrapper_html_close', '</div>' );?>
 
 
 <?php get_footer(); ?>
