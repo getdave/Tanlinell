@@ -9,9 +9,9 @@
 get_header();
 ?>
 
-
-<div class="column-container layout-1c">
-	<div class="main" role="main">
+<?php do_action( 'tanlinell_content_wrapper_start');?>
+	
+	<?php do_action( 'tanlinell_content_main_start');?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -105,8 +105,9 @@ get_header();
 
 	<?php endwhile; // end of the loop. ?>
 
-	</div><!-- .main -->
-</div>
+	<?php do_action( 'tanlinell_content_main_end');?>
+	
+<?php do_action( 'tanlinell_content_wrapper_end');?>
 
 
 <?php get_footer(); ?>

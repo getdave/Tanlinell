@@ -10,8 +10,9 @@
 
 get_header(); ?>
 
-<div class="column-container">
-	<div class="main" role="main">
+<?php do_action( 'tanlinell_content_wrapper_start');?>
+	
+	<?php do_action( 'tanlinell_content_main_start');?>
 				
 		<?php $post = get_page_by_title( 'News' ); ?>				
 		<?php get_template_part( 'templates/partials/pagetitle' ); ?>
@@ -42,10 +43,12 @@ get_header(); ?>
 
 		<?php endif; ?>
 				
-	</div><!-- .main -->
+	<?php do_action( 'tanlinell_content_main_end');?>
 
-	<div class="sub">
-	<?php get_sidebar(); ?>
-	</div>
-</div>
+	<?php do_action( 'tanlinell_content_sub_start');?>
+		<?php get_sidebar(); ?>
+	<?php do_action( 'tanlinell_content_sub_end');?>
+	
+<?php do_action( 'tanlinell_content_wrapper_end');?>
+
 <?php get_footer(); ?>
