@@ -49,11 +49,17 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
-### 2.2.4
+### 2.3.0
+
+* Add templating wrapper action hooks to allow for DRY application of standard wrapper HTML
+* Apply standard wrapper element html.
+
+### 2.2.0
+
+* Add WooCommerce support to the Theme.
+
+#### 2.2.4
+
 Content class markup fix
 
-### 2.2.3
 
-#### 2.2.0
-
-* Added WooCommerce support to the Theme.
