@@ -9,9 +9,9 @@
 get_header();
 ?>
 
-<?php echo apply_filters( 'tanlinell_content_wrapper_html_open', '<div class="column-container layout-1c">' );?>
+<?php do_action( 'tanlinell_content_wrapper_start');?>
 	
-	<?php echo apply_filters( 'tanlinell_main_wrapper_html_open', '<div class="main">' );?>
+	<?php do_action( 'tanlinell_content_main_start');?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -105,9 +105,9 @@ get_header();
 
 	<?php endwhile; // end of the loop. ?>
 
-	<?php echo apply_filters( 'tanlinell_main_wrapper_html_close', '</div>' );?>
+	<?php do_action( 'tanlinell_content_main_end');?>
 	
-<?php echo apply_filters( 'tanlinell_content_wrapper_html_close', '</div>' );?>
+<?php do_action( 'tanlinell_content_wrapper_end');?>
 
 
 <?php get_footer(); ?>

@@ -10,9 +10,9 @@
 
 get_header(); ?>
 
-<?php echo apply_filters( 'tanlinell_content_wrapper_html_open', '<div class="column-container">' );?>
+<?php do_action( 'tanlinell_content_wrapper_start');?>
 	
-	<?php echo apply_filters( 'tanlinell_main_wrapper_html_open', '<div class="main">' );?>
+	<?php do_action( 'tanlinell_content_main_start');?>
 				
 		<?php $post = get_page_by_title( 'News' ); ?>				
 		<?php get_template_part( 'templates/partials/pagetitle' ); ?>
@@ -43,12 +43,12 @@ get_header(); ?>
 
 		<?php endif; ?>
 				
-	<?php echo apply_filters( 'tanlinell_main_wrapper_html_close', '</div>' );?>
+	<?php do_action( 'tanlinell_content_main_end');?>
 
-	<?php echo apply_filters( 'tanlinell_sub_wrapper_html_open', '<div class="sub">' );?>
+	<?php do_action( 'tanlinell_content_sub_start');?>
 		<?php get_sidebar(); ?>
-	<?php echo apply_filters( 'tanlinell_sub_wrapper_html_close', '</div>' );?>
+	<?php do_action( 'tanlinell_content_sub_end');?>
 	
-<?php echo apply_filters( 'tanlinell_content_wrapper_html_close', '</div>' );?>
+<?php do_action( 'tanlinell_content_wrapper_end');?>
 
 <?php get_footer(); ?>

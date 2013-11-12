@@ -200,3 +200,53 @@ function my_breadcrumb_trail_args( $args ) {
 
 add_filter( 'breadcrumb_trail_args', 'my_breadcrumb_trail_args' );
 
+
+
+
+/**
+ * CONTENT WRAPPER MARKUP
+ * defines the wrapper for the #content area
+ */
+function tanlinell_do_content_wrapper_start() {
+	echo apply_filters( 'tanlinell_content_wrapper_html_open', '<div class="column-container">' );
+}
+add_action( 'tanlinell_content_wrapper_start', 'tanlinell_do_content_wrapper_start' );
+
+
+function tanlinell_do_content_wrapper_end() {
+	echo apply_filters( 'tanlinell_content_wrapper_html_close', '</div>' );
+}
+add_action( 'tanlinell_content_wrapper_end', 'tanlinell_do_content_wrapper_end' );
+
+
+/**
+ * MAIN CONTENT WRAPPER MARKUP
+ * defines the wrapper for the <main> area
+ */
+function tanlinell_do_content_main_start() {
+	echo apply_filters( 'tanlinell_content_main_html_open', '<div class="main">' );
+}
+add_action( 'tanlinell_content_main_start', 'tanlinell_do_content_main_start' );
+
+
+function tanlinell_do_content_main_end() {
+	echo apply_filters( 'tanlinell_content_main_html_close', '</div>' );
+}
+add_action( 'tanlinell_content_main_end', 'tanlinell_do_content_main_end' );
+
+
+/**
+ * SUB CONTENT WRAPPER MARKUP
+ * defines the wrapper for the sub content (sidebar) area
+ */
+function tanlinell_do_content_sub_start() {
+	echo apply_filters( 'tanlinell_content_sub_html_open', '<div class="sub">' );
+}
+add_action( 'tanlinell_content_sub_start', 'tanlinell_do_content_sub_start' );
+
+
+function tanlinell_do_content_sub_end() {
+	echo apply_filters( 'tanlinell_content_sub_html_close', '</div>' );
+}
+add_action( 'tanlinell_content_sub_end', 'tanlinell_do_content_sub_end' );
+
