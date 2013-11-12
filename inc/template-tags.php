@@ -211,13 +211,13 @@ function tanlinell_do_content_wrapper_start() {
 	echo apply_filters( 'tanlinell_content_wrapper_html_open', '<div class="column-container">' );
 }
 add_action( 'tanlinell_content_wrapper_start', 'tanlinell_do_content_wrapper_start' );
-
+add_action( 'bc_p_content_wrapper_start', 'tanlinell_do_content_wrapper_start' );
 
 function tanlinell_do_content_wrapper_end() {
 	echo apply_filters( 'tanlinell_content_wrapper_html_close', '</div>' );
 }
 add_action( 'tanlinell_content_wrapper_end', 'tanlinell_do_content_wrapper_end' );
-
+add_action( 'bc_p_content_wrapper_end', 'tanlinell_do_content_wrapper_end' );
 
 /**
  * MAIN CONTENT WRAPPER MARKUP
@@ -227,13 +227,13 @@ function tanlinell_do_content_main_start() {
 	echo apply_filters( 'tanlinell_content_main_html_open', '<div class="main">' );
 }
 add_action( 'tanlinell_content_main_start', 'tanlinell_do_content_main_start' );
-
+add_action( 'bc_p_content_main_start', 'tanlinell_do_content_main_start' );
 
 function tanlinell_do_content_main_end() {
 	echo apply_filters( 'tanlinell_content_main_html_close', '</div>' );
 }
 add_action( 'tanlinell_content_main_end', 'tanlinell_do_content_main_end' );
-
+add_action( 'bc_p_content_main_end', 'tanlinell_do_content_main_end' );
 
 /**
  * SUB CONTENT WRAPPER MARKUP
@@ -243,10 +243,10 @@ function tanlinell_do_content_sub_start() {
 	echo apply_filters( 'tanlinell_content_sub_html_open', '<div class="sub">' );
 }
 add_action( 'tanlinell_content_sub_start', 'tanlinell_do_content_sub_start' );
-
+add_action( 'bc_p_content_sub_start', 'tanlinell_do_content_sub_start' );
 
 function tanlinell_do_content_sub_end() {
 	echo apply_filters( 'tanlinell_content_sub_html_close', '</div>' );
 }
 add_action( 'tanlinell_content_sub_end', 'tanlinell_do_content_sub_end' );
-
+add_action( 'bc_p_content_sub_start', 'tanlinell_do_content_sub_end' );
