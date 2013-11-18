@@ -214,10 +214,10 @@ return array(
 	'minify.js.groups' => array(
 		'ca2cc' => array(
 			'default' => array(
-				'include' => array(
+				'include-footer' => array(
 					'files' => array(
-						0 => 'wp-content/themes/Tanlinell/assets/js/site.min.js',
-						1 => 'wp-includes/js/jquery/jquery.js',
+						0 => 'wp-includes/js/jquery/jquery.js',
+						1 => 'wp-content/themes/Tanlinell/assets/js/site.min.js',
 					),
 				),
 			),
@@ -739,6 +739,6 @@ return array(
 	),
 	'plugin.license_key' => '',
 	'plugin.type' => '',
-	'wordpress.home' => 'http://tanlinell.dev:8888',
+	'wordpress.home' => 'http://www.bjp-uk.com.burfield-stage.com',
 	'pgcache.bad_behavior_path' => '',
 );
