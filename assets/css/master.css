@@ -1570,7 +1570,7 @@ select {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
-  background-image: url('../images/framework/select-arrow.png?1378810913');
+  background-image: url('../images/framework/select-arrow.png?1384262605');
   height: auto;
   /* 3 */
   /* 3 */
@@ -1645,7 +1645,7 @@ select[size="0"], select[size="1"] {
 
   /* line 310, ../sass/framework/atoms/_forms.scss */
   select, select[size="0"], select[size="1"] {
-    background-image: url('../images/framework/select-arrow.png?1378810913');
+    background-image: url('../images/framework/select-arrow.png?1384262605');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px; }
@@ -2124,6 +2124,16 @@ thead tr:last-child th {
   content: "";
   display: table;
   clear: both; }
+
+/* line 34, ../sass/framework/molecules/_item-list.scss */
+.item-list--contracted > li, .item-list--contracted .list-item {
+  margin-bottom: 0.833em;
+  padding-bottom: 0.833em; }
+
+/* line 44, ../sass/framework/molecules/_item-list.scss */
+.item-list--expanded > li, .item-list--expanded .list-item {
+  margin-bottom: 3.332em;
+  padding-bottom: 3.332em; }
 
 /* #Block Lists */
 /*
@@ -3290,7 +3300,7 @@ pre code {
   position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1378810785');
+  background-image: url('../images/site-logo.png?1384262605');
   width: 200px;
   height: 80px; }
 /* line 28, ../sass/framework/compounds/_site-logo.scss */
@@ -3328,14 +3338,14 @@ pre code {
   margin-left: 2px; }
 /* line 22, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/framework/site-credit.png?1378810913'); }
+  background-image: url('../images/framework/site-credit.png?1384262605'); }
 
 /* line 28, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/framework/site-credit--dark.svg?1378810913'); }
+  background-image: url('../images/framework/site-credit--dark.svg?1384262605'); }
 /* line 31, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/framework/site-credit--dark.png?1378810913'); }
+  background-image: url('../images/framework/site-credit--dark.png?1384262605'); }
 
 /* ==========================================================================
    COLUMNS
