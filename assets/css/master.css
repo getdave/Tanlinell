@@ -3895,9 +3895,14 @@ html[xmlns] .slides {
 .invisible {
   visibility: hidden; }
 
+/* ##Visual */
+/* line 242, ../sass/framework/atoms/_helpers.scss */
+.fade {
+  color: #999999; }
+
 /* ##Resetting */
 /* ###Lists */
-/* line 244, ../sass/framework/atoms/_helpers.scss */
+/* line 251, ../sass/framework/atoms/_helpers.scss */
 .list-reset {
   list-style: none;
   margin: 0;
