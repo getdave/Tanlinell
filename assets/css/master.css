@@ -2000,14 +2000,13 @@ thead tr:last-child th {
 */
 /* line 15, ../sass/framework/molecules/_island.scss */
 .island, .panel, .woocommerce-tabs .panel, .islet {
-  display: block;
-  margin-bottom: 1.666em; }
+  display: block; }
 
-/* line 21, ../sass/framework/molecules/_island.scss */
+/* line 20, ../sass/framework/molecules/_island.scss */
 .island, .panel, .woocommerce-tabs .panel {
   padding: 1.666em; }
 
-/* line 26, ../sass/framework/molecules/_island.scss */
+/* line 25, ../sass/framework/molecules/_island.scss */
 .island > :last-child, .panel > :last-child, .islet > :last-child {
   margin-bottom: 0; }
 
@@ -2018,7 +2017,7 @@ thead tr:last-child th {
         I am boxed off too only with less padding
     </div>
 */
-/* line 39, ../sass/framework/molecules/_island.scss */
+/* line 38, ../sass/framework/molecules/_island.scss */
 .islet {
   padding: 0.833em; }
 
@@ -2807,6 +2806,7 @@ input.btn, input.gform_button, input.search-form__submit, input.button, #comment
 /* line 16, ../sass/framework/molecules/_inline-list.scss */
 .inline-list, .social-actions {
   margin: 0 0 1.666em -1.666em;
+  zoom: 1;
   zoom: 1; }
 /* line 131, ../sass/framework/imports/_mixins.scss */
 .inline-list:before, .social-actions:before {
@@ -2818,7 +2818,7 @@ input.btn, input.gform_button, input.search-form__submit, input.button, #comment
   display: table;
   clear: both; }
 
-/* line 22, ../sass/framework/molecules/_inline-list.scss */
+/* line 23, ../sass/framework/molecules/_inline-list.scss */
 .inline-list__item, .inline-list > li, .social-actions > li {
   float: left;
   list-style: none;
@@ -2834,13 +2834,13 @@ input.btn, input.gform_button, input.search-form__submit, input.button, #comment
 	  <li class="inline-list__item"><a href="#">Link 5</a></li>
 	</ul>
 */
-/* line 39, ../sass/framework/molecules/_inline-list.scss */
+/* line 40, ../sass/framework/molecules/_inline-list.scss */
 .inline-list--divided {
   margin-left: -0.833em; }
-/* line 43, ../sass/framework/molecules/_inline-list.scss */
+/* line 44, ../sass/framework/molecules/_inline-list.scss */
 .inline-list--divided .inline-list__item, .inline-list--divided > li {
   margin-left: 0.833em; }
-/* line 45, ../sass/framework/molecules/_inline-list.scss */
+/* line 46, ../sass/framework/molecules/_inline-list.scss */
 .inline-list--divided .inline-list__item:after, .inline-list--divided > li:after {
   content: "|";
   display: -moz-inline-stack;
@@ -2860,12 +2860,12 @@ input.btn, input.gform_button, input.search-form__submit, input.button, #comment
 	  <li class="inline-list__item"><a href="#">Link 5</a></li>
 	</ul>
 */
-/* line 63, ../sass/framework/molecules/_inline-list.scss */
+/* line 64, ../sass/framework/molecules/_inline-list.scss */
 .inline-list--centered {
   text-align: center;
   letter-spacing: -4px;
   margin-left: 0; }
-/* line 69, ../sass/framework/molecules/_inline-list.scss */
+/* line 70, ../sass/framework/molecules/_inline-list.scss */
 .inline-list--centered > li, .inline-list--centered .inline-list__item {
   float: none;
   letter-spacing: normal;
@@ -2887,10 +2887,10 @@ input.btn, input.gform_button, input.search-form__submit, input.button, #comment
 	  <li class="inline-list__item"><a href="#">Link 5</a></li>
 	</ul>
 */
-/* line 87, ../sass/framework/molecules/_inline-list.scss */
+/* line 88, ../sass/framework/molecules/_inline-list.scss */
 .inline-list--ib {
   letter-spacing: -0.25em; }
-/* line 91, ../sass/framework/molecules/_inline-list.scss */
+/* line 92, ../sass/framework/molecules/_inline-list.scss */
 .inline-list--ib .inline-list__item, .inline-list--ib > li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2911,10 +2911,10 @@ input.btn, input.gform_button, input.search-form__submit, input.button, #comment
 	  <li class="inline-list__item"><a href="#">Link 5</a></li>
 	</ul>
 */
-/* line 108, ../sass/framework/molecules/_inline-list.scss */
+/* line 109, ../sass/framework/molecules/_inline-list.scss */
 .inline-list--spaced {
   margin-left: -3.332em; }
-/* line 112, ../sass/framework/molecules/_inline-list.scss */
+/* line 113, ../sass/framework/molecules/_inline-list.scss */
 .inline-list--spaced .inline-list__item, .inline-list--spaced > li {
   margin-left: 3.332em; }
 
