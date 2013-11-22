@@ -5,14 +5,20 @@
  */
 function current_type_nav_class($classes, $item) {
     
-    $post_type = get_post_type();
-    $post_type_obj = get_post_type_object($post_type);
+    global $post;
     
-    if ($item->title == $post_type_obj->label) {
-    	    	
-        array_push($classes, 'current-menu-item');
-        
-    };
+    if(tanlinell_is_custom_post_type($post)) {
+    
+	    $post_type = get_post_type();
+	    $post_type_obj = get_post_type_object($post_type);
+	    
+	    if ($item->title == $post_type_obj->label) {
+	    	    	
+	        array_push($classes, 'current-menu-item');
+	        
+	    };
+	}
+	
     return $classes;
 }
 add_filter('nav_menu_css_class', 'current_type_nav_class', 10, 2 );
