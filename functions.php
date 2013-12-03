@@ -195,6 +195,15 @@ function tanlinell_setup() {
 	 */
 	require( get_template_directory() . '/inc/wp-automatic-updates.php' );
 	
+	
+	/**
+	 * Current Menu Item for CPT's
+	 * Adds the 'current-menu-item' class to menu items when viewing cpt's 
+	 */
+	require( get_template_directory() . '/inc/cpt-current-menu-item.php' );
+	
+
+
 }
 endif; // tanlinell_setup
 

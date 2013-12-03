@@ -13,8 +13,7 @@
 
 .island,
 .islet{
-    display:block;
-    margin-bottom: $baseLineHeight;
+    display: block;
     @extend .clearfix;
 }
 
@@ -24,7 +23,7 @@
 
 .island > :last-child,
 .islet > :last-child {
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 
@@ -36,7 +35,7 @@
     </div>
 */
 
-.islet{
+.islet {
     padding: $baseLineHeight/2;
 }
 

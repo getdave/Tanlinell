@@ -16,6 +16,7 @@
 .inline-list {
 	margin: 0 0 $baseLineHeight -#{$baseLineHeight};
 	@include clearfix;
+	zoom: 1;
 }
 
 .inline-list__item,

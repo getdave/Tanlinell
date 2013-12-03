@@ -28,4 +28,23 @@
 	}
 }
 
+.item-list--contracted {
+
+	> li,
+	.list-item {
+		margin-bottom: $baseLineHeight/2;
+		padding-bottom: $baseLineHeight/2;
+	}
+}
+
+
+.item-list--expanded {
+
+	> li,
+	.list-item {
+		margin-bottom: $baseLineHeight*2;
+		padding-bottom: $baseLineHeight*2;
+	}
+}
+
 }//endif
