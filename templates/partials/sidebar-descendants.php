@@ -20,8 +20,12 @@ if ($post) { // if there is no post (ie 404 page) then bail out
 	?>
 		
 	<?php if( $descendants_list ) : ?>
-	<aside class="menu-sub sidebar">
-		<h4 class="menu-sub__heading"><?php echo ucwords(esc_html($section_title)); ?></h4>
+	<aside class="menu-sub sidebar sidebar-descendantss">
+		<h4 class="menu-sub__heading">
+			<a href="<?php echo get_permalink($root_parent_id); ?>">
+				<?php echo ucwords(esc_html($section_title)); ?>
+			</a>
+		</h4>
 		<ul class="nav-sub">
 		<?php echo $descendants_list; ?>
 		</ul>
