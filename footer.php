@@ -33,9 +33,11 @@
 			<p class="site-colophon site-colophon--copyright">
 				Copyright &copy; <?php echo date("Y") ?> <?php echo esc_html( get_bloginfo( 'name', 'display' ) ); ?>
 			</p>
+			
 			<p class="site-colophon site-colophon--develop-credit">
-				<?php echo do_shortcode('[developer_credit]');?>		
+				<?php get_template_part( 'templates/partials/developer-credit' ); ?>
 			</p>
+			
 		</div>
 	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
