@@ -80,6 +80,15 @@ function optionsframework_options() {
 		'class' => 'mini',
 		'type' => 'text');
 
+	// Instagram Page
+	$options[] = array(
+		'name' => __('Instagram Page', 'options_framework_theme'),
+		'desc' => __('Enter your Instagram page url. Used throughout the website.', 'options_framework_theme'),
+		'id' => 'instagram_page_url',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+
 	// LinkedIn Page
 	$options[] = array(
 		'name' => __('LinkedIn Page', 'options_framework_theme'),
