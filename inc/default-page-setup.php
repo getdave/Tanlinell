@@ -19,6 +19,10 @@ function tanlinell_default_page_setup() {
 			'slug' => 'home',
 			'name' => 'Home',
 		),
+		2 => array(
+			'slug' => 'sitemap',
+			'name' => 'Sitemap',
+		),
 	);
 	foreach($defaults AS $p) {
 	
