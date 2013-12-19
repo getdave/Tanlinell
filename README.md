@@ -49,6 +49,22 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
+### 2.6.2 - Version Marks 3 features, 2 fixes
+
+* Update the init script
+* Reworked developer credit in footer
+* Added root/parent link to sidebar categories & descenedants
+* Built in Sitemap functionality
+* Instagram code changes for templates/theme options
+
+#### 2.3.2
+
+* Constrain cpt menu funciton in inc/cpt-current-menu-item
+
+#### 2.3.1
+
+* * Style Amends and CPT Menu current class
+
 ### 2.3.0
 
 * Add templating wrapper action hooks to allow for DRY application of standard wrapper HTML
@@ -61,5 +77,3 @@ http://gruntjs.com/getting-started
 #### 2.2.4
 
 Content class markup fix
-
-

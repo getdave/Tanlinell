@@ -2,12 +2,19 @@
 
 echo "Installing Tanlinell"
 
-rm -rf .git*            			&& \
-rm README.md            			&& \
-cd hybrid-core          			&& \
-rm -rf .git*	        			&& \
-cd ../           					&& \
-mv boxsizing.htc ../../../			&& \
+rm -rf .git*            						&& \
+rm -rf .gitmodules								&& \
+rm README.md            						&& \
+cd hybrid-core          						&& \
+rm -rf .git*	        						&& \
+cd ../    										&& \
+cd libs/Custom-Meta-Boxes						&& \
+rm -rf .git*									&& \
+rm -rf .gitmodules								&& \
+cd js/select2									&& \
+rm -rf .git*									&& \
+cd ../../../../									&& \
+mv boxsizing.htc ../../../						&& \
 rm init
 
 echo "Tanlinell successfully installed"
