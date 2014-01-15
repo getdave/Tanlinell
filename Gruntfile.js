@@ -147,13 +147,6 @@ module.exports = function(grunt) {
 
     });
 
-
-
-    // rename tasks
-    grunt.renameTask('rsync', 'deploy');
-
-
-
     // register task
     grunt.registerTask('default', [
         'watch'
