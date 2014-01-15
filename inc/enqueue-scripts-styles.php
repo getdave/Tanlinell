@@ -9,14 +9,8 @@
 
 
 function tanlinell_scripts() {
-
-	/**
-	 * ENQUEUE STYLESHEETS (CSS)
-	 */
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
-
-
-
+    
+    
 	/**
 	 * ENQUEUE (JAVA)SCRIPTS
 	 */
