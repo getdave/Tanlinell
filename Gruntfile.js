@@ -20,11 +20,11 @@ module.exports = function(grunt) {
             compass: {
                 files: ['assets/sass/**/*.{scss,sass}'],
                 //files: ['master.scss'],
-                tasks: ['compass:dist']
+                tasks: ['compass:dist','version:styles']
             },
             js: {
                 files: '<%= jshint.all %>',
-                tasks: ['jshint', 'uglify:dist']
+                tasks: ['clean', 'jshint', 'uglify:dist', 'version:scripts']
             },
         },
 
@@ -54,7 +54,9 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 options: {
-                    sourceMap: 'map/source-map.js',
+                    /* mangle: false,
+                    compress: false,
+                    beautify: true       */            
                 },
                 files: {
                     'assets/js/site.min.js': [
@@ -139,6 +141,31 @@ module.exports = function(grunt) {
                 createTag: false,
                 push: false,
             }
+        },
+
+        // Static asset filename based cache-busting
+        // Avoids failed "Expires" headers due to WP adding
+        // version query strings to end of assets 
+        version: {
+            styles: {
+                src: ['style.css'],
+                dest: 'inc/enqueue-scripts-styles.php'
+            },
+            scripts: {
+                src: ['assets/js/site.min.js', 'assets/js/vendor/modernizr.custom.js'],
+                dest: 'inc/enqueue-scripts-styles.php'
+            }
+        },
+
+        // Remove old JS files (+ cached version)
+        // ready for cache busting
+        clean: {
+          dist: [
+            'assets/*.style.css',
+            'assets/js/site.min.js',
+            'assets/js/*.site.min.js',
+            'assets/js/vendor/*.modernizr.custom.js'
+          ]
         },
 
         cc: {
