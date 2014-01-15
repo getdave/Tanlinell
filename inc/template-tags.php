@@ -224,13 +224,13 @@ add_action( 'bc_p_content_wrapper_end', 'tanlinell_do_content_wrapper_end' );
  * defines the wrapper for the <main> area
  */
 function tanlinell_do_content_main_start() {
-	echo apply_filters( 'tanlinell_content_main_html_open', '<div class="main">' );
+	echo apply_filters( 'tanlinell_content_main_html_open', '<main class="main">' );
 }
 add_action( 'tanlinell_content_main_start', 'tanlinell_do_content_main_start' );
 add_action( 'bc_p_content_main_start', 'tanlinell_do_content_main_start' );
 
 function tanlinell_do_content_main_end() {
-	echo apply_filters( 'tanlinell_content_main_html_close', '</div>' );
+	echo apply_filters( 'tanlinell_content_main_html_close', '</main>' );
 }
 add_action( 'tanlinell_content_main_end', 'tanlinell_do_content_main_end' );
 add_action( 'bc_p_content_main_end', 'tanlinell_do_content_main_end' );
