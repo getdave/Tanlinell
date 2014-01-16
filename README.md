@@ -49,6 +49,8 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
+### 2.7.0 - Housekeeping
+
 ### 2.6.2 - Version Marks 3 features, 2 fixes
 
 * Update the init script

@@ -20,11 +20,11 @@ module.exports = function(grunt) {
             compass: {
                 files: ['assets/sass/**/*.{scss,sass}'],
                 //files: ['master.scss'],
-                tasks: ['compass:dist']
+                tasks: ['compass:dist','version:styles']
             },
             js: {
                 files: '<%= jshint.all %>',
-                tasks: ['jshint', 'uglify:dist']
+                tasks: ['clean', 'jshint', 'uglify:dist', 'version:scripts']
             },
         },
 
@@ -36,6 +36,14 @@ module.exports = function(grunt) {
                     force: true
                 }
             },
+            build: {
+                options: {
+                    outputStyle: "compressed",
+                    environment: "production",
+                    noLineComments: true,
+                    force: true
+                }
+            }
         },
 
         // javascript linting with jshint
@@ -46,7 +54,8 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
-                'assets/js/source/**/*.js'
+                'assets/js/source/**/*.js',
+                '!assets/js/site.min.js'
             ]
         },
 
@@ -54,7 +63,9 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 options: {
-                    sourceMap: 'map/source-map.js',
+                    mangle: false,
+                    compress: false,
+                    beautify: true
                 },
                 files: {
                     'assets/js/site.min.js': [
@@ -65,6 +76,12 @@ module.exports = function(grunt) {
                     ],
                 }
             },
+            build: {
+                options: {
+                    compress: true
+                },
+                files: '<%= uglify.dist.files %>'
+            }
         },
 
         // image optimization
@@ -72,7 +89,8 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     optimizationLevel: 7,
-                    progressive: true
+                    progressive: true,
+                    pngquant: true
                 },
                 files: [{
                     expand: true,
@@ -82,6 +100,7 @@ module.exports = function(grunt) {
                 }]
             }
         },
+
 
         grunticon: {
             myIcons: {
@@ -98,6 +117,18 @@ module.exports = function(grunt) {
                 }
             }
         },
+
+        // svgmin
+        svgmin: {
+            dist: {
+                files: [{
+                    cwd: 'assets/images/',
+                    src: ['**/*.svg'],
+                    dest: 'assets/images/'
+                }]
+            }
+        },
+
 
         svg2png: {
             all: {
@@ -141,22 +172,51 @@ module.exports = function(grunt) {
             }
         },
 
+        // Static asset filename based cache-busting
+        // Avoids failed "Expires" headers due to WP adding
+        // version query strings to end of assets
+        version: {
+            styles: {
+                src: ['style.css'],
+                dest: 'inc/enqueue-scripts-styles.php'
+            },
+            scripts: {
+                src: ['assets/js/site.min.js', 'assets/js/vendor/modernizr.custom.js'],
+                dest: 'inc/enqueue-scripts-styles.php'
+            }
+        },
+
+        // Remove old JS files (+ cached version)
+        // ready for cache busting
+        clean: {
+          dist: [
+            'assets/*.style.css',
+            'assets/js/site.min.js',
+            'assets/js/*.site.min.js',
+            'assets/js/vendor/*.modernizr.custom.js'
+          ]
+        },
+
         cc: {
             // catch that comma!
         }
 
     });
 
-
-
-    // rename tasks
-    grunt.renameTask('rsync', 'deploy');
-
-
-
-    // register task
+    // Default
     grunt.registerTask('default', [
         'watch'
+    ]);
+
+    // Build - check, minify, compress and cache bust static assets ready for production usage
+    grunt.registerTask('build', [
+        'clean',
+        'jshint',
+        'uglify:build',
+        'version:scripts',
+        'compass:build',
+        'imagemin',
+        'svgmin'
     ]);
 
 
