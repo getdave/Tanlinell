@@ -14,14 +14,14 @@
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"> <!--<![endif]-->
 <head>
 
-
-
+<script>
+// Super fast method of adding "js" class
+// http://www.456bereastreet.com/archive/201209/tell_css_that_javascript_is_available_asap/
+document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+</script>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-
 
 <?php 
 	// Is this a responsive site? Uncomment if so...
