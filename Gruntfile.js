@@ -207,7 +207,7 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
-    // Build
+    // Build - check, minify, compress and cache bust static assets ready for production usage
     grunt.registerTask('build', [
         'clean',
         'jshint',
