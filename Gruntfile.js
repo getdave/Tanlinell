@@ -100,6 +100,7 @@ module.exports = function(grunt) {
             }
         },
 
+
         grunticon: {
             myIcons: {
                 options: {
@@ -115,6 +116,18 @@ module.exports = function(grunt) {
                 }
             }
         },
+
+        // svgmin
+        svgmin: {
+            dist: {
+                files: [{
+                    cwd: 'assets/images/',
+                    src: ['**/*.svg'],
+                    dest: 'assets/images/'
+                }]
+            }
+        },
+
 
         svg2png: {
             all: {
@@ -201,7 +214,8 @@ module.exports = function(grunt) {
         'uglify:build',
         'version:scripts',
         'compass:build',
-        'imagemin'
+        'imagemin',
+        'svgmin'
     ]);
 
 
