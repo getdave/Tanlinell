@@ -167,6 +167,8 @@ $headingLevel6:					16px !default;
 // RESPONSIVE
 // ==========================================================================
 
+// At what breakpoint should we fix all media queries for oldie
+$fix-mqs: 						false !default;
 
 // Determines whether the site is fixed width. Defaults to "false" unless served is an oldie browser
 $isFixed:						if($is-oldie, true, false) !default;
@@ -187,7 +189,7 @@ $break-xlarge:          		1382px !default;
 
 // Constant to define which breakpoint name (above) determines the point
 // at which the grid system switches from full to "linearised" layout.
-$mobileBreak:					"medium" !default;
+$mobileBreak:					$break-medium !default;
 
 
 // Grid
@@ -247,9 +249,7 @@ $use-pager: 					true !default;
 $use-pagination: 				true !default;
 $use-code:						true !default;
 $use-block-list: 				true !default;
-$use-sprite:					true !default;
 $use-panel: 					true !default;
-$use-tabs: 						true !default;
 $use-scrollable: 				true !default;
 
 
@@ -262,28 +262,28 @@ $use-graybox: 					false !default;
 $use-hero-unit: 				false !default;
 $use-labels-badges: 			false !default;
 $use-split: 					false !default;
-
+$use-tabs: 						false !default;
+$use-sprite:					false !default;
 
 // Compounds
 // ==========================================================================
 
 // Default "on"
 $use-page-layouts: 				true !default;
-$use-flexslider: 				true !default;
 $use-gallery: 					true !default;
 $use-primary-nav: 				true !default;
 $use-site-logo: 				true !default;
 $use-site-credit: 				true !default;
-$use-gravity-forms: 			true !default;
 $use-site-colophon: 			true !default;
 $use-social-actions: 			true !default;
 $use-search-form: 				true !default;
 
+
 // Default "off"
 $use-social-icons: 				false !default;
 $use-magnific: 					false !default;
-
-
+$use-flexslider: 				false !default;
+$use-gravity-forms: 			false !default;
 
 
 

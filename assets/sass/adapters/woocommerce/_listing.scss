@@ -64,7 +64,7 @@
 	margin-top: $baseLineHeight/2;
 	@extend .btn-full;
 
-	@include respond-to(medium) {
+	@include respond-to($break-medium) {
 		float: left;
 		clear: both;
 	}
@@ -84,7 +84,7 @@
 // RESULT COUNT
 // ==========================================================================
 .woocommerce-result-count {
-	@include respond-to(small) {
+	@include respond-to($break-small) {
 		float: left;
 		width: 50%;
 	}
@@ -95,7 +95,7 @@
 .woocommerce-ordering {
 	margin-bottom: $baseLineHeight;
 
-	@include respond-to(small) {
+	@include respond-to($break-small) {
 		@include rem(margin-top,-10px);
 		float: right;
 		width: 25%;

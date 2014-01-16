@@ -49,6 +49,13 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
+### 2.8.0 - Grunt, Responsive and Grid updates
+
+* Update Grunt to include filename based cache busting
+* Update Grunt to include `build` task for producing production-ready assets
+* Update `respond-to` mixin to accept variables rather than string.
+* Update grid system to avoid "widescreen" media query styles being served to oldie
+
 ### 2.7.0 - Housekeeping
 
 ### 2.6.2 - Version Marks 3 features, 2 fixes
