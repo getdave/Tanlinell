@@ -54,7 +54,8 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
-                'assets/js/source/**/*.js'
+                'assets/js/source/**/*.js',
+                '!assets/js/site.min.js'
             ]
         },
 
