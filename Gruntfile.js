@@ -88,7 +88,8 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     optimizationLevel: 7,
-                    progressive: true
+                    progressive: true,
+                    pngquant: true
                 },
                 files: [{
                     expand: true,
@@ -199,7 +200,8 @@ module.exports = function(grunt) {
         'jshint',
         'uglify:build',
         'version:scripts',
-        'compass:build'
+        'compass:build',
+        'imagemin'
     ]);
 
 
