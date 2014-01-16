@@ -9,6 +9,22 @@
 
 
 function tanlinell_scripts() {
+
+
+	// Waiting on https://core.trac.wordpress.org/ticket/16118
+	// to be able to enqueue conditional styles via WP
+	
+	//global $wp_styles;
+
+	//wp_enqueue_style( 'tanlinell', get_stylesheet_directory_uri() . '/style.css' );
+
+	//wp_enqueue_style( 'master', get_stylesheet_directory_uri() . '/assets/css/master.css', false );
+    //$wp_styles->add_data( 'master', 'conditional', '(gt IE 8) | (IEMobile)' );
+
+    //wp_enqueue_style( 'master-ie', get_stylesheet_directory_uri() . '/assets/css/master-ie.css', false );
+    //$wp_styles->add_data( 'master-ie', 'conditional', '(lt IE 9) & (!IEMobile)' );
+
+
 	/**
 	 * ENQUEUE (JAVA)SCRIPTS
 	 */
@@ -54,6 +70,11 @@ function tanlinell_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'tanlinell_scripts', 0 );
+
+
+
+
+
 
 
 /**
