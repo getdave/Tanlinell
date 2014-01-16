@@ -36,6 +36,14 @@ module.exports = function(grunt) {
                     force: true
                 }
             },
+            build: {
+                options: {
+                    outputStyle: "compressed",
+                    environment: "production",
+                    noLineComments: true,
+                    force: true
+                }
+            }
         },
 
         // javascript linting with jshint
@@ -54,9 +62,9 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 options: {
-                    /* mangle: false,
+                    mangle: false,
                     compress: false,
-                    beautify: true       */            
+                    beautify: true
                 },
                 files: {
                     'assets/js/site.min.js': [
@@ -67,6 +75,12 @@ module.exports = function(grunt) {
                     ],
                 }
             },
+            build: {
+                options: {
+                    compress: true
+                },
+                files: '<%= uglify.dist.files %>'
+            }
         },
 
         // image optimization
@@ -145,7 +159,7 @@ module.exports = function(grunt) {
 
         // Static asset filename based cache-busting
         // Avoids failed "Expires" headers due to WP adding
-        // version query strings to end of assets 
+        // version query strings to end of assets
         version: {
             styles: {
                 src: ['style.css'],
@@ -174,9 +188,18 @@ module.exports = function(grunt) {
 
     });
 
-    // register task
+    // Default
     grunt.registerTask('default', [
         'watch'
+    ]);
+
+    // Build
+    grunt.registerTask('build', [
+        'clean',
+        'jshint',
+        'uglify:build',
+        'version:scripts',
+        'compass:build'
     ]);
 
 

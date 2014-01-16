@@ -8,12 +8,9 @@ images_dir 		= "assets/images"
 javascripts_dir = "assets/js"
 fonts_dir 		= "assets/fonts"
 
-# Environments
-environment 	= :development
-#environment 	= :development
 
-output_style 	= (environment == :production) ? :false : :true
-line_comments 	= (environment == :production) ? :false : :true
+output_style 	= "expanded"
+line_comments 	= true
 
 # Shared
 relative_assets = true
