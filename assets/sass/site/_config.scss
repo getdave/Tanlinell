@@ -50,8 +50,60 @@
 // here by setting the require variables to "true"/"false".
 // ==========================================================================
 
-// example....
-// $use-nav: 						false;
+// Molecules
+// ==========================================================================
+
+// Default "on"
+// $use-tables: 					true !default;
+// $use-media-block: 				true !default;
+// $use-nav: 						true !default;
+// $use-buttons: 					true !default;
+// $use-images: 					true !default;
+// $use-dropdowns: 				true !default;
+// $use-inline-list: 				true !default;
+// $use-item-list: 				true !default;
+// $use-island: 					true !default;
+// $use-alerts: 					true !default;
+// $use-breadcrumbs: 				true !default;
+// $use-pager: 					true !default;
+// $use-pagination: 				true !default;
+// $use-code:						true !default;
+// $use-block-list: 				true !default;
+// $use-panel: 					true !default;
+// $use-scrollable: 				true !default;
+
+
+// Default "off"
+// $use-title-block:				false !default;
+// $use-complex-link: 				false !default;
+// $use-feature-element: 			false !default;
+// $use-flippable: 				false !default;
+// $use-graybox: 					false !default;
+// $use-hero-unit: 				false !default;
+// $use-labels-badges: 			false !default;
+// $use-split: 					false !default;
+// $use-tabs: 						false !default;
+// $use-sprite:					false !default;
+
+// Compounds
+// ==========================================================================
+
+// Default "on"
+// $use-page-layouts: 				true !default;
+// $use-gallery: 					true !default;
+// $use-primary-nav: 				true !default;
+// $use-site-logo: 				true !default;
+// $use-site-credit: 				true !default;
+// $use-site-colophon: 			true !default;
+// $use-social-actions: 			true !default;
+// $use-search-form: 				true !default;
+
+
+// Default "off"
+// $use-social-icons: 				false !default;
+// $use-magnific: 					false !default;
+// $use-flexslider: 				false !default;
+// $use-gravity-forms: 			false !default;
 
 
 

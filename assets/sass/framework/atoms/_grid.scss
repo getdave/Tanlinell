@@ -53,7 +53,7 @@
 
 @if ($use-standard-breakpoints == true) {
 	// Handheld Grids
-	@include respond-to('tiny') {
+	@include respond-to($break-tiny) {
 		@include griddle-build($grids,'h');
 		.h-grid-clear {
 			clear: left;
@@ -61,7 +61,7 @@
 	}
 
 	// Lap Grids
-	@include respond-to('small') {
+	@include respond-to($break-small) {
 		@include griddle-build($grids,'l');
 
 		.h-grid-clear {
@@ -74,7 +74,7 @@
 	}
 
 	// Desktop Grids
-	@include respond-to('large') {
+	@include respond-to($break-large) {
 		@include griddle-build($grids,'d');
 		.h-grid-clear,
 		.l-grid-clear {
@@ -87,7 +87,7 @@
 	}
 
 	// Widescreen Grids
-	@include respond-to('xlarge') {
+	@include respond-to($break-xlarge) {
 		@include griddle-build($grids,'w');
 
 		.h-grid-clear,

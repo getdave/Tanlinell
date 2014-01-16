@@ -59,7 +59,7 @@ $half_gutter_width: ($gutter/2);
                 // Reduced value of $n
                 $n-r: $n/$g;
             }
-
+            
             // Check if the reduced value of $n was also supplied in the list
             // of units to be built
             $canreduce: contains($units, $n-r);
@@ -167,30 +167,14 @@ $half_gutter_width: ($gutter/2);
 // ==========================================================================
 
 @mixin respond-to($media) {
-
-    @if ($is-oldie == true or $isFixed == true) {
+    @if ($fix-mqs or $isFixed == true) {
         // Check if we're IE. If so then just return the content sans-media query
-        @content;
+        @if $fix-mqs >= $media {
+            @content;
+        }
     } @else {
         // Return the appropriate MQ declaration for modern browsers
-        @if $media == tiny {
-            @media only screen and (min-width: rsize($break-tiny)) { @content; }
-        }
-        @else if $media == small {
-            @media only screen and (min-width: rsize($break-small)) { @content; }
-        }
-        @else if $media == medium {
-            @media only screen and (min-width: rsize($break-medium)) { @content; }
-        }
-        @else if $media == large {
-            @media only screen and (min-width: rsize($break-large)) { @content; }
-        }
-        @else if $media == xlarge {
-            @media only screen and (min-width: rsize($break-xlarge)) { @content; }
-        }
-        @else {
-            @media only screen and (min-width: $media) { @content; }
-        }
+        @media only screen and (min-width: rsize($media)) { @content; }
     }
 }
 
