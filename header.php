@@ -23,6 +23,11 @@ document.documentElement.className = document.documentElement.className.replace(
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+<?php if( WP_ENV != 'production' ) : ?>
+<!-- Tanlinell Noindex -->
+<meta name="robots" content="noindex,follow"/>
+<?php endif; ?>
+
 <?php 
 	// Is this a responsive site? Uncomment if so...
 	echo '<meta name="viewport" content="width=device-width" />'; 

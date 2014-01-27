@@ -49,6 +49,8 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
+#### 2.8.1 - Ensure no follow for all environments except production
+
 ### 2.8.0 - Grunt, Responsive and Grid updates
 
 * Update Grunt to include filename based cache busting
