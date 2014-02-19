@@ -10,18 +10,7 @@
 		</a>
 
 		<div class="banner-navigation">
-			<div class="search-form-wrapper">
-				<form method="get" class="site-search search-form search-form--banner" action="#" role="search">
-					<label for="s" class="search-form__label">Search</label>
-					<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search Talon...">
-					<button type="submit" class="search-form__submit" name="submit" value="Search">
-						<span class="icon-fallback-text">
-						    <i class="icon icon-search" aria-hidden="true"></i>
-						    <span class="search-form__submit-text text">Submit</span>
-						</span>
-					</button>
-				</form>
-			</div>
+			{% include search.html %}
 			
 			<nav id="menu-primary" class="menu-primary menu-primary--banner">
 				<ul class="nav-primary nav-primary--banner">
