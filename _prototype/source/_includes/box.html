@@ -1,0 +1,10 @@
+{% if include.box-heading == null %}
+	{% assign box-heading = 'Box Title' %}
+{% else %}
+  	{% assign box-heading = include.box-heading %}
+{% endif %}
+
+<div class="box">
+	<img class="box__media" src="/assets/images/product-image.jpg" alt="">
+	<a href="#" class="box__btn">{{ box-heading }}</a>
+</div>

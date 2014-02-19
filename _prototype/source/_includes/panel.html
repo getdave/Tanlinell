@@ -1,0 +1,12 @@
+{% if include.panel-heading == null %}
+	{% assign panel-heading = 'Panel title' %}
+{% else %}
+  	{% assign panel-heading = include.panel-heading %}
+{% endif %}
+<div class="panel">    
+    <h3 class="panel__heading">{{ panel-heading }}</h3>
+
+    <div class="panel__content">
+        Panel content
+    </div>
+</div>

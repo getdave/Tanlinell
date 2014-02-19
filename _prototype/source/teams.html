@@ -1,0 +1,22 @@
+---
+layout: 1col
+title: Teams
+---
+
+<main class="main">
+	<div class="container">
+		<h1 class="vh">Team</h1>
+		<ul class="grid grid--divided">
+			{% for i in (1..9) %}
+			<li class="gc p1-2 d1-3 w1-4">
+				{% include box.html box-heading="Team Name" %}
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</main>
+
+
+
+
+

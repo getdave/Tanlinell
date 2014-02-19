@@ -1,0 +1,30 @@
+---
+layout: pattern
+---
+
+<aside class="offcanvas-navigation">
+	<form method="get" class="search-form search-form--offcanvas" action="#" role="search">
+		<label for="s" class="search-form__label">Search</label>
+		<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search Talon...">
+		<button type="submit" class="search-form__submit" name="submit" value="Search">
+			<span class="icon-fallback-text">
+			    <i class="icon icon-search" aria-hidden="true"></i>
+			    <span class="search-form__submit-text text">Search</span>
+			</span>
+		</button>
+	</form>
+
+	<nav class="menu-primary menu-primary--offcanvas">
+		<ul class="nav-primary nav-primary--offcanvas">
+			{% for i in (1..9) %}
+			<li>
+				<a href="#">Menu Link {{ i }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</nav>
+</aside>
+
+
+
+

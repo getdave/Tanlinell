@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="no-js patterns">
+	<head>
+    <script>
+    // Super fast method of adding "js" class
+    // http://www.456bereastreet.com/archive/201209/tell_css_that_javascript_is_available_asap/
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Pagination</title>
+
+    <meta name="viewport" content="width=device-width" initial-scale="1" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/master.css">
+
+    <!-- Modernizr -->
+    <script src="/assets/js/vendor/modernizr.custom.js"></script>
+
+  <!-- .pattern class CSS -->
+  <style>
+
+    body {
+      padding: 3em 0;
+    }
+
+    .pattern {
+        clear: both;
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 3em;
+        padding-bottom: 3em;
+    }
+    .pattern .display {
+        width: 65%;
+        float: left;
+    }
+    .pattern .source {
+        width: 30%;
+        float: right;
+    }
+    .pattern .source textarea {
+        width: 90%;
+        max-width: none;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 6em;
+    }
+
+  </style>
+
+  <script>
+    // Do not integrate this code into the CMS.
+    var tanlinellSiteDetails = {
+      templateDirectoryUri: ""
+    };
+  </script>
+
+</head>
+
+
+	<body>
+	  	<div class="container">
+		  <h1>Pattern: Pagination</h1>
+
+<div class="pagination">
+	<ul class="page-numbers">
+		<li>
+			<a class="prev page-numbers" href="http://www.mxvice.com/category/features/page/2/">&lt;</a>
+		</li>
+		<li>
+			<span class="page-numbers current">1</span>
+		</li>
+		<li>
+			<a class="page-numbers" href="http://www.mxvice.com/category/features/page/2/">2</a>
+		</li>
+		<li>
+			<span class="page-numbers dots">…</span>
+		</li>
+		<li>
+			<a class="page-numbers" href="http://www.mxvice.com/category/features/page/190/">190</a>
+		</li>
+		<li>
+			<a class="next page-numbers" href="http://www.mxvice.com/category/features/page/2/">&gt;</a>
+		</li>
+	</ul>
+</div>
+
+
+
+<a class="back-link" href="/" title="A helpful back button!">&laquo; Back to the primer</a>
+		</div>
+
+
+		
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script src="/assets/js/site.min.js"></script>
+		
+	</body>
+</html>

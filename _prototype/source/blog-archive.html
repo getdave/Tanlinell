@@ -1,0 +1,39 @@
+---
+layout: 2col
+title: Blog
+group: "navigation"
+---
+
+<main class="main">
+	<h1 class="vh">Blog Archive</h1>
+	<ul class="article-list item-list">
+		{% for i in (1..10) %}
+		<li class="article-item list-item">
+			{% include archive-post.html %}
+		</li>
+		{% endfor %}
+	</ul>
+
+	{% include pagination.html %}
+</main>
+
+<div class="sub">
+	<ul class="grid grid--divided">
+		<li class="gc h1-2 d2-2">
+			<aside class="">
+				{% include list-panel.html %}
+			</aside>
+		</li>
+
+		<li class="gc h1-2 d2-2">
+			<aside class="">
+				{% include authors.html %}
+			</aside>
+		</li>
+	</ul>
+</div>
+
+
+
+
+

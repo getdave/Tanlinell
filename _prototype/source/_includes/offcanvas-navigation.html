@@ -1,0 +1,22 @@
+<aside class="offcanvas-navigation js-offcanvas-navigation" aria-hidden="true">
+	<div class="off-canvas-search-wrap">
+		<form method="get" class="search-form search-form--offcanvas" action="#" role="search">
+			<label for="s" class="search-form__label">Search</label>
+			<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search Talon..." autocomplete="false">
+			<button type="submit" class="search-form__submit" name="submit" value="Search">
+				<span class="icon-fallback-text">
+				    <i class="icon icon-search" aria-hidden="true"></i>
+				    <span class="search-form__submit-text text">Search</span>
+				</span>
+			</button>
+		</form>
+	</div>
+
+	<nav class="menu-primary menu-primary--offcanvas">
+		<ul class="nav-primary nav-primary--offcanvas">
+			{% assign pages_list = site.pages %}
+					  {% assign group = 'navigation' %}
+					  {% include pages_list.html %}
+		</ul>
+	</nav>
+</aside>

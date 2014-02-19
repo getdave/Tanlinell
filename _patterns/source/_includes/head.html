@@ -1,0 +1,61 @@
+<head>
+    <script>
+    // Super fast method of adding "js" class
+    // http://www.456bereastreet.com/archive/201209/tell_css_that_javascript_is_available_asap/
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+
+    <meta name="viewport" content="width=device-width" initial-scale="1" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/master.css">
+
+    <!-- Modernizr -->
+    <script src="/assets/js/vendor/modernizr.custom.js"></script>
+
+  <!-- .pattern class CSS -->
+  <style>
+
+    body {
+      padding: 3em 0;
+    }
+
+    .pattern {
+        clear: both;
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 3em;
+        padding-bottom: 3em;
+    }
+    .pattern .display {
+        width: 65%;
+        float: left;
+    }
+    .pattern .source {
+        width: 30%;
+        float: right;
+    }
+    .pattern .source textarea {
+        width: 90%;
+        max-width: none;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 6em;
+    }
+
+  </style>
+
+  <script>
+    // Do not integrate this code into the CMS.
+    var tanlinellSiteDetails = {
+      templateDirectoryUri: ""
+    };
+  </script>
+
+</head>
+

@@ -1,0 +1,37 @@
+<header class="banner {{ include.classnames }} ">
+	<div class="container">
+		<a class="site-logo" href="/" title="{{ site.name }}" rel="home">
+			{{ site.name }}
+		</a>
+
+		<a href="#menu-primary" class="toggle toggle--menu-primary js-menu-primary-toggle">			
+		    <i class="icon icon-reorder icon--large" aria-hidden="true"></i>
+		    <span class="vh">Skip to Primary Navigation</span>			
+		</a>
+
+		<div class="banner-navigation">
+			<div class="search-form-wrapper">
+				<form method="get" class="site-search search-form search-form--banner" action="#" role="search">
+					<label for="s" class="search-form__label">Search</label>
+					<input type="search" class="search-form__query" name="s" value="" id="s" placeholder="Search Talon...">
+					<button type="submit" class="search-form__submit" name="submit" value="Search">
+						<span class="icon-fallback-text">
+						    <i class="icon icon-search" aria-hidden="true"></i>
+						    <span class="search-form__submit-text text">Submit</span>
+						</span>
+					</button>
+				</form>
+			</div>
+			
+			<nav id="menu-primary" class="menu-primary menu-primary--banner">
+				<ul class="nav-primary nav-primary--banner">
+
+					  {% assign pages_list = site.pages %}
+					  {% assign group = 'navigation' %}
+					  {% include pages_list.html %}
+
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>

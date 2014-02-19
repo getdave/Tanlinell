@@ -1,0 +1,48 @@
+---
+layout: 1col-flush
+title: Products
+group: "navigation"
+---
+
+<main class="main">
+	
+	<section class="landmark">
+		<h1 class="vh">Featured Products</h1>
+		<ul class="list-unstyled">
+			{% for i in (1..3) %}
+			{% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+			{% endfor %}
+
+			<li class="grid grid--no-gutter">				
+				{% include product-type.html product-image="1" %}		
+			</li>
+			<li class="grid grid--no-gutter">				
+				{% include product-type.html product-image="2" classnames="feature-block--alt" %}		
+			</li>
+			<li class="grid grid--no-gutter">				
+				{% include product-type.html product-image="3" %}		
+			</li>
+		</ul>
+	</section>
+	
+	<section class="container">
+		<h2 class="vh">Other Products</h2>
+
+		<ul class="grid grid--divided">
+			{% for i in (1..6) %}
+			<li class="gc p1-2 w1-3">
+				{% include cta-product.html %}
+			</li>
+		{% endfor %}
+		</ul>
+	</section>
+
+	<aside class="container container--reduced">
+		{% include cta.html %}
+	</aside>
+</main>
+
+
+
+
+

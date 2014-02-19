@@ -20,11 +20,21 @@ module.exports = function(grunt) {
             compass: {
                 files: ['assets/sass/**/*.{scss,sass}'],
                 //files: ['master.scss'],
-                tasks: ['compass:dist','version:styles']
+                tasks: ['compass:dist','version:styles','copy:prototype','copy:patterns']
             },
             js: {
                 files: '<%= jshint.all %>',
-                tasks: ['clean', 'jshint', 'uglify:dist', 'version:scripts']
+                tasks: ['clean', 'jshint', 'uglify:dist', 'version:scripts','copy:prototype','copy:patterns']
+            },
+
+            patterns: {
+                files: ['<%= jekyll.patterns.options.src %>/**/*.html'],
+                tasks: ['jekyll:patterns', 'copy:patterns']
+            },
+
+            prototype: {
+                files: ['<%= jekyll.prototype.options.src %>/**/*.html'],
+                tasks: ['jekyll:prototype', 'copy:prototype']
             },
         },
 
@@ -54,6 +64,7 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
+                'assets/js/modules/**/*.js',
                 'assets/js/source/**/*.js',
                 '!assets/js/site.min.js'
             ]
@@ -71,6 +82,7 @@ module.exports = function(grunt) {
                     'assets/js/site.min.js': [
                         'assets/js/vendor/**/*.js',
                         'assets/js/source/globals.js',
+                        'assets/js/modules/*.js',
                         'assets/js/source/plugins.js',
                         'assets/js/source/main.js',
                         '!assets/js/vendor/modernizr*.js'
@@ -106,11 +118,11 @@ module.exports = function(grunt) {
         grunticon: {
             myIcons: {
                 options: {
-                    src: "assets/images/grunt-icons/source/",
-                    dest: "assets/images/grunt-icons/",
+                    src: "assets/images/grunicons/source/",
+                    dest: "assets/images/grunicons/",
                     defaultWidth: "64px",
                     defaultHeight: "64px",
-                    cssprefix: "grunt-icon-",
+                    cssprefix: "grunicon-",
                     colors: {
                         "white": "#ffffff",
                         "black": "#000000"
@@ -198,6 +210,85 @@ module.exports = function(grunt) {
           ]
         },
 
+        // Copy - ensure all site assets are mirrored for Patterns/Prototype
+        copy: {
+            options: {
+                flatten: true
+            },
+            prototype: { // copy all assets into Prototype source dir
+                src: [
+                    'assets/css/master.css',
+                    'assets/fonts/**/*{.eot,.svg,.ttf,.woff}',
+                    'assets/images/**/*',
+                    'assets/js/site.min.js',
+                    'assets/js/vendor/modernizr.custom.js',
+                    'assets/js/conditional/**/*'
+                ],
+                dest: '<%= jekyll.prototype.options.src %>/'
+            },
+            patterns: { // copy all assets into Patterns source dir
+                src: '<%= copy.prototype.src %>',
+                dest: '<%= jekyll.patterns.options.src %>/'
+            },
+
+            snapshot: {
+                options: {
+                    expand: true, 
+                    flatten: true,
+                },
+                files: [
+                    {
+                        src: ['<%= jekyll.patterns.options.dest %>/**/*'], 
+                        dest: '_patterns/snapshots/<%= grunt.template.today("yyyy-mm-dd") %>/'
+                    },
+                    {
+                        src: ['<%= jekyll.prototype.options.dest %>/**/*'], 
+                        dest: '_prototype/snapshots/<%= grunt.template.today("yyyy-mm-dd") %>/'
+                    },
+                ],
+            }
+        },
+
+        // Prototype (via static site generator)
+        jekyll: {
+            options: {
+                //bundleExec: true,
+                
+            },
+            patterns: {
+                options: {
+                    src : '_patterns/source',
+                    dest: '_patterns/build'
+                }
+            },
+            prototype: {
+                options: {
+                    src : '_prototype/source',
+                    dest: '_prototype/build'
+                }
+            },
+        },
+
+        // Connect - boot up a server to display Patterns and Prototype
+        connect: {
+            options: {
+                open: true,
+                keepalive: false
+            },
+            prototype: {
+                options: {
+                    port: 9000,
+                    base: '<%= jekyll.prototype.options.dest %>'
+                }
+            },
+            patterns: {
+                options: {
+                    port: 9100,
+                    base: '<%= jekyll.patterns.options.dest %>'
+                }
+            }
+        },
+
         cc: {
             // catch that comma!
         }
@@ -219,6 +310,26 @@ module.exports = function(grunt) {
         'imagemin',
         'svgmin'
     ]);
+
+
+    // Prototype - compile static prototype using Jekyll and launch server to view
+    grunt.registerTask('prototype', [
+        'copy:prototype',
+        'jekyll:prototype',
+        'connect:prototype',
+        'watch'
+    ]);
+
+    // Pattern Library - compile static Pattern Lib and launch server to view
+    grunt.registerTask('patterns', [
+        'copy:patterns',
+        'jekyll:patterns',
+        'connect:patterns',
+        'watch'
+    ]);
+
+
+
 
 
 

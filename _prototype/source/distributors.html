@@ -1,0 +1,35 @@
+---
+layout: 1col
+title: Distributors
+group: "navigation"
+---
+
+<main class="main">
+	<div class="container">
+		<div id="distributor-filter" class="distributor-filter js-distributor-filter">	
+			<div class="enhanced-select">
+				<select name="distributor_filter" id="distributor_filter">
+					<option value="Please select...">Please select...</option>
+					{% for i in (1..20) %}
+					<option value="distributor-{{ i }}">Distributor {{ i }}</option>
+					{% endfor %}
+				</select>
+				<span>&rsaquo;</span>
+			</div>
+		</div>
+		
+		<ul class="grid grid--divided js-masonary-grid">
+			{% for i in (1..20) %}
+			<li id="distributor-{{i}}" class="gc p1-2 d1-3 w1-4 js-masonary-grid__item">
+				{% include distributor.html %}
+				<a class="distributor__backtotop" href="#distributor-filter">back to top</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+</main>
+
+
+
+
+
