@@ -37,7 +37,7 @@ SITE.utils.cutsTheMustard = (function() {
     }
 }());
 
-// Is this a "modern" browser?
+// Is this Opera Mini?
 SITE.utils.isOperaMini = Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
 
 
