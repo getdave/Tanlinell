@@ -250,8 +250,7 @@ $use-pagination: 				true !default;
 $use-code:						true !default;
 $use-block-list: 				true !default;
 $use-panel: 					true !default;
-$use-scrollable: 				true !default;
-
+$use-address: 					true !default;
 
 // Default "off"
 $use-title-block:				false !default;
@@ -264,6 +263,7 @@ $use-labels-badges: 			false !default;
 $use-split: 					false !default;
 $use-tabs: 						false !default;
 $use-sprite:					false !default;
+$use-scrollable: 				false !default;
 
 // Compounds
 // ==========================================================================
