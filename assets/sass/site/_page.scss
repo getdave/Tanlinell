@@ -133,6 +133,17 @@
 // CONTENT
 // ==========================================================================
 
+.site-content {
+    padding-top: $baseLineHeight;
+    padding-bottom: $baseLineHeight;
+}
+
+.site-content--flush {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
 // PAGE LAYOUT
 // ==========================================================================
 

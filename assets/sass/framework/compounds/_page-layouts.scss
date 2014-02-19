@@ -50,7 +50,7 @@
 
 .layout-1c {
     .column-container {
-        //margin-left: 0;
+        margin-left: 0; // these rules are absolutely required as, if omitted, layouts will break on Android mobile browsers 
     }
 
     .main,
@@ -59,7 +59,7 @@
         width: auto;
         clear: both;
         overflow: visible;
-        //padding-left: 0;
+        padding-left: 0; // these rules are absolutely required as, if omitted, layouts will break on Android mobile browsers 
     }
 }
 
