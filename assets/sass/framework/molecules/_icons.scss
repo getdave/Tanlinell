@@ -114,20 +114,33 @@ ADDED BY afontgarde.js:
 // DEFAULT ICON CHARACTERS
 // ==========================================================================
 
-.icon-facebook:before {
-    content: "\e600";
-}
-.icon-twitter:before {
-    content: "\e601";
-}
-.icon-instagram:before {
-    content: "\e602";
-}
-.icon-vimeo:before {
-    content: "\e603";
-}
-.icon-youtube:before {
-    content: "\e604";
-}
+@if $bIconDefaultChars == true {
+    .icon-twitter:before {
+        content: "\e600";
+    }
+    .icon-facebook:before {
+        content: "\e601";
+    }
+    .icon-vimeo:before {
+        content: "\e602";
+    }
+    .icon-linkedin:before {
+        content: "\e603";
+    }
+    .icon-youtube:before {
+        content: "\e604";
+    }
+    .icon-instagram:before {
+        content: "\e605";
+    }
+    .icon-google-plus:before {
+        content: "\e606";
+    }
+    .icon-hamburger:before {
+        content: "\e607";
+    }
+} //endif
+
+
 
 } //endif

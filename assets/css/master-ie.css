@@ -2966,25 +2966,37 @@ ADDED BY afontgarde.js:
 .supports-fontface.supports-generatedcontent .icon-fallback-img .icon {
   background-image: none; }
 
-/* line 117, ../sass/framework/molecules/_icons.scss */
-.icon-facebook:before {
+/* line 118, ../sass/framework/molecules/_icons.scss */
+.icon-twitter:before {
   content: "\e600"; }
 
-/* line 120, ../sass/framework/molecules/_icons.scss */
-.icon-twitter:before {
+/* line 121, ../sass/framework/molecules/_icons.scss */
+.icon-facebook:before {
   content: "\e601"; }
 
-/* line 123, ../sass/framework/molecules/_icons.scss */
-.icon-instagram:before {
+/* line 124, ../sass/framework/molecules/_icons.scss */
+.icon-vimeo:before {
   content: "\e602"; }
 
-/* line 126, ../sass/framework/molecules/_icons.scss */
-.icon-vimeo:before {
+/* line 127, ../sass/framework/molecules/_icons.scss */
+.icon-linkedin:before {
   content: "\e603"; }
 
-/* line 129, ../sass/framework/molecules/_icons.scss */
+/* line 130, ../sass/framework/molecules/_icons.scss */
 .icon-youtube:before {
   content: "\e604"; }
+
+/* line 133, ../sass/framework/molecules/_icons.scss */
+.icon-instagram:before {
+  content: "\e605"; }
+
+/* line 136, ../sass/framework/molecules/_icons.scss */
+.icon-google-plus:before {
+  content: "\e606"; }
+
+/* line 139, ../sass/framework/molecules/_icons.scss */
+.icon-hamburger:before {
+  content: "\e607"; }
 
 /* ============================================================ */
 /* ============================================================ */
