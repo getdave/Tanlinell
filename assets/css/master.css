@@ -1510,7 +1510,7 @@ optgroup::-moz-focus-inner {
 	</div>
 */
 /* line 375, ../sass/framework/atoms/_forms.scss */
-.input-append, .search-form, .input-prepend {
+.input-append, .input-prepend {
   white-space: nowrap; }
 
 /* #Headings */
@@ -3453,24 +3453,41 @@ ADDED BY afontgarde.js:
         <input type="submit" class="search-form__submit" name="submit" value="<?php esc_attr_e( 'Search', 'tanlinell' ); ?>" />
     </form>
 */
-/* line 16, ../sass/framework/compounds/_search-form.scss */
-.search-form .search-form__query {
-  width: 70%;
-  max-width: 300px;
-  max-width: 18.75rem; }
-
-/* line 26, ../sass/framework/compounds/_search-form.scss */
-.search-form__query {
+/* line 18, ../sass/framework/compounds/_search-form.scss */
+.search-form {
+  position: relative;
+  display: -moz-inline-stack;
   display: inline-block;
-  margin-bottom: 0;
   vertical-align: middle;
-  width: 80%;
-  letter-spacing: normal;
-  border-right: 0; }
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline; }
+/* line 22, ../sass/framework/compounds/_search-form.scss */
+.search-form .search-form__query {
+  max-width: none; }
 
-/* line 35, ../sass/framework/compounds/_search-form.scss */
-.search-form__submit {
+/* line 32, ../sass/framework/compounds/_search-form.scss */
+.search-form__query, .search-form__query[type="search"] {
+  display: block;
+  margin-bottom: 0;
+  padding-right: 100px;
+  padding-right: 6.25rem;
   letter-spacing: normal; }
+
+/* line 39, ../sass/framework/compounds/_search-form.scss */
+.search-form__submit {
+  padding: 0 15px;
+  padding: 0 0.9375rem;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  border: 0;
+  letter-spacing: normal; }
+
+/* line 58, ../sass/framework/compounds/_search-form.scss */
+.search-form--full {
+  display: block; }
 
 /* ============================================================ */
 /* ============================================================ */
