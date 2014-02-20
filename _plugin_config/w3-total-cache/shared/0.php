@@ -465,7 +465,7 @@ return array(
 	'browsercache.other.etag' => true,
 	'browsercache.other.w3tc' => true,
 	'browsercache.other.replace' => true,
-	'browsercache.timestamp' => '1380617810',
+	'browsercache.timestamp' => '1384779592',
 	'browsercache.replace.exceptions' => array(
 		0 => '',
 	),
@@ -661,8 +661,8 @@ return array(
 	'notes.plugins_updated' => false,
 	'notes.cdn_upload' => true,
 	'notes.cdn_reupload' => false,
-	'notes.need_empty_pgcache' => true,
-	'notes.need_empty_minify' => true,
+	'notes.need_empty_pgcache' => false,
+	'notes.need_empty_minify' => false,
 	'notes.need_empty_objectcache' => false,
 	'notes.root_rules' => true,
 	'notes.rules' => true,
@@ -739,6 +739,6 @@ return array(
 	),
 	'plugin.license_key' => '',
 	'plugin.type' => '',
-	'wordpress.home' => 'http://www.bjp-uk.com.burfield-stage.com',
+	'wordpress.home' => 'http://www.greenlizardcompany.com',
 	'pgcache.bad_behavior_path' => '',
 );
