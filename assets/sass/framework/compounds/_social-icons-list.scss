@@ -53,9 +53,6 @@
 }
 
 .social-icons-list__icon--small {
-	width: 30px;
-	height: 30px;
-	line-height: 30px !important;
 	@include rem(font-size,16px);
 }
 
@@ -65,6 +62,21 @@
 	text-decoration: none;
 }
 
+
+
+
+// ==========================================================================
+// MODIFIER: INLINE
+// ==========================================================================
+
+.social-icons-list--inline {
+	.social-icons-list__item {
+		@include inline-block;
+		@include rem(margin-right,25px);
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
 
 } //endif
 

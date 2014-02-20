@@ -3159,28 +3159,21 @@ ADDED BY afontgarde.js:
 /* ============================================================ */
 /* line 19, ../sass/framework/molecules/_social-icons.scss */
 .social-icon {
-  width: 60px;
-  height: 60px;
-  line-height: 60px !important;
-  text-align: center;
   margin-top: 0;
   font-size: 32px;
   font-size: 2rem; }
 
-/* line 29, ../sass/framework/molecules/_social-icons.scss */
+/* line 25, ../sass/framework/molecules/_social-icons.scss */
 .social-icon--small {
-  width: 30px;
-  height: 30px;
-  line-height: 30px !important;
   font-size: 16px;
   font-size: 1rem; }
 
-/* line 41, ../sass/framework/molecules/_social-icons.scss */
+/* line 34, ../sass/framework/molecules/_social-icons.scss */
 .social-icon--vimeo:before {
   margin-left: 0 !important;
   margin-top: 16px !important; }
 
-/* line 48, ../sass/framework/molecules/_social-icons.scss */
+/* line 41, ../sass/framework/molecules/_social-icons.scss */
 .social-icon--twitter:before {
   margin-top: 0.3em !important;
   margin-left: 0.1em !important; }
@@ -3518,15 +3511,25 @@ ADDED BY afontgarde.js:
 
 /* line 55, ../sass/framework/compounds/_social-icons-list.scss */
 .social-icons-list__icon--small {
-  width: 30px;
-  height: 30px;
-  line-height: 30px !important;
   font-size: 16px;
   font-size: 1rem; }
 
-/* line 64, ../sass/framework/compounds/_social-icons-list.scss */
+/* line 61, ../sass/framework/compounds/_social-icons-list.scss */
 .social-icons-list__name {
   text-decoration: none; }
+
+/* line 73, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list--inline .social-icons-list__item {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-right: 25px;
+  margin-right: 1.5625rem;
+  margin-bottom: 0;
+  padding-bottom: 0; }
 
 /* #Helpers */
 /* Set of simple classes to implement common CSS patterns */

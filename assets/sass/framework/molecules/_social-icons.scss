@@ -17,19 +17,12 @@
 // ==========================================================================
 
 .social-icon {
-	width: 60px;
-	height: 60px;
-	line-height: 60px !important;
-	text-align: center;
 	margin-top: 0;
 	@include rem(font-size,32px);
 }
 
 
 .social-icon--small {
-	width: 30px;
-	height: 30px;
-	line-height: 30px !important;
 	@include rem(font-size,16px);
 }
 
@@ -50,5 +43,6 @@
 		margin-left: 0.1em !important;
 	}
 }
+
 
 } //endif
