@@ -91,6 +91,11 @@ $infoBackground:          		#d9edf7 !default;
 $infoBorder:              		darken(adjust-hue($infoBackground, -10), 7%) !default;
 
 
+// Icons
+// ==========================================================================
+
+$iconFontFamily: 				"icomoon" !default;
+
 // ==========================================================================
 // TYPOGRAPHY
 // ==========================================================================
@@ -252,6 +257,8 @@ $use-code:						true !default;
 $use-block-list: 				true !default;
 $use-panel: 					true !default;
 $use-address: 					true !default;
+$use-icons: 					true !default;
+$use-social-icons: 				true !default;
 
 // Default "off"
 $use-title-block:				false !default;
@@ -278,10 +285,9 @@ $use-site-credit: 				true !default;
 $use-site-colophon: 			true !default;
 $use-social-actions: 			true !default;
 $use-search-form: 				true !default;
-
+$use-social-icons-list: 		true !default;
 
 // Default "off"
-$use-social-icons: 				false !default;
 $use-magnific: 					false !default;
 $use-flexslider: 				false !default;
 $use-gravity-forms: 			false !default;
