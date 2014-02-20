@@ -49,6 +49,16 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
+### 2.9.0 
+
+* Update Grid FW to include "palm" grids
+* Refactor of FontFace icons - standardise, add defaults.
+* Separate "Social Icons" from specific layouts allowing them to be more portable
+* Update search form componenet to be more flexible
+* Create mixins for "stacked" and "inline" navigation menus - enables greater flexibility when defining menu styles
+* Create "toggle" molecule for standarised toggle units
+
+
 #### 2.8.1 - Ensure no follow for all environments except production
 
 ### 2.8.0 - Grunt, Responsive and Grid updates
