@@ -2892,7 +2892,7 @@ pre code {
   font-style: normal; }
 
 /* line 25, ../sass/framework/molecules/_icons.scss */
-.icon {
+.icon, .toggle i {
   font-family: "icomoon";
   speak: none;
   font-style: normal;
@@ -2921,7 +2921,7 @@ pre code {
   font-size: inherit; }
 
 /* line 63, ../sass/framework/molecules/_icons.scss */
-.icon-fallback-text .icon {
+.icon-fallback-text .icon, .icon-fallback-text .toggle i, .toggle .icon-fallback-text i {
   display: none; }
 
 /*
@@ -2954,16 +2954,16 @@ ADDED BY afontgarde.js:
     line-height: inherit;
 }*/
 /* line 98, ../sass/framework/molecules/_icons.scss */
-.icon-fallback-img .icon {
+.icon-fallback-img .icon, .icon-fallback-img .toggle i, .toggle .icon-fallback-img i {
   display: inline-block; }
 
 /* line 101, ../sass/framework/molecules/_icons.scss */
-.icon-fallback-img .icon:before {
+.icon-fallback-img .icon:before, .icon-fallback-img .toggle i:before, .toggle .icon-fallback-img i:before {
   content: ""; }
 
 /* The img fallback version is not as reliable since it does not check to make sure the fontloaded font has loaded. If we did add the .fontloaded class, it would unnecessarily request the fallback image. */
 /* line 105, ../sass/framework/molecules/_icons.scss */
-.supports-fontface.supports-generatedcontent .icon-fallback-img .icon {
+.supports-fontface.supports-generatedcontent .icon-fallback-img .icon, .supports-fontface.supports-generatedcontent .icon-fallback-img .toggle i, .toggle .supports-fontface.supports-generatedcontent .icon-fallback-img i {
   background-image: none; }
 
 /* line 118, ../sass/framework/molecules/_icons.scss */
@@ -2995,8 +2995,12 @@ ADDED BY afontgarde.js:
   content: "\e606"; }
 
 /* line 139, ../sass/framework/molecules/_icons.scss */
-.icon-hamburger:before {
+.icon-hamburger:before, .toggle--menu i:before {
   content: "\e607"; }
+
+/* line 142, ../sass/framework/molecules/_icons.scss */
+.icon-cross:before, .toggle--close i:before {
+  content: "\e608"; }
 
 /* ============================================================ */
 /* ============================================================ */
@@ -3020,6 +3024,23 @@ ADDED BY afontgarde.js:
 .social-icon--twitter:before {
   margin-top: 0.3em !important;
   margin-left: 0.1em !important; }
+
+/* ============================================================ */
+/* ============================================================ */
+/* line 19, ../sass/framework/molecules/_toggle.scss */
+.toggle {
+  display: block;
+  text-decoration: none; }
+
+/* line 34, ../sass/framework/molecules/_toggle.scss */
+.toggle--menu {
+  font-size: 30px;
+  font-size: 1.875rem; }
+
+/* line 49, ../sass/framework/molecules/_toggle.scss */
+.toggle--close {
+  font-size: 30px;
+  font-size: 1.875rem; }
 
 /* line 11, ../sass/framework/compounds/_primary-nav.scss */
 .nav-primary {

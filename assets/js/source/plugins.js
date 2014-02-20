@@ -19,10 +19,29 @@
 	 * %%PLUGIN_DESCRIPTION%%
 	 *
 	 */
+	(function() {
+		$(document).ready(function(){
+			//$("")
+		});
+	}());
 
-	$(document).ready(function(){
-		//$("")
-	});
+
+
+
+
+	/**
+	 * FontGarde
+	 *
+	 * Robust patterns and rules for safe loading of Iconfonts
+	 * Read full docs at:
+	 * https://github.com/filamentgroup/a-font-garde
+	 */
+	(function() {	
+		$(document).ready(function(){
+			new AFontGarde( 'icomoon', '\uE600\uE601\uE602\uE605' );
+		});
+	}());
+
 
 
 
@@ -33,7 +52,6 @@
 	 * only if on suitably large screen
 	 * device. Not perfect but ....
 	 */
-
 	(function() {
 		Modernizr.load({
 			test: Modernizr.mq('only screen and (min-width: 62em)'),
@@ -60,14 +78,6 @@
 
 
 
-	/**
-	 * NARROW MENU
-	 *
-	 * Initialise the Narrow menu for small screen navs
-	 */
-	/* $(document).ready(function(){
-		$("#nav-primary").narrowNavMenu();
-	}); */
 
 
 

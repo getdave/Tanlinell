@@ -3,12 +3,12 @@
 		<a class="site-logo" href="/" title="{{ site.name }}" rel="home">
 			{{ site.name }}
 		</a>
-
-		<a href="#menu-primary" class="toggle toggle--menu-primary js-menu-primary-toggle">			
-		    <i class="icon icon-reorder icon--large" aria-hidden="true"></i>
-		    <span class="vh">Skip to Primary Navigation</span>			
-		</a>
-
+		
+		{% comment %}
+		# Remove the "comment" blocks to include
+		{% include toggle-menu-primary.html %}
+		{% endcomment %}
+		
 		<div class="banner-navigation">
 			<div class="mbl">
 			{% include search.html %}

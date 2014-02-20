@@ -18,6 +18,7 @@
     "supernew": true,
     "es5": false,
     "globals": {
+        "AFontGarde": true,
         "Backbone": true,
         "_": true,
         "jQuery": true,
