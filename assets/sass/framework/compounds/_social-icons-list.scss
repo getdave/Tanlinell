@@ -1,0 +1,82 @@
+@if $use-social-icons-list == true {
+/* ============================================================ */
+
+// SOCIAL ICON LIST
+
+// Description: list componenet for social icons
+
+/* ============================================================ */
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+
+.social-icons-list {
+	@extend .list-unstyled;
+}
+
+// ITEM
+// ==========================================================================
+.social-icons-list__item {
+	@include rem(margin-bottom,10px);
+	@include rem(padding-bottom,5px); // not "40px" cos we deduct 10px because icon and "name" have a 10px bottom margin
+
+	&:last-child {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+// ANCHOR/LINK
+// ==========================================================================
+.social-icons-list__link {
+	overflow:hidden;
+	*overflow:visible;
+	zoom:1;
+	text-decoration: none;
+}
+
+.social-icons-list__icon,
+.social-icons-list__name {
+	letter-spacing: normal;
+	@include inline-block;
+	@include rem(margin-bottom,5px); // space the icon from the text if the text wraps
+}
+
+
+// ICON
+// ==========================================================================
+.social-icons-list__icon {
+	@include rem(margin-right,10px);
+}
+
+.social-icons-list__icon--small {
+	@include rem(font-size,16px);
+}
+
+// NAME
+// ==========================================================================
+.social-icons-list__name {
+	text-decoration: none;
+}
+
+
+
+
+// ==========================================================================
+// MODIFIER: INLINE
+// ==========================================================================
+
+.social-icons-list--inline {
+	.social-icons-list__item {
+		@include inline-block;
+		@include rem(margin-right,25px);
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+} //endif
+

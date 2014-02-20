@@ -1,33 +1,3 @@
-/* ==========================================================================
-   VARIABLES
-   Use this to set your own project variables
-   ========================================================================== */
-/**
- * Tanlinell CSS FRAMEWORK
- * URL: https://github.com/getdave/Tanlinell
- * Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
- * Author: David Smith (@get_dave)
- */
-/**
- * This project aims to be a starter kit for building websites using SASS and Compass.
- *
- * The framework comes as a stand-alone packaged collection of SASS files. The _framework.scss file
- * should be @import'd into your projects' master SASS/SCSS file and extended as required.
- *
- * You should NEVER modify the files of the framework. If you find something you cannot work around it is
- * a bug and should be raised as an issue on Github at:
- *
- * https://github.com/getdave/Tanlinell/issues?state=open
- *
- * This framework borrows heavily and draws inspiration from the great work of the following projects/authors:
-
- * OOCSS 					- https://github.com/stubbornella/oocss
- * Inuit.css 				- https://raw.github.com/csswizardry/inuit.css/
- * SMACSS guidelines 		- http://smacss.com/
- * Twitter Bootstrap		- http://twitter.github.com/bootstrap/
- * ZURB Foundation			- http://foundation.zurb.com/
- *
- */
 @-ms-viewport {
   width: device-width; }
 
@@ -415,10 +385,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* ==========================================================================
-   ATOMS
-   Base styles/objects. Mostly global, tag-based selector rules.
-   ========================================================================== */
 /* #Typography */
 /* 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque suscipit voluptas illo maiores optio cupiditate nam repellat ad voluptatum vitae ipsum quia quae fugiat laborum architecto dignissimos sit! Facere nobis!</p>
@@ -426,16 +392,8 @@ table {
 /* line 10, ../sass/framework/atoms/_typo.scss */
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   font-size: 16px;
-  /* 9 */
   font-size: 1rem;
-  /* 9 */
   line-height: 1.666em;
   color: #333333; }
 
@@ -504,7 +462,7 @@ li {
   line-height: 1.666em; }
 
 /* line 127, ../sass/framework/atoms/_typo.scss */
-.list-unstyled {
+.list-unstyled, .social-icons-list {
   margin-left: 0;
   list-style: none; }
 
@@ -516,26 +474,8 @@ blockquote, blockquote p, q {
 /* line 145, ../sass/framework/atoms/_typo.scss */
 blockquote {
   margin: 0 0 1.666em;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  /* 4 */
-  /* 5 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   padding: 9px 20px 0 19px;
-  /* 9 */
   padding: 0.5625rem 1.25rem 0 1.1875rem;
-  /* 9 */
   border-left: 1px solid #ddd; }
 
 /* line 151, ../sass/framework/atoms/_typo.scss */
@@ -543,16 +483,8 @@ blockquote cite {
   display: block;
   color: #555;
   font-size: 0.9em;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   padding-top: 5px;
-  /* 9 */
-  padding-top: 0.3125rem;
-  /* 9 */ }
+  padding-top: 0.3125rem; }
 
 /* line 158, ../sass/framework/atoms/_typo.scss */
 blockquote cite:before {
@@ -594,176 +526,6 @@ img {
 .anystretch img {
   max-width: none; }
 
-/* #Headings */
-/* Based on the ancient Typographic scale */
-/* http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4.
-
-/* ###Standard Headings */
-/* Note that all heading sizes are aliased via the `.hN` classes. So if you would like your `<h6>` to look like an `<h1>` then simply add the class `<h3 class="h1" />` */
-/* 
-	<h1>Heading 1</h1> 
-*/
-/* line 11, ../sass/framework/atoms/_headings.scss */
-h1, .h1, .giga, .mega, .kilo {
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  font-size: 36px;
-  /* 9 */
-  font-size: 2.25rem;
-  /* 9 */
-  line-height: 1.01811;
-  color: #222222;
-  margin: 0 0 .5em 0;
-  text-rendering: optimizelegibility; }
-
-/* 
-	<h2>Heading 2</h2> 
-*/
-/* line 21, ../sass/framework/atoms/_headings.scss */
-h2, .h2 {
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  font-size: 30px;
-  /* 9 */
-  font-size: 1.875rem;
-  /* 9 */
-  line-height: 1.05513;
-  color: #222222;
-  margin: 0 0 .35em 0; }
-
-/* 
-	<h3>Heading 3</h3> 
-*/
-/* line 30, ../sass/framework/atoms/_headings.scss */
-h3, .h3 {
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  font-size: 24px;
-  /* 9 */
-  font-size: 1.5rem;
-  /* 9 */
-  line-height: 1.04125;
-  color: #333333;
-  margin: 0 0 .5em 0; }
-
-/* 
-	<h4>Heading 4</h4> 
-*/
-/* line 39, ../sass/framework/atoms/_headings.scss */
-h4, .h4 {
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  font-size: 20px;
-  /* 9 */
-  font-size: 1.25rem;
-  /* 9 */
-  line-height: 1.0829;
-  color: #333333;
-  margin: 0 0 .5em 0; }
-
-/* 
-	<h5>Heading 5</h5> 
-*/
-/* line 48, ../sass/framework/atoms/_headings.scss */
-h5, .h5 {
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  font-size: 18px;
-  /* 9 */
-  font-size: 1.125rem;
-  /* 9 */
-  line-height: 1.01811;
-  margin: 0 0 .5em 0; }
-
-/* 
-	<h6>Heading 6</h6> 
-*/
-/* line 56, ../sass/framework/atoms/_headings.scss */
-h6, .h6 {
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  font-size: 16px;
-  /* 9 */
-  font-size: 1rem;
-  /* 9 */
-  line-height: 1.04125;
-  margin: 0 0 .5em 0; }
-
-/* ###Misc Headings */
-/* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
-/* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
-/* line 67, ../sass/framework/atoms/_headings.scss */
-.giga {
-  font-size: 6em; }
-
-/* line 75, ../sass/framework/atoms/_headings.scss */
-.mega {
-  font-size: 4.5em; }
-
-/* line 82, ../sass/framework/atoms/_headings.scss */
-.kilo {
-  font-size: 3em; }
-
-/* line 91, ../sass/framework/atoms/_headings.scss */
-h1 small, .h1 small, .giga small, .mega small, .kilo small {
-  font-weight: normal;
-  line-height: 1;
-  color: #999; }
-
-/* line 91, ../sass/framework/atoms/_headings.scss */
-h2 small, .h2 small {
-  font-weight: normal;
-  line-height: 1;
-  color: #999; }
-
-/* line 91, ../sass/framework/atoms/_headings.scss */
-h3 small, .h3 small {
-  font-weight: normal;
-  line-height: 1;
-  color: #999; }
-
-/* line 91, ../sass/framework/atoms/_headings.scss */
-h4 small, .h4 small {
-  font-weight: normal;
-  line-height: 1;
-  color: #999; }
-
-/* line 91, ../sass/framework/atoms/_headings.scss */
-h5 small, .h5 small {
-  font-weight: normal;
-  line-height: 1;
-  color: #999; }
-
-/* line 91, ../sass/framework/atoms/_headings.scss */
-h6 small, .h6 small {
-  font-weight: normal;
-  line-height: 1;
-  color: #999; }
-
 /* #Containers */
 /* Standard structures for dividing pages into "sections" */
 /* ##Standard Container */
@@ -778,11 +540,11 @@ h6 small, .h6 small {
   margin: 0 auto;
   display: block;
   zoom: 1; }
-/* line 131, ../sass/framework/imports/_mixins.scss */
+/* line 129, ../sass/framework/imports/_mixins.scss */
 .container:before {
   content: "";
   display: table; }
-/* line 136, ../sass/framework/imports/_mixins.scss */
+/* line 134, ../sass/framework/imports/_mixins.scss */
 .container:after {
   content: "";
   display: table;
@@ -825,11 +587,11 @@ h6 small, .h6 small {
 .container--extend {
   width: auto;
   zoom: 1; }
-/* line 131, ../sass/framework/imports/_mixins.scss */
+/* line 129, ../sass/framework/imports/_mixins.scss */
 .container--extend:before {
   content: "";
   display: table; }
-/* line 136, ../sass/framework/imports/_mixins.scss */
+/* line 134, ../sass/framework/imports/_mixins.scss */
 .container--extend:after {
   content: "";
   display: table;
@@ -864,11 +626,11 @@ h6 small, .h6 small {
   clear: both;
   text-rendering: optimizespeed;
   zoom: 1; }
-/* line 131, ../sass/framework/imports/_mixins.scss */
+/* line 129, ../sass/framework/imports/_mixins.scss */
 .grid:before, .grid--double-gutter:before, .grid-wrap--large-gutter:before, .large-gutter:before, .grid--half-gutter:before, .grid-wrap--half-gutter:before, .half-gutter:before, .gallery-row:before, .grid--no-gutter:before, .grid-wrap--no-gutter:before, .no-gutter:before, .column-container:before, .grid-wrap:before {
   content: "";
   display: table; }
-/* line 136, ../sass/framework/imports/_mixins.scss */
+/* line 134, ../sass/framework/imports/_mixins.scss */
 .grid:after, .grid--double-gutter:after, .grid-wrap--large-gutter:after, .large-gutter:after, .grid--half-gutter:after, .grid-wrap--half-gutter:after, .half-gutter:after, .gallery-row:after, .grid--no-gutter:after, .grid-wrap--no-gutter:after, .no-gutter:after, .column-container:after, .grid-wrap:after {
   content: "";
   display: table;
@@ -988,6 +750,97 @@ h6 small, .h6 small {
  * Intentional redundancy build into each set of unit classes.
  */
 /* line 68, ../sass/framework/imports/_mixins.scss */
+.p1-2, .p2-4, .p3-6, .p4-8 {
+  width: 50%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p1-3, .p2-6 {
+  width: 33.33333%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p2-3, .p4-6 {
+  width: 66.66667%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p1-4, .p2-8 {
+  width: 25%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p3-4, .p6-8 {
+  width: 75%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p1-5 {
+  width: 20%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p2-5 {
+  width: 40%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p3-5 {
+  width: 60%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p4-5 {
+  width: 80%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p1-6 {
+  width: 16.66667%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p5-6 {
+  width: 83.33333%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p1-7 {
+  width: 14.28571%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p2-7 {
+  width: 28.57143%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p3-7 {
+  width: 42.85714%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p4-7 {
+  width: 57.14286%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p5-7 {
+  width: 71.42857%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p6-7 {
+  width: 85.71429%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p1-8 {
+  width: 12.5%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p3-8 {
+  width: 37.5%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p5-8 {
+  width: 62.5%; }
+
+/* line 68, ../sass/framework/imports/_mixins.scss */
+.p7-8 {
+  width: 87.5%; }
+
+/* Proportional units
+   ========================================================================== */
+/*
+ * Specify the proportional width of an object.
+ * Primarily for, but not limited to, use with `.grid__cell` components.
+ * Intentional redundancy build into each set of unit classes.
+ */
+/* line 68, ../sass/framework/imports/_mixins.scss */
 .l1-2, .l2-4, .l3-6, .l4-8, .gallery-row .col-4 {
   width: 50%; }
 
@@ -1071,11 +924,11 @@ h6 small, .h6 small {
 .l7-8 {
   width: 87.5%; }
 
-/* line 67, ../sass/framework/atoms/_grid.scss */
+/* line 73, ../sass/framework/atoms/_grid.scss */
 .h-grid-clear {
   clear: none; }
 
-/* line 71, ../sass/framework/atoms/_grid.scss */
+/* line 77, ../sass/framework/atoms/_grid.scss */
 .l-grid-clear {
   clear: left; }
 
@@ -1170,40 +1023,40 @@ h6 small, .h6 small {
 .d7-8 {
   width: 87.5%; }
 
-/* line 80, ../sass/framework/atoms/_grid.scss */
+/* line 86, ../sass/framework/atoms/_grid.scss */
 .h-grid-clear, .l-grid-clear {
   clear: none; }
 
-/* line 84, ../sass/framework/atoms/_grid.scss */
+/* line 90, ../sass/framework/atoms/_grid.scss */
 .d-grid-clear {
   clear: left; }
 
-/* line 130, ../sass/framework/atoms/_grid.scss */
+/* line 136, ../sass/framework/atoms/_grid.scss */
 .grid--double-gutter, .grid-wrap--large-gutter, .large-gutter {
   margin-left: -6em; }
-/* line 134, ../sass/framework/atoms/_grid.scss */
+/* line 140, ../sass/framework/atoms/_grid.scss */
 .grid--double-gutter > .gc, .grid--double-gutter > .main, .grid--double-gutter > .sub, .gallery-row .grid--double-gutter > .col-1, .gallery-row .grid--double-gutter > .col-2, .gallery-row .grid--double-gutter > .col-3, .gallery-row .grid--double-gutter > .col-4, .gallery-row .grid--double-gutter > .col-5, .gallery-row .grid--double-gutter > .col-6, .gallery-row .grid--double-gutter > .col-7, .gallery-row .grid--double-gutter > .col-8, .gallery-row .grid--double-gutter > .col-9, .gallery-row .grid--double-gutter > .col-10, .gallery-row .grid--double-gutter > .col-11, .gallery-row .grid--double-gutter > .col-12, .grid-wrap--large-gutter > .gc, .grid-wrap--large-gutter > .main, .grid-wrap--large-gutter > .sub, .gallery-row .grid-wrap--large-gutter > .col-1, .gallery-row .grid-wrap--large-gutter > .col-2, .gallery-row .grid-wrap--large-gutter > .col-3, .gallery-row .grid-wrap--large-gutter > .col-4, .gallery-row .grid-wrap--large-gutter > .col-5, .gallery-row .grid-wrap--large-gutter > .col-6, .gallery-row .grid-wrap--large-gutter > .col-7, .gallery-row .grid-wrap--large-gutter > .col-8, .gallery-row .grid-wrap--large-gutter > .col-9, .gallery-row .grid-wrap--large-gutter > .col-10, .gallery-row .grid-wrap--large-gutter > .col-11, .gallery-row .grid-wrap--large-gutter > .col-12, .large-gutter > .gc, .large-gutter > .main, .large-gutter > .sub, .gallery-row .large-gutter > .col-1, .gallery-row .large-gutter > .col-2, .gallery-row .large-gutter > .col-3, .gallery-row .large-gutter > .col-4, .gallery-row .large-gutter > .col-5, .gallery-row .large-gutter > .col-6, .gallery-row .large-gutter > .col-7, .gallery-row .large-gutter > .col-8, .gallery-row .large-gutter > .col-9, .gallery-row .large-gutter > .col-10, .gallery-row .large-gutter > .col-11, .gallery-row .large-gutter > .col-12 {
   padding-left: 6em; }
 
-/* line 144, ../sass/framework/atoms/_grid.scss */
+/* line 150, ../sass/framework/atoms/_grid.scss */
 .grid--half-gutter, .grid-wrap--half-gutter, .half-gutter, .gallery-row {
   margin-left: -1.5em; }
-/* line 148, ../sass/framework/atoms/_grid.scss */
+/* line 154, ../sass/framework/atoms/_grid.scss */
 .grid--half-gutter > .gc, .grid--half-gutter > .main, .grid--half-gutter > .sub, .gallery-row .grid--half-gutter > .col-1, .gallery-row .grid--half-gutter > .col-2, .gallery-row .grid--half-gutter > .col-3, .gallery-row .grid--half-gutter > .col-4, .gallery-row .grid--half-gutter > .col-5, .gallery-row .grid--half-gutter > .col-6, .gallery-row .grid--half-gutter > .col-7, .gallery-row .grid--half-gutter > .col-8, .gallery-row .grid--half-gutter > .col-9, .gallery-row .grid--half-gutter > .col-10, .gallery-row .grid--half-gutter > .col-11, .gallery-row .grid--half-gutter > .col-12, .grid-wrap--half-gutter > .gc, .grid-wrap--half-gutter > .main, .grid-wrap--half-gutter > .sub, .gallery-row .grid-wrap--half-gutter > .col-1, .gallery-row .grid-wrap--half-gutter > .col-2, .gallery-row .grid-wrap--half-gutter > .col-3, .gallery-row .grid-wrap--half-gutter > .col-4, .gallery-row .grid-wrap--half-gutter > .col-5, .gallery-row .grid-wrap--half-gutter > .col-6, .gallery-row .grid-wrap--half-gutter > .col-7, .gallery-row .grid-wrap--half-gutter > .col-8, .gallery-row .grid-wrap--half-gutter > .col-9, .gallery-row .grid-wrap--half-gutter > .col-10, .gallery-row .grid-wrap--half-gutter > .col-11, .gallery-row .grid-wrap--half-gutter > .col-12, .half-gutter > .gc, .gallery-row > .gc, .half-gutter > .main, .gallery-row > .main, .half-gutter > .sub, .gallery-row > .sub, .gallery-row .half-gutter > .col-1, .gallery-row > .col-1, .gallery-row .half-gutter > .col-2, .gallery-row > .col-2, .gallery-row .half-gutter > .col-3, .gallery-row > .col-3, .gallery-row .half-gutter > .col-4, .gallery-row > .col-4, .gallery-row .half-gutter > .col-5, .gallery-row > .col-5, .gallery-row .half-gutter > .col-6, .gallery-row > .col-6, .gallery-row .half-gutter > .col-7, .gallery-row > .col-7, .gallery-row .half-gutter > .col-8, .gallery-row > .col-8, .gallery-row .half-gutter > .col-9, .gallery-row > .col-9, .gallery-row .half-gutter > .col-10, .gallery-row > .col-10, .gallery-row .half-gutter > .col-11, .gallery-row > .col-11, .gallery-row .half-gutter > .col-12, .gallery-row > .col-12 {
   padding-left: 1.5em; }
 
-/* line 160, ../sass/framework/atoms/_grid.scss */
+/* line 166, ../sass/framework/atoms/_grid.scss */
 .grid--no-gutter, .grid-wrap--no-gutter, .no-gutter {
   margin-left: 0; }
-/* line 164, ../sass/framework/atoms/_grid.scss */
+/* line 170, ../sass/framework/atoms/_grid.scss */
 .grid--no-gutter > .gc, .grid--no-gutter > .main, .grid--no-gutter > .sub, .gallery-row .grid--no-gutter > .col-1, .gallery-row .grid--no-gutter > .col-2, .gallery-row .grid--no-gutter > .col-3, .gallery-row .grid--no-gutter > .col-4, .gallery-row .grid--no-gutter > .col-5, .gallery-row .grid--no-gutter > .col-6, .gallery-row .grid--no-gutter > .col-7, .gallery-row .grid--no-gutter > .col-8, .gallery-row .grid--no-gutter > .col-9, .gallery-row .grid--no-gutter > .col-10, .gallery-row .grid--no-gutter > .col-11, .gallery-row .grid--no-gutter > .col-12, .grid-wrap--no-gutter > .gc, .grid-wrap--no-gutter > .main, .grid-wrap--no-gutter > .sub, .gallery-row .grid-wrap--no-gutter > .col-1, .gallery-row .grid-wrap--no-gutter > .col-2, .gallery-row .grid-wrap--no-gutter > .col-3, .gallery-row .grid-wrap--no-gutter > .col-4, .gallery-row .grid-wrap--no-gutter > .col-5, .gallery-row .grid-wrap--no-gutter > .col-6, .gallery-row .grid-wrap--no-gutter > .col-7, .gallery-row .grid-wrap--no-gutter > .col-8, .gallery-row .grid-wrap--no-gutter > .col-9, .gallery-row .grid-wrap--no-gutter > .col-10, .gallery-row .grid-wrap--no-gutter > .col-11, .gallery-row .grid-wrap--no-gutter > .col-12, .no-gutter > .gc, .no-gutter > .main, .no-gutter > .sub, .gallery-row .no-gutter > .col-1, .gallery-row .no-gutter > .col-2, .gallery-row .no-gutter > .col-3, .gallery-row .no-gutter > .col-4, .gallery-row .no-gutter > .col-5, .gallery-row .no-gutter > .col-6, .gallery-row .no-gutter > .col-7, .gallery-row .no-gutter > .col-8, .gallery-row .no-gutter > .col-9, .gallery-row .no-gutter > .col-10, .gallery-row .no-gutter > .col-11, .gallery-row .no-gutter > .col-12 {
   padding-left: 0; }
 
-/* line 174, ../sass/framework/atoms/_grid.scss */
+/* line 180, ../sass/framework/atoms/_grid.scss */
 .grid--ib, .grid--center, .grid--left, .grid--right, .grid-ib {
   letter-spacing: -0.31em;
   word-spacing: -0.43em; }
-/* line 178, ../sass/framework/atoms/_grid.scss */
+/* line 184, ../sass/framework/atoms/_grid.scss */
 .grid--ib > .gc, .grid--center > .gc, .grid--left > .gc, .grid--right > .gc, .grid--ib > .main, .grid--center > .main, .grid--left > .main, .grid--right > .main, .grid--ib > .sub, .grid--center > .sub, .grid--left > .sub, .grid--right > .sub, .gallery-row .grid--ib > .col-1, .gallery-row .grid--center > .col-1, .gallery-row .grid--left > .col-1, .gallery-row .grid--right > .col-1, .gallery-row .grid--ib > .col-2, .gallery-row .grid--center > .col-2, .gallery-row .grid--left > .col-2, .gallery-row .grid--right > .col-2, .gallery-row .grid--ib > .col-3, .gallery-row .grid--center > .col-3, .gallery-row .grid--left > .col-3, .gallery-row .grid--right > .col-3, .gallery-row .grid--ib > .col-4, .gallery-row .grid--center > .col-4, .gallery-row .grid--left > .col-4, .gallery-row .grid--right > .col-4, .gallery-row .grid--ib > .col-5, .gallery-row .grid--center > .col-5, .gallery-row .grid--left > .col-5, .gallery-row .grid--right > .col-5, .gallery-row .grid--ib > .col-6, .gallery-row .grid--center > .col-6, .gallery-row .grid--left > .col-6, .gallery-row .grid--right > .col-6, .gallery-row .grid--ib > .col-7, .gallery-row .grid--center > .col-7, .gallery-row .grid--left > .col-7, .gallery-row .grid--right > .col-7, .gallery-row .grid--ib > .col-8, .gallery-row .grid--center > .col-8, .gallery-row .grid--left > .col-8, .gallery-row .grid--right > .col-8, .gallery-row .grid--ib > .col-9, .gallery-row .grid--center > .col-9, .gallery-row .grid--left > .col-9, .gallery-row .grid--right > .col-9, .gallery-row .grid--ib > .col-10, .gallery-row .grid--center > .col-10, .gallery-row .grid--left > .col-10, .gallery-row .grid--right > .col-10, .gallery-row .grid--ib > .col-11, .gallery-row .grid--center > .col-11, .gallery-row .grid--left > .col-11, .gallery-row .grid--right > .col-11, .gallery-row .grid--ib > .col-12, .gallery-row .grid--center > .col-12, .gallery-row .grid--left > .col-12, .gallery-row .grid--right > .col-12, .grid-ib > .gc, .grid-ib > .main, .grid-ib > .sub, .gallery-row .grid-ib > .col-1, .gallery-row .grid-ib > .col-2, .gallery-row .grid-ib > .col-3, .gallery-row .grid-ib > .col-4, .gallery-row .grid-ib > .col-5, .gallery-row .grid-ib > .col-6, .gallery-row .grid-ib > .col-7, .gallery-row .grid-ib > .col-8, .gallery-row .grid-ib > .col-9, .gallery-row .grid-ib > .col-10, .gallery-row .grid-ib > .col-11, .gallery-row .grid-ib > .col-12 {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1216,42 +1069,42 @@ h6 small, .h6 small {
   letter-spacing: normal;
   word-spacing: normal; }
 
-/* line 190, ../sass/framework/atoms/_grid.scss */
+/* line 196, ../sass/framework/atoms/_grid.scss */
 .grid--center {
   text-align: center; }
 
-/* line 198, ../sass/framework/atoms/_grid.scss */
+/* line 204, ../sass/framework/atoms/_grid.scss */
 .grid--left {
   text-align: left; }
 
-/* line 207, ../sass/framework/atoms/_grid.scss */
+/* line 213, ../sass/framework/atoms/_grid.scss */
 .grid--right {
   text-align: right; }
 
-/* line 218, ../sass/framework/atoms/_grid.scss */
+/* line 224, ../sass/framework/atoms/_grid.scss */
 .grid--divided > .gc, .grid--divided > .main, .grid--divided > .sub, .gallery-row .grid--divided > .col-1, .gallery-row .grid--divided > .col-2, .gallery-row .grid--divided > .col-3, .gallery-row .grid--divided > .col-4, .gallery-row .grid--divided > .col-5, .gallery-row .grid--divided > .col-6, .gallery-row .grid--divided > .col-7, .gallery-row .grid--divided > .col-8, .gallery-row .grid--divided > .col-9, .gallery-row .grid--divided > .col-10, .gallery-row .grid--divided > .col-11, .gallery-row .grid--divided > .col-12, .grid-divide > .gc, .grid-divide > .main, .grid-divide > .sub, .gallery-row .grid-divide > .col-1, .gallery-row .grid-divide > .col-2, .gallery-row .grid-divide > .col-3, .gallery-row .grid-divide > .col-4, .gallery-row .grid-divide > .col-5, .gallery-row .grid-divide > .col-6, .gallery-row .grid-divide > .col-7, .gallery-row .grid-divide > .col-8, .gallery-row .grid-divide > .col-9, .gallery-row .grid-divide > .col-10, .gallery-row .grid-divide > .col-11, .gallery-row .grid-divide > .col-12 {
   margin-bottom: 3em; }
 
-/* line 228, ../sass/framework/atoms/_grid.scss */
+/* line 234, ../sass/framework/atoms/_grid.scss */
 .grid--middle > .gc, .grid--middle > .main, .grid--middle > .sub, .gallery-row .grid--middle > .col-1, .gallery-row .grid--middle > .col-2, .gallery-row .grid--middle > .col-3, .gallery-row .grid--middle > .col-4, .gallery-row .grid--middle > .col-5, .gallery-row .grid--middle > .col-6, .gallery-row .grid--middle > .col-7, .gallery-row .grid--middle > .col-8, .gallery-row .grid--middle > .col-9, .gallery-row .grid--middle > .col-10, .gallery-row .grid--middle > .col-11, .gallery-row .grid--middle > .col-12 {
   vertical-align: middle; }
 
-/* line 237, ../sass/framework/atoms/_grid.scss */
+/* line 243, ../sass/framework/atoms/_grid.scss */
 .grid--bottom > .gc, .grid--bottom > .main, .grid--bottom > .sub, .gallery-row .grid--bottom > .col-1, .gallery-row .grid--bottom > .col-2, .gallery-row .grid--bottom > .col-3, .gallery-row .grid--bottom > .col-4, .gallery-row .grid--bottom > .col-5, .gallery-row .grid--bottom > .col-6, .gallery-row .grid--bottom > .col-7, .gallery-row .grid--bottom > .col-8, .gallery-row .grid--bottom > .col-9, .gallery-row .grid--bottom > .col-10, .gallery-row .grid--bottom > .col-11, .gallery-row .grid--bottom > .col-12 {
   vertical-align: bottom; }
 
-/* line 248, ../sass/framework/atoms/_grid.scss */
+/* line 254, ../sass/framework/atoms/_grid.scss */
 .gc--center {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 254, ../sass/framework/atoms/_grid.scss */
+/* line 260, ../sass/framework/atoms/_grid.scss */
 .gc--left {
   display: block;
   margin-right: auto; }
 
-/* line 259, ../sass/framework/atoms/_grid.scss */
+/* line 265, ../sass/framework/atoms/_grid.scss */
 .gc--right {
   display: block;
   margin-left: auto; }
@@ -1401,16 +1254,8 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   max-width: 500px;
-  /* 9 */
   max-width: 31.25rem;
-  /* 9 */
   background-color: white;
   border: 1px solid;
   border-color: #555555;
@@ -1420,20 +1265,8 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
   text-align: left;
   width: 100%;
   height: 2.499em;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   padding: 8px 10px;
-  /* 9 */
   padding: 0.5rem 0.625rem;
-  /* 9 */
   font-size: 100%;
   font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
   vertical-align: top;
@@ -1466,26 +1299,10 @@ select {
   background-position: right center;
   background-image: url('../images/framework/select-arrow.png?1389868474');
   height: auto;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   padding-top: 11px;
-  /* 9 */
   padding-top: 0.6875rem;
-  /* 9 */
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   padding-bottom: 11px;
-  /* 9 */
-  padding-bottom: 0.6875rem;
-  /* 9 */ }
+  padding-bottom: 0.6875rem; }
 /* line 241, ../sass/framework/atoms/_forms.scss */
 select:hover, select:focus {
   background-color: #fefefe; }
@@ -1590,13 +1407,222 @@ optgroup::-moz-focus-inner {
 	</div>
 */
 /* line 375, ../sass/framework/atoms/_forms.scss */
-.input-append, .search-form, .input-prepend {
+.input-append, .input-prepend {
   white-space: nowrap; }
 
-/* ==========================================================================
-   MOLECULES
-   Groupings of base atomic objects to create reusable elements
-   ========================================================================== */
+/* #Headings */
+/* Based on the ancient Typographic scale */
+/* http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4.
+
+/* ###Standard Headings */
+/* Note that all heading sizes are aliased via the `.hN` classes. So if you would like your `<h6>` to look like an `<h1>` then simply add the class `<h3 class="h1" />` */
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h1, .h1, .giga, .mega, .kilo {
+  margin: 0 0 .5em 0; }
+
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h2, .h2 {
+  margin: 0 0 .5em 0; }
+
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h3, .h3 {
+  margin: 0 0 .5em 0; }
+
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h4, .h4 {
+  margin: 0 0 .5em 0; }
+
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h5, .h5 {
+  margin: 0 0 .5em 0; }
+
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h6, .h6 {
+  margin: 0 0 .5em 0; }
+
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h1, .h1, .giga, .mega, .kilo {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 32px;
+  line-height: 2rem; }
+/* line 20, ../sass/framework/molecules/_headings.scss */
+.text-module h1, .text-module .h1, .text-module .giga, .text-module .mega, .text-module .kilo {
+  margin-top: 32px;
+  margin-top: 2rem; }
+@media (min-width: 43.75em) {
+  /* line 100, ../sass/framework/imports/_mixins.scss */
+  h1, .h1, .giga, .mega, .kilo {
+    font-size: 40px;
+    font-size: 2.5rem;
+    line-height: 40px;
+    line-height: 2.5rem; }
+  /* line 28, ../sass/framework/molecules/_headings.scss */
+  .text-module h1, .text-module .h1, .text-module .giga, .text-module .mega, .text-module .kilo {
+    margin-top: 40px;
+    margin-top: 2.5rem; } }
+@media (min-width: 56.25em) {
+  /* line 100, ../sass/framework/imports/_mixins.scss */
+  h1, .h1, .giga, .mega, .kilo {
+    font-size: 48px;
+    font-size: 3rem;
+    line-height: 48px;
+    line-height: 3rem; }
+  /* line 37, ../sass/framework/molecules/_headings.scss */
+  .text-module h1, .text-module .h1, .text-module .giga, .text-module .mega, .text-module .kilo {
+    margin-top: 48px;
+    margin-top: 3rem; } }
+
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h2, .h2 {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 26px;
+  line-height: 1.625rem; }
+/* line 48, ../sass/framework/molecules/_headings.scss */
+.text-module h2, .text-module .h2 {
+  margin-top: 26px;
+  margin-top: 1.625rem; }
+@media (min-width: 43.75em) {
+  /* line 100, ../sass/framework/imports/_mixins.scss */
+  h2, .h2 {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 32px;
+    line-height: 2rem; }
+  /* line 56, ../sass/framework/molecules/_headings.scss */
+  .text-module h2, .text-module .h2 {
+    margin-top: 32px;
+    margin-top: 2rem; } }
+@media (min-width: 56.25em) {
+  /* line 100, ../sass/framework/imports/_mixins.scss */
+  h2, .h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 36px;
+    line-height: 2.25rem; }
+  /* line 65, ../sass/framework/molecules/_headings.scss */
+  .text-module h2, .text-module .h2 {
+    margin-top: 36px;
+    margin-top: 2.25rem; } }
+
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h3, .h3 {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 22px;
+  line-height: 1.375rem; }
+/* line 76, ../sass/framework/molecules/_headings.scss */
+.text-module h3, .text-module .h3 {
+  margin-top: 22px;
+  margin-top: 1.375rem; }
+@media (min-width: 43.75em) {
+  /* line 100, ../sass/framework/imports/_mixins.scss */
+  h3, .h3 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 24px;
+    line-height: 1.5rem; }
+  /* line 84, ../sass/framework/molecules/_headings.scss */
+  .text-module h3, .text-module .h3 {
+    margin-top: 24px;
+    margin-top: 1.5rem; } }
+@media (min-width: 56.25em) {
+  /* line 100, ../sass/framework/imports/_mixins.scss */
+  h3, .h3 {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 28px;
+    line-height: 1.75rem; }
+  /* line 93, ../sass/framework/molecules/_headings.scss */
+  .text-module h3, .text-module .h3 {
+    margin-top: 28px;
+    margin-top: 1.75rem; } }
+
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h4, .h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 18px;
+  line-height: 1.125rem; }
+/* line 104, ../sass/framework/molecules/_headings.scss */
+.text-module h4, .text-module .h4 {
+  margin-top: 18px;
+  margin-top: 1.125rem; }
+
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h5, .h5 {
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  line-height: 17.6px;
+  line-height: 1.1rem; }
+/* line 114, ../sass/framework/molecules/_headings.scss */
+.text-module h5, .text-module .h5 {
+  margin-top: 17.6px;
+  margin-top: 1.1rem; }
+
+/* line 100, ../sass/framework/imports/_mixins.scss */
+h6, .h6 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 16px;
+  line-height: 1rem; }
+/* line 124, ../sass/framework/molecules/_headings.scss */
+.text-module h6, .text-module .h6 {
+  margin-top: 16px;
+  margin-top: 1rem; }
+
+/* ###Misc Headings */
+/* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
+/* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
+/* line 135, ../sass/framework/molecules/_headings.scss */
+.giga {
+  font-size: 6em; }
+
+/* line 143, ../sass/framework/molecules/_headings.scss */
+.mega {
+  font-size: 4.5em; }
+
+/* line 150, ../sass/framework/molecules/_headings.scss */
+.kilo {
+  font-size: 3em; }
+
+/* line 159, ../sass/framework/molecules/_headings.scss */
+h1 small, .h1 small, .giga small, .mega small, .kilo small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999; }
+
+/* line 159, ../sass/framework/molecules/_headings.scss */
+h2 small, .h2 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999; }
+
+/* line 159, ../sass/framework/molecules/_headings.scss */
+h3 small, .h3 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999; }
+
+/* line 159, ../sass/framework/molecules/_headings.scss */
+h4 small, .h4 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999; }
+
+/* line 159, ../sass/framework/molecules/_headings.scss */
+h5 small, .h5 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999; }
+
+/* line 159, ../sass/framework/molecules/_headings.scss */
+h6 small, .h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999; }
+
 /*------------------------------------*\
     $TABLES
 \*------------------------------------*/
@@ -1912,54 +1938,6 @@ thead tr:last-child th {
 .islet {
   padding: 0.833em; }
 
-/* line 18, ../sass/framework/molecules/_menu.scss */
-.nav-primary {
-  position: relative;
-  background-color: #eeeeee; }
-
-/* line 29, ../sass/framework/molecules/_menu.scss */
-.nav-primary > li {
-  position: relative;
-  float: left; }
-
-/* line 38, ../sass/framework/molecules/_menu.scss */
-.nav-primary a {
-  display: block;
-  padding: 0.625em 1.25em;
-  text-decoration: none; }
-
-/* line 45, ../sass/framework/molecules/_menu.scss */
-.nav-primary > li > a {
-  text-align: left;
-  text-align: center; }
-
-/* line 58, ../sass/framework/molecules/_menu.scss */
-.narrow-menu-active .nav-primary {
-  display: none;
-  display: block; }
-/* line 67, ../sass/framework/molecules/_menu.scss */
-.is-expanded .nav-primary {
-  display: block; }
-
-/* line 73, ../sass/framework/molecules/_menu.scss */
-.nav-menu-toggle {
-  float: right;
-  display: none;
-  border: 0;
-  background-color: transparent; }
-/* line 80, ../sass/framework/molecules/_menu.scss */
-.narrow-menu-active .nav-menu-toggle {
-  display: block;
-  display: none; }
-
-/* line 100, ../sass/framework/molecules/_menu.scss */
-.nav-menu-toggle span {
-  display: block;
-  height: 3px;
-  width: 20px;
-  margin-bottom: 3px;
-  background-color: #cccccc; }
-
 /* #Item List */
 /* Create standard lists of "post"-like content. 
 */
@@ -1979,11 +1957,11 @@ thead tr:last-child th {
   margin: 0;
   padding: 0;
   zoom: 1; }
-/* line 131, ../sass/framework/imports/_mixins.scss */
+/* line 129, ../sass/framework/imports/_mixins.scss */
 .item-list:before {
   content: "";
   display: table; }
-/* line 136, ../sass/framework/imports/_mixins.scss */
+/* line 134, ../sass/framework/imports/_mixins.scss */
 .item-list:after {
   content: "";
   display: table;
@@ -1993,11 +1971,11 @@ thead tr:last-child th {
   margin-bottom: 1.666em;
   padding-bottom: 1.666em;
   zoom: 1; }
-/* line 131, ../sass/framework/imports/_mixins.scss */
+/* line 129, ../sass/framework/imports/_mixins.scss */
 .item-list > li:before, .item-list .list-item:before {
   content: "";
   display: table; }
-/* line 136, ../sass/framework/imports/_mixins.scss */
+/* line 134, ../sass/framework/imports/_mixins.scss */
 .item-list > li:after, .item-list .list-item:after {
   content: "";
   display: table;
@@ -2040,6 +2018,16 @@ Borrowed from inuit.css
 .block-list__link, .block-list a {
   display: block;
   padding: 0.55533em 0.833em; }
+
+/* line 44, ../sass/framework/molecules/_block-list.scss */
+.block-list--flush-h .block-list__link, .block-list--flush-h .block-list a, .block-list .block-list--flush-h a, .block-list__link--flush-h, a.block-list__link--flush-h {
+  padding-left: 0;
+  padding-right: 0; }
+
+/* line 51, ../sass/framework/molecules/_block-list.scss */
+.block-list--flush-v .block-list__link, .block-list--flush-v .block-list a, .block-list .block-list--flush-v a, .block-list__link--flush-v, a.block-list__link--flush-v {
+  padding-top: 0;
+  padding-bottom: 0; }
 
 /* ============================================================ */
 /* ============================================================ */
@@ -2223,7 +2211,7 @@ input.btn, input.search-form__submit {
 	</ul>
 */
 /* line 15, ../sass/framework/molecules/_dropdowns.scss */
-.dropdown-menu, .nav-primary .sub-menu {
+.dropdown-menu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -2239,7 +2227,7 @@ input.btn, input.search-form__submit {
   background-color: #eeeeee; }
 
 /* line 29, ../sass/framework/molecules/_dropdowns.scss */
-.dropdown-menu__item, .nav-primary .sub-menu li {
+.dropdown-menu__item {
   position: relative;
   vertical-align: bottom;
   /* This fixes the IE5 Win gap (no harm done to modern browsers) */
@@ -2250,7 +2238,7 @@ input.btn, input.search-form__submit {
   display: list-item; }
 
 /* line 38, ../sass/framework/molecules/_dropdowns.scss */
-.dropdown-menu__link, .nav-primary .sub-menu a {
+.dropdown-menu__link {
   display: block;
   white-space: nowrap;
   /* forces drop down to stretch to accommodate length of text (and not wrap) */
@@ -2488,11 +2476,11 @@ input.btn, input.search-form__submit {
   padding: 0;
   list-style: none;
   zoom: 1; }
-/* line 131, ../sass/framework/imports/_mixins.scss */
+/* line 129, ../sass/framework/imports/_mixins.scss */
 .pager:before {
   content: "";
   display: table; }
-/* line 136, ../sass/framework/imports/_mixins.scss */
+/* line 134, ../sass/framework/imports/_mixins.scss */
 .pager:after {
   content: "";
   display: table;
@@ -2552,20 +2540,8 @@ input.btn, input.search-form__submit {
 /* line 40, ../sass/framework/molecules/_breadcrumbs.scss */
 .breadcrumbs a, .breadcrumbs .trail-end, .breadcrumbs .sep {
   position: relative;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   padding: 10px 8px;
-  /* 9 */
   padding: 0.625rem 0.5rem;
-  /* 9 */
   text-decoration: none;
   display: -moz-inline-stack;
   display: inline-block;
@@ -2587,20 +2563,8 @@ input.btn, input.search-form__submit {
 
 /* line 73, ../sass/framework/molecules/_breadcrumbs.scss */
 .breadcrumbs--reduced a, .breadcrumbs--reduced .trail-end, .breadcrumbs--reduced .sep {
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   padding: 10px 1px;
-  /* 9 */
-  padding: 0.625rem 0.0625rem;
-  /* 9 */ }
+  padding: 0.625rem 0.0625rem; }
 
 /* #Images */
 /* Common styling patterns for images to be applied to `<img` elements. */
@@ -2687,11 +2651,11 @@ input.btn, input.search-form__submit {
   margin: 0 0 1.666em -1.666em;
   zoom: 1;
   zoom: 1; }
-/* line 131, ../sass/framework/imports/_mixins.scss */
+/* line 129, ../sass/framework/imports/_mixins.scss */
 .inline-list:before, .social-actions:before {
   content: "";
   display: table; }
-/* line 136, ../sass/framework/imports/_mixins.scss */
+/* line 134, ../sass/framework/imports/_mixins.scss */
 .inline-list:after, .social-actions:after {
   content: "";
   display: table;
@@ -2803,40 +2767,12 @@ code, pre, kbd, tt, var {
 
 /* line 14, ../sass/framework/molecules/_code.scss */
 code, kbd, tt, var {
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 5 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   padding: 0 5px;
-  /* 9 */
   padding: 0 0.3125rem;
-  /* 9 */
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 5 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   margin: 0 2px;
-  /* 9 */
   margin: 0 0.125rem;
-  /* 9 */
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   font-size: 12px;
-  /* 9 */
   font-size: 0.75rem;
-  /* 9 */
   color: #333;
   white-space: nowrap;
   background-color: #F8F8F8;
@@ -2850,28 +2786,12 @@ var {
 /* line 29, ../sass/framework/molecules/_code.scss */
 pre {
   display: block;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   padding: 9.5px;
-  /* 9 */
   padding: 0.59375rem;
-  /* 9 */
   margin: 0 0 1.666em;
   color: #333333;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   font-size: 13px;
-  /* 9 */
   font-size: 0.8125rem;
-  /* 9 */
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f5f5f5;
@@ -2927,16 +2847,8 @@ pre code {
   border-style: solid;
   border-width: 0;
   margin-bottom: 0;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   font-size: 16px;
-  /* 9 */
-  font-size: 1rem;
-  /* 9 */ }
+  font-size: 1rem; }
 
 /* line 51, ../sass/framework/molecules/_panel.scss */
 .panel__heading {
@@ -2946,16 +2858,8 @@ pre code {
 .panel__title {
   margin-top: 0;
   margin-bottom: 0;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
   font-size: 16px;
-  /* 9 */
-  font-size: 1rem;
-  /* 9 */ }
+  font-size: 1rem; }
 
 /* line 64, ../sass/framework/molecules/_panel.scss */
 .panel__footer {
@@ -2966,63 +2870,206 @@ pre code {
   list-style-type: none;
   margin-left: 0; }
 
-/* line 2, ../sass/framework/molecules/_scrollable.scss */
-.scrollable {
-  position: relative;
-  overflow: hidden; }
-/* line 6, ../sass/framework/molecules/_scrollable.scss */
-.scrollable > div {
-  overflow-x: auto; }
-/* line 10, ../sass/framework/molecules/_scrollable.scss */
-.scrollable:after {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 50px;
-  height: 100%;
-  border-radius: 10px 0 0 10px/50% 0 0 50%;
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.25);
-  content: ''; }
-
-/* line 22, ../sass/framework/molecules/_scrollable.scss */
-.scrollable > div::-webkit-scrollbar {
-  height: 12px; }
-
-/* line 25, ../sass/framework/molecules/_scrollable.scss */
-.scrollable > div::-webkit-scrollbar-track {
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15) inset;
-  background: #f0f0f0; }
-
-/* line 29, ../sass/framework/molecules/_scrollable.scss */
-.scrollable > div::-webkit-scrollbar-thumb {
-  border-radius: 6px;
-  background: #ccc; }
-
-/* ==========================================================================
-   COMPOUNDS
-   Groupings of molecular objects to create common components
-   ========================================================================== */
-/* line 7, ../sass/framework/compounds/_primary-nav.scss */
-.menu-primary {
-  position: relative; }
-
-/* line 54, ../sass/framework/compounds/_primary-nav.scss */
-.nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
-  display: block; }
-
-/* line 64, ../sass/framework/compounds/_primary-nav.scss */
-.nav-menu-toggle {
-  position: absolute;
-  right: 1.875em;
-  top: -5.3125em; }
-
-/* #Site Logo 
-
-	<a href="/" class="site-logo" title="Return to website homepage">
-		<img src="http://www.placehold.it/200x100" alt="My Logo">
-	</a>    
+/* #ADDRESS */
+/* Create standard "address" formatting without being tied to specific markup
 */
-/* line 9, ../sass/framework/compounds/_site-logo.scss */
+/* line 7, ../sass/framework/molecules/_address.scss */
+.address {
+  margin-bottom: 1.666em; }
+
+/* line 11, ../sass/framework/molecules/_address.scss */
+.address__line {
+  display: block;
+  clear: both; }
+
+/* ============================================================ */
+/* ============================================================ */
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icons/fonts/icomoon.eot");
+  src: url("../fonts/icons/fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/fonts/icomoon.woff") format("woff"), url("../fonts/icons/fonts/icomoon.ttf") format("truetype"), url("../fonts/icons/fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 25, ../sass/framework/molecules/_icons.scss */
+.icon, .toggle i {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 44, ../sass/framework/molecules/_icons.scss */
+.icon--gray, .icon--grey {
+  color: #bdc3c7; }
+
+/* line 51, ../sass/framework/molecules/_icons.scss */
+.icon--large {
+  font-size: 32px; }
+
+/* line 52, ../sass/framework/molecules/_icons.scss */
+.icon--huge {
+  font-size: 64px; }
+
+/* line 53, ../sass/framework/molecules/_icons.scss */
+.icon--natural {
+  font-size: inherit; }
+
+/* line 63, ../sass/framework/molecules/_icons.scss */
+.icon-fallback-text .icon, .icon-fallback-text .toggle i, .toggle .icon-fallback-text i {
+  display: none; }
+
+/*
+ADDED BY afontgarde.js:
+.supports-fontface.FONT_NAME.supports-generatedcontent .icon-fallback-text .icon {
+    display: inline-block;
+}*/
+/* line 75, ../sass/framework/molecules/_icons.scss */
+.icon-fallback-glyph .text, .icon-fallback-img .text {
+  /* visually hide but accessible (h5bp.com) */
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
+  height: 1px;
+  width: 1px; }
+
+/* Careful, don’t use adjoining classes here (IE7) */
+/* line 85, ../sass/framework/molecules/_icons.scss */
+.supports-no-generatedcontent .icon-fallback-glyph .text {
+  clip: auto;
+  overflow: visible;
+  position: static;
+  height: auto;
+  width: auto; }
+
+/*
+ADDED BY afontgarde.js:
+.supports-fontface.FONT_NAME .icon-fallback-glyph .icon:before {
+    font-size: inherit;
+    line-height: inherit;
+}*/
+/* line 98, ../sass/framework/molecules/_icons.scss */
+.icon-fallback-img .icon, .icon-fallback-img .toggle i, .toggle .icon-fallback-img i {
+  display: inline-block; }
+
+/* line 101, ../sass/framework/molecules/_icons.scss */
+.icon-fallback-img .icon:before, .icon-fallback-img .toggle i:before, .toggle .icon-fallback-img i:before {
+  content: ""; }
+
+/* The img fallback version is not as reliable since it does not check to make sure the fontloaded font has loaded. If we did add the .fontloaded class, it would unnecessarily request the fallback image. */
+/* line 105, ../sass/framework/molecules/_icons.scss */
+.supports-fontface.supports-generatedcontent .icon-fallback-img .icon, .supports-fontface.supports-generatedcontent .icon-fallback-img .toggle i, .toggle .supports-fontface.supports-generatedcontent .icon-fallback-img i {
+  background-image: none; }
+
+/* line 118, ../sass/framework/molecules/_icons.scss */
+.icon-twitter:before {
+  content: "\e600"; }
+
+/* line 121, ../sass/framework/molecules/_icons.scss */
+.icon-facebook:before {
+  content: "\e601"; }
+
+/* line 124, ../sass/framework/molecules/_icons.scss */
+.icon-vimeo:before {
+  content: "\e602"; }
+
+/* line 127, ../sass/framework/molecules/_icons.scss */
+.icon-linkedin:before {
+  content: "\e603"; }
+
+/* line 130, ../sass/framework/molecules/_icons.scss */
+.icon-youtube:before {
+  content: "\e604"; }
+
+/* line 133, ../sass/framework/molecules/_icons.scss */
+.icon-instagram:before {
+  content: "\e605"; }
+
+/* line 136, ../sass/framework/molecules/_icons.scss */
+.icon-google-plus:before {
+  content: "\e606"; }
+
+/* line 139, ../sass/framework/molecules/_icons.scss */
+.icon-hamburger:before, .toggle--menu i:before {
+  content: "\e607"; }
+
+/* line 142, ../sass/framework/molecules/_icons.scss */
+.icon-cross:before, .toggle--close i:before {
+  content: "\e608"; }
+
+/* ============================================================ */
+/* ============================================================ */
+/* line 19, ../sass/framework/molecules/_social-icons.scss */
+.social-icon {
+  margin-top: 0;
+  font-size: 32px;
+  font-size: 2rem; }
+
+/* line 25, ../sass/framework/molecules/_social-icons.scss */
+.social-icon--small {
+  font-size: 16px;
+  font-size: 1rem; }
+
+/* line 34, ../sass/framework/molecules/_social-icons.scss */
+.social-icon--vimeo:before {
+  margin-left: 0 !important;
+  margin-top: 16px !important; }
+
+/* line 41, ../sass/framework/molecules/_social-icons.scss */
+.social-icon--twitter:before {
+  margin-top: 0.3em !important;
+  margin-left: 0.1em !important; }
+
+/* ============================================================ */
+/* ============================================================ */
+/* line 19, ../sass/framework/molecules/_toggle.scss */
+.toggle {
+  display: block;
+  text-decoration: none; }
+
+/* line 34, ../sass/framework/molecules/_toggle.scss */
+.toggle--menu {
+  font-size: 30px;
+  font-size: 1.875rem; }
+
+/* line 49, ../sass/framework/molecules/_toggle.scss */
+.toggle--close {
+  font-size: 30px;
+  font-size: 1.875rem; }
+
+/* line 11, ../sass/framework/compounds/_primary-nav.scss */
+.nav-primary {
+  position: relative;
+  background-color: #eeeeee; }
+/* line 20, ../sass/framework/molecules/_menu.scss */
+.nav-primary a {
+  display: block;
+  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
+  text-decoration: none; }
+/* line 28, ../sass/framework/molecules/_menu.scss */
+.nav-primary > li {
+  position: relative; }
+/* line 35, ../sass/framework/molecules/_menu.scss */
+.nav-primary li {
+  clear: both; }
+/* line 39, ../sass/framework/molecules/_menu.scss */
+.nav-primary a {
+  text-align: left; }
+/* line 51, ../sass/framework/molecules/_menu.scss */
+.nav-primary a {
+  text-align: center; }
+/* line 57, ../sass/framework/molecules/_menu.scss */
+.nav-primary > li {
+  float: left;
+  clear: none; }
+
+/* line 3, ../sass/framework/compounds/_site-logo.scss */
 .site-logo {
   display: -moz-inline-stack;
   display: inline-block;
@@ -3030,33 +3077,31 @@ pre code {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
+  width: 200px;
+  height: 80px;
   border: 0;
   padding: 0;
   margin: 1.666em 0;
-  vertical-align: bottom; }
-/* line 15, ../sass/framework/compounds/_site-logo.scss */
-.site-logo a {
+  vertical-align: bottom;
   text-indent: -999em;
   text-align: left;
   direction: ltr;
-  display: block;
-  position: relative;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-image: url('../images/site-logo.png?1389865799');
-  width: 200px;
-  height: 80px; }
-/* line 28, ../sass/framework/compounds/_site-logo.scss */
-.site-logo a:hover, .site-logo a:focus {
+  background-size: 100%; }
+/* line 20, ../sass/framework/compounds/_site-logo.scss */
+.site-logo:hover, .site-logo:focus {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
-  -webkit-transition: opacity 0.5s ease-out;
-  -moz-transition: opacity 0.5s ease-out;
-  -o-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out; }
-/* line 40, ../sass/framework/compounds/_site-logo.scss */
-.lt-ie9 .site-logo img {
-  max-width: none; }
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease; }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+  /* line 3, ../sass/framework/compounds/_site-logo.scss */
+  .site-logo {
+    background-image: url('../images/site-logo--retina.png?1389865799'); } }
 
 /* #Site Credit */
 /* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
@@ -3112,12 +3157,16 @@ pre code {
 .layout-2c-l .main {
   float: left; }
 
+/* line 52, ../sass/framework/compounds/_page-layouts.scss */
+.layout-1c .column-container {
+  margin-left: 0; }
 /* line 57, ../sass/framework/compounds/_page-layouts.scss */
 .layout-1c .main, .layout-1c .sub {
   float: none;
   width: auto;
   clear: both;
-  overflow: visible; }
+  overflow: visible;
+  padding-left: 0; }
 
 /* #Social Actions */
 /* Creates progressively enhanced official Twitter, Facebook and LinkedIn share icons. When JavaScript is available the default HTML is replaced using the Socialite library (https://github.com/dbushell/Socialite) which pulls in the correct social media scripts to create the official widgets */
@@ -3202,11 +3251,11 @@ pre code {
   margin: 0;
   padding: 0;
   zoom: 1; }
-/* line 131, ../sass/framework/imports/_mixins.scss */
+/* line 129, ../sass/framework/imports/_mixins.scss */
 .gallery:before {
   content: "";
   display: table; }
-/* line 136, ../sass/framework/imports/_mixins.scss */
+/* line 134, ../sass/framework/imports/_mixins.scss */
 .gallery:after {
   content: "";
   display: table;
@@ -3280,37 +3329,100 @@ pre code {
         <input type="submit" class="search-form__submit" name="submit" value="<?php esc_attr_e( 'Search', 'tanlinell' ); ?>" />
     </form>
 */
-/* line 16, ../sass/framework/compounds/_search-form.scss */
+/* line 18, ../sass/framework/compounds/_search-form.scss */
+.search-form {
+  position: relative; }
+/* line 21, ../sass/framework/compounds/_search-form.scss */
 .search-form .search-form__query {
-  width: 70%;
-  /* 3 */
-  /* 3 */
-  /* 4 */
-  /* 6 */
-  /* 6 */
-  /* 7 */
-  max-width: 300px;
-  /* 9 */
-  max-width: 18.75rem;
-  /* 9 */ }
+  max-width: none; }
 
-/* line 26, ../sass/framework/compounds/_search-form.scss */
-.search-form__query {
-  display: inline-block;
+/* line 31, ../sass/framework/compounds/_search-form.scss */
+.search-form__query, .search-form__query[type="search"] {
+  display: block;
   margin-bottom: 0;
-  vertical-align: middle;
-  width: 80%;
-  letter-spacing: normal;
-  border-right: 0; }
-
-/* line 35, ../sass/framework/compounds/_search-form.scss */
-.search-form__submit {
+  padding-right: 100px;
+  padding-right: 6.25rem;
   letter-spacing: normal; }
 
-/* ==========================================================================
-   HELPERS
-   Global overides. Utility classes intended to overide all other styles.
-   ========================================================================== */
+/* line 38, ../sass/framework/compounds/_search-form.scss */
+.search-form__submit {
+  padding: 0 15px;
+  padding: 0 0.9375rem;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  border: 0;
+  letter-spacing: normal; }
+
+/* line 57, ../sass/framework/compounds/_search-form.scss */
+.search-form--inline {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline; }
+
+/* ============================================================ */
+/* ============================================================ */
+/* line 22, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__item {
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  padding-bottom: 5px;
+  padding-bottom: 0.3125rem; }
+/* line 26, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+/* line 34, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__link {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+  text-decoration: none; }
+
+/* line 42, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__icon, .social-icons-list__name {
+  letter-spacing: normal;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-bottom: 5px;
+  margin-bottom: 0.3125rem; }
+
+/* line 51, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__icon {
+  margin-right: 10px;
+  margin-right: 0.625rem; }
+
+/* line 55, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__icon--small {
+  font-size: 16px;
+  font-size: 1rem; }
+
+/* line 61, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__name {
+  text-decoration: none; }
+
+/* line 73, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list--inline .social-icons-list__item {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-right: 25px;
+  margin-right: 1.5625rem;
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
 /* #Helpers */
 /* Set of simple classes to implement common CSS patterns */
 /* ##Clearfix & Clearing */
@@ -3657,9 +3769,75 @@ pre code {
 
 /* ============================================================ */
 /* ============================================================ */
+/*
+@include headings(1) {
+
+	.wf-active & {
+
+	}
+}
+
+@include headings(2,6) {
+
+
+	.wf-active & {
+
+	}
+}
+*/
+/*
+a {
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		//color: $pGreen;
+		//text-decoration: underline;
+	}
+
+	&:active {
+		//color: $tGreen;
+	}
+}
+*/
+/* ============================================================ */
+/* ============================================================ */
 /* line 82, ../sass/site/_page.scss */
 .nav-primary .sub-menu .sub-menu {
   display: none !important; }
+
+/* line 131, ../sass/site/_page.scss */
+.nav-sub .children {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+  position: absolute;
+  left: -999em; }
+/* line 137, ../sass/site/_page.scss */
+.nav-sub .children li:last-child {
+  border-bottom: 0; }
+/* line 141, ../sass/site/_page.scss */
+.nav-sub .children a {
+  padding-left: 25px;
+  padding-left: 1.5625rem;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9; }
+
+/* line 152, ../sass/site/_page.scss */
+.nav-sub .current_page_item .children, .nav-sub .current_page_ancestor .children, .nav-sub .current-cat .children, .nav-sub .current-cat-parent .children {
+  position: static;
+  left: auto; }
+
+/* line 164, ../sass/site/_page.scss */
+.site-content {
+  padding-top: 1.666em;
+  padding-bottom: 1.666em; }
+
+/* line 169, ../sass/site/_page.scss */
+.site-content--flush {
+  padding-top: 0;
+  padding-bottom: 0; }
 
 /* 
 .pager {

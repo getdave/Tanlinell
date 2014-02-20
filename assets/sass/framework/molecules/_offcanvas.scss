@@ -1,0 +1,160 @@
+/* ============================================================ */
+
+// OFFCANVAS NAV
+
+// Description:
+//
+// scoped styles for JS powered offcanvas nav. Styles are heavily
+// scoped via MQs to avoid effecting larger screens (avoids
+// unwanted specificity issues). Offcanvas functionality requires
+// JS module to initialise classnames based on DOM events
+
+/* ============================================================ */
+
+@mixin tan-offcanvas(
+                        $wrapper: ".offcanvas__wrapper",
+                        $offRight: ".offcanvas__offscreen-right",
+                        $offLeft: ".offcanvas__offscreen-left",
+                        $offWidth: 260px,
+                        $positioning: "absolute" // 
+                    ) {
+
+    // ==========================================================================
+    // BASE
+    // required for positioning context and clipping in various browsers
+    // ==========================================================================
+    
+    // rules for the selector on which the mixin was called
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+
+    // Remove transition flicker on phones
+    @include vendor(backface-visibility, hidden);
+    
+
+    // ==========================================================================
+    // WRAPPER
+    // parent element that contains both the main page content & off screen el's
+    // ==========================================================================
+
+    #{$wrapper} {
+        position: relative;
+        width: 100%;
+        overflow-x: hidden; // clip the overflow on older browsers as Android seems to have issues with overflow-x
+        
+        
+        // Remove transition flicker on phones
+        @include vendor(backface-visibility, hidden);
+
+        .csstransforms3d & {
+            overflow-x: visible; // reinstate visibility of overflow on more capable browsers
+            @include translate3d(0, 0, 0); // make sure render layer is precomposed
+            @include transition(-webkit-transform 0.3s ease);
+        }
+    }
+
+
+    // ==========================================================================
+    // OFFSCREEN
+    // the element that is hidden off screen
+    // ==========================================================================
+
+    /* %offcanvas__offscreen {
+            position: absolute;
+            top: 0;
+            width: $offWidth;
+            height: 100% !important;
+        } */
+
+    // (Offscreen) LEFT
+    // ==========================================================================
+    #{$offLeft} {
+        position: #{$positioning};
+        top: 0;
+        width: $offWidth;
+        //height: 0;
+        height: 100%;
+        overflow: hidden;
+        left: -$offWidth;
+        right: auto;
+
+        // Remove transition flicker on phones
+        @include vendor(backface-visibility, hidden);
+
+        .csstransforms3d & {
+            left: 0;
+            @include translate3d(-$offWidth, 0, 0);
+        }
+    }
+
+    // (Offscreen) RIGHT
+    // =========================================================================
+    #{$offRight} {
+        position: #{$positioning};
+        top: 0;
+        width: $offWidth;
+        height: 100%;
+        left: auto;
+        right: -$offWidth;
+
+        // Remove transition flicker on phones
+        @include vendor(backface-visibility, hidden);
+
+        .csstransforms3d & {
+            right: 0;
+            @include translate3d($offWidth, 0, 0);
+        }
+    }
+
+
+    // ==========================================================================
+    // STATE: ACTIVE
+    // move the "wrapper" element left/right to reveal "off" element
+    // ==========================================================================
+
+    // ACTIVE RIGHT
+    // ==========================================================================
+
+    &.offcanvas--active-right {
+        #{$wrapper} {
+            right: $offWidth;
+            overflow-x: visible; // required to allow overflow to show whilst active (Android Browsers)
+
+            .csstransforms3d & {
+                right: auto;
+
+                @include translate3d(-$offWidth, 0, 0);
+            }
+        }
+        
+        /* #{$offRight} {
+                    height: 100% !important;
+                } */
+    }
+
+
+    // ACTIVE LEFT
+    // ==========================================================================
+
+    &.offcanvas--active-left {
+        #{$wrapper} {
+            left: $offWidth;
+            overflow-x: visible; // required to allow overflow to show whilst active (Android Browsers)
+
+            .csstransforms3d & {
+                left: auto;
+                
+
+                @include translate3d($offWidth, 0, 0);
+            }
+        }
+
+        /* #{$offLeft} {
+                    height: 100% !important;
+                } */
+    }
+}//end mixin
+
+

@@ -59,7 +59,7 @@ $half_gutter_width: ($gutter/2);
                 // Reduced value of $n
                 $n-r: $n/$g;
             }
-            
+
             // Check if the reduced value of $n was also supplied in the list
             // of units to be built
             $canreduce: contains($units, $n-r);
@@ -85,7 +85,7 @@ $half_gutter_width: ($gutter/2);
 // ==========================================================================
 
 
-// Font Size
+// FONT SIZE
 @mixin fsize($font-size, $line-height:true) {
     @include rem(font-size, $font-size);
     @if $line-height == true{
@@ -93,29 +93,27 @@ $half_gutter_width: ($gutter/2);
     }
 }
 
-// Fontface
-@mixin font-face( $font-name, $font-path :"assets" ) {
-
-    @font-face{
-        font-family: $font-name;
-        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot');
-        src:url('#{$font-path}/#{$font-name}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
-            url('#{$font-path}/#{$font-name}/#{$font-name}.woff') format('woff'),
-            url('#{$font-path}/#{$font-name}/#{$font-name}.ttf') format('truetype'),
-            url('#{$font-path}/#{$font-name}/#{$font-name}.svg##{$font-name}') format('svg');
-        font-weight:normal;
-        font-style:normal;
-    }
-}
-
-
-
+// HEADINGS
 // Easily create and apply styles to multiple heading levels
 @mixin headings($from: 1, $to: 6){
     @for $i from $from through $to{
       h#{$i}, .h#{$i} {
         @content
       }
+    }
+}
+
+// FONTFACE REGISTRATION
+@mixin register-font( $font-name, $font-path :"../fonts" ) {
+    @font-face{
+        font-family: $font-name;
+        src:url('#{$font-path}/#{$font-name}.eot');
+        src:url('#{$font-path}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+            url('#{$font-path}/#{$font-name}.woff') format('woff'),
+            url('#{$font-path}/#{$font-name}.ttf') format('truetype'),
+            url('#{$font-path}/#{$font-name}.svg##{$font-name}') format('svg');
+        font-weight:normal;
+        font-style:normal;
     }
 }
 
@@ -248,37 +246,37 @@ $half_gutter_width: ($gutter/2);
 
 // REMs - the ultimate REM mixin
 @mixin rem($property, $values) {
-  $px : (); /* 3 */
-  $rem: (); /* 3 */
+  $px : ();
+  $rem: ();
 
-  @each $value in $values { /* 4 */
+  @each $value in $values {
 
-    @if $value == 0 or $value == auto { /* 5 */
+    @if $value == 0 or $value == auto {
       $px : append($px , $value);
       $rem: append($rem, $value);
     }
 
     @else {
-      $unit: unit($value);    /* 6 */
-      $val: parseInt($value); /* 6 */
+      $unit: unit($value);
+      $val: parseInt($value);
 
-      @if $unit == "px" {  /* 7 */
+      @if $unit == "px" {
         $px : append($px,  $value);
         $rem: append($rem, ($val / 16 + rem));
       }
 
-      @if $unit == "rem" { /* 7 */
+      @if $unit == "rem" {
         $px : append($px,  ($val * 16 + px));
         $rem: append($rem, $value);
       }
     }
   }
 
-  @if $px == $rem {     /* 8 */
-    #{$property}: $px;  /* 9 */
+  @if $px == $rem {
+    #{$property}: $px;
   } @else {
-    #{$property}: $px;  /* 9 */
-    #{$property}: $rem; /* 9 */
+    #{$property}: $px;
+    #{$property}: $rem;
   }
 }
 

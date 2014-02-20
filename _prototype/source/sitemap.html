@@ -1,0 +1,27 @@
+---
+layout: 1col
+title: Sitemap
+---
+
+<main class="main">
+	<div class="container">
+		<h1 class="">Index of All Pages</h1>
+		
+		<ul>
+			{% assign pages_list = site.pages %}
+			{% for node in pages_list %}
+			{% if node.title == "Sitemap" or node.title == null %}
+			
+			{% else %}
+				<li><a href="{{node.url}}">{{node.title}}</a></li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+		{% assign pages_list = nil %}
+	</div>
+</main>
+
+
+
+
+

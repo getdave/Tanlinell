@@ -1,0 +1,48 @@
+@if $use-social-icons == true {
+
+/* ============================================================ */
+
+// SOCIAL ICONS
+
+// Description: style and layout rules for standard social media
+// icon (via fontface) set. The icons themselves should be applied 
+// via Icomoon (or similar) fontface. These classes simply modify 
+// the presentation of the default iconset
+
+/* ============================================================ */
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+.social-icon {
+	margin-top: 0;
+	@include rem(font-size,32px);
+}
+
+
+.social-icon--small {
+	@include rem(font-size,16px);
+}
+
+
+// POSITIONING MODIFIERS
+// ==========================================================================
+
+.social-icon--vimeo {
+	&:before {
+		margin-left: 0 !important;
+		margin-top: 16px !important;
+	}
+}
+
+.social-icon--twitter {
+	&:before {
+		margin-top: 0.3em !important;
+		margin-left: 0.1em !important;
+	}
+}
+
+
+} //endif

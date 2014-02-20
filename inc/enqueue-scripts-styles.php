@@ -16,7 +16,7 @@ function tanlinell_scripts() {
 	
 	//global $wp_styles;
 
-	//wp_enqueue_style( 'tanlinell', get_stylesheet_directory_uri() . '/style.css' );
+	//wp_enqueue_style( 'tanlinell', get_stylesheet_directory_uri() . '/f4c7e169.style.css' );
 
 	//wp_enqueue_style( 'master', get_stylesheet_directory_uri() . '/assets/css/master.css', false );
     //$wp_styles->add_data( 'master', 'conditional', '(gt IE 8) | (IEMobile)' );
@@ -57,7 +57,7 @@ function tanlinell_scripts() {
 	}
 
 	// Site.js - compiled and minified Site JS
-	wp_register_script('site', get_template_directory_uri() . '/assets/js/c4b21890.site.min.js', array('jquery'), null , true );
+	wp_register_script('site', get_template_directory_uri() . '/assets/js/808ad5b7.site.min.js', array('jquery'), null , true );
 	wp_enqueue_script('site');
 
 	/**

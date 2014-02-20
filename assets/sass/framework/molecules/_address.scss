@@ -1,0 +1,16 @@
+@if $use-address == true {
+/* #ADDRESS */
+
+/* Create standard "address" formatting without being tied to specific markup
+*/
+
+.address {
+    margin-bottom: $baseLineHeight;
+}
+
+.address__line {
+    display: block;
+    clear: both;
+}
+
+}//endif

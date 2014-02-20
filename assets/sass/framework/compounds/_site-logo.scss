@@ -1,45 +1,29 @@
 @if $use-site-logo == true {
-/* #Site Logo 
-
-	<a href="/" class="site-logo" title="Return to website homepage">
-		<img src="http://www.placehold.it/200x100" alt="My Logo">
-	</a>    
-*/
 
 .site-logo {
 	@include inline-block;
+	width: image-width($logo);
+	height: image-height($logo);
 	border: 0;
 	padding: 0;
 	margin: $baseLineHeight 0;
 	vertical-align: bottom;
-	a {
-		text-indent: -999em; 
-		text-align:left;
-		direction:ltr;
-		display: block;
-		position: relative;
-		background-repeat: no-repeat;
-		background-position: 0 0;
-		background-image: image-url($logo);
-		width: image-width($logo);
-		height: image-height($logo);
+	text-indent: -999em; 
+	text-align:left;
+	direction:ltr;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-image: image-url($logo);
+	background-size: 100%;
 
-		&:hover,
-		&:focus {
-			@include opacity(0.8);	
-
-			-webkit-transition: opacity 0.5s ease-out;
-			-moz-transition: opacity 0.5s ease-out;
-			-o-transition: opacity 0.5s ease-out;
-			transition: opacity 0.5s ease-out;
-		}
+	&:hover,
+	&:focus {
+		@include opacity(0.8);	
+		@include transition(opacity 0.5s ease);
 	}
 
-	img {
-		// Fixes IE8 bug relating to max-width
-		.lt-ie9 & {
-			max-width: none;
-		}
+	@include hdpi() {
+		background-image: image-url($logoRetina);
 	}
 }
 

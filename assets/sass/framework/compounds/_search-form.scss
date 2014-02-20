@@ -10,12 +10,16 @@
     </form>
 */
 
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
 .search-form {
-    @extend .input-append;
+    position: relative;
 
     .search-form__query {
-        width: 70%;
-        @include rem(max-width,300px);
+        max-width: none;
     }
 }
 
@@ -23,19 +27,35 @@
     @extend .vh;
 }
 
-.search-form__query {
-    display: inline-block;
+.search-form__query,
+.search-form__query[type="search"] {
+    display: block;
     margin-bottom: 0;
-    vertical-align: middle;
-    width: 80%;
+    @include rem(padding-right,100px);
     letter-spacing: normal;
-    border-right: 0;
 }
 
 .search-form__submit {
-    @extend .btn;
+    @extend .btn; 
+    @include rem(padding,0 15px); // remove "btn" padding
+    
+    // Ensure button occupies height of the input
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    border: 0;
     letter-spacing: normal;
 }
 
+
+// ==========================================================================
+// MODIFIER: INLINE
+// occupy only the space defined by inline-block
+// ==========================================================================
+
+.search-form--inline {
+    @include inline-block;
+}
 
 }//endif

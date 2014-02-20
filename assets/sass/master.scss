@@ -49,10 +49,13 @@
 //@import "site/modules/_EXAMPLE_MODULE.scss";
 
 
-// SITE LAYOUT
+// GLOBAL
 // ==========================================================================
 
-// Page level layout styles (banner, navigation, content, contentinfo)
+// Global Typography
+@import "site/_typo.scss";
+
+// Global Page level layout styles (banner, navigation, content, contentinfo)
 @import "site/_page.scss";
 
 

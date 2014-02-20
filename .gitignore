@@ -5,3 +5,7 @@ db_deployments_untracked_config.json
 error_log
 cache/
 .sass-cache/
+
+
+_prototype/build/*
+_patterns/build/*

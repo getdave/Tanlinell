@@ -1,71 +1,21 @@
 @if $use-primary-nav == true {
 
 // ==========================================================================
-// BASE
-// ==========================================================================
 
-.menu-primary {
-	position: relative;
-}
+// PRIMARY NAVIGATION
+
+// Description: styles for standard primary navigation
+
+// ==========================================================================	
 
 .nav-primary {
-	@extend %responsive-menu;
+	@include tan-nav-menu;
+	@include tan-nav-menu--stacked;
 
-	a {
-		@extend %responsive-menu__link;		
-	}	
-}
-
-// TOP LEVEL ITEMS
-// ==========================================================================
-.nav-primary {
-	@extend %responsive-menu;
-
-	> li {
-		@extend %responsive-menu__item;	
-
-		> a {
-			@extend %responsive-menu__link--top;
-		}	
+	@include respond-to($nav-break-1) {
+		@include tan-nav-menu--inline;
 	}
 }
 
-
-
-
-// SUBMENUS
-// ==========================================================================
-.nav-primary .sub-menu {
-	@extend .dropdown-menu !optional;
-
-	li {
-		@extend .dropdown-menu__item !optional;
-	}
-
-	a {
-		@extend .dropdown-menu__link !optional;
-	}
-}
-
-// Show submenu on :hover/:focus
-.nav-primary li {
-	@include respond-to($mobileBreak) {		
-		&:hover .sub-menu,
-		&:focus .sub-menu {
-			display: block;
-		}
-	}
-}
-
-
-
-// RESPONSIVENESS
-// ==========================================================================
-.nav-menu-toggle {
-	@extend %responsive-menu__toggle-trigger;
-	position: absolute;
-	right: rsize(30px);
-	top: rsize(-85px);
-}
 
 }//endif

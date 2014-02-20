@@ -30,6 +30,7 @@ $debug-mode:					false !default;
 // ==========================================================================
 
 $logo: 							"site-logo.png" !default;
+$logoRetina: 					"site-logo--retina.png" !default;
 $site-credit:					"site-credit.png" !default;
 
 // Tones
@@ -90,6 +91,12 @@ $infoText:                		#3a87ad !default;
 $infoBackground:          		#d9edf7 !default;
 $infoBorder:              		darken(adjust-hue($infoBackground, -10), 7%) !default;
 
+
+// Icons
+// ==========================================================================
+
+$iconFontFamily: 				"icomoon" !default;
+$bIconDefaultChars: 			true !default;
 
 // ==========================================================================
 // TYPOGRAPHY
@@ -192,6 +199,11 @@ $break-xlarge:          		1382px !default;
 $mobileBreak:					$break-medium !default;
 
 
+// Nav Breakpoints
+$nav-break-1: 					$break-medium;
+$nav-break-2: 					$break-large;
+
+
 // Grid
 // ==========================================================================
 
@@ -234,6 +246,7 @@ $zindex-tier-6:           		6000 !default;
 // ==========================================================================
 
 // Default "on"
+$use-headings: 					true !default;
 $use-tables: 					true !default;
 $use-media-block: 				true !default;
 $use-nav: 						true !default;
@@ -250,8 +263,10 @@ $use-pagination: 				true !default;
 $use-code:						true !default;
 $use-block-list: 				true !default;
 $use-panel: 					true !default;
-$use-scrollable: 				true !default;
-
+$use-address: 					true !default;
+$use-icons: 					true !default;
+$use-social-icons: 				true !default;
+$use-toggle: 					true !default;
 
 // Default "off"
 $use-title-block:				false !default;
@@ -264,6 +279,7 @@ $use-labels-badges: 			false !default;
 $use-split: 					false !default;
 $use-tabs: 						false !default;
 $use-sprite:					false !default;
+$use-scrollable: 				false !default;
 
 // Compounds
 // ==========================================================================
@@ -277,10 +293,9 @@ $use-site-credit: 				true !default;
 $use-site-colophon: 			true !default;
 $use-social-actions: 			true !default;
 $use-search-form: 				true !default;
-
+$use-social-icons-list: 		true !default;
 
 // Default "off"
-$use-social-icons: 				false !default;
 $use-magnific: 					false !default;
 $use-flexslider: 				false !default;
 $use-gravity-forms: 			false !default;

@@ -1,0 +1,166 @@
+@if $use-headings == true {
+
+/* #Headings */
+/* Based on the ancient Typographic scale */
+/* http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4.
+
+/* ###Standard Headings */
+/* Note that all heading sizes are aliased via the `.hN` classes. So if you would like your `<h6>` to look like an `<h1>` then simply add the class `<h3 class="h1" />` */
+
+// All Headings
+@include headings() {
+	margin: 0 0 .5em 0;
+}
+
+// Heading 1
+@include headings(1,1) {
+	@include rem(font-size,$baseFontSize*2);
+	@include rem(line-height,$baseFontSize*2);
+
+	.text-module & {
+		@include rem(margin-top,$baseFontSize*2);
+	}
+
+	@media (min-width: 43.75em) {
+		@include rem(font-size,$baseFontSize*2.5);
+		@include rem(line-height,$baseFontSize*2.5);
+
+		.text-module & {
+			@include rem(margin-top,$baseFontSize*2.5);
+		}
+	}
+
+	@media (min-width: 56.25em) {
+		@include rem(font-size,$baseFontSize*3);
+		@include rem(line-height,$baseFontSize*3);
+
+		.text-module & {
+			@include rem(margin-top,$baseFontSize*3);
+		}
+	}
+}
+
+// Heading 2
+@include headings(2,2) {
+	@include rem(font-size,$baseFontSize*1.625);
+	@include rem(line-height,$baseFontSize*1.625);
+
+	.text-module & {
+		@include rem(margin-top,$baseFontSize*1.625);
+	}
+
+	@media (min-width: 43.75em) {
+		@include rem(font-size,$baseFontSize*2);
+		@include rem(line-height,$baseFontSize*2);
+
+		.text-module & {
+			@include rem(margin-top,$baseFontSize*2);
+		}
+	}
+
+	@media (min-width: 56.25em) {
+		@include rem(font-size,$baseFontSize*2.25);
+		@include rem(line-height,$baseFontSize*2.25);
+
+		.text-module & {
+			@include rem(margin-top,$baseFontSize*2.25);
+		}
+	}
+}
+
+// Heading 3
+@include headings(3,3) {
+	@include rem(font-size,$baseFontSize*1.375);
+	@include rem(line-height,$baseFontSize*1.375);
+
+	.text-module & {
+		@include rem(margin-top,$baseFontSize*1.375);
+	}
+
+	@media (min-width: 43.75em) {
+		@include rem(font-size,$baseFontSize*1.5);
+		@include rem(line-height,$baseFontSize*1.5);
+
+		.text-module & {
+			@include rem(margin-top,$baseFontSize*1.5);
+		}
+	}
+
+	@media (min-width: 56.25em) {
+		@include rem(font-size,$baseFontSize*1.75);
+		@include rem(line-height,$baseFontSize*1.75);
+
+		.text-module & {
+			@include rem(margin-top,$baseFontSize*1.75);
+		}
+	}
+}
+
+// Heading 4
+@include headings(4,4) {
+	@include rem(font-size,$baseFontSize*1.125);
+	@include rem(line-height,$baseFontSize*1.125);
+
+	.text-module & {
+		@include rem(margin-top,$baseFontSize*1.125);
+	}
+}
+
+// Heading 5
+@include headings(5,5) {
+	@include rem(font-size,$baseFontSize*1.1);
+	@include rem(line-height,$baseFontSize*1.1);
+
+	.text-module & {
+		@include rem(margin-top,$baseFontSize*1.1);
+	}
+}
+
+// Heading 6
+@include headings(6,6) {
+	@include rem(font-size,$baseFontSize);
+	@include rem(line-height,$baseFontSize);
+
+	.text-module & {
+		@include rem(margin-top,$baseFontSize);
+	}
+}
+
+
+/* ###Misc Headings */
+
+/* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
+/* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
+
+.giga {
+    @extend .h1;
+
+    @include respond-to($mobileBreak) {
+        font-size: rsize($giga);
+    }
+}
+
+.mega {
+    @extend .h1;
+    @include respond-to($mobileBreak) {
+        font-size: rsize($mega);
+    }
+}
+
+.kilo {
+    @extend .h1;
+    @include respond-to($mobileBreak) {
+        font-size: rsize($kilo);
+    }
+}
+
+
+@include headings() {
+	small {
+		font-weight: normal;
+		line-height: 1;
+		color: #999;
+	}
+}
+
+} //endif

@@ -39,4 +39,18 @@ Borrowed from inuit.css
     padding: $baseLineHeight/3 $baseLineHeight/2;
 }
 
+.block-list--flush-h .block-list__link,
+.block-list__link--flush-h,
+a.block-list__link--flush-h {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.block-list--flush-v .block-list__link,
+.block-list__link--flush-v,
+a.block-list__link--flush-v {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 }//endif
