@@ -1938,54 +1938,6 @@ thead tr:last-child th {
 .islet {
   padding: 0.833em; }
 
-/* line 18, ../sass/framework/molecules/_menu.scss */
-.nav-primary {
-  position: relative;
-  background-color: #eeeeee; }
-
-/* line 29, ../sass/framework/molecules/_menu.scss */
-.nav-primary > li {
-  position: relative;
-  float: left; }
-
-/* line 38, ../sass/framework/molecules/_menu.scss */
-.nav-primary a {
-  display: block;
-  padding: 0.625em 1.25em;
-  text-decoration: none; }
-
-/* line 45, ../sass/framework/molecules/_menu.scss */
-.nav-primary > li > a {
-  text-align: left;
-  text-align: center; }
-
-/* line 58, ../sass/framework/molecules/_menu.scss */
-.narrow-menu-active .nav-primary {
-  display: none;
-  display: block; }
-/* line 67, ../sass/framework/molecules/_menu.scss */
-.is-expanded .nav-primary {
-  display: block; }
-
-/* line 73, ../sass/framework/molecules/_menu.scss */
-.nav-menu-toggle {
-  float: right;
-  display: none;
-  border: 0;
-  background-color: transparent; }
-/* line 80, ../sass/framework/molecules/_menu.scss */
-.narrow-menu-active .nav-menu-toggle {
-  display: block;
-  display: none; }
-
-/* line 100, ../sass/framework/molecules/_menu.scss */
-.nav-menu-toggle span {
-  display: block;
-  height: 3px;
-  width: 20px;
-  margin-bottom: 3px;
-  background-color: #cccccc; }
-
 /* #Item List */
 /* Create standard lists of "post"-like content. 
 */
@@ -2259,7 +2211,7 @@ input.btn, input.search-form__submit {
 	</ul>
 */
 /* line 15, ../sass/framework/molecules/_dropdowns.scss */
-.dropdown-menu, .nav-primary .sub-menu {
+.dropdown-menu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -2275,7 +2227,7 @@ input.btn, input.search-form__submit {
   background-color: #eeeeee; }
 
 /* line 29, ../sass/framework/molecules/_dropdowns.scss */
-.dropdown-menu__item, .nav-primary .sub-menu li {
+.dropdown-menu__item {
   position: relative;
   vertical-align: bottom;
   /* This fixes the IE5 Win gap (no harm done to modern browsers) */
@@ -2286,7 +2238,7 @@ input.btn, input.search-form__submit {
   display: list-item; }
 
 /* line 38, ../sass/framework/molecules/_dropdowns.scss */
-.dropdown-menu__link, .nav-primary .sub-menu a {
+.dropdown-menu__link {
   display: block;
   white-space: nowrap;
   /* forces drop down to stretch to accommodate length of text (and not wrap) */
@@ -3057,19 +3009,32 @@ ADDED BY afontgarde.js:
   margin-top: 0.3em !important;
   margin-left: 0.1em !important; }
 
-/* line 7, ../sass/framework/compounds/_primary-nav.scss */
-.menu-primary {
+/* line 11, ../sass/framework/compounds/_primary-nav.scss */
+.nav-primary {
+  position: relative;
+  background-color: #eeeeee; }
+/* line 20, ../sass/framework/molecules/_menu.scss */
+.nav-primary a {
+  display: block;
+  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
+  text-decoration: none; }
+/* line 28, ../sass/framework/molecules/_menu.scss */
+.nav-primary > li {
   position: relative; }
-
-/* line 54, ../sass/framework/compounds/_primary-nav.scss */
-.nav-primary li:hover .sub-menu, .nav-primary li:focus .sub-menu {
-  display: block; }
-
-/* line 64, ../sass/framework/compounds/_primary-nav.scss */
-.nav-menu-toggle {
-  position: absolute;
-  right: 1.875em;
-  top: -5.3125em; }
+/* line 35, ../sass/framework/molecules/_menu.scss */
+.nav-primary li {
+  clear: both; }
+/* line 39, ../sass/framework/molecules/_menu.scss */
+.nav-primary a {
+  text-align: left; }
+/* line 51, ../sass/framework/molecules/_menu.scss */
+.nav-primary a {
+  text-align: center; }
+/* line 57, ../sass/framework/molecules/_menu.scss */
+.nav-primary > li {
+  float: left;
+  clear: none; }
 
 /* line 3, ../sass/framework/compounds/_site-logo.scss */
 .site-logo {

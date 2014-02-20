@@ -1,116 +1,61 @@
-
-
-// RESPONSIVE MENU
-
-// Description:	Silent selectors to create a mobile first responsive menu. 
-// 				Typically extended onto the primary navigation
-
-
-
-// ==========================================================================
-// SILENT
 // ==========================================================================
 
-// TOP LEVEL
+// TANLINELL NAV MENU
+
+// Description: mixins to create 
+// 1) standard menu styles
+// 2) "stacked" menu style
+// 3) "horiztonal" menu style
+// 
+
 // ==========================================================================
 
-// Navigation <ul> itself
-%responsive-menu {
+@mixin tan-nav-menu() {
 	@extend %nav !optional;
 	position: relative;
 	background-color: $navbar-background;
-
-	@if ($isFixed == false) { // ie: if we're in "Responsive" mode
-		@extend %responsive-menu__toggle-target;
+	
+	// ALL ANCHORS
+	// ==========================================================================
+	a {
+		display: block;		
+		@include rem(padding, 10px 20px);
+		text-decoration: none;
 	}
-}
-
-// Top Level Nav Items
-%responsive-menu__item {
-	position: relative;	
-
-	@include respond-to($mobileBreak) {
-		float: left;			
-	}
-}
-
-// General link styles for nav bar
-%responsive-menu__link {
-	display: block;		
-	padding: rsize(10px) rsize(20px);
-	text-decoration: none;
-}
-
-// Styles specifically for top level of nav bar
-%responsive-menu__link--top {
-	text-align: left;
-	@include respond-to($mobileBreak) {
-		text-align: center;	
+	
+	// TOP LEVEL ITEMS
+	// ==========================================================================
+	> li {
+		position: relative;
 	}
 }
 
 
-// TOGGLE ("RESPONSIVE" MODE)
-// ==========================================================================
-
-// Menu to be toggled by the Trigger element (below)
-%responsive-menu__toggle-target {
-	.narrow-menu-active & {
-		display: none;
-
-		@include respond-to($mobileBreak) {
-			display: block;	
-		}
+@mixin tan-nav-menu--stacked() {
+	li {
+		clear: both;
 	}
 
-	// Script adds "expanded" class to open menu
-	.is-expanded & {
-		display: block;
+	a {
+		text-align: left;
 	}
-}
-
-// Element which is used to trigger the toggle of the menu
-%responsive-menu__toggle-trigger {
-	float: right;
-	display: none;
-	border: 0;
-	background-color: transparent;
-
-
-	.narrow-menu-active & {
-		display: block;
-
-		@include respond-to($mobileBreak) {
-			display: none;	
-		}
-	}
-
-	span {
-		@extend %responsive-menu__icon-bar;
-	}
-
-
-	// In "Fixed" mode we want to def hide the toggle button
-	@if ($isFixed == true) { 
-		display: none !important; 
-	}
-}
-
-// Toggle Trigger Icon Bars
-%responsive-menu__icon-bar {
-	display: block;
-	height: 3px;
-	width: 20px;
-	margin-bottom: 3px;
-	background-color: lighten(#000, 80%);
 }
 
 
 
 
-
-
-
-
-
-
+@mixin tan-nav-menu--inline() { 
+	
+	// ALL ANCHORS
+	// ==========================================================================
+	a {
+		text-align: center;
+	}
+	
+	// TOP LEVEL ITEMS
+	// ==========================================================================
+	> li {
+		float: left;
+		clear: none;
+	}
+}
