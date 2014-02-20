@@ -1,29 +1,3 @@
-/**
- * Tanlinell CSS FRAMEWORK
- * URL: https://github.com/getdave/Tanlinell
- * Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
- * Author: David Smith (@get_dave)
- */
-/**
- * This project aims to be a starter kit for building websites using SASS and Compass.
- *
- * The framework comes as a stand-alone packaged collection of SASS files. The _framework.scss file
- * should be @import'd into your projects' master SASS/SCSS file and extended as required.
- *
- * You should NEVER modify the files of the framework. If you find something you cannot work around it is
- * a bug and should be raised as an issue on Github at:
- *
- * https://github.com/getdave/Tanlinell/issues?state=open
- *
- * This framework borrows heavily and draws inspiration from the great work of the following projects/authors:
-
- * OOCSS 					- https://github.com/stubbornella/oocss
- * Inuit.css 				- https://raw.github.com/csswizardry/inuit.css/
- * SMACSS guidelines 		- http://smacss.com/
- * Twitter Bootstrap		- http://twitter.github.com/bootstrap/
- * ZURB Foundation			- http://foundation.zurb.com/
- *
- */
 @-ms-viewport {
   width: device-width; }
 
@@ -411,10 +385,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* ==========================================================================
-   ATOMS
-   Base styles/objects. Mostly global, tag-based selector rules.
-   ========================================================================== */
 /* #Typography */
 /* 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque suscipit voluptas illo maiores optio cupiditate nam repellat ad voluptatum vitae ipsum quia quae fugiat laborum architecto dignissimos sit! Facere nobis!</p>
@@ -495,7 +465,7 @@ li {
   line-height: 1.666em; }
 
 /* line 127, ../sass/framework/atoms/_typo.scss */
-.list-unstyled {
+.list-unstyled, .social-icons-list {
   margin-left: 0;
   list-style: none; }
 
@@ -785,6 +755,97 @@ img {
    * Intentional redundancy build into each set of unit classes.
    */
   /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p1-2, .p2-4, .p3-6, .p4-8 {
+    width: 50%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p1-3, .p2-6 {
+    width: 33.33333%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p2-3, .p4-6 {
+    width: 66.66667%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p1-4, .p2-8 {
+    width: 25%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p3-4, .p6-8 {
+    width: 75%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p1-5 {
+    width: 20%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p2-5 {
+    width: 40%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p3-5 {
+    width: 60%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p4-5 {
+    width: 80%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p1-6 {
+    width: 16.66667%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p5-6 {
+    width: 83.33333%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p1-7 {
+    width: 14.28571%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p2-7 {
+    width: 28.57143%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p3-7 {
+    width: 42.85714%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p4-7 {
+    width: 57.14286%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p5-7 {
+    width: 71.42857%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p6-7 {
+    width: 85.71429%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p1-8 {
+    width: 12.5%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p3-8 {
+    width: 37.5%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p5-8 {
+    width: 62.5%; }
+
+  /* line 68, ../sass/framework/imports/_mixins.scss */
+  .p7-8 {
+    width: 87.5%; } }
+@media only screen and (min-width: 48em) {
+  /* Proportional units
+     ========================================================================== */
+  /*
+   * Specify the proportional width of an object.
+   * Primarily for, but not limited to, use with `.grid__cell` components.
+   * Intentional redundancy build into each set of unit classes.
+   */
+  /* line 68, ../sass/framework/imports/_mixins.scss */
   .l1-2, .l2-4, .l3-6, .l4-8, .gallery-row .col-4 {
     width: 50%; }
 
@@ -868,11 +929,11 @@ img {
   .l7-8 {
     width: 87.5%; }
 
-  /* line 67, ../sass/framework/atoms/_grid.scss */
+  /* line 73, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear {
     clear: none; }
 
-  /* line 71, ../sass/framework/atoms/_grid.scss */
+  /* line 77, ../sass/framework/atoms/_grid.scss */
   .l-grid-clear {
     clear: left; } }
 @media only screen and (min-width: 62em) {
@@ -967,11 +1028,11 @@ img {
   .d7-8 {
     width: 87.5%; }
 
-  /* line 80, ../sass/framework/atoms/_grid.scss */
+  /* line 86, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear, .l-grid-clear {
     clear: none; }
 
-  /* line 84, ../sass/framework/atoms/_grid.scss */
+  /* line 90, ../sass/framework/atoms/_grid.scss */
   .d-grid-clear {
     clear: left; } }
 @media only screen and (min-width: 86.375em) {
@@ -1066,39 +1127,39 @@ img {
   .w7-8 {
     width: 87.5%; }
 
-  /* line 95, ../sass/framework/atoms/_grid.scss */
+  /* line 101, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear, .l-grid-clear, .d-grid-clear {
     clear: none; }
 
-  /* line 99, ../sass/framework/atoms/_grid.scss */
+  /* line 105, ../sass/framework/atoms/_grid.scss */
   .w-grid-clear {
     clear: left; } }
-/* line 130, ../sass/framework/atoms/_grid.scss */
+/* line 136, ../sass/framework/atoms/_grid.scss */
 .grid--double-gutter, .grid-wrap--large-gutter, .large-gutter {
   margin-left: -6em; }
-/* line 134, ../sass/framework/atoms/_grid.scss */
+/* line 140, ../sass/framework/atoms/_grid.scss */
 .grid--double-gutter > .gc, .grid--double-gutter > .main, .grid--double-gutter > .sub, .gallery-row .grid--double-gutter > .col-1, .gallery-row .grid--double-gutter > .col-2, .gallery-row .grid--double-gutter > .col-3, .gallery-row .grid--double-gutter > .col-4, .gallery-row .grid--double-gutter > .col-5, .gallery-row .grid--double-gutter > .col-6, .gallery-row .grid--double-gutter > .col-7, .gallery-row .grid--double-gutter > .col-8, .gallery-row .grid--double-gutter > .col-9, .gallery-row .grid--double-gutter > .col-10, .gallery-row .grid--double-gutter > .col-11, .gallery-row .grid--double-gutter > .col-12, .grid-wrap--large-gutter > .gc, .grid-wrap--large-gutter > .main, .grid-wrap--large-gutter > .sub, .gallery-row .grid-wrap--large-gutter > .col-1, .gallery-row .grid-wrap--large-gutter > .col-2, .gallery-row .grid-wrap--large-gutter > .col-3, .gallery-row .grid-wrap--large-gutter > .col-4, .gallery-row .grid-wrap--large-gutter > .col-5, .gallery-row .grid-wrap--large-gutter > .col-6, .gallery-row .grid-wrap--large-gutter > .col-7, .gallery-row .grid-wrap--large-gutter > .col-8, .gallery-row .grid-wrap--large-gutter > .col-9, .gallery-row .grid-wrap--large-gutter > .col-10, .gallery-row .grid-wrap--large-gutter > .col-11, .gallery-row .grid-wrap--large-gutter > .col-12, .large-gutter > .gc, .large-gutter > .main, .large-gutter > .sub, .gallery-row .large-gutter > .col-1, .gallery-row .large-gutter > .col-2, .gallery-row .large-gutter > .col-3, .gallery-row .large-gutter > .col-4, .gallery-row .large-gutter > .col-5, .gallery-row .large-gutter > .col-6, .gallery-row .large-gutter > .col-7, .gallery-row .large-gutter > .col-8, .gallery-row .large-gutter > .col-9, .gallery-row .large-gutter > .col-10, .gallery-row .large-gutter > .col-11, .gallery-row .large-gutter > .col-12 {
   padding-left: 6em; }
 
-/* line 144, ../sass/framework/atoms/_grid.scss */
+/* line 150, ../sass/framework/atoms/_grid.scss */
 .grid--half-gutter, .grid-wrap--half-gutter, .half-gutter, .gallery-row {
   margin-left: -1.5em; }
-/* line 148, ../sass/framework/atoms/_grid.scss */
+/* line 154, ../sass/framework/atoms/_grid.scss */
 .grid--half-gutter > .gc, .grid--half-gutter > .main, .grid--half-gutter > .sub, .gallery-row .grid--half-gutter > .col-1, .gallery-row .grid--half-gutter > .col-2, .gallery-row .grid--half-gutter > .col-3, .gallery-row .grid--half-gutter > .col-4, .gallery-row .grid--half-gutter > .col-5, .gallery-row .grid--half-gutter > .col-6, .gallery-row .grid--half-gutter > .col-7, .gallery-row .grid--half-gutter > .col-8, .gallery-row .grid--half-gutter > .col-9, .gallery-row .grid--half-gutter > .col-10, .gallery-row .grid--half-gutter > .col-11, .gallery-row .grid--half-gutter > .col-12, .grid-wrap--half-gutter > .gc, .grid-wrap--half-gutter > .main, .grid-wrap--half-gutter > .sub, .gallery-row .grid-wrap--half-gutter > .col-1, .gallery-row .grid-wrap--half-gutter > .col-2, .gallery-row .grid-wrap--half-gutter > .col-3, .gallery-row .grid-wrap--half-gutter > .col-4, .gallery-row .grid-wrap--half-gutter > .col-5, .gallery-row .grid-wrap--half-gutter > .col-6, .gallery-row .grid-wrap--half-gutter > .col-7, .gallery-row .grid-wrap--half-gutter > .col-8, .gallery-row .grid-wrap--half-gutter > .col-9, .gallery-row .grid-wrap--half-gutter > .col-10, .gallery-row .grid-wrap--half-gutter > .col-11, .gallery-row .grid-wrap--half-gutter > .col-12, .half-gutter > .gc, .gallery-row > .gc, .half-gutter > .main, .gallery-row > .main, .half-gutter > .sub, .gallery-row > .sub, .gallery-row .half-gutter > .col-1, .gallery-row > .col-1, .gallery-row .half-gutter > .col-2, .gallery-row > .col-2, .gallery-row .half-gutter > .col-3, .gallery-row > .col-3, .gallery-row .half-gutter > .col-4, .gallery-row > .col-4, .gallery-row .half-gutter > .col-5, .gallery-row > .col-5, .gallery-row .half-gutter > .col-6, .gallery-row > .col-6, .gallery-row .half-gutter > .col-7, .gallery-row > .col-7, .gallery-row .half-gutter > .col-8, .gallery-row > .col-8, .gallery-row .half-gutter > .col-9, .gallery-row > .col-9, .gallery-row .half-gutter > .col-10, .gallery-row > .col-10, .gallery-row .half-gutter > .col-11, .gallery-row > .col-11, .gallery-row .half-gutter > .col-12, .gallery-row > .col-12 {
   padding-left: 1.5em; }
 
-/* line 160, ../sass/framework/atoms/_grid.scss */
+/* line 166, ../sass/framework/atoms/_grid.scss */
 .grid--no-gutter, .grid-wrap--no-gutter, .no-gutter {
   margin-left: 0; }
-/* line 164, ../sass/framework/atoms/_grid.scss */
+/* line 170, ../sass/framework/atoms/_grid.scss */
 .grid--no-gutter > .gc, .grid--no-gutter > .main, .grid--no-gutter > .sub, .gallery-row .grid--no-gutter > .col-1, .gallery-row .grid--no-gutter > .col-2, .gallery-row .grid--no-gutter > .col-3, .gallery-row .grid--no-gutter > .col-4, .gallery-row .grid--no-gutter > .col-5, .gallery-row .grid--no-gutter > .col-6, .gallery-row .grid--no-gutter > .col-7, .gallery-row .grid--no-gutter > .col-8, .gallery-row .grid--no-gutter > .col-9, .gallery-row .grid--no-gutter > .col-10, .gallery-row .grid--no-gutter > .col-11, .gallery-row .grid--no-gutter > .col-12, .grid-wrap--no-gutter > .gc, .grid-wrap--no-gutter > .main, .grid-wrap--no-gutter > .sub, .gallery-row .grid-wrap--no-gutter > .col-1, .gallery-row .grid-wrap--no-gutter > .col-2, .gallery-row .grid-wrap--no-gutter > .col-3, .gallery-row .grid-wrap--no-gutter > .col-4, .gallery-row .grid-wrap--no-gutter > .col-5, .gallery-row .grid-wrap--no-gutter > .col-6, .gallery-row .grid-wrap--no-gutter > .col-7, .gallery-row .grid-wrap--no-gutter > .col-8, .gallery-row .grid-wrap--no-gutter > .col-9, .gallery-row .grid-wrap--no-gutter > .col-10, .gallery-row .grid-wrap--no-gutter > .col-11, .gallery-row .grid-wrap--no-gutter > .col-12, .no-gutter > .gc, .no-gutter > .main, .no-gutter > .sub, .gallery-row .no-gutter > .col-1, .gallery-row .no-gutter > .col-2, .gallery-row .no-gutter > .col-3, .gallery-row .no-gutter > .col-4, .gallery-row .no-gutter > .col-5, .gallery-row .no-gutter > .col-6, .gallery-row .no-gutter > .col-7, .gallery-row .no-gutter > .col-8, .gallery-row .no-gutter > .col-9, .gallery-row .no-gutter > .col-10, .gallery-row .no-gutter > .col-11, .gallery-row .no-gutter > .col-12 {
   padding-left: 0; }
 
-/* line 174, ../sass/framework/atoms/_grid.scss */
+/* line 180, ../sass/framework/atoms/_grid.scss */
 .grid--ib, .grid--center, .grid--left, .grid--right, .grid-ib {
   letter-spacing: -0.31em;
   word-spacing: -0.43em; }
-/* line 178, ../sass/framework/atoms/_grid.scss */
+/* line 184, ../sass/framework/atoms/_grid.scss */
 .grid--ib > .gc, .grid--center > .gc, .grid--left > .gc, .grid--right > .gc, .grid--ib > .main, .grid--center > .main, .grid--left > .main, .grid--right > .main, .grid--ib > .sub, .grid--center > .sub, .grid--left > .sub, .grid--right > .sub, .gallery-row .grid--ib > .col-1, .gallery-row .grid--center > .col-1, .gallery-row .grid--left > .col-1, .gallery-row .grid--right > .col-1, .gallery-row .grid--ib > .col-2, .gallery-row .grid--center > .col-2, .gallery-row .grid--left > .col-2, .gallery-row .grid--right > .col-2, .gallery-row .grid--ib > .col-3, .gallery-row .grid--center > .col-3, .gallery-row .grid--left > .col-3, .gallery-row .grid--right > .col-3, .gallery-row .grid--ib > .col-4, .gallery-row .grid--center > .col-4, .gallery-row .grid--left > .col-4, .gallery-row .grid--right > .col-4, .gallery-row .grid--ib > .col-5, .gallery-row .grid--center > .col-5, .gallery-row .grid--left > .col-5, .gallery-row .grid--right > .col-5, .gallery-row .grid--ib > .col-6, .gallery-row .grid--center > .col-6, .gallery-row .grid--left > .col-6, .gallery-row .grid--right > .col-6, .gallery-row .grid--ib > .col-7, .gallery-row .grid--center > .col-7, .gallery-row .grid--left > .col-7, .gallery-row .grid--right > .col-7, .gallery-row .grid--ib > .col-8, .gallery-row .grid--center > .col-8, .gallery-row .grid--left > .col-8, .gallery-row .grid--right > .col-8, .gallery-row .grid--ib > .col-9, .gallery-row .grid--center > .col-9, .gallery-row .grid--left > .col-9, .gallery-row .grid--right > .col-9, .gallery-row .grid--ib > .col-10, .gallery-row .grid--center > .col-10, .gallery-row .grid--left > .col-10, .gallery-row .grid--right > .col-10, .gallery-row .grid--ib > .col-11, .gallery-row .grid--center > .col-11, .gallery-row .grid--left > .col-11, .gallery-row .grid--right > .col-11, .gallery-row .grid--ib > .col-12, .gallery-row .grid--center > .col-12, .gallery-row .grid--left > .col-12, .gallery-row .grid--right > .col-12, .grid-ib > .gc, .grid-ib > .main, .grid-ib > .sub, .gallery-row .grid-ib > .col-1, .gallery-row .grid-ib > .col-2, .gallery-row .grid-ib > .col-3, .gallery-row .grid-ib > .col-4, .gallery-row .grid-ib > .col-5, .gallery-row .grid-ib > .col-6, .gallery-row .grid-ib > .col-7, .gallery-row .grid-ib > .col-8, .gallery-row .grid-ib > .col-9, .gallery-row .grid-ib > .col-10, .gallery-row .grid-ib > .col-11, .gallery-row .grid-ib > .col-12 {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1111,42 +1172,42 @@ img {
   letter-spacing: normal;
   word-spacing: normal; }
 
-/* line 190, ../sass/framework/atoms/_grid.scss */
+/* line 196, ../sass/framework/atoms/_grid.scss */
 .grid--center {
   text-align: center; }
 
-/* line 198, ../sass/framework/atoms/_grid.scss */
+/* line 204, ../sass/framework/atoms/_grid.scss */
 .grid--left {
   text-align: left; }
 
-/* line 207, ../sass/framework/atoms/_grid.scss */
+/* line 213, ../sass/framework/atoms/_grid.scss */
 .grid--right {
   text-align: right; }
 
-/* line 218, ../sass/framework/atoms/_grid.scss */
+/* line 224, ../sass/framework/atoms/_grid.scss */
 .grid--divided > .gc, .grid--divided > .main, .grid--divided > .sub, .gallery-row .grid--divided > .col-1, .gallery-row .grid--divided > .col-2, .gallery-row .grid--divided > .col-3, .gallery-row .grid--divided > .col-4, .gallery-row .grid--divided > .col-5, .gallery-row .grid--divided > .col-6, .gallery-row .grid--divided > .col-7, .gallery-row .grid--divided > .col-8, .gallery-row .grid--divided > .col-9, .gallery-row .grid--divided > .col-10, .gallery-row .grid--divided > .col-11, .gallery-row .grid--divided > .col-12, .grid-divide > .gc, .grid-divide > .main, .grid-divide > .sub, .gallery-row .grid-divide > .col-1, .gallery-row .grid-divide > .col-2, .gallery-row .grid-divide > .col-3, .gallery-row .grid-divide > .col-4, .gallery-row .grid-divide > .col-5, .gallery-row .grid-divide > .col-6, .gallery-row .grid-divide > .col-7, .gallery-row .grid-divide > .col-8, .gallery-row .grid-divide > .col-9, .gallery-row .grid-divide > .col-10, .gallery-row .grid-divide > .col-11, .gallery-row .grid-divide > .col-12 {
   margin-bottom: 3em; }
 
-/* line 228, ../sass/framework/atoms/_grid.scss */
+/* line 234, ../sass/framework/atoms/_grid.scss */
 .grid--middle > .gc, .grid--middle > .main, .grid--middle > .sub, .gallery-row .grid--middle > .col-1, .gallery-row .grid--middle > .col-2, .gallery-row .grid--middle > .col-3, .gallery-row .grid--middle > .col-4, .gallery-row .grid--middle > .col-5, .gallery-row .grid--middle > .col-6, .gallery-row .grid--middle > .col-7, .gallery-row .grid--middle > .col-8, .gallery-row .grid--middle > .col-9, .gallery-row .grid--middle > .col-10, .gallery-row .grid--middle > .col-11, .gallery-row .grid--middle > .col-12 {
   vertical-align: middle; }
 
-/* line 237, ../sass/framework/atoms/_grid.scss */
+/* line 243, ../sass/framework/atoms/_grid.scss */
 .grid--bottom > .gc, .grid--bottom > .main, .grid--bottom > .sub, .gallery-row .grid--bottom > .col-1, .gallery-row .grid--bottom > .col-2, .gallery-row .grid--bottom > .col-3, .gallery-row .grid--bottom > .col-4, .gallery-row .grid--bottom > .col-5, .gallery-row .grid--bottom > .col-6, .gallery-row .grid--bottom > .col-7, .gallery-row .grid--bottom > .col-8, .gallery-row .grid--bottom > .col-9, .gallery-row .grid--bottom > .col-10, .gallery-row .grid--bottom > .col-11, .gallery-row .grid--bottom > .col-12 {
   vertical-align: bottom; }
 
-/* line 248, ../sass/framework/atoms/_grid.scss */
+/* line 254, ../sass/framework/atoms/_grid.scss */
 .gc--center {
   display: block;
   margin-left: auto;
   margin-right: auto; }
 
-/* line 254, ../sass/framework/atoms/_grid.scss */
+/* line 260, ../sass/framework/atoms/_grid.scss */
 .gc--left {
   display: block;
   margin-right: auto; }
 
-/* line 259, ../sass/framework/atoms/_grid.scss */
+/* line 265, ../sass/framework/atoms/_grid.scss */
 .gc--right {
   display: block;
   margin-left: auto; }
@@ -1452,10 +1513,6 @@ optgroup::-moz-focus-inner {
 .input-append, .search-form, .input-prepend {
   white-space: nowrap; }
 
-/* ==========================================================================
-   MOLECULES
-   Groupings of base atomic objects to create reusable elements
-   ========================================================================== */
 /* #Headings */
 /* Based on the ancient Typographic scale */
 /* http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4.
@@ -2130,6 +2187,16 @@ Borrowed from inuit.css
 .block-list__link, .block-list a {
   display: block;
   padding: 0.55533em 0.833em; }
+
+/* line 44, ../sass/framework/molecules/_block-list.scss */
+.block-list--flush-h .block-list__link, .block-list--flush-h .block-list a, .block-list .block-list--flush-h a, .block-list__link--flush-h, a.block-list__link--flush-h {
+  padding-left: 0;
+  padding-right: 0; }
+
+/* line 51, ../sass/framework/molecules/_block-list.scss */
+.block-list--flush-v .block-list__link, .block-list--flush-v .block-list a, .block-list .block-list--flush-v a, .block-list__link--flush-v, a.block-list__link--flush-v {
+  padding-top: 0;
+  padding-bottom: 0; }
 
 /* ============================================================ */
 /* ============================================================ */
@@ -2984,10 +3051,140 @@ pre code {
   display: block;
   clear: both; }
 
-/* ==========================================================================
-   COMPOUNDS
-   Groupings of molecular objects to create common components
-   ========================================================================== */
+/* ============================================================ */
+/* ============================================================ */
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icons/fonts/icomoon.eot");
+  src: url("../fonts/icons/fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icons/fonts/icomoon.woff") format("woff"), url("../fonts/icons/fonts/icomoon.ttf") format("truetype"), url("../fonts/icons/fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 25, ../sass/framework/molecules/_icons.scss */
+.icon {
+  font-family: "icomoon";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 44, ../sass/framework/molecules/_icons.scss */
+.icon--gray, .icon--grey {
+  color: #bdc3c7; }
+
+/* line 51, ../sass/framework/molecules/_icons.scss */
+.icon--large {
+  font-size: 32px; }
+
+/* line 52, ../sass/framework/molecules/_icons.scss */
+.icon--huge {
+  font-size: 64px; }
+
+/* line 53, ../sass/framework/molecules/_icons.scss */
+.icon--natural {
+  font-size: inherit; }
+
+/* line 63, ../sass/framework/molecules/_icons.scss */
+.icon-fallback-text .icon {
+  display: none; }
+
+/*
+ADDED BY afontgarde.js:
+.supports-fontface.FONT_NAME.supports-generatedcontent .icon-fallback-text .icon {
+    display: inline-block;
+}*/
+/* line 75, ../sass/framework/molecules/_icons.scss */
+.icon-fallback-glyph .text, .icon-fallback-img .text {
+  /* visually hide but accessible (h5bp.com) */
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
+  height: 1px;
+  width: 1px; }
+
+/* Careful, don’t use adjoining classes here (IE7) */
+/* line 85, ../sass/framework/molecules/_icons.scss */
+.supports-no-generatedcontent .icon-fallback-glyph .text {
+  clip: auto;
+  overflow: visible;
+  position: static;
+  height: auto;
+  width: auto; }
+
+/*
+ADDED BY afontgarde.js:
+.supports-fontface.FONT_NAME .icon-fallback-glyph .icon:before {
+    font-size: inherit;
+    line-height: inherit;
+}*/
+/* line 98, ../sass/framework/molecules/_icons.scss */
+.icon-fallback-img .icon {
+  display: inline-block; }
+
+/* line 101, ../sass/framework/molecules/_icons.scss */
+.icon-fallback-img .icon:before {
+  content: ""; }
+
+/* The img fallback version is not as reliable since it does not check to make sure the fontloaded font has loaded. If we did add the .fontloaded class, it would unnecessarily request the fallback image. */
+/* line 105, ../sass/framework/molecules/_icons.scss */
+.supports-fontface.supports-generatedcontent .icon-fallback-img .icon {
+  background-image: none; }
+
+/* line 117, ../sass/framework/molecules/_icons.scss */
+.icon-facebook:before {
+  content: "\e600"; }
+
+/* line 120, ../sass/framework/molecules/_icons.scss */
+.icon-twitter:before {
+  content: "\e601"; }
+
+/* line 123, ../sass/framework/molecules/_icons.scss */
+.icon-instagram:before {
+  content: "\e602"; }
+
+/* line 126, ../sass/framework/molecules/_icons.scss */
+.icon-vimeo:before {
+  content: "\e603"; }
+
+/* line 129, ../sass/framework/molecules/_icons.scss */
+.icon-youtube:before {
+  content: "\e604"; }
+
+/* ============================================================ */
+/* ============================================================ */
+/* line 19, ../sass/framework/molecules/_social-icons.scss */
+.social-icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px !important;
+  text-align: center;
+  margin-top: 0;
+  font-size: 32px;
+  font-size: 2rem; }
+
+/* line 29, ../sass/framework/molecules/_social-icons.scss */
+.social-icon--small {
+  width: 30px;
+  height: 30px;
+  line-height: 30px !important;
+  font-size: 16px;
+  font-size: 1rem; }
+
+/* line 41, ../sass/framework/molecules/_social-icons.scss */
+.social-icon--vimeo:before {
+  margin-left: 0 !important;
+  margin-top: 16px !important; }
+
+/* line 48, ../sass/framework/molecules/_social-icons.scss */
+.social-icon--twitter:before {
+  margin-top: 0.3em !important;
+  margin-left: 0.1em !important; }
+
 /* line 7, ../sass/framework/compounds/_primary-nav.scss */
 .menu-primary {
   position: relative; }
@@ -3282,10 +3479,55 @@ pre code {
 .search-form__submit {
   letter-spacing: normal; }
 
-/* ==========================================================================
-   HELPERS
-   Global overides. Utility classes intended to overide all other styles.
-   ========================================================================== */
+/* ============================================================ */
+/* ============================================================ */
+/* line 22, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__item {
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  padding-bottom: 5px;
+  padding-bottom: 0.3125rem; }
+/* line 26, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+
+/* line 34, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__link {
+  overflow: hidden;
+  *overflow: visible;
+  zoom: 1;
+  text-decoration: none; }
+
+/* line 42, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__icon, .social-icons-list__name {
+  letter-spacing: normal;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-bottom: 5px;
+  margin-bottom: 0.3125rem; }
+
+/* line 51, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__icon {
+  margin-right: 10px;
+  margin-right: 0.625rem; }
+
+/* line 55, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__icon--small {
+  width: 30px;
+  height: 30px;
+  line-height: 30px !important;
+  font-size: 16px;
+  font-size: 1rem; }
+
+/* line 64, ../sass/framework/compounds/_social-icons-list.scss */
+.social-icons-list__name {
+  text-decoration: none; }
+
 /* #Helpers */
 /* Set of simple classes to implement common CSS patterns */
 /* ##Clearfix & Clearing */

@@ -1,30 +1,27 @@
-/**
- * Tanlinell CSS FRAMEWORK
- * URL: https://github.com/getdave/Tanlinell
- * Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
- * Author: David Smith (@get_dave)
- */
 
-/**
- * This project aims to be a starter kit for building websites using SASS and Compass.
- *
- * The framework comes as a stand-alone packaged collection of SASS files. The _framework.scss file
- * should be @import'd into your projects' master SASS/SCSS file and extended as required.
- *
- * You should NEVER modify the files of the framework. If you find something you cannot work around it is
- * a bug and should be raised as an issue on Github at:
- *
- * https://github.com/getdave/Tanlinell/issues?state=open
- *
- * This framework borrows heavily and draws inspiration from the great work of the following projects/authors:
+// Tanlinell CSS FRAMEWORK
+// URL: https://github.com/getdave/Tanlinell
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+// Author: David Smith (@get_dave)
 
- * OOCSS 					- https://github.com/stubbornella/oocss
- * Inuit.css 				- https://raw.github.com/csswizardry/inuit.css/
- * SMACSS guidelines 		- http://smacss.com/
- * Twitter Bootstrap		- http://twitter.github.com/bootstrap/
- * ZURB Foundation			- http://foundation.zurb.com/
- *
- */
+
+
+// This project aims to be a starter kit for building websites using SASS and Compass.
+// The framework comes as a stand-alone packaged collection of SASS files. The _framework.scss file
+// should be @import'd into your projects' master SASS/SCSS file and extended as required.
+
+// You should NEVER modify the files of the framework. If you find something you cannot work around it is
+// a bug and should be raised as an issue on Github at:
+
+// https://github.com/getdave/Tanlinell/issues?state=open
+
+// This framework borrows heavily and draws inspiration from the great work of the following projects/authors:
+
+// OOCSS 					- https://github.com/stubbornella/oocss
+// Inuit.css 				- https://raw.github.com/csswizardry/inuit.css/
+// SMACSS guidelines 		- http://smacss.com/
+// Twitter Bootstrap		- http://twitter.github.com/bootstrap/
+// ZURB Foundation			- http://foundation.zurb.com/
 
 
 // ==========================================================================
@@ -40,10 +37,10 @@
 	@import "imports/_normalize.scss";
 
 
-/* ==========================================================================
-   ATOMS
-   Base styles/objects. Mostly global, tag-based selector rules.
-   ========================================================================== */
+// ==========================================================================
+// ATOMS
+// Base styles/objects. Mostly global, tag-based selector rules.
+// ==========================================================================
 
 	@import "atoms/_typo.scss";
 	@import "atoms/_containers.scss";
@@ -51,10 +48,10 @@
 	@import "atoms/_forms.scss";
 
 
-/* ==========================================================================
-   MOLECULES
-   Groupings of base atomic objects to create reusable elements
-   ========================================================================== */
+// ==========================================================================
+// MOLECULES
+// Groupings of base atomic objects to create reusable elements
+// ==========================================================================
 
 	@import "molecules/_headings.scss";
 	@import "molecules/_tables.scss";
@@ -87,18 +84,19 @@
 	@import "molecules/_tabs.scss";
 	@import "molecules/_scrollable.scss";
 	@import "molecules/_address.scss";
+	@import "molecules/_icons.scss";
+	@import "molecules/_social-icons.scss";
 
-/* ==========================================================================
-   COMPOUNDS
-   Groupings of molecular objects to create common components
-   ========================================================================== */
-	
+// ==========================================================================
+// COMPOUNDS
+// Groupings of molecular objects to create common components
+// ==========================================================================
+
 	@import "compounds/_sprites.scss";
 	@import "compounds/_primary-nav.scss";
 	@import "compounds/_site-logo.scss";
 	@import "compounds/_site-credit.scss";
 	@import "compounds/_page-layouts.scss";
-	@import "compounds/_social-icons.scss";
 	@import "compounds/_social-actions.scss";
 	@import "compounds/_gallery.scss";
 	@import "compounds/_flexslider.scss";
@@ -106,11 +104,12 @@
 	@import "compounds/_magnific.scss";
 	@import "compounds/_site-colophon.scss";
 	@import "compounds/_search-form.scss";
+	@import "compounds/_social-icons-list.scss";
 
-/* ==========================================================================
-   HELPERS
-   Global overides. Utility classes intended to overide all other styles.
-   ========================================================================== */
+// ==========================================================================
+// HELPERS
+// Global overides. Utility classes intended to overide all other styles.
+// ==========================================================================
 
 	@import "atoms/_helpers.scss";
 	@import "atoms/_spacing.scss";
