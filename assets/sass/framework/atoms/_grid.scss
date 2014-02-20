@@ -60,8 +60,14 @@
 		}
 	}
 
-	// Lap Grids
+	// Palm Grids
 	@include respond-to($break-small) {
+		@include griddle-build($grids,'p');
+
+	}
+
+	// Lap Grids
+	@include respond-to($break-medium) {
 		@include griddle-build($grids,'l');
 
 		.h-grid-clear {
