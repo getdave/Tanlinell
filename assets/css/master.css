@@ -3212,8 +3212,9 @@ ADDED BY afontgarde.js:
   direction: ltr;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1389865799'); }
-/* line 19, ../sass/framework/compounds/_site-logo.scss */
+  background-image: url('../images/site-logo.png?1389865799');
+  background-size: 100%; }
+/* line 20, ../sass/framework/compounds/_site-logo.scss */
 .site-logo:hover, .site-logo:focus {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
@@ -3221,6 +3222,10 @@ ADDED BY afontgarde.js:
   -moz-transition: opacity 0.5s ease;
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease; }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+  /* line 3, ../sass/framework/compounds/_site-logo.scss */
+  .site-logo {
+    background-image: url('../images/site-logo--retina.png?1389865799'); } }
 
 /* #Site Credit */
 /* Useful pattern typically used to provide credit to the website developer in the footer of the website. */

@@ -14,11 +14,16 @@
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	background-image: image-url($logo);
+	background-size: 100%;
 
 	&:hover,
 	&:focus {
 		@include opacity(0.8);	
 		@include transition(opacity 0.5s ease);
+	}
+
+	@include hdpi() {
+		background-image: image-url($logoRetina);
 	}
 }
 
