@@ -17,7 +17,6 @@
 
 .search-form {
     position: relative;
-    @include inline-block;
 
     .search-form__query {
         max-width: none;
@@ -51,12 +50,12 @@
 
 
 // ==========================================================================
-// MODIFIER: FULL
-// occupy entire horiztonal width of container
+// MODIFIER: INLINE
+// occupy only the space defined by inline-block
 // ==========================================================================
 
-.search-form--full {
-    display: block;
+.search-form--inline {
+    @include inline-block;
 }
 
 }//endif

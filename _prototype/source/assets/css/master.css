@@ -3455,18 +3455,12 @@ ADDED BY afontgarde.js:
 */
 /* line 18, ../sass/framework/compounds/_search-form.scss */
 .search-form {
-  position: relative;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline; }
-/* line 22, ../sass/framework/compounds/_search-form.scss */
+  position: relative; }
+/* line 21, ../sass/framework/compounds/_search-form.scss */
 .search-form .search-form__query {
   max-width: none; }
 
-/* line 32, ../sass/framework/compounds/_search-form.scss */
+/* line 31, ../sass/framework/compounds/_search-form.scss */
 .search-form__query, .search-form__query[type="search"] {
   display: block;
   margin-bottom: 0;
@@ -3474,7 +3468,7 @@ ADDED BY afontgarde.js:
   padding-right: 6.25rem;
   letter-spacing: normal; }
 
-/* line 39, ../sass/framework/compounds/_search-form.scss */
+/* line 38, ../sass/framework/compounds/_search-form.scss */
 .search-form__submit {
   padding: 0 15px;
   padding: 0 0.9375rem;
@@ -3485,9 +3479,14 @@ ADDED BY afontgarde.js:
   border: 0;
   letter-spacing: normal; }
 
-/* line 58, ../sass/framework/compounds/_search-form.scss */
-.search-form--full {
-  display: block; }
+/* line 57, ../sass/framework/compounds/_search-form.scss */
+.search-form--inline {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline; }
 
 /* ============================================================ */
 /* ============================================================ */
