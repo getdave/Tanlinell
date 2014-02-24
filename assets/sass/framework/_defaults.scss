@@ -200,8 +200,8 @@ $mobileBreak:					$break-medium !default;
 
 
 // Nav Breakpoints
-$nav-break-1: 					$break-medium;
-$nav-break-2: 					$break-large;
+$nav-break-1: 					$break-medium !default;
+$nav-break-2: 					$break-large !default; 
 
 
 // Grid
