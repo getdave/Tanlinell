@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-ms-viewport {
   width: device-width; }
 
@@ -1400,7 +1401,7 @@ select {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
-  background-image: url('../images/framework/select-arrow.png?1389868474');
+  background-image: url('../images/framework/select-arrow.png?1393251064');
   height: auto;
   padding-top: 11px;
   padding-top: 0.6875rem;
@@ -1459,7 +1460,7 @@ select[size="0"], select[size="1"] {
 
   /* line 310, ../sass/framework/atoms/_forms.scss */
   select, select[size="0"], select[size="1"] {
-    background-image: url('../images/framework/select-arrow.png?1389868474');
+    background-image: url('../images/framework/select-arrow.png?1393251064');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px; }
@@ -2266,7 +2267,7 @@ input.btn, input.search-form__submit {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px; }
-/* line 38, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .btn-group:after {
   content: "";
   display: table;
@@ -3151,6 +3152,34 @@ ADDED BY afontgarde.js:
   font-size: 30px;
   font-size: 1.875rem; }
 
+/* line 5, ../sass/framework/molecules/_blockquotes.scss */
+blockquote, blockquote p, q {
+  line-height: 1.5;
+  color: #777; }
+
+/* line 10, ../sass/framework/molecules/_blockquotes.scss */
+blockquote {
+  margin: 0 0 1.666em;
+  padding: 9px 20px 0 19px;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid #ddd; }
+
+/* line 16, ../sass/framework/molecules/_blockquotes.scss */
+blockquote cite {
+  display: block;
+  color: #555;
+  font-size: 0.9em;
+  padding-top: 5px;
+  padding-top: 0.3125rem; }
+
+/* line 23, ../sass/framework/molecules/_blockquotes.scss */
+blockquote cite:before {
+  content: "\2014 \0020"; }
+
+/* line 28, ../sass/framework/molecules/_blockquotes.scss */
+blockquote cite a, blockquote cite a:visited {
+  color: #555; }
+
 /* line 11, ../sass/framework/compounds/_primary-nav.scss */
 .nav-primary {
   position: relative;
@@ -3198,7 +3227,7 @@ ADDED BY afontgarde.js:
   direction: ltr;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1389865799');
+  background-image: url('../images/site-logo.png?1393251064');
   background-size: 100%; }
 /* line 20, ../sass/framework/compounds/_site-logo.scss */
 .site-logo:hover, .site-logo:focus {
@@ -3211,7 +3240,7 @@ ADDED BY afontgarde.js:
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
   /* line 3, ../sass/framework/compounds/_site-logo.scss */
   .site-logo {
-    background-image: url('../images/site-logo--retina.png?1389865799'); } }
+    background-image: url('../images/site-logo--retina.png?1393251064'); } }
 
 /* #Site Credit */
 /* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
@@ -3236,14 +3265,14 @@ ADDED BY afontgarde.js:
   margin-left: 2px; }
 /* line 22, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/framework/site-credit.png?1389868474'); }
+  background-image: url('../images/framework/site-credit.png?1393251064'); }
 
 /* line 28, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/framework/site-credit--dark.svg?1384262605'); }
+  background-image: url('../images/framework/site-credit--dark.svg?1393251064'); }
 /* line 31, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/framework/site-credit--dark.png?1389868474'); }
+  background-image: url('../images/framework/site-credit--dark.png?1393251064'); }
 
 /* ==========================================================================
    COLUMNS
