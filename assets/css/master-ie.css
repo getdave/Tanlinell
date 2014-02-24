@@ -3452,6 +3452,95 @@ blockquote cite a, blockquote cite a:visited {
   margin-bottom: 0;
   padding-bottom: 0; }
 
+/* ============================================================ */
+/* ============================================================ */
+/* line 16, ../sass/framework/compounds/_social-share-bar.scss */
+.social-share-bar {
+  background-color: #fff;
+  padding: 6px 25px;
+  padding: 0.375rem 1.5625rem;
+  zoom: 1; }
+/* line 129, ../sass/framework/imports/_mixins.scss */
+.social-share-bar:before {
+  content: "";
+  display: table; }
+/* line 134, ../sass/framework/imports/_mixins.scss */
+.social-share-bar:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* line 22, ../sass/framework/compounds/_social-share-bar.scss */
+.social-share-bar__heading {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-bottom: 0;
+  margin-right: 1.666em;
+  color: #1C282E; }
+
+/* line 30, ../sass/framework/compounds/_social-share-bar.scss */
+.social-share-bar__heading, .social-share-bar__body {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-top: 6px;
+  margin-top: 0.375rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem; }
+
+/* ============================================================ */
+/* ============================================================ */
+/* line 15, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget {
+  display: block; }
+
+/* line 24, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget__text.is-loaded, .socialite-loaded .social-widget__text {
+  background: 0 !important;
+  text-indent: 0 !important; }
+
+/* line 30, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget--twitter-share {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px -200px;
+  width: 56px;
+  height: 20px; }
+
+/* line 34, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget--twitter-follow {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px -150px;
+  width: 61px;
+  height: 20px; }
+
+/* line 38, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget--facebook-like {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px 0px;
+  width: 47px;
+  height: 20px; }
+
+/* line 42, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget--linkedin-share {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px -100px;
+  width: 59px;
+  height: 20px; }
+
+/* line 46, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget--googleplus-one {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px -50px;
+  width: 32px;
+  height: 20px; }
+
 /* #Helpers */
 /* Set of simple classes to implement common CSS patterns */
 /* ##Clearfix & Clearing */
@@ -3618,7 +3707,7 @@ blockquote cite a, blockquote cite a:visited {
 	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p>
 */
 /* line 206, ../sass/framework/atoms/_helpers.scss */
-.vh, .social-actions__text, .search-form__label, .v-hidden, .screen-reader-text, .assistive-text {
+.vh, .social-actions__text, .search-form__label, .social-widget__text, .v-hidden, .screen-reader-text, .assistive-text {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -3629,7 +3718,7 @@ blockquote cite a, blockquote cite a:visited {
   width: 1px; }
 
 /* line 220, ../sass/framework/atoms/_helpers.scss */
-.vh.focusable:active, .focusable.social-actions__text:active, .focusable.search-form__label:active, .vh.focusable:focus .v-hidden.focusable:active, .focusable.social-actions__text:focus .v-hidden.focusable:active, .focusable.search-form__label:focus .v-hidden.focusable:active, .v-hidden.focusable:focus {
+.vh.focusable:active, .focusable.social-actions__text:active, .focusable.search-form__label:active, .focusable.social-widget__text:active, .vh.focusable:focus .v-hidden.focusable:active, .focusable.social-actions__text:focus .v-hidden.focusable:active, .focusable.search-form__label:focus .v-hidden.focusable:active, .focusable.social-widget__text:focus .v-hidden.focusable:active, .v-hidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
