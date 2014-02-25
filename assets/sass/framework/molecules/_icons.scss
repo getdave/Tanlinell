@@ -46,12 +46,32 @@
 }
 
 
+// ==========================================================================
 // SIZING MODIFIERS
 // ==========================================================================
+.icon--small   { font-size:16px; }
 .icon--large   { font-size:32px; }
 .icon--huge    { font-size:64px; }
 .icon--natural { font-size:inherit; }
 
+.icon--small-alt { font-size: 20px; }
+.icon--large-alt { font-size: 40px; }
+.icon--huge-alt { font-size: 60px; }
+
+
+
+// ==========================================================================
+// POSITIONING
+// ==========================================================================
+
+// INLINE
+// creates valigned icon with an appropriate RHS margin to push text away.
+// ==========================================================================
+.icon--inline {
+    @include inline-block;
+    vertical-align: text-bottom;
+    margin-right: 0.2em;
+}
 
 
 // ==========================================================================

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-ms-viewport {
   width: device-width; }
 
@@ -1297,7 +1298,7 @@ select {
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: right center;
-  background-image: url('../images/framework/select-arrow.png?1389868474');
+  background-image: url('../images/framework/select-arrow.png?1393251064');
   height: auto;
   padding-top: 11px;
   padding-top: 0.6875rem;
@@ -1356,7 +1357,7 @@ select[size="0"], select[size="1"] {
 
   /* line 310, ../sass/framework/atoms/_forms.scss */
   select, select[size="0"], select[size="1"] {
-    background-image: url('../images/framework/select-arrow.png?1389868474');
+    background-image: url('../images/framework/select-arrow.png?1393251064');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 20px; }
@@ -2157,7 +2158,7 @@ input.btn, input.search-form__submit {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px; }
-/* line 38, ../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .btn-group:after {
   content: "";
   display: table;
@@ -2198,6 +2199,36 @@ input.btn, input.search-form__submit {
   -ms-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0; }
+
+/* line 131, ../sass/framework/molecules/_buttons.scss */
+.btn__text {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline; }
+
+/* line 137, ../sass/framework/molecules/_buttons.scss */
+.btn__icon {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline; }
+
+/* line 146, ../sass/framework/molecules/_buttons.scss */
+.btn--prepend, .btn--append {
+  position: relative; }
+
+/* line 155, ../sass/framework/molecules/_buttons.scss */
+.btn--prepend .btn__text {
+  margin-left: 0.833em; }
+
+/* line 163, ../sass/framework/molecules/_buttons.scss */
+.btn--append .btn__text {
+  margin-right: 0.833em; }
 
 /* #DROPDOWNS */
 /* Create dropdown menus with caret arrow
@@ -2908,19 +2939,46 @@ pre code {
 .icon--gray, .icon--grey {
   color: #bdc3c7; }
 
-/* line 51, ../sass/framework/molecules/_icons.scss */
+/* line 52, ../sass/framework/molecules/_icons.scss */
+.icon--small {
+  font-size: 16px; }
+
+/* line 53, ../sass/framework/molecules/_icons.scss */
 .icon--large {
   font-size: 32px; }
 
-/* line 52, ../sass/framework/molecules/_icons.scss */
+/* line 54, ../sass/framework/molecules/_icons.scss */
 .icon--huge {
   font-size: 64px; }
 
-/* line 53, ../sass/framework/molecules/_icons.scss */
+/* line 55, ../sass/framework/molecules/_icons.scss */
 .icon--natural {
   font-size: inherit; }
 
-/* line 63, ../sass/framework/molecules/_icons.scss */
+/* line 57, ../sass/framework/molecules/_icons.scss */
+.icon--small-alt {
+  font-size: 20px; }
+
+/* line 58, ../sass/framework/molecules/_icons.scss */
+.icon--large-alt {
+  font-size: 40px; }
+
+/* line 59, ../sass/framework/molecules/_icons.scss */
+.icon--huge-alt {
+  font-size: 60px; }
+
+/* line 70, ../sass/framework/molecules/_icons.scss */
+.icon--inline {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: text-bottom;
+  margin-right: 0.2em; }
+
+/* line 83, ../sass/framework/molecules/_icons.scss */
 .icon-fallback-text .icon, .icon-fallback-text .toggle i, .toggle .icon-fallback-text i {
   display: none; }
 
@@ -2929,7 +2987,7 @@ ADDED BY afontgarde.js:
 .supports-fontface.FONT_NAME.supports-generatedcontent .icon-fallback-text .icon {
     display: inline-block;
 }*/
-/* line 75, ../sass/framework/molecules/_icons.scss */
+/* line 95, ../sass/framework/molecules/_icons.scss */
 .icon-fallback-glyph .text, .icon-fallback-img .text {
   /* visually hide but accessible (h5bp.com) */
   clip: rect(0 0 0 0);
@@ -2939,7 +2997,7 @@ ADDED BY afontgarde.js:
   width: 1px; }
 
 /* Careful, don’t use adjoining classes here (IE7) */
-/* line 85, ../sass/framework/molecules/_icons.scss */
+/* line 105, ../sass/framework/molecules/_icons.scss */
 .supports-no-generatedcontent .icon-fallback-glyph .text {
   clip: auto;
   overflow: visible;
@@ -2953,52 +3011,52 @@ ADDED BY afontgarde.js:
     font-size: inherit;
     line-height: inherit;
 }*/
-/* line 98, ../sass/framework/molecules/_icons.scss */
+/* line 118, ../sass/framework/molecules/_icons.scss */
 .icon-fallback-img .icon, .icon-fallback-img .toggle i, .toggle .icon-fallback-img i {
   display: inline-block; }
 
-/* line 101, ../sass/framework/molecules/_icons.scss */
+/* line 121, ../sass/framework/molecules/_icons.scss */
 .icon-fallback-img .icon:before, .icon-fallback-img .toggle i:before, .toggle .icon-fallback-img i:before {
   content: ""; }
 
 /* The img fallback version is not as reliable since it does not check to make sure the fontloaded font has loaded. If we did add the .fontloaded class, it would unnecessarily request the fallback image. */
-/* line 105, ../sass/framework/molecules/_icons.scss */
+/* line 125, ../sass/framework/molecules/_icons.scss */
 .supports-fontface.supports-generatedcontent .icon-fallback-img .icon, .supports-fontface.supports-generatedcontent .icon-fallback-img .toggle i, .toggle .supports-fontface.supports-generatedcontent .icon-fallback-img i {
   background-image: none; }
 
-/* line 118, ../sass/framework/molecules/_icons.scss */
+/* line 138, ../sass/framework/molecules/_icons.scss */
 .icon-twitter:before {
   content: "\e600"; }
 
-/* line 121, ../sass/framework/molecules/_icons.scss */
+/* line 141, ../sass/framework/molecules/_icons.scss */
 .icon-facebook:before {
   content: "\e601"; }
 
-/* line 124, ../sass/framework/molecules/_icons.scss */
+/* line 144, ../sass/framework/molecules/_icons.scss */
 .icon-vimeo:before {
   content: "\e602"; }
 
-/* line 127, ../sass/framework/molecules/_icons.scss */
+/* line 147, ../sass/framework/molecules/_icons.scss */
 .icon-linkedin:before {
   content: "\e603"; }
 
-/* line 130, ../sass/framework/molecules/_icons.scss */
+/* line 150, ../sass/framework/molecules/_icons.scss */
 .icon-youtube:before {
   content: "\e604"; }
 
-/* line 133, ../sass/framework/molecules/_icons.scss */
+/* line 153, ../sass/framework/molecules/_icons.scss */
 .icon-instagram:before {
   content: "\e605"; }
 
-/* line 136, ../sass/framework/molecules/_icons.scss */
+/* line 156, ../sass/framework/molecules/_icons.scss */
 .icon-google-plus:before {
   content: "\e606"; }
 
-/* line 139, ../sass/framework/molecules/_icons.scss */
+/* line 159, ../sass/framework/molecules/_icons.scss */
 .icon-hamburger:before, .toggle--menu i:before {
   content: "\e607"; }
 
-/* line 142, ../sass/framework/molecules/_icons.scss */
+/* line 162, ../sass/framework/molecules/_icons.scss */
 .icon-cross:before, .toggle--close i:before {
   content: "\e608"; }
 
@@ -3041,6 +3099,34 @@ ADDED BY afontgarde.js:
 .toggle--close {
   font-size: 30px;
   font-size: 1.875rem; }
+
+/* line 5, ../sass/framework/molecules/_blockquotes.scss */
+blockquote, blockquote p, q {
+  line-height: 1.5;
+  color: #777; }
+
+/* line 10, ../sass/framework/molecules/_blockquotes.scss */
+blockquote {
+  margin: 0 0 1.666em;
+  padding: 9px 20px 0 19px;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid #ddd; }
+
+/* line 16, ../sass/framework/molecules/_blockquotes.scss */
+blockquote cite {
+  display: block;
+  color: #555;
+  font-size: 0.9em;
+  padding-top: 5px;
+  padding-top: 0.3125rem; }
+
+/* line 23, ../sass/framework/molecules/_blockquotes.scss */
+blockquote cite:before {
+  content: "\2014 \0020"; }
+
+/* line 28, ../sass/framework/molecules/_blockquotes.scss */
+blockquote cite a, blockquote cite a:visited {
+  color: #555; }
 
 /* line 11, ../sass/framework/compounds/_primary-nav.scss */
 .nav-primary {
@@ -3088,7 +3174,7 @@ ADDED BY afontgarde.js:
   direction: ltr;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-image: url('../images/site-logo.png?1389865799');
+  background-image: url('../images/site-logo.png?1393251064');
   background-size: 100%; }
 /* line 20, ../sass/framework/compounds/_site-logo.scss */
 .site-logo:hover, .site-logo:focus {
@@ -3101,7 +3187,7 @@ ADDED BY afontgarde.js:
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
   /* line 3, ../sass/framework/compounds/_site-logo.scss */
   .site-logo {
-    background-image: url('../images/site-logo--retina.png?1389865799'); } }
+    background-image: url('../images/site-logo--retina.png?1393251064'); } }
 
 /* #Site Credit */
 /* Useful pattern typically used to provide credit to the website developer in the footer of the website. */
@@ -3126,14 +3212,14 @@ ADDED BY afontgarde.js:
   margin-left: 2px; }
 /* line 22, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit {
-  background-image: url('../images/framework/site-credit.png?1389868474'); }
+  background-image: url('../images/framework/site-credit.png?1393251064'); }
 
 /* line 28, ../sass/framework/compounds/_site-credit.scss */
 .site-credit--dark {
-  background-image: url('../images/framework/site-credit--dark.svg?1384262605'); }
+  background-image: url('../images/framework/site-credit--dark.svg?1393251064'); }
 /* line 31, ../sass/framework/compounds/_site-credit.scss */
 .no-svg .site-credit--dark {
-  background-image: url('../images/framework/site-credit--dark.png?1389868474'); }
+  background-image: url('../images/framework/site-credit--dark.png?1393251064'); }
 
 /* ==========================================================================
    COLUMNS
@@ -3423,6 +3509,95 @@ ADDED BY afontgarde.js:
   margin-bottom: 0;
   padding-bottom: 0; }
 
+/* ============================================================ */
+/* ============================================================ */
+/* line 16, ../sass/framework/compounds/_social-share-bar.scss */
+.social-share-bar {
+  background-color: #fff;
+  padding: 6px 25px;
+  padding: 0.375rem 1.5625rem;
+  zoom: 1; }
+/* line 129, ../sass/framework/imports/_mixins.scss */
+.social-share-bar:before {
+  content: "";
+  display: table; }
+/* line 134, ../sass/framework/imports/_mixins.scss */
+.social-share-bar:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* line 22, ../sass/framework/compounds/_social-share-bar.scss */
+.social-share-bar__heading {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-bottom: 0;
+  margin-right: 1.666em;
+  color: #1C282E; }
+
+/* line 30, ../sass/framework/compounds/_social-share-bar.scss */
+.social-share-bar__heading, .social-share-bar__body {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-top: 6px;
+  margin-top: 0.375rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem; }
+
+/* ============================================================ */
+/* ============================================================ */
+/* line 15, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget {
+  display: block; }
+
+/* line 24, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget__text.is-loaded, .socialite-loaded .social-widget__text {
+  background: 0 !important;
+  text-indent: 0 !important; }
+
+/* line 30, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget--twitter-share {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px -200px;
+  width: 56px;
+  height: 20px; }
+
+/* line 34, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget--twitter-follow {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px -150px;
+  width: 61px;
+  height: 20px; }
+
+/* line 38, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget--facebook-like {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px 0px;
+  width: 47px;
+  height: 20px; }
+
+/* line 42, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget--linkedin-share {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px -100px;
+  width: 59px;
+  height: 20px; }
+
+/* line 46, ../sass/framework/compounds/_social-widgets.scss */
+.social-widget--googleplus-one {
+  background-image: url("../images/framework/spritesheet.png");
+  background-position: 0px -50px;
+  width: 32px;
+  height: 20px; }
+
 /* #Helpers */
 /* Set of simple classes to implement common CSS patterns */
 /* ##Clearfix & Clearing */
@@ -3589,7 +3764,7 @@ ADDED BY afontgarde.js:
 	<p>Lorem ipsum dolor sit amet, <strong class="vh">Hah! You are stupid but you don't know it!</strong>consequat.</p>
 */
 /* line 206, ../sass/framework/atoms/_helpers.scss */
-.vh, .social-actions__text, .search-form__label, .v-hidden, .screen-reader-text, .assistive-text {
+.vh, .social-actions__text, .search-form__label, .social-widget__text, .v-hidden, .screen-reader-text, .assistive-text {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -3600,7 +3775,7 @@ ADDED BY afontgarde.js:
   width: 1px; }
 
 /* line 220, ../sass/framework/atoms/_helpers.scss */
-.vh.focusable:active, .focusable.social-actions__text:active, .focusable.search-form__label:active, .vh.focusable:focus .v-hidden.focusable:active, .focusable.social-actions__text:focus .v-hidden.focusable:active, .focusable.search-form__label:focus .v-hidden.focusable:active, .v-hidden.focusable:focus {
+.vh.focusable:active, .focusable.social-actions__text:active, .focusable.search-form__label:active, .focusable.social-widget__text:active, .vh.focusable:focus .v-hidden.focusable:active, .focusable.social-actions__text:focus .v-hidden.focusable:active, .focusable.search-form__label:focus .v-hidden.focusable:active, .focusable.social-widget__text:focus .v-hidden.focusable:active, .v-hidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;

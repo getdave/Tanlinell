@@ -202,7 +202,12 @@ function tanlinell_setup() {
 	 */
 	require( get_template_directory() . '/inc/cpt-current-menu-item.php' );
 	
-
+	
+	/**
+	 * Form Submission GA Tracking  
+	 */
+	require( get_template_directory() . '/inc/ga-form-event-tracking.php' );
+	
 
 }
 endif; // tanlinell_setup

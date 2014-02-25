@@ -1,3 +1,4 @@
+@if $use-social-widgets == true {
 /* ============================================================ */
 
 // SOCIAL WIDGET
@@ -45,4 +46,4 @@
 .social-widget--googleplus-one {
 	@include sprite($social-action-googleplus);
 }
-
+} //endif

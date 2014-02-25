@@ -200,8 +200,8 @@ $mobileBreak:					$break-medium !default;
 
 
 // Nav Breakpoints
-$nav-break-1: 					$break-medium;
-$nav-break-2: 					$break-large;
+$nav-break-1: 					$break-medium !default;
+$nav-break-2: 					$break-large !default; 
 
 
 // Grid
@@ -267,6 +267,7 @@ $use-address: 					true !default;
 $use-icons: 					true !default;
 $use-social-icons: 				true !default;
 $use-toggle: 					true !default;
+$use-blockquotes:				true !default;
 
 // Default "off"
 $use-title-block:				false !default;
@@ -294,6 +295,8 @@ $use-site-colophon: 			true !default;
 $use-social-actions: 			true !default;
 $use-search-form: 				true !default;
 $use-social-icons-list: 		true !default;
+$use-social-widgets:			true !default;
+$use-social-share-bar:			true !default;
 
 // Default "off"
 $use-magnific: 					false !default;

@@ -49,6 +49,16 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
+### 2.10.0
+
+* Added pre/append classes for buttons so they can display content before/after text.
+* Moved Blockquotes to a new, conditional molecule.
+* Gave nav breakpoints the "Default" flag.
+* Updated jshint.
+* Conditionalise social compounds so they don't import unless configured to do so.
+* Added sizing and positioning modifier styles for icons.
+* GA Goal tracking for Gravity Forms
+
 ### 2.9.0 
 
 * Update Grid FW to include "palm" grids
