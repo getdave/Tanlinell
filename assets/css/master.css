@@ -3018,19 +3018,46 @@ pre code {
 .icon--gray, .icon--grey {
   color: #bdc3c7; }
 
-/* line 51, ../sass/framework/molecules/_icons.scss */
+/* line 52, ../sass/framework/molecules/_icons.scss */
+.icon--small {
+  font-size: 16px; }
+
+/* line 53, ../sass/framework/molecules/_icons.scss */
 .icon--large {
   font-size: 32px; }
 
-/* line 52, ../sass/framework/molecules/_icons.scss */
+/* line 54, ../sass/framework/molecules/_icons.scss */
 .icon--huge {
   font-size: 64px; }
 
-/* line 53, ../sass/framework/molecules/_icons.scss */
+/* line 55, ../sass/framework/molecules/_icons.scss */
 .icon--natural {
   font-size: inherit; }
 
-/* line 63, ../sass/framework/molecules/_icons.scss */
+/* line 57, ../sass/framework/molecules/_icons.scss */
+.icon--small-alt {
+  font-size: 20px; }
+
+/* line 58, ../sass/framework/molecules/_icons.scss */
+.icon--large-alt {
+  font-size: 40px; }
+
+/* line 59, ../sass/framework/molecules/_icons.scss */
+.icon--huge-alt {
+  font-size: 60px; }
+
+/* line 70, ../sass/framework/molecules/_icons.scss */
+.icon--inline {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: text-bottom;
+  margin-right: 0.2em; }
+
+/* line 83, ../sass/framework/molecules/_icons.scss */
 .icon-fallback-text .icon, .icon-fallback-text .toggle i, .toggle .icon-fallback-text i {
   display: none; }
 
@@ -3039,7 +3066,7 @@ ADDED BY afontgarde.js:
 .supports-fontface.FONT_NAME.supports-generatedcontent .icon-fallback-text .icon {
     display: inline-block;
 }*/
-/* line 75, ../sass/framework/molecules/_icons.scss */
+/* line 95, ../sass/framework/molecules/_icons.scss */
 .icon-fallback-glyph .text, .icon-fallback-img .text {
   /* visually hide but accessible (h5bp.com) */
   clip: rect(0 0 0 0);
@@ -3049,7 +3076,7 @@ ADDED BY afontgarde.js:
   width: 1px; }
 
 /* Careful, don’t use adjoining classes here (IE7) */
-/* line 85, ../sass/framework/molecules/_icons.scss */
+/* line 105, ../sass/framework/molecules/_icons.scss */
 .supports-no-generatedcontent .icon-fallback-glyph .text {
   clip: auto;
   overflow: visible;
@@ -3063,52 +3090,52 @@ ADDED BY afontgarde.js:
     font-size: inherit;
     line-height: inherit;
 }*/
-/* line 98, ../sass/framework/molecules/_icons.scss */
+/* line 118, ../sass/framework/molecules/_icons.scss */
 .icon-fallback-img .icon, .icon-fallback-img .toggle i, .toggle .icon-fallback-img i {
   display: inline-block; }
 
-/* line 101, ../sass/framework/molecules/_icons.scss */
+/* line 121, ../sass/framework/molecules/_icons.scss */
 .icon-fallback-img .icon:before, .icon-fallback-img .toggle i:before, .toggle .icon-fallback-img i:before {
   content: ""; }
 
 /* The img fallback version is not as reliable since it does not check to make sure the fontloaded font has loaded. If we did add the .fontloaded class, it would unnecessarily request the fallback image. */
-/* line 105, ../sass/framework/molecules/_icons.scss */
+/* line 125, ../sass/framework/molecules/_icons.scss */
 .supports-fontface.supports-generatedcontent .icon-fallback-img .icon, .supports-fontface.supports-generatedcontent .icon-fallback-img .toggle i, .toggle .supports-fontface.supports-generatedcontent .icon-fallback-img i {
   background-image: none; }
 
-/* line 118, ../sass/framework/molecules/_icons.scss */
+/* line 138, ../sass/framework/molecules/_icons.scss */
 .icon-twitter:before {
   content: "\e600"; }
 
-/* line 121, ../sass/framework/molecules/_icons.scss */
+/* line 141, ../sass/framework/molecules/_icons.scss */
 .icon-facebook:before {
   content: "\e601"; }
 
-/* line 124, ../sass/framework/molecules/_icons.scss */
+/* line 144, ../sass/framework/molecules/_icons.scss */
 .icon-vimeo:before {
   content: "\e602"; }
 
-/* line 127, ../sass/framework/molecules/_icons.scss */
+/* line 147, ../sass/framework/molecules/_icons.scss */
 .icon-linkedin:before {
   content: "\e603"; }
 
-/* line 130, ../sass/framework/molecules/_icons.scss */
+/* line 150, ../sass/framework/molecules/_icons.scss */
 .icon-youtube:before {
   content: "\e604"; }
 
-/* line 133, ../sass/framework/molecules/_icons.scss */
+/* line 153, ../sass/framework/molecules/_icons.scss */
 .icon-instagram:before {
   content: "\e605"; }
 
-/* line 136, ../sass/framework/molecules/_icons.scss */
+/* line 156, ../sass/framework/molecules/_icons.scss */
 .icon-google-plus:before {
   content: "\e606"; }
 
-/* line 139, ../sass/framework/molecules/_icons.scss */
+/* line 159, ../sass/framework/molecules/_icons.scss */
 .icon-hamburger:before, .toggle--menu i:before {
   content: "\e607"; }
 
-/* line 142, ../sass/framework/molecules/_icons.scss */
+/* line 162, ../sass/framework/molecules/_icons.scss */
 .icon-cross:before, .toggle--close i:before {
   content: "\e608"; }
 
