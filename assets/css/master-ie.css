@@ -2200,6 +2200,36 @@ input.btn, input.search-form__submit {
   -o-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0; }
 
+/* line 131, ../sass/framework/molecules/_buttons.scss */
+.btn__text {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline; }
+
+/* line 137, ../sass/framework/molecules/_buttons.scss */
+.btn__icon {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline; }
+
+/* line 146, ../sass/framework/molecules/_buttons.scss */
+.btn--prepend, .btn--append {
+  position: relative; }
+
+/* line 155, ../sass/framework/molecules/_buttons.scss */
+.btn--prepend .btn__text {
+  margin-left: 0.833em; }
+
+/* line 163, ../sass/framework/molecules/_buttons.scss */
+.btn--append .btn__text {
+  margin-right: 0.833em; }
+
 /* #DROPDOWNS */
 /* Create dropdown menus with caret arrow
 

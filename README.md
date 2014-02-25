@@ -49,6 +49,7 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
+* Added pre/append classes for buttons so they can display content before/after text.
 * Moved Blockquotes to a new, conditional molecule.
 * Gave nav breakpoints the "Default" flag.
 * Updated jshint.

@@ -122,6 +122,49 @@ input.btn {
 	@include border-radius(0 4px 4px 0);
 }
 
+// TEXT
+// ==========================================================================
+//
+// Buttons should be able to have content (typically icons) added before and after the text content
+//
+
+.btn__text {
+    @include inline-block;
+}
+
+// ICON
+// ==========================================================================
+.btn__icon {
+    @include inline-block;
+}
+
+// ==========================================================================
+// PRE/APPEND
+// ==========================================================================
+
+.btn--prepend,
+.btn--append {
+    position: relative;
+
+
+}
+
+// PREPEND
+// ==========================================================================
+.btn--prepend {
+    .btn__text {
+        margin-left: $baseLineHeight/2;
+    }
+}
+
+// APPEND
+// ==========================================================================
+.btn--append {
+    .btn__text {
+        margin-right: $baseLineHeight/2;
+    }
+}
+
 }//endif
 
 
