@@ -49,6 +49,12 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
+### 2.11.0
+
+* Hybrid Core Update to 1.6.2
+* Hybrid Core Breadcrumb add support
+* Addition of GF Button markup
+
 ### 2.10.0
 
 * Added pre/append classes for buttons so they can display content before/after text.
