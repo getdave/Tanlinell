@@ -106,6 +106,21 @@ add_theme_support( 'cleaner-gallery' );
 add_theme_support( 'cleaner-caption' );
 
 
+/**
+ * Hybrid Core Breadcrumb Trail Init
+ *
+ * @package hybrid-core 1.6.2
+ * @since Tanlinell 2.11.0
+ */
+function tanlinell_init_breadcrumb_trail_args( $args ) {
+				
+	$args['container'] = 'div'; 
+	$args['show_title'] = true;
+	$args['show_browse'] = false;
+	$args['labels'] = '';
+	return $args;
+}
+add_filter("breadcrumb_trail_args", "tanlinell_init_breadcrumb_trail_args");
 
 /* ==========================================================================
    WOOCOMMERCE SUPPORT
