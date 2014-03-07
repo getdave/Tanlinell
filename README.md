@@ -49,6 +49,10 @@ http://gruntjs.com/getting-started
 
 ## Changelog
 
+#### 2.11.1
+
+* Update vcard and inclusion swith for address__line
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2
