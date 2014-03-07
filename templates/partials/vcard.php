@@ -25,7 +25,7 @@
 	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" <?php echo $lat; ?> <?php echo $lng; ?>>
 	
 		<?php if(of_get_option( 'contact_address_street_address_1' ) || of_get_option( 'contact_address_street_address_2' )) : ?>
-		<span class="address__row" itemprop="streetAddress">
+		<span class="address__line" itemprop="streetAddress">
 			
 			<?php if(of_get_option( 'contact_address_street_address_1' )) : ?>
 			<span class="address__subrow">
