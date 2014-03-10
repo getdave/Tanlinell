@@ -7,13 +7,11 @@
  * @version     1.6.4
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 global $product, $woocommerce_loop;
 
 $related = $product->get_related();
 
-if ( sizeof( $related ) == 0 ) return;
+if ( sizeof($related) == 0 ) return;
 
 $args = apply_filters('woocommerce_related_products_args', array(
 	'post_type'				=> 'product',
@@ -21,8 +19,7 @@ $args = apply_filters('woocommerce_related_products_args', array(
 	'no_found_rows' 		=> 1,
 	'posts_per_page' 		=> $posts_per_page,
 	'orderby' 				=> $orderby,
-	'post__in' 				=> $related,
-	'post__not_in'			=> array($product->id)
+	'post__in' 				=> $related
 ) );
 
 $products = new WP_Query( $args );
@@ -31,11 +28,11 @@ $woocommerce_loop['columns'] 	= $columns;
 
 if ( $products->have_posts() ) : ?>
 
-	<div class="product-single__related">
+	<div class="related products">
 
-		<h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
+		<h2><?php _e('Related Products', 'woocommerce'); ?></h2>
 
-		<?php woocommerce_product_loop_start(); ?>
+		<ul class="products">
 
 			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
@@ -43,7 +40,7 @@ if ( $products->have_posts() ) : ?>
 
 			<?php endwhile; // end of the loop. ?>
 
-		<?php woocommerce_product_loop_end(); ?>
+		</ul>
 
 	</div>
 
