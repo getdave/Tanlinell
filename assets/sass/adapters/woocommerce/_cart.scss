@@ -172,9 +172,9 @@
 
 .cart {
 	margin-bottom: $baseLineHeight;
-}
 
-	/* .quantity {
+
+	 .quantity {
 			@include rem(padding-left,60px);
 			@include rem(padding-right,60px);
 		}
@@ -183,8 +183,8 @@
 		input.minus,
 		input.plus {
 			@include inline-block;
-			@include rem(width,46px);
-			@include rem(height,46px);
+			@include rem(width,40px);
+			@include rem(height,40px);
 		}
 	
 		.qty {
@@ -210,7 +210,7 @@
 			@include rem(margin-right,-60px);
 		}
 	
-	} */
+	} 
 
 
 
