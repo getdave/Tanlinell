@@ -1,7 +1,11 @@
 /**
- * TOGGLES
- * facilitates a data-attr powered API for implementing
- * standard Toggle switches.
+ * TOGGLE
+ *
+ * Creates a Toogle switch used for triggering the addition of
+ * "active"-like classes to another targetted DOM element 
+ * typically used to trigger visibility of expandable regions
+ * such as toggleable menus. Works well when paired with a CSS
+ * "expandable" module. Data API is provided.
  */
 
 (function(Tanlinell, $) {
