@@ -152,12 +152,14 @@
 
 .product-single__tabs {
 	@extend .gc;
+	margin-bottom: $baseLineHeight*2;
 }
 
 // PRODUCT RELATED
 // ==========================================================================
-.product-single__related {
+.product-single__details .related {
 	@extend .gc;
+
 }
 
 // PRODUCT UPSELLS

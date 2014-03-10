@@ -6,6 +6,7 @@
  * 
  */
 
+
 // Check if WooCommerce is active
 if ( ! in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 	return;
@@ -18,6 +19,15 @@ define('WOOCOMMERCE_ACTIVE', true);
 add_theme_support( 'woocommerce' );
 
 
+
+/**
+ * REMOVE WOOCOMMERCE FRONTEND STYLES
+ * http://docs.woothemes.com/document/disable-the-default-stylesheet/
+ */
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
+
+
 /**
  * WOOCOMMERCE WRAPPERS
  * 
@@ -28,9 +38,9 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wr
 add_action('woocommerce_before_main_content', 'tanlinell_wrapper_start', 10);
 function tanlinell_wrapper_start() {
 	if ( is_product() ) {
-		echo '<div class="layout-1c column-container">';
+		echo '<div class="layout-1c"><div class="column-container">';
 	} else {
-		echo '<div class="column-container">';
+		echo '<div class="layout-1c"><div class="column-container">';
 	}
 
 	echo '<div class="main">';
@@ -39,7 +49,7 @@ function tanlinell_wrapper_start() {
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 add_action('woocommerce_after_main_content', 'tanlinell_wrapper_end', 10);
 function tanlinell_wrapper_end() {
-  echo '</div>';
+  echo '</div></div></div>';
 }
 
 
