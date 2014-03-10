@@ -41,7 +41,7 @@ ul.products {
 		}
 
 		.product__info {
-			
+			margin-bottom: $baseLineHeight/2;
 		}
 
 		a {
@@ -58,16 +58,27 @@ ul.products {
 	}
 }
 
+
+
+
 // CALL TO ACTION
 // ==========================================================================
 .products .button {
-	margin-top: $baseLineHeight/2;
+
 	@extend .btn-full;
 
 	@include respond-to($break-medium) {
-		float: left;
+		@include inline-block;
 		clear: both;
 	}
+}
+
+// VIEW CART
+// ==========================================================================
+
+.products .added_to_cart {
+	@include inline-block;
+	font-size: 0.9em;
 }
 
 // THUMBNAIL
