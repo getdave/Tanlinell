@@ -64,6 +64,8 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
+                'assets/js/tanlinell/tanlinell.js',
+                'assets/js/tanlinell/modules/*.js',
                 'assets/js/modules/**/*.js',
                 'assets/js/source/**/*.js',
                 '!assets/js/site.min.js'
@@ -81,6 +83,8 @@ module.exports = function(grunt) {
                 files: {
                     'assets/js/site.min.js': [
                         'assets/js/vendor/**/*.js',
+                        'assets/js/tanlinell/tanlinell.js',
+                        'assets/js/tanlinell/modules/*.js',
                         'assets/js/source/globals.js',
                         'assets/js/modules/*.js',
                         'assets/js/source/plugins.js',

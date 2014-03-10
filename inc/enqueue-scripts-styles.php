@@ -57,7 +57,7 @@ function tanlinell_scripts() {
 	}
 
 	// Site.js - compiled and minified Site JS
-	wp_register_script('site', get_template_directory_uri() . '/assets/js/35168a97.site.min.js', array('jquery'), null , true );
+	wp_register_script('site', get_template_directory_uri() . '/assets/js/e7e24351.site.min.js', array('jquery'), null , true );
 	wp_enqueue_script('site');
 
 	/**

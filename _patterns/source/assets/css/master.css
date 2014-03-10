@@ -3199,7 +3199,7 @@ ADDED BY afontgarde.js:
   content: "\e607"; }
 
 /* line 162, ../sass/framework/molecules/_icons.scss */
-.icon-cross:before, .toggle--close i:before {
+.icon-cross:before, .toggle--close i:before, .toggle--closeable.toggle--active i:before {
   content: "\e608"; }
 
 /* ============================================================ */
@@ -3231,16 +3231,44 @@ ADDED BY afontgarde.js:
 .toggle {
   display: block;
   text-decoration: none; }
+/* line 23, ../sass/framework/molecules/_toggle.scss */
+.toggle i {
+  vertical-align: middle; }
 
-/* line 34, ../sass/framework/molecules/_toggle.scss */
-.toggle--menu {
+/* line 29, ../sass/framework/molecules/_toggle.scss */
+.toggle__text {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  font-size: 100%; }
+
+/* line 41, ../sass/framework/molecules/_toggle.scss */
+.toggle--menu i {
   font-size: 30px;
   font-size: 1.875rem; }
 
-/* line 49, ../sass/framework/molecules/_toggle.scss */
-.toggle--close {
+/* line 55, ../sass/framework/molecules/_toggle.scss */
+.toggle--close i {
   font-size: 30px;
   font-size: 1.875rem; }
+
+/* ============================================================ */
+/* ============================================================ */
+/* line 17, ../sass/framework/molecules/_expandable.scss */
+.js .expandable {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 0.3s ease;
+  -moz-transition: max-height 0.3s ease;
+  -o-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease; }
+
+/* line 24, ../sass/framework/molecules/_expandable.scss */
+.js .expandable.is-active, .js .expandable--active {
+  max-height: 300px; }
 
 /* line 5, ../sass/framework/molecules/_blockquotes.scss */
 blockquote, blockquote p, q {

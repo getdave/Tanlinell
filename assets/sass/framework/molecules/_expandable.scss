@@ -1,0 +1,30 @@
+@if $use-expandable == true {
+
+/* ============================================================ */
+
+// EXPANDABLE
+
+// Description: partners with Toggle module to provide expanding
+// and collapsing panels of content
+
+/* ============================================================ */
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+.js .expandable {        
+    overflow: hidden;
+    max-height: 0;
+    @include transition(max-height 0.3s ease);
+}
+
+.js .expandable.is-active,
+.js .expandable--active {
+    max-height: 300px;
+}
+
+
+
+} //endif

@@ -22,7 +22,13 @@
 
 	i {
 		@extend .icon;
+		vertical-align: middle;
 	}
+}
+
+.toggle__text {
+	@include inline-block;
+	font-size: 100%;
 }
 
 
@@ -32,9 +38,8 @@
 // ==========================================================================
 
 .toggle--menu {
-	@include rem(font-size,30px);
-
 	i {
+		@include rem(font-size,30px);
 		@extend .icon-hamburger;
 	}
 }
@@ -47,8 +52,13 @@
 // ==========================================================================
 
 .toggle--close {
-	@include rem(font-size,30px);
+	i {
+		@include rem(font-size,30px);
+		@extend .icon-cross;
+	}
+}
 
+.toggle--closeable.toggle--active {
 	i {
 		@extend .icon-cross;
 	}
