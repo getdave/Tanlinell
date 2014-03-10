@@ -1,3 +1,4 @@
+
 <?php
 /**
  * Single Product Up-Sells
@@ -7,38 +8,30 @@
  * @version     1.6.4
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
-global $product, $woocommerce, $woocommerce_loop;
+global $product, $woocommerce_loop;
 
 $upsells = $product->get_upsells();
 
 if ( sizeof( $upsells ) == 0 ) return;
 
-$meta_query = $woocommerce->query->get_meta_query();
-
 $args = array(
-	'post_type'           => 'product',
-	'ignore_sticky_posts' => 1,
-	'no_found_rows'       => 1,
-	'posts_per_page'      => $posts_per_page,
-	'orderby'             => $orderby,
-	'post__in'            => $upsells,
-	'post__not_in'        => array( $product->id ),
-	'meta_query'          => $meta_query
+	'post_type'				=> 'product',
+	'ignore_sticky_posts'	=> 1,
+	'posts_per_page' 		=> 4,
+	'no_found_rows' 		=> 1,
+	'orderby' 				=> 'rand',
+	'post__in' 				=> $upsells
 );
 
 $products = new WP_Query( $args );
-
-$woocommerce_loop['columns'] 	= $columns;
 
 if ( $products->have_posts() ) : ?>
 
 	<div class="product-single__upsells">
 
-		<h2><?php _e( 'You may also like&hellip;', 'woocommerce' ) ?></h2>
+		<h2><?php _e('You may also like&hellip;', 'woocommerce') ?></h2>
 
-		<?php woocommerce_product_loop_start(); ?>
+		<ul class="products">
 
 			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
@@ -46,10 +39,11 @@ if ( $products->have_posts() ) : ?>
 
 			<?php endwhile; // end of the loop. ?>
 
-		<?php woocommerce_product_loop_end(); ?>
+		</ul>
 
 	</div>
 
 <?php endif;
 
 wp_reset_postdata();
+
