@@ -3257,7 +3257,7 @@ ADDED BY afontgarde.js:
 
 /* ============================================================ */
 /* ============================================================ */
-/* line 17, ../sass/framework/molecules/_expandable.scss */
+/* line 37, ../sass/framework/molecules/_expandable.scss */
 .js .expandable {
   overflow: hidden;
   max-height: 0;
@@ -3265,9 +3265,8 @@ ADDED BY afontgarde.js:
   -moz-transition: max-height 0.3s ease;
   -o-transition: max-height 0.3s ease;
   transition: max-height 0.3s ease; }
-
 /* line 24, ../sass/framework/molecules/_expandable.scss */
-.js .expandable.is-active, .js .expandable--active {
+.js .expandable.is-active {
   max-height: 300px; }
 
 /* line 5, ../sass/framework/molecules/_blockquotes.scss */

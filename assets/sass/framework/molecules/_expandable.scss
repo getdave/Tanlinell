@@ -1,5 +1,3 @@
-@if $use-expandable == true {
-
 /* ============================================================ */
 
 // EXPANDABLE
@@ -11,20 +9,34 @@
 
 
 // ==========================================================================
+// MIXIN
+// ==========================================================================
+
+@mixin tan-expandable(
+		$height: 300px,
+		$transition: max-height 0.3s ease
+	) {
+
+	overflow: hidden;
+	max-height: 0;
+	@include transition($transition);
+
+	&.is-active {
+		max-height: $height;
+	}
+}
+
+
+// ==========================================================================
 // BASE
 // ==========================================================================
 
-.js .expandable {        
-    overflow: hidden;
-    max-height: 0;
-    @include transition(max-height 0.3s ease);
-}
+@if $use-expandable == true {
 
-.js .expandable.is-active,
-.js .expandable--active {
-    max-height: 300px;
-}
 
+	.js .expandable {
+	    @include tan-expandable();
+	}
 
 
 } //endif
