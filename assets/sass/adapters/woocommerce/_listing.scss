@@ -10,7 +10,7 @@
 // PRODUCT LIST
 // ==========================================================================
 
-.products {
+ul.products {
 	@extend .grid;
 	@extend .grid--divided;
 

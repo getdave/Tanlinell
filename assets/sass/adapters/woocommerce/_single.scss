@@ -150,14 +150,16 @@
 	@extend .grid;
 }
 
-.product-single__tabs {
+.product-single__details .woocommerce_tabs {
 	@extend .gc;
+	margin-bottom: $baseLineHeight*2;
 }
 
 // PRODUCT RELATED
 // ==========================================================================
-.product-single__related {
+.product-single__details .related {
 	@extend .gc;
+
 }
 
 // PRODUCT UPSELLS

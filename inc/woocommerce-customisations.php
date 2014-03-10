@@ -19,6 +19,15 @@ define('WOOCOMMERCE_ACTIVE', true);
 add_theme_support( 'woocommerce' );
 
 
+
+/**
+ * REMOVE WOOCOMMERCE FRONTEND STYLES
+ * http://docs.woothemes.com/document/disable-the-default-stylesheet/
+ */
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
+
+
 /**
  * WOOCOMMERCE WRAPPERS
  * 
