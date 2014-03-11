@@ -391,23 +391,23 @@ table {
 html {
   font-family: none; }
 
-@media only screen and (min-width: 20em) {
+@media screen and (min-width: 320px) {
   /* line 22, ../sass/framework/imports/_js-media-queries.scss */
   html {
     font-family: tiny; } }
-@media only screen and (min-width: 37.5em) {
+@media screen and (min-width: 600px) {
   /* line 29, ../sass/framework/imports/_js-media-queries.scss */
   html {
     font-family: small; } }
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* line 36, ../sass/framework/imports/_js-media-queries.scss */
   html {
     font-family: medium; } }
-@media only screen and (min-width: 62em) {
+@media screen and (min-width: 992px) {
   /* line 43, ../sass/framework/imports/_js-media-queries.scss */
   html {
     font-family: large; } }
-@media only screen and (min-width: 86.375em) {
+@media screen and (min-width: 1382px) {
   /* line 50, ../sass/framework/imports/_js-media-queries.scss */
   html {
     font-family: xlarge; } }
@@ -448,7 +448,7 @@ p {
   font-size: 1.15em;
   line-height: 1.4;
   margin-bottom: 0.833em; }
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* line 58, ../sass/framework/atoms/_typo.scss */
   .lead {
     font-size: 1.5em; } }
@@ -586,7 +586,7 @@ img {
 		<!-- SOME STUFF -->
 	</div>
 */
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* line 27, ../sass/framework/atoms/_containers.scss */
   .container--reduced {
     width: 45%; } }
@@ -677,7 +677,7 @@ img {
   box-sizing: border-box;
   *behavior: url(/boxsizing.htc); }
 
-@media only screen and (min-width: 20em) {
+@media screen and (min-width: 320px) {
   /* Proportional units
      ========================================================================== */
   /*
@@ -772,7 +772,7 @@ img {
   /* line 58, ../sass/framework/atoms/_grid.scss */
   .h-grid-clear {
     clear: left; } }
-@media only screen and (min-width: 37.5em) {
+@media screen and (min-width: 600px) {
   /* Proportional units
      ========================================================================== */
   /*
@@ -863,7 +863,7 @@ img {
   /* line 68, ../sass/framework/imports/_mixins.scss */
   .p7-8 {
     width: 87.5%; } }
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* Proportional units
      ========================================================================== */
   /*
@@ -962,7 +962,7 @@ img {
   /* line 77, ../sass/framework/atoms/_grid.scss */
   .l-grid-clear {
     clear: left; } }
-@media only screen and (min-width: 62em) {
+@media screen and (min-width: 992px) {
   /* Proportional units
      ========================================================================== */
   /*
@@ -1061,7 +1061,7 @@ img {
   /* line 90, ../sass/framework/atoms/_grid.scss */
   .d-grid-clear {
     clear: left; } }
-@media only screen and (min-width: 86.375em) {
+@media screen and (min-width: 1382px) {
   /* Proportional units
      ========================================================================== */
   /*
@@ -1704,17 +1704,17 @@ h6, .h6 {
 /* ###Misc Headings */
 /* A series of classes for setting massive type; for use in heroes, mastheads, promos, etc. */
 /* CSS classes to use are `.giga` (massive!), `.mega` (giant) and `.kilo` (large) */
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* line 135, ../sass/framework/molecules/_headings.scss */
   .giga {
     font-size: 6em; } }
 
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* line 143, ../sass/framework/molecules/_headings.scss */
   .mega {
     font-size: 4.5em; } }
 
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* line 150, ../sass/framework/molecules/_headings.scss */
   .kilo {
     font-size: 3em; } }
@@ -1822,7 +1822,7 @@ th, td {
   padding: 0.4165em;
   border: 1px solid #ccc;
   text-align: left; }
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* line 65, ../sass/framework/molecules/_tables.scss */
   th, td {
     padding: 0.55533em; } }
@@ -3342,7 +3342,7 @@ blockquote cite a, blockquote cite a:visited {
 /* line 39, ../sass/framework/molecules/_menu.scss */
 .nav-primary a {
   text-align: left; }
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* line 51, ../sass/framework/molecules/_menu.scss */
   .nav-primary a {
     text-align: center; }
@@ -3590,18 +3590,18 @@ blockquote cite a, blockquote cite a:visited {
   margin-top: 0.833em;
   margin-bottom: 0.833em;
   text-align: center; }
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* line 3, ../sass/framework/compounds/_site-colophon.scss */
   .site-colophon {
     text-align: left; } }
 
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* line 14, ../sass/framework/compounds/_site-colophon.scss */
   .site-colophon--copyright {
     float: left;
     width: 48%; } }
 
-@media only screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
   /* line 21, ../sass/framework/compounds/_site-colophon.scss */
   .site-colophon--develop-credit {
     float: right;

@@ -164,17 +164,23 @@ $half_gutter_width: ($gutter/2);
 // RESPONSIVE
 // ==========================================================================
 
-@mixin respond-to($media) {
-    @if ($fix-mqs or $isFixed == true) {
-        // Check if we're IE. If so then just return the content sans-media query
-        @if $fix-mqs >= $media {
-            @content;
-        }
-    } @else {
-        // Return the appropriate MQ declaration for modern browsers
-        @media only screen and (min-width: rsize($media)) { @content; }
+// Deprecated - prefer "min-screen()"
+@mixin respond-to($res) {
+  @if ($is-oldie == true or $isFixed == true) {
+      // Check if we're IE. If so then just return the content sans-media query
+      @if $fix-mqs >= $res {
+          @content;
+      }
+  } @else {
+    @media screen and (min-width: $res)
+    {
+      @content;
     }
+  }
 }
+
+
+
 
 // ==========================================================================
 // TEXTURE
