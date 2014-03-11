@@ -113,6 +113,29 @@
 
 
 	/**
+	 * EQUAL HEIGHTS
+	 *
+	 * plugin to equalize heights of multiple elements on a page.
+	 */
+	/*
+	(function() {
+		Modernizr.load({
+			test: Tanlinell.utils.cutsTheMustard() && (Tanlinell.utils.activeMediaQuery() > 3),
+			yep : [
+				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/jquery.equalheights.min.js'
+				],
+			complete: function(){
+				if (jQuery().equalHeights) {
+					// $('.js-equal-height').equalHeights();
+				}
+			}
+		});
+	}());
+	*/
+
+
+
+	/**
 	 * MAGNIFIC POPUP/LIGHTBOX
 	 * lightbox solution for various types of content
 	 */
