@@ -1,0 +1,53 @@
+/* ============================================================ */
+
+// JS MEDIA QUERIES
+
+// Description: setups up the implementation to pass Media Query
+// values through to the JS via the font-family rule
+
+/* ============================================================ */
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+// None
+html {
+    font-family: none;
+}
+
+// Tiny
+@include respond-to($break-tiny) {
+    html {
+        font-family: tiny;
+    }
+}
+
+// Small
+@include respond-to($break-small) {
+    html {
+        font-family: small;
+    }
+}
+
+// Medium
+@include respond-to($break-medium) {
+    html {
+        font-family: medium;
+    }
+}
+
+// Large
+@include respond-to($break-large) {
+    html {
+        font-family: large;
+    }
+}
+
+// Extra Large
+@include respond-to($break-xlarge) {
+    html {
+        font-family: xlarge;
+    }
+}

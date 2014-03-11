@@ -6,15 +6,13 @@
  */
 
 (function($) {
-	/* global Tanlinell */
+
 	/**
 	 * Tanlinell Class Constructor
 	 */
 	var Tanlinell = function() {
 		this.$doc = $(document);
 		this.$root = $(":root");
-
-
 
 		// Initialise
 		this.init();
@@ -66,6 +64,34 @@
 	 */
 	Tanlinell.prototype.utils = {
 
+
+		/**
+		 * Dictionary
+		 * creates a bullet-proof Dictionary object for 
+		 * mapping strings to values and retrieving them
+		 * from the object,
+		 */
+		Dictionary: (function() {
+			var Dictionary = function(startValues) {
+				this.values = startValues || {};
+			};
+
+			Dictionary.prototype.store = function(name, value) {
+				this.values[name] = value;
+			};
+
+			Dictionary.prototype.lookup = function(name) {
+				return this.values[name];
+			};
+
+			Dictionary.prototype.contains = function(name) {
+				return Object.prototype.hasOwnProperty.call(this.values, name) && Object.prototype.propertyIsEnumerable.call(this.values, name);
+			};
+
+			return Dictionary;
+		}()),
+
+
 		/**
 		 * Cuts The Mustard
 		 *
@@ -73,11 +99,15 @@
 		 * borrowed from http://responsivenews.co.uk/post/18948466399/cutting-the-mustard
 		 */
 		cutsTheMustard: function() {
-			if('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
-				return true;
-			} else {
-				return false;
-			}
+			var cutsTheMustard = (function() {
+				if('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
+					return true;
+				} else {
+					return false;
+				}
+			}());
+
+			return cutsTheMustard;
 		},
 
 		/**
@@ -88,8 +118,38 @@
 		 * as an absolute last resort for working around issues
 		 */
 		isOperaMini: function() {
-			return Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
+			var isOperaMini = Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
+			return isOperaMini;
+		},
+
+
+		/**
+		 * Active Media Query
+		 *
+		 * get currently acitve MQ from CSS on html
+		 * element's font-family. Return as an integar
+		 * for Math based comparison. Based on original
+		 * concept:
+		 * http://adactio.com/journal/5429/
+		 */
+		activeMediaQuery: function() {
+			var mqString, breakPoints, rtn;
+
+			breakPoints = new this.Dictionary({
+				none: 1,
+				tiny: 2,
+				small: 3,
+				medium: 4,
+				large: 5,
+				xlarge: 6
+			});
+
+			mqString = $(":root").css("font-family");
+			rtn = breakPoints.lookup(mqString);
+
+			return rtn;
 		}
+
 	};
 
 

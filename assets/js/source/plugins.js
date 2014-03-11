@@ -1,60 +1,95 @@
 /**
  * PLUGIN JS
  *
- * This file contains all simple JS to init JavaScript plugins
- * For example you might initialise your slideshow from this.
+ * File containing all inititalisation of 3rd party JavaScript
+ * plugins (eg: slideshows...etc).
  *
- * I'd advise avoiding coding custom JS in this file. That's
- * what main.js is for...
+ * Custom JavaScript should not be placed in this file and should
+ * instead be moved into "main.js" which is reserved for this purpose.
+ *
+ * Boilerplate initialisation code for common Plugins is provided
+ * below for ease of use.
+ *
+ * If your Plugin is not required for use on all templates then it should
+ * be contionally loaded on the appropriate template via Modernizr.load().
+ * Boilerplate code (commented out) is provided below.
  *
  */
 
+
 // Capture jQuery in noConflict mode and retranslate to $ alias
-(function($) {
+(function($, Tanlinell) {
 
 
 	/**
-	 * %%MY_PLUGIN%%
+	 * ! EXAMPLE PLUGIN BOILERPLATE !
 	 *
-	 * %%PLUGIN_DESCRIPTION%%
+	 * this Plugin is required on every page and therefore is placed within the
+	 * vendor directly and always included in the site.min.js file
 	 *
 	 */
+	/*
 	(function() {
 		$(document).ready(function(){
-			//$("")
+			$("")
 		});
 	}());
+	*/
 
-
+	/**
+	 * ! EXAMPLE CONDITIONALLY LOADED PLUGIN BOILERPLATE !
+	 *
+	 * this Plugin is only required under specific conditions and should therefore
+	 * not be loaded on every template. Update conditionals as required under "test"
+	 * and include the file of your choice from the "conditionals" directory
+	 */
+	/*
+	(function() {
+		Modernizr.load({
+			test: Tanlinell.utils.cutsTheMustard() && (Tanlinell.utils.activeMediaQuery() > 3),
+			yep : [
+				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/my-conditionally-loaded-js-file.js'
+				],
+			complete: function(){
+				if (jQuery().superfish) { // test for Plugin availability
+					// Plugin initialisation code here
+				}
+			}
+		});
+	}());
+	*/
 
 
 
 	/**
-	 * FontGarde
+	 * AFONTGARDE
 	 *
 	 * Robust patterns and rules for safe loading of Iconfonts
+	 * Provides fine grain control over loading and presentation
+	 *
 	 * Read full docs at:
 	 * https://github.com/filamentgroup/a-font-garde
 	 */
-	(function() {	
+	(function() {
 		$(document).ready(function(){
-			new AFontGarde( 'icomoon', '\uE600\uE601\uE602\uE605' );
+			if (typeof AFontGarde !== "undefined") {
+				new AFontGarde( 'icomoon', '\uE600\uE601\uE602\uE605' );
+			}
 		});
 	}());
 
 
 
-
 	/**
-	 * SuperFish Menus
+	 * SUPERFISH DROPDOWN MENUS
 	 *
-	 * Loads Superfish menus and intialises
-	 * only if on suitably large screen
-	 * device. Not perfect but ....
+	 * enhanced Suckerfish-style menu
+	 * takes an existing pure CSS drop-down menu and adds a range of additional
+	 * features as shown on http://users.tpg.com.au/j_birch/plugins/superfish/
 	 */
 	(function() {
 		Modernizr.load({
-			test: Modernizr.mq('only screen and (min-width: 62em)'),
+			test: Tanlinell.utils.cutsTheMustard() && (Tanlinell.utils.activeMediaQuery() > 3),
 			yep : [
 				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/jquery.hoverIntent.js',
 				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/superfish/superfish.js'
@@ -77,10 +112,6 @@
 
 
 
-
-
-
-
 	/**
 	 * MAGNIFIC POPUP/LIGHTBOX
 	 * lightbox solution for various types of content
@@ -88,7 +119,7 @@
 	/*
 	(function() {
 		Modernizr.load({
-			test: $(".gallery").length,
+			test: $(".gallery").length && Tanlinell.utils.cutsTheMustard(),
 			yep : [
 				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/magnific.min.js'
 				],
@@ -109,14 +140,12 @@
 
 
 
-
 	/**
-	 * FitVids
+	 * FITVIDS
 	 *
-	 * Loads FitVids only when there are videos on the page rather than
-	 * for no reason
+	 * A lightweight, easy-to-use jQuery plugin for fluid width video embeds
+	 * http://fitvidsjs.com/
 	 */
-
 	/* (function() {
 		Modernizr.load({
 			test: $(".format-video"),
@@ -136,26 +165,26 @@
 
 
 
-
-
 	/**
 	 * SOCIALITE
 	 *
-	 * Loads socialite and required social network extensions
-	 * when required by page
-	 *
+	 * implement and activate a plethora of social sharing buttons
+	 * in a manner that reduces social share buttons' impact on
+	 * website performance
 	 */
 	/*
 	(function() {
 		Modernizr.load({
-			test: 1,
+			test: Tanlinell.utils.cutsTheMustard() && (Tanlinell.utils.activeMediaQuery() > 3),
 			yep : [
 				tanlinellSiteDetails.templateDirectoryUri + '/assets/js/conditional/socialite/socialite.min.js'
 				],
 			complete: function(){
-				$('.social-actions').on("touchstart hover", function() {
-					Socialite.load('.main');
-				});
+				if (typeof Socialite !== "undefined") {
+					$('.social-actions').on("touchstart hover", function() {
+						Socialite.load('.main');
+					});
+				};
 
 			}
 		});
@@ -164,5 +193,4 @@
 
 
 
-
-}(jQuery));
+}(jQuery, Tanlinell));

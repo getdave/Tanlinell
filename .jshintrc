@@ -23,6 +23,7 @@
         "jQuery": true,
         "Modernizr": true,
         "WebFontConfig": true,
+        "Tanlinell": true,
         "tanlinellSiteDetails": true,
         "FastClick": true,
         "SITE": true,

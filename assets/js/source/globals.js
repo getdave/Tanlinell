@@ -1,12 +1,23 @@
 /**
  * GLOBALS JS
  *
- * Define global namespace and attach utils
+ * defines global namespace for the individual site
+ * defines any constants required to be used throughout
+ * the site
  *
  */
 
-// Global namespace
+
+/**
+ * GLOBAL NAMESPACE
+ * 
+ * defines a global namespace for the website in order
+ * to avoid poluting global scope with unecessary variables
+ * all site specific properties and methods can hang from
+ * this global namespace object.
+ */
 var SITE = SITE || {};
+
 
 
 /**
@@ -15,7 +26,7 @@ var SITE = SITE || {};
  * @type {Object}
  */
 SITE.CONSTANTS = {
-
+    //EXAMPLE_CONSTANT: "example value"
 };
 
 
