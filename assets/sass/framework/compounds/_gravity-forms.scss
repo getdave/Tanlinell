@@ -20,7 +20,7 @@
 .gfield {
 	padding-bottom: $baseLineHeight;
 	@include clearfix;
-	@include placeHolder(#ccc);			
+	@include placeHolder(#ccc);
 }
 
 
@@ -46,11 +46,24 @@
 	color: #999;
 	line-height: 1.2;
 	margin-top: $baseLineHeight/2;
-	font-family: $arial;
+}
 
-	.wf-active & {
-		font-family: "proxima-nova-n3", "proxima-nova", $arial;
-	}
+// COMPLEX (eg: address...etc)
+// ==========================================================================
+.ginput_complex {
+    label {
+        font-weight: normal;
+        font-size: 0.9em;
+    }
+}
+
+// REQUIRED
+// ==========================================================================
+
+.gfield_required {
+    color: $errorText;
+    font-weight: normal;
+    margin-left: 0.1em;
 }
 
 
@@ -62,7 +75,7 @@
 
 // ALERTS
 // ==========================================================================
-// 
+//
 .validation_error {
 	@extend .alert;
 	@extend .alert-danger;
