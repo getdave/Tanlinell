@@ -18,8 +18,19 @@
 (function($) {
 
 
-// YOUR CODE HERE
-// but not 3rd party plugin calls...(see "plugins.js")
+
+/**
+ * !EXAMPLE MODULE
+ *
+ * example of calling a module registered to the SITE global
+ */
+/*
+(function() {
+	new SITE.modules._MyExampleModule();
+}());
+/*
 
 
+
+ */
 }(jQuery));
