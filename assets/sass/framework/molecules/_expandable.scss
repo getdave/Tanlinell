@@ -1,0 +1,42 @@
+/* ============================================================ */
+
+// EXPANDABLE
+
+// Description: partners with Toggle module to provide expanding
+// and collapsing panels of content
+
+/* ============================================================ */
+
+
+// ==========================================================================
+// MIXIN
+// ==========================================================================
+
+@mixin tan-expandable(
+		$height: 300px,
+		$transition: max-height 0.3s ease
+	) {
+
+	overflow: hidden;
+	max-height: 0;
+	@include transition($transition);
+
+	&.is-active {
+		max-height: $height;
+	}
+}
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+@if $use-expandable == true {
+
+
+	.js .expandable {
+	    @include tan-expandable();
+	}
+
+
+} //endif

@@ -35,6 +35,7 @@
 	@import "imports/_mixins";
 	@import "imports/_media-queries.scss";
 	@import "imports/_normalize.scss";
+	@import "imports/_js-media-queries.scss";
 
 
 // ==========================================================================
@@ -87,6 +88,7 @@
 	@import "molecules/_icons.scss";
 	@import "molecules/_social-icons.scss";
 	@import "molecules/_toggle.scss";
+	@import "molecules/_expandable.scss";
 	@import "molecules/_blockquotes.scss";
 
 // ==========================================================================

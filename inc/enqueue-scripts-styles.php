@@ -57,7 +57,7 @@ function tanlinell_scripts() {
 	}
 
 	// Site.js - compiled and minified Site JS
-	wp_register_script('site', get_template_directory_uri() . '/assets/js/35168a97.site.min.js', array('jquery'), null , true );
+	wp_register_script('site', get_template_directory_uri() . '/assets/js/1d35d313.site.min.js', array('jquery'), null , true );
 	wp_enqueue_script('site');
 
 	/**
@@ -107,7 +107,7 @@ function tanlinell_jquery_local_fallback($src, $handle = null) {
   $url = includes_url();
 
   if ($add_jquery_fallback) {
-    echo '<script>window.jQuery || document.write(\'<script src="' . $url . '/js/jquery/jquery.js"><\/script>\')</script>' . "\n";
+    echo '<script>window.jQuery || document.write(\'<script src="' . $url . 'js/jquery/jquery.js"><\/script>\')</script>' . "\n";
     $add_jquery_fallback = false;
   }
 
