@@ -97,7 +97,7 @@ $half_gutter_width: ($gutter/2);
 // Easily create and apply styles to multiple heading levels
 @mixin headings($from: 1, $to: 6){
     @for $i from $from through $to{
-      h#{$i}, .h#{$i} {
+      h#{$i}, .h#{$i}, %h#{$i} {
         @content
       }
     }
