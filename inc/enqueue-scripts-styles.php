@@ -107,7 +107,7 @@ function tanlinell_jquery_local_fallback($src, $handle = null) {
   $url = includes_url();
 
   if ($add_jquery_fallback) {
-    echo '<script>window.jQuery || document.write(\'<script src="' . $url . '/js/jquery/jquery.js"><\/script>\')</script>' . "\n";
+    echo '<script>window.jQuery || document.write(\'<script src="' . $url . 'js/jquery/jquery.js"><\/script>\')</script>' . "\n";
     $add_jquery_fallback = false;
   }
 
