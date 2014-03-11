@@ -13,6 +13,7 @@
 	var Tanlinell = function() {
 		this.$doc = $(document);
 		this.$root = $(":root");
+		this.$body = $("body");
 
 		// Initialise
 		this.init();

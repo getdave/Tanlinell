@@ -28,9 +28,8 @@
 (function() {
 	new SITE.modules._MyExampleModule();
 }());
-/*
+*/
 
 
 
- */
 }(jQuery));

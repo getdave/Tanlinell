@@ -22,7 +22,7 @@ var SITE = SITE || {};
 
 /**
  * CONSTANTS
- * 
+ *
  * define constants used across the entire site
  * @type {Object}
  */
