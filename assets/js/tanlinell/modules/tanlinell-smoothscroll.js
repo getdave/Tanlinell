@@ -64,16 +64,16 @@
 		// with user defined options if provided
 		var animationOptions = $.extend({
 			scrollTop: offset,
-            queue: false
+			queue: false
 		}, _this.settings.animationOptions);
 
 		$('html, body').stop().animate(animationOptions, _this.settings.duration, function() {
-        	$.event.trigger({
+			$.event.trigger({
 				type: "tanlinell:smooth-scroll:complete",
 				targetEl: $targetEl,
 				triggerEl: $triggerEl
 			});
-        });
+		});
 	};
 
 	/**
