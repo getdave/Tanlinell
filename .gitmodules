@@ -1,3 +1,6 @@
 [submodule "libs/Custom-Meta-Boxes"]
 	path = libs/Custom-Meta-Boxes
 	url = https://github.com/humanmade/Custom-Meta-Boxes.git
+[submodule "libs/hybrid-core"]
+	path = libs/hybrid-core
+	url = https://github.com/justintadlock/hybrid-core.git
