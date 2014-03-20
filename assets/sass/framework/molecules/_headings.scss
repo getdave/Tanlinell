@@ -1,11 +1,13 @@
 @if $use-headings == true {
-
-/* #Headings */
-/* Based on the ancient Typographic scale */
-/* http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4.
-
-/* ###Standard Headings */
-/* Note that all heading sizes are aliased via the `.hN` classes. So if you would like your `<h6>` to look like an `<h1>` then simply add the class `<h3 class="h1" />` */
+// ==========================================================================
+// #Headings 
+// Based on the ancient Typographic scale 
+// http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography-part-4.
+//
+// ###Standard Headings 
+// Note that all heading sizes are aliased via the `.hN` classes. So if you would like your `<h6>` to look like an `<h1>` then simply add the class `<h3 class="h1" />` */
+//
+// ==========================================================================
 
 // All Headings
 @include headings() {

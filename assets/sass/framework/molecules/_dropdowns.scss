@@ -1,8 +1,12 @@
 @if $use-dropdowns == true {
-/* #DROPDOWNS */
+// ==========================================================================
+// #DROPDOWNS 
+//
+// Create dropdown menus with caret arrow
+//
+// ==========================================================================
 
-/* Create dropdown menus with caret arrow
-
+/*
     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
 		<li><a tabindex="-1" href="#">Action</a></li>
 		<li><a tabindex="-1" href="#">Another action</a></li>

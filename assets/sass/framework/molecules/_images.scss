@@ -1,8 +1,11 @@
 @if $use-images == true {
-/* #Images */
-
-/* Common styling patterns for images to be applied to `<img` elements. */
-/* Please note that `.img-rounded` and `.img-circle` do not work in IE7-8. */
+// ==========================================================================
+// #Images 
+//
+// Common styling patterns for images to be applied to `<img` elements. 
+// Please note that `.img-rounded` and `.img-circle` do not work in IE7-8. 
+//
+// ==========================================================================
 
 // BASE
 %img-base {
