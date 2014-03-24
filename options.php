@@ -117,7 +117,15 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __('Contact Settings', 'options_framework_theme'),
 		'type' => 'heading');
-
+		
+	$options[] = array(
+		'name' => __('Google Analytics ID', 'options_framework_theme'),
+		'desc' => __('Enter the Google Analytics ID', 'options_framework_theme'),
+		'id' => 'google_analytics_id',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');	
+	
 	// Contact Telephone
 	$options[] = array(
 		'name' => __('Contact Telephone', 'options_framework_theme'),

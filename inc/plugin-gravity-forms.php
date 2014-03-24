@@ -1,16 +1,33 @@
-<?php
+<?php 
 /**
- * Plugin Overrides
- * 
- * custom plugin overides
- * @package Tanlinell
- * @since Tanlinell 2.2
+ * Move GFORM Scripts into Footer
  */
- 
+
+function tanlinell_gform_init_scripts_footer() {
+    return true;
+}
+add_filter("gform_init_scripts_footer", "tanlinell_gform_init_scripts_footer");
+
+
 /**
- * Remove Table Press Default CSS
+ * Form Submission GA Tracking 
  */
-add_filter( 'tablepress_use_default_css', '__return_false' );
+function tanlinell_add_form_event_tracking($button, $form) {
+		
+	global $post;
+	
+	$dom = new DOMDocument();
+    $dom->loadHTML($button);
+    $input = $dom->getElementsByTagName('input')->item(0);
+    if ($input->hasAttribute('onclick')) {
+        $input->setAttribute("onclick","_gaq.push(['_trackEvent', '" . $form['title'] . "', 'Form Submission', '" . esc_attr($post->post_title) .' - '.$post->ID . "', 1.00, false]);".$input->getAttribute("onclick"));
+    } else {
+        $input->setAttribute("onclick","_gaq.push(['_trackEvent', '" . $form['title'] . "', 'Form Submission', '" . esc_attr($post->post_title) .' - '.$post->ID . "', 1.00, false]);");
+    }
+    return $dom->saveHtml();
+	
+}
+add_filter("gform_submit_button", "tanlinell_add_form_event_tracking", 10, 2);
 
 
 /**
@@ -64,4 +81,4 @@ function tanlinell_address_field_label ($addressTypes, $formID) {
 	return $addressTypes;
 }
 add_filter('gform_address_types', 'tanlinell_address_field_label', 10, 2);
-?>
+

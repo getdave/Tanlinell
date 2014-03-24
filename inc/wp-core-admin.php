@@ -8,14 +8,10 @@
  */
 
 
-
-
 /**
  * Remove The Ability to Edit Plugins via Edit screen
  */
 define( 'DISALLOW_FILE_EDIT', true );
-
-
 
 
 /**
@@ -25,8 +21,6 @@ function remove_editor() {
   $page = remove_submenu_page( 'themes.php', 'theme-editor.php' );
 }
 add_action( 'admin_init', 'remove_editor' );
-
-
 
 
 /**
@@ -51,11 +45,9 @@ function remove_menu_items() {
 add_action('admin_menu', 'remove_menu_items');
 
 
-
 /**
  * Remove Default WP Dashboard Items
  */
-
 function example_remove_dashboard_widgets() {
 	// Globalize the metaboxes array, this holds all the widgets for wp-admin
  	global $wp_meta_boxes;
@@ -75,12 +67,8 @@ function example_remove_dashboard_widgets() {
 	// Remove "Secondary Area"
 	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
 }
-
 // Hoook into the 'wp_dashboard_setup' action to register our function
 add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets' );
-
-
-
 
 
 /**
@@ -104,7 +92,6 @@ function tanlinell_unregister_default_wp_widgets() {
 	//unregister_widget('WP_Widget_RSS');
 	unregister_widget('WP_Widget_Tag_Cloud');
 }
-
 add_action('widgets_init', 'tanlinell_unregister_default_wp_widgets', 1);
 
 
@@ -129,7 +116,6 @@ add_filter( 'tiny_mce_before_init', 'tanlinell_unhide_kitchensink' );
  *
  * @return void
  **/
-
 function cpt_icons() {
     ?>
     <style type="text/css" media="screen">
@@ -139,7 +125,6 @@ function cpt_icons() {
     </style>
 <?php } 
 add_action( 'admin_head', 'cpt_icons' );
-
 
 
 /**
@@ -152,7 +137,6 @@ add_action( 'admin_head', 'cpt_icons' );
  * @param array $contactmethods
  * @return array
  */
-
 function tanlinell_remove_contactmethods( $contactmethods ) {
     unset( $contactmethods['aim'] );
     unset( $contactmethods['yim'] );
@@ -160,9 +144,7 @@ function tanlinell_remove_contactmethods( $contactmethods ) {
 
     return $contactmethods;
 }
-
 add_filter( 'user_contactmethods' , 'tanlinell_remove_contactmethods');
-
 
 
 /**
@@ -177,6 +159,57 @@ function wphidenag() {
 add_action('admin_menu','wphidenag');
 
 
+/*
+ * Enables SVG uploading in the WP upload option
+ */
+function tanlinell_mime_types( $mimes = array() ){
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'tanlinell_mime_types' );
 
 
+/*
+ * Fixes display of svg images when selected as featured image
+ */
+function tanlinell_fix_svg() {
+    echo '<style type="text/css">
+          .attachment-post-thumbnail, .thumbnail img { 
+               width: 100% !important; 
+               height: auto !important; 
+          }
+          </style>';
+ }
+ add_action('admin_head', 'tanlinell_fix_svg');
+
+
+/**
+ * Remove Image Dimensions
+ * removes inline image dimension attributes on <img> tags
+ * aids in responsive design.
+ */
+
+add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+
+function remove_thumbnail_dimensions( $html ) {
+        $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+        return $html;
+}
+
+
+/**
+ * WP Automatic Updates
+ * Ensure we recieve the updates we want 
+ */
+
+// ==========================================================================
+// CONFIGURE AUTOMATIC UPDATES
+// ==========================================================================
+//ensure minor
+define( 'WP_AUTO_UPDATE_CORE', 'minor' );
+function always_return_false_for_vcs( $checkout, $context ) {
+   return false;
+}
+add_filter( 'automatic_updates_is_vcs_checkout', 'always_return_false_for_vcs', 10, 2 );
 

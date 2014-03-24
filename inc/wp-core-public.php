@@ -32,10 +32,12 @@ function tanlinell_body_classes( $classes ) {
 	
 	if( is_archive() ) {
 	
-		if( is_category() || is_tax() )
+		if ( is_category() || is_tax() )
 			$classes[] = $pre.'archive-'.sanitize_title(single_cat_title( '', false ));		
-		else
+		elseif ( isset( $wp_query->query['post_type'] ) )
 			$classes[] = $pre.'archive-'.$wp_query->query['post_type'];
+		else
+			$classes[] = $pre.'archive-posts';
 		
 	}
 	elseif( is_singular() )
@@ -102,17 +104,13 @@ function tanlinell_quote_post_type_blockquote( $content ) {
 add_filter( 'the_content', 'tanlinell_quote_post_type_blockquote' );
 
 
-
-
 /**
- * Move GFORM Scripts into Footer
+ * FAVICON
  */
-
-function tanlinell_gform_init_scripts_footer() {
-    return true;
+function favicon_link() {
+    echo '<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />' . "\n";
 }
-add_filter("gform_init_scripts_footer", "tanlinell_gform_init_scripts_footer");
-
+add_action( 'wp_head', 'favicon_link' );
 
 
 /**
@@ -123,18 +121,3 @@ add_filter("gform_init_scripts_footer", "tanlinell_gform_init_scripts_footer");
  */
 remove_action( 'wp_head', 'wp_generator', 1 );
 
-
-
-/**
- * Remove Image Dimensions
- * removes inline image dimension attributes on <img> tags
- * aids in responsive design.
- */
-
-add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
-add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
-
-function remove_thumbnail_dimensions( $html ) {
-        $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
-        return $html;
-}

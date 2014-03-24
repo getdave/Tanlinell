@@ -114,7 +114,3 @@ function tanlinell_woocommerce_breadcrumbs() {
     );
 }
 
-
-
-
-

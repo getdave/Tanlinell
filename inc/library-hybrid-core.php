@@ -1,54 +1,4 @@
-<?php
-
-/**
- * Add Theme Support
- *
- * @package Tanlinell
- * @since Tanlinell 1.0
- */
-
-
-
-
-
-/**
- * WORDPRESS CORE FEATURES
- *
- * Initalizes support for features available within WordPress core
- */
-
-/**
- * Add default posts and comments RSS feed links to head
- */
-add_theme_support( 'automatic-feed-links' );
-
-
-/**
- * Post Thumbnails
- * enable support for Post Thumbnails
- */
-add_theme_support( 'post-thumbnails' );
-
-
-
-/**
- * Post Formats
- * add theme support for post formats
- */
-
-add_theme_support( 'post-formats', array(
-		'aside',
-		'gallery',
-		'link',
-		'image',
-		'quote',
-		'status',
-		'video'
-	) );
-
-
-
-
+<?php 
 
 /**
  * HYBRID CORE FEATURES
@@ -79,11 +29,11 @@ add_theme_support( 'hybrid-core-sidebars',
 );
 
 
-
 add_theme_support( 'hybrid-core-widgets' );
 add_theme_support( 'hybrid-core-shortcodes' );
 add_theme_support( 'hybrid-core-drop-downs' );
 add_theme_support( 'hybrid-core-template-hierarchy' );
+
 
 /* Add theme support for framework extensions. */
 add_theme_support(
@@ -96,38 +46,48 @@ add_theme_support(
 /* Support pagination instead of prev/next links. */
 add_theme_support( 'loop-pagination' );
 
+
 /* Use breadcrumbs. */
 add_theme_support( 'breadcrumb-trail' );
 
+
 /* Nicer [gallery] shortcode implementation. */
 add_theme_support( 'cleaner-gallery' );
+
 
 /* Better captions for themes to style. */
 add_theme_support( 'cleaner-caption' );
 
 
 /**
- * Hybrid Core Breadcrumb Trail Init
+ * Hybrid Enhance Breadcrumb Args
  *
- * @package hybrid-core 1.6.2
- * @since Tanlinell 2.11.0
+ * Default sitewide settings for the breadcrumb trails
+ * http://themehybrid.com/docs/tutorials/breadcrumb-trail
  */
-function tanlinell_init_breadcrumb_trail_args( $args ) {
-				
-	$args['container'] = 'div'; 
-	$args['show_title'] = true;
-	$args['show_browse'] = false;
-	$args['labels'] = '';
+
+function my_breadcrumb_trail_args( $args ) {
+
+	$args = array(
+		'separator' => '/',
+		'before' => __( '', 'breadcrumb-trail' ),
+		'after' => false,
+		'front_page' => true,
+		'show_home' => __( 'Home', 'breadcrumb-trail' ),
+		'echo' => true,
+		'container' => 'div',
+		'show_title' => true,
+		'show_browse' => false,
+		'labels' => '',
+	);
+
 	return $args;
 }
-add_filter("breadcrumb_trail_args", "tanlinell_init_breadcrumb_trail_args");
-
-/* ==========================================================================
-   WOOCOMMERCE SUPPORT
-   ========================================================================== */
-// http://docs.woothemes.com/document/third-party-custom-theme-compatibility/
-add_theme_support( 'woocommerce' );
+add_filter( 'breadcrumb_trail_args', 'my_breadcrumb_trail_args' );
 
 
+/* Set the content width based on the theme's design and stylesheet. */
+if ( ! isset( $content_width ) ) {
+	$content_width = 640; /* pixels */
+}
 
-?>

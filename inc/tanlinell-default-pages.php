@@ -2,10 +2,7 @@
 /**
  * Default Page Setup
  * 
- * custom tweaks for sites designed and created by Burfield
- * you might want to comment this out...
- * @package Tanlinell
- * @since Tanlinell 1.0
+ * creates pages and sets config to allow /blog/ and /home/ to load our templates
  */
 
 function tanlinell_default_page_setup() {
@@ -67,4 +64,4 @@ function tanlinell_default_page_setup() {
 	
 }
 add_action( 'after_switch_theme', 'tanlinell_default_page_setup' );
-?>
+

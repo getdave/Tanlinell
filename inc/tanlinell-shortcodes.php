@@ -22,3 +22,4 @@ function tanlinell_encoded_email( $atts, $content ) {
 }
 
 add_shortcode( 'email', 'tanlinell_encoded_email' );
+

@@ -7,17 +7,16 @@
  */
 
 
+/**
+ * Include libraries 
+ */
+require_once locate_template( 'inc/libraries.php' );
+ 
 
-/* Load the Hybrid Core framework class file. */
-require_once( trailingslashit( get_template_directory() ) . 'hybrid-core/hybrid.php' );
-
-/* Call the Hybrid Core class - provides access to new power */
-new Hybrid();
-
-// Load the TGM Plugin Class - requires or recommends Plugins to install
-// Removed in favour of Composer based Plugin dependency management
-//require_once( trailingslashit( get_template_directory() ) . 'inc/tgm-plugin-activation/class-tgm-plugin-activation.php' );
-
+/**
+ * Overrides and Configuration: Library -> Hybrid-Core
+ */	
+require_once locate_template( '/inc/library-hybrid-core.php' );
 
 
 /**
@@ -37,178 +36,106 @@ if ( ! function_exists( 'tanlinell_setup' ) ):
 function tanlinell_setup() {
 	
 	/**
-	 * FAVICON
-	 */
-	function favicon_link() {
-	    echo '<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />' . "\n";
-	}
-	add_action( 'wp_head', 'favicon_link' );
-	
-
-	/**
-	 * TGM Required Plugins Script
-	 */
-	// Removed in favour of Composer based Plugin dependency management
-	//require( get_template_directory() . '/inc/tgm-plugin-activation/required-plugins.php' );
-	
-	
-	/**
-	 * Tanlinell Plugin Overides
-	 */
-	require( get_template_directory() . '/inc/plugin-overrides.php' );
-
-
-	/* Set the content width based on the theme's design and stylesheet. */
-	if ( ! isset( $content_width ) ) {
-		$content_width = 640; /* pixels */
-	}
-
-	/**
-	 * Custom template tags for this theme.
-	 */
-	require( get_template_directory() . '/inc/template-tags.php' );
-
-	/**
-	 * Custom functions that act independently of the theme templates
-	 */
-	require( get_template_directory() . '/inc/tweaks.php' );
-
-
-	/**
-	 * Custom Theme Options
-	 */
-	//require( get_template_directory() . '/inc/theme-options/theme-options.php' );
-
-	if ( !function_exists( 'optionsframework_init' ) ) {
-		define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/inc/options-framework/' );
-		require_once get_template_directory() . '/inc/options-framework/options-framework.php';
-	}
-
-
-	/**
-	 * Translation
-	 * 
-	 * Make theme availa`ble for translation
-	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on Tanlinell, use a find and replace
-	 * to change 'tanlinell' to the name of your theme in all the template files
-	 */
-	//load_theme_textdomain( 'tanlinell', get_template_directory() . '/languages' );
-
-
-	
-
-	/**
-	 * Admin Customisations
-	 * functions and tweaks to customise the WP Admin
+	 * Site -> Include scripts specific for this project
 	 */	
-	require( get_template_directory() . '/inc/admin-customisations.php' );
-
-
-	/**
-	 * Custom Shortcodes
-	 * add your own custom shortcodes into this file
-	 */	
-	require( get_template_directory() . '/inc/custom-shortcodes.php' );
-	
-
-
-	/**
-	 * Add Theme Support
-	 * Enables support for various theme items that require explicit enabling
-	 */	
-	require( get_template_directory() . '/inc/add-theme-support.php' );
-
-
-
-	/**
-	 * Custom Widgets
-	 * add your own custom Widgets into this file
-	 */	
-	//require( get_template_directory() . '/inc/custom-widgets.php' );
-	
+	require_once locate_template( '/inc--site/site.inc.php' );
 		
 	
 	/**
-	 * Custom-Metaboxes-and-Fields-for-WordPress
+	 * Overrides and Configuration: Wordpress Core
+	 */
+	require_once locate_template( '/inc/wp-core-admin.php' );
+	require_once locate_template( '/inc/wp-core-public.php' );
+	
+	
+	/**
+	 * Overrides and Configuration: Plugin -> Minor
+	 *
+	 * Script to house minor plugin alterations for any plugin when 
+	 * a full file is not warranted
+	 */
+	require_once locate_template( '/inc/plugin-minor.php' );
+	
+	
+	/**
+	 * Overrides and Configuration: Plugin -> Gravity Forms
 	 */	
-	function tanlinell_initialize_cmb_meta_boxes() {
-		if ( !function_exists( 'cmb_init' ) ) {
-			require( get_template_directory() . '/libs/Custom-Meta-Boxes/custom-meta-boxes.php');
-		}
-	}
-	add_action( 'init', 'tanlinell_initialize_cmb_meta_boxes', 1 );
+	require_once locate_template( '/inc/plugin-gravity-forms.php' );
+	
+	
+	/**
+	 * Overrides and Configuration: Plugin -> WooCommerce
+	 */
+	require_once locate_template( '/inc/plugin-woocommerce.php' );
 	
 	
 	
 	/**
-	 * Page Title/Page Subtitle
+	 * Tanlinell Theme -> Utilities
 	 */
-	require( get_template_directory() . '/inc/global-custom-meta.php' );
-	
+	require_once locate_template( '/inc/tanlinell-utilities.php' );
 	
 	
 	/**
-	 * Enqueue Scripts & CSS Styles
-	 * adds javascripts and stylesheets the right way via WP enqueue
+	 *  Tanlinell Theme -> Wrapper Markup Filters/Hooks
 	 */
-	require( get_template_directory() . '/inc/enqueue-scripts-styles.php' );
+	require_once locate_template( '/inc/tanlinell-wrapper-markup.php' );
 	
 	
 	/**
-	 * Helper functions 
+	 *  Tanlinell Theme -> Byline Function
 	 */
-	require( get_template_directory() . '/inc/helper-functions.php' );
-
-
-	/**
-	 * Burfield Customisations
-	 * custom tweaks for sites designed and created by Burfield
-	 * you might want to comment this out...
-	 */
-	require( get_template_directory() . '/inc/burfield-customisations.php' );
+	require_once locate_template( '/inc/tanlinell-byline.php' );
 	
 	
 	/**
-	 * Default Page Setup
-	 * creates pages and sets config to allow /blog/ and /home/ to load our templates
+	 *  Tanlinell Theme -> Comment Function
 	 */
-	require( get_template_directory() . '/inc/default-page-setup.php' );
+	require_once locate_template( '/inc/tanlinell-comment.php' );
 	
 	
 	/**
-	 * Default Menus Setup
-	 * creates menu items and assigns to menu locations that have been created previously
+	 *  Tanlinell Theme -> Content Navigation Function
 	 */
-	require( get_template_directory() . '/inc/default-menu-setup.php' );	
-
-	/**
-	 * WooCommerce Customisations
-	 * custom hooks and filter functinos for integration with WooCommerce
-	 */
-	require( get_template_directory() . '/inc/woocommerce-customisations.php' );	
+	require_once locate_template( '/inc/tanlinell-content-nav.php' );
 	
 	
 	/**
-	 * WP Automatic Updates
-	 * Ensure we recieve the updates we want 
-	 */
-	require( get_template_directory() . '/inc/wp-automatic-updates.php' );
+	 * Tanlinell Theme -> Shortcodes
+	 */	
+	require_once locate_template( '/inc/tanlinell-shortcodes.php' );
 	
 	
 	/**
-	 * Current Menu Item for CPT's
-	 * Adds the 'current-menu-item' class to menu items when viewing cpt's 
+	 * Tanlinell Theme -> Default Page Setup
 	 */
-	require( get_template_directory() . '/inc/cpt-current-menu-item.php' );
+	require_once locate_template( '/inc/tanlinell-default-pages.php' );
 	
 	
 	/**
-	 * Form Submission GA Tracking  
+	 * Tanlinell Theme -> Current Menu Classes
 	 */
-	require( get_template_directory() . '/inc/ga-form-event-tracking.php' );
+	require_once locate_template( '/inc/tanlinell-menu-classes.php' );
 	
-
+	
+	/**
+	 * Tanlinell Theme -> Additional Page Titles
+	 */
+	require_once locate_template( '/inc/tanlinell-page-titles.php' );
+	
+	
+	/**
+	 * Tanlinell Theme -> Enqueue Scripts & CSS Styles
+	 */
+	require_once locate_template( '/inc/tanlinell-scripts.php' );
+	
+	
+	/**
+	 * Tanlinell Theme -> Supports
+	 */	
+	require_once locate_template( '/inc/tanlinell-theme-supports.php' );
+	
+	
 }
 endif; // tanlinell_setup
 
@@ -219,8 +146,4 @@ endif; // tanlinell_setup
  * http://justintadlock.com/archives/2010/12/30/wordpress-theme-function-files
  */
 add_action( 'after_setup_theme', 'tanlinell_setup', 10 ); // 10 is the default but we're being explicit
-
-
-
-
 

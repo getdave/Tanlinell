@@ -1,11 +1,7 @@
 <?php
-
-
 /**
- * Global Custom Meta Box
- * 'types' => array('post','page') -> default
+ * Page Titles Custom Meta Box
  */
-
 function page_titles_cmb_meta_boxes( $meta_boxes ) {
 	
 	$meta_boxes[] = array(
@@ -35,4 +31,4 @@ function page_titles_cmb_meta_boxes( $meta_boxes ) {
 	return $meta_boxes;
 }
 add_filter( 'cmb_meta_boxes', 'page_titles_cmb_meta_boxes' );
-?>
+
