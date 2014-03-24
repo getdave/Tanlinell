@@ -1,8 +1,12 @@
 @if $use-breadcrumbs == true {
-/* #Breadcrumbs */
+// ==========================================================================
+// #Breadcrumbs 
+//
+// Standard Breadcrumb navigation for assisting users with establishing their position within the website hierarchy
+//
+// ==========================================================================
 
-/* Standard Breadcrumb navigation for assisting users with establishing their position within the website hierarchy
-
+/*
 	<ul class="breadcrumbs">
 	    <li>
 	        <a href="#">Home</a>

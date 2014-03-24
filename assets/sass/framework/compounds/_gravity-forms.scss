@@ -1,4 +1,10 @@
 @if $use-gravity-forms == true {
+// ==========================================================================
+// Gravity Forms
+//
+// Description:	Normalise Gravity Forms styles
+//
+// ==========================================================================
 
 
 
@@ -64,6 +70,13 @@
     color: $errorText;
     font-weight: normal;
     margin-left: 0.1em;
+}
+
+// HIDDEN
+// ==========================================================================
+
+.gform_hidden {
+	@extend .vh;
 }
 
 

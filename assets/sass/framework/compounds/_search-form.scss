@@ -1,6 +1,10 @@
 @if $use-search-form == true {
-
-/* ##Search Form */
+// ==========================================================================
+// Search Forms
+//
+// Description: Search Form styles
+//
+// ==========================================================================
 
 /* 
     <form method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
