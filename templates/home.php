@@ -35,7 +35,7 @@ get_header(); ?>
 				</li>
 			<?php endwhile; ?>
 			</ul>
-			<?php get_template_part('pagination'); ?>
+			<?php get_template_part('templates/navigation/pagination'); ?>
 			
 		<?php else : ?>
 

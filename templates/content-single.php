@@ -1,19 +1,15 @@
 <?php
 /**
  * @package Tanlinell
- * @since Tanlinell 1.0
+ * @since Tanlinell 3.0.0
  */
 ?>
-
+<?php while (have_posts()) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/BlogPosting">
 	<?php get_template_part( 'templates/partials/pagetitle', 'post' ); ?>
 	
 	<?php get_template_part( 'templates/partials/post-thumbnail'); ?>
-	
-	
-	
-	
-	
+		
 	<div class="entry-content" itemprop="articleBody">
 		<?php do_atomic('before_single_post_content'); ?>
 		<?php the_content(); ?>
@@ -32,3 +28,4 @@
 		<?php get_template_part( 'templates/partials/social', 'actions' ); ?>
 	</section>
 </article><!-- #post-<?php the_ID(); ?> -->
+<?php endwhile; ?>

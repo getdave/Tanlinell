@@ -122,13 +122,11 @@ class tanlinell_add_cpt_descendants_primary_menu_walker extends Walker_Nav_Menu 
 									$attributes .= ' ' . $attr . '="' . $value . '"';
 								}
 							}
-					
-							$item_output = $args->before;
-							$item_output .= '<a'. $attributes .'>';
+							
+							$item_output = '<a'. $attributes .'>';
 							/** This filter is documented in wp-includes/post-template.php */
-							$item_output .= $args->link_before . apply_filters( 'the_title', $cpt_item->post_title, $cpt_item->ID ) . $args->link_after;
+							$item_output .= apply_filters( 'the_title', $cpt_item->post_title, $cpt_item->ID );
 							$item_output .= '</a>';
-							$item_output .= $args->after;
 					
 							/**
 							 * Filter a menu item's starting output.

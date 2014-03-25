@@ -1,10 +1,9 @@
 <?php
 /**
  * @package Tanlinell
- * @since Tanlinell 1.0
+ * @since Tanlinell 3.0.0
  */
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/BlogPosting">
 	<?php get_template_part( 'templates/partials/pagetitle', 'post' ); ?>
 

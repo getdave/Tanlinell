@@ -13,12 +13,11 @@
  * Sidebar partials
  */
 ?>
-
 <?php if ( tanlinell_is_custom_post_type() ) : ?>
 	<?php get_template_part( 'templates/partials/sidebar', 'cpt-example' ); ?>
 <?php endif; ?>
 
-<?php if (tanlinell_is_blog_page()) : ?>
+<?php if ( tanlinell_is_blog_page() ) : ?>
 
 	<?php get_template_part( 'templates/partials/sidebar', 'categories' ); ?>
 	

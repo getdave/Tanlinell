@@ -4,10 +4,13 @@
  */
 function tanlinell_site_content_class( $classes ) {
 	
-	/**
-	 * Default Classes 
-	 */
-	//$classes = 'container site-content';
+	if ( tanlinell_display_sidebar() ) {
+		// Classes on pages with the sidebar
+		$classes .= ' layout-2c-l';
+	} else {
+		// Classes on full width pages
+		$classes .= ' layout-1c';
+	}
 	
 	return $classes;
 }

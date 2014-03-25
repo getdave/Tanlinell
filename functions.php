@@ -75,12 +75,30 @@ function tanlinell_setup() {
 	 */
 	require_once locate_template( '/inc/tanlinell-utilities.php' );
 	
+		
+	/**
+	 * Tanlinell Theme -> Wrapper Templating Class
+	 */
+	require_once locate_template('/inc/tanlinell-wrapper.php');
+	
+	
+	/**
+	 * Tanlinell Theme -> Sidebar Class
+	 */
+	require_once locate_template('/inc/tanlinell-sidebar.php');
+	
 	
 	/**
 	 *  Tanlinell Theme -> Wrapper Markup Filters/Hooks
 	 */
 	require_once locate_template( '/inc/tanlinell-wrapper-markup.php' );
 	
+		
+	/**
+	 *  Tanlinell Theme -> Wrapper Markup Filters/Hooks
+	 */
+	require_once locate_template( '/inc/tanlinell-sidebar-display.php' );
+		
 	
 	/**
 	 *  Tanlinell Theme -> Byline Function

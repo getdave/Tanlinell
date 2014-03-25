@@ -121,3 +121,16 @@ add_action( 'wp_head', 'favicon_link' );
  */
 remove_action( 'wp_head', 'wp_generator', 1 );
 
+
+/**
+ * Tell WordPress to use searchform.php from the templates/ directory
+ *
+ * @link https://github.com/roots/roots
+ */
+function tanlinell_get_search_form($form) {
+  $form = '';
+  locate_template('/templates/searchform.php', true, false);
+  return $form;
+}
+add_filter('get_search_form', 'tanlinell_get_search_form');
+
