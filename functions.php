@@ -38,7 +38,7 @@ function tanlinell_setup() {
 	/**
 	 * Site -> Include scripts specific for this project
 	 */	
-	require_once locate_template( '/inc--site/site.inc.php' );
+	require_once locate_template( '/inc-site/site.inc.php' );
 		
 	
 	/**

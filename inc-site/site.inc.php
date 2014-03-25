@@ -13,4 +13,4 @@
 /**
  * BC Plugin -> Global Configuration
  */	
-require_once locate_template( '/inc/bc-plugin-globals.php' );
+require_once locate_template( '/inc-site/bc-plugin-globals.php' );
