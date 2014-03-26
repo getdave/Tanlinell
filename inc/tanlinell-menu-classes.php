@@ -26,14 +26,14 @@ function tanlinell_current_type_nav_class($classes, $item) {
 	        array_push($classes, 'current_page_ancestor');
 	        
 	    }
-		
-		if ( $item->title == $archive_post->post_title ) {
-			
-	        array_push($classes, 'current-menu-item');
-	        array_push($classes, 'current_page_item');
-	        
-	    }
-		
+		if( false != $archive_post ) {
+			if ( $item->title == $archive_post->post_title ) {
+				
+		        array_push($classes, 'current-menu-item');
+		        array_push($classes, 'current_page_item');
+		        
+		    }
+		}
 	}
 	
     return $classes;
