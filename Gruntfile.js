@@ -11,16 +11,16 @@ module.exports = function(grunt) {
         grunt.initConfig({
 
 
-        // watch for changes and trigger compass, jshint, uglify and livereload
+        // watch for changes and trigger sass, jshint, uglify and livereload
         watch: {
             options: {
                 livereload: true,
             },
 
-            compass: {
+            sass: {
                 files: ['assets/sass/**/*.{scss,sass}'],
                 //files: ['master.scss'],
-                tasks: ['compass:dist','version:styles','copy:prototype','copy:patterns']
+                tasks: ['sass:dist','version:styles','copy:prototype','copy:patterns']
             },
             js: {
                 files: '<%= jshint.all %>',
@@ -38,22 +38,19 @@ module.exports = function(grunt) {
             },
         },
 
-        // compass and scss
-        compass: {
+        sass: {
+            options: {
+                loadPath: [
+                    require('node-bourbon').includePaths,
+                    'bower_components/tanlinell-framework/sass'
+                ],
+                style: 'expanded'
+            },
             dist: {
-                options: {
-                    config: 'config.rb',
-                    force: true
+                files: {
+                    'assets/css/master.css': 'assets/sass/master.scss'
                 }
             },
-            build: {
-                options: {
-                    outputStyle: "compressed",
-                    environment: "production",
-                    noLineComments: true,
-                    force: true
-                }
-            }
         },
 
         // javascript linting with jshint
@@ -278,7 +275,7 @@ module.exports = function(grunt) {
         'jshint',
         'uglify:build',
         'version:scripts',
-        'compass:build',
+        'sass:build',
         'imagemin',
         'svgmin'
     ]);
