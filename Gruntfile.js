@@ -12,6 +12,17 @@ module.exports = function(grunt) {
         grunt.initConfig({
 
 
+
+        
+        githooks: {
+            all: {
+                // Will run the jshint and test:unit tasks at every commit
+                'pre-commit': 'jshint',
+            }
+        },
+        
+
+
         // watch for changes and trigger sass, jshint, uglify and livereload
         watch: {
             options: {
