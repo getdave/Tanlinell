@@ -120,6 +120,11 @@ function tanlinell_jquery_local_fallback($src, $handle = null) {
 add_action('wp_head', 'tanlinell_jquery_local_fallback');
 
 
+/**
+ * Add GA in an awesome manor
+ * @link https://github.com/roots/roots/blob/master/lib/scripts.php 
+ */
+
 if( !current_user_can('manage_options') ) {
 	add_action('wp_head', 'tanlinell_google_analytics', 20);
 }
