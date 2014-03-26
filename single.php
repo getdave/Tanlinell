@@ -3,35 +3,7 @@
  * The Template for displaying all single posts.
  *
  * @package Tanlinell
- * @since Tanlinell 1.0
+ * @since Tanlinell 3.0.0
  */
-
-get_header(); ?>
-
-<?php do_action( 'tanlinell_content_wrapper_start');?>
-
-	<?php do_action( 'tanlinell_content_main_start');?>
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'content', 'single' ); ?>
-
-			<?php tanlinell_content_nav( 'nav-below' ); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() )
-					comments_template( '', true );
-			?>
-
-		<?php endwhile; // end of the loop. ?>
-
-	<?php do_action( 'tanlinell_content_main_end');?>
-
-	<?php do_action( 'tanlinell_content_sub_start');?>
-		<?php get_sidebar(); ?>
-	<?php do_action( 'tanlinell_content_sub_end');?>
-
-<?php do_action( 'tanlinell_content_wrapper_end');?>
-
-<?php get_footer(); ?>
+?>
+<?php get_template_part( 'templates/content', 'single' ); ?>
