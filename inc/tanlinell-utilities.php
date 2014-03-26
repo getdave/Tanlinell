@@ -166,11 +166,6 @@ function tanlinell_get_page_children( $page_id ){
 }
 
 
-
-
-
-
-
 /**
  * Check for existence of child pages
  * @param  int $post_id ID of the post in question
@@ -184,7 +179,6 @@ function tanlinell_has_children( $post_id ) {
         return false;
     }
 }
-
 
 
 /**
@@ -251,7 +245,6 @@ function tanlinell_is_custom_post_type( $post = NULL )
 }
 
 
-
 /**
  * 	Function to get the paging display calculations
  * 
@@ -275,3 +268,34 @@ function tanlinell_paging_stat(  ){
 	return $stat;
 }
 
+
+/**
+ * 	Function to get post meta
+ *
+ *  usage $post->post_meta = tanlinell_get_post_meta();
+ *
+ *  @return $post_meta	(array)	# returns an array of all post meta
+ * 
+ */
+function tanlinell_get_post_meta( $post = false ) {
+
+    $post = ( false == $post ) ? get_post() : ( is_int( $post ) ) ? get_post( $post ) : $post ;
+    $post_meta = false;
+
+    if ( false != $post ) :
+
+        $all_meta = get_post_meta( $post->ID, '', true );
+
+        if ( false != $all_meta ) :
+
+            foreach( $all_meta AS $key=>$value )
+                if( false != $value[0] )
+                    $post_meta[$key] = $value[0];
+
+        endif;
+
+    endif;
+
+    return $post_meta;
+
+}
