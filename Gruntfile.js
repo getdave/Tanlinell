@@ -18,7 +18,7 @@ module.exports = function(grunt) {
             all: {
                 // Will run the jshint and test:unit tasks at every commit
                 'pre-commit': 'jshint',
-                'pre-receive': 'grunt build'
+                'pre-receive': 'build'
             }
         },
         
