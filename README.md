@@ -62,6 +62,14 @@ Consult roots.io for more information.
 http://roots.io/an-introduction-to-the-roots-theme-wrapper/
 http://roots.io/the-roots-sidebar/ 
 
+
+## Tanlinell Framework - using assets
+
+Since version X.X.X Tanlinell WordPress theme no longer has a built in CSS/JS framework. For better maintainability this has been ported to a new [Tanlinell Framework repo](https://github.com/getdave/tanlinell-framework).
+
+The easiest method of including the Tanlinell in the theme is via the use of bower. Assuming you have bower installed on your system simply run `bower install` in the `Tanlinell` theme directory and the latest version from the `develop` branch will be installed. During development of your WordPress theme it is acceptable to reference the `develop` branch of the Tanlinell Framework. However once code has reached a production-ready phase, it is strongly advised that the bower dependency is updated to a hard commit reference to ensure consistency and avoid accidentally breaking your website styles/scripting with unexpected updates.
+
+
 ## Tips & Tricks
 
 * For nice Custom Post Type icons check out [randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/](http://randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/)

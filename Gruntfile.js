@@ -7,20 +7,21 @@ module.exports = function(grunt) {
 
         // load all grunt tasks
         require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-
+        require('time-grunt')(grunt);
+        
         grunt.initConfig({
 
 
-        // watch for changes and trigger compass, jshint, uglify and livereload
+        // watch for changes and trigger sass, jshint, uglify and livereload
         watch: {
             options: {
                 livereload: true,
             },
 
-            compass: {
+            sass: {
                 files: ['assets/sass/**/*.{scss,sass}'],
                 //files: ['master.scss'],
-                tasks: ['compass:dist','version:styles','copy:prototype','copy:patterns']
+                tasks: ['sass:dist','version:styles','copy:prototype','copy:patterns']
             },
             js: {
                 files: '<%= jshint.all %>',
@@ -38,22 +39,19 @@ module.exports = function(grunt) {
             },
         },
 
-        // compass and scss
-        compass: {
+        sass: {
+            options: {
+                loadPath: [
+                    require('node-bourbon').includePaths,
+                    'bower_components/tanlinell-framework/sass'
+                ],
+                style: 'expanded'
+            },
             dist: {
-                options: {
-                    config: 'config.rb',
-                    force: true
+                files: {
+                    'assets/css/master.css': 'assets/sass/master.scss'
                 }
             },
-            build: {
-                options: {
-                    outputStyle: "compressed",
-                    environment: "production",
-                    noLineComments: true,
-                    force: true
-                }
-            }
         },
 
         // javascript linting with jshint
@@ -64,8 +62,6 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
-                'assets/js/tanlinell/tanlinell.js',
-                'assets/js/tanlinell/modules/*.js',
                 'assets/js/modules/**/*.js',
                 'assets/js/source/**/*.js',
                 '!assets/js/site.min.js'
@@ -84,8 +80,12 @@ module.exports = function(grunt) {
                     'assets/js/site.min.js': [
                         // Compiled files
                         'assets/js/vendor/**/*.js',
-                        'assets/js/tanlinell/tanlinell.js',
-                        'assets/js/tanlinell/modules/*.js',
+
+                        // Tanlinell Framework components
+                        'bower_components/tanlinell-framework/js/tanlinell-framework.js',
+                        'bower_components/tanlinell-framework/js/modules/*.js',
+
+                        // Theme specific components
                         'assets/js/source/globals.js',
                         'assets/js/modules/*.js',
                         'assets/js/source/plugins.js',
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
 
                         // Ignored files
                         '!assets/js/modules/_EXAMPLE-MODULE.js', // ignore boilerplate files
-                        '!assets/js/vendor/modernizr*.js'
+                        '!assets/js/vendor/modernizr*.js' // included separetely in the <head>
                     ],
                 }
             },
@@ -122,44 +122,6 @@ module.exports = function(grunt) {
             }
         },
 
-
-        grunticon: {
-            myIcons: {
-                options: {
-                    src: "assets/images/grunicons/source/",
-                    dest: "assets/images/grunicons/",
-                    defaultWidth: "64px",
-                    defaultHeight: "64px",
-                    cssprefix: "grunicon-",
-                    colors: {
-                        "white": "#ffffff",
-                        "black": "#000000"
-                    }
-                }
-            }
-        },
-
-        // svgmin
-        svgmin: {
-            dist: {
-                files: [{
-                    cwd: 'assets/images/',
-                    src: ['**/*.svg'],
-                    dest: 'assets/images/'
-                }]
-            }
-        },
-
-
-        svg2png: {
-            all: {
-                // specify files in array format with multiple src-dest mapping
-                files: [
-                    // rasterize SVG file to same directory
-                    { src: ['assets/images/*.svg'] }
-                ]
-            }
-        },
 
         sprite:{
             framework: {
@@ -241,16 +203,16 @@ module.exports = function(grunt) {
 
             snapshot: {
                 options: {
-                    expand: true, 
+                    expand: true,
                     flatten: true,
                 },
                 files: [
                     {
-                        src: ['<%= jekyll.patterns.options.dest %>/**/*'], 
+                        src: ['<%= jekyll.patterns.options.dest %>/**/*'],
                         dest: '_patterns/snapshots/<%= grunt.template.today("yyyy-mm-dd") %>/'
                     },
                     {
-                        src: ['<%= jekyll.prototype.options.dest %>/**/*'], 
+                        src: ['<%= jekyll.prototype.options.dest %>/**/*'],
                         dest: '_prototype/snapshots/<%= grunt.template.today("yyyy-mm-dd") %>/'
                     },
                 ],
@@ -261,7 +223,7 @@ module.exports = function(grunt) {
         jekyll: {
             options: {
                 //bundleExec: true,
-                
+
             },
             patterns: {
                 options: {
@@ -314,7 +276,7 @@ module.exports = function(grunt) {
         'jshint',
         'uglify:build',
         'version:scripts',
-        'compass:build',
+        'sass:build',
         'imagemin',
         'svgmin'
     ]);

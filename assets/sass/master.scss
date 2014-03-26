@@ -16,18 +16,20 @@
 
 
 // ==========================================================================
-// FRAMEWORK & CONFIG
+// TANLINELL FRAMEWORK
 // ==========================================================================
 
-// Configure your project and the "Web Starter" framework
+// Configuration file for Tanlinell Framework CSS
 @import "site/_config.scss";
 
-// Import the "Web Starter" framework
-@import "framework/_framework.scss";
+// Import the Tanlinell Framework CSS (via Bower)
+@import "tanlinell-framework.scss";
 
 
 // ==========================================================================
 // ADAPTERS
+// components that are not part of the core Tanlinell Framework but which
+// have a direct dependency
 // ==========================================================================
 
 // WOOCOMMERCE
