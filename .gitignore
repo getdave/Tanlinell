@@ -1,4 +1,5 @@
 node_modules/*
+npm-debug.log
 bower_components/*
 codekit-config.json
 code_deployments_untracked_config.json
