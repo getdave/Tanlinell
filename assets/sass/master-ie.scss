@@ -4,7 +4,7 @@
 // variable which is used to trigger specific behaviour for old IE
 
 
-$is-oldie: false !default;
+$is-oldie: true !default;
 
 // Breakpoint size at which we don't want to serve any media queried blocks to
 // this ensures that oldie doesn't get served CSS designed for super-wide screens
