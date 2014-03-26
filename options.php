@@ -41,9 +41,18 @@ function optionsframework_options() {
 	 * Social Options
 	 */
 	$options[] = array(
-		'name' => __('Social Settings', 'options_framework_theme'),
+		'name' => __('Company Accounts', 'options_framework_theme'),
 		'type' => 'heading');
 
+	// GA Account	
+	$options[] = array(
+		'name' => __('Google Analytics ID', 'options_framework_theme'),
+		'desc' => __('Enter the Google Analytics ID', 'options_framework_theme'),
+		'id' => 'google_analytics_id',
+		'std' => '',
+		'class' => 'mini',
+		'type' => 'text');
+				
 	// Twitter Page
 	$options[] = array(
 		'name' => __('Twitter Profile', 'options_framework_theme'),
@@ -115,16 +124,8 @@ function optionsframework_options() {
 	 */
 	
 	$options[] = array(
-		'name' => __('Contact Settings', 'options_framework_theme'),
-		'type' => 'heading');
-		
-	$options[] = array(
-		'name' => __('Google Analytics ID', 'options_framework_theme'),
-		'desc' => __('Enter the Google Analytics ID', 'options_framework_theme'),
-		'id' => 'google_analytics_id',
-		'std' => '',
-		'class' => 'mini',
-		'type' => 'text');	
+		'name' => __('vCard Settings', 'options_framework_theme'),
+		'type' => 'heading');	
 	
 	// Contact Telephone
 	$options[] = array(
