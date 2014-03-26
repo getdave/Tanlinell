@@ -161,11 +161,11 @@ module.exports = function(grunt) {
         version: {
             styles: {
                 src: ['style.css'],
-                dest: 'inc/enqueue-scripts-styles.php'
+                dest: 'inc/tanlinell-scripts.php'
             },
             scripts: {
                 src: ['assets/js/site.min.js', 'assets/js/vendor/modernizr.custom.js'],
-                dest: 'inc/enqueue-scripts-styles.php'
+                dest: 'inc/tanlinell-scripts.php'
             }
         },
 
