@@ -42,7 +42,6 @@ module.exports = function(grunt) {
         sass: {
             options: {
                 loadPath: [
-                    require('node-bourbon').includePaths,
                     'bower_components/tanlinell-framework/sass'
                 ],
                 style: 'expanded'
@@ -51,6 +50,12 @@ module.exports = function(grunt) {
                 files: {
                     'assets/css/master.css': 'assets/sass/master.scss'
                 }
+            },
+            build: {
+                options: {
+                    style: 'compressed',
+                },
+                files: '<%= sass.dist.files %>'
             },
         },
 
@@ -277,8 +282,7 @@ module.exports = function(grunt) {
         'uglify:build',
         'version:scripts',
         'sass:build',
-        'imagemin',
-        'svgmin'
+        'imagemin'
     ]);
 
 
