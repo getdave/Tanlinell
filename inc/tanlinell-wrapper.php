@@ -2,7 +2,7 @@
 /**
  * Theme wrapper
  *
- * @link http://tanlinell.io/an-introduction-to-the-tanlinell-theme-wrapper/
+ * @link http://roots.io/an-introduction-to-the-tanlinell-theme-wrapper/
  * @link http://scribu.net/wordpress/theme-wrappers.html
  */
 function tanlinell_template_path() {
