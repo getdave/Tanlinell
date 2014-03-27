@@ -72,7 +72,7 @@ function my_breadcrumb_trail_args( $args ) {
 		'separator' => '/',
 		'before' => __( '', 'breadcrumb-trail' ),
 		'after' => false,
-		'front_page' => true,
+		'front_page' => false,
 		'show_on_front' => false,
 		'show_home' => __( 'Home', 'breadcrumb-trail' ),
 		'echo' => true,
