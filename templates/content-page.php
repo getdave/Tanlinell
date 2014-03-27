@@ -8,8 +8,8 @@
 ?>
 <?php while (have_posts()) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
-	<?php get_template_part( 'templates/partials/pagetitle' ); ?>
-
+	<?php get_template_part( 'templates/page-header/pagetitle' ); ?>	
+	
 	<div class="entry-content" itemprop="articleBody">
 		<?php do_atomic('before_page_content'); ?>	
 		<?php the_content(); ?>

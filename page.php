@@ -6,5 +6,4 @@
  * @since Tanlinell 3.0.0
  */
 ?>
-<?php get_template_part('templates/page', 'header'); ?>
-<?php get_template_part('templates/content', 'page'); ?>
+<?php get_template_part( 'templates/content', 'page' ); ?>
