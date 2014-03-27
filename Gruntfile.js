@@ -5,11 +5,23 @@ var path = require('path');
 
 module.exports = function(grunt) {
 
-        // load all grunt tasks
-        require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-        require('time-grunt')(grunt);
+    // load all grunt tasks
+    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    require('time-grunt')(grunt);
+    
+    grunt.initConfig({
+
+
+
         
-        grunt.initConfig({
+        githooks: {
+            all: {
+                // Will run the jshint and test:unit tasks at every commit
+                'pre-commit': 'jshint',
+                'pre-receive': 'build'
+            }
+        },
+        
 
 
         // watch for changes and trigger sass, jshint, uglify and livereload
@@ -42,7 +54,6 @@ module.exports = function(grunt) {
         sass: {
             options: {
                 loadPath: [
-                    require('node-bourbon').includePaths,
                     'bower_components/tanlinell-framework/sass'
                 ],
                 style: 'expanded'
@@ -51,6 +62,12 @@ module.exports = function(grunt) {
                 files: {
                     'assets/css/master.css': 'assets/sass/master.scss'
                 }
+            },
+            build: {
+                options: {
+                    style: 'compressed',
+                },
+                files: '<%= sass.dist.files %>'
             },
         },
 
@@ -277,8 +294,7 @@ module.exports = function(grunt) {
         'uglify:build',
         'version:scripts',
         'sass:build',
-        'imagemin',
-        'svgmin'
+        'imagemin'
     ]);
 
 
