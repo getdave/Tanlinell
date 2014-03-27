@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 options: {
                     'command': ''
                 },
-                'post-receive': 'bower update'
+                'post-update': 'bower update'
             }
         },
         
