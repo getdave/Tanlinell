@@ -15,7 +15,7 @@ get_header(); ?>
 	<?php do_action( 'tanlinell_content_main_start');?>
 				
 		<?php $post = get_page_by_title( 'News' ); ?>				
-		<?php get_template_part( 'templates/partials/pagetitle' ); ?>
+		<?php get_template_part( 'templates/page-header/pagetitle' ); ?>
 		
 		<?php if ( have_posts() ) : ?>
 			
