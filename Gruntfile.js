@@ -150,7 +150,7 @@ module.exports = function(grunt) {
 
         bump: {
             options: {
-                files: ['package.json','bower.json','composer.json'],
+                files: ['package.json','bower.json'],
                 updateConfigs: [],
                 commit: false,
                 commitMessage: 'Bump version number to v%VERSION%',
