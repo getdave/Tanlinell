@@ -7,48 +7,28 @@
  * @package Tanlinell
  * @since Tanlinell 1.0
  */
-
-get_header(); ?>
-
-<?php do_action( 'tanlinell_content_wrapper_start');?>
-	
-	<?php do_action( 'tanlinell_content_main_start');?>
-				
-		<?php $post = get_page_by_title( 'News' ); ?>				
-		<?php get_template_part( 'templates/partials/pagetitle' ); ?>
+?>
+<?php if ( !have_posts() && current_user_can( 'edit_posts' ) ) : ?>
+	<?php get_template_part( 'no-results', 'index' ); ?>
+<?php endif; ?>
 		
-		<?php if ( have_posts() ) : ?>
+<?php if ( have_posts() ) : ?>
 			
-			<ul class="article-list item-list">
-			<?php while ( have_posts() ) : the_post(); ?>
-				<li class="article-list__item list-item">
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
-					<a href="<?php the_permalink(); ?>" class="article-list__btn btn">
-						Read More
-					</a>
-				</li>
-			<?php endwhile; ?>
-			</ul>
-			<?php get_template_part('pagination'); ?>
+	<?php $post = get_page_by_title( 'News' ); ?>				
+	<?php get_template_part( 'templates/page-header/pagetitle' ); ?>
+
+	<ul class="article-list item-list">
+	<?php while ( have_posts() ) : the_post(); ?>
+		<li class="article-list__item list-item">
 			
-		<?php else : ?>
-
-			<?php get_template_part( 'no-results', 'archive' ); ?>
-
-		<?php endif; ?>
-				
-	<?php do_action( 'tanlinell_content_main_end');?>
-
-	<?php do_action( 'tanlinell_content_sub_start');?>
-		<?php get_sidebar(); ?>
-	<?php do_action( 'tanlinell_content_sub_end');?>
+			<?php get_template_part( 'templates/content', get_post_format() ); ?>
+			
+			<a href="<?php the_permalink(); ?>" class="article-list__btn btn">Read More</a>
+			
+		</li>
+	<?php endwhile; ?>
+	</ul>
+	<?php get_template_part('templates/navigation/pagination'); ?>
 	
-<?php do_action( 'tanlinell_content_wrapper_end');?>
+<?php endif; ?>
 
-<?php get_footer(); ?>

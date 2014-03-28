@@ -1,60 +1,48 @@
 /**
  * GLOBALS JS
  *
- * Define global namespace and attach utils
+ * defines global namespace for the individual site
+ * defines any constants required to be used throughout
+ * the site
  *
  */
 
-// Global namespace
+
+/**
+ * GLOBAL NAMESPACE
+ *
+ * defines a global namespace for the website in order
+ * to avoid poluting global scope with unecessary variables
+ * all site specific properties and methods can hang from
+ * this global namespace object.
+ */
 var SITE = SITE || {};
+
 
 
 /**
  * CONSTANTS
+ *
  * define constants used across the entire site
  * @type {Object}
  */
 SITE.CONSTANTS = {
-
+	//EXAMPLE_CONSTANT: "example value"
 };
 
 
 /**
- * UTILS
- * global utilities object for reusable util functions
+ * MODULES
+ *
+ * namespace container object for all custom site modules
+ * modules are defined and registered to this object in
+ * their respective files within the /modules/ dir
  * @type {Object}
  */
-SITE.utils = {
-
-};
-
-// Is this a "modern" browser?
-SITE.utils.cutsTheMustard = (function() {
-    if('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
-        return true;
-    } else {
-        return false;
-    }
-}());
-
-// Is this Opera Mini?
-SITE.utils.isOperaMini = Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
+SITE.modules = {};
 
 
 
 
 
-/**
- * Add Root Classes
- * function to add root classes to the HTML element
- */
-SITE.utils.addRootClasses = (function() {
-    if (SITE.utils.isOperaMini) {
-        $("html").addClass('is-opera-mini');
-    }
-
-    if (SITE.utils.cutsTheMustard) {
-        $("html").addClass('cuts-the-mustard');
-    }
-}());
 

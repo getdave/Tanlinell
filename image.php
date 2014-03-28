@@ -3,40 +3,22 @@
  * The template for displaying image attachments.
  *
  * @package Tanlinell
- * @since Tanlinell 1.0
+ * @since Tanlinell 3.0.0
  */
-
-get_header();
 ?>
+<?php if ( !have_posts() && current_user_can( 'edit_posts' ) ) : ?>
+	<?php get_template_part( 'no-results', 'archive' ); ?>
+<?php endif; ?>
 
-<?php do_action( 'tanlinell_content_wrapper_start');?>
-	
-	<?php do_action( 'tanlinell_content_main_start');?>
-
+<?php if ( have_posts() ) : ?>	
 	<?php while ( have_posts() ) : the_post(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<header class="entry-header entry-header--has-meta">
-				<h1 class="entry-title"><?php the_title(); ?></h1>				
-			</header><!-- .entry-header -->
-			<footer class="entry-meta">
-				<?php
-					$metadata = wp_get_attachment_metadata();
-					printf( __( 'Published <span class="entry-date"><time class="entry-date" datetime="%1$s" pubdate>%2$s</time></span> at <a href="%3$s" title="Link to full-size image">%4$s &times; %5$s</a> in <a href="%6$s" title="Return to %7$s" rel="gallery">%7$s</a>', 'tanlinell' ),
-						esc_attr( get_the_date( 'c' ) ),
-						esc_html( get_the_date() ),
-						wp_get_attachment_url(),
-						$metadata['width'],
-						$metadata['height'],
-						get_permalink( $post->post_parent ),
-						get_the_title( $post->post_parent )
-					);
-				?>
-				
-			</footer><!-- .entry-meta -->
-
+			
+			<?php get_template_part('templates/page-header/pagetitle', 'post'); ?>
+					
 			<div class="entry-content">
-
+	
 				<div class="entry-attachment">
 					<div class="attachment img-polaroid img-thumb">
 						<?php
@@ -63,51 +45,31 @@ get_header();
 								$next_attachment_url = wp_get_attachment_url();
 							}
 						?>
-
+	
 						<a href="<?php echo $next_attachment_url; ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php
 							$attachment_size = apply_filters( 'tanlinell_attachment_size', array( 1200, 1200 ) ); // Filterable image size.
 							echo wp_get_attachment_image( $post->ID, $attachment_size );
 						?></a>
 					</div><!-- .attachment -->
-
+	
 					<?php if ( ! empty( $post->post_excerpt ) ) : ?>
 					<div class="entry-caption">
 						<?php the_excerpt(); ?>
 					</div><!-- .entry-caption -->
 					<?php endif; ?>
 				</div><!-- .entry-attachment -->
-
+	
 				<?php the_content(); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'tanlinell' ), 'after' => '</div>' ) ); ?>
-
+	
 			</div><!-- .entry-content -->
-
-			<p>
-				<?php if ( comments_open() && pings_open() ) : // Comments and trackbacks open ?>
-					<?php printf( __( '<a class="comment-link" href="#respond" title="Post a comment">Post a comment</a> or leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'tanlinell' ), get_trackback_url() ); ?>
-				<?php elseif ( ! comments_open() && pings_open() ) : // Only trackbacks open ?>
-					<?php printf( __( 'Comments are closed, but you can leave a trackback: <a class="trackback-link" href="%s" title="Trackback URL for your post" rel="trackback">Trackback URL</a>.', 'tanlinell' ), get_trackback_url() ); ?>
-				<?php elseif ( comments_open() && ! pings_open() ) : // Only comments open ?>
-					<?php _e( 'Trackbacks are closed, but you can <a class="comment-link" href="#respond" title="Post a comment">post a comment</a>.', 'tanlinell' ); ?>
-				<?php elseif ( ! comments_open() && ! pings_open() ) : // Comments and trackbacks closed ?>
-					<?php _e( 'Both comments and trackbacks are currently closed.', 'tanlinell' ); ?>
-				<?php endif; ?>
-				
-			</p><!-- .entry-meta -->
+			
 		</article><!-- #post-<?php the_ID(); ?> -->
-
+	
 		<ul id="image-navigation" class="pager site-navigation">
 			<li class="pager__item previous-image"><?php previous_image_link( false, __( '&larr; Previous', 'tanlinell' ) ); ?></li>
 			<li class="pager__item pager__item--next next-image"><?php next_image_link( false, __( 'Next &rarr;', 'tanlinell' ) ); ?></li>
 		</ul><!-- #image-navigation -->
 		
-		<?php comments_template(); ?>
-
-	<?php endwhile; // end of the loop. ?>
-
-	<?php do_action( 'tanlinell_content_main_end');?>
-	
-<?php do_action( 'tanlinell_content_wrapper_end');?>
-
-
-<?php get_footer(); ?>
+	<?php endwhile; ?>
+<?php endif; ?>

@@ -42,12 +42,44 @@ Further reading and details about starting new projects can be found at:
 http://gruntjs.com/getting-started
 
 
+## Code Organisation
+
+### Include Files
+
+The directory `inc-site` should house all site specific include files e.g. plugin configuration files.
+These files should be suitably named based upon the plugin the code affects. e.g. bc-simple-clients.php. This should then be included in the site.inc.php file.
+
+### Additional Templates for Theming
+
+The `templates` directory houses all site specific templates, there are files that have already been created that are required for core wp functionality.
+`content-page.php` can be editted to allow for site specific layouts/content. 
+The parent `page.php` and all other templates in the root should not be altered for site specific code.
+Any changes to theses files should be changes required for the Tanlinell theme and so should be rolled into the Theme repo.
+
+Templates for bc-plugin-suite templates should be housed in the `bc-plugin-templates` directory. Here you can find example files of how to structure the file. Take specific note to the lack of `get_header()`
+
+Consult roots.io for more information.
+http://roots.io/an-introduction-to-the-roots-theme-wrapper/
+http://roots.io/the-roots-sidebar/ 
+
+
+## Tanlinell Framework - using assets
+
+Since version X.X.X Tanlinell WordPress theme no longer has a built in CSS/JS framework. For better maintainability this has been ported to a new [Tanlinell Framework repo](https://github.com/getdave/tanlinell-framework).
+
+The easiest method of including the Tanlinell in the theme is via the use of bower. Assuming you have bower installed on your system simply run `bower install` in the `Tanlinell` theme directory and the latest version from the `develop` branch will be installed. During development of your WordPress theme it is acceptable to reference the `develop` branch of the Tanlinell Framework. However once code has reached a production-ready phase, it is strongly advised that the bower dependency is updated to a hard commit reference to ensure consistency and avoid accidentally breaking your website styles/scripting with unexpected updates.
+
+
 ## Tips & Tricks
 
 * For nice Custom Post Type icons check out [randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/](http://randyjensenonline.com/thoughts/wordpress-custom-post-type-fugue-icons/)
 
 
 ## Changelog
+
+## 3.0.0
+
+* Major Organisation/Refactor of inc directory and templates
 
 #### 2.11.1
 

@@ -1,8 +1,6 @@
 <header class="banner {{ include.classnames }} ">
 	<div class="container">
-		<a class="site-logo" href="/" title="{{ site.name }}" rel="home">
-			{{ site.name }}
-		</a>
+		{% include logo.html %} 
 		
 		{% comment %}
 		# Remove the "comment" blocks to include

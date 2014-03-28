@@ -1,11 +1,12 @@
 node_modules/*
+npm-debug.log
+bower_components/*
 codekit-config.json
 code_deployments_untracked_config.json
 db_deployments_untracked_config.json
 error_log
 cache/
 .sass-cache/
-
 
 _prototype/build/*
 _patterns/build/*

@@ -3,12 +3,12 @@
 //
 // The is the master sass stylesheet. It controls the inclusion of:
 //
-// * the SCSS framework
-// * site specific SCSS
+// * Tanlinell Framework
+// * Site specific CSS
 //
 // There is also a master-ie.scss file (disabled by default) which creates a
 // separate stylesheet when the site for IE browsers so that (when using RWD)
-// they aren't simply served the "mobile" styles. See
+// they aren't simply served the "mobile" styles. See:
 //
 // http://jakearchibald.github.io/sass-ie/
 //
@@ -16,18 +16,20 @@
 
 
 // ==========================================================================
-// FRAMEWORK & CONFIG
+// TANLINELL FRAMEWORK
 // ==========================================================================
 
-// Configure your project and the "Web Starter" framework
+// Configuration file for Tanlinell Framework CSS
 @import "site/_config.scss";
 
-// Import the "Web Starter" framework
-@import "framework/_framework.scss";
+// Import the Tanlinell Framework CSS (via Bower)
+@import "tanlinell-framework.scss";
 
 
 // ==========================================================================
 // ADAPTERS
+// components that are not part of the core Tanlinell Framework but which
+// have a direct dependency
 // ==========================================================================
 
 // WOOCOMMERCE

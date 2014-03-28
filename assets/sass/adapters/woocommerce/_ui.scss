@@ -11,6 +11,7 @@
 
 // MESSAGE
 // ==========================================================================
+.woocommerce_message,
 .woocommerce-message {
 	@extend .alert;	
 	@extend .alert-success;	
@@ -31,7 +32,8 @@
 
 // ERROR
 // ==========================================================================
-.woocommerce-error {
+.woocommerce-error,
+.woocommerce_error {
 	@extend .list-unstyled;
 	li {
 		@extend .alert;	
@@ -41,7 +43,8 @@
 
 // INFO
 // ==========================================================================
-.woocommerce-info {
+.woocommerce-info,
+.woocommerce_info {
 	@extend .alert;	
 	@extend .alert-info;	
 }
@@ -60,7 +63,9 @@
 // WOOCOMMERCE TABS
 // ==========================================================================
 
+.woocommerce_tabs,
 .woocommerce-tabs {
+
 	.tabs {
 		@extend %tabs-list;
 
