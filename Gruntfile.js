@@ -41,6 +41,7 @@ module.exports = function(grunt) {
         sass: {
             options: {
                 loadPath: [
+                    '.', // required to force current working directory to be available
                     'bower_components/tanlinell-framework/sass'
                 ],
                 style: 'expanded'
