@@ -136,7 +136,7 @@ function tanlinell_google_analytics() {
 		$google_analytics_id = ( false != of_get_option( 'google_analytics_id' ) ) ? of_get_option( 'google_analytics_id' ) : false;
 		define('GOOGLE_ANALYTICS_ID', $google_analytics_id);
 	}
-	
+	if( false != $google_analytics_id ) :
 ?>
 	<script type="text/javascript">
 		var _gaq=_gaq||[];_gaq.push(['_setAccount','<?php echo GOOGLE_ANALYTICS_ID; ?>']);
@@ -154,5 +154,5 @@ function tanlinell_google_analytics() {
 		})();
 	</script>
 <?php 
-
+	endif;//if( false != $google_analytics_id ) :
 }
