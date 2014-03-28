@@ -151,8 +151,6 @@ class tanlinell_add_cpt_descendants_primary_menu_walker extends Walker_Nav_Menu 
 				endif;//if( $custom_posts_obj->have_posts() ): 
 					
 			}//if ( $archive_post->ID == $item->object_id )
-		
-			$output .= "</li>\n";
 			
 		}//foreach ( $custom_types AS $post_type ) {
 		
