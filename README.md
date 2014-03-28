@@ -81,15 +81,20 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 
 * Major Organisation/Refactor of inc directory and templates
 
-#### 2.11.1
+#### 3.0.1
 
-* Update vcard and inclusion swith for address__line
+* Fix Sass deprecation warning due to no including cwd directory as a default Sass loadPath.
+* Minor reorganisation of changelog formatting.
 
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2
 * Hybrid Core Breadcrumb add support
 * Addition of GF Button markup
+
+#### 2.11.1
+
+* Update vcard and inclusion swith for address__line
 
 ### 2.10.0
 
@@ -111,7 +116,6 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 * Create "toggle" molecule for standarised toggle units
 
 
-#### 2.8.1 - Ensure no follow for all environments except production
 
 ### 2.8.0 - Grunt, Responsive and Grid updates
 
@@ -119,6 +123,8 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 * Update Grunt to include `build` task for producing production-ready assets
 * Update `respond-to` mixin to accept variables rather than string.
 * Update grid system to avoid "widescreen" media query styles being served to oldie
+
+#### 2.8.1 - Ensure no follow for all environments except production
 
 ### 2.7.0 - Housekeeping
 

@@ -41,6 +41,7 @@ module.exports = function(grunt) {
         sass: {
             options: {
                 loadPath: [
+                    '.', // required to force current working directory to be available
                     'bower_components/tanlinell-framework/sass'
                 ],
                 style: 'expanded'
@@ -149,7 +150,7 @@ module.exports = function(grunt) {
 
         bump: {
             options: {
-                files: ['package.json','bower.json','composer.json'],
+                files: ['package.json','bower.json'],
                 updateConfigs: [],
                 commit: false,
                 commitMessage: 'Bump version number to v%VERSION%',
