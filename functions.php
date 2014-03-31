@@ -95,7 +95,7 @@ function tanlinell_setup() {
 	
 		
 	/**
-	 *  Tanlinell Theme -> Wrapper Markup Filters/Hooks
+	 *  Tanlinell Theme -> Sidebar Display Filters/Hooks
 	 */
 	require_once locate_template( '/inc/tanlinell-sidebar-display.php' );
 		
