@@ -86,6 +86,10 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 * Fix Sass deprecation warning due to no including cwd directory as a default Sass loadPath.
 * Minor reorganisation of changelog formatting.
 
+#### 3.0.2
+
+* Remove old hooks for woocommerce wrapper markup
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2
