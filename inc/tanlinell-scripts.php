@@ -131,28 +131,32 @@ if( !current_user_can('manage_options') ) {
 
 function tanlinell_google_analytics() {
 	
-	if( !defined( 'GOOGLE_ANALYTICS_ID' ) )
-	{
-		$google_analytics_id = ( false != of_get_option( 'google_analytics_id' ) ) ? of_get_option( 'google_analytics_id' ) : false;
-		define('GOOGLE_ANALYTICS_ID', $google_analytics_id);
-	}
-	if( false != $google_analytics_id ) :
+	if( WP_ENV == 'production' ) :
+	
+		if( !defined( 'GOOGLE_ANALYTICS_ID' ) )
+		{
+			$google_analytics_id = ( false != of_get_option( 'google_analytics_id' ) ) ? of_get_option( 'google_analytics_id' ) : false;
+			define('GOOGLE_ANALYTICS_ID', $google_analytics_id);
+		}
+		if( false != $google_analytics_id ) :
 ?>
-	<script type="text/javascript">
-		var _gaq=_gaq||[];_gaq.push(['_setAccount','<?php echo GOOGLE_ANALYTICS_ID; ?>']);
-		
-		_gaq.push(['_trackPageview']);
-		(function(){
-			var ga=document.createElement('script');
-			ga.type='text/javascript';
-			ga.async=true;
-			
-			ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-			
-			var s=document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(ga,s);
-		})();
-	</script>
+			<script type="text/javascript">
+				var _gaq=_gaq||[];_gaq.push(['_setAccount','<?php echo GOOGLE_ANALYTICS_ID; ?>']);
+				
+				_gaq.push(['_trackPageview']);
+				(function(){
+					var ga=document.createElement('script');
+					ga.type='text/javascript';
+					ga.async=true;
+					
+					ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+					
+					var s=document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(ga,s);
+				})();
+			</script>
 <?php 
-	endif;//if( false != $google_analytics_id ) :
+		endif;//if( false != $google_analytics_id ) :
+	
+	endif;//if( WP_ENV == 'production' ) :
 }

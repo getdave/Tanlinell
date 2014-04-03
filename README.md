@@ -90,6 +90,10 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 
 * Remove old hooks for woocommerce wrapper markup
 
+#### 3.0.3
+
+* Ensure GA Code only applied to Production Environment
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2
