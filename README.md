@@ -94,6 +94,10 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 
 * Ensure GA Code only applied to Production Environment
 
+#### 3.0.3
+
+* Update Social Links Markup
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2
