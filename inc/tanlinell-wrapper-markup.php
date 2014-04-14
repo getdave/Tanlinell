@@ -2,20 +2,23 @@
 /**
  * Main wrapping markup classes found in header.php 
  */
-function tanlinell_site_content_class( $classes ) {
-	
-	if ( tanlinell_display_sidebar() ) {
-		// Classes on pages with the sidebar
-		$classes .= ' layout-2c-l';
-	} else {
-		// Classes on full width pages
-		$classes .= ' layout-1c';
-	}
-	
-	return $classes;
-}
-add_action( 'site_content_class', 'tanlinell_site_content_class' );
+if( ! function_exists( 'tanlinell_site_content_class' ) ) :
 
+	function tanlinell_site_content_class( $classes ) {
+		
+		if ( tanlinell_display_sidebar() ) {
+			// Classes on pages with the sidebar
+			$classes .= ' layout-2c-l';
+		} else {
+			// Classes on full width pages
+			$classes .= ' layout-1c';
+		}
+		
+		return $classes;
+	}
+	add_action( 'site_content_class', 'tanlinell_site_content_class' );
+	
+endif;
 
 /**
  * CONTENT WRAPPER MARKUP

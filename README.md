@@ -102,6 +102,11 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 
 * Additional Page Header Markup Partial
 
+#### 3.0.6
+
+* Bug fix for menu primary
+* tanlinell_site_content_class function check, allows site/project override
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2

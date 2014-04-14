@@ -34,7 +34,7 @@ class tanlinell_add_cpt_descendants_primary_menu_walker extends Walker_Nav_Menu 
 			$post_type_obj = get_post_type_object( $post_type );
 			$archive_post = get_page_by_path( $post_type_obj->has_archive );	
 			
-			if ( $archive_post->ID == $item->object_id ) {
+			if ( false != $archive_post && $archive_post->ID == $item->object_id ) {
 			
 				$args = array(
 					'post_type' => $post_type_obj->name,
