@@ -134,3 +134,13 @@ function tanlinell_get_search_form($form) {
 }
 add_filter('get_search_form', 'tanlinell_get_search_form');
 
+
+/**
+ * Tanlinell: Force Gallery to link to media file 
+ */
+function tanlinell_force_gallery_file_link( $atts )
+{
+    $atts['link'] = 'file';
+    return gallery_shortcode( $atts );
+}
+add_shortcode( 'gallery', 'tanlinell_force_gallery_file_link' );

@@ -111,6 +111,10 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 
 * Update all no-results template incs.
 
+#### 3.0.8
+
+* Force Gallery functionality #317
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2
