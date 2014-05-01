@@ -6,8 +6,8 @@
  * @since Tanlinell 3.0.0
  */
 ?>
-<?php if ( !have_posts() && current_user_can( 'edit_posts' ) ) : ?>
-	<?php get_template_part( 'no-results', 'archive' ); ?>
+<?php if ( !have_posts() ) : ?>
+	<?php get_template_part( 'templates/no-results', 'image' ); ?>
 <?php endif; ?>
 
 <?php if ( have_posts() ) : ?>	
