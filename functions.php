@@ -143,6 +143,12 @@ function tanlinell_setup() {
 	
 	
 	/**
+	 * Tanlinell Theme -> Protected Name
+	 */
+	require_once locate_template( '/inc/tanlinell-protected-name.php' );
+	
+	
+	/**
 	 * Tanlinell Theme -> Enqueue Scripts & CSS Styles
 	 */
 	require_once locate_template( '/inc/tanlinell-scripts.php' );
