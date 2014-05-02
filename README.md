@@ -115,6 +115,10 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 
 * Force Gallery functionality #317
 
+#### 3.0.9
+
+* Tanlinell protected name and plugin work example to make cpt a descendant of a page
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2
