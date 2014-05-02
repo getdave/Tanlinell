@@ -14,3 +14,8 @@
  * BC Plugin -> Global Configuration
  */	
 require_once locate_template( '/inc-site/bc-plugin-globals.php' );
+
+/**
+ * BC Plugin -> CPT as Descendant of Page 
+ */
+require_once locate_template( '/inc-site/bc-plugin-cpt-as-descendant.php' );
