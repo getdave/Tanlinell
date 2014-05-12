@@ -18,13 +18,12 @@ module.exports = function(grunt) {
             },
 
             sass: {
-                files: ['assets/sass/**/*.{scss,sass}'],
-                //files: ['master.scss'],
-                tasks: ['sass:dist','version:styles','copy:prototype','copy:patterns']
+                files: ['assets/scss/**/*.scss'],
+                tasks: ['sass']//,'version:styles','copy:prototype','copy:patterns']
             },
             js: {
                 files: '<%= jshint.all %>',
-                tasks: ['clean', 'jshint', 'uglify:dist', 'version:scripts','copy:prototype','copy:patterns']
+                tasks: ['clean', 'jshint', 'uglify:dist', 'version:scripts'],//'copy:prototype','copy:patterns']
             },
 
             patterns: {
@@ -38,26 +37,27 @@ module.exports = function(grunt) {
             },
         },
 
+        // Sass - build CSS files from SCSS using grunt-sass (via libsass for speed!)
         sass: {
+          options: {
+            includePaths: [
+              'bower_components/foundation/scss',
+              'bower_components/baselayer/scss',
+            ]
+          },
+          dist: {
             options: {
-                loadPath: [
-                    '.', // required to force current working directory to be available
-                    'bower_components/tanlinell-framework/sass'
-                ],
-                style: 'expanded'
+              outputStyle: 'expanded'
             },
-            dist: {
-                files: {
-                    'assets/css/master.css': 'assets/sass/master.scss'
-                }
-            },
-            build: {
-                options: {
-                    style: 'compressed',
-                },
-                files: '<%= sass.dist.files %>'
-            },
+            files: {
+              'assets/css/master.css': 'assets/scss/master.scss'
+            }
+          }
         },
+
+
+
+
 
         // javascript linting with jshint
         jshint: {
@@ -125,27 +125,6 @@ module.exports = function(grunt) {
                     dest: 'assets/images/'
                 }]
             }
-        },
-
-
-        sprite:{
-            framework: {
-                src: 'assets/images/framework/sprites/*.png',
-                destImg: 'assets/images/framework/spritesheet.png',
-                destCSS: 'assets/sass/framework/compounds/_sprites.scss',
-                cssFormat: 'scss',
-                padding: 30,
-                imgPath: '../images/framework/spritesheet.png'
-            },
-
-            site: {
-                src: 'assets/images/sprites/*.png',
-                destImg: 'assets/images/spritesheet.png',
-                destCSS: 'assets/sass/site/modules/_sprites.scss',
-                cssFormat: 'scss',
-                padding: 30,
-                imgPath: '../images/spritesheet.png'
-            },
         },
 
         bump: {
