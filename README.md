@@ -119,6 +119,11 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 
 * Tanlinell protected name and plugin work example to make cpt a descendant of a page
 
+#### 3.0.10
+
+* Add condition load for bugherd
+* Add picturefill.js and placeholder.png for default need
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2
