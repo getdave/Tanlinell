@@ -10,6 +10,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
 	<?php get_template_part( 'templates/page-header/pagetitle' ); ?>	
 	
+	<?php get_template_part( 'templates/partials/post-thumbnail'); ?>
+	
 	<div class="entry-content" itemprop="articleBody">
 		<?php do_atomic('before_page_content'); ?>	
 		<?php the_content(); ?>
