@@ -124,6 +124,17 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 * Add condition load for bugherd
 * Add picturefill.js and placeholder.png for default need
 
+#### 3.0.11
+
+* Add default front-page template
+* Update default sidebars to use panel markup and transiented retrieval of data
+* Default layout and sidebar config
+* Update Tanlinell has_children utility
+* Default featured image output for page content
+* Add meaningful homepage page title
+* Post thumnbail wrapped markup
+
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2

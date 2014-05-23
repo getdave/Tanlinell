@@ -1,5 +1,11 @@
 <?php
 $page_title = esc_html( get_post_meta( $post->ID, 'page_title', true ) );
+
+/**
+ * Add a meaningful homepage title 
+ */
+$page_title = ( false == $page_title && is_front_page() ) ? 'Homepage of '.get_bloginfo( 'name' ) : $page_title;
+
 $page_subtitle = esc_html( get_post_meta( $post->ID, 'page_subtitle', true )  );
 
 //if $page_match == true/1 -> we dont need to link this
