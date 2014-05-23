@@ -95,15 +95,14 @@ function tanlinell_get_attachment_id_from_src($url) {
  * 	@return	$parent 	(int)	# root parent page
  * 
  */
-
-  function tanlinell_get_root_parent( $page_id ) {
-		global $wpdb;
-		$parent = $wpdb->get_var( "SELECT post_parent FROM $wpdb->posts WHERE post_type='page' AND ID = '$page_id'" );
-		if ($parent == 0) 
-			return $page_id;
-		else 
-			return tanlinell_get_root_parent( $parent );
-  }
+function tanlinell_get_root_parent( $page_id ) {
+	global $wpdb;
+	$parent = $wpdb->get_var( "SELECT post_parent FROM $wpdb->posts WHERE post_type='page' AND ID = '$page_id'" );
+	if ($parent == 0) 
+		return $page_id;
+	else 
+		return tanlinell_get_root_parent( $parent );
+}
 
 
 /**
@@ -168,16 +167,18 @@ function tanlinell_get_page_children( $page_id ){
 
 /**
  * Check for existence of child pages
- * @param  int $post_id ID of the post in question
+ * 
  * @return bool          return true/false
+ * @since 3.0.11
  */
-function tanlinell_has_children( $post_id ) {
-    $children = get_pages('child_of=' . $post_id);
-    if( count( $children ) != 0 ) { 
-        return true;
-    } else { 
-        return false;
-    }
+function tanlinell_has_children( $post = false ) {
+
+    $post = ( false == $post ) ? get_post() : ( is_int( $post ) ) ? get_post( $post ) : $post ;
+    
+    $pages = get_pages('child_of=' . $post->ID);
+    
+    return ( 0 == count($pages) ) ? false : true;
+	
 }
 
 

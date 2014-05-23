@@ -1,28 +1,69 @@
-<?php if ( has_post_thumbnail() ) { 
-	
-	// Get image alt attribute
-	$img_alt = trim(strip_tags( get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ));
-	
-	// If not alt then fallback to a generic description
-	if(empty($img_alt)) {
-		if ( get_the_title() ) {
-			$img_alt = 'Image for '.get_the_title(); //defaults if none found
-		}
-	}
-?>
+<?php $image = get_post_thumbnail_id( $post->ID ); ?>
+<?php if ( false != wp_get_attachment_image_src( $image ) ) : ?>
+<figure class="img-thumb">
+	<?php
+    $args = array(				
+    	'image' => $image,
+    	'settings' => array(
+            
+                array(
+					'name' => 'Lowest',
+					'width' => 333,
+					'height' => 187,
+					'crop' => true,
+					'resize' => true,
+				),
 
-<figure class="entry-thumbnail img-thumb img-polaroid">
-	<?php the_post_thumbnail(
-		array( 
-			'width' 		=> 960, 
-			'height' 		=> 360, 
-			'crop' 			=> true,
-			'jpeg_quality' 	=> 80,	 // reduce image download size
-			'resize'		=> true
-		),
-		array(
-			'alt'	=> $img_alt
-		)
-	);?>
+				array(
+					'name' => 'Lower',
+					'breakpoint' => 401,
+					'width' => 503,
+					'height' => 283,
+					'crop' => true,
+					'resize' => true,
+				),
+
+				array(
+					'name' => 'Low',
+					'breakpoint' => 590,
+					'width' => 737,
+					'height' => 415,
+					'crop' => true,
+					'resize' => true,
+				),
+
+				array(
+					'name' => 'Medium',
+					'breakpoint' => 850,
+					'width' => 949,
+					'height' => 534,
+					'crop' => true,
+					'resize' => true,
+				),
+
+				array(
+					'name' => 'High',
+					'breakpoint' => 1070,
+					'width' => 910,
+					'height' => 512,
+					'crop' => true,
+					'resize' => true,
+				),
+
+				array(
+					'name' => 'Main',
+					'breakpoint' => 1060,
+					'width' => 828,
+					'height' => 466,
+					'crop' => true,
+					'resize' => true,
+				),
+
+			),
+			'ie_fallback' => 'High',
+    );
+    $ri = BC_Responsive_Images::get_instance(); 
+    $ri->load_responsive_markup( $args );
+    ?>
 </figure>
-<?php } ?>
+<?php endif; ?>
