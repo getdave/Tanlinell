@@ -134,6 +134,11 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 * Add meaningful homepage page title
 * Post thumnbail wrapped markup
 
+#### 3.0.12
+
+* Default sidebar display fix for child pages
+* Add tanlinell_get_protected_name_query_obj()
+* Fix default sidebar for cpt's
 
 ### 2.11.0
 

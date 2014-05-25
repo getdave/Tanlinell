@@ -64,3 +64,29 @@ function tanlinell_get_protected_name_slug( $protected_page ) {
 	
 	return $the_parent;
 }
+
+
+/**
+ * Tanlinell return the protected name query obj
+ *
+ * @package Tanlinell
+ * @since Tanlinell 3.0.0 
+ *
+ * @param (str) $protected_page the value given in the post edit screen
+ * @return (str) the query obj for loop in templates
+ */
+function tanlinell_get_protected_name_query_obj( $protected_page ) {
+	
+	$args = array(
+        'post_type' => 'page',
+        'meta_query' => array(
+            array(
+                'key' => 'protected_name',
+                'value' => $protected_page,
+            ),
+        ),
+    );
+    $protect_name_query = new WP_Query( $args );
+    
+	return $protect_name_query = new WP_Query( $args );;
+}
