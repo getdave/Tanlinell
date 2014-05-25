@@ -1,44 +1,34 @@
-<?php 
+<?php
 /**
- * Descendant Pages List Navigation
+ * CPT-Example List Navigation
  */
 
-global $post;
+$pt_obj = get_post_type_object( get_post_type() );
 
-if ($post) { // if there is no post (ie 404 page) then bail out
-	$curr_pageid 	= $post->ID;
-	$root_parent_id = tanlinell_get_root_parent( $curr_pageid, 'page');
+//requires cpt to be defined as 'hierarchical' => true
+$args = array(
+	'post_type'=>$pt_obj->name,
+	'title_li'=> false,
+	'echo'=>0
+);
+$list_pages      = wp_list_pages( $args ); 
 
-	$args = array(
-		'title_li' 	=> false,
-		'echo' 		=> 0,
-		'child_of' 	=> $root_parent_id,
-	);
-	$descendants_list = wp_list_pages( $args );
+$section_title = $pt_obj->labels->name;
 
-	$section_title = (get_the_title($root_parent_id)) ? get_the_title($root_parent_id) : 'In this section';
-	?>
-		
-	<?php if( $descendants_list ) : ?>
-	<aside class="sidebar">
-		
+?>
+
+<?php if( $list_pages ) : ?>
+	<aside class="sidebar menu-<?php echo $pt_obj->name; ?>">
+	
 		<div class="panel">
-			<h3 class="panel__heading">
-				<a href="<?php echo get_permalink($root_parent_id); ?>">
-					<?php echo ucwords(esc_html($section_title)); ?>
-				</a>
-			</h3>
+		    <h5 class="h3 panel__heading"><?php echo ucwords(esc_html($section_title)); ?></h5>
 			
 		    <div class="panel__content">
-				<ul class="panel__list">
-					
-					<?php echo $descendants_list; ?>
-					
-				</ul>
+				<ul class="list-spaced nav-<?php echo $pt_obj->name; ?>">
+		        <?php echo $list_pages; ?>
+		        </ul>
 		    </div>
 		</div>
-		
+	
 	</aside>
-	<?php endif; ?>
-
-<?php } ?>
+<?php endif; ?>
