@@ -16,7 +16,7 @@ function tanlinell_scripts() {
 	
 	//global $wp_styles;
 
-	//wp_enqueue_style( 'tanlinell', get_stylesheet_directory_uri() . '/ebfccf1d.style.css' );
+	//wp_enqueue_style( 'tanlinell', get_stylesheet_directory_uri() . '/ebfccf1d.style.ebfccf1d.min.css' );
 
 	//wp_enqueue_style( 'master', get_stylesheet_directory_uri() . '/assets/css/master.css', false );
     //$wp_styles->add_data( 'master', 'conditional', '(gt IE 8) | (IEMobile)' );
@@ -30,7 +30,7 @@ function tanlinell_scripts() {
 	 */
 
 	// Modernizr - custom build with only "essential" features. You should update this to your own requirements
-	wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/5383d4da.modernizr.custom.js', '', null , false );
+	wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr.min.js', '', null , false );
 	wp_enqueue_script('modernizr');
 
 
@@ -57,7 +57,7 @@ function tanlinell_scripts() {
 	}
 
 	// Site.js - compiled and minified Site JS
-	wp_register_script('site', get_template_directory_uri() . '/assets/js/031a90c4.site.min.js', array('jquery'), null , true );
+	wp_register_script('site', get_template_directory_uri() . '/assets/js/site.min.js', array('jquery'), null , true );
 	wp_enqueue_script('site');
 
 	/**
