@@ -1,0 +1,73 @@
+// ==========================================================================
+
+// SUB NAVIGATION
+
+// Description: styles for the sub navigation components
+
+// ==========================================================================
+
+.menu-sub {
+    //@extend .panel;
+}
+
+// HEADING
+// ==========================================================================
+
+.menu-sub__heading {
+    //@extend .vh;
+    //@extend .panel__heading;
+}
+
+// NAV
+// ==========================================================================
+
+.nav-sub {
+    //@extend .panel__content;
+    //@extend .block-list;
+
+    li {
+
+    }
+
+    a {
+
+    }
+
+}
+
+// Current/active
+.nav-sub {
+    .current_page_item {
+        a {
+
+        }
+    }
+}
+
+
+.nav-sub .children {
+    @include list-reset;
+    font-size: 0.9em;
+    position: absolute;
+    left: -999em;
+
+    li:last-child {
+        border-bottom: 0;
+    }
+
+    a {
+        @include rem(padding-left,25px);
+        @include opacity(0.9);
+    }
+}
+
+
+.nav-sub .current_page_item,
+.nav-sub .current_page_ancestor,
+.nav-sub .current-cat,
+.nav-sub .current-cat-parent {
+    .children {
+        position: static;
+        left: auto;
+    }
+}

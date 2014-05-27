@@ -1,25 +1,18 @@
 <header class="banner {{ include.classnames }} ">
-	<div class="container">
-		{% include logo.html %} 
-		
-		{% comment %}
-		# Remove the "comment" blocks to include
-		{% include toggle-menu-primary.html %}
-		{% endcomment %}
-		
-		<div class="banner-navigation">
-			<div class="mbl">
-			{% include search.html %}
-			</div>
-			<nav id="menu-primary" class="menu-primary menu-primary--banner">
-				<ul class="nav-primary nav-primary--banner">
-
-					  {% assign pages_list = site.pages %}
-					  {% assign group = 'navigation' %}
-					  {% include pages_list.html %}
-
-				</ul>
-			</nav>
-		</div>
-	</div>
+    <div class="container">
+        {% include logo.html %} 
+        {% include toggle-menu-primary.html %}
+        
+        {% comment %}
+        # Remove the "comment" blocks to include
+        {% endcomment %}
+        
+        <div class="banner-navigation">
+            <nav id="menu-primary" class="menu-primary menu-primary--banner">
+                <ul class="nav-primary nav-primary--banner">
+                    {% include primary-nav-items.html %}
+                </ul>
+            </nav>
+        </div>
+    </div>
 </header>

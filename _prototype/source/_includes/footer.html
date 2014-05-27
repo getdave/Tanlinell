@@ -1,11 +1,22 @@
-<aside class="container">
-	<h5 class="vh">Social Media Accounts</h5>
-	{% include social-icons-list.html %}
-</aside>
+<div class="sub-footer">
+	<div class="container">
+		<nav class="menu menu-subsidiary">
+			<h6 class="vh">Subsidiary Navigation</h6>
+			<ul id="nav-subsidiary" class="nav-subsidiary inline-list">
+				<li>
+					<a href="#">Contact Us</a>
+				</li>
+
+				<li>
+					<a href="#">Terms &amp; Conditions</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
 
 <footer id="colophon" class="site-footer clear" role="contentinfo">
 	<div class="container">
-
 
 		<p class="site-colophon site-colophon--copyright">
 			Copyright &copy; 2014 Example Co. Ltd
@@ -17,3 +28,5 @@
 
 	</div>
 </footer>
+
+{% include offcanvas-navigation.html %}

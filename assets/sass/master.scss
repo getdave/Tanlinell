@@ -47,8 +47,19 @@
 // MODULES
 // ==========================================================================
 
-// mod_name
+// module
 //@import "site/modules/_EXAMPLE_MODULE.scss";
+
+
+// COMPONENTS
+// ==========================================================================
+
+// Primary Navigation
+@import "site/components/_primary-navigation.scss";
+
+// Primary Offcanvas
+@import "site/components/_primary-offcanvas.scss";
+
 
 
 // GLOBAL

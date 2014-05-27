@@ -1,0 +1,44 @@
+/* ============================================================ */
+
+// OFFCANVAS PANEL
+
+// Description: styles for OffCanvas Panels
+
+/* ============================================================ */
+
+
+// ==========================================================================
+// BASE
+// ==========================================================================
+
+// Initialise Off Canvas styles scoped to only apply to smaller viewports
+@include max-screen($nav-break-1) {
+    body {
+        @include tan-offcanvas( $wrapper: "#page", $offRight: ".primary-offcanvas");
+    }
+}
+
+// Show offcanvas navigation on smaller viewports only
+.primary-offcanvas {
+    display: none;
+    background-color: #252525;
+    box-shadow: inset 7px 0 15px -5px black(.4);
+
+    @include max-screen($nav-break-1) {
+        display: block;
+    }
+}
+
+.primary-offcanvas__section {
+    @include rem(padding,15px 25px);
+    //margin-bottom: $baseLineHeight/2;
+}
+
+// Hide banner navigation on smaller viewports when offcanvas is active
+.cuts-the-mustard .banner-navigation {
+    @include max-screen($nav-break-1) {
+        display: none;
+    }
+}
+
+

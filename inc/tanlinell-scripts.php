@@ -16,7 +16,7 @@ function tanlinell_scripts() {
 	
 	//global $wp_styles;
 
-	//wp_enqueue_style( 'tanlinell', get_stylesheet_directory_uri() . '/07e10f7f.style.css' );
+	//wp_enqueue_style( 'tanlinell', get_stylesheet_directory_uri() . '/ebfccf1d.style.css' );
 
 	//wp_enqueue_style( 'master', get_stylesheet_directory_uri() . '/assets/css/master.css', false );
     //$wp_styles->add_data( 'master', 'conditional', '(gt IE 8) | (IEMobile)' );
