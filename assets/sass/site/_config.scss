@@ -90,67 +90,77 @@
 // here by setting the require variables to "true"/"false".
 // ==========================================================================
 
+// ==========================================================================
+// MOLECULES & COMPOUNDS
+// Declare which molescules to include. Overide these as required.
+// ==========================================================================
+
 // Molecules
 // ==========================================================================
 
 // Default "on"
-// $use-headings: 					true;
-// $use-tables: 					true;
-// $use-media-block: 				true;
-// $use-nav: 						true;
-// $use-buttons: 					true;
-// $use-images: 					true;
-// $use-dropdowns: 					true;
-// $use-inline-list: 				true;
-// $use-item-list: 					true;
-// $use-island: 					true;
-// $use-alerts: 					true;
-// $use-breadcrumbs: 				true;
-// $use-pager: 						true;
-// $use-pagination: 				true;
-// $use-code:						true;
-// $use-block-list: 				true;
-// $use-panel: 						true;
-// $use-scrollable: 				true;
-// $use-toggle: 					true;
-// $use-blockquotes:				true;
-// $use-landmark:					true;
-// $use-address:					true;
-// $use-tabs: 						true;
+//$use-headings: 				true;
+//$use-tables: 					true;
+//$use-media-block: 			true;
+//$use-nav: 					true;
+//$use-buttons: 				true;
+//$use-images: 					true;
+//$use-dropdowns: 				true;
+//$use-inline-list: 			true;
+//$use-inline-definitions: 		true;
+//$use-item-list: 				true;
+//$use-island: 					true;
+//$use-alerts: 					true;
+//$use-breadcrumbs: 			true;
+//$use-pager: 					true;
+//$use-pagination: 				true;
+//$use-code:					true;
+//$use-block-list: 				true;
+//$use-panel: 					true;
+//$use-address: 				true;
+//$use-icons: 					true;
+//$use-social-icons: 			true;
+//$use-toggle: 					true;
+//$use-blockquotes:				true;
+//$use-landmark:				true;
+//$use-tabs: 					true;
+//$use-scrollable: 				true;
+//$use-expandable: 				true;
+//$use-bump: 					true;
+//$use-side-lined:				true;
+//$use-complex-link: 			true;
+//$use-byline: 					true;
 
 // Default "off"
-// $use-title-block:				false;
-// $use-complex-link: 				false;
-// $use-feature-element: 			false;
-// $use-flippable: 					false;
-// $use-graybox: 					false;
-// $use-hero-unit: 					false;
-// $use-labels-badges: 				false;
-// $use-split: 						false;
-// $use-sprite:						false;
+//$use-title-block:				false;
+//$use-feature-element: 		false;
+//$use-flippable: 				false;
+//$use-graybox: 				false;
+//$use-hero-unit: 				false;
+//$use-labels-badges: 			false;
+//$use-split: 					false;
+//$use-sprite:					false;
 
 // Compounds
 // ==========================================================================
 
 // Default "on"
-// $use-page-layouts: 				true;
-// $use-gallery: 					true;
-// $use-primary-nav: 				true;
-// $use-site-logo: 					true;
-// $use-site-credit: 				true;
-// $use-site-colophon: 				true;
-// $use-social-actions: 			true;
-// $use-search-form: 				true;
-// $use-social-icons-list: 			true;
-// $use-social-widgets:				true;
-// $use-social-share-bar:			true;
-
+//$use-page-layouts: 			true;
+//$use-gallery: 				true;
+//$use-primary-nav: 			true;
+//$use-site-logo: 				true;
+//$use-site-credit: 			true;
+//$use-site-colophon: 			true;
+//$use-social-actions: 			true;
+//$use-search-form: 			true;
+//$use-social-icons-list: 		true;
+//$use-social-widgets:			true;
+//$use-social-share-bar:		true;
 
 // Default "off"
-// $use-social-icons: 				false;
-// $use-magnific: 					false;
-// $use-flexslider: 				false;
-// $use-gravity-forms: 				false;
+//$use-magnific: 				false;
+//$use-flexslider: 				false;
+//$use-gravity-forms: 			false;
 
 
 
