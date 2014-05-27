@@ -1,0 +1,52 @@
+---
+layout: 1c
+title: Results
+group: "navigation"
+---
+
+
+<main class="main">
+
+	<header class="row">
+		<div class="columns">
+		<h2 class="sidelined">Results Listing</h2>
+
+
+		<p class="lead small-text-center">The full prize money spreadsheet can be downloaded here.</p>
+		</div>
+	</header>
+
+	<div class="row">
+		<div class="columns">
+			<dl class="accordion" data-accordion="">
+				<dd>
+					<a href="#panel1">Pro MX1 Class</a>
+					<div id="panel1" class="content active">
+						{% include results-table.html %}
+					</div>
+				</dd>
+				<dd>
+					<a href="#panel2">Pro MX2 Class</a>
+					<div id="panel2" class="content">
+						{% include results-table.html %}
+					</div>
+				</dd>
+				<dd>
+					<a href="#panel3">Clubmen Races</a>
+					<div id="panel3" class="content">
+						{% include results-table.html %}
+					</div>
+				</dd>
+
+				<dd>
+					<a href="#panel4">Open Two Stroke</a>
+					<div id="panel4" class="content">
+						{% include results-table.html %}
+					</div>
+				</dd>
+			</dl>
+		</div>
+	</div>
+
+</main>
+

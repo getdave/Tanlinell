@@ -1,0 +1,65 @@
+---
+layout: 2c-r
+title: Job Single
+---
+
+<div class="site-content">
+	<main class="main">
+
+		<header>
+			<h1 class="page-title">Job Title</h1>
+		</header>
+
+		<footer class="byline">
+			<dl class="byline__section inline-definitions inline-definitions--desc-priority">
+				<dt>Role Type:</dt>
+				<dd>Permenant</dd>
+
+				<dt>Salary:</dt>
+				<dd>£1,000/month</dd>
+
+				<dt>Closing date:</dt>
+				<dd>29/10/2014</dd>
+			</dl>
+		</footer>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, a, ipsa, cum, ipsum esse praesentium architecto veritatis voluptates earum dolor optio quo sint porro consequuntur expedita delectus aspernatur provident quod.</p>
+
+
+		<h2 class="h5 h-heavy">Key Skills Required:</h2>
+
+		<ul class="disc">
+			{% for i in (1..6) %}
+			<li>Key Skill {{i}}</li>
+		  	{% endfor %}
+		 </ul>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, a, ipsa, cum, ipsum esse praesentium architecto veritatis voluptates earum dolor optio quo sint porro consequuntur expedita delectus aspernatur provident quod.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, a, ipsa, cum, ipsum esse praesentium architecto veritatis voluptates earum dolor optio quo sint porro consequuntur expedita delectus aspernatur provident quod.</p>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, a, ipsa, cum, ipsum esse praesentium architecto veritatis voluptates earum dolor optio quo sint porro consequuntur expedita delectus aspernatur provident quod.</p>
+		
+		<section class="panel">
+			<h3>Job Application Form</h3>
+			<div class="row">
+			{% include job-form.html %}
+			</div>
+		</section>
+
+
+	</main>
+
+
+
+	<div class="sub">
+		<div class="panel">
+			<h4>Other Jobs</h4>
+			<ul class="block-list">
+				{% for i in (1..10) %}
+			 	<li><a href="#">Job {{i}}</a></li>
+			 	{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+
+

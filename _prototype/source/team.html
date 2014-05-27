@@ -1,0 +1,44 @@
+---
+layout: 1c
+title: Team
+group: "navigation"
+---
+
+
+<main class="main">
+	
+	<header class="row">
+		<div class="columns">
+		<h2 class="sidelined">Our Teams,mdnbf,sjbdf,kjsh dlkfjh</h2>
+		
+		
+		<p class="lead small-text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, id, sed optio ducimus.</p>
+		</div>
+	</header>
+
+
+	<ul class="row">
+		{% for i in (1..10) %}
+
+		<li class="landmark--minor columns medium-6 large-4 xlarge-3">
+
+			<article class="text-center">
+				<a href="team-single.html">
+			    	<img src="http://www.placehold.it/160x160&t=Media%20Image" alt="" class="img-thumb--small img-circle img-polaroid">
+			    </a>
+
+		    	<header>
+		        	<h2 class="h4">Team Member {{i}}</h2>
+				</header>
+				<footer class="byline">
+					<span class="byline__section">Lead Developer</span>
+				</footer>
+		        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, doloremque, odit veniam corporis nemo error ullam inventore est similique neque hic ipsa omnis non itaque laboriosam repellat rerum at dolorum?</p>
+
+			</article>
+		</li>
+		{% endfor %}
+	</ul>
+
+</main>
+

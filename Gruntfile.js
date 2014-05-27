@@ -50,14 +50,10 @@ module.exports = function(grunt) {
               outputStyle: 'expanded'
             },
             files: {
-              'assets/css/master.css': 'assets/scss/master.scss'
+              'assets/css/site.css': 'assets/scss/site.scss'
             }
           }
         },
-
-
-
-
 
         // javascript linting with jshint
         jshint: {
@@ -171,7 +167,7 @@ module.exports = function(grunt) {
             },
             prototype: { // copy all assets into Prototype source dir
                 src: [
-                    'assets/css/master.css',
+                    'assets/css/site.css',
                     'assets/fonts/**/*{.eot,.svg,.ttf,.woff}',
                     'assets/images/**/*',
                     'assets/js/site.min.js',
@@ -207,7 +203,6 @@ module.exports = function(grunt) {
         jekyll: {
             options: {
                 //bundleExec: true,
-
             },
             patterns: {
                 options: {
@@ -254,19 +249,11 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
-    // Build - check, minify, compress and cache bust static assets ready for production usage
-    grunt.registerTask('build', [
-        'clean',
-        'jshint',
-        'uglify:build',
-        'version:scripts',
-        'sass:build',
-        'imagemin'
-    ]);
 
 
     // Prototype - compile static prototype using Jekyll and launch server to view
     grunt.registerTask('prototype', [
+        'sass',
         'copy:prototype',
         'jekyll:prototype',
         'connect:prototype',
@@ -275,6 +262,7 @@ module.exports = function(grunt) {
 
     // Pattern Library - compile static Pattern Lib and launch server to view
     grunt.registerTask('patterns', [
+        'sass',
         'copy:patterns',
         'jekyll:patterns',
         'connect:patterns',

@@ -1,0 +1,17 @@
+<aside class="primary-offcanvas right-off-canvas-menu">
+	<!-- close the off-canvas menu -->
+	<a class="primary-offcanvas__close exit-off-canvas toggle toggle--close">
+		<i class="toggle__icon"></i>
+		<span class="toggle__text">Close menu</span>
+	</a>
+
+	<div class="primary-offcanvas__panel">
+		{% include search.html %}
+	</div>
+
+	<nav class="menu-primary--offcanvas primary-offcanvas__panel">
+		<ul class="nav-primary--offcanvas">
+		{% include primary-nav-items.html %}
+		</ul>
+	</nav>
+</aside>

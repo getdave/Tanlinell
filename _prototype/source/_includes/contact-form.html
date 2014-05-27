@@ -1,0 +1,57 @@
+<form data-abide>
+    <div class="row">
+        <div class="large-6 columns">
+            <label>Firstname <abbr title="Required field" class="required">*</abbr>
+                <input type="text" required placeholder="John">
+            </label>
+        </div>
+
+        <div class="large-6 columns">
+            <label>Lastname <abbr title="Required field" class="required">*</abbr>
+                <input type="text" placeholder="Doe">
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-6 columns">
+            <label>Email <abbr title="Required field" class="required">*</abbr>
+                <input type="email" required placeholder="jon@example.com">
+            </label>
+            <small class="error">Email addresses must be in the correct format</small>
+        </div>
+
+        <div class="large-6 columns">
+            <label>Telephone <input type="number"></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns landmark--minor">
+            <label>What's your enquiry about?
+                <select>
+                    <option value="husker">
+                        Just checking in
+                    </option>
+                    <option value="starbuck">
+                        I want to work with you
+                    </option>
+                    <option value="hotdog">
+                        Complaint
+                    </option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns landmark--minor">
+            <label>Your Message
+                <textarea rows="8" placeholder="Enter your message..."></textarea>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-12 columns">
+            <button class="button small" type="submit">Send</button>
+        </div>
+    </div>
+</form>

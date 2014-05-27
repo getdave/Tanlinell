@@ -1,24 +1,42 @@
 ---
-layout: 1col
+layout: 1c
 title: Home
+site-content-classes: "ptn"
 group: "navigation"
 ---
-<main class="main">
 
-	<section class="container">
-		<h1 class="test-object expandable">Welcome!</h1>
+{% include hero.html %}
 
-		<a href="#" class="toggle toggle--menu toggle--closeable" data-toggle data-toggle-target=".test-object">
-			<i aria-hidden="true"></i>
-			<span class="toggle__text">Toggle Test Object</span>
-		</a>
+<div class="column-container">
+	<main class="main">
 
-		<a href="#colophon" data-smooth-scroll data-smooth-scroll-target="#colophon">Scroll to Footer!</a>
+		<h2 class="sidelined">Primary Services</h2>
+		
+	
+		<p class="lead small-text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, id, sed optio ducimus.</p>
+		
+		
+		<ul class="row">
+			{% for i in (1..4) %}
 
-		<a href="#colophon" data-smooth-scroll data-smooth-scroll-target="#colophon" data-smooth-scroll-duration="100">Scroll to Footer!</a>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit sit a minima recusandae perferendis dignissimos perspiciatis. Dolor, veniam, reprehenderit pariatur esse optio eligendi enim libero eaque quibusdam velit quae nulla.
-		</p>
-	</section>
+			<li class="landmark--minor columns medium-6 large-3">
 
-</main>
+				<article class="text-center">
+					<a href="team-single.html">
+				    	<img src="http://www.placehold.it/240x240" alt="" class="img-thumb--small img-circle animate--pulse">
+				    </a>
+
+			    	<header>
+			        	<h2 class="h3">Service Area {{i}}</h2>
+					</header>
+			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, doloremque, odit veniam corporis nemo error ullam inventore.</p>
+
+			        <a href="#" class="btn">Find out more</a>
+
+				</article>
+			</li>
+			{% endfor %}
+		</ul>
+
+	</main>
+</div>
