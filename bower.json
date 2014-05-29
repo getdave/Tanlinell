@@ -1,6 +1,6 @@
 {
   "name": "Tanlinell Theme",
-  "version": "3.0.11",
+  "version": "3.0.13",
   "dependencies": {
   	"tanlinell-framework": "getdave/tanlinell-framework#develop"
   }

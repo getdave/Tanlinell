@@ -140,6 +140,15 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 * Add tanlinell_get_protected_name_query_obj()
 * Fix default sidebar for cpt's
 
+#### 3.0.13
+
+* Update Prototype and base assets folder with standard site requirements
+* Introduce defined build step for assets. Tidy Grunt file. Introduce legacssy to remove requirement for duplicate IE CSS build step
+* Add in new features from Tan CSS FW
+* Update submodule to lateste release 1.6.2
+* Add nofollow to developer credit
+* robots meta amend
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2
