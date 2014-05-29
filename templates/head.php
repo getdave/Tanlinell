@@ -26,7 +26,7 @@
 	
 	<?php if( WP_ENV != 'production' ) : ?>
 	<!-- Tanlinell Noindex -->
-	<meta name="robots" content="noindex,follow"/>
+	<meta name="robots" content="noindex,nofollow"/>
 	<?php endif; ?>
 	
 	
