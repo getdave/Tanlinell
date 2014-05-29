@@ -1,0 +1,20 @@
+{% if include.results %}
+    {% assign results = include.results %}
+    {% assign results_paged = include.results | divided_by:5 %}
+{% endif %}
+
+
+<p>Showing 1 - {{results_paged}} of {{ include.results }} results</p>
+
+<ul class="item-list">
+	{% for i in (1..results_paged) %}
+	<li class="list-item">
+		 <div class="graybox" style="line-height: 20em">
+		 	DIRECTORY RESULT ITEM
+		 </div>
+	</li>
+	{% endfor %}
+</ul>
+
+
+{% include pagination.html %}

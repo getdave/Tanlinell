@@ -1,5 +1,5 @@
 ---
-layout: 2col
+layout: 2col-l
 title: Blog
 group: "navigation"
 ---
@@ -10,9 +10,6 @@ group: "navigation"
 		{% for i in (1..10) %}
 		<li class="article-item list-item">
 			<article class="archive-post">
-				<div class="archive-post__author media--circle">
-					<img src="http://www.placehold.it/120x120" alt="">
-				</div>
 				
 				<div class="archive-post__body">
 					<header class="archive-post__header">
@@ -46,7 +43,7 @@ group: "navigation"
 </main>
 
 <div class="sub">
-	Sub Panels
+	{% include blog-sidebars.html %}
 </div>
 
 

@@ -1,0 +1,31 @@
+---
+layout: 2col-l
+title: Events
+group: "navigation"
+---
+
+<main class="main">
+	<h1>Events</h1>
+	<ul class="item-list">
+		{% for i in (1..10) %}
+		<li class="list-item">
+			<a href="event-single.html" class="graybox" style="display: block;line-height: 20em;">
+				EVENT {{i}}
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+
+	{% include pagination.html %}
+</main>
+
+<div class="sub">
+	<div class="sidebar landmark graybox" style="height: 15em">
+	 	EVENT CATEGORIES
+	</div>
+</div>
+
+
+
+
+

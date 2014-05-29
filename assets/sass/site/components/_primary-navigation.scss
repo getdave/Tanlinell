@@ -1,0 +1,265 @@
+// ==========================================================================
+
+// PRIMARY NAVIGATION
+
+// Description: styles for the primary website navigation.
+// Positioning styles should not be applied in this file. Rather
+// they should be applied in the main _page.scss file
+
+// ==========================================================================
+
+
+// ==========================================================================
+// SILENT
+// ==========================================================================
+
+// BANNER ANCHOR STATES
+// ==========================================================================
+
+%banner-anchor-top-level {
+    color: $linkColor;
+
+    &:hover,
+    &:focus {
+
+    }
+}
+
+%banner-anchor-top-level--active {
+    color: #000;
+}
+
+%banner-anchor-top-level--active-with-dropdown {
+    @extend %banner-anchor-top-level--active;
+}
+
+
+// OFFCANVAS ANCHOR STATES
+// ==========================================================================
+
+%offcanvas-anchor-top-level {
+    @extend %banner-anchor-top-level;
+}
+
+%offcanvas-anchor-top-level--active {
+     @extend %banner-anchor-top-level--active;
+}
+
+
+
+// ==========================================================================
+// BASE
+// styles to apply to all instances of primary navigation
+// ==========================================================================
+
+// ROOT
+// ==========================================================================
+.menu-primary {
+
+}
+
+// ANCHORS
+// ==========================================================================
+
+.nav-primary {
+    //background-color: transparent;
+
+
+	// Global anchors
+	a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+
+        .lt-ie9 & {
+        }
+    }
+
+	// Top level anchors
+    > li > a {
+
+    }
+}
+
+
+
+// ==========================================================================
+// MODIFIER: BANNER
+// navigation displayed for larger viewports
+// ==========================================================================
+
+// DEFAULTS
+// ==========================================================================
+.nav-primary--banner {
+
+    //background-color: #ccc;
+
+    > li {
+        margin-left: 1px;
+        @include rem(padding, 10px 0);
+    }
+
+    > li > a {
+        @extend %banner-anchor-top-level;
+        &:hover,
+        &:focus {
+           @extend %banner-anchor-top-level--active;
+        }
+    }
+
+    // Top level active items
+    > .current-menu-item,
+    > .current-menu-parent,
+    > .current-menu-ancestor,
+    > .current_page_parent {
+        > a {
+            @extend %banner-anchor-top-level--active;
+        }
+    }
+
+    a.sf-with-ul {
+        &:hover,
+        &:focus {
+            @extend %banner-anchor-top-level--active-with-dropdown;
+        }
+    }
+}
+
+
+// DROPDOWNS/SUB MENUS
+// ==========================================================================
+
+.nav-primary--banner .sub-menu {
+    display: none;
+    background-color: #323232;
+
+    a {
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            color: #DFDADA;
+        }
+    }
+}
+
+@include max-screen($break-medium) {
+    .nav-primary--banner .sub-menu {
+        display: none !important;
+    }
+}
+
+
+.nav-primary--banner > li {
+    &:hover,
+    &:focus {
+        .sub-menu {
+            @include respond-to($nav-break-1) {
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+// SUPERFISH
+// ==========================================================================
+
+.nav-primary--banner {
+    // Anchors which have a dropdown
+    .sf-with-ul {
+
+    }
+
+    // Persist top level :hover state
+    > .sfHover > a {
+        @extend %banner-anchor-top-level--active-with-dropdown;
+    }
+}
+
+
+
+// ==========================================================================
+// MODIFIER: OFF CANVAS
+// styles for the primary navigational offcanvas
+// panel. Extends and modifies styles for nav and search form
+// ==========================================================================
+
+
+// OFFCANVAS NAV
+// ==========================================================================
+
+.offcanvas-panel .menu-primary--offcanvas {
+    //@include rem(padding-top,30px);
+}
+
+.nav-primary--offcanvas {
+
+
+    li {
+        border-bottom: #c7c6c1;
+    }
+
+    a {
+        @extend %offcanvas-anchor-top-level;
+
+        &:hover,
+        &:focus {
+            @extend %offcanvas-anchor-top-level--active;
+        }
+    }
+
+    // Top level active items
+    > .current_page_item,
+    > .current_page_ancestor {
+        > a {
+            @extend %offcanvas-anchor-top-level--active;
+        }
+    }
+
+    .sub-menu {
+        display: none !important;
+    }
+}
+
+
+
+
+// ==========================================================================
+// TOGGLE
+// ==========================================================================
+
+.primary-nav-toggle {
+    position: absolute;
+    @include rem(top,45px);
+    @include rem(right,20px);
+    text-decoration: none;
+
+    .no-js & {
+        display: none;
+    }
+
+    @include respond-to($nav-break-1) {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        right: auto;
+        left: -999em;
+        top: -999em;
+    }
+
+    i {
+        @include rem(font-size,40px);
+    }
+}
+
+

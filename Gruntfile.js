@@ -8,33 +8,43 @@ module.exports = function(grunt) {
     // load all grunt tasks
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
     require('time-grunt')(grunt);
-    
+
     grunt.initConfig({
+        pkg: grunt.file.readJSON('./package.json'),
+        config: {
+            scssDir: './assets/sass/',
+            cssDir: './assets/css/',
+            cssFileName: 'master',
+            jsDir: './assets/js/',
+            jsFileName: 'site',
+            packageName: '<%= pkg.name %>',
+            flattenMQs: 60,
+        },
 
         // watch for changes and trigger sass, jshint, uglify and livereload
         watch: {
             options: {
                 livereload: true,
+                debounceDelay: 500
             },
 
             sass: {
-                files: ['assets/sass/**/*.{scss,sass}'],
-                //files: ['master.scss'],
-                tasks: ['sass:dist','version:styles','copy:prototype','copy:patterns']
+                files: ['<%= config.scssDir %>/**/*.scss'],
+                tasks: ['sass:dist']
             },
             js: {
                 files: '<%= jshint.all %>',
-                tasks: ['clean', 'jshint', 'uglify:dist', 'version:scripts','copy:prototype','copy:patterns']
+                tasks: ['clean', 'jshint', 'uglify:dist']
             },
 
             patterns: {
                 files: ['<%= jekyll.patterns.options.src %>/**/*.html'],
-                tasks: ['jekyll:patterns', 'copy:patterns']
+                tasks: ['copy:patterns','jekyll:patterns']
             },
 
             prototype: {
                 files: ['<%= jekyll.prototype.options.src %>/**/*.html'],
-                tasks: ['jekyll:prototype', 'copy:prototype']
+                tasks: ['copy:prototype','jekyll:prototype']
             },
         },
 
@@ -48,18 +58,38 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'assets/css/master.css': 'assets/sass/master.scss'
+                    '<%= config.cssDir %>/<%= config.cssFileName %>.css': '<%= config.scssDir %>/<%= config.cssFileName %>.scss'
                 }
             },
             build: {
-                options: {
-                    style: 'compressed',
-                },
                 files: '<%= sass.dist.files %>'
             },
         },
 
-        // javascript linting with jshint
+        // Legacssy - flatten MQ's in <%= config.jsFileName %>-oldie.css
+        legacssy: {
+          dist: {
+            options: {
+              // Include only styles for a screen 800px wide
+              legacyWidth: "<%= config.flattenMQs %>"
+            },
+            files: {
+              '<%= config.cssDir %>/<%= config.cssFileName %>-ie.css': '<%= config.cssDir %>/<%= config.cssFileName %>.css',
+            },
+          },
+        },
+
+        // CSSMin - minify CSS
+        cssmin: {
+          minify: {
+            files: {
+                '<%= config.cssDir %>/<%= config.cssFileName %>.css': ['<%= config.cssDir %>/<%= config.cssFileName %>.css', '!*.min.css'],
+                '<%= config.cssDir %>/<%= config.cssFileName %>-ie.css': ['<%= config.cssDir %>/<%= config.cssFileName %>-ie.css', '!*.min.css']
+            }
+          },
+        },
+
+        // JSHint - lint JavaScript for codesmells with jshint
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
@@ -67,13 +97,13 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
-                'assets/js/modules/**/*.js',
-                'assets/js/source/**/*.js',
-                '!assets/js/site.min.js'
+                '<%= config.jsDir %>/modules/**/*.js',
+                '<%= config.jsDir %>/source/**/*.js',
+                '!<%= config.jsDir %>/<%= config.jsFileName %>.min.js'
             ]
         },
 
-        // uglify to concat, minify, and make source maps
+        // Uglify - to concat & minify JavaScripts
         uglify: {
             dist: {
                 options: {
@@ -82,23 +112,23 @@ module.exports = function(grunt) {
                     beautify: true
                 },
                 files: {
-                    'assets/js/site.min.js': [
+                    '<%= config.jsDir %>/<%= config.jsFileName %>.min.js': [
                         // Compiled files
-                        'assets/js/vendor/**/*.js',
+                        '<%= config.jsDir %>/vendor/**/*.js',
 
                         // Tanlinell Framework components
                         'bower_components/tanlinell-framework/js/tanlinell-framework.js',
                         'bower_components/tanlinell-framework/js/modules/*.js',
 
                         // Theme specific components
-                        'assets/js/source/globals.js',
-                        'assets/js/modules/*.js',
-                        'assets/js/source/plugins.js',
-                        'assets/js/source/main.js',
+                        '<%= config.jsDir %>/source/globals.js',
+                        '<%= config.jsDir %>/modules/*.js',
+                        '<%= config.jsDir %>/source/plugins.js',
+                        '<%= config.jsDir %>/source/main.js',
 
                         // Ignored files
-                        '!assets/js/modules/_EXAMPLE-MODULE.js', // ignore boilerplate files
-                        '!assets/js/vendor/modernizr*.js' // included separetely in the <head>
+                        '!<%= config.jsDir %>/modules/_EXAMPLE-MODULE.js', // ignore boilerplate files
+                        '!<%= config.jsDir %>/vendor/modernizr*.js' // included separetely in the <head>
                     ],
                 }
             },
@@ -110,7 +140,7 @@ module.exports = function(grunt) {
             }
         },
 
-        // image optimization
+        // Imagemin - image compression and optimisation
         imagemin: {
             dist: {
                 options: {
@@ -127,27 +157,7 @@ module.exports = function(grunt) {
             }
         },
 
-
-        sprite:{
-            framework: {
-                src: 'assets/images/framework/sprites/*.png',
-                destImg: 'assets/images/framework/spritesheet.png',
-                destCSS: 'assets/sass/framework/compounds/_sprites.scss',
-                cssFormat: 'scss',
-                padding: 30,
-                imgPath: '../images/framework/spritesheet.png'
-            },
-
-            site: {
-                src: 'assets/images/sprites/*.png',
-                destImg: 'assets/images/spritesheet.png',
-                destCSS: 'assets/sass/site/modules/_sprites.scss',
-                cssFormat: 'scss',
-                padding: 30,
-                imgPath: '../images/spritesheet.png'
-            },
-        },
-
+        // Bump - used to bump version numbers
         bump: {
             options: {
                 files: ['package.json','bower.json'],
@@ -160,8 +170,9 @@ module.exports = function(grunt) {
             }
         },
 
-        // Static asset filename based cache-busting
-        // Avoids failed "Expires" headers due to WP adding
+
+        // WP Assets - static asset filename based cache-busting
+        // avoids failed "Expires" headers due to WP adding
         // version query strings to end of assets
         version: {
             styles: {
@@ -169,41 +180,41 @@ module.exports = function(grunt) {
                 dest: 'inc/tanlinell-scripts.php'
             },
             scripts: {
-                src: ['assets/js/site.min.js', 'assets/js/vendor/modernizr.custom.js'],
+                src: ['<%= config.jsDir %>/<%= config.jsFileName %>.min.js', '<%= config.jsDir %>/vendor/modernizr.custom.js'],
                 dest: 'inc/tanlinell-scripts.php'
             }
         },
 
-        // Remove old JS files (+ cached version)
-        // ready for cache busting
+
+        // Clean - remove old files (+ cached version)
         clean: {
           dist: [
             'assets/*.style.css',
-            'assets/js/site.min.js',
-            'assets/js/*.site.min.js',
-            'assets/js/vendor/*.modernizr.custom.js'
+            '<%= config.jsDir %>/<%= config.jsFileName %>.min.js',
+            '<%= config.jsDir %>/*.<%= config.jsFileName %>.min.js',
+            '<%= config.jsDir %>/vendor/*.modernizr.custom.js'
           ]
         },
 
-        // Copy - ensure all site assets are mirrored for Patterns/Prototype
+        // Copy - ensure all <%= config.jsFileName %> assets are mirrored for Patterns/Prototype
         copy: {
             options: {
                 flatten: true
             },
             prototype: { // copy all assets into Prototype source dir
                 src: [
-                    'assets/css/master.css',
+                    '<%= config.cssDir %>/<%= config.cssFileName %>.css',
                     'assets/fonts/**/*{.eot,.svg,.ttf,.woff}',
                     'assets/images/**/*',
-                    'assets/js/site.min.js',
-                    'assets/js/vendor/modernizr.custom.js',
-                    'assets/js/conditional/**/*'
+                    '<%= config.jsDir %>/<%= config.jsFileName %>.min.js',
+                    '<%= config.jsDir %>/vendor/modernizr.custom.js',
+                    '<%= config.jsDir %>/conditional/**/*'
                 ],
-                dest: '<%= jekyll.prototype.options.src %>/'
+                dest: '<%= jekyll.prototype.options.dest %>/'
             },
             patterns: { // copy all assets into Patterns source dir
                 src: '<%= copy.prototype.src %>',
-                dest: '<%= jekyll.patterns.options.src %>/'
+                dest: '<%= jekyll.patterns.options.dest %>/'
             },
 
             snapshot: {
@@ -224,7 +235,7 @@ module.exports = function(grunt) {
             }
         },
 
-        // Prototype (via static site generator)
+        // Jekyll - static <%= config.jsFileName %> generator used to create Prototype and Pattern lib
         jekyll: {
             options: {
                 //bundleExec: true,
@@ -270,6 +281,14 @@ module.exports = function(grunt) {
 
     });
 
+
+
+
+
+    /**
+     * TASKS
+     */
+
     // Default
     grunt.registerTask('default', [
         'watch'
@@ -282,22 +301,25 @@ module.exports = function(grunt) {
         'uglify:build',
         'version:scripts',
         'sass:build',
+        'legacssy',
+        'cssmin',
+        'version:styles',
         'imagemin'
     ]);
 
 
     // Prototype - compile static prototype using Jekyll and launch server to view
     grunt.registerTask('prototype', [
-        'copy:prototype',
         'jekyll:prototype',
+        'copy:prototype',
         'connect:prototype',
         'watch'
     ]);
 
     // Pattern Library - compile static Pattern Lib and launch server to view
     grunt.registerTask('patterns', [
-        'copy:patterns',
         'jekyll:patterns',
+        'copy:patterns',
         'connect:patterns',
         'watch'
     ]);

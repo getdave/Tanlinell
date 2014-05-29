@@ -1,0 +1,21 @@
+/**
+ * ##################################
+ *
+ * <%= pkg.name %>
+ *
+ * ##################################
+ *
+ * <%= pkg.description %>
+ * Version: <%= pkg.version %> (<%= grunt.template.today("dd-mm-yyyy") %>)
+ * URL: <%= pkg.repository.url %>
+ * License: <%= pkg.licenses[0].type %>: <%= pkg.licenses[0].url %>
+ * Author: <%= pkg.author.name %>
+ *
+ * <%= pkg.description %>
+ *
+ *
+ * This code is copyright to the site owner and should not be copied or otherwise modified for your own use. 
+ *
+ */
+
+
