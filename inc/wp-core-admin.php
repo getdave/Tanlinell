@@ -11,7 +11,8 @@
 /**
  * Remove The Ability to Edit Plugins via Edit screen
  */
-define( 'DISALLOW_FILE_EDIT', true );
+if( !defined( 'DISALLOW_FILE_EDIT' ) || DISALLOW_FILE_EDIT == false )
+    define( 'DISALLOW_FILE_EDIT', true );
 
 
 /**
