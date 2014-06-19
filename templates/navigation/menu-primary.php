@@ -56,13 +56,19 @@ class tanlinell_add_cpt_descendants_primary_menu_walker extends Walker_Nav_Menu 
 							$class_names = $value = '';
 					
 							$classes = array(
-								'menu-item', 'menu-item-type-post_type', 'menu-item-object-service'
+            							    'menu-item', 
+            							    'menu-item-type-post_type', 
+            							    'menu-item-object-service'
 							);
 							
-							if ( $current_post->ID == $cpt_item->ID ) {
-								array_push($classes, 'current-menu-item');
-								array_push($classes, 'current_page_item');
+							
+							if( isset($current_post->ID) && isset($cpt_item->ID) ) {
+    						    if ( $current_post->ID == $cpt_item->ID ) {
+    								array_push($classes, 'current-menu-item');
+    								array_push($classes, 'current_page_item');
+    							}	
 							}
+							
 							
 							$classes[] = 'menu-item-' . $cpt_item->ID;
 					

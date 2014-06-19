@@ -35,18 +35,22 @@ function tanlinell_scripts() {
 
 
 	// Localize WordPress vars in JS
-	$theID = '';
+    global $post;
     if(!empty($post->ID))
-    	$theID = $post->ID;
+        $theID = $post->ID;
+    else
+        $theID = false;
 
     $site_details = array(
-							'templateDirectoryUri'		=> get_template_directory_uri(),
-							'siteUrl'					=> get_site_url(),
-							'thePermalink'				=> get_permalink(),
-							'theTitle'					=> get_the_title(),
-							'theID'						=> get_the_ID()
-						);
-	wp_localize_script('modernizr', 'tanlinellSiteDetails', $site_details );
+                            'templateDirectoryUri'      => get_template_directory_uri(),
+                            'siteUrl'                   => get_bloginfo('url'),
+                            'ajaxUrl'                   => admin_url( 'admin-ajax.php' ),
+                            'loginUrl'                  => wp_login_url(),
+                            'thePermalink'              => get_permalink(),
+                            'theTitle'                  => get_the_title(),
+                            'theID'                     => $theID,                            
+                        );
+    wp_localize_script('modernizr', 'tanlinellSiteDetails', $site_details );
 
 
 	// jQuery - load jQuery in the footer instead of header
