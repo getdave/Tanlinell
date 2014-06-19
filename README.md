@@ -156,6 +156,11 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 * Core define no editor for plugins -> Fix
 * Sidebar display make global $post avail -> Fix
 
+#### 3.0.15
+
+* Default accessible markup for tanlinell_content_main_html_open && tanlinell_content_sub_html_open
+* Update CMB to 1.0.1
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2
