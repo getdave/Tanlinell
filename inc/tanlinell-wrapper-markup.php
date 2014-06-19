@@ -42,7 +42,7 @@ add_action( 'bc_p_content_wrapper_end', 'tanlinell_do_content_wrapper_end' );
  * defines the wrapper for the <main> area
  */
 function tanlinell_do_content_main_start() {
-	echo apply_filters( 'tanlinell_content_main_html_open', '<main class="main">' );
+	echo apply_filters( 'tanlinell_content_main_html_open', '<main id="main" class="main" tabindex="-1">' );
 }
 add_action( 'tanlinell_content_main_start', 'tanlinell_do_content_main_start' );
 add_action( 'bc_p_content_main_start', 'tanlinell_do_content_main_start' );
@@ -59,7 +59,7 @@ add_action( 'bc_p_content_main_end', 'tanlinell_do_content_main_end' );
  * defines the wrapper for the sub content (sidebar) area
  */
 function tanlinell_do_content_sub_start() {
-	echo apply_filters( 'tanlinell_content_sub_html_open', '<div class="sub">' );
+	echo apply_filters( 'tanlinell_content_sub_html_open', '<div id="sub" class="sub" role="complementary" tabindex="-1">' );
 }
 add_action( 'tanlinell_content_sub_start', 'tanlinell_do_content_sub_start' );
 add_action( 'bc_p_content_sub_start', 'tanlinell_do_content_sub_start' );
