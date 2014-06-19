@@ -149,6 +149,13 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 * Add nofollow to developer credit
 * robots meta amend
 
+#### 3.0.14
+
+* Extend and fix tanlinellSiteDetails -> Enhancement
+* Default front page template -> Enhancement
+* Core define no editor for plugins -> Fix
+* Sidebar display make global $post avail -> Fix
+
 ### 2.11.0
 
 * Hybrid Core Update to 1.6.2
