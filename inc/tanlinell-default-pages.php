@@ -11,14 +11,17 @@ function tanlinell_default_page_setup() {
 		0 => array(
 			'slug' => 'news',
 			'name' => 'News',
+			'template' => 'default',
 		),
 		1 => array(
 			'slug' => 'home',
 			'name' => 'Home',
+			'template' => 'default',
 		),
 		2 => array(
 			'slug' => 'sitemap',
 			'name' => 'Sitemap',
+			'template' => 'templates/sitemap.php',
 		),
 	);
 	foreach($defaults AS $p) {
@@ -41,10 +44,17 @@ function tanlinell_default_page_setup() {
 					'post_name'		=>	$p['slug'],
 					'post_title'	=>	$p['name'],
 					'post_status'	=>	'publish',
-					'post_type'		=>	'page'
+					'post_type'		=>	'page',
 				)
 			);
-		
+            if ( false != $post_id ) {
+                //make protected name entry
+    		    add_post_meta( $post_id, 'protected_name', $page_title, false );
+                
+                //assign template
+                add_post_meta( $post_id, '_wp_page_template', $p['template'], false  );
+            }
+            
 		else:
 			// Arbitrarily use -2 to indicate that the page with the title already exists
 			$post_id = -2;

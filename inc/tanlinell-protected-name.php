@@ -43,10 +43,10 @@ endif;
  * @param (str) $protected_page the value given in the post edit screen
  * @return (str) the slug of the page with trailing slash
  */
-function tanlinell_get_protected_name_slug( $protected_page ) {
+function tanlinell_get_protected_name_slug( $protected_page, $post_type = 'page' ) {
 	
 	$args = array(
-    	'post_type' => 'page',
+    	'post_type' => $post_type,
     	'meta_query' => array(
     		array(
     			'key' => 'protected_name',
@@ -75,10 +75,10 @@ function tanlinell_get_protected_name_slug( $protected_page ) {
  * @param (str) $protected_page the value given in the post edit screen
  * @return (str) the query obj for loop in templates
  */
-function tanlinell_get_protected_name_query_obj( $protected_page ) {
+function tanlinell_get_protected_name_query_obj( $protected_page, $post_type = 'page' ) {
 	
 	$args = array(
-        'post_type' => 'page',
+        'post_type' => $post_type,
         'meta_query' => array(
             array(
                 'key' => 'protected_name',

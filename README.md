@@ -77,6 +77,12 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 
 ## Changelog
 
+## 3.1
+
+### 3.1.0
+
+* Extend protected name query helper function #326
+
 ## 3.0.0
 
 * Major Organisation/Refactor of inc directory and templates
