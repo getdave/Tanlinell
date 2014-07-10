@@ -33,7 +33,7 @@ function tanlinell_default_page_setup() {
 		$author_id = 1;
 	
 		// If the page doesn't already exist, then create it
-		if( null == get_page_by_title( $p['name'] ) ) :
+		if( null == get_page_by_title( $p['name'] ) ) {
 	
 			// Set the post ID so that we know the post was created successfully
 			$post_id = wp_insert_post(
@@ -55,10 +55,10 @@ function tanlinell_default_page_setup() {
                 add_post_meta( $post_id, '_wp_page_template', $p['template'], false  );
             }
             
-		else:
+		} else {
 			// Arbitrarily use -2 to indicate that the page with the title already exists
 			$post_id = -2;
-		endif;
+		}
 		
 	}
 	
