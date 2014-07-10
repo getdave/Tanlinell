@@ -83,6 +83,12 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 
 * Extend protected name query helper function #326
 
+#### 3.1.1
+
+* Developer credit link to BC only on production
+* Default pages bug
+* Byline remove class
+
 ## 3.0.0
 
 * Major Organisation/Refactor of inc directory and templates
