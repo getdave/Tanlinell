@@ -13,10 +13,10 @@
 function bc_get_archives_sidebar_list(  ) {
     
     $args = array (
-    	'echo'		=>0,
-    	'title_li'	=>false,
-    	'limit' => 12,
-    	'order' => 'DESC',
+    	'echo'		=> 0,
+    	'title_li'	=> false,
+    	'limit'     => 12,
+    	'order'     => 'DESC',
     );
     
     $archives_list = wp_get_archives( $args );
@@ -36,8 +36,9 @@ function bc_get_categories_sidebar_list(  ) {
     
 	$args = array (
 		'depth' 	=> 1,
-		'hide_empty' => false,
-		'parent'=>0,
+		'parent'    => 0,
+        'orderby'   => 'name',
+        'order'     => 'ASC',
 	);
 	$categories_list = get_categories( $args );
 	
@@ -56,10 +57,10 @@ function bc_get_categories_sidebar_list(  ) {
 function bc_get_tags_list_obj(  ) {
         
     $args = array(
-		'number' => 10,
-		'hide_empty' => false, 
-		'orderby' => 'count',
-		'order' => 'DESC',
+		'number'        => 10,
+		'hide_empty'    => false, 
+		'orderby'       => 'count',
+		'order'         => 'DESC',
 	);
 	
 	$tags_list = get_terms( 'post_tag', $args );	
