@@ -9,19 +9,13 @@ $section_title = 'Archives';
 ?>
 	
 <?php if( $archives_list ) : ?>
-<aside class="sidebar">
-	
-	<div class="panel">
-		<h3 class="panel__heading"><?php echo ucwords(esc_html($section_title)); ?></h3>
+<aside class="sidebar sidebar--nav-<?php echo sanitize_title($section_title); ?>">
 		
-	    <div class="panel__content">
-			<ul class="panel__list">
-				
-				<?php echo $archives_list; ?>
-				
-			</ul>
-	    </div>
-	</div>
-	
+    <h5 class="h4"><?php echo ucwords(esc_html($section_title)); ?></h5>
+		
+    <ul class="block-list block-list--dashed">
+        <?php echo $archives_list; ?>
+    </ul>
+    	    
 </aside>
 <?php endif; ?>	

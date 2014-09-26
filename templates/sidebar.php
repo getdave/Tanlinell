@@ -14,18 +14,20 @@
  */
 ?>
 <?php if ( tanlinell_is_custom_post_type() ) : ?>
-	<?php get_template_part( 'templates/partials/sidebar', 'cpt-example' ); ?>
+	<?php get_template_part( 'templates/partials/sidebars/cpt-sub-navigation' ); ?>
 <?php endif; ?>
 
 <?php if ( tanlinell_is_blog_page() ) : ?>
 
-	<?php get_template_part( 'templates/partials/sidebar', 'categories' ); ?>
+	<?php get_template_part( 'templates/partials/sidebars/tags' ); ?>
+
+	<?php get_template_part( 'templates/partials/sidebars/categories' ); ?>
 	
-	<?php get_template_part( 'templates/partials/sidebar', 'archives' ); ?>
+	<?php get_template_part( 'templates/partials/sidebars/archives' ); ?>
 
 <?php else : ?>
 	
-	<?php get_template_part( 'templates/partials/sidebar', 'descendants' ); ?>
+	<?php get_template_part( 'templates/partials/sidebars/descendants' ); ?>
 	
 <?php endif; ?>
 
