@@ -93,6 +93,10 @@ The easiest method of including the Tanlinell in the theme is via the use of bow
 
 * developer credit update to - Web Design Bath
 
+#### 3.1.3
+
+* Clean up the Sidebars -> #330
+
 ## 3.0.0
 
 * Major Organisation/Refactor of inc directory and templates
